@@ -1,0 +1,51 @@
+{
+    "produced_on": "2022-08-26T09:55:22.737255500Z",
+    "source_location": "",
+    "full_name": "com.android.internal.telecom.ICallScreeningAdapter",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"callId": "readString16"}],
+            "name": "allowCall",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"callId": "readString16"}],
+            "name": "silenceCall",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"callId": "readString16"}],
+            "name": "screenCallFurther",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"callId": "readString16"},
+                {"shouldReject": "readBool"},
+                {"shouldAddToCallLog": "readBool"},
+                {"shouldShowNotification": "readBool"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "componentName": "readParcelable",
+                        "__parcelType": "android.content.ComponentName"
+                    }]
+                }
+            ],
+            "name": "disallowCall",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICallScreeningAdapter",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

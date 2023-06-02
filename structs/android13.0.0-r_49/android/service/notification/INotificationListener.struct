@@ -1,0 +1,317 @@
+{
+    "produced_on": "2023-06-01T06:42:35.777002055Z",
+    "source_location": "",
+    "full_name": "android.service.notification.INotificationListener",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "update": "readParcelable",
+                        "__parcelType": "android.service.notification.NotificationRankingUpdate"
+                    }]
+                }
+            ],
+            "name": "onListenerConnected",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"notificationHolder": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "update": "readParcelable",
+                        "__parcelType": "android.service.notification.NotificationRankingUpdate"
+                    }]
+                }
+            ],
+            "name": "onNotificationPosted",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"hideSilentStatusIcons": "readBool"}],
+            "name": "onStatusBarIconsBehaviorChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"notificationHolder": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "update": "readParcelable",
+                        "__parcelType": "android.service.notification.NotificationRankingUpdate"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "stats": "readParcelable",
+                        "__parcelType": "android.service.notification.NotificationStats"
+                    }]
+                },
+                {"reason": "readInt32"}
+            ],
+            "name": "onNotificationRemoved",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "update": "readParcelable",
+                        "__parcelType": "android.service.notification.NotificationRankingUpdate"
+                    }]
+                }
+            ],
+            "name": "onNotificationRankingUpdate",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"hints": "readInt32"}],
+            "name": "onListenerHintsChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"interruptionFilter": "readInt32"}],
+            "name": "onInterruptionFilterChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"pkgName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "user": "readParcelable",
+                        "__parcelType": "android.os.UserHandle"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "channel": "readParcelable",
+                        "__parcelType": "android.app.NotificationChannel"
+                    }]
+                },
+                {"modificationType": "readInt32"}
+            ],
+            "name": "onNotificationChannelModification",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"pkgName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "user": "readParcelable",
+                        "__parcelType": "android.os.UserHandle"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "group": "readParcelable",
+                        "__parcelType": "android.app.NotificationChannelGroup"
+                    }]
+                },
+                {"modificationType": "readInt32"}
+            ],
+            "name": "onNotificationChannelGroupModification",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"notificationHolder": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "channel": "readParcelable",
+                        "__parcelType": "android.app.NotificationChannel"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "update": "readParcelable",
+                        "__parcelType": "android.service.notification.NotificationRankingUpdate"
+                    }]
+                }
+            ],
+            "name": "onNotificationEnqueuedWithChannel",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"notificationHolder": "readStrongBinder"},
+                {"snoozeCriterionId": "readString16"}
+            ],
+            "name": "onNotificationSnoozedUntilContext",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [{
+                "keys": "readList",
+                "__parcelType": "String"
+            }],
+            "name": "onNotificationsSeen",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [{"items": "readInt32"}],
+            "name": "onPanelRevealed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [],
+            "name": "onPanelHidden",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"key": "readString16"},
+                {"isVisible": "readBool"}
+            ],
+            "name": "onNotificationVisibilityChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [
+                {"key": "readString16"},
+                {"userAction": "readBool"},
+                {"expanded": "readBool"}
+            ],
+            "name": "onNotificationExpansionChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [{"key": "readString16"}],
+            "name": "onNotificationDirectReply",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"key": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "reply": "readParcelable",
+                        "__parcelType": "CharSequence"
+                    }]
+                },
+                {"source": "readInt32"}
+            ],
+            "name": "onSuggestedReplySent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 19,
+            "in": [
+                {"key": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "action": "readParcelable",
+                        "__parcelType": "android.service.notification.Notification.Action"
+                    }]
+                },
+                {"source": "readInt32"}
+            ],
+            "name": "onActionClicked",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 20,
+            "in": [{"key": "readString16"}],
+            "name": "onNotificationClicked",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 21,
+            "in": [],
+            "name": "onAllowedAdjustmentsChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 22,
+            "in": [
+                {"key": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "update": "readParcelable",
+                        "__parcelType": "android.service.notification.NotificationRankingUpdate"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"feedback": "readBundle"}]
+                }
+            ],
+            "name": "onNotificationFeedbackReceived",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "INotificationListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

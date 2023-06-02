@@ -1,0 +1,123 @@
+{
+    "produced_on": "2023-06-01T06:42:35.109801279Z",
+    "source_location": "",
+    "full_name": "android.telephony.ims.aidl.IImsRcsFeature",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "queryCapabilityStatus",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "getFeatureState",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"c": "readStrongBinder"}],
+            "name": "addCapabilityCallback",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"c": "readStrongBinder"}],
+            "name": "removeCapabilityCallback",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "r": "readParcelable",
+                        "__parcelType": "android.telephony.ims.feature.CapabilityChangeRequest"
+                    }]
+                },
+                {"c": "readStrongBinder"}
+            ],
+            "name": "changeCapabilitiesConfiguration",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"capability": "readInt32"},
+                {"radioTech": "readInt32"},
+                {"c": "readStrongBinder"}
+            ],
+            "name": "queryCapabilityConfiguration",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "setCapabilityExchangeEventListener",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"pidfXml": "readString16"},
+                {"cb": "readStrongBinder"}
+            ],
+            "name": "publishCapabilities",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {
+                    "uris": "readList",
+                    "__parcelType": "android.net.Uri"
+                },
+                {"cb": "readStrongBinder"}
+            ],
+            "name": "subscribeForCapabilities",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "contactUri": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                },
+                {
+                    "myCapabilities": "readList",
+                    "__parcelType": "String"
+                },
+                {"cb": "readStrongBinder"}
+            ],
+            "name": "sendOptionsCapabilityRequest",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IImsRcsFeature",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

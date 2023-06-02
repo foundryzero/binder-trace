@@ -1,0 +1,116 @@
+{
+    "produced_on": "2023-06-01T06:42:34.307769921Z",
+    "source_location": "",
+    "full_name": "android.bluetooth.IBluetoothLeCallControlCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"ccid": "readInt32"}],
+            "name": "onBearerRegistered",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"requestId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "uuid": "readParcelable",
+                        "__parcelType": "android.os.ParcelUuid"
+                    }]
+                }
+            ],
+            "name": "onAcceptCall",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"requestId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "uuid": "readParcelable",
+                        "__parcelType": "android.os.ParcelUuid"
+                    }]
+                }
+            ],
+            "name": "onTerminateCall",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"requestId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "uuid": "readParcelable",
+                        "__parcelType": "android.os.ParcelUuid"
+                    }]
+                }
+            ],
+            "name": "onHoldCall",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"requestId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "uuid": "readParcelable",
+                        "__parcelType": "android.os.ParcelUuid"
+                    }]
+                }
+            ],
+            "name": "onUnholdCall",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"requestId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "uuid": "readParcelable",
+                        "__parcelType": "android.os.ParcelUuid"
+                    }]
+                },
+                {"uri": "readString16"}
+            ],
+            "name": "onPlaceCall",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"requestId": "readInt32"},
+                {
+                    "uuids": "readList",
+                    "__parcelType": "android.os.ParcelUuid"
+                }
+            ],
+            "name": "onJoinCalls",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IBluetoothLeCallControlCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

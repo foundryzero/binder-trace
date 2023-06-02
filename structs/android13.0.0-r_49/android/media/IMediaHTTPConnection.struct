@@ -1,0 +1,73 @@
+{
+    "produced_on": "2023-06-01T06:42:34.854931598Z",
+    "source_location": "",
+    "full_name": "android.media.IMediaHTTPConnection",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"uri": "readString16"},
+                {"headers": "readString16"}
+            ],
+            "name": "connect",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "disconnect",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"offset": "readInt64"},
+                {"size": "readInt32"}
+            ],
+            "name": "readAt",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "getSize",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "getMIMEType",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "getUri",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        }
+    ],
+    "name": "IMediaHTTPConnection",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

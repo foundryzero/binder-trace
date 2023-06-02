@@ -1,0 +1,179 @@
+{
+    "produced_on": "2023-06-01T06:42:36.584393785Z",
+    "source_location": "",
+    "full_name": "android.hardware.soundtrigger3.ISoundTriggerHw",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getProperties",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.media.soundtrigger.Properties"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "registerGlobalCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "soundModel": "readParcelable",
+                        "__parcelType": "android.media.soundtrigger.SoundModel"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "loadSoundModel",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "soundModel": "readParcelable",
+                        "__parcelType": "android.media.soundtrigger.PhraseSoundModel"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "loadPhraseSoundModel",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"modelHandle": "readInt32"}],
+            "name": "unloadSoundModel",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"modelHandle": "readInt32"},
+                {"deviceHandle": "readInt32"},
+                {"ioHandle": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "config": "readParcelable",
+                        "__parcelType": "android.media.soundtrigger.RecognitionConfig"
+                    }]
+                }
+            ],
+            "name": "startRecognition",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"modelHandle": "readInt32"}],
+            "name": "stopRecognition",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{"modelHandle": "readInt32"}],
+            "name": "forceRecognitionEvent",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"modelHandle": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "modelParam": "readParcelable",
+                        "__parcelType": "android.media.soundtrigger.ModelParameter"
+                    }]
+                }
+            ],
+            "name": "queryParameter",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.media.soundtrigger.ModelParameterRange"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"modelHandle": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "modelParam": "readParcelable",
+                        "__parcelType": "android.media.soundtrigger.ModelParameter"
+                    }]
+                }
+            ],
+            "name": "getParameter",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"modelHandle": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "modelParam": "readParcelable",
+                        "__parcelType": "android.media.soundtrigger.ModelParameter"
+                    }]
+                },
+                {"value": "readInt32"}
+            ],
+            "name": "setParameter",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISoundTriggerHw",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

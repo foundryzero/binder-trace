@@ -1,0 +1,78 @@
+{
+    "produced_on": "2022-08-26T09:55:22.920954690Z",
+    "source_location": "",
+    "full_name": "android.speech.tts.ITextToSpeechCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"utteranceId": "readString16"}],
+            "name": "onStart",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"utteranceId": "readString16"}],
+            "name": "onSuccess",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"utteranceId": "readString16"},
+                {"isStarted": "readBool"}
+            ],
+            "name": "onStop",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"utteranceId": "readString16"},
+                {"errorCode": "readInt32"}
+            ],
+            "name": "onError",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"utteranceId": "readString16"},
+                {"sampleRateInHz": "readInt32"},
+                {"audioFormat": "readInt32"},
+                {"channelCount": "readInt32"}
+            ],
+            "name": "onBeginSynthesis",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"utteranceId": "readString16"},
+                {"audio": "readByteVector"}
+            ],
+            "name": "onAudioAvailable",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"utteranceId": "readString16"},
+                {"start": "readInt32"},
+                {"end": "readInt32"},
+                {"frame": "readInt32"}
+            ],
+            "name": "onRangeStart",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ITextToSpeechCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

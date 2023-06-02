@@ -1,0 +1,248 @@
+{
+    "produced_on": "2023-06-01T06:42:35.800295936Z",
+    "source_location": "",
+    "full_name": "android.companion.virtual.IVirtualDevice",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getAssociationId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "close",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"displayId": "readInt32"},
+                {"routingCallback": "readStrongBinder"},
+                {"configChangedCallback": "readStrongBinder"}
+            ],
+            "name": "onAudioSessionStarting",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "onAudioSessionEnded",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"displayId": "readInt32"},
+                {"inputDeviceName": "readString16"},
+                {"vendorId": "readInt32"},
+                {"productId": "readInt32"},
+                {"token": "readStrongBinder"}
+            ],
+            "name": "createVirtualKeyboard",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"displayId": "readInt32"},
+                {"inputDeviceName": "readString16"},
+                {"vendorId": "readInt32"},
+                {"productId": "readInt32"},
+                {"token": "readStrongBinder"}
+            ],
+            "name": "createVirtualMouse",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"displayId": "readInt32"},
+                {"inputDeviceName": "readString16"},
+                {"vendorId": "readInt32"},
+                {"productId": "readInt32"},
+                {"token": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "screenSize": "readParcelable",
+                        "__parcelType": "android.graphics.Point"
+                    }]
+                }
+            ],
+            "name": "createVirtualTouchscreen",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{"token": "readStrongBinder"}],
+            "name": "unregisterInputDevice",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "event": "readParcelable",
+                        "__parcelType": "android.hardware.input.VirtualKeyEvent"
+                    }]
+                }
+            ],
+            "name": "sendKeyEvent",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "event": "readParcelable",
+                        "__parcelType": "android.hardware.input.VirtualMouseButtonEvent"
+                    }]
+                }
+            ],
+            "name": "sendButtonEvent",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "event": "readParcelable",
+                        "__parcelType": "android.hardware.input.VirtualMouseRelativeEvent"
+                    }]
+                }
+            ],
+            "name": "sendRelativeEvent",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "event": "readParcelable",
+                        "__parcelType": "android.hardware.input.VirtualMouseScrollEvent"
+                    }]
+                }
+            ],
+            "name": "sendScrollEvent",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "event": "readParcelable",
+                        "__parcelType": "android.hardware.input.VirtualTouchEvent"
+                    }]
+                }
+            ],
+            "name": "sendTouchEvent",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"displayId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "pendingIntent": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "resultReceiver": "readParcelable",
+                        "__parcelType": "android.os.ResultReceiver"
+                    }]
+                }
+            ],
+            "name": "launchPendingIntent",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [{"token": "readStrongBinder"}],
+            "name": "getCursorPosition",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.graphics.PointF"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 16,
+            "in": [{"showPointerIcon": "readBool"}],
+            "name": "setShowPointerIcon",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IVirtualDevice",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

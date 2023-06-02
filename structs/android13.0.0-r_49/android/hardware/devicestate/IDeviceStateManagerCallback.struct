@@ -1,0 +1,40 @@
+{
+    "produced_on": "2023-06-01T06:42:35.863289908Z",
+    "source_location": "",
+    "full_name": "android.hardware.devicestate.IDeviceStateManagerCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "info": "readParcelable",
+                        "__parcelType": "android.hardware.devicestate.DeviceStateInfo"
+                    }]
+                }
+            ],
+            "name": "onDeviceStateInfoChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"token": "readStrongBinder"}],
+            "name": "onRequestActive",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"token": "readStrongBinder"}],
+            "name": "onRequestCanceled",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IDeviceStateManagerCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

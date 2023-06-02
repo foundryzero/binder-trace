@@ -1,0 +1,25 @@
+{
+    "produced_on": "2022-08-26T09:55:18.535598359Z",
+    "source_location": "",
+    "full_name": "android.automotive.watchdog.ICarWatchdogClient",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"sessionId": "readInt32"},
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "timeout": "readParcelable",
+                    "__parcelType": "android.automotive.watchdog.TimeoutLength"
+                }]
+            }
+        ],
+        "name": "checkIfAlive",
+        "oneWay": true,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "ICarWatchdogClient",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,43 @@
+{
+    "produced_on": "2022-08-26T09:55:22.910957807Z",
+    "source_location": "",
+    "full_name": "android.database.IContentObserver",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"selfUpdate": "readBool"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "uri": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "onChange",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"selfUpdate": "readBool"},
+                {
+                    "uri": "readParcelableVector",
+                    "__parcelType": "android.net.Uri"
+                },
+                {"flags": "readInt32"},
+                {"userId": "readInt32"}
+            ],
+            "name": "onChangeEtc",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IContentObserver",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

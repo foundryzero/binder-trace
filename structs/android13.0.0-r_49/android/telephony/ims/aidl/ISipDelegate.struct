@@ -1,0 +1,51 @@
+{
+    "produced_on": "2023-06-01T06:42:35.093256959Z",
+    "source_location": "",
+    "full_name": "android.telephony.ims.aidl.ISipDelegate",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sipMessage": "readParcelable",
+                        "__parcelType": "android.telephony.ims.SipMessage"
+                    }]
+                },
+                {"configVersion": "readInt64"}
+            ],
+            "name": "sendMessage",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"viaTransactionId": "readString16"}],
+            "name": "notifyMessageReceived",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"viaTransactionId": "readString16"},
+                {"reason": "readInt32"}
+            ],
+            "name": "notifyMessageReceiveError",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"callId": "readString16"}],
+            "name": "cleanupSession",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISipDelegate",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

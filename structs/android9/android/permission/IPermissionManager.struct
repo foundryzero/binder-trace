@@ -1,0 +1,518 @@
+{
+    "produced_on": "2022-08-04T09:32:19.012109798Z",
+    "source_location": "",
+    "full_name": "android.permission.IPermissionManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"permName": "readString16"}],
+            "name": "getAppOpPermissionPackages",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"flags": "readInt32"}],
+            "name": "getAllPermissionGroups",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.ParceledListSlice"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"groupName": "readString16"},
+                {"flags": "readInt32"}
+            ],
+            "name": "getPermissionGroupInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.PermissionGroupInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"permName": "readString16"},
+                {"packageName": "readString16"},
+                {"flags": "readInt32"}
+            ],
+            "name": "getPermissionInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.PermissionInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"groupName": "readString16"},
+                {"flags": "readInt32"}
+            ],
+            "name": "queryPermissionsByGroup",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.ParceledListSlice"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "info": "readParcelable",
+                        "__parcelType": "android.content.pm.PermissionInfo"
+                    }]
+                },
+                {"async": "readBool"}
+            ],
+            "name": "addPermission",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [{"name": "readString16"}],
+            "name": "removePermission",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"permName": "readString16"},
+                {"packageName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "getPermissionFlags",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"permName": "readString16"},
+                {"packageName": "readString16"},
+                {"flagMask": "readInt32"},
+                {"flagValues": "readInt32"},
+                {"checkAdjustPolicyFlagPermission": "readBool"},
+                {"userId": "readInt32"}
+            ],
+            "name": "updatePermissionFlags",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"flagMask": "readInt32"},
+                {"flagValues": "readInt32"},
+                {"userId": "readInt32"}
+            ],
+            "name": "updatePermissionFlagsForAllApps",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"permName": "readString16"},
+                {"pkgName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "checkPermission",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"permName": "readString16"},
+                {"uid": "readInt32"}
+            ],
+            "name": "checkUidPermission",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"packageName": "readString16"},
+                {"callingFeatureId": "readString16"},
+                {"message": "readString16"},
+                {"pid": "readInt32"},
+                {"uid": "readInt32"}
+            ],
+            "name": "checkDeviceIdentifierAccess",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 14,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "addOnPermissionsChangeListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "removeOnPermissionsChangeListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [
+                {"packageName": "readString16"},
+                {"flags": "readInt32"},
+                {"userId": "readInt32"}
+            ],
+            "name": "getWhitelistedRestrictedPermissions",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "String"
+                }
+            ]
+        },
+        {
+            "code": 17,
+            "in": [
+                {"packageName": "readString16"},
+                {"permName": "readString16"},
+                {"flags": "readInt32"},
+                {"userId": "readInt32"}
+            ],
+            "name": "addWhitelistedRestrictedPermission",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"packageName": "readString16"},
+                {"permName": "readString16"},
+                {"flags": "readInt32"},
+                {"userId": "readInt32"}
+            ],
+            "name": "removeWhitelistedRestrictedPermission",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 19,
+            "in": [
+                {"packageName": "readString16"},
+                {"permName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "grantRuntimePermission",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 20,
+            "in": [
+                {"packageName": "readString16"},
+                {"permName": "readString16"},
+                {"userId": "readInt32"},
+                {"reason": "readString16"}
+            ],
+            "name": "revokeRuntimePermission",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 21,
+            "in": [],
+            "name": "resetRuntimePermissions",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 22,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "setDefaultBrowser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 23,
+            "in": [{"userId": "readInt32"}],
+            "name": "getDefaultBrowser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 24,
+            "in": [
+                {"packageNames": "readString16Vector"},
+                {"userId": "readInt32"}
+            ],
+            "name": "grantDefaultPermissionsToEnabledCarrierApps",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 25,
+            "in": [
+                {"packageNames": "readString16Vector"},
+                {"userId": "readInt32"}
+            ],
+            "name": "grantDefaultPermissionsToEnabledImsServices",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 26,
+            "in": [
+                {"packageNames": "readString16Vector"},
+                {"userId": "readInt32"}
+            ],
+            "name": "grantDefaultPermissionsToEnabledTelephonyDataServices",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 27,
+            "in": [
+                {"packageNames": "readString16Vector"},
+                {"userId": "readInt32"}
+            ],
+            "name": "revokeDefaultPermissionsFromDisabledTelephonyDataServices",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 28,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "grantDefaultPermissionsToActiveLuiApp",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 29,
+            "in": [
+                {"packageNames": "readString16Vector"},
+                {"userId": "readInt32"}
+            ],
+            "name": "revokeDefaultPermissionsFromLuiApps",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 30,
+            "in": [
+                {"permName": "readString16"},
+                {"enforced": "readBool"}
+            ],
+            "name": "setPermissionEnforced",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 31,
+            "in": [{"permName": "readString16"}],
+            "name": "isPermissionEnforced",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 32,
+            "in": [
+                {"permName": "readString16"},
+                {"packageName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "shouldShowRequestPermissionRationale",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 33,
+            "in": [
+                {"permName": "readString16"},
+                {"packageName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "isPermissionRevokedByPolicy",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 34,
+            "in": [],
+            "name": "getSplitPermissions",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.content.pm.permission.SplitPermissionInfoParcelable"
+                }
+            ]
+        },
+        {
+            "code": 35,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"},
+                {"timeout": "readInt64"},
+                {"importanceToResetTimer": "readInt32"},
+                {"importanceToKeepSessionAlive": "readInt32"}
+            ],
+            "name": "startOneTimePermissionSession",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 36,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "stopOneTimePermissionSession",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 37,
+            "in": [{"userId": "readInt32"}],
+            "name": "getAutoRevokeExemptionRequestedPackages",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "String"
+                }
+            ]
+        },
+        {
+            "code": 38,
+            "in": [{"userId": "readInt32"}],
+            "name": "getAutoRevokeExemptionGrantedPackages",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "String"
+                }
+            ]
+        },
+        {
+            "code": 39,
+            "in": [
+                {"packageName": "readString16"},
+                {"whitelisted": "readBool"},
+                {"userId": "readInt32"}
+            ],
+            "name": "setAutoRevokeWhitelisted",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 40,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "isAutoRevokeWhitelisted",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "IPermissionManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

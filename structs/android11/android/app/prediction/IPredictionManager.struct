@@ -1,0 +1,174 @@
+{
+    "produced_on": "2022-08-26T09:55:23.860166374Z",
+    "source_location": "",
+    "full_name": "android.app.prediction.IPredictionManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "context": "readParcelable",
+                        "__parcelType": "android.app.prediction.AppPredictionContext"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionId": "readParcelable",
+                        "__parcelType": "android.app.prediction.AppPredictionSessionId"
+                    }]
+                }
+            ],
+            "name": "createPredictionSession",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionId": "readParcelable",
+                        "__parcelType": "android.app.prediction.AppPredictionSessionId"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "event": "readParcelable",
+                        "__parcelType": "android.app.prediction.AppTargetEvent"
+                    }]
+                }
+            ],
+            "name": "notifyAppTargetEvent",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionId": "readParcelable",
+                        "__parcelType": "android.app.prediction.AppPredictionSessionId"
+                    }]
+                },
+                {"launchLocation": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "targetIds": "readParcelable",
+                        "__parcelType": "android.content.pm.ParceledListSlice"
+                    }]
+                }
+            ],
+            "name": "notifyLaunchLocationShown",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionId": "readParcelable",
+                        "__parcelType": "android.app.prediction.AppPredictionSessionId"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "targets": "readParcelable",
+                        "__parcelType": "android.content.pm.ParceledListSlice"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "sortAppTargets",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionId": "readParcelable",
+                        "__parcelType": "android.app.prediction.AppPredictionSessionId"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "registerPredictionUpdates",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionId": "readParcelable",
+                        "__parcelType": "android.app.prediction.AppPredictionSessionId"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "unregisterPredictionUpdates",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionId": "readParcelable",
+                        "__parcelType": "android.app.prediction.AppPredictionSessionId"
+                    }]
+                }
+            ],
+            "name": "requestPredictionUpdate",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionId": "readParcelable",
+                        "__parcelType": "android.app.prediction.AppPredictionSessionId"
+                    }]
+                }
+            ],
+            "name": "onDestroyPredictionSession",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IPredictionManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

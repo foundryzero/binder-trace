@@ -1,0 +1,45 @@
+{
+    "produced_on": "2022-08-04T09:32:20.812636093Z",
+    "source_location": "",
+    "full_name": "android.os.IExternalVibratorService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "vib": "readParcelable",
+                        "__parcelType": "android.os.ExternalVibration"
+                    }]
+                }
+            ],
+            "name": "onExternalVibrationStart",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "vib": "readParcelable",
+                        "__parcelType": "android.os.ExternalVibration"
+                    }]
+                }
+            ],
+            "name": "onExternalVibrationStop",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IExternalVibratorService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

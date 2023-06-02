@@ -1,0 +1,31 @@
+{
+    "produced_on": "2022-08-26T09:55:24.234280830Z",
+    "source_location": "",
+    "full_name": "android.os.IProcessInfoService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"pids": "readInt32Vector"}],
+            "name": "getProcessStatesFromPids",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"states": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"pids": "readInt32Vector"}],
+            "name": "getProcessStatesAndOomScoresFromPids",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"states": "readInt32Vector"},
+                {"scores": "readInt32Vector"}
+            ]
+        }
+    ],
+    "name": "IProcessInfoService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

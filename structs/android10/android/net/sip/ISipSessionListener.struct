@@ -1,0 +1,133 @@
+{
+    "produced_on": "2022-12-02T13:44:06.435060346Z",
+    "source_location": "",
+    "full_name": "android.net.sip.ISipSessionListener",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"session": "readStrongBinder"}],
+            "name": "onCalling",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"session": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "caller": "readParcelable",
+                        "__parcelType": "android.net.sip.SipProfile"
+                    }]
+                },
+                {"sessionDescription": "readString16"}
+            ],
+            "name": "onRinging",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"session": "readStrongBinder"}],
+            "name": "onRingingBack",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"session": "readStrongBinder"},
+                {"sessionDescription": "readString16"}
+            ],
+            "name": "onCallEstablished",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"session": "readStrongBinder"}],
+            "name": "onCallEnded",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"session": "readStrongBinder"}],
+            "name": "onCallBusy",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"newSession": "readStrongBinder"},
+                {"sessionDescription": "readString16"}
+            ],
+            "name": "onCallTransferring",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"session": "readStrongBinder"},
+                {"errorCode": "readInt32"},
+                {"errorMessage": "readString16"}
+            ],
+            "name": "onError",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"session": "readStrongBinder"},
+                {"errorCode": "readInt32"},
+                {"errorMessage": "readString16"}
+            ],
+            "name": "onCallChangeFailed",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [{"session": "readStrongBinder"}],
+            "name": "onRegistering",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"session": "readStrongBinder"},
+                {"duration": "readInt32"}
+            ],
+            "name": "onRegistrationDone",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"session": "readStrongBinder"},
+                {"errorCode": "readInt32"},
+                {"errorMessage": "readString16"}
+            ],
+            "name": "onRegistrationFailed",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [{"session": "readStrongBinder"}],
+            "name": "onRegistrationTimeout",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISipSessionListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

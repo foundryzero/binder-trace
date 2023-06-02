@@ -1,0 +1,26 @@
+{
+    "produced_on": "2022-08-04T09:32:19.159995022Z",
+    "source_location": "",
+    "full_name": "android.hardware.biometrics.IBiometricEnabledOnKeyguardCallback",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "type": "readParcelable",
+                    "__parcelType": "android.hardware.biometrics.BiometricSourceType"
+                }]
+            },
+            {"enabled": "readBool"},
+            {"userId": "readInt32"}
+        ],
+        "name": "onChanged",
+        "oneWay": true,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "IBiometricEnabledOnKeyguardCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

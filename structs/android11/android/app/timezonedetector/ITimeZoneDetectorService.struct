@@ -1,0 +1,42 @@
+{
+    "produced_on": "2022-08-26T09:55:23.644474460Z",
+    "source_location": "",
+    "full_name": "android.app.timezonedetector.ITimeZoneDetectorService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "timeZoneSuggestion": "readParcelable",
+                        "__parcelType": "android.app.timezonedetector.ManualTimeZoneSuggestion"
+                    }]
+                }
+            ],
+            "name": "suggestManualTimeZone",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "timeZoneSuggestion": "readParcelable",
+                        "__parcelType": "android.app.timezonedetector.TelephonyTimeZoneSuggestion"
+                    }]
+                }
+            ],
+            "name": "suggestTelephonyTimeZone",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ITimeZoneDetectorService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,51 @@
+{
+    "produced_on": "2023-06-01T09:59:31.153089504Z",
+    "source_location": "",
+    "components": [
+        {"mControlId": "readString16"},
+        {"mDeviceType": "readInt32"},
+        {"mTitle": "readCharSequence"},
+        {"mSubtitle": "readCharSequence"},
+        {"nullcheck": "readByte"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{"mStructure": "readCharSequence"}]
+        },
+        {"nullcheck": "readByte"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{"mZone": "readCharSequence"}]
+        },
+        {
+            "mAppIntent": "readParcelable",
+            "__parcelType": "android.app.PendingIntent"
+        },
+        {"nullcheck": "readByte"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "mCustomIcon": "readParcelable",
+                "__parcelType": "android.graphics.drawable.Icon"
+            }]
+        },
+        {"nullcheck": "readByte"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "mCustomColor": "readParcelable",
+                "__parcelType": "android.content.res.ColorStateList"
+            }]
+        },
+        {"mStatus": "readInt32"},
+        {
+            "wrapper": "readParcelable",
+            "__parcelType": "android.service.controls.templates.ControlTemplateWrapper"
+        },
+        {"mStatusText": "readCharSequence"},
+        {"mAuthRequired": "readBool"}
+    ],
+    "full_name": "android.service.controls.Control",
+    "name": "Control",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

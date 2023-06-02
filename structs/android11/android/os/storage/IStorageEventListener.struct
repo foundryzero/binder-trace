@@ -1,0 +1,102 @@
+{
+    "produced_on": "2022-08-26T09:55:24.184414195Z",
+    "source_location": "",
+    "full_name": "android.os.storage.IStorageEventListener",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"connected": "readBool"}],
+            "name": "onUsbMassStorageConnectionChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"path": "readString16"},
+                {"oldState": "readString16"},
+                {"newState": "readString16"}
+            ],
+            "name": "onStorageStateChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "vol": "readParcelable",
+                        "__parcelType": "android.os.storage.VolumeInfo"
+                    }]
+                },
+                {"oldState": "readInt32"},
+                {"newState": "readInt32"}
+            ],
+            "name": "onVolumeStateChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "rec": "readParcelable",
+                        "__parcelType": "android.os.storage.VolumeRecord"
+                    }]
+                }
+            ],
+            "name": "onVolumeRecordChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"fsUuid": "readString16"}],
+            "name": "onVolumeForgotten",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "disk": "readParcelable",
+                        "__parcelType": "android.os.storage.DiskInfo"
+                    }]
+                },
+                {"volumeCount": "readInt32"}
+            ],
+            "name": "onDiskScanned",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "disk": "readParcelable",
+                        "__parcelType": "android.os.storage.DiskInfo"
+                    }]
+                }
+            ],
+            "name": "onDiskDestroyed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IStorageEventListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

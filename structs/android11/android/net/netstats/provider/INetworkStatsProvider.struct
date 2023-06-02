@@ -1,0 +1,34 @@
+{
+    "produced_on": "2022-08-26T09:55:22.901811633Z",
+    "source_location": "",
+    "full_name": "android.net.netstats.provider.INetworkStatsProvider",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"token": "readInt32"}],
+            "name": "onRequestStatsUpdate",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"iface": "readString16"},
+                {"quotaBytes": "readInt64"}
+            ],
+            "name": "onSetLimit",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"quotaBytes": "readInt64"}],
+            "name": "onSetAlert",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "INetworkStatsProvider",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

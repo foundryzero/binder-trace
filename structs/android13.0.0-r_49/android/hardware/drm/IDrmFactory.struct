@@ -1,0 +1,81 @@
+{
+    "produced_on": "2023-06-01T06:42:38.485054820Z",
+    "source_location": "",
+    "full_name": "android.hardware.drm.IDrmFactory",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "uuid": "readParcelable",
+                        "__parcelType": "android.hardware.drm.Uuid"
+                    }]
+                },
+                {"appPackageName": "readString16"}
+            ],
+            "name": "createDrmPlugin",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.drm.IDrmPlugin"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "uuid": "readParcelable",
+                        "__parcelType": "android.hardware.drm.Uuid"
+                    }]
+                },
+                {"initData": "readByteVector"}
+            ],
+            "name": "createCryptoPlugin",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.drm.ICryptoPlugin"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getSupportedCryptoSchemes",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.drm.CryptoSchemes"
+                    }]
+                }
+            ]
+        }
+    ],
+    "name": "IDrmFactory",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

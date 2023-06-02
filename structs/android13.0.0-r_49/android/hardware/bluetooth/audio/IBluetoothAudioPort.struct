@@ -1,0 +1,96 @@
+{
+    "produced_on": "2023-06-01T06:42:38.034084954Z",
+    "source_location": "",
+    "full_name": "android.hardware.bluetooth.audio.IBluetoothAudioPort",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getPresentationPosition",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.bluetooth.audio.PresentationPosition"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"isLowLatency": "readBool"}],
+            "name": "startStream",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "stopStream",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "suspendStream",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sourceMetadata": "readParcelable",
+                        "__parcelType": "android.hardware.audio.common.SourceMetadata"
+                    }]
+                }
+            ],
+            "name": "updateSourceMetadata",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sinkMetadata": "readParcelable",
+                        "__parcelType": "android.hardware.audio.common.SinkMetadata"
+                    }]
+                }
+            ],
+            "name": "updateSinkMetadata",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "latencyMode": "readParcelable",
+                        "__parcelType": "android.hardware.bluetooth.audio.LatencyMode"
+                    }]
+                }
+            ],
+            "name": "setLatencyMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IBluetoothAudioPort",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

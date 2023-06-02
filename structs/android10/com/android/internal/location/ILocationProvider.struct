@@ -1,0 +1,80 @@
+{
+    "produced_on": "2022-12-02T13:44:07.783400510Z",
+    "source_location": "",
+    "full_name": "com.android.internal.location.ILocationProvider",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"manager": "readStrongBinder"}],
+            "name": "setLocationProviderManager",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "com.android.internal.location.ProviderRequest"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "ws": "readParcelable",
+                        "__parcelType": "android.os.WorkSource"
+                    }]
+                }
+            ],
+            "name": "setRequest",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"command": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"extras": "readBundle"}]
+                }
+            ],
+            "name": "sendExtraCommand",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "getStatus",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"extras": "readBundle"}]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "getStatusUpdateTime",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        }
+    ],
+    "name": "ILocationProvider",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

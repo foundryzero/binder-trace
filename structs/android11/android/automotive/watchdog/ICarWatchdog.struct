@@ -1,0 +1,184 @@
+{
+    "produced_on": "2022-08-26T09:55:18.558291220Z",
+    "source_location": "",
+    "full_name": "android.automotive.watchdog.ICarWatchdog",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "client": "readParcelable",
+                        "__parcelType": "android.automotive.watchdog.ICarWatchdogClient"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "timeout": "readParcelable",
+                        "__parcelType": "android.automotive.watchdog.TimeoutLength"
+                    }]
+                }
+            ],
+            "name": "registerClient",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "client": "readParcelable",
+                        "__parcelType": "android.automotive.watchdog.ICarWatchdogClient"
+                    }]
+                }
+            ],
+            "name": "unregisterClient",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "mediator": "readParcelable",
+                        "__parcelType": "android.automotive.watchdog.ICarWatchdogClient"
+                    }]
+                }
+            ],
+            "name": "registerMediator",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "mediator": "readParcelable",
+                        "__parcelType": "android.automotive.watchdog.ICarWatchdogClient"
+                    }]
+                }
+            ],
+            "name": "unregisterMediator",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "monitor": "readParcelable",
+                        "__parcelType": "android.automotive.watchdog.ICarWatchdogMonitor"
+                    }]
+                }
+            ],
+            "name": "registerMonitor",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "monitor": "readParcelable",
+                        "__parcelType": "android.automotive.watchdog.ICarWatchdogMonitor"
+                    }]
+                }
+            ],
+            "name": "unregisterMonitor",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "client": "readParcelable",
+                        "__parcelType": "android.automotive.watchdog.ICarWatchdogClient"
+                    }]
+                },
+                {"sessionId": "readInt32"}
+            ],
+            "name": "tellClientAlive",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "mediator": "readParcelable",
+                        "__parcelType": "android.automotive.watchdog.ICarWatchdogClient"
+                    }]
+                },
+                {"clientsNotResponding": "readInt32Vector"},
+                {"sessionId": "readInt32"}
+            ],
+            "name": "tellMediatorAlive",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "monitor": "readParcelable",
+                        "__parcelType": "android.automotive.watchdog.ICarWatchdogMonitor"
+                    }]
+                },
+                {"pid": "readInt32"}
+            ],
+            "name": "tellDumpFinished",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.automotive.watchdog.StateType"
+                    }]
+                },
+                {"arg1": "readInt32"},
+                {"arg2": "readInt32"}
+            ],
+            "name": "notifySystemStateChange",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICarWatchdog",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

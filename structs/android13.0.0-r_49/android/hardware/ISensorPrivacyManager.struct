@@ -1,0 +1,115 @@
+{
+    "produced_on": "2023-06-01T06:42:35.926469342Z",
+    "source_location": "",
+    "full_name": "android.hardware.ISensorPrivacyManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"toggleType": "readInt32"},
+                {"sensor": "readInt32"}
+            ],
+            "name": "supportsSensorToggle",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "addSensorPrivacyListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "addToggleSensorPrivacyListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "removeSensorPrivacyListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "removeToggleSensorPrivacyListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "isSensorPrivacyEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [{"sensor": "readInt32"}],
+            "name": "isCombinedToggleSensorPrivacyEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"toggleType": "readInt32"},
+                {"sensor": "readInt32"}
+            ],
+            "name": "isToggleSensorPrivacyEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [{"enable": "readBool"}],
+            "name": "setSensorPrivacy",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"userId": "readInt32"},
+                {"source": "readInt32"},
+                {"sensor": "readInt32"},
+                {"enable": "readBool"}
+            ],
+            "name": "setToggleSensorPrivacy",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"userId": "readInt32"},
+                {"source": "readInt32"},
+                {"sensor": "readInt32"},
+                {"enable": "readBool"}
+            ],
+            "name": "setToggleSensorPrivacyForProfileGroup",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISensorPrivacyManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

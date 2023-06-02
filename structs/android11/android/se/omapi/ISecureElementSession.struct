@@ -1,0 +1,72 @@
+{
+    "produced_on": "2022-08-26T09:55:24.171682996Z",
+    "source_location": "",
+    "full_name": "android.se.omapi.ISecureElementSession",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getAtr",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "close",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "closeChannels",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "isClosed",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"aid": "readByteVector"},
+                {"p2": "readByte"},
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "openBasicChannel",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"aid": "readByteVector"},
+                {"p2": "readByte"},
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "openLogicalChannel",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        }
+    ],
+    "name": "ISecureElementSession",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

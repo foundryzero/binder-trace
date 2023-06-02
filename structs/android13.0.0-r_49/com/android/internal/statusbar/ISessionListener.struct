@@ -1,0 +1,44 @@
+{
+    "produced_on": "2023-06-01T06:42:35.249861652Z",
+    "source_location": "",
+    "full_name": "com.android.internal.statusbar.ISessionListener",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"sessionType": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "instance": "readParcelable",
+                        "__parcelType": "com.android.internal.logging.InstanceId"
+                    }]
+                }
+            ],
+            "name": "onSessionStarted",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"sessionType": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "instance": "readParcelable",
+                        "__parcelType": "com.android.internal.logging.InstanceId"
+                    }]
+                }
+            ],
+            "name": "onSessionEnded",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISessionListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

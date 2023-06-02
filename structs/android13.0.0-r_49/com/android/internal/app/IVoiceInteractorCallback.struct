@@ -1,0 +1,101 @@
+{
+    "produced_on": "2023-06-01T06:42:35.155451459Z",
+    "source_location": "",
+    "full_name": "com.android.internal.app.IVoiceInteractorCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"request": "readStrongBinder"},
+                {"confirmed": "readBool"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"result": "readBundle"}]
+                }
+            ],
+            "name": "deliverConfirmationResult",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"request": "readStrongBinder"},
+                {"finished": "readBool"},
+                {
+                    "selections": "readParcelableVector",
+                    "__parcelType": "com.android.internal.app.VoiceInteractor.PickOptionRequest.Option"
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"result": "readBundle"}]
+                }
+            ],
+            "name": "deliverPickOptionResult",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"request": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"result": "readBundle"}]
+                }
+            ],
+            "name": "deliverCompleteVoiceResult",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"request": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"result": "readBundle"}]
+                }
+            ],
+            "name": "deliverAbortVoiceResult",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"request": "readStrongBinder"},
+                {"finished": "readBool"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"result": "readBundle"}]
+                }
+            ],
+            "name": "deliverCommandResult",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"request": "readStrongBinder"}],
+            "name": "deliverCancel",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "destroy",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IVoiceInteractorCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,24 @@
+{
+    "produced_on": "2023-06-01T06:42:38.584135790Z",
+    "source_location": "",
+    "components": [
+        {"sensorId": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "sensorStrength": "readParcelable",
+                "__parcelType": "android.hardware.biometrics.common.SensorStrength"
+            }]
+        },
+        {"maxEnrollmentsPerUser": "readInt32"},
+        {
+            "componentInfo": "readParcelableVector",
+            "__parcelType": "android.hardware.biometrics.common.ComponentInfo"
+        }
+    ],
+    "full_name": "android.hardware.biometrics.common.CommonProps",
+    "name": "CommonProps",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

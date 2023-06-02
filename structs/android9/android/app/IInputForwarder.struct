@@ -1,0 +1,27 @@
+{
+    "produced_on": "2022-08-19T10:42:53.160558745Z",
+    "source_location": "",
+    "full_name": "android.app.IInputForwarder",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "event": "readParcelable",
+                    "__parcelType": "android.view.InputEvent"
+                }]
+            }
+        ],
+        "name": "forwardEvent",
+        "oneWay": false,
+        "out": [
+            {"__exception": "readException"},
+            {"__return": "readBool"}
+        ]
+    }],
+    "name": "IInputForwarder",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,29 @@
+{
+    "produced_on": "2023-06-01T06:42:37.357823322Z",
+    "source_location": "",
+    "components": [
+        {"mcc": "readString16"},
+        {"mnc": "readString16"},
+        {"nci": "readInt64"},
+        {"pci": "readInt32"},
+        {"tac": "readInt32"},
+        {"nrarfcn": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "operatorNames": "readParcelable",
+                "__parcelType": "android.hardware.radio.network.OperatorInfo"
+            }]
+        },
+        {"additionalPlmns": "readString16Vector"},
+        {
+            "bands": "readParcelableVector",
+            "__parcelType": "android.hardware.radio.network.NgranBands"
+        }
+    ],
+    "full_name": "android.hardware.radio.network.CellIdentityNr",
+    "name": "CellIdentityNr",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

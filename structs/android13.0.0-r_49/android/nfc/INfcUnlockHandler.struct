@@ -1,0 +1,27 @@
+{
+    "produced_on": "2023-06-01T06:42:35.815402827Z",
+    "source_location": "",
+    "full_name": "android.nfc.INfcUnlockHandler",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "tag": "readParcelable",
+                    "__parcelType": "android.nfc.Tag"
+                }]
+            }
+        ],
+        "name": "onUnlockAttempted",
+        "oneWay": false,
+        "out": [
+            {"__exception": "readException"},
+            {"__return": "readBool"}
+        ]
+    }],
+    "name": "INfcUnlockHandler",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

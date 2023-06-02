@@ -1,0 +1,178 @@
+{
+    "produced_on": "2023-06-01T06:42:34.706045378Z",
+    "source_location": "",
+    "full_name": "android.media.metrics.IMediaMetricsManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"sessionId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "metrics": "readParcelable",
+                        "__parcelType": "android.media.metrics.PlaybackMetrics"
+                    }]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "reportPlaybackMetrics",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"userId": "readInt32"}],
+            "name": "getPlaybackSessionId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"userId": "readInt32"}],
+            "name": "getRecordingSessionId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"sessionId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "event": "readParcelable",
+                        "__parcelType": "android.media.metrics.NetworkEvent"
+                    }]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "reportNetworkEvent",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"sessionId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "event": "readParcelable",
+                        "__parcelType": "android.media.metrics.PlaybackErrorEvent"
+                    }]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "reportPlaybackErrorEvent",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"sessionId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "event": "readParcelable",
+                        "__parcelType": "android.media.metrics.PlaybackStateEvent"
+                    }]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "reportPlaybackStateEvent",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"sessionId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "event": "readParcelable",
+                        "__parcelType": "android.media.metrics.TrackChangeEvent"
+                    }]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "reportTrackChangeEvent",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{"userId": "readInt32"}],
+            "name": "getTranscodingSessionId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [{"userId": "readInt32"}],
+            "name": "getEditingSessionId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [{"userId": "readInt32"}],
+            "name": "getBundleSessionId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"sessionId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "metrics": "readParcelable",
+                        "__parcelType": "android.os.PersistableBundle"
+                    }]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "reportBundleMetrics",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"sessionId": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "releaseSessionId",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IMediaMetricsManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

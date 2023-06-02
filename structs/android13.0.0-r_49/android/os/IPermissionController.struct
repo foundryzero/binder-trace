@@ -1,0 +1,71 @@
+{
+    "produced_on": "2023-06-01T06:42:35.703514248Z",
+    "source_location": "",
+    "full_name": "android.os.IPermissionController",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"permission": "readString16"},
+                {"pid": "readInt32"},
+                {"uid": "readInt32"}
+            ],
+            "name": "checkPermission",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"op": "readString16"},
+                {"uid": "readInt32"},
+                {"packageName": "readString16"}
+            ],
+            "name": "noteOp",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"uid": "readInt32"}],
+            "name": "getPackagesForUid",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"permission": "readString16"}],
+            "name": "isRuntimePermission",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"packageName": "readString16"},
+                {"flags": "readInt32"}
+            ],
+            "name": "getPackageUid",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        }
+    ],
+    "name": "IPermissionController",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

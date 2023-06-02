@@ -1,0 +1,41 @@
+{
+    "produced_on": "2023-06-01T06:42:33.167987988Z",
+    "source_location": "",
+    "full_name": "android.car.experimental.IDriverDistractionManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getLastDistractionEvent",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.car.experimental.DriverDistractionChangeEvent"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "addDriverDistractionChangeListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "removeDriverDistractionChangeListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IDriverDistractionManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

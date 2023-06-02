@@ -1,0 +1,36 @@
+{
+    "produced_on": "2022-08-19T10:42:51.892815944Z",
+    "source_location": "",
+    "full_name": "android.telephony.mbms.IDownloadProgressListener",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "request": "readParcelable",
+                    "__parcelType": "android.telephony.mbms.DownloadRequest"
+                }]
+            },
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "fileInfo": "readParcelable",
+                    "__parcelType": "android.telephony.mbms.FileInfo"
+                }]
+            },
+            {"currentDownloadSize": "readInt32"},
+            {"fullDownloadSize": "readInt32"},
+            {"currentDecodedSize": "readInt32"},
+            {"fullDecodedSize": "readInt32"}
+        ],
+        "name": "onProgressUpdated",
+        "oneWay": false,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "IDownloadProgressListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

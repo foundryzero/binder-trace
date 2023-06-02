@@ -1,0 +1,69 @@
+{
+    "produced_on": "2023-06-01T06:42:36.532571717Z",
+    "source_location": "",
+    "full_name": "com.android.cts.verifier.projection.IProjectionService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "surface": "readParcelable",
+                        "__parcelType": "android.view.Surface"
+                    }]
+                },
+                {"width": "readInt32"},
+                {"height": "readInt32"},
+                {"density": "readInt32"},
+                {"viewType": "readInt32"}
+            ],
+            "name": "startRendering",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "stopRendering",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "event": "readParcelable",
+                        "__parcelType": "android.view.MotionEvent"
+                    }]
+                }
+            ],
+            "name": "onTouchEvent",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "event": "readParcelable",
+                        "__parcelType": "android.view.KeyEvent"
+                    }]
+                }
+            ],
+            "name": "onKeyEvent",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IProjectionService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

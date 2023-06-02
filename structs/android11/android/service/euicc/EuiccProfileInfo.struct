@@ -1,0 +1,29 @@
+{
+    "produced_on": "2022-08-02T11:28:15.641545444Z",
+    "source_location": "",
+    "components": [
+        {"mIccid": "readString16"},
+        {"mNickname": "readString16"},
+        {"mServiceProviderName": "readString16"},
+        {"mProfileName": "readString16"},
+        {"mProfileClass": "readInt32"},
+        {"mState": "readInt32"},
+        {"exist": "readByte"},
+        {
+            "__backreference": "exist",
+            "__conditional": [{
+                "mCarrierIdentifier": "readParcelable",
+                "__parcelType": "android.service.carrier.CarrierIdentifier"
+            }]
+        },
+        {"mPolicyRules": "readInt32"},
+        {
+            "mAccessRules": "readTypedVector",
+            "__parcelType": "android.telephony.UiccAccessRule"
+        }
+    ],
+    "full_name": "android.service.euicc.EuiccProfileInfo",
+    "name": "EuiccProfileInfo",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

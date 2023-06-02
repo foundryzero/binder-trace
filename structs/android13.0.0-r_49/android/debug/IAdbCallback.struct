@@ -1,0 +1,25 @@
+{
+    "produced_on": "2023-06-01T06:42:35.809948755Z",
+    "source_location": "",
+    "full_name": "android.debug.IAdbCallback",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"enabled": "readBool"},
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "type": "readParcelable",
+                    "__parcelType": "android.debug.AdbTransportType"
+                }]
+            }
+        ],
+        "name": "onDebuggingChanged",
+        "oneWay": true,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "IAdbCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

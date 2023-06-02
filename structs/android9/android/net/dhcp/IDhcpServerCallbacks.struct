@@ -1,0 +1,25 @@
+{
+    "produced_on": "2022-08-04T09:32:14.802306094Z",
+    "source_location": "",
+    "full_name": "android.net.dhcp.IDhcpServerCallbacks",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"statusCode": "readInt32"},
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "server": "readParcelable",
+                    "__parcelType": "android.net.dhcp.IDhcpServer"
+                }]
+            }
+        ],
+        "name": "onDhcpServerCreated",
+        "oneWay": true,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "IDhcpServerCallbacks",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

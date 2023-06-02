@@ -1,0 +1,114 @@
+{
+    "produced_on": "2023-06-01T06:42:34.752641505Z",
+    "source_location": "",
+    "full_name": "android.media.IMediaRoute2ProviderService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "setCallback",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "discoveryPreference": "readParcelable",
+                        "__parcelType": "android.media.RouteDiscoveryPreference"
+                    }]
+                }
+            ],
+            "name": "updateDiscoveryPreference",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"requestId": "readInt64"},
+                {"routeId": "readString16"},
+                {"volume": "readInt32"}
+            ],
+            "name": "setRouteVolume",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"requestId": "readInt64"},
+                {"packageName": "readString16"},
+                {"routeId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"sessionHints": "readBundle"}]
+                }
+            ],
+            "name": "requestCreateSession",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"requestId": "readInt64"},
+                {"sessionId": "readString16"},
+                {"routeId": "readString16"}
+            ],
+            "name": "selectRoute",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"requestId": "readInt64"},
+                {"sessionId": "readString16"},
+                {"routeId": "readString16"}
+            ],
+            "name": "deselectRoute",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"requestId": "readInt64"},
+                {"sessionId": "readString16"},
+                {"routeId": "readString16"}
+            ],
+            "name": "transferToRoute",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"requestId": "readInt64"},
+                {"sessionId": "readString16"},
+                {"volume": "readInt32"}
+            ],
+            "name": "setSessionVolume",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"requestId": "readInt64"},
+                {"sessionId": "readString16"}
+            ],
+            "name": "releaseSession",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IMediaRoute2ProviderService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

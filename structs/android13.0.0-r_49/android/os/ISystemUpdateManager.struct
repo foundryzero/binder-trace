@@ -1,0 +1,40 @@
+{
+    "produced_on": "2023-06-01T06:42:35.675411133Z",
+    "source_location": "",
+    "full_name": "android.os.ISystemUpdateManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "retrieveSystemUpdateInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"__return": "readBundle"}]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "data": "readParcelable",
+                        "__parcelType": "android.os.PersistableBundle"
+                    }]
+                }
+            ],
+            "name": "updateSystemUpdateInfo",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISystemUpdateManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

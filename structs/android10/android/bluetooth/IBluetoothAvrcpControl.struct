@@ -1,0 +1,100 @@
+{
+    "produced_on": "2022-12-02T13:44:06.182390717Z",
+    "source_location": "",
+    "full_name": "android.bluetooth.IBluetoothAvrcpControl",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "Register",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"id": "readInt32"}],
+            "name": "Unregister",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "UnregisterAll",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"id": "readInt32"}],
+            "name": "Enable",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"id": "readInt32"}],
+            "name": "Disable",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"id": "readInt32"},
+                {"device_address": "readString16"},
+                {"key_code": "readInt32"},
+                {"key_pressed": "readBool"}
+            ],
+            "name": "SendPassThroughCommand",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"id": "readInt32"},
+                {"device_address": "readString16"},
+                {"abs_vol": "readInt32"},
+                {"label": "readInt32"}
+            ],
+            "name": "SetAbsVolumeResponse",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"id": "readInt32"},
+                {"device_address": "readString16"},
+                {"response_type": "readInt32"},
+                {"abs_vol": "readInt32"},
+                {"label": "readInt32"}
+            ],
+            "name": "RegisterForAbsVolumeCallbackResponse",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "IBluetoothAvrcpControl",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

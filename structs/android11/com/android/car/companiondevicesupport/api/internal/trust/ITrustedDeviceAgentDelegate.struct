@@ -1,0 +1,41 @@
+{
+    "produced_on": "2022-08-26T09:55:19.266541658Z",
+    "source_location": "",
+    "full_name": "com.android.car.companiondevicesupport.api.internal.trust.ITrustedDeviceAgentDelegate",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"token": "readByteVector"},
+                {"userId": "readInt32"}
+            ],
+            "name": "addEscrowToken",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"token": "readByteVector"},
+                {"handle": "readInt64"},
+                {"userId": "readInt32"}
+            ],
+            "name": "unlockUserWithToken",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"handle": "readInt64"},
+                {"userId": "readInt32"}
+            ],
+            "name": "removeEscrowToken",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ITrustedDeviceAgentDelegate",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

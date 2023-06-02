@@ -1,0 +1,22 @@
+{
+    "produced_on": "2022-12-02T14:07:14.947121156Z",
+    "source_location": "",
+    "components": [
+        {"requestId": "readInt32"},
+        {"subsequenceId": "readInt32"},
+        {"afTriggerId": "readInt32"},
+        {"precaptureTriggerId": "readInt32"},
+        {"frameNumber": "readInt64"},
+        {"partialResultCount": "readInt32"},
+        {"errorStreamId": "readInt32"},
+        {"errorPhysicalCameraIdPresent": "readBool"},
+        {
+            "__backreference": "errorPhysicalCameraIdPresent",
+            "__conditional": [{"errorPhysicalCameraId": "readString16"}]
+        }
+    ],
+    "full_name": "android.hardware.camera2.impl.CaptureResultExtras",
+    "name": "CaptureResultExtras",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

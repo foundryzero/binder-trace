@@ -1,0 +1,46 @@
+{
+    "produced_on": "2022-08-19T10:42:53.303705387Z",
+    "source_location": "",
+    "full_name": "android.view.IRecentsAnimationRunner",
+    "calls": [
+        {
+            "code": 2,
+            "in": [],
+            "name": "onAnimationCanceled",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"controller": "readStrongBinder"},
+                {
+                    "apps": "readParcelableVector",
+                    "__parcelType": "android.view.RemoteAnimationTarget"
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "homeContentInsets": "readParcelable",
+                        "__parcelType": "android.graphics.Rect"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "minimizedHomeBounds": "readParcelable",
+                        "__parcelType": "android.graphics.Rect"
+                    }]
+                }
+            ],
+            "name": "onAnimationStart",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IRecentsAnimationRunner",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

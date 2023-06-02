@@ -1,0 +1,73 @@
+{
+    "produced_on": "2022-08-19T10:42:53.029710149Z",
+    "source_location": "",
+    "full_name": "android.app.backup.IRestoreSession",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"observer": "readStrongBinder"},
+                {"monitor": "readStrongBinder"}
+            ],
+            "name": "getAvailableRestoreSets",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"token": "readInt64"},
+                {"observer": "readStrongBinder"},
+                {"monitor": "readStrongBinder"}
+            ],
+            "name": "restoreAll",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"token": "readInt64"},
+                {"observer": "readStrongBinder"},
+                {"monitor": "readStrongBinder"},
+                {"packages": "readString16Vector"}
+            ],
+            "name": "restoreSome",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"packageName": "readString16"},
+                {"observer": "readStrongBinder"},
+                {"monitor": "readStrongBinder"}
+            ],
+            "name": "restorePackage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "endRestoreSession",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IRestoreSession",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

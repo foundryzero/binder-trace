@@ -1,0 +1,43 @@
+{
+    "produced_on": "2023-06-01T06:42:37.936961989Z",
+    "source_location": "",
+    "full_name": "android.hardware.neuralnetworks.IBuffer",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "src": "readParcelable",
+                        "__parcelType": "android.hardware.neuralnetworks.Memory"
+                    }]
+                },
+                {"dimensions": "readInt32Vector"}
+            ],
+            "name": "copyFrom",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "dst": "readParcelable",
+                        "__parcelType": "android.hardware.neuralnetworks.Memory"
+                    }]
+                }
+            ],
+            "name": "copyTo",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IBuffer",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

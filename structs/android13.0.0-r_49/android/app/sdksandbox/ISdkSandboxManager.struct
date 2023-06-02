@@ -1,0 +1,56 @@
+{
+    "produced_on": "2023-06-01T06:42:34.056430892Z",
+    "source_location": "",
+    "full_name": "android.app.sdksandbox.ISdkSandboxManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"name": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"params": "readBundle"}]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "loadSdk",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"codeToken": "readStrongBinder"},
+                {"hostToken": "readStrongBinder"},
+                {"displayId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"params": "readBundle"}]
+                }
+            ],
+            "name": "requestSurfacePackage",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"id": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"params": "readBundle"}]
+                }
+            ],
+            "name": "sendData",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISdkSandboxManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

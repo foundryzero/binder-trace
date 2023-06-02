@@ -1,0 +1,28 @@
+{
+    "produced_on": "2022-08-19T10:42:53.596647718Z",
+    "source_location": "",
+    "full_name": "com.android.internal.os.IParcelFileDescriptorFactory",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"name": "readString16"},
+            {"mode": "readInt32"}
+        ],
+        "name": "open",
+        "oneWay": false,
+        "out": [
+            {"__exception": "readException"},
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "__return": "readParcelable",
+                    "__parcelType": "android.os.ParcelFileDescriptor"
+                }]
+            }
+        ]
+    }],
+    "name": "IParcelFileDescriptorFactory",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

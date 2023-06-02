@@ -1,0 +1,167 @@
+{
+    "produced_on": "2023-06-01T06:42:35.822085795Z",
+    "source_location": "",
+    "full_name": "android.hardware.face.IFaceServiceReceiver",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "face": "readParcelable",
+                        "__parcelType": "android.hardware.face.Face"
+                    }]
+                },
+                {"remaining": "readInt32"}
+            ],
+            "name": "onEnrollResult",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"acquiredInfo": "readInt32"},
+                {"vendorCode": "readInt32"}
+            ],
+            "name": "onAcquired",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "face": "readParcelable",
+                        "__parcelType": "android.hardware.face.Face"
+                    }]
+                },
+                {"userId": "readInt32"},
+                {"isStrongBiometric": "readBool"}
+            ],
+            "name": "onAuthenticationSucceeded",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"sensorId": "readInt32"},
+                {"userId": "readInt32"},
+                {"isStrongBiometric": "readBool"}
+            ],
+            "name": "onFaceDetected",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "onAuthenticationFailed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"error": "readInt32"},
+                {"vendorCode": "readInt32"}
+            ],
+            "name": "onError",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "face": "readParcelable",
+                        "__parcelType": "android.hardware.face.Face"
+                    }]
+                },
+                {"remaining": "readInt32"}
+            ],
+            "name": "onRemoved",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"success": "readBool"},
+                {"feature": "readInt32"}
+            ],
+            "name": "onFeatureSet",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"success": "readBool"},
+                {"features": "readInt32Vector"},
+                {
+                    "featureState": "readParcelableVector",
+                    "__parcelType": "android.hardware.face.boolean"
+                }
+            ],
+            "name": "onFeatureGet",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"sensorId": "readInt32"},
+                {"userId": "readInt32"},
+                {"challenge": "readInt64"}
+            ],
+            "name": "onChallengeGenerated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "frame": "readParcelable",
+                        "__parcelType": "android.hardware.face.FaceAuthenticationFrame"
+                    }]
+                }
+            ],
+            "name": "onAuthenticationFrame",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "frame": "readParcelable",
+                        "__parcelType": "android.hardware.face.FaceEnrollFrame"
+                    }]
+                }
+            ],
+            "name": "onEnrollmentFrame",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IFaceServiceReceiver",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

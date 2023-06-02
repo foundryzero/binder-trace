@@ -1,0 +1,75 @@
+{
+    "produced_on": "2022-12-02T13:44:05.907384998Z",
+    "source_location": "",
+    "full_name": "org.codeaurora.ims.internal.IQtiImsExt",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"startHour": "readInt32"},
+                {"startMinute": "readInt32"},
+                {"endHour": "readInt32"},
+                {"endMinute": "readInt32"},
+                {"action": "readInt32"},
+                {"reason": "readInt32"},
+                {"serviceClass": "readInt32"},
+                {"dialingNumber": "readString16"},
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "setCallForwardUncondTimer",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"reason": "readInt32"},
+                {"serviceClass": "readInt32"},
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "getCallForwardUncondTimer",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "getPacketCount",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "getPacketErrorCount",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"phoneId": "readInt32"},
+                {"deflectNumber": "readString16"},
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "sendCallDeflectRequest",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"phoneId": "readInt32"},
+                {"type": "readInt32"},
+                {"number": "readString16"},
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "sendCallTransferRequest",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IQtiImsExt",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

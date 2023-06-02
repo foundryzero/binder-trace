@@ -1,0 +1,28 @@
+{
+    "produced_on": "2023-06-01T06:42:39.151583274Z",
+    "source_location": "",
+    "components": [
+        {"frequency": "readInt64"},
+        {"endFrequency": "readInt64"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "inversion": "readParcelable",
+                "__parcelType": "android.hardware.tv.tuner.FrontendSpectralInversion"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "modulation": "readParcelable",
+                "__parcelType": "android.hardware.tv.tuner.FrontendAtscModulation"
+            }]
+        }
+    ],
+    "full_name": "android.hardware.tv.tuner.FrontendAtscSettings",
+    "name": "FrontendAtscSettings",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

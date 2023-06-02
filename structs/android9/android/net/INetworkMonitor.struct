@@ -1,0 +1,131 @@
+{
+    "produced_on": "2022-08-04T09:32:14.822412945Z",
+    "source_location": "",
+    "full_name": "android.net.INetworkMonitor",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "start",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "launchCaptivePortalApp",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"response": "readInt32"}],
+            "name": "notifyCaptivePortalAppFinished",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "setAcceptPartialConnectivity",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"uid": "readInt32"}],
+            "name": "forceReevaluation",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "config": "readParcelable",
+                        "__parcelType": "android.net.PrivateDnsConfigParcel"
+                    }]
+                }
+            ],
+            "name": "notifyPrivateDnsChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"returnCode": "readInt32"}],
+            "name": "notifyDnsResponse",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "lp": "readParcelable",
+                        "__parcelType": "android.net.LinkProperties"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "nc": "readParcelable",
+                        "__parcelType": "android.net.NetworkCapabilities"
+                    }]
+                }
+            ],
+            "name": "notifyNetworkConnected",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [],
+            "name": "notifyNetworkDisconnected",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "lp": "readParcelable",
+                        "__parcelType": "android.net.LinkProperties"
+                    }]
+                }
+            ],
+            "name": "notifyLinkPropertiesChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "nc": "readParcelable",
+                        "__parcelType": "android.net.NetworkCapabilities"
+                    }]
+                }
+            ],
+            "name": "notifyNetworkCapabilitiesChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "INetworkMonitor",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

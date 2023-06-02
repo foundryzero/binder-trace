@@ -1,0 +1,34 @@
+{
+    "produced_on": "2023-06-01T06:42:33.455812955Z",
+    "source_location": "",
+    "components": [
+        {"bufId": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "type": "readParcelable",
+                "__parcelType": "android.automotive.computepipe.runner.PacketDescriptorPacketType"
+            }]
+        },
+        {"size": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "handle": "readParcelable",
+                "__parcelType": "android.hardware.graphics.common.HardwareBuffer"
+            }]
+        },
+        {
+            "dataFds": "readParcelableVector",
+            "__parcelType": "android.automotive.computepipe.runner.ParcelFileDescriptor"
+        },
+        {"sourceTimeStampMillis": "readInt64"},
+        {"data": "readByteVector"}
+    ],
+    "full_name": "android.automotive.computepipe.runner.PacketDescriptor",
+    "name": "PacketDescriptor",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

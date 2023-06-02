@@ -1,0 +1,478 @@
+{
+    "produced_on": "2022-08-19T10:42:53.560878773Z",
+    "source_location": "",
+    "full_name": "com.android.internal.statusbar.IStatusBarService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "expandNotificationsPanel",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "collapsePanels",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "togglePanel",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"what": "readInt32"},
+                {"token": "readStrongBinder"},
+                {"pkg": "readString16"}
+            ],
+            "name": "disable",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"what": "readInt32"},
+                {"token": "readStrongBinder"},
+                {"pkg": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "disableForUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"what": "readInt32"},
+                {"token": "readStrongBinder"},
+                {"pkg": "readString16"}
+            ],
+            "name": "disable2",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"what": "readInt32"},
+                {"token": "readStrongBinder"},
+                {"pkg": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "disable2ForUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"slot": "readString16"},
+                {"iconPackage": "readString16"},
+                {"iconId": "readInt32"},
+                {"iconLevel": "readInt32"},
+                {"contentDescription": "readString16"}
+            ],
+            "name": "setIcon",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"slot": "readString16"},
+                {"visible": "readBool"}
+            ],
+            "name": "setIconVisibility",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [{"slot": "readString16"}],
+            "name": "removeIcon",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"vis": "readInt32"},
+                {"backDisposition": "readInt32"},
+                {"showImeSwitcher": "readBool"}
+            ],
+            "name": "setImeWindowStatus",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [{"subPanel": "readString16"}],
+            "name": "expandSettingsPanel",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [{"callbacks": "readStrongBinder"}],
+            "name": "registerStatusBar",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "iconSlots": "readList",
+                    "__parcelType": "String"
+                },
+                {
+                    "iconList": "readList",
+                    "__parcelType": "com.android.internal.statusbar.StatusBarIcon"
+                },
+                {"switches": "readInt32Vector"},
+                {
+                    "binders": "readList",
+                    "__parcelType": "IBinder"
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "fullscreenStackBounds": "readParcelable",
+                        "__parcelType": "android.graphics.Rect"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "dockedStackBounds": "readParcelable",
+                        "__parcelType": "android.graphics.Rect"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"clearNotificationEffects": "readBool"},
+                {"numItems": "readInt32"}
+            ],
+            "name": "onPanelRevealed",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [],
+            "name": "onPanelHidden",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [],
+            "name": "clearNotificationEffects",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [
+                {"key": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "nv": "readParcelable",
+                        "__parcelType": "com.android.internal.statusbar.NotificationVisibility"
+                    }]
+                }
+            ],
+            "name": "onNotificationClick",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"key": "readString16"},
+                {"actionIndex": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "nv": "readParcelable",
+                        "__parcelType": "com.android.internal.statusbar.NotificationVisibility"
+                    }]
+                }
+            ],
+            "name": "onNotificationActionClick",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 19,
+            "in": [
+                {"pkg": "readString16"},
+                {"tag": "readString16"},
+                {"id": "readInt32"},
+                {"uid": "readInt32"},
+                {"initialPid": "readInt32"},
+                {"message": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "onNotificationError",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 20,
+            "in": [{"userId": "readInt32"}],
+            "name": "onClearAllNotifications",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 21,
+            "in": [
+                {"pkg": "readString16"},
+                {"tag": "readString16"},
+                {"id": "readInt32"},
+                {"userId": "readInt32"},
+                {"key": "readString16"},
+                {"dismissalSurface": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "nv": "readParcelable",
+                        "__parcelType": "com.android.internal.statusbar.NotificationVisibility"
+                    }]
+                }
+            ],
+            "name": "onNotificationClear",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 22,
+            "in": [
+                {
+                    "newlyVisibleKeys": "readParcelableVector",
+                    "__parcelType": "com.android.internal.statusbar.NotificationVisibility"
+                },
+                {
+                    "noLongerVisibleKeys": "readParcelableVector",
+                    "__parcelType": "com.android.internal.statusbar.NotificationVisibility"
+                }
+            ],
+            "name": "onNotificationVisibilityChanged",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 23,
+            "in": [
+                {"key": "readString16"},
+                {"userAction": "readBool"},
+                {"expanded": "readBool"}
+            ],
+            "name": "onNotificationExpansionChanged",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 24,
+            "in": [{"key": "readString16"}],
+            "name": "onNotificationDirectReplied",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 25,
+            "in": [
+                {"key": "readString16"},
+                {"replyCount": "readInt32"}
+            ],
+            "name": "onNotificationSmartRepliesAdded",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 26,
+            "in": [
+                {"key": "readString16"},
+                {"replyIndex": "readInt32"}
+            ],
+            "name": "onNotificationSmartReplySent",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 27,
+            "in": [{"key": "readString16"}],
+            "name": "onNotificationSettingsViewed",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 28,
+            "in": [
+                {"vis": "readInt32"},
+                {"mask": "readInt32"},
+                {"cause": "readString16"}
+            ],
+            "name": "setSystemUiVisibility",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 29,
+            "in": [],
+            "name": "onGlobalActionsShown",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 30,
+            "in": [],
+            "name": "onGlobalActionsHidden",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 31,
+            "in": [],
+            "name": "shutdown",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 32,
+            "in": [{"safeMode": "readBool"}],
+            "name": "reboot",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 33,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "tile": "readParcelable",
+                        "__parcelType": "android.content.ComponentName"
+                    }]
+                }
+            ],
+            "name": "addTile",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 34,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "tile": "readParcelable",
+                        "__parcelType": "android.content.ComponentName"
+                    }]
+                }
+            ],
+            "name": "remTile",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 35,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "tile": "readParcelable",
+                        "__parcelType": "android.content.ComponentName"
+                    }]
+                }
+            ],
+            "name": "clickTile",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 36,
+            "in": [{"key": "readInt32"}],
+            "name": "handleSystemKey",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 37,
+            "in": [{"entering": "readBool"}],
+            "name": "showPinningEnterExitToast",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 38,
+            "in": [],
+            "name": "showPinningEscapeToast",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 39,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"bundle": "readBundle"}]
+                },
+                {"receiver": "readStrongBinder"}
+            ],
+            "name": "showFingerprintDialog",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 40,
+            "in": [],
+            "name": "onFingerprintAuthenticated",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 41,
+            "in": [{"message": "readString16"}],
+            "name": "onFingerprintHelp",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 42,
+            "in": [{"error": "readString16"}],
+            "name": "onFingerprintError",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 43,
+            "in": [],
+            "name": "hideFingerprintDialog",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IStatusBarService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

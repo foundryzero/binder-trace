@@ -1,0 +1,174 @@
+{
+    "produced_on": "2022-08-19T10:42:53.177325560Z",
+    "source_location": "",
+    "full_name": "android.app.ITaskStackListener",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "onTaskStackChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"},
+                {"taskId": "readInt32"},
+                {"stackId": "readInt32"}
+            ],
+            "name": "onActivityPinned",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "onActivityUnpinned",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"clearedTask": "readBool"}],
+            "name": "onPinnedActivityRestartAttempt",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "onPinnedStackAnimationStarted",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "onPinnedStackAnimationEnded",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"packageName": "readString16"},
+                {"taskId": "readInt32"},
+                {"reason": "readInt32"}
+            ],
+            "name": "onActivityForcedResizable",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "onActivityDismissingDockedStack",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [],
+            "name": "onActivityLaunchOnSecondaryDisplayFailed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"taskId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "componentName": "readParcelable",
+                        "__parcelType": "android.content.ComponentName"
+                    }]
+                }
+            ],
+            "name": "onTaskCreated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [{"taskId": "readInt32"}],
+            "name": "onTaskRemoved",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [{"taskId": "readInt32"}],
+            "name": "onTaskMovedToFront",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"taskId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "td": "readParcelable",
+                        "__parcelType": "android.app.ActivityManager.TaskDescription"
+                    }]
+                }
+            ],
+            "name": "onTaskDescriptionChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"taskId": "readInt32"},
+                {"requestedOrientation": "readInt32"}
+            ],
+            "name": "onActivityRequestedOrientationChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [{"taskId": "readInt32"}],
+            "name": "onTaskRemovalStarted",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [
+                {"taskId": "readInt32"},
+                {"userId": "readInt32"}
+            ],
+            "name": "onTaskProfileLocked",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [
+                {"taskId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "snapshot": "readParcelable",
+                        "__parcelType": "android.app.ActivityManager.TaskSnapshot"
+                    }]
+                }
+            ],
+            "name": "onTaskSnapshotChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ITaskStackListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

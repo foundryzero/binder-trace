@@ -1,0 +1,265 @@
+{
+    "produced_on": "2022-08-04T09:32:18.332206854Z",
+    "source_location": "",
+    "full_name": "android.media.tv.tunerresourcemanager.ITunerResourceManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "profile": "readParcelable",
+                        "__parcelType": "android.media.tv.tunerresourcemanager.ResourceClientProfile"
+                    }]
+                },
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "registerClientProfile",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"clientId": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"clientId": "readInt32"}],
+            "name": "unregisterClientProfile",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"clientId": "readInt32"},
+                {"priority": "readInt32"},
+                {"niceValue": "readInt32"}
+            ],
+            "name": "updateClientPriority",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{
+                "infos": "readParcelableVector",
+                "__parcelType": "android.media.tv.tunerresourcemanager.TunerFrontendInfo"
+            }],
+            "name": "setFrontendInfoList",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"casSystemId": "readInt32"},
+                {"maxSessionNum": "readInt32"}
+            ],
+            "name": "updateCasInfo",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"lnbIds": "readInt32Vector"}],
+            "name": "setLnbInfoList",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.media.tv.tunerresourcemanager.TunerFrontendRequest"
+                    }]
+                }
+            ],
+            "name": "requestFrontend",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"},
+                {"frontendHandle": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"selfClientId": "readInt32"},
+                {"targetClientId": "readInt32"}
+            ],
+            "name": "shareFrontend",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.media.tv.tunerresourcemanager.TunerDemuxRequest"
+                    }]
+                }
+            ],
+            "name": "requestDemux",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"},
+                {"demuxHandle": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.media.tv.tunerresourcemanager.TunerDescramblerRequest"
+                    }]
+                }
+            ],
+            "name": "requestDescrambler",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"},
+                {"descramblerHandle": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.media.tv.tunerresourcemanager.CasSessionRequest"
+                    }]
+                }
+            ],
+            "name": "requestCasSession",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"},
+                {"casSessionHandle": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.media.tv.tunerresourcemanager.TunerLnbRequest"
+                    }]
+                }
+            ],
+            "name": "requestLnb",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"},
+                {"lnbHandle": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"frontendHandle": "readInt32"},
+                {"clientId": "readInt32"}
+            ],
+            "name": "releaseFrontend",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"demuxHandle": "readInt32"},
+                {"clientId": "readInt32"}
+            ],
+            "name": "releaseDemux",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"descramblerHandle": "readInt32"},
+                {"clientId": "readInt32"}
+            ],
+            "name": "releaseDescrambler",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [
+                {"casSessionHandle": "readInt32"},
+                {"clientId": "readInt32"}
+            ],
+            "name": "releaseCasSession",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [
+                {"lnbHandle": "readInt32"},
+                {"clientId": "readInt32"}
+            ],
+            "name": "releaseLnb",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "challengerProfile": "readParcelable",
+                        "__parcelType": "android.media.tv.tunerresourcemanager.ResourceClientProfile"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "holderProfile": "readParcelable",
+                        "__parcelType": "android.media.tv.tunerresourcemanager.ResourceClientProfile"
+                    }]
+                }
+            ],
+            "name": "isHigherPriority",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "ITunerResourceManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

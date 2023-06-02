@@ -1,0 +1,236 @@
+{
+    "produced_on": "2022-08-19T10:42:51.899104923Z",
+    "source_location": "",
+    "full_name": "android.telephony.mbms.vendor.IMbmsDownloadService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"subId": "readInt32"},
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "initialize",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"subId": "readInt32"},
+                {
+                    "serviceClasses": "readList",
+                    "__parcelType": "String"
+                }
+            ],
+            "name": "requestUpdateFileServices",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"subId": "readInt32"},
+                {"rootDirectoryPath": "readString16"}
+            ],
+            "name": "setTempFileRootDirectory",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "downloadRequest": "readParcelable",
+                        "__parcelType": "android.telephony.mbms.DownloadRequest"
+                    }]
+                }
+            ],
+            "name": "download",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "downloadRequest": "readParcelable",
+                        "__parcelType": "android.telephony.mbms.DownloadRequest"
+                    }]
+                },
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "addStatusListener",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "downloadRequest": "readParcelable",
+                        "__parcelType": "android.telephony.mbms.DownloadRequest"
+                    }]
+                },
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "removeStatusListener",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "downloadRequest": "readParcelable",
+                        "__parcelType": "android.telephony.mbms.DownloadRequest"
+                    }]
+                },
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "addProgressListener",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "downloadRequest": "readParcelable",
+                        "__parcelType": "android.telephony.mbms.DownloadRequest"
+                    }]
+                },
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "removeProgressListener",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [{"subscriptionId": "readInt32"}],
+            "name": "listPendingDownloads",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.telephony.mbms.DownloadRequest"
+                }
+            ]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "downloadRequest": "readParcelable",
+                        "__parcelType": "android.telephony.mbms.DownloadRequest"
+                    }]
+                }
+            ],
+            "name": "cancelDownload",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "downloadRequest": "readParcelable",
+                        "__parcelType": "android.telephony.mbms.DownloadRequest"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "fileInfo": "readParcelable",
+                        "__parcelType": "android.telephony.mbms.FileInfo"
+                    }]
+                }
+            ],
+            "name": "requestDownloadState",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "downloadRequest": "readParcelable",
+                        "__parcelType": "android.telephony.mbms.DownloadRequest"
+                    }]
+                }
+            ],
+            "name": "resetDownloadKnowledge",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [{"subId": "readInt32"}],
+            "name": "dispose",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IMbmsDownloadService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,134 @@
+{
+    "produced_on": "2023-06-01T06:42:35.738568337Z",
+    "source_location": "",
+    "full_name": "android.service.quicksettings.IQSService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"tile": "readStrongBinder"}],
+            "name": "getTile",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.service.quicksettings.Tile"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "tile": "readParcelable",
+                        "__parcelType": "android.service.quicksettings.Tile"
+                    }]
+                },
+                {"service": "readStrongBinder"}
+            ],
+            "name": "updateQsTile",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"tile": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "icon": "readParcelable",
+                        "__parcelType": "android.graphics.drawable.Icon"
+                    }]
+                },
+                {"contentDescription": "readString16"}
+            ],
+            "name": "updateStatusIcon",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"tile": "readStrongBinder"}],
+            "name": "onShowDialog",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"tile": "readStrongBinder"}],
+            "name": "onStartActivity",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"tile": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "pendingIntent": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                }
+            ],
+            "name": "startActivity",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "isLocked",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "isSecure",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [{"tile": "readStrongBinder"}],
+            "name": "startUnlockAndRun",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [{"tile": "readStrongBinder"}],
+            "name": "onDialogHidden",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [{"tile": "readStrongBinder"}],
+            "name": "onStartSuccessful",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IQSService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,50 @@
+{
+    "produced_on": "2022-12-02T13:44:06.564009232Z",
+    "source_location": "",
+    "components": [
+        {"enableIPv4": "readBool"},
+        {"enableIPv6": "readBool"},
+        {"usingMultinetworkPolicyTracker": "readBool"},
+        {"usingIpReachabilityMonitor": "readBool"},
+        {"requestedPreDhcpActionMs": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "initialConfig": "readParcelable",
+                "__parcelType": "android.net.InitialConfigurationParcelable"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "staticIpConfig": "readParcelable",
+                "__parcelType": "android.net.StaticIpConfiguration"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "apfCapabilities": "readParcelable",
+                "__parcelType": "android.net.apf.ApfCapabilities"
+            }]
+        },
+        {"provisioningTimeoutMs": "readInt32"},
+        {"ipv6AddrGenMode": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "network": "readParcelable",
+                "__parcelType": "android.net.Network"
+            }]
+        },
+        {"displayName": "readString16"}
+    ],
+    "full_name": "android.net.ProvisioningConfigurationParcelable",
+    "name": "ProvisioningConfigurationParcelable",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

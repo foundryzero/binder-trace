@@ -1,0 +1,186 @@
+{
+    "produced_on": "2022-12-02T13:44:06.863476387Z",
+    "source_location": "",
+    "full_name": "com.android.ims.internal.uce.uceservice.IUceService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"uceListener": "readStrongBinder"}],
+            "name": "startService",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "stopService",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "isServiceStarted",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"optionsListener": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "optionsServiceListenerHdl": "readParcelable",
+                        "__parcelType": "com.android.ims.internal.uce.common.UceLong"
+                    }]
+                }
+            ],
+            "name": "createOptionsService",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"optionsListener": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "optionsServiceListenerHdl": "readParcelable",
+                        "__parcelType": "com.android.ims.internal.uce.common.UceLong"
+                    }]
+                },
+                {"iccId": "readString16"}
+            ],
+            "name": "createOptionsServiceForSubscription",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [{"optionsServiceHandle": "readInt32"}],
+            "name": "destroyOptionsService",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"presenceServiceListener": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "presenceServiceListenerHdl": "readParcelable",
+                        "__parcelType": "com.android.ims.internal.uce.common.UceLong"
+                    }]
+                }
+            ],
+            "name": "createPresenceService",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"presenceServiceListener": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "presenceServiceListenerHdl": "readParcelable",
+                        "__parcelType": "com.android.ims.internal.uce.common.UceLong"
+                    }]
+                },
+                {"iccId": "readString16"}
+            ],
+            "name": "createPresenceServiceForSubscription",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [{"presenceServiceHdl": "readInt32"}],
+            "name": "destroyPresenceService",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [],
+            "name": "getServiceStatus",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [],
+            "name": "getPresenceService",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [{"iccId": "readString16"}],
+            "name": "getPresenceServiceForSubscription",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [],
+            "name": "getOptionsService",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 14,
+            "in": [{"iccId": "readString16"}],
+            "name": "getOptionsServiceForSubscription",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        }
+    ],
+    "name": "IUceService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

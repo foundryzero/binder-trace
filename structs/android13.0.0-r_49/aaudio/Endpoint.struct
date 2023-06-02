@@ -1,0 +1,46 @@
+{
+    "produced_on": "2023-06-01T06:42:36.037110852Z",
+    "source_location": "",
+    "components": [
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "upMessageQueueParcelable": "readParcelable",
+                "__parcelType": "aaudio.RingBuffer"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "downMessageQueueParcelable": "readParcelable",
+                "__parcelType": "aaudio.RingBuffer"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "upDataQueueParcelable": "readParcelable",
+                "__parcelType": "aaudio.RingBuffer"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "downDataQueueParcelable": "readParcelable",
+                "__parcelType": "aaudio.RingBuffer"
+            }]
+        },
+        {
+            "sharedMemories": "readParcelableVector",
+            "__parcelType": "android.media.SharedFileRegion"
+        }
+    ],
+    "full_name": "aaudio.Endpoint",
+    "name": "Endpoint",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

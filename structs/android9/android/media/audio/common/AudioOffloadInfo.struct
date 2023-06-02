@@ -1,0 +1,42 @@
+{
+    "produced_on": "2022-08-04T09:32:18.448244027Z",
+    "source_location": "",
+    "components": [
+        {"sampleRateHz": "readInt32"},
+        {"channelMask": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "format": "readParcelable",
+                "__parcelType": "android.media.audio.common.AudioFormat"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "streamType": "readParcelable",
+                "__parcelType": "android.media.audio.common.AudioStreamType"
+            }]
+        },
+        {"bitRatePerSecond": "readInt32"},
+        {"durationMicroseconds": "readInt64"},
+        {"hasVideo": "readBool"},
+        {"isStreaming": "readBool"},
+        {"bitWidth": "readInt32"},
+        {"bufferSize": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "usage": "readParcelable",
+                "__parcelType": "android.media.audio.common.AudioUsage"
+            }]
+        }
+    ],
+    "full_name": "android.media.audio.common.AudioOffloadInfo",
+    "name": "AudioOffloadInfo",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

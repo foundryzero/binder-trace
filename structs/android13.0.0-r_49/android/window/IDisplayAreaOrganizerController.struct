@@ -1,0 +1,75 @@
+{
+    "produced_on": "2023-06-01T06:42:35.648285707Z",
+    "source_location": "",
+    "full_name": "android.window.IDisplayAreaOrganizerController",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"organizer": "readStrongBinder"},
+                {"displayAreaFeature": "readInt32"}
+            ],
+            "name": "registerOrganizer",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.window.ParceledListSlice<DisplayAreaAppearedInfo>"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"organizer": "readStrongBinder"}],
+            "name": "unregisterOrganizer",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"organizer": "readStrongBinder"},
+                {"displayId": "readInt32"},
+                {"parentFeatureId": "readInt32"},
+                {"name": "readString16"}
+            ],
+            "name": "createTaskDisplayArea",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.window.DisplayAreaAppearedInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "taskDisplayArea": "readParcelable",
+                        "__parcelType": "android.window.WindowContainerToken"
+                    }]
+                }
+            ],
+            "name": "deleteTaskDisplayArea",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IDisplayAreaOrganizerController",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

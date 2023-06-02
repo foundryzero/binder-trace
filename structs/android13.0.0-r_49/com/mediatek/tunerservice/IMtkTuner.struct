@@ -1,0 +1,75 @@
+{
+    "produced_on": "2023-06-01T06:42:33.474235772Z",
+    "source_location": "",
+    "full_name": "com.mediatek.tunerservice.IMtkTuner",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"frequency": "readInt32"},
+                {"modulation": "readString16"},
+                {"timeOutMs": "readInt32"}
+            ],
+            "name": "tune",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"pid": "readInt32"},
+                {"filterType": "readInt32"}
+            ],
+            "name": "addPidFilter",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "closeAllPidFilters",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "stopTune",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"maxDataSize": "readInt32"},
+                {"timeOutMs": "readInt32"}
+            ],
+            "name": "getTsData",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [{"hasPendingTune": "readBool"}],
+            "name": "setHasPendingTune",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "release",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IMtkTuner",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

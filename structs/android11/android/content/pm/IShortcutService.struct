@@ -1,0 +1,415 @@
+{
+    "produced_on": "2022-08-26T09:55:23.391310546Z",
+    "source_location": "",
+    "full_name": "android.content.pm.IShortcutService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"packageName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "shortcutInfoList": "readParcelable",
+                        "__parcelType": "android.content.pm.ParceledListSlice"
+                    }]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "setDynamicShortcuts",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"packageName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "shortcutInfoList": "readParcelable",
+                        "__parcelType": "android.content.pm.ParceledListSlice"
+                    }]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "addDynamicShortcuts",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"packageName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "shortcutIds": "readParcelable",
+                        "__parcelType": "android.content.pm.List"
+                    }]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "removeDynamicShortcuts",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "removeAllDynamicShortcuts",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"packageName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "shortcuts": "readParcelable",
+                        "__parcelType": "android.content.pm.ParceledListSlice"
+                    }]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "updateShortcuts",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"packageName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "shortcut": "readParcelable",
+                        "__parcelType": "android.content.pm.ShortcutInfo"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "resultIntent": "readParcelable",
+                        "__parcelType": "android.content.IntentSender"
+                    }]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "requestPinShortcut",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"packageName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "shortcut": "readParcelable",
+                        "__parcelType": "android.content.pm.ShortcutInfo"
+                    }]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "createShortcutResultIntent",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.Intent"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"packageName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "shortcutIds": "readParcelable",
+                        "__parcelType": "android.content.pm.List"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "disabledMessage": "readParcelable",
+                        "__parcelType": "CharSequence"
+                    }]
+                },
+                {"disabledMessageResId": "readInt32"},
+                {"userId": "readInt32"}
+            ],
+            "name": "disableShortcuts",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"packageName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "shortcutIds": "readParcelable",
+                        "__parcelType": "android.content.pm.List"
+                    }]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "enableShortcuts",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "getMaxShortcutCountPerActivity",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "getRemainingCallCount",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "getRateLimitResetTime",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "getIconMaxDimensions",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"packageName": "readString16"},
+                {"shortcutId": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "reportShortcutUsed",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [],
+            "name": "resetThrottling",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "onApplicationActive",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [{"user": "readInt32"}],
+            "name": "getBackupPayload",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"payload": "readByteVector"},
+                {"user": "readInt32"}
+            ],
+            "name": "applyRestore",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 19,
+            "in": [
+                {"user": "readInt32"},
+                {"requestType": "readInt32"}
+            ],
+            "name": "isRequestPinItemSupported",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 20,
+            "in": [
+                {"packageName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "filter": "readParcelable",
+                        "__parcelType": "android.content.IntentFilter"
+                    }]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "getShareTargets",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.ParceledListSlice"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 21,
+            "in": [
+                {"packageName": "readString16"},
+                {"packageToCheck": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "hasShareTargets",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 22,
+            "in": [
+                {"packageName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "shortcutIds": "readParcelable",
+                        "__parcelType": "android.content.pm.List"
+                    }]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "removeLongLivedShortcuts",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 23,
+            "in": [
+                {"packageName": "readString16"},
+                {"matchFlags": "readInt32"},
+                {"userId": "readInt32"}
+            ],
+            "name": "getShortcuts",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.ParceledListSlice"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 24,
+            "in": [
+                {"packageName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "shortcut": "readParcelable",
+                        "__parcelType": "android.content.pm.ShortcutInfo"
+                    }]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "pushDynamicShortcut",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IShortcutService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

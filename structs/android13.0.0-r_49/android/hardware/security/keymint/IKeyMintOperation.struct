@@ -1,0 +1,100 @@
+{
+    "produced_on": "2023-06-01T06:42:38.407847642Z",
+    "source_location": "",
+    "full_name": "android.hardware.security.keymint.IKeyMintOperation",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"input": "readByteVector"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "authToken": "readParcelable",
+                        "__parcelType": "android.hardware.security.keymint.HardwareAuthToken"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "timeStampToken": "readParcelable",
+                        "__parcelType": "android.hardware.security.secureclock.TimeStampToken"
+                    }]
+                }
+            ],
+            "name": "updateAad",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"input": "readByteVector"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "authToken": "readParcelable",
+                        "__parcelType": "android.hardware.security.keymint.HardwareAuthToken"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "timeStampToken": "readParcelable",
+                        "__parcelType": "android.hardware.security.secureclock.TimeStampToken"
+                    }]
+                }
+            ],
+            "name": "update",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"input": "readByteVector"},
+                {"signature": "readByteVector"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "authToken": "readParcelable",
+                        "__parcelType": "android.hardware.security.keymint.HardwareAuthToken"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "timestampToken": "readParcelable",
+                        "__parcelType": "android.hardware.security.secureclock.TimeStampToken"
+                    }]
+                },
+                {"confirmationToken": "readByteVector"}
+            ],
+            "name": "finish",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "abort",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IKeyMintOperation",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

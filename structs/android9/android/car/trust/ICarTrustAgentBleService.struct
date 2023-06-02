@@ -1,0 +1,179 @@
+{
+    "produced_on": "2022-08-19T10:42:50.506705373Z",
+    "source_location": "",
+    "full_name": "android.car.trust.ICarTrustAgentBleService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "registerBleCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "unregisterBleCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "startEnrolmentAdvertising",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "stopEnrolmentAdvertising",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "device": "readParcelable",
+                        "__parcelType": "android.bluetooth.BluetoothDevice"
+                    }]
+                },
+                {"handle": "readInt64"}
+            ],
+            "name": "sendEnrolmentHandle",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "registerEnrolmentCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "unregisterEnrolmentCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "startUnlockAdvertising",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [],
+            "name": "stopUnlockAdvertising",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "registerUnlockCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "unregisterUnlockCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [{"delegate": "readStrongBinder"}],
+            "name": "setTokenRequestDelegate",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [],
+            "name": "revokeTrust",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"token": "readByteVector"},
+                {"uid": "readInt32"}
+            ],
+            "name": "addEscrowToken",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"handle": "readInt64"},
+                {"uid": "readInt32"}
+            ],
+            "name": "removeEscrowToken",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [
+                {"handle": "readInt64"},
+                {"uid": "readInt32"}
+            ],
+            "name": "isEscrowTokenActive",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "setTokenResponseCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"token": "readByteVector"},
+                {"handle": "readInt64"},
+                {"uid": "readInt32"}
+            ],
+            "name": "onEscrowTokenAdded",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 19,
+            "in": [
+                {"handle": "readInt64"},
+                {"successful": "readBool"}
+            ],
+            "name": "onEscrowTokenRemoved",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 20,
+            "in": [
+                {"handle": "readInt64"},
+                {"active": "readBool"}
+            ],
+            "name": "onEscrowTokenActiveStateChanged",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICarTrustAgentBleService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

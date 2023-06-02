@@ -1,0 +1,45 @@
+{
+    "produced_on": "2023-06-01T06:42:38.923648814Z",
+    "source_location": "",
+    "full_name": "android.hardware.gnss.IGnssMeasurementInterface",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"callback": "readStrongBinder"},
+                {"enableFullTracking": "readBool"},
+                {"enableCorrVecOutputs": "readBool"}
+            ],
+            "name": "setCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "close",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"callback": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "options": "readParcelable",
+                        "__parcelType": "android.hardware.gnss.IGnssMeasurementInterface.Options"
+                    }]
+                }
+            ],
+            "name": "setCallbackWithOptions",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IGnssMeasurementInterface",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

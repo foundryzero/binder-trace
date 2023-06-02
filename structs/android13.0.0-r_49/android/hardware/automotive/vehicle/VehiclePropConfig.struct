@@ -1,0 +1,35 @@
+{
+    "produced_on": "2023-06-01T06:42:38.202170457Z",
+    "source_location": "",
+    "components": [
+        {"prop": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "access": "readParcelable",
+                "__parcelType": "android.hardware.automotive.vehicle.VehiclePropertyAccess"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "changeMode": "readParcelable",
+                "__parcelType": "android.hardware.automotive.vehicle.VehiclePropertyChangeMode"
+            }]
+        },
+        {
+            "areaConfigs": "readParcelableVector",
+            "__parcelType": "android.hardware.automotive.vehicle.VehicleAreaConfig"
+        },
+        {"configArray": "readInt32Vector"},
+        {"configString": "readString16"},
+        {"minSampleRate": "readFloat"},
+        {"maxSampleRate": "readFloat"}
+    ],
+    "full_name": "android.hardware.automotive.vehicle.VehiclePropConfig",
+    "name": "VehiclePropConfig",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

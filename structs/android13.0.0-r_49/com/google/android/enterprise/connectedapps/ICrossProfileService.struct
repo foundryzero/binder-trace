@@ -1,0 +1,52 @@
+{
+    "produced_on": "2023-06-01T06:42:36.528505841Z",
+    "source_location": "",
+    "full_name": "com.google.android.enterprise.connectedapps.ICrossProfileService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"callId": "readInt64"},
+                {"blockId": "readInt32"},
+                {"numBytes": "readInt32"},
+                {"params": "readByteVector"}
+            ],
+            "name": "prepareCall",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"callId": "readInt64"},
+                {"blockId": "readInt32"},
+                {"crossProfileTypeIdentifier": "readInt64"},
+                {"methodIdentifier": "readInt32"},
+                {"params": "readByteVector"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "call",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"callId": "readInt64"},
+                {"blockId": "readInt32"}
+            ],
+            "name": "fetchResponse",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        }
+    ],
+    "name": "ICrossProfileService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

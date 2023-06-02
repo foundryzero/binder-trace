@@ -1,0 +1,27 @@
+{
+    "produced_on": "2023-06-01T06:42:34.909860987Z",
+    "source_location": "",
+    "components": [
+        {"sampleRate": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "channelMask": "readParcelable",
+                "__parcelType": "android.media.audio.common.AudioChannelLayout"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "format": "readParcelable",
+                "__parcelType": "android.media.audio.common.AudioFormatDescription"
+            }]
+        }
+    ],
+    "full_name": "android.media.audio.common.AudioConfigBase",
+    "name": "AudioConfigBase",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

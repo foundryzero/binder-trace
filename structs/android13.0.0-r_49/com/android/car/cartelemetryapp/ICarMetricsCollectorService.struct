@@ -1,0 +1,94 @@
+{
+    "produced_on": "2023-06-01T06:42:33.131747320Z",
+    "source_location": "",
+    "full_name": "com.android.car.cartelemetryapp.ICarMetricsCollectorService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getConfigData",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "com.android.car.cartelemetryapp.IConfigData"
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"configName": "readString16"}],
+            "name": "addConfig",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"configName": "readString16"}],
+            "name": "removeConfig",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "setConfigStateListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "setResultListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"configName": "readString16"}],
+            "name": "getBundleHistory",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.os.PersistableBundle"
+                }
+            ]
+        },
+        {
+            "code": 7,
+            "in": [{"configName": "readString16"}],
+            "name": "getErrorHistory",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "String"
+                }
+            ]
+        },
+        {
+            "code": 8,
+            "in": [{"configName": "readString16"}],
+            "name": "clearHistory",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [],
+            "name": "getLog",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        }
+    ],
+    "name": "ICarMetricsCollectorService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

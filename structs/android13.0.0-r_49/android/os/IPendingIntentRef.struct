@@ -1,0 +1,48 @@
+{
+    "produced_on": "2023-06-01T06:42:34.167950943Z",
+    "source_location": "",
+    "full_name": "android.os.IPendingIntentRef",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"lastReportTimeNs": "readInt64"}],
+            "name": "sendDataBroadcast",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{
+                "configIds": "readParcelableVector",
+                "__parcelType": "android.os.long"
+            }],
+            "name": "sendActiveConfigsChangedBroadcast",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"configUid": "readInt64"},
+                {"configId": "readInt64"},
+                {"subscriptionId": "readInt64"},
+                {"subscriptionRuleId": "readInt64"},
+                {"cookies": "readString16Vector"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "dimensionsValueParcel": "readParcelable",
+                        "__parcelType": "android.os.StatsDimensionsValueParcel"
+                    }]
+                }
+            ],
+            "name": "sendSubscriberBroadcast",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IPendingIntentRef",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

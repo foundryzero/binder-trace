@@ -1,0 +1,112 @@
+{
+    "produced_on": "2022-08-26T09:55:22.160091300Z",
+    "source_location": "",
+    "full_name": "android.telephony.ims.aidl.IImsServiceController",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"l": "readStrongBinder"}],
+            "name": "setListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"slotId": "readInt32"},
+                {"c": "readStrongBinder"}
+            ],
+            "name": "createMmTelFeature",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"slotId": "readInt32"},
+                {"c": "readStrongBinder"}
+            ],
+            "name": "createRcsFeature",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "querySupportedImsFeatures",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.telephony.ims.stub.ImsFeatureConfiguration"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "notifyImsServiceReadyForFeatureCreation",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"slotId": "readInt32"},
+                {"featureType": "readInt32"},
+                {"c": "readStrongBinder"}
+            ],
+            "name": "removeImsFeature",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"slotId": "readInt32"}],
+            "name": "getConfig",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [{"slotId": "readInt32"}],
+            "name": "getRegistration",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [{"slotId": "readInt32"}],
+            "name": "enableIms",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [{"slotId": "readInt32"}],
+            "name": "disableIms",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IImsServiceController",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,23 @@
+{
+    "produced_on": "2023-06-01T06:42:37.388573597Z",
+    "source_location": "",
+    "components": [
+        {"networkId": "readInt32"},
+        {"systemId": "readInt32"},
+        {"baseStationId": "readInt32"},
+        {"longitude": "readInt32"},
+        {"latitude": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "operatorNames": "readParcelable",
+                "__parcelType": "android.hardware.radio.network.OperatorInfo"
+            }]
+        }
+    ],
+    "full_name": "android.hardware.radio.network.CellIdentityCdma",
+    "name": "CellIdentityCdma",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

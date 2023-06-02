@@ -1,0 +1,65 @@
+{
+    "produced_on": "2022-08-19T11:09:29.860733859Z",
+    "source_location": "",
+    "components": [
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{"setDeviceName": "readString16"}]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{"setDeviceAddress": "readString16"}]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [
+                {
+                    "uuid": "readParcelable",
+                    "__parcelType": "__dynamic"
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "uuidMask": "readParcelable",
+                        "__parcelType": "__dynamic"
+                    }]
+                }
+            ]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [
+                {
+                    "servcieDataUuid": "readParcelable",
+                    "__parcelType": "__dynamic"
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [
+                        {"serviceDataLength": "readInt32"},
+                        {"readByteArray": "readByteVector"}
+                    ]
+                }
+            ]
+        },
+        {"manufacturerId": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [
+                {"manufacturerDataLength": "readInt32"},
+                {"readByteArray": "readByteVector"}
+            ]
+        }
+    ],
+    "full_name": "android.bluetooth.le.ScanFilter",
+    "name": "ScanFilter",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

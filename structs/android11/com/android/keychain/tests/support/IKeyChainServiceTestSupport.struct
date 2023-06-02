@@ -1,0 +1,159 @@
+{
+    "produced_on": "2022-08-26T09:55:19.300791397Z",
+    "source_location": "",
+    "full_name": "com.android.keychain.tests.support.IKeyChainServiceTestSupport",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "keystoreReset",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"password": "readString16"}],
+            "name": "keystoreSetPassword",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"key": "readString16"},
+                {"value": "readByteVector"}
+            ],
+            "name": "keystorePut",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"key": "readString16"},
+                {"value": "readByteVector"}
+            ],
+            "name": "keystoreImportKey",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"uid": "readInt32"},
+                {"alias": "readString16"}
+            ],
+            "name": "revokeAppPermission",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"uid": "readInt32"},
+                {"alias": "readString16"}
+            ],
+            "name": "grantAppPermission",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"privateKey": "readByteVector"},
+                {"userCert": "readByteVector"},
+                {"certChain": "readByteVector"},
+                {"alias": "readString16"}
+            ],
+            "name": "installKeyPair",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [{"alias": "readString16"}],
+            "name": "removeKeyPair",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"alias": "readString16"},
+                {"isUserSelectable": "readBool"}
+            ],
+            "name": "setUserSelectable",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"algorithm": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "spec": "readParcelable",
+                        "__parcelType": "android.security.keystore.ParcelableKeyGenParameterSpec"
+                    }]
+                }
+            ],
+            "name": "generateKeyPair",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"alias": "readString16"},
+                {"challenge": "readByteVector"},
+                {"idAttestationFlags": "readInt32Vector"}
+            ],
+            "name": "attestKey",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"alias": "readString16"},
+                {"userCert": "readByteVector"},
+                {"certChain": "readByteVector"}
+            ],
+            "name": "setKeyPairCertificate",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "IKeyChainServiceTestSupport",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

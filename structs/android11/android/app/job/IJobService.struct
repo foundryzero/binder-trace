@@ -1,0 +1,42 @@
+{
+    "produced_on": "2022-08-26T09:55:21.982854805Z",
+    "source_location": "",
+    "full_name": "android.app.job.IJobService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "jobParams": "readParcelable",
+                        "__parcelType": "android.app.job.JobParameters"
+                    }]
+                }
+            ],
+            "name": "startJob",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "jobParams": "readParcelable",
+                        "__parcelType": "android.app.job.JobParameters"
+                    }]
+                }
+            ],
+            "name": "stopJob",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IJobService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

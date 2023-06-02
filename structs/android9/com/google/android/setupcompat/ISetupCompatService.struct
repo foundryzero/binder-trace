@@ -1,0 +1,43 @@
+{
+    "produced_on": "2022-08-04T09:32:21.178921562Z",
+    "source_location": "",
+    "full_name": "com.google.android.setupcompat.ISetupCompatService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"screenName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"arguments": "readBundle"}]
+                }
+            ],
+            "name": "validateActivity",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"metricType": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"arguments": "readBundle"}]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"extras": "readBundle"}]
+                }
+            ],
+            "name": "logMetric",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISetupCompatService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

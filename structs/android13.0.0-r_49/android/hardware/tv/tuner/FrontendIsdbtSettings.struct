@@ -1,0 +1,57 @@
+{
+    "produced_on": "2023-06-01T06:42:39.136480022Z",
+    "source_location": "",
+    "components": [
+        {"frequency": "readInt64"},
+        {"endFrequency": "readInt64"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "inversion": "readParcelable",
+                "__parcelType": "android.hardware.tv.tuner.FrontendSpectralInversion"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "bandwidth": "readParcelable",
+                "__parcelType": "android.hardware.tv.tuner.FrontendIsdbtBandwidth"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "mode": "readParcelable",
+                "__parcelType": "android.hardware.tv.tuner.FrontendIsdbtMode"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "guardInterval": "readParcelable",
+                "__parcelType": "android.hardware.tv.tuner.FrontendIsdbtGuardInterval"
+            }]
+        },
+        {"serviceAreaId": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "partialReceptionFlag": "readParcelable",
+                "__parcelType": "android.hardware.tv.tuner.FrontendIsdbtPartialReceptionFlag"
+            }]
+        },
+        {
+            "layerSettings": "readParcelableVector",
+            "__parcelType": "android.hardware.tv.tuner.FrontendIsdbtLayerSettings"
+        }
+    ],
+    "full_name": "android.hardware.tv.tuner.FrontendIsdbtSettings",
+    "name": "FrontendIsdbtSettings",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

@@ -1,0 +1,207 @@
+{
+    "produced_on": "2022-08-19T10:42:51.047504724Z",
+    "source_location": "",
+    "full_name": "android.brillo.IUpdateEngine",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"flags": "readInt32"}],
+            "name": "SetUpdateAttemptFlags",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"app_version": "readString16"},
+                {"omaha_url": "readString16"},
+                {"flags": "readInt32"}
+            ],
+            "name": "AttemptUpdate",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"powerwash": "readBool"}],
+            "name": "AttemptRollback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "CanRollback",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "ResetStatus",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "GetStatus",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.brillo.ParcelableUpdateEngineStatus"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "RebootIfNeeded",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"target_channel": "readString16"},
+                {"powewash": "readBool"}
+            ],
+            "name": "SetChannel",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [{"get_current_channel": "readBool"}],
+            "name": "GetChannel",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [{"cohort_hint": "readString16"}],
+            "name": "SetCohortHint",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [],
+            "name": "GetCohortHint",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [{"enabled": "readBool"}],
+            "name": "SetP2PUpdatePermission",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [],
+            "name": "GetP2PUpdatePermission",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 14,
+            "in": [{"enabled": "readBool"}],
+            "name": "SetUpdateOverCellularPermission",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [],
+            "name": "GetUpdateOverCellularPermission",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 16,
+            "in": [],
+            "name": "GetDurationSinceUpdate",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 17,
+            "in": [],
+            "name": "GetPrevVersion",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 18,
+            "in": [],
+            "name": "GetRollbackPartition",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 19,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "RegisterStatusCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 20,
+            "in": [],
+            "name": "GetLastAttemptError",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 21,
+            "in": [],
+            "name": "GetEolStatus",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        }
+    ],
+    "name": "IUpdateEngine",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

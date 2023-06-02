@@ -1,0 +1,40 @@
+{
+    "produced_on": "2022-08-19T10:42:51.618526443Z",
+    "source_location": "",
+    "full_name": "android.media.IAudioRecord",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"event": "readInt32"},
+                {"triggerSession": "readInt32"}
+            ],
+            "name": "start",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "stop",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getActiveMicrophones",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "activeMicrophones": "readParcelableVector",
+                    "__parcelType": "android.media.MicrophoneInfo"
+                }
+            ]
+        }
+    ],
+    "name": "IAudioRecord",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

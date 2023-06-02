@@ -1,0 +1,70 @@
+{
+    "produced_on": "2022-08-26T09:55:22.136810628Z",
+    "source_location": "",
+    "full_name": "android.telephony.ICellBroadcastService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"slotId": "readInt32"},
+                {"message": "readByteVector"}
+            ],
+            "name": "handleGsmCellBroadcastSms",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"slotId": "readInt32"},
+                {"bearerData": "readByteVector"},
+                {"serviceCategory": "readInt32"}
+            ],
+            "name": "handleCdmaCellBroadcastSms",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"slotId": "readInt32"},
+                {
+                    "programData": "readList",
+                    "__parcelType": "android.telephony.cdma.CdmaSmsCbProgramData"
+                },
+                {"originatingAddress": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callback": "readParcelable",
+                        "__parcelType": "android.os.RemoteCallback"
+                    }]
+                }
+            ],
+            "name": "handleCdmaScpMessage",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"slotIndex": "readInt32"}],
+            "name": "getCellBroadcastAreaInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "CharSequence"
+                    }]
+                }
+            ]
+        }
+    ],
+    "name": "ICellBroadcastService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

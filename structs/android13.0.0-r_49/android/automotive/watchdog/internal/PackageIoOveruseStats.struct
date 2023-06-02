@@ -1,0 +1,28 @@
+{
+    "produced_on": "2023-06-01T06:42:33.366070502Z",
+    "source_location": "",
+    "components": [
+        {"uid": "readInt32"},
+        {"shouldNotify": "readBool"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "forgivenWriteBytes": "readParcelable",
+                "__parcelType": "android.automotive.watchdog.PerStateBytes"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "ioOveruseStats": "readParcelable",
+                "__parcelType": "android.automotive.watchdog.IoOveruseStats"
+            }]
+        }
+    ],
+    "full_name": "android.automotive.watchdog.internal.PackageIoOveruseStats",
+    "name": "PackageIoOveruseStats",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

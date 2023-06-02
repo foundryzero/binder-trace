@@ -1,0 +1,41 @@
+{
+    "produced_on": "2022-08-19T10:42:53.617637605Z",
+    "source_location": "",
+    "full_name": "android.location.ICountryDetector",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "detectCountry",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.location.Country"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "addCountryListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "removeCountryListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICountryDetector",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

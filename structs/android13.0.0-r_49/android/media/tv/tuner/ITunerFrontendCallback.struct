@@ -1,0 +1,50 @@
+{
+    "produced_on": "2023-06-01T06:42:35.959257014Z",
+    "source_location": "",
+    "full_name": "android.media.tv.tuner.ITunerFrontendCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "frontendEventType": "readParcelable",
+                        "__parcelType": "android.hardware.tv.tuner.FrontendEventType"
+                    }]
+                }
+            ],
+            "name": "onEvent",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "messageType": "readParcelable",
+                        "__parcelType": "android.hardware.tv.tuner.FrontendScanMessageType"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "message": "readParcelable",
+                        "__parcelType": "android.hardware.tv.tuner.FrontendScanMessage"
+                    }]
+                }
+            ],
+            "name": "onScanMessage",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ITunerFrontendCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

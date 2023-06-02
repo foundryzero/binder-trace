@@ -1,0 +1,50 @@
+{
+    "produced_on": "2023-06-01T06:42:35.830173888Z",
+    "source_location": "",
+    "full_name": "android.hardware.hdmi.IHdmiRecordListener",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"recorderAddress": "readInt32"}],
+            "name": "getOneTouchRecordSource",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"recorderAddress": "readInt32"},
+                {"result": "readInt32"}
+            ],
+            "name": "onOneTouchRecordResult",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"recorderAddress": "readInt32"},
+                {"result": "readInt32"}
+            ],
+            "name": "onTimerRecordingResult",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"recorderAddress": "readInt32"},
+                {"result": "readInt32"}
+            ],
+            "name": "onClearTimerRecordingResult",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IHdmiRecordListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

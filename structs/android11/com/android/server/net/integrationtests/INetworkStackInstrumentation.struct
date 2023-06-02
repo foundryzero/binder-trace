@@ -1,0 +1,46 @@
+{
+    "produced_on": "2022-08-26T09:55:21.930002866Z",
+    "source_location": "",
+    "full_name": "com.android.server.net.integrationtests.INetworkStackInstrumentation",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "clearAllState",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "response": "readParcelable",
+                        "__parcelType": "com.android.server.net.integrationtests.HttpResponse"
+                    }]
+                }
+            ],
+            "name": "addHttpResponse",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getRequestUrls",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "String"
+                }
+            ]
+        }
+    ],
+    "name": "INetworkStackInstrumentation",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

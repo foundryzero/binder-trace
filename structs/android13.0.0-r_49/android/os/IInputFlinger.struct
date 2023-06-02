@@ -1,0 +1,50 @@
+{
+    "produced_on": "2023-06-01T06:42:35.923707791Z",
+    "source_location": "",
+    "full_name": "android.os.IInputFlinger",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"name": "readString16"}],
+            "name": "createInputChannel",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.InputChannel"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"connectionToken": "readStrongBinder"}],
+            "name": "removeInputChannel",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.gui.FocusRequest"
+                    }]
+                }
+            ],
+            "name": "setFocusedWindow",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IInputFlinger",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

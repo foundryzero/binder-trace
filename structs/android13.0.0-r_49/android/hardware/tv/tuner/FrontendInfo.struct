@@ -1,0 +1,36 @@
+{
+    "produced_on": "2023-06-01T06:42:39.162084120Z",
+    "source_location": "",
+    "components": [
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "type": "readParcelable",
+                "__parcelType": "android.hardware.tv.tuner.FrontendType"
+            }]
+        },
+        {"minFrequency": "readInt64"},
+        {"maxFrequency": "readInt64"},
+        {"minSymbolRate": "readInt32"},
+        {"maxSymbolRate": "readInt32"},
+        {"acquireRange": "readInt64"},
+        {"exclusiveGroupId": "readInt32"},
+        {
+            "statusCaps": "readParcelableVector",
+            "__parcelType": "android.hardware.tv.tuner.FrontendStatusType"
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "frontendCaps": "readParcelable",
+                "__parcelType": "android.hardware.tv.tuner.FrontendCapabilities"
+            }]
+        }
+    ],
+    "full_name": "android.hardware.tv.tuner.FrontendInfo",
+    "name": "FrontendInfo",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

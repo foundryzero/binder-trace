@@ -1,0 +1,67 @@
+{
+    "produced_on": "2023-06-01T06:42:38.930688868Z",
+    "source_location": "",
+    "full_name": "android.hardware.gnss.IAGnss",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "setCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "dataConnClosed",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "dataConnFailed",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.hardware.gnss.IAGnssCallback.AGnssType"
+                    }]
+                },
+                {"hostname": "readString16"},
+                {"port": "readInt32"}
+            ],
+            "name": "setServer",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"networkHandle": "readInt64"},
+                {"apn": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "apnIpType": "readParcelable",
+                        "__parcelType": "android.hardware.gnss.ApnIpType"
+                    }]
+                }
+            ],
+            "name": "dataConnOpen",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IAGnss",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

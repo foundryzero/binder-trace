@@ -1,0 +1,46 @@
+{
+    "produced_on": "2022-08-26T09:55:24.484647850Z",
+    "source_location": "",
+    "full_name": "android.os.IDumpstate",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"callingUid": "readInt32"},
+                {"callingPackage": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "bugreportFd": "readParcelable",
+                        "__parcelType": "FileDescriptor"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "screenshotFd": "readParcelable",
+                        "__parcelType": "FileDescriptor"
+                    }]
+                },
+                {"bugreportMode": "readInt32"},
+                {"listener": "readStrongBinder"},
+                {"isScreenshotRequested": "readBool"}
+            ],
+            "name": "startBugreport",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "cancelBugreport",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IDumpstate",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

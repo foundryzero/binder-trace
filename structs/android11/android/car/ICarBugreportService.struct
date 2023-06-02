@@ -1,0 +1,42 @@
+{
+    "produced_on": "2022-08-26T09:55:19.016299379Z",
+    "source_location": "",
+    "full_name": "android.car.ICarBugreportService",
+    "calls": [
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "output": "readParcelable",
+                        "__parcelType": "android.car.ParcelFileDescriptor"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "extraOutput": "readParcelable",
+                        "__parcelType": "android.car.ParcelFileDescriptor"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "requestBugreport",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "cancelBugreport",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICarBugreportService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

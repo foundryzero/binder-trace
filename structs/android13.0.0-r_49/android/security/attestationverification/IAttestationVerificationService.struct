@@ -1,0 +1,30 @@
+{
+    "produced_on": "2023-06-01T06:42:35.792890609Z",
+    "source_location": "",
+    "full_name": "android.security.attestationverification.IAttestationVerificationService",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{"requirements": "readBundle"}]
+            },
+            {"attestation": "readByteVector"},
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "callback": "readParcelable",
+                    "__parcelType": "com.android.internal.infra.AndroidFuture"
+                }]
+            }
+        ],
+        "name": "onVerifyAttestation",
+        "oneWay": true,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "IAttestationVerificationService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

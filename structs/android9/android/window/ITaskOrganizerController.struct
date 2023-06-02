@@ -1,0 +1,149 @@
+{
+    "produced_on": "2022-08-04T09:32:19.445057825Z",
+    "source_location": "",
+    "full_name": "android.window.ITaskOrganizerController",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"organizer": "readStrongBinder"},
+                {"windowingMode": "readInt32"}
+            ],
+            "name": "registerTaskOrganizer",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"organizer": "readStrongBinder"}],
+            "name": "unregisterTaskOrganizer",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"displayId": "readInt32"},
+                {"windowingMode": "readInt32"}
+            ],
+            "name": "createRootTask",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.window.ActivityManager.RunningTaskInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "task": "readParcelable",
+                        "__parcelType": "android.window.WindowContainerToken"
+                    }]
+                }
+            ],
+            "name": "deleteRootTask",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "parent": "readParcelable",
+                        "__parcelType": "android.window.WindowContainerToken"
+                    }]
+                },
+                {"activityTypes": "readInt32Vector"}
+            ],
+            "name": "getChildTasks",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.window.ActivityManager.RunningTaskInfo"
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"displayId": "readInt32"},
+                {"activityTypes": "readInt32Vector"}
+            ],
+            "name": "getRootTasks",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.window.ActivityManager.RunningTaskInfo"
+                }
+            ]
+        },
+        {
+            "code": 7,
+            "in": [{"display": "readInt32"}],
+            "name": "getImeTarget",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.window.WindowContainerToken"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"displayId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "root": "readParcelable",
+                        "__parcelType": "android.window.WindowContainerToken"
+                    }]
+                }
+            ],
+            "name": "setLaunchRoot",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"organizer": "readStrongBinder"},
+                {"interceptBackPressed": "readBool"}
+            ],
+            "name": "setInterceptBackPressedOnTaskRoot",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ITaskOrganizerController",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

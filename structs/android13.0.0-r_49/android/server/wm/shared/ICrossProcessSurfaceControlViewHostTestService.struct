@@ -1,0 +1,54 @@
+{
+    "produced_on": "2023-06-01T06:42:36.538378135Z",
+    "source_location": "",
+    "full_name": "android.server.wm.shared.ICrossProcessSurfaceControlViewHostTestService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"hostInputToken": "readStrongBinder"}],
+            "name": "getSurfacePackage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.server.wm.shared.SurfaceControlViewHost.SurfacePackage"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "getViewIsTouched",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getViewIsTouchedAndObscured",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "resetViewIsTouched",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICrossProcessSurfaceControlViewHostTestService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

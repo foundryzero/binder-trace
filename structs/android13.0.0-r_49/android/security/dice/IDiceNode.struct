@@ -1,0 +1,83 @@
+{
+    "produced_on": "2023-06-01T06:42:36.436302208Z",
+    "source_location": "",
+    "full_name": "android.security.dice.IDiceNode",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {
+                    "id": "readParcelableVector",
+                    "__parcelType": "android.hardware.security.dice.InputValues"
+                },
+                {"payload": "readByteVector"}
+            ],
+            "name": "sign",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.security.dice.Signature"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{
+                "inputValues": "readParcelableVector",
+                "__parcelType": "android.hardware.security.dice.InputValues"
+            }],
+            "name": "getAttestationChain",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.security.dice.Bcc"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{
+                "inputValues": "readParcelableVector",
+                "__parcelType": "android.hardware.security.dice.InputValues"
+            }],
+            "name": "derive",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.security.dice.BccHandover"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{
+                "inputValues": "readParcelableVector",
+                "__parcelType": "android.hardware.security.dice.InputValues"
+            }],
+            "name": "demote",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IDiceNode",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

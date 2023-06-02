@@ -1,0 +1,68 @@
+{
+    "produced_on": "2022-08-26T09:55:24.423689567Z",
+    "source_location": "",
+    "full_name": "android.location.IFusedGeofenceHardware",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "isSupported",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{
+                "geofenceRequestsArray": "readParcelableVector",
+                "__parcelType": "android.hardware.location.GeofenceHardwareRequestParcelable"
+            }],
+            "name": "addGeofences",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"geofenceIds": "readInt32Vector"}],
+            "name": "removeGeofences",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"geofenceId": "readInt32"}],
+            "name": "pauseMonitoringGeofence",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"geofenceId": "readInt32"},
+                {"monitorTransitions": "readInt32"}
+            ],
+            "name": "resumeMonitoringGeofence",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"geofenceId": "readInt32"},
+                {"lastTransition": "readInt32"},
+                {"monitorTransitions": "readInt32"},
+                {"notificationResponsiveness": "readInt32"},
+                {"unknownTimer": "readInt32"},
+                {"sourcesToUse": "readInt32"}
+            ],
+            "name": "modifyGeofenceOptions",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IFusedGeofenceHardware",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

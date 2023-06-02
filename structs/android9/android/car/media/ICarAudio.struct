@@ -1,0 +1,156 @@
+{
+    "produced_on": "2022-08-19T10:42:50.650456368Z",
+    "source_location": "",
+    "full_name": "android.car.media.ICarAudio",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"groupId": "readInt32"},
+                {"index": "readInt32"},
+                {"flags": "readInt32"}
+            ],
+            "name": "setGroupVolume",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"groupId": "readInt32"}],
+            "name": "getGroupMaxVolume",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"groupId": "readInt32"}],
+            "name": "getGroupMinVolume",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"groupId": "readInt32"}],
+            "name": "getGroupVolume",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"value": "readFloat"}],
+            "name": "setFadeTowardFront",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"value": "readFloat"}],
+            "name": "setBalanceTowardRight",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "getExternalSources",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"sourceAddress": "readString16"},
+                {"usage": "readInt32"},
+                {"gainInMillibels": "readInt32"}
+            ],
+            "name": "createAudioPatch",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.car.media.CarAudioPatchHandle"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "patch": "readParcelable",
+                        "__parcelType": "android.car.media.CarAudioPatchHandle"
+                    }]
+                }
+            ],
+            "name": "releaseAudioPatch",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [],
+            "name": "getVolumeGroupCount",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [{"usage": "readInt32"}],
+            "name": "getVolumeGroupIdForUsage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [{"groupId": "readInt32"}],
+            "name": "getUsagesForVolumeGroupId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [{"binder": "readStrongBinder"}],
+            "name": "registerVolumeCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [{"binder": "readStrongBinder"}],
+            "name": "unregisterVolumeCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICarAudio",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

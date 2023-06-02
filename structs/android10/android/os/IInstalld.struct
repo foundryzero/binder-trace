@@ -1,0 +1,581 @@
+{
+    "produced_on": "2022-12-02T13:44:07.796167794Z",
+    "source_location": "",
+    "full_name": "android.os.IInstalld",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"uuid": "readString16"},
+                {"userId": "readInt32"},
+                {"userSerial": "readInt32"},
+                {"flags": "readInt32"}
+            ],
+            "name": "createUserData",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"uuid": "readString16"},
+                {"userId": "readInt32"},
+                {"flags": "readInt32"}
+            ],
+            "name": "destroyUserData",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"uuid": "readString16"},
+                {"packageName": "readString16"},
+                {"userId": "readInt32"},
+                {"flags": "readInt32"},
+                {"appId": "readInt32"},
+                {"seInfo": "readString16"},
+                {"targetSdkVersion": "readInt32"}
+            ],
+            "name": "createAppData",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"uuid": "readString16"},
+                {"packageName": "readString16"},
+                {"userId": "readInt32"},
+                {"flags": "readInt32"},
+                {"appId": "readInt32"},
+                {"seInfo": "readString16"}
+            ],
+            "name": "restoreconAppData",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"uuid": "readString16"},
+                {"packageName": "readString16"},
+                {"userId": "readInt32"},
+                {"flags": "readInt32"}
+            ],
+            "name": "migrateAppData",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"uuid": "readString16"},
+                {"packageName": "readString16"},
+                {"userId": "readInt32"},
+                {"flags": "readInt32"},
+                {"ceDataInode": "readInt64"}
+            ],
+            "name": "clearAppData",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"uuid": "readString16"},
+                {"packageName": "readString16"},
+                {"userId": "readInt32"},
+                {"flags": "readInt32"},
+                {"ceDataInode": "readInt64"}
+            ],
+            "name": "destroyAppData",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"uuid": "readString16"},
+                {"flags": "readInt32"}
+            ],
+            "name": "fixupAppData",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"uuid": "readString16"},
+                {"packageNames": "readString16Vector"},
+                {"userId": "readInt32"},
+                {"flags": "readInt32"},
+                {"appId": "readInt32"},
+                {
+                    "ceDataInodes": "readParcelableVector",
+                    "__parcelType": "android.os.long"
+                },
+                {"codePaths": "readString16Vector"}
+            ],
+            "name": "getAppSize",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.os.long"
+                }
+            ]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"uuid": "readString16"},
+                {"userId": "readInt32"},
+                {"flags": "readInt32"},
+                {"appIds": "readInt32Vector"}
+            ],
+            "name": "getUserSize",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.os.long"
+                }
+            ]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"uuid": "readString16"},
+                {"userId": "readInt32"},
+                {"flags": "readInt32"},
+                {"appIds": "readInt32Vector"}
+            ],
+            "name": "getExternalSize",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.os.long"
+                }
+            ]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"uuid": "readString16"},
+                {"userId": "readInt32"},
+                {"appId": "readInt32"},
+                {"cacheQuota": "readInt64"}
+            ],
+            "name": "setAppQuota",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"fromUuid": "readString16"},
+                {"toUuid": "readString16"},
+                {"packageName": "readString16"},
+                {"dataAppName": "readString16"},
+                {"appId": "readInt32"},
+                {"seInfo": "readString16"},
+                {"targetSdkVersion": "readInt32"}
+            ],
+            "name": "moveCompleteApp",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"apkPath": "readString16"},
+                {"uid": "readInt32"},
+                {"packageName": "readString16"},
+                {"instructionSet": "readString16"},
+                {"dexoptNeeded": "readInt32"},
+                {"outputPath": "readString16"},
+                {"dexFlags": "readInt32"},
+                {"compilerFilter": "readString16"},
+                {"uuid": "readString16"},
+                {"sharedLibraries": "readString16"},
+                {"seInfo": "readString16"},
+                {"downgrade": "readBool"},
+                {"targetSdkVersion": "readInt32"},
+                {"profileName": "readString16"},
+                {"dexMetadataPath": "readString16"},
+                {"compilationReason": "readString16"}
+            ],
+            "name": "dexopt",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"apkPath": "readString16"},
+                {"packageName": "readString16"},
+                {"outDexFile": "readString16"},
+                {"uid": "readInt32"}
+            ],
+            "name": "compileLayouts",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 16,
+            "in": [
+                {"codePath": "readString16"},
+                {"instructionSet": "readString16"}
+            ],
+            "name": "rmdex",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [
+                {"uid": "readInt32"},
+                {"packageName": "readString16"},
+                {"profileName": "readString16"}
+            ],
+            "name": "mergeProfiles",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"uid": "readInt32"},
+                {"packageName": "readString16"},
+                {"profileName": "readString16"},
+                {"codePath": "readString16"}
+            ],
+            "name": "dumpProfiles",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 19,
+            "in": [
+                {"systemProfile": "readString16"},
+                {"uid": "readInt32"},
+                {"packageName": "readString16"},
+                {"profileName": "readString16"}
+            ],
+            "name": "copySystemProfile",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 20,
+            "in": [
+                {"packageName": "readString16"},
+                {"profileName": "readString16"}
+            ],
+            "name": "clearAppProfiles",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 21,
+            "in": [{"packageName": "readString16"}],
+            "name": "destroyAppProfiles",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 22,
+            "in": [
+                {"appId": "readInt32"},
+                {"packageName": "readString16"},
+                {"profileName": "readString16"},
+                {"classpath": "readString16"}
+            ],
+            "name": "createProfileSnapshot",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 23,
+            "in": [
+                {"packageName": "readString16"},
+                {"profileName": "readString16"}
+            ],
+            "name": "destroyProfileSnapshot",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 24,
+            "in": [
+                {"targetApkPath": "readString16"},
+                {"overlayApkPath": "readString16"},
+                {"uid": "readInt32"}
+            ],
+            "name": "idmap",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 25,
+            "in": [{"overlayApkPath": "readString16"}],
+            "name": "removeIdmap",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 26,
+            "in": [{"packageDir": "readString16"}],
+            "name": "rmPackageDir",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 27,
+            "in": [{"instructionSet": "readString16"}],
+            "name": "markBootComplete",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 28,
+            "in": [
+                {"uuid": "readString16"},
+                {"targetFreeBytes": "readInt64"},
+                {"cacheReservedBytes": "readInt64"},
+                {"flags": "readInt32"}
+            ],
+            "name": "freeCache",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 29,
+            "in": [
+                {"uuid": "readString16"},
+                {"packageName": "readString16"},
+                {"nativeLibPath32": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "linkNativeLibraryDirectory",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 30,
+            "in": [
+                {"oatDir": "readString16"},
+                {"instructionSet": "readString16"}
+            ],
+            "name": "createOatDir",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 31,
+            "in": [
+                {"relativePath": "readString16"},
+                {"fromBase": "readString16"},
+                {"toBase": "readString16"}
+            ],
+            "name": "linkFile",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 32,
+            "in": [
+                {"apkPath": "readString16"},
+                {"instructionSet": "readString16"},
+                {"outputPath": "readString16"}
+            ],
+            "name": "moveAb",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 33,
+            "in": [
+                {"apkPath": "readString16"},
+                {"instructionSet": "readString16"},
+                {"outputPath": "readString16"}
+            ],
+            "name": "deleteOdex",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 34,
+            "in": [
+                {"filePath": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "verityInput": "readParcelable",
+                        "__parcelType": "FileDescriptor"
+                    }]
+                },
+                {"contentSize": "readInt32"}
+            ],
+            "name": "installApkVerity",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 35,
+            "in": [
+                {"filePath": "readString16"},
+                {"expectedHash": "readByteVector"}
+            ],
+            "name": "assertFsverityRootHashMatches",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 36,
+            "in": [
+                {"dexPath": "readString16"},
+                {"pkgName": "readString16"},
+                {"uid": "readInt32"},
+                {"isas": "readString16Vector"},
+                {"volume_uuid": "readString16"},
+                {"storage_flag": "readInt32"}
+            ],
+            "name": "reconcileSecondaryDexFile",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 37,
+            "in": [
+                {"dexPath": "readString16"},
+                {"pkgName": "readString16"},
+                {"uid": "readInt32"},
+                {"volumeUuid": "readString16"},
+                {"storageFlag": "readInt32"}
+            ],
+            "name": "hashSecondaryDexFile",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 38,
+            "in": [],
+            "name": "invalidateMounts",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 39,
+            "in": [{"uuid": "readString16"}],
+            "name": "isQuotaSupported",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 40,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"},
+                {"appId": "readInt32"},
+                {"profileName": "readString16"},
+                {"codePath": "readString16"},
+                {"dexMetadata": "readString16"}
+            ],
+            "name": "prepareAppProfile",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 41,
+            "in": [
+                {"uuid": "readString16"},
+                {"packageName": "readString16"},
+                {"userId": "readInt32"},
+                {"snapshotId": "readInt32"},
+                {"storageFlags": "readInt32"}
+            ],
+            "name": "snapshotAppData",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 42,
+            "in": [
+                {"uuid": "readString16"},
+                {"packageName": "readString16"},
+                {"appId": "readInt32"},
+                {"seInfo": "readString16"},
+                {"user": "readInt32"},
+                {"snapshotId": "readInt32"},
+                {"storageflags": "readInt32"}
+            ],
+            "name": "restoreAppDataSnapshot",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 43,
+            "in": [
+                {"uuid": "readString16"},
+                {"packageName": "readString16"},
+                {"userId": "readInt32"},
+                {"ceSnapshotInode": "readInt64"},
+                {"snapshotId": "readInt32"},
+                {"storageFlags": "readInt32"}
+            ],
+            "name": "destroyAppDataSnapshot",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 44,
+            "in": [],
+            "name": "migrateLegacyObbData",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IInstalld",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,33 @@
+{
+    "produced_on": "2022-07-22T10:19:47.522000507Z",
+    "source_location": "",
+    "full_name": "android.security.cts.CVE_2021_0327.IBadProvider",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "takeBinder",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "nullcheck": "readInt32",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.os.ParcelFileDescriptor"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "exit",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IBadProvider",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

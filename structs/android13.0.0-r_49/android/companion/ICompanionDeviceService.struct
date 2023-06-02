@@ -1,0 +1,53 @@
+{
+    "produced_on": "2023-06-01T06:42:35.795633109Z",
+    "source_location": "",
+    "full_name": "android.companion.ICompanionDeviceService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "associationInfo": "readParcelable",
+                        "__parcelType": "android.companion.AssociationInfo"
+                    }]
+                }
+            ],
+            "name": "onDeviceAppeared",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "associationInfo": "readParcelable",
+                        "__parcelType": "android.companion.AssociationInfo"
+                    }]
+                }
+            ],
+            "name": "onDeviceDisappeared",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"messageId": "readInt32"},
+                {"associationId": "readInt32"},
+                {"message": "readByteVector"}
+            ],
+            "name": "onDispatchMessage",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICompanionDeviceService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

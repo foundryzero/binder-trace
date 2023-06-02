@@ -1,0 +1,83 @@
+{
+    "produced_on": "2022-08-04T09:32:17.246874172Z",
+    "source_location": "",
+    "full_name": "com.android.cts.net.hostside.INetworkCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "network": "readParcelable",
+                        "__parcelType": "android.net.Network"
+                    }]
+                },
+                {"blocked": "readBool"}
+            ],
+            "name": "onBlockedStatusChanged",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "network": "readParcelable",
+                        "__parcelType": "android.net.Network"
+                    }]
+                }
+            ],
+            "name": "onAvailable",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "network": "readParcelable",
+                        "__parcelType": "android.net.Network"
+                    }]
+                }
+            ],
+            "name": "onLost",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "network": "readParcelable",
+                        "__parcelType": "android.net.Network"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "cap": "readParcelable",
+                        "__parcelType": "android.net.NetworkCapabilities"
+                    }]
+                }
+            ],
+            "name": "onCapabilitiesChanged",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "INetworkCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

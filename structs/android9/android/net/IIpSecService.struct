@@ -1,0 +1,222 @@
+{
+    "produced_on": "2022-08-19T10:42:52.400784973Z",
+    "source_location": "",
+    "full_name": "android.net.IIpSecService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"destinationAddress": "readString16"},
+                {"requestedSpi": "readInt32"},
+                {"binder": "readStrongBinder"}
+            ],
+            "name": "allocateSecurityParameterIndex",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.net.IpSecSpiResponse"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"resourceId": "readInt32"}],
+            "name": "releaseSecurityParameterIndex",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"port": "readInt32"},
+                {"binder": "readStrongBinder"}
+            ],
+            "name": "openUdpEncapsulationSocket",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.net.IpSecUdpEncapResponse"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"resourceId": "readInt32"}],
+            "name": "closeUdpEncapsulationSocket",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"localAddr": "readString16"},
+                {"remoteAddr": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "underlyingNetwork": "readParcelable",
+                        "__parcelType": "android.net.Network"
+                    }]
+                },
+                {"binder": "readStrongBinder"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "createTunnelInterface",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.net.IpSecTunnelInterfaceResponse"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"tunnelResourceId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "localAddr": "readParcelable",
+                        "__parcelType": "android.net.LinkAddress"
+                    }]
+                },
+                {"callingPackage": "readString16"}
+            ],
+            "name": "addAddressToTunnelInterface",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"tunnelResourceId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "localAddr": "readParcelable",
+                        "__parcelType": "android.net.LinkAddress"
+                    }]
+                },
+                {"callingPackage": "readString16"}
+            ],
+            "name": "removeAddressFromTunnelInterface",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"resourceId": "readInt32"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "deleteTunnelInterface",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "c": "readParcelable",
+                        "__parcelType": "android.net.IpSecConfig"
+                    }]
+                },
+                {"binder": "readStrongBinder"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "createTransform",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.net.IpSecTransformResponse"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 10,
+            "in": [{"transformId": "readInt32"}],
+            "name": "deleteTransform",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "socket": "readParcelable",
+                        "__parcelType": "android.os.ParcelFileDescriptor"
+                    }]
+                },
+                {"direction": "readInt32"},
+                {"transformId": "readInt32"}
+            ],
+            "name": "applyTransportModeTransform",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"tunnelResourceId": "readInt32"},
+                {"direction": "readInt32"},
+                {"transformResourceId": "readInt32"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "applyTunnelModeTransform",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "socket": "readParcelable",
+                        "__parcelType": "android.os.ParcelFileDescriptor"
+                    }]
+                }
+            ],
+            "name": "removeTransportModeTransforms",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IIpSecService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

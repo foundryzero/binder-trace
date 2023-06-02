@@ -1,0 +1,794 @@
+{
+    "produced_on": "2022-08-26T09:55:20.476838571Z",
+    "source_location": "",
+    "full_name": "android.os.IVold",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "setListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "abortFuse",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "monitor",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "reset",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "shutdown",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"userId": "readInt32"},
+                {"userSerial": "readInt32"}
+            ],
+            "name": "onUserAdded",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"userId": "readInt32"}],
+            "name": "onUserRemoved",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{"userId": "readInt32"}],
+            "name": "onUserStarted",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [{"userId": "readInt32"}],
+            "name": "onUserStopped",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"packageNames": "readString16Vector"},
+                {"appIds": "readInt32Vector"}
+            ],
+            "name": "addAppIds",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"appIds": "readInt32Vector"},
+                {"sandboxIds": "readString16Vector"}
+            ],
+            "name": "addSandboxIds",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [{"isShowing": "readBool"}],
+            "name": "onSecureKeyguardStateChanged",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"diskId": "readString16"},
+                {"partitionType": "readInt32"},
+                {"ratio": "readInt32"}
+            ],
+            "name": "partition",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"partGuid": "readString16"},
+                {"fsUuid": "readString16"}
+            ],
+            "name": "forgetPartition",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"volId": "readString16"},
+                {"mountFlags": "readInt32"},
+                {"mountUserId": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "mount",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [{"volId": "readString16"}],
+            "name": "unmount",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [
+                {"volId": "readString16"},
+                {"fsType": "readString16"}
+            ],
+            "name": "format",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"volId": "readString16"},
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "benchmark",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 19,
+            "in": [{"volId": "readString16"}],
+            "name": "checkEncryption",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 20,
+            "in": [
+                {"fromVolId": "readString16"},
+                {"toVolId": "readString16"},
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "moveStorage",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 21,
+            "in": [
+                {"uid": "readInt32"},
+                {"remountMode": "readInt32"}
+            ],
+            "name": "remountUid",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 22,
+            "in": [
+                {"uid": "readInt32"},
+                {"pid": "readInt32"},
+                {"packageNames": "readString16Vector"}
+            ],
+            "name": "remountAppStorageDirs",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 23,
+            "in": [
+                {"path": "readString16"},
+                {"appUid": "readInt32"}
+            ],
+            "name": "setupAppDir",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 24,
+            "in": [
+                {"path": "readString16"},
+                {"appUid": "readInt32"}
+            ],
+            "name": "fixupAppDir",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 25,
+            "in": [
+                {"sourcePath": "readString16"},
+                {"sourceKey": "readString16"},
+                {"ownerGid": "readInt32"}
+            ],
+            "name": "createObb",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 26,
+            "in": [{"volId": "readString16"}],
+            "name": "destroyObb",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 27,
+            "in": [
+                {"fstrimFlags": "readInt32"},
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "fstrim",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 28,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "runIdleMaint",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 29,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "abortIdleMaint",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 30,
+            "in": [
+                {"uid": "readInt32"},
+                {"mountId": "readInt32"}
+            ],
+            "name": "mountAppFuse",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "FileDescriptor"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 31,
+            "in": [
+                {"uid": "readInt32"},
+                {"mountId": "readInt32"}
+            ],
+            "name": "unmountAppFuse",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 32,
+            "in": [{"password": "readString16"}],
+            "name": "fdeCheckPassword",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 33,
+            "in": [],
+            "name": "fdeRestart",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 34,
+            "in": [],
+            "name": "fdeComplete",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 35,
+            "in": [
+                {"passwordType": "readInt32"},
+                {"password": "readString16"},
+                {"encryptionFlags": "readInt32"}
+            ],
+            "name": "fdeEnable",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 36,
+            "in": [
+                {"passwordType": "readInt32"},
+                {"password": "readString16"}
+            ],
+            "name": "fdeChangePassword",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 37,
+            "in": [{"password": "readString16"}],
+            "name": "fdeVerifyPassword",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 38,
+            "in": [{"key": "readString16"}],
+            "name": "fdeGetField",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 39,
+            "in": [
+                {"key": "readString16"},
+                {"value": "readString16"}
+            ],
+            "name": "fdeSetField",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 40,
+            "in": [],
+            "name": "fdeGetPasswordType",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 41,
+            "in": [],
+            "name": "fdeGetPassword",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 42,
+            "in": [],
+            "name": "fdeClearPassword",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 43,
+            "in": [],
+            "name": "fbeEnable",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 44,
+            "in": [],
+            "name": "mountDefaultEncrypted",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 45,
+            "in": [],
+            "name": "initUser0",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 46,
+            "in": [],
+            "name": "isConvertibleToFbe",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 47,
+            "in": [
+                {"blkDevice": "readString16"},
+                {"mountPoint": "readString16"}
+            ],
+            "name": "mountFstab",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 48,
+            "in": [
+                {"blkDevice": "readString16"},
+                {"mountPoint": "readString16"}
+            ],
+            "name": "encryptFstab",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 49,
+            "in": [
+                {"userId": "readInt32"},
+                {"userSerial": "readInt32"},
+                {"ephemeral": "readBool"}
+            ],
+            "name": "createUserKey",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 50,
+            "in": [{"userId": "readInt32"}],
+            "name": "destroyUserKey",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 51,
+            "in": [
+                {"userId": "readInt32"},
+                {"userSerial": "readInt32"},
+                {"token": "readString16"},
+                {"secret": "readString16"}
+            ],
+            "name": "addUserKeyAuth",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 52,
+            "in": [
+                {"userId": "readInt32"},
+                {"userSerial": "readInt32"},
+                {"token": "readString16"},
+                {"secret": "readString16"}
+            ],
+            "name": "clearUserKeyAuth",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 53,
+            "in": [{"userId": "readInt32"}],
+            "name": "fixateNewestUserKeyAuth",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 54,
+            "in": [
+                {"userId": "readInt32"},
+                {"userSerial": "readInt32"},
+                {"token": "readString16"},
+                {"secret": "readString16"}
+            ],
+            "name": "unlockUserKey",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 55,
+            "in": [{"userId": "readInt32"}],
+            "name": "lockUserKey",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 56,
+            "in": [
+                {"uuid": "readString16"},
+                {"userId": "readInt32"},
+                {"userSerial": "readInt32"},
+                {"storageFlags": "readInt32"}
+            ],
+            "name": "prepareUserStorage",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 57,
+            "in": [
+                {"uuid": "readString16"},
+                {"userId": "readInt32"},
+                {"storageFlags": "readInt32"}
+            ],
+            "name": "destroyUserStorage",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 58,
+            "in": [
+                {"packageName": "readString16"},
+                {"appId": "readInt32"},
+                {"sandboxId": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "prepareSandboxForApp",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 59,
+            "in": [
+                {"packageName": "readString16"},
+                {"sandboxId": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "destroySandboxForApp",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 60,
+            "in": [{"retry": "readInt32"}],
+            "name": "startCheckpoint",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 61,
+            "in": [],
+            "name": "needsCheckpoint",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 62,
+            "in": [],
+            "name": "needsRollback",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 63,
+            "in": [],
+            "name": "isCheckpointing",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 64,
+            "in": [
+                {"device": "readString16"},
+                {"retry": "readBool"}
+            ],
+            "name": "abortChanges",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 65,
+            "in": [],
+            "name": "commitChanges",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 66,
+            "in": [],
+            "name": "prepareCheckpoint",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 67,
+            "in": [{"device": "readString16"}],
+            "name": "restoreCheckpoint",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 68,
+            "in": [
+                {"device": "readString16"},
+                {"count": "readInt32"}
+            ],
+            "name": "restoreCheckpointPart",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 69,
+            "in": [],
+            "name": "markBootAttempt",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 70,
+            "in": [],
+            "name": "supportsCheckpoint",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 71,
+            "in": [],
+            "name": "supportsBlockCheckpoint",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 72,
+            "in": [],
+            "name": "supportsFileCheckpoint",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 73,
+            "in": [],
+            "name": "resetCheckpoint",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 74,
+            "in": [
+                {"sourcePath": "readString16"},
+                {"mountPath": "readString16"},
+                {"fsType": "readString16"},
+                {"fsUuid": "readString16"},
+                {"fsLabel": "readString16"},
+                {"flags": "readInt32"}
+            ],
+            "name": "createStubVolume",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 75,
+            "in": [{"volId": "readString16"}],
+            "name": "destroyStubVolume",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 76,
+            "in": [
+                {"uid": "readInt32"},
+                {"mountId": "readInt32"},
+                {"fileId": "readInt32"},
+                {"flags": "readInt32"}
+            ],
+            "name": "openAppFuseFile",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "FileDescriptor"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 77,
+            "in": [],
+            "name": "incFsEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 78,
+            "in": [
+                {"backingPath": "readString16"},
+                {"targetDir": "readString16"},
+                {"flags": "readInt32"}
+            ],
+            "name": "mountIncFs",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.os.incremental.IncrementalFileSystemControlParcel"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 79,
+            "in": [{"dir": "readString16"}],
+            "name": "unmountIncFs",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 80,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "control": "readParcelable",
+                        "__parcelType": "android.os.incremental.IncrementalFileSystemControlParcel"
+                    }]
+                },
+                {"enableReadLogs": "readBool"}
+            ],
+            "name": "setIncFsMountOptions",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 81,
+            "in": [
+                {"sourceDir": "readString16"},
+                {"targetDir": "readString16"}
+            ],
+            "name": "bindMount",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IVold",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

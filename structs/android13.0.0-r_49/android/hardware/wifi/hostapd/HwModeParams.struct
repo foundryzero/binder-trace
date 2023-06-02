@@ -1,0 +1,28 @@
+{
+    "produced_on": "2023-06-01T06:42:38.810608384Z",
+    "source_location": "",
+    "components": [
+        {"enable80211N": "readBool"},
+        {"enable80211AC": "readBool"},
+        {"enable80211AX": "readBool"},
+        {"enable6GhzBand": "readBool"},
+        {"enableHeSingleUserBeamformer": "readBool"},
+        {"enableHeSingleUserBeamformee": "readBool"},
+        {"enableHeMultiUserBeamformer": "readBool"},
+        {"enableHeTargetWakeTime": "readBool"},
+        {"enableEdmg": "readBool"},
+        {"enable80211BE": "readBool"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "maximumChannelBandwidth": "readParcelable",
+                "__parcelType": "android.hardware.wifi.hostapd.ChannelBandwidth"
+            }]
+        }
+    ],
+    "full_name": "android.hardware.wifi.hostapd.HwModeParams",
+    "name": "HwModeParams",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

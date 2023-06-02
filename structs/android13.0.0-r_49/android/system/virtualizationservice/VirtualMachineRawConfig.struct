@@ -1,0 +1,45 @@
+{
+    "produced_on": "2023-06-01T06:42:34.158399751Z",
+    "source_location": "",
+    "components": [
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "kernel": "readParcelable",
+                "__parcelType": "android.system.virtualizationservice.ParcelFileDescriptor"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "initrd": "readParcelable",
+                "__parcelType": "android.system.virtualizationservice.ParcelFileDescriptor"
+            }]
+        },
+        {"params": "readString16"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "bootloader": "readParcelable",
+                "__parcelType": "android.system.virtualizationservice.ParcelFileDescriptor"
+            }]
+        },
+        {
+            "disks": "readParcelableVector",
+            "__parcelType": "android.system.virtualizationservice.DiskImage"
+        },
+        {"protectedVm": "readBool"},
+        {"memoryMib": "readInt32"},
+        {"numCpus": "readInt32"},
+        {"cpuAffinity": "readString16"},
+        {"platformVersion": "readString16"},
+        {"taskProfiles": "readString16Vector"}
+    ],
+    "full_name": "android.system.virtualizationservice.VirtualMachineRawConfig",
+    "name": "VirtualMachineRawConfig",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

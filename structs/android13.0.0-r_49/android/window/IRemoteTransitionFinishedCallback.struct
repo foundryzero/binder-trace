@@ -1,0 +1,32 @@
+{
+    "produced_on": "2023-06-01T06:42:35.657306081Z",
+    "source_location": "",
+    "full_name": "android.window.IRemoteTransitionFinishedCallback",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "wct": "readParcelable",
+                    "__parcelType": "android.window.WindowContainerTransaction"
+                }]
+            },
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "sct": "readParcelable",
+                    "__parcelType": "android.window.SurfaceControl.Transaction"
+                }]
+            }
+        ],
+        "name": "onTransitionFinished",
+        "oneWay": false,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "IRemoteTransitionFinishedCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

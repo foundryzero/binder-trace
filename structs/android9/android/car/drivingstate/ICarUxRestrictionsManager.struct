@@ -1,0 +1,41 @@
+{
+    "produced_on": "2022-08-19T10:42:50.667922935Z",
+    "source_location": "",
+    "full_name": "android.car.drivingstate.ICarUxRestrictionsManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "registerUxRestrictionsChangeListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "unregisterUxRestrictionsChangeListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getCurrentUxRestrictions",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.car.drivingstate.CarUxRestrictions"
+                    }]
+                }
+            ]
+        }
+    ],
+    "name": "ICarUxRestrictionsManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

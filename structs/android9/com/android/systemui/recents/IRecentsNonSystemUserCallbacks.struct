@@ -1,0 +1,103 @@
+{
+    "produced_on": "2022-08-19T10:42:51.797092511Z",
+    "source_location": "",
+    "full_name": "com.android.systemui.recents.IRecentsNonSystemUserCallbacks",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "preloadRecents",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "cancelPreloadingRecents",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"triggeredFromAltTab": "readBool"},
+                {"draggingInRecents": "readBool"},
+                {"animate": "readBool"},
+                {"recentsGrowTarget": "readInt32"}
+            ],
+            "name": "showRecents",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"triggeredFromAltTab": "readBool"},
+                {"triggeredFromHomeKey": "readBool"}
+            ],
+            "name": "hideRecents",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"recentsGrowTarget": "readInt32"}],
+            "name": "toggleRecents",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "onConfigurationChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"topTaskId": "readInt32"},
+                {"dragMode": "readInt32"},
+                {"stackCreateMode": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "initialBounds": "readParcelable",
+                        "__parcelType": "android.graphics.Rect"
+                    }]
+                }
+            ],
+            "name": "splitPrimaryTask",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{"distanceFromTop": "readFloat"}],
+            "name": "onDraggingInRecents",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [{"velocity": "readFloat"}],
+            "name": "onDraggingInRecentsEnded",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"msgResId": "readInt32"},
+                {"msgLength": "readInt32"}
+            ],
+            "name": "showCurrentUserToast",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IRecentsNonSystemUserCallbacks",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,62 @@
+{
+    "produced_on": "2022-08-19T10:42:53.388252151Z",
+    "source_location": "",
+    "full_name": "android.view.IRecentsAnimationController",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"taskId": "readInt32"}],
+            "name": "screenshotTask",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.view.ActivityManager.TaskSnapshot"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"moveHomeToTop": "readBool"}],
+            "name": "finish",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"enabled": "readBool"}],
+            "name": "setInputConsumerEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"behindSystemBars": "readBool"}],
+            "name": "setAnimationTargetsBehindSystemBars",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"minimized": "readBool"}],
+            "name": "setSplitScreenMinimized",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "hideCurrentInputMethod",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IRecentsAnimationController",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

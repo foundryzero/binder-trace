@@ -1,0 +1,45 @@
+{
+    "produced_on": "2023-06-01T06:42:35.140294891Z",
+    "source_location": "",
+    "full_name": "android.content.ICrossUserContentService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "uri": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                },
+                {"key": "readString16"},
+                {"value": "readInt32"}
+            ],
+            "name": "updateContent",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "uri": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "notifyForUriAsUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICrossUserContentService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

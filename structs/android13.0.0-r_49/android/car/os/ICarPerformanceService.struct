@@ -1,0 +1,68 @@
+{
+    "produced_on": "2023-06-01T06:42:33.054318315Z",
+    "source_location": "",
+    "full_name": "android.car.os.ICarPerformanceService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "config": "readParcelable",
+                        "__parcelType": "android.car.os.CpuAvailabilityMonitoringConfig"
+                    }]
+                },
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "addCpuAvailabilityChangeListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "removeCpuAvailabilityChangeListener",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"tid": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "policyWithPriority": "readParcelable",
+                        "__parcelType": "android.car.os.ThreadPolicyWithPriority"
+                    }]
+                }
+            ],
+            "name": "setThreadPriority",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"tid": "readInt32"}],
+            "name": "getThreadPriority",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.car.os.ThreadPolicyWithPriority"
+                    }]
+                }
+            ]
+        }
+    ],
+    "name": "ICarPerformanceService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,82 @@
+{
+    "produced_on": "2022-08-19T10:42:51.947669894Z",
+    "source_location": "",
+    "full_name": "com.android.internal.telephony.IWapPushManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"app_id": "readString16"},
+                {"content_type": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "intent": "readParcelable",
+                        "__parcelType": "android.content.Intent"
+                    }]
+                }
+            ],
+            "name": "processMessage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"x_app_id": "readString16"},
+                {"content_type": "readString16"},
+                {"package_name": "readString16"},
+                {"class_name": "readString16"},
+                {"app_type": "readInt32"},
+                {"need_signature": "readBool"},
+                {"further_processing": "readBool"}
+            ],
+            "name": "addPackage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"x_app_id": "readString16"},
+                {"content_type": "readString16"},
+                {"package_name": "readString16"},
+                {"class_name": "readString16"},
+                {"app_type": "readInt32"},
+                {"need_signature": "readBool"},
+                {"further_processing": "readBool"}
+            ],
+            "name": "updatePackage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"x_app_id": "readString16"},
+                {"content_type": "readString16"},
+                {"package_name": "readString16"},
+                {"class_name": "readString16"}
+            ],
+            "name": "deletePackage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "IWapPushManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

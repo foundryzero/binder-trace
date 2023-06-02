@@ -1,0 +1,42 @@
+{
+    "produced_on": "2022-08-04T09:32:15.997262393Z",
+    "source_location": "",
+    "full_name": "some_package.IFoo",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "parcel": "readParcelable",
+                        "__parcelType": "some_package.Thing"
+                    }]
+                }
+            ],
+            "name": "CanYouDealWithThisThing",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "parcel": "readParcelable",
+                        "__parcelType": "some_package.sub_package.SubThing"
+                    }]
+                }
+            ],
+            "name": "CanYouDealWithThisSubThing",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IFoo",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

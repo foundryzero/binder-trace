@@ -1,0 +1,566 @@
+{
+    "produced_on": "2023-06-01T06:42:34.968336637Z",
+    "source_location": "",
+    "full_name": "com.android.internal.telephony.ISms",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"subId": "readInt32"},
+                {"callingPkg": "readString16"}
+            ],
+            "name": "getAllMessagesFromIccEfForSubscriber",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "com.android.internal.telephony.SmsRawData"
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"subId": "readInt32"},
+                {"callingPkg": "readString16"},
+                {"messageIndex": "readInt32"},
+                {"newStatus": "readInt32"},
+                {"pdu": "readByteVector"}
+            ],
+            "name": "updateMessageOnIccEfForSubscriber",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"subId": "readInt32"},
+                {"callingPkg": "readString16"},
+                {"status": "readInt32"},
+                {"pdu": "readByteVector"},
+                {"smsc": "readByteVector"}
+            ],
+            "name": "copyMessageToIccEfForSubscriber",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"subId": "readInt32"},
+                {"callingPkg": "readString16"},
+                {"callingattributionTag": "readString16"},
+                {"destAddr": "readString16"},
+                {"scAddr": "readString16"},
+                {"destPort": "readInt32"},
+                {"data": "readByteVector"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sentIntent": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "deliveryIntent": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                }
+            ],
+            "name": "sendDataForSubscriber",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"subId": "readInt32"},
+                {"callingPkg": "readString16"},
+                {"callingAttributionTag": "readString16"},
+                {"destAddr": "readString16"},
+                {"scAddr": "readString16"},
+                {"text": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sentIntent": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "deliveryIntent": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                },
+                {"persistMessageForNonDefaultSmsApp": "readBool"},
+                {"messageId": "readInt64"}
+            ],
+            "name": "sendTextForSubscriber",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"subId": "readInt32"},
+                {"callingPkg": "readString16"},
+                {"callingAttributionTag": "readString16"},
+                {"destAddr": "readString16"},
+                {"scAddr": "readString16"},
+                {"text": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sentIntent": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "deliveryIntent": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                },
+                {"persistMessageForNonDefaultSmsApp": "readBool"},
+                {"priority": "readInt32"},
+                {"expectMore": "readBool"},
+                {"validityPeriod": "readInt32"}
+            ],
+            "name": "sendTextForSubscriberWithOptions",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"subId": "readInt32"},
+                {"pdu": "readByteVector"},
+                {"format": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receivedIntent": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                }
+            ],
+            "name": "injectSmsPduForSubscriber",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"subId": "readInt32"},
+                {"callingPkg": "readString16"},
+                {"callingAttributionTag": "readString16"},
+                {"destinationAddress": "readString16"},
+                {"scAddress": "readString16"},
+                {
+                    "parts": "readList",
+                    "__parcelType": "String"
+                },
+                {
+                    "sentIntents": "readList",
+                    "__parcelType": "android.app.PendingIntent"
+                },
+                {
+                    "deliveryIntents": "readList",
+                    "__parcelType": "android.app.PendingIntent"
+                },
+                {"persistMessageForNonDefaultSmsApp": "readBool"},
+                {"messageId": "readInt64"}
+            ],
+            "name": "sendMultipartTextForSubscriber",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"subId": "readInt32"},
+                {"callingPkg": "readString16"},
+                {"callingAttributionTag": "readString16"},
+                {"destinationAddress": "readString16"},
+                {"scAddress": "readString16"},
+                {
+                    "parts": "readList",
+                    "__parcelType": "String"
+                },
+                {
+                    "sentIntents": "readList",
+                    "__parcelType": "android.app.PendingIntent"
+                },
+                {
+                    "deliveryIntents": "readList",
+                    "__parcelType": "android.app.PendingIntent"
+                },
+                {"persistMessageForNonDefaultSmsApp": "readBool"},
+                {"priority": "readInt32"},
+                {"expectMore": "readBool"},
+                {"validityPeriod": "readInt32"}
+            ],
+            "name": "sendMultipartTextForSubscriberWithOptions",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"subId": "readInt32"},
+                {"messageIdentifier": "readInt32"},
+                {"ranType": "readInt32"}
+            ],
+            "name": "enableCellBroadcastForSubscriber",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"subId": "readInt32"},
+                {"messageIdentifier": "readInt32"},
+                {"ranType": "readInt32"}
+            ],
+            "name": "disableCellBroadcastForSubscriber",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"subId": "readInt32"},
+                {"startMessageId": "readInt32"},
+                {"endMessageId": "readInt32"},
+                {"ranType": "readInt32"}
+            ],
+            "name": "enableCellBroadcastRangeForSubscriber",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"subId": "readInt32"},
+                {"startMessageId": "readInt32"},
+                {"endMessageId": "readInt32"},
+                {"ranType": "readInt32"}
+            ],
+            "name": "disableCellBroadcastRangeForSubscriber",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 14,
+            "in": [{"packageName": "readString16"}],
+            "name": "getPremiumSmsPermission",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"subId": "readInt32"},
+                {"packageName": "readString16"}
+            ],
+            "name": "getPremiumSmsPermissionForSubscriber",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 16,
+            "in": [
+                {"packageName": "readString16"},
+                {"permission": "readInt32"}
+            ],
+            "name": "setPremiumSmsPermission",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [
+                {"subId": "readInt32"},
+                {"packageName": "readString16"},
+                {"permission": "readInt32"}
+            ],
+            "name": "setPremiumSmsPermissionForSubscriber",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [{"subId": "readInt32"}],
+            "name": "isImsSmsSupportedForSubscriber",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 19,
+            "in": [{"subId": "readInt32"}],
+            "name": "isSmsSimPickActivityNeeded",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 20,
+            "in": [],
+            "name": "getPreferredSmsSubscription",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 21,
+            "in": [{"subId": "readInt32"}],
+            "name": "getImsSmsFormatForSubscriber",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 22,
+            "in": [],
+            "name": "isSMSPromptEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 23,
+            "in": [
+                {"subId": "readInt32"},
+                {"callingPkg": "readString16"},
+                {"callingAttributionTag": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "messageUri": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                },
+                {"scAddress": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sentIntent": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "deliveryIntent": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                }
+            ],
+            "name": "sendStoredText",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 24,
+            "in": [
+                {"subId": "readInt32"},
+                {"callingPkg": "readString16"},
+                {"callingAttributeTag": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "messageUri": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                },
+                {"scAddress": "readString16"},
+                {
+                    "sentIntents": "readList",
+                    "__parcelType": "android.app.PendingIntent"
+                },
+                {
+                    "deliveryIntents": "readList",
+                    "__parcelType": "android.app.PendingIntent"
+                }
+            ],
+            "name": "sendStoredMultipartText",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 25,
+            "in": [{"subId": "readInt32"}],
+            "name": "getCarrierConfigValuesForSubscriber",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"__return": "readBundle"}]
+                }
+            ]
+        },
+        {
+            "code": 26,
+            "in": [
+                {"subId": "readInt32"},
+                {"callingPkg": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "intent": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                }
+            ],
+            "name": "createAppSpecificSmsToken",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 27,
+            "in": [
+                {"subId": "readInt32"},
+                {"callingPkg": "readString16"},
+                {"prefixes": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "intent": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                }
+            ],
+            "name": "createAppSpecificSmsTokenWithPackageInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 28,
+            "in": [
+                {"subId": "readInt32"},
+                {"callingApk": "readString16"},
+                {"callingFeatureId": "readString16"},
+                {"destAddress": "readString16"},
+                {"countryIso": "readString16"}
+            ],
+            "name": "checkSmsShortCodeDestination",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 29,
+            "in": [
+                {"subId": "readInt32"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "getSmscAddressFromIccEfForSubscriber",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 30,
+            "in": [
+                {"smsc": "readString16"},
+                {"subId": "readInt32"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "setSmscAddressOnIccEfForSubscriber",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 31,
+            "in": [{"subId": "readInt32"}],
+            "name": "getSmsCapacityOnIccForSubscriber",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 32,
+            "in": [{"subId": "readInt32"}],
+            "name": "resetAllCellBroadcastRanges",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "ISms",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

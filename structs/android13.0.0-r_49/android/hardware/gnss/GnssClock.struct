@@ -1,0 +1,35 @@
+{
+    "produced_on": "2023-06-01T06:42:38.911653226Z",
+    "source_location": "",
+    "components": [
+        {"HAS_LEAP_SECOND": "readInt32"},
+        {"HAS_TIME_UNCERTAINTY": "readInt32"},
+        {"HAS_FULL_BIAS": "readInt32"},
+        {"HAS_BIAS": "readInt32"},
+        {"HAS_BIAS_UNCERTAINTY": "readInt32"},
+        {"HAS_DRIFT": "readInt32"},
+        {"HAS_DRIFT_UNCERTAINTY": "readInt32"},
+        {"gnssClockFlags": "readInt32"},
+        {"leapSecond": "readInt32"},
+        {"timeNs": "readInt64"},
+        {"timeUncertaintyNs": "readDouble"},
+        {"fullBiasNs": "readInt64"},
+        {"biasNs": "readDouble"},
+        {"biasUncertaintyNs": "readDouble"},
+        {"driftNsps": "readDouble"},
+        {"driftUncertaintyNsps": "readDouble"},
+        {"hwClockDiscontinuityCount": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "referenceSignalTypeForIsb": "readParcelable",
+                "__parcelType": "android.hardware.gnss.GnssSignalType"
+            }]
+        }
+    ],
+    "full_name": "android.hardware.gnss.GnssClock",
+    "name": "GnssClock",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

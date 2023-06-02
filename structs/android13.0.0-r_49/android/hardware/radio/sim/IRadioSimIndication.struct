@@ -1,0 +1,218 @@
+{
+    "produced_on": "2023-06-01T06:42:37.549774477Z",
+    "source_location": "",
+    "full_name": "android.hardware.radio.sim.IRadioSimIndication",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "info": "readParcelable",
+                        "__parcelType": "android.hardware.radio.RadioIndicationType"
+                    }]
+                }
+            ],
+            "name": "carrierInfoForImsiEncryption",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.hardware.radio.RadioIndicationType"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "cdmaSource": "readParcelable",
+                        "__parcelType": "android.hardware.radio.sim.CdmaSubscriptionSource"
+                    }]
+                }
+            ],
+            "name": "cdmaSubscriptionSourceChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.hardware.radio.RadioIndicationType"
+                    }]
+                }
+            ],
+            "name": "simPhonebookChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.hardware.radio.RadioIndicationType"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "status": "readParcelable",
+                        "__parcelType": "android.hardware.radio.sim.PbReceivedStatus"
+                    }]
+                },
+                {
+                    "records": "readParcelableVector",
+                    "__parcelType": "android.hardware.radio.sim.PhonebookRecordInfo"
+                }
+            ],
+            "name": "simPhonebookRecordsReceived",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.hardware.radio.RadioIndicationType"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "refreshResult": "readParcelable",
+                        "__parcelType": "android.hardware.radio.sim.SimRefreshResult"
+                    }]
+                }
+            ],
+            "name": "simRefresh",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.hardware.radio.RadioIndicationType"
+                    }]
+                }
+            ],
+            "name": "simStatusChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.hardware.radio.RadioIndicationType"
+                    }]
+                },
+                {"cmd": "readString16"}
+            ],
+            "name": "stkEventNotify",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.hardware.radio.RadioIndicationType"
+                    }]
+                },
+                {"cmd": "readString16"}
+            ],
+            "name": "stkProactiveCommand",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.hardware.radio.RadioIndicationType"
+                    }]
+                }
+            ],
+            "name": "stkSessionEnd",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.hardware.radio.RadioIndicationType"
+                    }]
+                },
+                {"activate": "readBool"}
+            ],
+            "name": "subscriptionStatusChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.hardware.radio.RadioIndicationType"
+                    }]
+                },
+                {"enabled": "readBool"}
+            ],
+            "name": "uiccApplicationsEnablementChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IRadioSimIndication",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

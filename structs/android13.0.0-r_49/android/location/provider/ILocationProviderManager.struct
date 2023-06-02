@@ -1,0 +1,84 @@
+{
+    "produced_on": "2023-06-01T06:42:35.903227174Z",
+    "source_location": "",
+    "full_name": "android.location.provider.ILocationProviderManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"allowed": "readBool"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "properties": "readParcelable",
+                        "__parcelType": "android.location.provider.ProviderProperties"
+                    }]
+                },
+                {"attributionTag": "readString16"}
+            ],
+            "name": "onInitialize",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"allowed": "readBool"}],
+            "name": "onSetAllowed",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "properties": "readParcelable",
+                        "__parcelType": "android.location.provider.ProviderProperties"
+                    }]
+                }
+            ],
+            "name": "onSetProperties",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "location": "readParcelable",
+                        "__parcelType": "android.location.Location"
+                    }]
+                }
+            ],
+            "name": "onReportLocation",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{
+                "locations": "readList",
+                "__parcelType": "android.location.Location"
+            }],
+            "name": "onReportLocations",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "onFlushComplete",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ILocationProviderManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

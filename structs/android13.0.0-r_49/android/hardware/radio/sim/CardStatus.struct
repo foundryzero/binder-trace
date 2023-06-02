@@ -1,0 +1,41 @@
+{
+    "produced_on": "2023-06-01T06:42:37.552989314Z",
+    "source_location": "",
+    "components": [
+        {"STATE_ABSENT": "readInt32"},
+        {"STATE_PRESENT": "readInt32"},
+        {"STATE_ERROR": "readInt32"},
+        {"STATE_RESTRICTED": "readInt32"},
+        {"cardState": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "universalPinState": "readParcelable",
+                "__parcelType": "android.hardware.radio.sim.PinState"
+            }]
+        },
+        {"gsmUmtsSubscriptionAppIndex": "readInt32"},
+        {"cdmaSubscriptionAppIndex": "readInt32"},
+        {"imsSubscriptionAppIndex": "readInt32"},
+        {
+            "applications": "readParcelableVector",
+            "__parcelType": "android.hardware.radio.sim.AppStatus"
+        },
+        {"atr": "readString16"},
+        {"iccid": "readString16"},
+        {"eid": "readString16"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "slotMap": "readParcelable",
+                "__parcelType": "android.hardware.radio.config.SlotPortMapping"
+            }]
+        }
+    ],
+    "full_name": "android.hardware.radio.sim.CardStatus",
+    "name": "CardStatus",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

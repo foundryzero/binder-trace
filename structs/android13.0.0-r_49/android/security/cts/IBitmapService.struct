@@ -1,0 +1,65 @@
+{
+    "produced_on": "2023-06-01T06:42:36.572587437Z",
+    "source_location": "",
+    "full_name": "android.security.cts.IBitmapService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "bitmap": "readParcelable",
+                        "__parcelType": "android.security.cts.BitmapWrapper"
+                    }]
+                }
+            ],
+            "name": "getAllocationSize",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "bitmap": "readParcelable",
+                        "__parcelType": "android.security.cts.BitmapWrapper"
+                    }]
+                }
+            ],
+            "name": "didReceiveBitmap",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "ping",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "exit",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IBitmapService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

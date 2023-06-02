@@ -1,0 +1,149 @@
+{
+    "produced_on": "2022-08-19T10:42:52.667861898Z",
+    "source_location": "",
+    "full_name": "android.service.textclassifier.ITextClassifierService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionId": "readParcelable",
+                        "__parcelType": "android.view.textclassifier.TextClassificationSessionId"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.service.textclassifier.TextSelection.Request"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "onSuggestSelection",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionId": "readParcelable",
+                        "__parcelType": "android.view.textclassifier.TextClassificationSessionId"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.service.textclassifier.TextClassification.Request"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "onClassifyText",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionId": "readParcelable",
+                        "__parcelType": "android.view.textclassifier.TextClassificationSessionId"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.service.textclassifier.TextLinks.Request"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "onGenerateLinks",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionId": "readParcelable",
+                        "__parcelType": "android.view.textclassifier.TextClassificationSessionId"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "event": "readParcelable",
+                        "__parcelType": "android.view.textclassifier.SelectionEvent"
+                    }]
+                }
+            ],
+            "name": "onSelectionEvent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "context": "readParcelable",
+                        "__parcelType": "android.view.textclassifier.TextClassificationContext"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionId": "readParcelable",
+                        "__parcelType": "android.view.textclassifier.TextClassificationSessionId"
+                    }]
+                }
+            ],
+            "name": "onCreateTextClassificationSession",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionId": "readParcelable",
+                        "__parcelType": "android.view.textclassifier.TextClassificationSessionId"
+                    }]
+                }
+            ],
+            "name": "onDestroyTextClassificationSession",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ITextClassifierService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

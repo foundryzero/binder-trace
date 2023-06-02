@@ -1,0 +1,237 @@
+{
+    "produced_on": "2023-06-01T06:42:35.725230484Z",
+    "source_location": "",
+    "full_name": "android.accessibilityservice.IAccessibilityServiceClient",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"connection": "readStrongBinder"},
+                {"connectionId": "readInt32"},
+                {"windowToken": "readStrongBinder"}
+            ],
+            "name": "init",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "event": "readParcelable",
+                        "__parcelType": "android.view.accessibility.AccessibilityEvent"
+                    }]
+                },
+                {"serviceWantsEvent": "readBool"}
+            ],
+            "name": "onAccessibilityEvent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "onInterrupt",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "gestureEvent": "readParcelable",
+                        "__parcelType": "android.accessibilityservice.AccessibilityGestureEvent"
+                    }]
+                }
+            ],
+            "name": "onGesture",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "clearAccessibilityCache",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "event": "readParcelable",
+                        "__parcelType": "android.view.KeyEvent"
+                    }]
+                },
+                {"sequence": "readInt32"}
+            ],
+            "name": "onKeyEvent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"displayId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "region": "readParcelable",
+                        "__parcelType": "android.graphics.Region"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "config": "readParcelable",
+                        "__parcelType": "android.accessibilityservice.MagnificationConfig"
+                    }]
+                }
+            ],
+            "name": "onMagnificationChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "event": "readParcelable",
+                        "__parcelType": "android.view.MotionEvent"
+                    }]
+                }
+            ],
+            "name": "onMotionEvent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"displayId": "readInt32"},
+                {"state": "readInt32"}
+            ],
+            "name": "onTouchStateChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [{"showMode": "readInt32"}],
+            "name": "onSoftKeyboardShowModeChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"sequence": "readInt32"},
+                {"completedSuccessfully": "readBool"}
+            ],
+            "name": "onPerformGestureResult",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [{"capturing": "readBool"}],
+            "name": "onFingerprintCapturingGesturesChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [{"gesture": "readInt32"}],
+            "name": "onFingerprintGesture",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [{"displayId": "readInt32"}],
+            "name": "onAccessibilityButtonClicked",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [{"available": "readBool"}],
+            "name": "onAccessibilityButtonAvailabilityChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [],
+            "name": "onSystemActionsChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "createImeSession",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"session": "readStrongBinder"},
+                {"enabled": "readBool"}
+            ],
+            "name": "setImeSessionEnabled",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 19,
+            "in": [],
+            "name": "bindInput",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 20,
+            "in": [],
+            "name": "unbindInput",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 21,
+            "in": [
+                {"connection": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "editorInfo": "readParcelable",
+                        "__parcelType": "android.view.inputmethod.EditorInfo"
+                    }]
+                },
+                {"restarting": "readBool"}
+            ],
+            "name": "startInput",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IAccessibilityServiceClient",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

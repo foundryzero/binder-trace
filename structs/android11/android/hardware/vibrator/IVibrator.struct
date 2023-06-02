@@ -1,0 +1,223 @@
+{
+    "produced_on": "2022-08-26T09:55:21.199363606Z",
+    "source_location": "",
+    "full_name": "android.hardware.vibrator.IVibrator",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getCapabilities",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "off",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"timeoutMs": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callback": "readParcelable",
+                        "__parcelType": "android.hardware.vibrator.IVibratorCallback"
+                    }]
+                }
+            ],
+            "name": "on",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "effect": "readParcelable",
+                        "__parcelType": "android.hardware.vibrator.Effect"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "strength": "readParcelable",
+                        "__parcelType": "android.hardware.vibrator.EffectStrength"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callback": "readParcelable",
+                        "__parcelType": "android.hardware.vibrator.IVibratorCallback"
+                    }]
+                }
+            ],
+            "name": "perform",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "getSupportedEffects",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.vibrator.Effect"
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [{"amplitude": "readFloat"}],
+            "name": "setAmplitude",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"enabled": "readBool"}],
+            "name": "setExternalControl",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "getCompositionDelayMax",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [],
+            "name": "getCompositionSizeMax",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [],
+            "name": "getSupportedPrimitives",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.vibrator.CompositePrimitive"
+                }
+            ]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "primitive": "readParcelable",
+                        "__parcelType": "android.hardware.vibrator.CompositePrimitive"
+                    }]
+                }
+            ],
+            "name": "getPrimitiveDuration",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [
+                {
+                    "composite": "readParcelableVector",
+                    "__parcelType": "android.hardware.vibrator.CompositeEffect"
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callback": "readParcelable",
+                        "__parcelType": "android.hardware.vibrator.IVibratorCallback"
+                    }]
+                }
+            ],
+            "name": "compose",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [],
+            "name": "getSupportedAlwaysOnEffects",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.vibrator.Effect"
+                }
+            ]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"id": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "effect": "readParcelable",
+                        "__parcelType": "android.hardware.vibrator.Effect"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "strength": "readParcelable",
+                        "__parcelType": "android.hardware.vibrator.EffectStrength"
+                    }]
+                }
+            ],
+            "name": "alwaysOnEnable",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [{"id": "readInt32"}],
+            "name": "alwaysOnDisable",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IVibrator",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

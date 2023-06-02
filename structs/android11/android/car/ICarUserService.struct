@@ -1,0 +1,249 @@
+{
+    "produced_on": "2022-08-26T09:55:18.944215939Z",
+    "source_location": "",
+    "full_name": "android.car.ICarUserService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"name": "readString16"},
+                {"admin": "readBool"}
+            ],
+            "name": "createDriver",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.car.AndroidFuture<UserCreationResult>"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"name": "readString16"},
+                {"driverId": "readInt32"}
+            ],
+            "name": "createPassenger",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.UserInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"driverId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiver": "readParcelable",
+                        "__parcelType": "android.car.AndroidFuture<UserSwitchResult>"
+                    }]
+                }
+            ],
+            "name": "switchDriver",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"tagerUserId": "readInt32"},
+                {"timeoutMs": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiver": "readParcelable",
+                        "__parcelType": "android.car.AndroidFuture<UserSwitchResult>"
+                    }]
+                }
+            ],
+            "name": "switchUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "setUserSwitchUiCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"name": "readString16"},
+                {"userType": "readString16"},
+                {"flags": "readInt32"},
+                {"timeoutMs": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiver": "readParcelable",
+                        "__parcelType": "android.car.AndroidFuture<UserCreationResult>"
+                    }]
+                }
+            ],
+            "name": "createUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"userId": "readInt32"}],
+            "name": "removeUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.car.user.UserRemovalResult"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "getAllDrivers",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.content.pm.UserInfo"
+                }
+            ]
+        },
+        {
+            "code": 9,
+            "in": [{"driverId": "readInt32"}],
+            "name": "getPassengers",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.content.pm.UserInfo"
+                }
+            ]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"passengerId": "readInt32"},
+                {"zoneId": "readInt32"}
+            ],
+            "name": "startPassenger",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [{"passengerId": "readInt32"}],
+            "name": "stopPassenger",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "setLifecycleListenerForUid",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [],
+            "name": "resetLifecycleListenerForUid",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"requestType": "readInt32"},
+                {"timeoutMs": "readInt32"},
+                {"receiver": "readStrongBinder"}
+            ],
+            "name": "getInitialUserInfo",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [{"types": "readInt32Vector"}],
+            "name": "getUserIdentificationAssociation",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.car.user.UserIdentificationAssociationResponse"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 16,
+            "in": [
+                {"timeoutMs": "readInt32"},
+                {"types": "readInt32Vector"},
+                {"values": "readInt32Vector"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "result": "readParcelable",
+                        "__parcelType": "android.car.AndroidFuture<UserIdentificationAssociationResponse>"
+                    }]
+                }
+            ],
+            "name": "setUserIdentificationAssociation",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [],
+            "name": "isUserHalUserAssociationSupported",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "ICarUserService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

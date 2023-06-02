@@ -1,0 +1,77 @@
+{
+    "produced_on": "2022-08-19T10:42:50.839532744Z",
+    "source_location": "",
+    "full_name": "org.codeaurora.ims.internal.IQtiImsExtListener",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"status": "readInt32"}],
+            "name": "onSetCallForwardUncondTimer",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"startHour": "readInt32"},
+                {"endHour": "readInt32"},
+                {"startMinute": "readInt32"},
+                {"endMinute": "readInt32"},
+                {"reason": "readInt32"},
+                {"status": "readInt32"},
+                {"number": "readString16"},
+                {"serviceClass": "readInt32"}
+            ],
+            "name": "onGetCallForwardUncondTimer",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"errCode": "readInt32"},
+                {"errString": "readString16"}
+            ],
+            "name": "onUTReqFailed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"status": "readInt32"},
+                {"packetCount": "readInt64"}
+            ],
+            "name": "onGetPacketCount",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"status": "readInt32"},
+                {"packetErrorCount": "readInt64"}
+            ],
+            "name": "onGetPacketErrorCount",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"result": "readInt32"}],
+            "name": "receiveCallDeflectResponse",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"result": "readInt32"}],
+            "name": "receiveCallTransferResponse",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IQtiImsExtListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

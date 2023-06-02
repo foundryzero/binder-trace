@@ -1,0 +1,71 @@
+{
+    "produced_on": "2022-12-02T13:44:07.148259204Z",
+    "source_location": "",
+    "full_name": "android.hardware.location.IContextHubClientCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "message": "readParcelable",
+                        "__parcelType": "android.hardware.location.NanoAppMessage"
+                    }]
+                }
+            ],
+            "name": "onMessageFromNanoApp",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "onHubReset",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nanoAppId": "readInt64"},
+                {"abortCode": "readInt32"}
+            ],
+            "name": "onNanoAppAborted",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"nanoAppId": "readInt64"}],
+            "name": "onNanoAppLoaded",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"nanoAppId": "readInt64"}],
+            "name": "onNanoAppUnloaded",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"nanoAppId": "readInt64"}],
+            "name": "onNanoAppEnabled",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"nanoAppId": "readInt64"}],
+            "name": "onNanoAppDisabled",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IContextHubClientCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

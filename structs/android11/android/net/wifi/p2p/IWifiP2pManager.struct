@@ -1,0 +1,65 @@
+{
+    "produced_on": "2022-08-26T09:55:22.019493071Z",
+    "source_location": "",
+    "full_name": "android.net.wifi.p2p.IWifiP2pManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"binder": "readStrongBinder"}],
+            "name": "getMessenger",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.os.Messenger"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "getP2pStateMachineMessenger",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.os.Messenger"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"binder": "readStrongBinder"}],
+            "name": "close",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"mode": "readInt32"}],
+            "name": "setMiracastMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "checkConfigureWifiDisplayPermission",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IWifiP2pManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

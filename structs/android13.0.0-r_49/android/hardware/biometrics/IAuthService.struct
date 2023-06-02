@@ -1,0 +1,216 @@
+{
+    "produced_on": "2023-06-01T06:42:35.892724329Z",
+    "source_location": "",
+    "full_name": "android.hardware.biometrics.IAuthService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"sensorId": "readInt32"},
+                {"callback": "readStrongBinder"},
+                {"opPackageName": "readString16"}
+            ],
+            "name": "createTestSession",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"opPackageName": "readString16"}],
+            "name": "getSensorProperties",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.hardware.biometrics.SensorPropertiesInternal"
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getUiPackage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"sessionId": "readInt64"},
+                {"userId": "readInt32"},
+                {"receiver": "readStrongBinder"},
+                {"opPackageName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "promptInfo": "readParcelable",
+                        "__parcelType": "android.hardware.biometrics.PromptInfo"
+                    }]
+                }
+            ],
+            "name": "authenticate",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"opPackageName": "readString16"},
+                {"requestId": "readInt64"}
+            ],
+            "name": "cancelAuthentication",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"opPackageName": "readString16"},
+                {"userId": "readInt32"},
+                {"authenticators": "readInt32"}
+            ],
+            "name": "canAuthenticate",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"userId": "readInt32"},
+                {"opPackageName": "readString16"}
+            ],
+            "name": "hasEnrolledBiometrics",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "registerEnabledOnKeyguardCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"userId": "readInt32"},
+                {"fromSensorId": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "invalidateAuthenticatorIds",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [{"userId": "readInt32"}],
+            "name": "getAuthenticatorIds",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.biometrics.long"
+                }
+            ]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"opPackageName": "readString16"},
+                {"fromSensorId": "readInt32"},
+                {"userId": "readInt32"},
+                {"hardwareAuthToken": "readByteVector"}
+            ],
+            "name": "resetLockoutTimeBound",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"userId": "readInt32"},
+                {"opPackageName": "readString16"},
+                {"authenticators": "readInt32"}
+            ],
+            "name": "getButtonLabel",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "CharSequence"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"userId": "readInt32"},
+                {"opPackageName": "readString16"},
+                {"authenticators": "readInt32"}
+            ],
+            "name": "getPromptMessage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "CharSequence"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"userId": "readInt32"},
+                {"opPackageName": "readString16"},
+                {"authenticators": "readInt32"}
+            ],
+            "name": "getSettingName",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "CharSequence"
+                    }]
+                }
+            ]
+        }
+    ],
+    "name": "IAuthService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

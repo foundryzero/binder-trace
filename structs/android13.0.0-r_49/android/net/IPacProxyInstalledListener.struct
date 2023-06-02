@@ -1,0 +1,32 @@
+{
+    "produced_on": "2023-06-01T06:42:35.779594438Z",
+    "source_location": "",
+    "full_name": "android.net.IPacProxyInstalledListener",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "network": "readParcelable",
+                    "__parcelType": "android.net.Network"
+                }]
+            },
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "proxy": "readParcelable",
+                    "__parcelType": "android.net.ProxyInfo"
+                }]
+            }
+        ],
+        "name": "onPacProxyInstalled",
+        "oneWay": true,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "IPacProxyInstalledListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

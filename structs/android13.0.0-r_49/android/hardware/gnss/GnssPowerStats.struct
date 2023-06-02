@@ -1,0 +1,27 @@
+{
+    "produced_on": "2023-06-01T06:42:38.916125680Z",
+    "source_location": "",
+    "components": [
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "elapsedRealtime": "readParcelable",
+                "__parcelType": "android.hardware.gnss.ElapsedRealtime"
+            }]
+        },
+        {"totalEnergyMilliJoule": "readDouble"},
+        {"singlebandTrackingModeEnergyMilliJoule": "readDouble"},
+        {"multibandTrackingModeEnergyMilliJoule": "readDouble"},
+        {"singlebandAcquisitionModeEnergyMilliJoule": "readDouble"},
+        {"multibandAcquisitionModeEnergyMilliJoule": "readDouble"},
+        {
+            "otherModesEnergyMilliJoule": "readParcelableVector",
+            "__parcelType": "android.hardware.gnss.double"
+        }
+    ],
+    "full_name": "android.hardware.gnss.GnssPowerStats",
+    "name": "GnssPowerStats",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

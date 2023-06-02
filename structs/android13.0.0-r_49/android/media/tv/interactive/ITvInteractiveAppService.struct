@@ -1,0 +1,88 @@
+{
+    "produced_on": "2023-06-01T06:42:34.849303293Z",
+    "source_location": "",
+    "full_name": "android.media.tv.interactive.ITvInteractiveAppService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "registerCallback",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "unregisterCallback",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "channel": "readParcelable",
+                        "__parcelType": "android.view.InputChannel"
+                    }]
+                },
+                {"callback": "readStrongBinder"},
+                {"iAppServiceId": "readString16"},
+                {"type": "readInt32"}
+            ],
+            "name": "createSession",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "info": "readParcelable",
+                        "__parcelType": "android.media.tv.interactive.AppLinkInfo"
+                    }]
+                }
+            ],
+            "name": "registerAppLinkInfo",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "info": "readParcelable",
+                        "__parcelType": "android.media.tv.interactive.AppLinkInfo"
+                    }]
+                }
+            ],
+            "name": "unregisterAppLinkInfo",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"command": "readBundle"}]
+                }
+            ],
+            "name": "sendAppLinkCommand",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ITvInteractiveAppService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

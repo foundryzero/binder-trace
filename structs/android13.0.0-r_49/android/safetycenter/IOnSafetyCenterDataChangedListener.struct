@@ -1,0 +1,42 @@
+{
+    "produced_on": "2023-06-01T06:42:34.432106738Z",
+    "source_location": "",
+    "full_name": "android.safetycenter.IOnSafetyCenterDataChangedListener",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "data": "readParcelable",
+                        "__parcelType": "android.safetycenter.SafetyCenterData"
+                    }]
+                }
+            ],
+            "name": "onSafetyCenterDataChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "safetyCenterErrorDetails": "readParcelable",
+                        "__parcelType": "android.safetycenter.SafetyCenterErrorDetails"
+                    }]
+                }
+            ],
+            "name": "onError",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IOnSafetyCenterDataChangedListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

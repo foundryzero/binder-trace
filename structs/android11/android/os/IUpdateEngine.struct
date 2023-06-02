@@ -1,0 +1,119 @@
+{
+    "produced_on": "2022-08-26T09:55:20.332944019Z",
+    "source_location": "",
+    "full_name": "android.os.IUpdateEngine",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"url": "readString16"},
+                {"payload_offset": "readInt64"},
+                {"payload_size": "readInt64"},
+                {"headerKeyValuePairs": "readString16Vector"}
+            ],
+            "name": "applyPayload",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "pfd": "readParcelable",
+                        "__parcelType": "android.os.ParcelFileDescriptor"
+                    }]
+                },
+                {"payload_offset": "readInt64"},
+                {"payload_size": "readInt64"},
+                {"headerKeyValuePairs": "readString16Vector"}
+            ],
+            "name": "applyPayloadFd",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "bind",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "unbind",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "suspend",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "resume",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "cancel",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "resetStatus",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [{"metadataFilename": "readString16"}],
+            "name": "verifyPayloadApplicable",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"metadataFilename": "readString16"},
+                {"headerKeyValuePairs": "readString16Vector"}
+            ],
+            "name": "allocateSpaceForPayload",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "cleanupSuccessfulUpdate",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IUpdateEngine",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

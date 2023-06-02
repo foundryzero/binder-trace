@@ -1,0 +1,35 @@
+{
+    "produced_on": "2023-06-01T06:42:35.712664992Z",
+    "source_location": "",
+    "full_name": "android.os.IBatteryPropertiesRegistrar",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"id": "readInt32"}],
+            "name": "getProperty",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "prop": "readParcelable",
+                        "__parcelType": "android.os.BatteryProperty"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "scheduleUpdate",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IBatteryPropertiesRegistrar",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

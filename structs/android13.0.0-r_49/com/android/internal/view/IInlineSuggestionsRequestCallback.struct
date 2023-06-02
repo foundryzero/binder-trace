@@ -1,0 +1,85 @@
+{
+    "produced_on": "2023-06-01T06:42:35.203834560Z",
+    "source_location": "",
+    "full_name": "com.android.internal.view.IInlineSuggestionsRequestCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "onInlineSuggestionsUnsupported",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.view.inputmethod.InlineSuggestionsRequest"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "onInlineSuggestionsRequest",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "imeFieldId": "readParcelable",
+                        "__parcelType": "android.view.autofill.AutofillId"
+                    }]
+                }
+            ],
+            "name": "onInputMethodStartInput",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"requestResult": "readBool"}],
+            "name": "onInputMethodShowInputRequested",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "onInputMethodStartInputView",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "onInputMethodFinishInputView",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "onInputMethodFinishInput",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "onInlineSuggestionsSessionInvalidated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IInlineSuggestionsRequestCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

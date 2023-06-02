@@ -1,0 +1,748 @@
+{
+    "produced_on": "2022-08-26T09:55:24.412206481Z",
+    "source_location": "",
+    "full_name": "android.location.ILocationManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.location.LocationRequest"
+                    }]
+                },
+                {"packageName": "readString16"},
+                {"featureId": "readString16"}
+            ],
+            "name": "getLastLocation",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.location.Location"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.location.LocationRequest"
+                    }]
+                },
+                {"cancellationSignal": "readStrongBinder"},
+                {"listener": "readStrongBinder"},
+                {"packageName": "readString16"},
+                {"featureId": "readString16"},
+                {"listenerId": "readString16"}
+            ],
+            "name": "getCurrentLocation",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.location.LocationRequest"
+                    }]
+                },
+                {"listener": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "intent": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                },
+                {"packageName": "readString16"},
+                {"featureId": "readString16"},
+                {"listenerId": "readString16"}
+            ],
+            "name": "requestLocationUpdates",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"listener": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "intent": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                }
+            ],
+            "name": "removeUpdates",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.location.LocationRequest"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "geofence": "readParcelable",
+                        "__parcelType": "android.location.Geofence"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "intent": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                },
+                {"packageName": "readString16"},
+                {"featureId": "readString16"}
+            ],
+            "name": "requestGeofence",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "fence": "readParcelable",
+                        "__parcelType": "android.location.Geofence"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "intent": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                },
+                {"packageName": "readString16"}
+            ],
+            "name": "removeGeofence",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"callback": "readStrongBinder"},
+                {"packageName": "readString16"},
+                {"featureId": "readString16"}
+            ],
+            "name": "registerGnssStatusCallback",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "unregisterGnssStatusCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [],
+            "name": "geocoderIsPresent",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"latitude": "readDouble"},
+                {"longitude": "readDouble"},
+                {"maxResults": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "params": "readParcelable",
+                        "__parcelType": "android.location.GeocoderParams"
+                    }]
+                }
+            ],
+            "name": "getFromLocation",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"},
+                {
+                    "addrs": "readList",
+                    "__parcelType": "android.location.Address"
+                }
+            ]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"locationName": "readString16"},
+                {"lowerLeftLatitude": "readDouble"},
+                {"lowerLeftLongitude": "readDouble"},
+                {"upperRightLatitude": "readDouble"},
+                {"upperRightLongitude": "readDouble"},
+                {"maxResults": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "params": "readParcelable",
+                        "__parcelType": "android.location.GeocoderParams"
+                    }]
+                }
+            ],
+            "name": "getFromLocationName",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"},
+                {
+                    "addrs": "readList",
+                    "__parcelType": "android.location.Address"
+                }
+            ]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.location.GnssRequest"
+                    }]
+                },
+                {"listener": "readStrongBinder"},
+                {"packageName": "readString16"},
+                {"featureId": "readString16"}
+            ],
+            "name": "addGnssMeasurementsListener",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "corrections": "readParcelable",
+                        "__parcelType": "android.location.GnssMeasurementCorrections"
+                    }]
+                },
+                {"packageName": "readString16"}
+            ],
+            "name": "injectGnssMeasurementCorrections",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [],
+            "name": "getGnssCapabilities",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 15,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "removeGnssMeasurementsListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [
+                {"listener": "readStrongBinder"},
+                {"packageName": "readString16"},
+                {"featureId": "readString16"}
+            ],
+            "name": "addGnssAntennaInfoListener",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 17,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "removeGnssAntennaInfoListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"listener": "readStrongBinder"},
+                {"packageName": "readString16"},
+                {"featureId": "readString16"}
+            ],
+            "name": "addGnssNavigationMessageListener",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 19,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "removeGnssNavigationMessageListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 20,
+            "in": [],
+            "name": "getGnssYearOfHardware",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 21,
+            "in": [],
+            "name": "getGnssHardwareModelName",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 22,
+            "in": [{"packageName": "readString16"}],
+            "name": "getGnssBatchSize",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 23,
+            "in": [
+                {"callback": "readStrongBinder"},
+                {"packageName": "readString16"},
+                {"featureId": "readString16"}
+            ],
+            "name": "addGnssBatchingCallback",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 24,
+            "in": [],
+            "name": "removeGnssBatchingCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 25,
+            "in": [
+                {"periodNanos": "readInt64"},
+                {"wakeOnFifoFull": "readBool"},
+                {"packageName": "readString16"},
+                {"featureId": "readString16"}
+            ],
+            "name": "startGnssBatch",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 26,
+            "in": [{"packageName": "readString16"}],
+            "name": "flushGnssBatch",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 27,
+            "in": [],
+            "name": "stopGnssBatch",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 28,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "location": "readParcelable",
+                        "__parcelType": "android.location.Location"
+                    }]
+                }
+            ],
+            "name": "injectLocation",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 29,
+            "in": [],
+            "name": "getAllProviders",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "String"
+                }
+            ]
+        },
+        {
+            "code": 30,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "criteria": "readParcelable",
+                        "__parcelType": "android.location.Criteria"
+                    }]
+                },
+                {"enabledOnly": "readBool"}
+            ],
+            "name": "getProviders",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "String"
+                }
+            ]
+        },
+        {
+            "code": 31,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "criteria": "readParcelable",
+                        "__parcelType": "android.location.Criteria"
+                    }]
+                },
+                {"enabledOnly": "readBool"}
+            ],
+            "name": "getBestProvider",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 32,
+            "in": [{"provider": "readString16"}],
+            "name": "getProviderProperties",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.internal.location.ProviderProperties"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 33,
+            "in": [{"packageName": "readString16"}],
+            "name": "isProviderPackage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 34,
+            "in": [{"provider": "readString16"}],
+            "name": "getProviderPackages",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "String"
+                }
+            ]
+        },
+        {
+            "code": 35,
+            "in": [{"packageName": "readString16"}],
+            "name": "setExtraLocationControllerPackage",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 36,
+            "in": [],
+            "name": "getExtraLocationControllerPackage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 37,
+            "in": [{"enabled": "readBool"}],
+            "name": "setExtraLocationControllerPackageEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 38,
+            "in": [],
+            "name": "isExtraLocationControllerPackageEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 39,
+            "in": [
+                {"provider": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "isProviderEnabledForUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 40,
+            "in": [{"userId": "readInt32"}],
+            "name": "isLocationEnabledForUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 41,
+            "in": [
+                {"enabled": "readBool"},
+                {"userId": "readInt32"}
+            ],
+            "name": "setLocationEnabledForUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 42,
+            "in": [
+                {"name": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "properties": "readParcelable",
+                        "__parcelType": "com.android.internal.location.ProviderProperties"
+                    }]
+                },
+                {"packageName": "readString16"},
+                {"featureId": "readString16"}
+            ],
+            "name": "addTestProvider",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 43,
+            "in": [
+                {"provider": "readString16"},
+                {"packageName": "readString16"},
+                {"featureId": "readString16"}
+            ],
+            "name": "removeTestProvider",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 44,
+            "in": [
+                {"provider": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "location": "readParcelable",
+                        "__parcelType": "android.location.Location"
+                    }]
+                },
+                {"packageName": "readString16"},
+                {"featureId": "readString16"}
+            ],
+            "name": "setTestProviderLocation",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 45,
+            "in": [
+                {"provider": "readString16"},
+                {"enabled": "readBool"},
+                {"packageName": "readString16"},
+                {"featureId": "readString16"}
+            ],
+            "name": "setTestProviderEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 46,
+            "in": [{"provider": "readString16"}],
+            "name": "getTestProviderCurrentRequests",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.location.LocationRequest"
+                }
+            ]
+        },
+        {
+            "code": 47,
+            "in": [],
+            "name": "getGnssTimeMillis",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.location.LocationTime"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 48,
+            "in": [
+                {"provider": "readString16"},
+                {"command": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"extras": "readBundle"}]
+                }
+            ],
+            "name": "sendExtraCommand",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 49,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "locationCallbackFinished",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 50,
+            "in": [],
+            "name": "getBackgroundThrottlingWhitelist",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 51,
+            "in": [],
+            "name": "getIgnoreSettingsWhitelist",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        }
+    ],
+    "name": "ILocationManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

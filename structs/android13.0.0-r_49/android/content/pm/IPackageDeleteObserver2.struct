@@ -1,0 +1,37 @@
+{
+    "produced_on": "2023-06-01T06:42:35.355984196Z",
+    "source_location": "",
+    "full_name": "android.content.pm.IPackageDeleteObserver2",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "intent": "readParcelable",
+                        "__parcelType": "android.content.Intent"
+                    }]
+                }
+            ],
+            "name": "onUserActionRequired",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"packageName": "readString16"},
+                {"returnCode": "readInt32"},
+                {"msg": "readString16"}
+            ],
+            "name": "onPackageDeleted",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IPackageDeleteObserver2",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

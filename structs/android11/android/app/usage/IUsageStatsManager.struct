@@ -1,0 +1,421 @@
+{
+    "produced_on": "2022-08-26T09:55:23.959964412Z",
+    "source_location": "",
+    "full_name": "android.app.usage.IUsageStatsManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"bucketType": "readInt32"},
+                {"beginTime": "readInt64"},
+                {"endTime": "readInt64"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "queryUsageStats",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.ParceledListSlice"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"bucketType": "readInt32"},
+                {"beginTime": "readInt64"},
+                {"endTime": "readInt64"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "queryConfigurationStats",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.ParceledListSlice"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"bucketType": "readInt32"},
+                {"beginTime": "readInt64"},
+                {"endTime": "readInt64"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "queryEventStats",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.ParceledListSlice"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"beginTime": "readInt64"},
+                {"endTime": "readInt64"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "queryEvents",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.app.usage.UsageEvents"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"beginTime": "readInt64"},
+                {"endTime": "readInt64"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "queryEventsForPackage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.app.usage.UsageEvents"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"beginTime": "readInt64"},
+                {"endTime": "readInt64"},
+                {"userId": "readInt32"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "queryEventsForUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.app.usage.UsageEvents"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"beginTime": "readInt64"},
+                {"endTime": "readInt64"},
+                {"userId": "readInt32"},
+                {"pkg": "readString16"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "queryEventsForPackageForUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.app.usage.UsageEvents"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"packageName": "readString16"},
+                {"inactive": "readBool"},
+                {"userId": "readInt32"}
+            ],
+            "name": "setAppInactive",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "isAppInactive",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [],
+            "name": "onCarrierPrivilegedAppsChanged",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"},
+                {"contentType": "readString16"},
+                {"annotations": "readString16Vector"},
+                {"action": "readString16"}
+            ],
+            "name": "reportChooserSelection",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"packageName": "readString16"},
+                {"callingPackage": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "getAppStandbyBucket",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"packageName": "readString16"},
+                {"bucket": "readInt32"},
+                {"userId": "readInt32"}
+            ],
+            "name": "setAppStandbyBucket",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "getAppStandbyBuckets",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.ParceledListSlice"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "appBuckets": "readParcelable",
+                        "__parcelType": "android.content.pm.ParceledListSlice"
+                    }]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "setAppStandbyBuckets",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [
+                {"observerId": "readInt32"},
+                {"packages": "readString16Vector"},
+                {"timeLimitMs": "readInt64"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callback": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                },
+                {"callingPackage": "readString16"}
+            ],
+            "name": "registerAppUsageObserver",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [
+                {"observerId": "readInt32"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "unregisterAppUsageObserver",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"sessionObserverId": "readInt32"},
+                {"observed": "readString16Vector"},
+                {"timeLimitMs": "readInt64"},
+                {"sessionThresholdTimeMs": "readInt64"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "limitReachedCallbackIntent": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionEndCallbackIntent": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                },
+                {"callingPackage": "readString16"}
+            ],
+            "name": "registerUsageSessionObserver",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 19,
+            "in": [
+                {"sessionObserverId": "readInt32"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "unregisterUsageSessionObserver",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 20,
+            "in": [
+                {"observerId": "readInt32"},
+                {"packages": "readString16Vector"},
+                {"timeLimitMs": "readInt64"},
+                {"timeUsedMs": "readInt64"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callback": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                },
+                {"callingPackage": "readString16"}
+            ],
+            "name": "registerAppUsageLimitObserver",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 21,
+            "in": [
+                {"observerId": "readInt32"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "unregisterAppUsageLimitObserver",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 22,
+            "in": [
+                {"activity": "readStrongBinder"},
+                {"token": "readString16"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "reportUsageStart",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 23,
+            "in": [
+                {"activity": "readStrongBinder"},
+                {"token": "readString16"},
+                {"timeAgoMs": "readInt64"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "reportPastUsageStart",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 24,
+            "in": [
+                {"activity": "readStrongBinder"},
+                {"token": "readString16"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "reportUsageStop",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 25,
+            "in": [],
+            "name": "getUsageSource",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 26,
+            "in": [],
+            "name": "forceUsageSourceSettingRead",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IUsageStatsManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

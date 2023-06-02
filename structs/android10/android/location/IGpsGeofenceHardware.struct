@@ -1,0 +1,72 @@
+{
+    "produced_on": "2022-12-02T13:44:07.767669121Z",
+    "source_location": "",
+    "full_name": "android.location.IGpsGeofenceHardware",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "isHardwareGeofenceSupported",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"geofenceId": "readInt32"},
+                {"latitude": "readDouble"},
+                {"longitude": "readDouble"},
+                {"radius": "readDouble"},
+                {"lastTransition": "readInt32"},
+                {"monitorTransition": "readInt32"},
+                {"notificationResponsiveness": "readInt32"},
+                {"unknownTimer": "readInt32"}
+            ],
+            "name": "addCircularHardwareGeofence",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"geofenceId": "readInt32"}],
+            "name": "removeHardwareGeofence",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"geofenceId": "readInt32"}],
+            "name": "pauseHardwareGeofence",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"geofenceId": "readInt32"},
+                {"monitorTransition": "readInt32"}
+            ],
+            "name": "resumeHardwareGeofence",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "IGpsGeofenceHardware",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

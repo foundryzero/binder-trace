@@ -1,0 +1,92 @@
+{
+    "produced_on": "2023-06-01T06:42:35.626563501Z",
+    "source_location": "",
+    "full_name": "android.view.accessibility.IWindowMagnificationConnection",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"displayId": "readInt32"},
+                {"scale": "readFloat"},
+                {"centerX": "readFloat"},
+                {"centerY": "readFloat"},
+                {"magnificationFrameOffsetRatioX": "readFloat"},
+                {"magnificationFrameOffsetRatioY": "readFloat"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "enableWindowMagnification",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"displayId": "readInt32"},
+                {"scale": "readFloat"}
+            ],
+            "name": "setScale",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"displayId": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "disableWindowMagnification",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"displayId": "readInt32"},
+                {"offsetX": "readFloat"},
+                {"offsetY": "readFloat"}
+            ],
+            "name": "moveWindowMagnifier",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"displayId": "readInt32"},
+                {"positionX": "readFloat"},
+                {"positionY": "readFloat"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "moveWindowMagnifierToPosition",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"displayId": "readInt32"},
+                {"magnificationMode": "readInt32"}
+            ],
+            "name": "showMagnificationButton",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"displayId": "readInt32"}],
+            "name": "removeMagnificationButton",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "setConnectionCallback",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IWindowMagnificationConnection",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

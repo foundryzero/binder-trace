@@ -1,0 +1,28 @@
+{
+    "produced_on": "2023-06-01T06:42:37.407390126Z",
+    "source_location": "",
+    "components": [
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "tech": "readParcelable",
+                "__parcelType": "android.hardware.radio.RadioTechnologyFamily"
+            }]
+        },
+        {"retry": "readBool"},
+        {"messageRef": "readInt32"},
+        {
+            "cdmaMessage": "readParcelableVector",
+            "__parcelType": "android.hardware.radio.messaging.CdmaSmsMessage"
+        },
+        {
+            "gsmMessage": "readParcelableVector",
+            "__parcelType": "android.hardware.radio.messaging.GsmSmsMessage"
+        }
+    ],
+    "full_name": "android.hardware.radio.messaging.ImsSmsMessage",
+    "name": "ImsSmsMessage",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

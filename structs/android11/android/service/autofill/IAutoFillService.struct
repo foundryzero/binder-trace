@@ -1,0 +1,51 @@
+{
+    "produced_on": "2022-08-26T09:55:23.301371624Z",
+    "source_location": "",
+    "full_name": "android.service.autofill.IAutoFillService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"connected": "readBool"}],
+            "name": "onConnectedStateChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.service.autofill.FillRequest"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "onFillRequest",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.service.autofill.SaveRequest"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "onSaveRequest",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IAutoFillService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

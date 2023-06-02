@@ -1,0 +1,215 @@
+{
+    "produced_on": "2023-06-01T06:42:35.146776611Z",
+    "source_location": "",
+    "full_name": "com.android.internal.policy.IKeyguardService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"isOccluded": "readBool"},
+                {"animate": "readBool"}
+            ],
+            "name": "setOccluded",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "addStateMonitorCallback",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "verifyUnlock",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"callback": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "message": "readParcelable",
+                        "__parcelType": "CharSequence"
+                    }]
+                }
+            ],
+            "name": "dismiss",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "onDreamingStarted",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "onDreamingStopped",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"pmSleepReason": "readInt32"}],
+            "name": "onStartedGoingToSleep",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"pmSleepReason": "readInt32"},
+                {"cameraGestureTriggered": "readBool"}
+            ],
+            "name": "onFinishedGoingToSleep",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"pmWakeReason": "readInt32"},
+                {"cameraGestureTriggered": "readBool"}
+            ],
+            "name": "onStartedWakingUp",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [],
+            "name": "onFinishedWakingUp",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "onScreenTurningOn",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [],
+            "name": "onScreenTurnedOn",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [],
+            "name": "onScreenTurningOff",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [],
+            "name": "onScreenTurnedOff",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [{"enabled": "readBool"}],
+            "name": "setKeyguardEnabled",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [],
+            "name": "onSystemReady",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"options": "readBundle"}]
+                }
+            ],
+            "name": "doKeyguardTimeout",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [{"switching": "readBool"}],
+            "name": "setSwitchingUser",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 19,
+            "in": [{"userId": "readInt32"}],
+            "name": "setCurrentUser",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 20,
+            "in": [],
+            "name": "onBootCompleted",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 21,
+            "in": [
+                {"startTime": "readInt64"},
+                {"fadeoutDuration": "readInt64"}
+            ],
+            "name": "startKeyguardExitAnimation",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 22,
+            "in": [],
+            "name": "onShortPowerPressedGoHome",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 23,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "intentToLaunch": "readParcelable",
+                        "__parcelType": "android.content.Intent"
+                    }]
+                }
+            ],
+            "name": "dismissKeyguardToLaunch",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 24,
+            "in": [{"keycode": "readInt32"}],
+            "name": "onSystemKeyPressed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IKeyguardService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

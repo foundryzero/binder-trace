@@ -1,0 +1,185 @@
+{
+    "produced_on": "2023-06-01T06:42:37.866703988Z",
+    "source_location": "",
+    "full_name": "android.hardware.neuralnetworks.IPreparedModel",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.hardware.neuralnetworks.Request"
+                    }]
+                },
+                {"measureTiming": "readBool"},
+                {"deadlineNs": "readInt64"},
+                {"loopTimeoutDurationNs": "readInt64"}
+            ],
+            "name": "executeSynchronously",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.neuralnetworks.ExecutionResult"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.hardware.neuralnetworks.Request"
+                    }]
+                },
+                {
+                    "waitFor": "readParcelableVector",
+                    "__parcelType": "android.hardware.neuralnetworks.ParcelFileDescriptor"
+                },
+                {"measureTiming": "readBool"},
+                {"deadlineNs": "readInt64"},
+                {"loopTimeoutDurationNs": "readInt64"},
+                {"durationNs": "readInt64"}
+            ],
+            "name": "executeFenced",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.neuralnetworks.FencedExecutionResult"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "configureExecutionBurst",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.hardware.neuralnetworks.Request"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "config": "readParcelable",
+                        "__parcelType": "android.hardware.neuralnetworks.ExecutionConfig"
+                    }]
+                }
+            ],
+            "name": "createReusableExecution",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.hardware.neuralnetworks.Request"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "config": "readParcelable",
+                        "__parcelType": "android.hardware.neuralnetworks.ExecutionConfig"
+                    }]
+                },
+                {"deadlineNs": "readInt64"}
+            ],
+            "name": "executeSynchronouslyWithConfig",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.neuralnetworks.ExecutionResult"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.hardware.neuralnetworks.Request"
+                    }]
+                },
+                {
+                    "waitFor": "readParcelableVector",
+                    "__parcelType": "android.hardware.neuralnetworks.ParcelFileDescriptor"
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "config": "readParcelable",
+                        "__parcelType": "android.hardware.neuralnetworks.ExecutionConfig"
+                    }]
+                },
+                {"deadlineNs": "readInt64"},
+                {"durationNs": "readInt64"}
+            ],
+            "name": "executeFencedWithConfig",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.neuralnetworks.FencedExecutionResult"
+                    }]
+                }
+            ]
+        }
+    ],
+    "name": "IPreparedModel",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,23 @@
+{
+    "produced_on": "2023-06-01T06:42:36.661489811Z",
+    "source_location": "",
+    "components": [
+        {"id": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "readerCertificate": "readParcelable",
+                "__parcelType": "android.hardware.identity.Certificate"
+            }]
+        },
+        {"userAuthenticationRequired": "readBool"},
+        {"timeoutMillis": "readInt64"},
+        {"secureUserId": "readInt64"},
+        {"mac": "readByteVector"}
+    ],
+    "full_name": "android.hardware.identity.SecureAccessControlProfile",
+    "name": "SecureAccessControlProfile",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

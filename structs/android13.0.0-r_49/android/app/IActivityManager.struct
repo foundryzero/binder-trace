@@ -1,0 +1,3159 @@
+{
+    "produced_on": "2023-06-01T06:42:35.423605516Z",
+    "source_location": "",
+    "full_name": "android.app.IActivityManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"uriString": "readString16"}],
+            "name": "openContentUri",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.os.ParcelFileDescriptor"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"observer": "readStrongBinder"},
+                {"which": "readInt32"},
+                {"cutpoint": "readInt32"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "registerUidObserver",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"observer": "readStrongBinder"}],
+            "name": "unregisterUidObserver",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"uid": "readInt32"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "isUidActive",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"uid": "readInt32"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "getUidProcessState",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"permission": "readString16"},
+                {"pid": "readInt32"},
+                {"uid": "readInt32"}
+            ],
+            "name": "checkPermission",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"app": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "crashInfo": "readParcelable",
+                        "__parcelType": "android.app.ApplicationErrorReport.ParcelableCrashInfo"
+                    }]
+                }
+            ],
+            "name": "handleApplicationCrash",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"caller": "readStrongBinder"},
+                {"callingPackage": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "intent": "readParcelable",
+                        "__parcelType": "android.content.Intent"
+                    }]
+                },
+                {"resolvedType": "readString16"},
+                {"resultTo": "readStrongBinder"},
+                {"resultWho": "readString16"},
+                {"requestCode": "readInt32"},
+                {"flags": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "profilerInfo": "readParcelable",
+                        "__parcelType": "android.app.ProfilerInfo"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"options": "readBundle"}]
+                }
+            ],
+            "name": "startActivity",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"caller": "readStrongBinder"},
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "intent": "readParcelable",
+                        "__parcelType": "android.content.Intent"
+                    }]
+                },
+                {"resolvedType": "readString16"},
+                {"resultTo": "readStrongBinder"},
+                {"resultWho": "readString16"},
+                {"requestCode": "readInt32"},
+                {"flags": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "profilerInfo": "readParcelable",
+                        "__parcelType": "android.app.ProfilerInfo"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"options": "readBundle"}]
+                }
+            ],
+            "name": "startActivityWithFeature",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [],
+            "name": "unhandledBack",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"code": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "data": "readParcelable",
+                        "__parcelType": "android.content.Intent"
+                    }]
+                },
+                {"finishTask": "readInt32"}
+            ],
+            "name": "finishActivity",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"caller": "readStrongBinder"},
+                {"callerPackage": "readString16"},
+                {"receiver": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "filter": "readParcelable",
+                        "__parcelType": "android.content.IntentFilter"
+                    }]
+                },
+                {"requiredPermission": "readString16"},
+                {"userId": "readInt32"},
+                {"flags": "readInt32"}
+            ],
+            "name": "registerReceiver",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.Intent"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"caller": "readStrongBinder"},
+                {"callerPackage": "readString16"},
+                {"callingFeatureId": "readString16"},
+                {"receiverId": "readString16"},
+                {"receiver": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "filter": "readParcelable",
+                        "__parcelType": "android.content.IntentFilter"
+                    }]
+                },
+                {"requiredPermission": "readString16"},
+                {"userId": "readInt32"},
+                {"flags": "readInt32"}
+            ],
+            "name": "registerReceiverWithFeature",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.Intent"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 14,
+            "in": [{"receiver": "readStrongBinder"}],
+            "name": "unregisterReceiver",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"caller": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "intent": "readParcelable",
+                        "__parcelType": "android.content.Intent"
+                    }]
+                },
+                {"resolvedType": "readString16"},
+                {"resultTo": "readStrongBinder"},
+                {"resultCode": "readInt32"},
+                {"resultData": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"map": "readBundle"}]
+                },
+                {"requiredPermissions": "readString16Vector"},
+                {"appOp": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"options": "readBundle"}]
+                },
+                {"serialized": "readBool"},
+                {"sticky": "readBool"},
+                {"userId": "readInt32"}
+            ],
+            "name": "broadcastIntent",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 16,
+            "in": [
+                {"caller": "readStrongBinder"},
+                {"callingFeatureId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "intent": "readParcelable",
+                        "__parcelType": "android.content.Intent"
+                    }]
+                },
+                {"resolvedType": "readString16"},
+                {"resultTo": "readStrongBinder"},
+                {"resultCode": "readInt32"},
+                {"resultData": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"map": "readBundle"}]
+                },
+                {"requiredPermissions": "readString16Vector"},
+                {"excludePermissions": "readString16Vector"},
+                {"excludePackages": "readString16Vector"},
+                {"appOp": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"options": "readBundle"}]
+                },
+                {"serialized": "readBool"},
+                {"sticky": "readBool"},
+                {"userId": "readInt32"}
+            ],
+            "name": "broadcastIntentWithFeature",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 17,
+            "in": [
+                {"caller": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "intent": "readParcelable",
+                        "__parcelType": "android.content.Intent"
+                    }]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "unbroadcastIntent",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"who": "readStrongBinder"},
+                {"resultCode": "readInt32"},
+                {"resultData": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"map": "readBundle"}]
+                },
+                {"abortBroadcast": "readBool"},
+                {"flags": "readInt32"}
+            ],
+            "name": "finishReceiver",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 19,
+            "in": [
+                {"app": "readStrongBinder"},
+                {"startSeq": "readInt64"}
+            ],
+            "name": "attachApplication",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 20,
+            "in": [{"maxNum": "readInt32"}],
+            "name": "getTasks",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.app.ActivityManager.RunningTaskInfo"
+                }
+            ]
+        },
+        {
+            "code": 21,
+            "in": [
+                {"caller": "readStrongBinder"},
+                {"callingPackage": "readString16"},
+                {"task": "readInt32"},
+                {"flags": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"options": "readBundle"}]
+                }
+            ],
+            "name": "moveTaskToFront",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 22,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"onlyRoot": "readBool"}
+            ],
+            "name": "getTaskForActivity",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 23,
+            "in": [
+                {"caller": "readStrongBinder"},
+                {"callingPackage": "readString16"},
+                {"name": "readString16"},
+                {"userId": "readInt32"},
+                {"stable": "readBool"}
+            ],
+            "name": "getContentProvider",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.app.ContentProviderHolder"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 24,
+            "in": [
+                {"caller": "readStrongBinder"},
+                {
+                    "providers": "readList",
+                    "__parcelType": "android.app.ContentProviderHolder"
+                }
+            ],
+            "name": "publishContentProviders",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 25,
+            "in": [
+                {"connection": "readStrongBinder"},
+                {"stableDelta": "readInt32"},
+                {"unstableDelta": "readInt32"}
+            ],
+            "name": "refContentProvider",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 26,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "service": "readParcelable",
+                        "__parcelType": "android.content.ComponentName"
+                    }]
+                }
+            ],
+            "name": "getRunningServiceControlPanel",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 27,
+            "in": [
+                {"caller": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "service": "readParcelable",
+                        "__parcelType": "android.content.Intent"
+                    }]
+                },
+                {"resolvedType": "readString16"},
+                {"requireForeground": "readBool"},
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "startService",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.ComponentName"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 28,
+            "in": [
+                {"caller": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "service": "readParcelable",
+                        "__parcelType": "android.content.Intent"
+                    }]
+                },
+                {"resolvedType": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "stopService",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 29,
+            "in": [
+                {"caller": "readStrongBinder"},
+                {"token": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "service": "readParcelable",
+                        "__parcelType": "android.content.Intent"
+                    }]
+                },
+                {"resolvedType": "readString16"},
+                {"connection": "readStrongBinder"},
+                {"flags": "readInt32"},
+                {"callingPackage": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "bindService",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 30,
+            "in": [
+                {"caller": "readStrongBinder"},
+                {"token": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "service": "readParcelable",
+                        "__parcelType": "android.content.Intent"
+                    }]
+                },
+                {"resolvedType": "readString16"},
+                {"connection": "readStrongBinder"},
+                {"flags": "readInt32"},
+                {"instanceName": "readString16"},
+                {"callingPackage": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "bindServiceInstance",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 31,
+            "in": [
+                {"connection": "readStrongBinder"},
+                {"group": "readInt32"},
+                {"importance": "readInt32"}
+            ],
+            "name": "updateServiceGroup",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 32,
+            "in": [{"connection": "readStrongBinder"}],
+            "name": "unbindService",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 33,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "intent": "readParcelable",
+                        "__parcelType": "android.content.Intent"
+                    }]
+                },
+                {"service": "readStrongBinder"}
+            ],
+            "name": "publishService",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 34,
+            "in": [
+                {"packageName": "readString16"},
+                {"waitForDebugger": "readBool"},
+                {"persistent": "readBool"}
+            ],
+            "name": "setDebugApp",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 35,
+            "in": [
+                {"packageName": "readString16"},
+                {"agent": "readString16"}
+            ],
+            "name": "setAgentApp",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 36,
+            "in": [{"enabled": "readBool"}],
+            "name": "setAlwaysFinish",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 37,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "className": "readParcelable",
+                        "__parcelType": "android.content.ComponentName"
+                    }]
+                },
+                {"profileFile": "readString16"},
+                {"flags": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"arguments": "readBundle"}]
+                },
+                {"watcher": "readStrongBinder"},
+                {"connection": "readStrongBinder"},
+                {"userId": "readInt32"},
+                {"abiOverride": "readString16"}
+            ],
+            "name": "startInstrumentation",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 38,
+            "in": [
+                {"target": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"results": "readBundle"}]
+                }
+            ],
+            "name": "addInstrumentationResults",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 39,
+            "in": [
+                {"target": "readStrongBinder"},
+                {"resultCode": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"results": "readBundle"}]
+                }
+            ],
+            "name": "finishInstrumentation",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 40,
+            "in": [],
+            "name": "getConfiguration",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.res.Configuration"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 41,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "values": "readParcelable",
+                        "__parcelType": "android.content.res.Configuration"
+                    }]
+                }
+            ],
+            "name": "updateConfiguration",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 42,
+            "in": [
+                {"mcc": "readString16"},
+                {"mnc": "readString16"}
+            ],
+            "name": "updateMccMncConfiguration",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 43,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "className": "readParcelable",
+                        "__parcelType": "android.content.ComponentName"
+                    }]
+                },
+                {"token": "readStrongBinder"},
+                {"startId": "readInt32"}
+            ],
+            "name": "stopServiceToken",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 44,
+            "in": [{"max": "readInt32"}],
+            "name": "setProcessLimit",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 45,
+            "in": [],
+            "name": "getProcessLimit",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 46,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "uri": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                },
+                {"pid": "readInt32"},
+                {"uid": "readInt32"},
+                {"mode": "readInt32"},
+                {"userId": "readInt32"},
+                {"callerToken": "readStrongBinder"}
+            ],
+            "name": "checkUriPermission",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 47,
+            "in": [
+                {
+                    "uris": "readList",
+                    "__parcelType": "android.net.Uri"
+                },
+                {"pid": "readInt32"},
+                {"uid": "readInt32"},
+                {"mode": "readInt32"},
+                {"userId": "readInt32"},
+                {"callerToken": "readStrongBinder"}
+            ],
+            "name": "checkUriPermissions",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 48,
+            "in": [
+                {"caller": "readStrongBinder"},
+                {"targetPkg": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "uri": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                },
+                {"mode": "readInt32"},
+                {"userId": "readInt32"}
+            ],
+            "name": "grantUriPermission",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 49,
+            "in": [
+                {"caller": "readStrongBinder"},
+                {"targetPkg": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "uri": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                },
+                {"mode": "readInt32"},
+                {"userId": "readInt32"}
+            ],
+            "name": "revokeUriPermission",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 50,
+            "in": [
+                {"watcher": "readStrongBinder"},
+                {"imAMonkey": "readBool"}
+            ],
+            "name": "setActivityController",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 51,
+            "in": [
+                {"who": "readStrongBinder"},
+                {"waiting": "readBool"}
+            ],
+            "name": "showWaitingForDebugger",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 52,
+            "in": [{"signal": "readInt32"}],
+            "name": "signalPersistentProcesses",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 53,
+            "in": [
+                {"maxNum": "readInt32"},
+                {"flags": "readInt32"},
+                {"userId": "readInt32"}
+            ],
+            "name": "getRecentTasks",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.ParceledListSlice"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 54,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"type": "readInt32"},
+                {"startId": "readInt32"},
+                {"res": "readInt32"}
+            ],
+            "name": "serviceDoneExecuting",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 55,
+            "in": [
+                {"type": "readInt32"},
+                {"packageName": "readString16"},
+                {"token": "readStrongBinder"},
+                {"resultWho": "readString16"},
+                {"requestCode": "readInt32"},
+                {
+                    "intents": "readParcelableVector",
+                    "__parcelType": "android.content.Intent"
+                },
+                {"resolvedTypes": "readString16Vector"},
+                {"flags": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"options": "readBundle"}]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "getIntentSender",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 56,
+            "in": [
+                {"type": "readInt32"},
+                {"packageName": "readString16"},
+                {"featureId": "readString16"},
+                {"token": "readStrongBinder"},
+                {"resultWho": "readString16"},
+                {"requestCode": "readInt32"},
+                {
+                    "intents": "readParcelableVector",
+                    "__parcelType": "android.content.Intent"
+                },
+                {"resolvedTypes": "readString16Vector"},
+                {"flags": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"options": "readBundle"}]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "getIntentSenderWithFeature",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 57,
+            "in": [{"sender": "readStrongBinder"}],
+            "name": "cancelIntentSender",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 58,
+            "in": [{"sender": "readStrongBinder"}],
+            "name": "getInfoForIntentSender",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.app.ActivityManager.PendingIntentInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 59,
+            "in": [
+                {"sender": "readStrongBinder"},
+                {"receiver": "readStrongBinder"}
+            ],
+            "name": "registerIntentSenderCancelListenerEx",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 60,
+            "in": [
+                {"sender": "readStrongBinder"},
+                {"receiver": "readStrongBinder"}
+            ],
+            "name": "unregisterIntentSenderCancelListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 61,
+            "in": [],
+            "name": "enterSafeMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 62,
+            "in": [
+                {"sender": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "workSource": "readParcelable",
+                        "__parcelType": "android.os.WorkSource"
+                    }]
+                },
+                {"sourceUid": "readInt32"},
+                {"sourcePkg": "readString16"},
+                {"tag": "readString16"}
+            ],
+            "name": "noteWakeupAlarm",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 63,
+            "in": [
+                {"connection": "readStrongBinder"},
+                {"stable": "readBool"}
+            ],
+            "name": "removeContentProvider",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 64,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"requestedOrientation": "readInt32"}
+            ],
+            "name": "setRequestedOrientation",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 65,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "service": "readParcelable",
+                        "__parcelType": "android.content.Intent"
+                    }]
+                },
+                {"doRebind": "readBool"}
+            ],
+            "name": "unbindFinished",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 66,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"pid": "readInt32"},
+                {"isForeground": "readBool"},
+                {"reason": "readString16"}
+            ],
+            "name": "setProcessImportant",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 67,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "className": "readParcelable",
+                        "__parcelType": "android.content.ComponentName"
+                    }]
+                },
+                {"token": "readStrongBinder"},
+                {"id": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "notification": "readParcelable",
+                        "__parcelType": "android.app.Notification"
+                    }]
+                },
+                {"flags": "readInt32"},
+                {"foregroundServiceType": "readInt32"}
+            ],
+            "name": "setServiceForeground",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 68,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "className": "readParcelable",
+                        "__parcelType": "android.content.ComponentName"
+                    }]
+                },
+                {"token": "readStrongBinder"}
+            ],
+            "name": "getForegroundServiceType",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 69,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"nonRoot": "readBool"}
+            ],
+            "name": "moveActivityTaskToBack",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 70,
+            "in": [],
+            "name": "getMemoryInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "outInfo": "readParcelable",
+                        "__parcelType": "android.app.ActivityManager.MemoryInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 71,
+            "in": [],
+            "name": "getProcessesInErrorState",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.app.ActivityManager.ProcessErrorStateInfo"
+                }
+            ]
+        },
+        {
+            "code": 72,
+            "in": [
+                {"packageName": "readString16"},
+                {"keepState": "readBool"},
+                {"observer": "readStrongBinder"},
+                {"userId": "readInt32"}
+            ],
+            "name": "clearApplicationUserData",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 73,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "stopAppForUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 74,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "registerForegroundServiceObserver",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 75,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "forceStopPackage",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 76,
+            "in": [
+                {"pids": "readInt32Vector"},
+                {"reason": "readString16"},
+                {"secure": "readBool"}
+            ],
+            "name": "killPids",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 77,
+            "in": [
+                {"maxNum": "readInt32"},
+                {"flags": "readInt32"}
+            ],
+            "name": "getServices",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.app.ActivityManager.RunningServiceInfo"
+                }
+            ]
+        },
+        {
+            "code": 78,
+            "in": [],
+            "name": "getRunningAppProcesses",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.app.ActivityManager.RunningAppProcessInfo"
+                }
+            ]
+        },
+        {
+            "code": 79,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "service": "readParcelable",
+                        "__parcelType": "android.content.Intent"
+                    }]
+                },
+                {"resolvedType": "readString16"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "peekService",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 80,
+            "in": [
+                {"process": "readString16"},
+                {"userId": "readInt32"},
+                {"start": "readBool"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "profilerInfo": "readParcelable",
+                        "__parcelType": "android.app.ProfilerInfo"
+                    }]
+                },
+                {"profileType": "readInt32"}
+            ],
+            "name": "profileControl",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 81,
+            "in": [{"timeout": "readInt32"}],
+            "name": "shutdown",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 82,
+            "in": [],
+            "name": "stopAppSwitches",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 83,
+            "in": [],
+            "name": "resumeAppSwitches",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 84,
+            "in": [
+                {"packageName": "readString16"},
+                {"backupRestoreMode": "readInt32"},
+                {"targetUserId": "readInt32"},
+                {"operationType": "readInt32"}
+            ],
+            "name": "bindBackupAgent",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 85,
+            "in": [
+                {"packageName": "readString16"},
+                {"agent": "readStrongBinder"},
+                {"userId": "readInt32"}
+            ],
+            "name": "backupAgentCreated",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 86,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "appInfo": "readParcelable",
+                        "__parcelType": "android.content.pm.ApplicationInfo"
+                    }]
+                }
+            ],
+            "name": "unbindBackupAgent",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 87,
+            "in": [
+                {"callingPid": "readInt32"},
+                {"callingUid": "readInt32"},
+                {"userId": "readInt32"},
+                {"allowAll": "readBool"},
+                {"requireFull": "readBool"},
+                {"name": "readString16"},
+                {"callerPackage": "readString16"}
+            ],
+            "name": "handleIncomingUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 88,
+            "in": [{"packageName": "readString16"}],
+            "name": "addPackageDependency",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 89,
+            "in": [
+                {"pkg": "readString16"},
+                {"appId": "readInt32"},
+                {"userId": "readInt32"},
+                {"reason": "readString16"}
+            ],
+            "name": "killApplication",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 90,
+            "in": [{"reason": "readString16"}],
+            "name": "closeSystemDialogs",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 91,
+            "in": [{"pids": "readInt32Vector"}],
+            "name": "getProcessMemoryInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.app.Debug.MemoryInfo"
+                }
+            ]
+        },
+        {
+            "code": 92,
+            "in": [
+                {"processName": "readString16"},
+                {"uid": "readInt32"}
+            ],
+            "name": "killApplicationProcess",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 93,
+            "in": [
+                {"app": "readStrongBinder"},
+                {"tag": "readString16"},
+                {"system": "readBool"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "crashInfo": "readParcelable",
+                        "__parcelType": "android.app.ApplicationErrorReport.ParcelableCrashInfo"
+                    }]
+                },
+                {"immediateCallerPid": "readInt32"}
+            ],
+            "name": "handleApplicationWtf",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 94,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "killBackgroundProcesses",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 95,
+            "in": [],
+            "name": "isUserAMonkey",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 96,
+            "in": [],
+            "name": "getRunningExternalApplications",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.content.pm.ApplicationInfo"
+                }
+            ]
+        },
+        {
+            "code": 97,
+            "in": [],
+            "name": "finishHeavyWeightApp",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 98,
+            "in": [
+                {"app": "readStrongBinder"},
+                {"penaltyMask": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "crashInfo": "readParcelable",
+                        "__parcelType": "android.app.StrictMode.ViolationInfo"
+                    }]
+                }
+            ],
+            "name": "handleApplicationStrictModeViolation",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 99,
+            "in": [],
+            "name": "isTopActivityImmersive",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 100,
+            "in": [
+                {"uid": "readInt32"},
+                {"initialPid": "readInt32"},
+                {"packageName": "readString16"},
+                {"userId": "readInt32"},
+                {"message": "readString16"},
+                {"force": "readBool"},
+                {"exceptionTypeId": "readInt32"}
+            ],
+            "name": "crashApplicationWithType",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 101,
+            "in": [
+                {"uid": "readInt32"},
+                {"initialPid": "readInt32"},
+                {"packageName": "readString16"},
+                {"userId": "readInt32"},
+                {"message": "readString16"},
+                {"force": "readBool"},
+                {"exceptionTypeId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"extras": "readBundle"}]
+                }
+            ],
+            "name": "crashApplicationWithTypeWithExtras",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 102,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "uri": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "getProviderMimeType",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 103,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "uri": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                },
+                {"userId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "resultCallback": "readParcelable",
+                        "__parcelType": "android.os.RemoteCallback"
+                    }]
+                }
+            ],
+            "name": "getProviderMimeTypeAsync",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 104,
+            "in": [
+                {"process": "readString16"},
+                {"userId": "readInt32"},
+                {"managed": "readBool"},
+                {"mallocInfo": "readBool"},
+                {"runGc": "readBool"},
+                {"path": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "fd": "readParcelable",
+                        "__parcelType": "android.os.ParcelFileDescriptor"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "finishCallback": "readParcelable",
+                        "__parcelType": "android.os.RemoteCallback"
+                    }]
+                }
+            ],
+            "name": "dumpHeap",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 105,
+            "in": [
+                {"userid": "readInt32"},
+                {"flags": "readInt32"}
+            ],
+            "name": "isUserRunning",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 106,
+            "in": [
+                {"packageName": "readString16"},
+                {"mode": "readInt32"}
+            ],
+            "name": "setPackageScreenCompatMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 107,
+            "in": [{"userid": "readInt32"}],
+            "name": "switchUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 108,
+            "in": [],
+            "name": "getSwitchingFromUserMessage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 109,
+            "in": [],
+            "name": "getSwitchingToUserMessage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 110,
+            "in": [{"value": "readInt32"}],
+            "name": "setStopUserOnSwitch",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 111,
+            "in": [{"taskId": "readInt32"}],
+            "name": "removeTask",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 112,
+            "in": [{"observer": "readStrongBinder"}],
+            "name": "registerProcessObserver",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 113,
+            "in": [{"observer": "readStrongBinder"}],
+            "name": "unregisterProcessObserver",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 114,
+            "in": [{"sender": "readStrongBinder"}],
+            "name": "isIntentSenderTargetedToPackage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 115,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "values": "readParcelable",
+                        "__parcelType": "android.content.res.Configuration"
+                    }]
+                }
+            ],
+            "name": "updatePersistentConfiguration",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 116,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "values": "readParcelable",
+                        "__parcelType": "android.content.res.Configuration"
+                    }]
+                },
+                {"callingPackageName": "readString16"},
+                {"callingAttributionTag": "readString16"}
+            ],
+            "name": "updatePersistentConfigurationWithAttribution",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 117,
+            "in": [{"pids": "readInt32Vector"}],
+            "name": "getProcessPss",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.app.long"
+                }
+            ]
+        },
+        {
+            "code": 118,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "msg": "readParcelable",
+                        "__parcelType": "CharSequence"
+                    }]
+                },
+                {"always": "readBool"}
+            ],
+            "name": "showBootMessage",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 119,
+            "in": [],
+            "name": "killAllBackgroundProcesses",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 120,
+            "in": [
+                {"name": "readString16"},
+                {"userId": "readInt32"},
+                {"token": "readStrongBinder"},
+                {"tag": "readString16"}
+            ],
+            "name": "getContentProviderExternal",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.app.ContentProviderHolder"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 121,
+            "in": [
+                {"name": "readString16"},
+                {"token": "readStrongBinder"}
+            ],
+            "name": "removeContentProviderExternal",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 122,
+            "in": [
+                {"name": "readString16"},
+                {"token": "readStrongBinder"},
+                {"userId": "readInt32"}
+            ],
+            "name": "removeContentProviderExternalAsUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 123,
+            "in": [],
+            "name": "getMyMemoryState",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "outInfo": "readParcelable",
+                        "__parcelType": "android.app.ActivityManager.RunningAppProcessInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 124,
+            "in": [{"reason": "readString16"}],
+            "name": "killProcessesBelowForeground",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 125,
+            "in": [],
+            "name": "getCurrentUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.UserInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 126,
+            "in": [],
+            "name": "getCurrentUserId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 127,
+            "in": [{"activityToken": "readStrongBinder"}],
+            "name": "getLaunchedFromUid",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 128,
+            "in": [{"connection": "readStrongBinder"}],
+            "name": "unstableProviderDied",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 129,
+            "in": [{"sender": "readStrongBinder"}],
+            "name": "isIntentSenderAnActivity",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 130,
+            "in": [
+                {"caller": "readStrongBinder"},
+                {"callingPackage": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "intent": "readParcelable",
+                        "__parcelType": "android.content.Intent"
+                    }]
+                },
+                {"resolvedType": "readString16"},
+                {"resultTo": "readStrongBinder"},
+                {"resultWho": "readString16"},
+                {"requestCode": "readInt32"},
+                {"flags": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "profilerInfo": "readParcelable",
+                        "__parcelType": "android.app.ProfilerInfo"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"options": "readBundle"}]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "startActivityAsUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 131,
+            "in": [
+                {"caller": "readStrongBinder"},
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "intent": "readParcelable",
+                        "__parcelType": "android.content.Intent"
+                    }]
+                },
+                {"resolvedType": "readString16"},
+                {"resultTo": "readStrongBinder"},
+                {"resultWho": "readString16"},
+                {"requestCode": "readInt32"},
+                {"flags": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "profilerInfo": "readParcelable",
+                        "__parcelType": "android.app.ProfilerInfo"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"options": "readBundle"}]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "startActivityAsUserWithFeature",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 132,
+            "in": [
+                {"userid": "readInt32"},
+                {"force": "readBool"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "stopUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 133,
+            "in": [
+                {"userid": "readInt32"},
+                {"force": "readBool"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "stopUserWithDelayedLocking",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 134,
+            "in": [
+                {"observer": "readStrongBinder"},
+                {"name": "readString16"}
+            ],
+            "name": "registerUserSwitchObserver",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 135,
+            "in": [{"observer": "readStrongBinder"}],
+            "name": "unregisterUserSwitchObserver",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 136,
+            "in": [],
+            "name": "getRunningUserIds",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 137,
+            "in": [],
+            "name": "requestSystemServerHeapDump",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 138,
+            "in": [{"bugreportType": "readInt32"}],
+            "name": "requestBugReport",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 139,
+            "in": [
+                {"shareTitle": "readString16"},
+                {"shareDescription": "readString16"},
+                {"bugreportType": "readInt32"}
+            ],
+            "name": "requestBugReportWithDescription",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 140,
+            "in": [
+                {"shareTitle": "readString16"},
+                {"shareDescription": "readString16"}
+            ],
+            "name": "requestTelephonyBugReport",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 141,
+            "in": [
+                {"shareTitle": "readString16"},
+                {"shareDescription": "readString16"}
+            ],
+            "name": "requestWifiBugReport",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 142,
+            "in": [
+                {"shareTitle": "readString16"},
+                {"shareDescription": "readString16"}
+            ],
+            "name": "requestInteractiveBugReportWithDescription",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 143,
+            "in": [],
+            "name": "requestInteractiveBugReport",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 144,
+            "in": [],
+            "name": "requestFullBugReport",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 145,
+            "in": [{"nonce": "readInt64"}],
+            "name": "requestRemoteBugReport",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 146,
+            "in": [],
+            "name": "launchBugReportHandlerApp",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 147,
+            "in": [],
+            "name": "getBugreportWhitelistedPackages",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "String"
+                }
+            ]
+        },
+        {
+            "code": 148,
+            "in": [{"sender": "readStrongBinder"}],
+            "name": "getIntentForIntentSender",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.Intent"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 149,
+            "in": [{"activityToken": "readStrongBinder"}],
+            "name": "getLaunchedFromPackage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 150,
+            "in": [
+                {"appId": "readInt32"},
+                {"userId": "readInt32"},
+                {"reason": "readString16"}
+            ],
+            "name": "killUid",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 151,
+            "in": [{"monkey": "readBool"}],
+            "name": "setUserIsMonkey",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 152,
+            "in": [
+                {"who": "readStrongBinder"},
+                {"allowRestart": "readBool"}
+            ],
+            "name": "hang",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 153,
+            "in": [],
+            "name": "getAllRootTaskInfos",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.app.ActivityTaskManager.RootTaskInfo"
+                }
+            ]
+        },
+        {
+            "code": 154,
+            "in": [
+                {"taskId": "readInt32"},
+                {"rootTaskId": "readInt32"},
+                {"toTop": "readBool"}
+            ],
+            "name": "moveTaskToRootTask",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 155,
+            "in": [{"taskId": "readInt32"}],
+            "name": "setFocusedRootTask",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 156,
+            "in": [],
+            "name": "getFocusedRootTaskInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.app.ActivityTaskManager.RootTaskInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 157,
+            "in": [],
+            "name": "restart",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 158,
+            "in": [],
+            "name": "performIdleMaintenance",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 159,
+            "in": [{"connection": "readStrongBinder"}],
+            "name": "appNotRespondingViaProvider",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 160,
+            "in": [{"taskId": "readInt32"}],
+            "name": "getTaskBounds",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.graphics.Rect"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 161,
+            "in": [
+                {"process": "readString16"},
+                {"userId": "readInt32"},
+                {"level": "readInt32"}
+            ],
+            "name": "setProcessMemoryTrimLevel",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 162,
+            "in": [
+                {"sender": "readStrongBinder"},
+                {"prefix": "readString16"}
+            ],
+            "name": "getTagForIntentSender",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 163,
+            "in": [{"userid": "readInt32"}],
+            "name": "startUserInBackground",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 164,
+            "in": [],
+            "name": "isInLockTaskMode",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 165,
+            "in": [
+                {"taskId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"options": "readBundle"}]
+                }
+            ],
+            "name": "startActivityFromRecents",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 166,
+            "in": [{"taskId": "readInt32"}],
+            "name": "startSystemLockTaskMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 167,
+            "in": [{"token": "readStrongBinder"}],
+            "name": "isTopOfTask",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 168,
+            "in": [],
+            "name": "bootAnimationComplete",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 169,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "registerTaskStackListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 170,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "unregisterTaskStackListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 171,
+            "in": [
+                {"uid": "readInt32"},
+                {"firstPacket": "readByteVector"}
+            ],
+            "name": "notifyCleartextNetwork",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 172,
+            "in": [
+                {"taskId": "readInt32"},
+                {"resizeableMode": "readInt32"}
+            ],
+            "name": "setTaskResizeable",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 173,
+            "in": [
+                {"taskId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "bounds": "readParcelable",
+                        "__parcelType": "android.graphics.Rect"
+                    }]
+                },
+                {"resizeMode": "readInt32"}
+            ],
+            "name": "resizeTask",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 174,
+            "in": [],
+            "name": "getLockTaskModeState",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 175,
+            "in": [
+                {"processName": "readString16"},
+                {"uid": "readInt32"},
+                {"maxMemSize": "readInt64"},
+                {"reportPackage": "readString16"}
+            ],
+            "name": "setDumpHeapDebugLimit",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 176,
+            "in": [{"path": "readString16"}],
+            "name": "dumpHeapFinished",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 177,
+            "in": [
+                {"userId": "readInt32"},
+                {"packages": "readString16Vector"}
+            ],
+            "name": "updateLockTaskPackages",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 178,
+            "in": [
+                {"sender": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "workSource": "readParcelable",
+                        "__parcelType": "android.os.WorkSource"
+                    }]
+                },
+                {"sourceUid": "readInt32"},
+                {"tag": "readString16"}
+            ],
+            "name": "noteAlarmStart",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 179,
+            "in": [
+                {"sender": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "workSource": "readParcelable",
+                        "__parcelType": "android.os.WorkSource"
+                    }]
+                },
+                {"sourceUid": "readInt32"},
+                {"tag": "readString16"}
+            ],
+            "name": "noteAlarmFinish",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 180,
+            "in": [
+                {"packageName": "readString16"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "getPackageProcessState",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 181,
+            "in": [],
+            "name": "startBinderTracking",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 182,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "fd": "readParcelable",
+                        "__parcelType": "android.os.ParcelFileDescriptor"
+                    }]
+                }
+            ],
+            "name": "stopBinderTrackingAndDump",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 183,
+            "in": [],
+            "name": "enableBinderTracing",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 184,
+            "in": [{"suppress": "readBool"}],
+            "name": "suppressResizeConfigChanges",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 185,
+            "in": [
+                {"userid": "readInt32"},
+                {"token": "readByteVector"},
+                {"secret": "readByteVector"},
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "unlockUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 186,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "killPackageDependents",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 187,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "makePackageIdle",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 188,
+            "in": [],
+            "name": "getMemoryTrimLevel",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 189,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "packageName": "readParcelable",
+                        "__parcelType": "android.content.ComponentName"
+                    }]
+                }
+            ],
+            "name": "isVrModePackageEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 190,
+            "in": [{"userId": "readInt32"}],
+            "name": "notifyLockedProfile",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 191,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "intent": "readParcelable",
+                        "__parcelType": "android.content.Intent"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"options": "readBundle"}]
+                }
+            ],
+            "name": "startConfirmDeviceCredentialIntent",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 192,
+            "in": [],
+            "name": "sendIdleJobTrigger",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 193,
+            "in": [
+                {"target": "readStrongBinder"},
+                {"whitelistToken": "readStrongBinder"},
+                {"code": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "intent": "readParcelable",
+                        "__parcelType": "android.content.Intent"
+                    }]
+                },
+                {"resolvedType": "readString16"},
+                {"finishedReceiver": "readStrongBinder"},
+                {"requiredPermission": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"options": "readBundle"}]
+                }
+            ],
+            "name": "sendIntentSender",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 194,
+            "in": [{"packageName": "readString16"}],
+            "name": "isBackgroundRestricted",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 195,
+            "in": [{"tid": "readInt32"}],
+            "name": "setRenderThread",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 196,
+            "in": [{"hasTopUi": "readBool"}],
+            "name": "setHasTopUi",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 197,
+            "in": [{"userId": "readInt32"}],
+            "name": "restartUserInBackground",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 198,
+            "in": [{"taskId": "readInt32"}],
+            "name": "cancelTaskWindowTransition",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 199,
+            "in": [
+                {
+                    "packageNames": "readList",
+                    "__parcelType": "String"
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "scheduleApplicationInfoChanged",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 200,
+            "in": [{"tid": "readInt32"}],
+            "name": "setPersistentVrThread",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 201,
+            "in": [{"procStateSeq": "readInt64"}],
+            "name": "waitForNetworkStateUpdate",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 202,
+            "in": [{"uid": "readInt32"}],
+            "name": "backgroundAllowlistUid",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 203,
+            "in": [
+                {"userid": "readInt32"},
+                {"unlockProgressListener": "readStrongBinder"}
+            ],
+            "name": "startUserInBackgroundWithListener",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 204,
+            "in": [
+                {"uid": "readInt32"},
+                {"permissions": "readString16Vector"}
+            ],
+            "name": "startDelegateShellPermissionIdentity",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 205,
+            "in": [],
+            "name": "stopDelegateShellPermissionIdentity",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 206,
+            "in": [],
+            "name": "getDelegatedShellPermissions",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "String"
+                }
+            ]
+        },
+        {
+            "code": 207,
+            "in": [],
+            "name": "getLifeMonitor",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.os.ParcelFileDescriptor"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 208,
+            "in": [
+                {"userid": "readInt32"},
+                {"unlockProgressListener": "readStrongBinder"}
+            ],
+            "name": "startUserInForegroundWithListener",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 209,
+            "in": [{"reason": "readString16"}],
+            "name": "appNotResponding",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 210,
+            "in": [
+                {"packageName": "readString16"},
+                {"pid": "readInt32"},
+                {"maxNum": "readInt32"},
+                {"userId": "readInt32"}
+            ],
+            "name": "getHistoricalProcessExitReasons",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.app.ParceledListSlice<ApplicationExitInfo>"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 211,
+            "in": [
+                {"pids": "readInt32Vector"},
+                {"reason": "readString16"}
+            ],
+            "name": "killProcessesWhenImperceptible",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 212,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "activity": "readParcelable",
+                        "__parcelType": "android.content.ComponentName"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "locusId": "readParcelable",
+                        "__parcelType": "android.content.LocusId"
+                    }]
+                },
+                {"appToken": "readStrongBinder"}
+            ],
+            "name": "setActivityLocusContext",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 213,
+            "in": [{"state": "readByteVector"}],
+            "name": "setProcessStateSummary",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 214,
+            "in": [],
+            "name": "isAppFreezerSupported",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 215,
+            "in": [],
+            "name": "isAppFreezerEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 216,
+            "in": [
+                {"appId": "readInt32"},
+                {"userId": "readInt32"},
+                {"reason": "readString16"}
+            ],
+            "name": "killUidForPermissionChange",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 217,
+            "in": [],
+            "name": "resetAppErrors",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 218,
+            "in": [{"enable": "readBool"}],
+            "name": "enableAppFreezer",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 219,
+            "in": [{"enable": "readBool"}],
+            "name": "enableFgsNotificationRateLimit",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 220,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"durationMs": "readInt32"}
+            ],
+            "name": "holdLock",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 221,
+            "in": [{"userId": "readInt32"}],
+            "name": "startProfile",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 222,
+            "in": [{"userId": "readInt32"}],
+            "name": "stopProfile",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 223,
+            "in": [
+                {"sender": "readStrongBinder"},
+                {"matchFlags": "readInt32"}
+            ],
+            "name": "queryIntentComponentsForIntentSender",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.ParceledListSlice"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 224,
+            "in": [
+                {"uid": "readInt32"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "getUidProcessCapabilities",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 225,
+            "in": [],
+            "name": "waitForBroadcastIdle",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 226,
+            "in": [{"uid": "readInt32"}],
+            "name": "getBackgroundRestrictionExemptionReason",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        }
+    ],
+    "name": "IActivityManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

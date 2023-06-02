@@ -1,0 +1,148 @@
+{
+    "produced_on": "2023-06-01T06:42:35.689352949Z",
+    "source_location": "",
+    "full_name": "android.os.IIncidentManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "args": "readParcelable",
+                        "__parcelType": "android.os.IncidentReportArgs"
+                    }]
+                }
+            ],
+            "name": "reportIncident",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "args": "readParcelable",
+                        "__parcelType": "android.os.IncidentReportArgs"
+                    }]
+                },
+                {"listener": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "stream": "readParcelable",
+                        "__parcelType": "FileDescriptor"
+                    }]
+                }
+            ],
+            "name": "reportIncidentToStream",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "stream": "readParcelable",
+                        "__parcelType": "FileDescriptor"
+                    }]
+                },
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "reportIncidentToDumpstate",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"id": "readInt32"},
+                {"name": "readString16"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "registerSection",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"id": "readInt32"}],
+            "name": "unregisterSection",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "systemRunning",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"pkg": "readString16"},
+                {"cls": "readString16"}
+            ],
+            "name": "getIncidentReportList",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "String"
+                }
+            ]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"pkg": "readString16"},
+                {"cls": "readString16"},
+                {"id": "readString16"}
+            ],
+            "name": "getIncidentReport",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.os.IncidentManager.IncidentReport"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"pkg": "readString16"},
+                {"cls": "readString16"},
+                {"id": "readString16"}
+            ],
+            "name": "deleteIncidentReports",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [{"pkg": "readString16"}],
+            "name": "deleteAllIncidentReports",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IIncidentManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

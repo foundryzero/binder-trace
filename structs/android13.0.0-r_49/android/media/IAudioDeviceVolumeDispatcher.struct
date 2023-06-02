@@ -1,0 +1,60 @@
+{
+    "produced_on": "2023-06-01T06:42:34.747990601Z",
+    "source_location": "",
+    "full_name": "android.media.IAudioDeviceVolumeDispatcher",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "device": "readParcelable",
+                        "__parcelType": "android.media.AudioDeviceAttributes"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "vol": "readParcelable",
+                        "__parcelType": "android.media.VolumeInfo"
+                    }]
+                }
+            ],
+            "name": "dispatchDeviceVolumeChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "device": "readParcelable",
+                        "__parcelType": "android.media.AudioDeviceAttributes"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "vol": "readParcelable",
+                        "__parcelType": "android.media.VolumeInfo"
+                    }]
+                },
+                {"direction": "readInt32"},
+                {"mode": "readInt32"}
+            ],
+            "name": "dispatchDeviceVolumeAdjusted",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IAudioDeviceVolumeDispatcher",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

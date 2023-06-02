@@ -1,0 +1,78 @@
+{
+    "produced_on": "2022-08-26T09:55:18.774606486Z",
+    "source_location": "",
+    "full_name": "android.car.hardware.ICarSensor",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getSupportedSensors",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"sensorType": "readInt32"},
+                {"rate": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "registerOrUpdateSensorListener",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"sensorType": "readInt32"}],
+            "name": "getLatestSensorEvent",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.car.hardware.CarSensorEvent"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"sensorType": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "unregisterSensorListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"sensorType": "readInt32"}],
+            "name": "getSensorConfig",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.car.hardware.CarSensorConfig"
+                    }]
+                }
+            ]
+        }
+    ],
+    "name": "ICarSensor",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

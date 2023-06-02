@@ -1,0 +1,410 @@
+{
+    "produced_on": "2023-06-01T06:42:35.820984485Z",
+    "source_location": "",
+    "full_name": "android.hardware.face.IFaceService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"sensorId": "readInt32"},
+                {"callback": "readStrongBinder"},
+                {"opPackageName": "readString16"}
+            ],
+            "name": "createTestSession",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"sensorId": "readInt32"},
+                {"clearSchedulerBuffer": "readBool"}
+            ],
+            "name": "dumpSensorServiceStateProto",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"opPackageName": "readString16"}],
+            "name": "getSensorPropertiesInternal",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.hardware.face.FaceSensorPropertiesInternal"
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"sensorId": "readInt32"},
+                {"opPackageName": "readString16"}
+            ],
+            "name": "getSensorProperties",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.face.FaceSensorPropertiesInternal"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"operationId": "readInt64"},
+                {"userId": "readInt32"},
+                {"receiver": "readStrongBinder"},
+                {"opPackageName": "readString16"},
+                {"isKeyguardBypassEnabled": "readBool"}
+            ],
+            "name": "authenticate",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"userId": "readInt32"},
+                {"receiver": "readStrongBinder"},
+                {"opPackageName": "readString16"}
+            ],
+            "name": "detectFace",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"sensorId": "readInt32"},
+                {"requireConfirmation": "readBool"},
+                {"token": "readStrongBinder"},
+                {"operationId": "readInt64"},
+                {"userId": "readInt32"},
+                {"sensorReceiver": "readStrongBinder"},
+                {"opPackageName": "readString16"},
+                {"requestId": "readInt64"},
+                {"cookie": "readInt32"},
+                {"allowBackgroundAuthentication": "readBool"}
+            ],
+            "name": "prepareForAuthentication",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"sensorId": "readInt32"},
+                {"cookie": "readInt32"}
+            ],
+            "name": "startPreparedClient",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"opPackageName": "readString16"},
+                {"requestId": "readInt64"}
+            ],
+            "name": "cancelAuthentication",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"opPackageName": "readString16"},
+                {"requestId": "readInt64"}
+            ],
+            "name": "cancelFaceDetect",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"sensorId": "readInt32"},
+                {"token": "readStrongBinder"},
+                {"opPackageName": "readString16"},
+                {"requestId": "readInt64"}
+            ],
+            "name": "cancelAuthenticationFromService",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"userId": "readInt32"},
+                {"token": "readStrongBinder"},
+                {"hardwareAuthToken": "readByteVector"},
+                {"receiver": "readStrongBinder"},
+                {"opPackageName": "readString16"},
+                {"disabledFeatures": "readInt32Vector"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "previewSurface": "readParcelable",
+                        "__parcelType": "android.view.Surface"
+                    }]
+                },
+                {"debugConsent": "readBool"}
+            ],
+            "name": "enroll",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"userId": "readInt32"},
+                {"token": "readStrongBinder"},
+                {"hardwareAuthToken": "readByteVector"},
+                {"receiver": "readStrongBinder"},
+                {"opPackageName": "readString16"},
+                {"disabledFeatures": "readInt32Vector"}
+            ],
+            "name": "enrollRemotely",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"requestId": "readInt64"}
+            ],
+            "name": "cancelEnrollment",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"faceId": "readInt32"},
+                {"userId": "readInt32"},
+                {"receiver": "readStrongBinder"},
+                {"opPackageName": "readString16"}
+            ],
+            "name": "remove",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"userId": "readInt32"},
+                {"receiver": "readStrongBinder"},
+                {"opPackageName": "readString16"}
+            ],
+            "name": "removeAll",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [
+                {"sensorId": "readInt32"},
+                {"userId": "readInt32"},
+                {"opPackageName": "readString16"}
+            ],
+            "name": "getEnrolledFaces",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.hardware.face.Face"
+                }
+            ]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"sensorId": "readInt32"},
+                {"opPackageName": "readString16"}
+            ],
+            "name": "isHardwareDetected",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 19,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"sensorId": "readInt32"},
+                {"userId": "readInt32"},
+                {"receiver": "readStrongBinder"},
+                {"opPackageName": "readString16"}
+            ],
+            "name": "generateChallenge",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 20,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"sensorId": "readInt32"},
+                {"userId": "readInt32"},
+                {"opPackageName": "readString16"},
+                {"challenge": "readInt64"}
+            ],
+            "name": "revokeChallenge",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 21,
+            "in": [
+                {"sensorId": "readInt32"},
+                {"userId": "readInt32"},
+                {"opPackageName": "readString16"}
+            ],
+            "name": "hasEnrolledFaces",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 22,
+            "in": [
+                {"sensorId": "readInt32"},
+                {"userId": "readInt32"}
+            ],
+            "name": "getLockoutModeForUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 23,
+            "in": [
+                {"sensorId": "readInt32"},
+                {"userId": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "invalidateAuthenticatorId",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 24,
+            "in": [
+                {"sensorId": "readInt32"},
+                {"callingUserId": "readInt32"}
+            ],
+            "name": "getAuthenticatorId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 25,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"sensorId": "readInt32"},
+                {"userId": "readInt32"},
+                {"hardwareAuthToken": "readByteVector"},
+                {"opPackageName": "readString16"}
+            ],
+            "name": "resetLockout",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 26,
+            "in": [
+                {"callback": "readStrongBinder"},
+                {"opPackageName": "readString16"}
+            ],
+            "name": "addLockoutResetCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 27,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"userId": "readInt32"},
+                {"feature": "readInt32"},
+                {"enabled": "readBool"},
+                {"hardwareAuthToken": "readByteVector"},
+                {"receiver": "readStrongBinder"},
+                {"opPackageName": "readString16"}
+            ],
+            "name": "setFeature",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 28,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"userId": "readInt32"},
+                {"feature": "readInt32"},
+                {"receiver": "readStrongBinder"},
+                {"opPackageName": "readString16"}
+            ],
+            "name": "getFeature",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 29,
+            "in": [{
+                "hidlSensors": "readList",
+                "__parcelType": "android.hardware.face.FaceSensorPropertiesInternal"
+            }],
+            "name": "registerAuthenticators",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IFaceService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

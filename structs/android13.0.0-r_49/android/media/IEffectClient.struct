@@ -1,0 +1,42 @@
+{
+    "produced_on": "2023-06-01T06:42:36.018227743Z",
+    "source_location": "",
+    "full_name": "android.media.IEffectClient",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"controlGranted": "readBool"}],
+            "name": "controlStatusChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"enabled": "readBool"}],
+            "name": "enableStatusChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"cmdCode": "readInt32"},
+                {"cmdData": "readByteVector"},
+                {"replyData": "readByteVector"}
+            ],
+            "name": "commandExecuted",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"frames": "readInt32"}],
+            "name": "framesProcessed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IEffectClient",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

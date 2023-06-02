@@ -1,0 +1,49 @@
+{
+    "produced_on": "2023-06-01T06:42:34.627653767Z",
+    "source_location": "",
+    "full_name": "com.android.wm.shell.recents.IRecentTasksListener",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "onRecentTasksChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "taskInfo": "readParcelable",
+                        "__parcelType": "android.app.ActivityManager.RunningTaskInfo"
+                    }]
+                }
+            ],
+            "name": "onRunningTaskAppeared",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "taskInfo": "readParcelable",
+                        "__parcelType": "android.app.ActivityManager.RunningTaskInfo"
+                    }]
+                }
+            ],
+            "name": "onRunningTaskVanished",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IRecentTasksListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

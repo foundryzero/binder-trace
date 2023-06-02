@@ -1,0 +1,37 @@
+{
+    "produced_on": "2022-08-19T10:42:52.811238535Z",
+    "source_location": "",
+    "full_name": "android.content.pm.permission.IRuntimePermissionPresenter",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"packageName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callback": "readParcelable",
+                        "__parcelType": "android.os.RemoteCallback"
+                    }]
+                }
+            ],
+            "name": "getAppPermissions",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"packageName": "readString16"},
+                {"permissionName": "readString16"}
+            ],
+            "name": "revokeRuntimePermission",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IRuntimePermissionPresenter",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

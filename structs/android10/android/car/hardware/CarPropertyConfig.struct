@@ -1,0 +1,34 @@
+{
+    "produced_on": "2022-12-02T14:04:35.790473075Z",
+    "source_location": "",
+    "components": [
+        {"mAccess": "readInt32"},
+        {"mAreaType": "readInt32"},
+        {"mChangeMode": "readInt32"},
+        {"configArraySize": "readInt32"},
+        {
+            "__backreference": "configArraySize",
+            "__repeated": [{"add": "readInt32"}]
+        },
+        {"mConfigString": "readString16"},
+        {"mMaxSampleRate": "readFloat"},
+        {"mMinSampleRate": "readFloat"},
+        {"mPropertyId": "readInt32"},
+        {"areaSize": "readInt32"},
+        {
+            "__backreference": "areaSize",
+            "__repeated": [
+                {"areaId": "readInt32"},
+                {
+                    "area": "readParcelable",
+                    "__parcelType": "__dynamic"
+                }
+            ]
+        },
+        {"className": "readString16"}
+    ],
+    "full_name": "android.car.hardware.CarPropertyConfig",
+    "name": "CarPropertyConfig",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

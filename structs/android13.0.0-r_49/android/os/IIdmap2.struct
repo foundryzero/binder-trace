@@ -1,0 +1,146 @@
+{
+    "produced_on": "2023-06-01T06:42:34.591310028Z",
+    "source_location": "",
+    "full_name": "android.os.IIdmap2",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"overlayApkPath": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "getIdmapPath",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"overlayApkPath": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "removeIdmap",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"targetApkPath": "readString16"},
+                {"overlayApkPath": "readString16"},
+                {"overlayName": "readString16"},
+                {"fulfilledPolicies": "readInt32"},
+                {"enforceOverlayable": "readBool"},
+                {"userId": "readInt32"}
+            ],
+            "name": "verifyIdmap",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"targetApkPath": "readString16"},
+                {"overlayApkPath": "readString16"},
+                {"overlayName": "readString16"},
+                {"fulfilledPolicies": "readInt32"},
+                {"enforceOverlayable": "readBool"},
+                {"userId": "readInt32"}
+            ],
+            "name": "createIdmap",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "overlay": "readParcelable",
+                        "__parcelType": "android.os.FabricatedOverlayInternal"
+                    }]
+                }
+            ],
+            "name": "createFabricatedOverlay",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.os.FabricatedOverlayInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [{"path": "readString16"}],
+            "name": "deleteFabricatedOverlay",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "acquireFabricatedOverlayIterator",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [{"iteratorId": "readInt32"}],
+            "name": "releaseFabricatedOverlayIterator",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [{"iteratorId": "readInt32"}],
+            "name": "nextFabricatedOverlayInfos",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.os.FabricatedOverlayInfo"
+                }
+            ]
+        },
+        {
+            "code": 10,
+            "in": [{"overlayApkPath": "readString16"}],
+            "name": "dumpIdmap",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        }
+    ],
+    "name": "IIdmap2",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

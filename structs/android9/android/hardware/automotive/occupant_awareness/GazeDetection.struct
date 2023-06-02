@@ -1,0 +1,40 @@
+{
+    "produced_on": "2022-08-04T09:32:16.892428914Z",
+    "source_location": "",
+    "components": [
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "gazeConfidence": "readParcelable",
+                "__parcelType": "android.hardware.automotive.occupant_awareness.ConfidenceLevel"
+            }]
+        },
+        {
+            "headPosition": "readParcelableVector",
+            "__parcelType": "android.hardware.automotive.occupant_awareness.double"
+        },
+        {
+            "headAngleUnitVector": "readParcelableVector",
+            "__parcelType": "android.hardware.automotive.occupant_awareness.double"
+        },
+        {
+            "gazeAngleUnitVector": "readParcelableVector",
+            "__parcelType": "android.hardware.automotive.occupant_awareness.double"
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "gazeTarget": "readParcelable",
+                "__parcelType": "android.hardware.automotive.occupant_awareness.VehicleRegion"
+            }]
+        },
+        {"customGazeTarget": "readString16"},
+        {"timeOnTargetMillis": "readInt64"}
+    ],
+    "full_name": "android.hardware.automotive.occupant_awareness.GazeDetection",
+    "name": "GazeDetection",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

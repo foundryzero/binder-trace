@@ -1,0 +1,28 @@
+{
+    "produced_on": "2023-06-01T06:42:38.023866385Z",
+    "source_location": "",
+    "components": [
+        {"sampleRateHz": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "channelMode": "readParcelable",
+                "__parcelType": "android.hardware.bluetooth.audio.LdacChannelMode"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "qualityIndex": "readParcelable",
+                "__parcelType": "android.hardware.bluetooth.audio.LdacQualityIndex"
+            }]
+        },
+        {"bitsPerSample": "readByte"}
+    ],
+    "full_name": "android.hardware.bluetooth.audio.LdacConfiguration",
+    "name": "LdacConfiguration",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

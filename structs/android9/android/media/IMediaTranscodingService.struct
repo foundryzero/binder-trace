@@ -1,0 +1,104 @@
+{
+    "produced_on": "2022-08-04T09:32:17.306776090Z",
+    "source_location": "",
+    "full_name": "android.media.IMediaTranscodingService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"client": "readStrongBinder"},
+                {"opPackageName": "readString16"},
+                {"clientUid": "readInt32"},
+                {"clientPid": "readInt32"}
+            ],
+            "name": "registerClient",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"clientId": "readInt32"}],
+            "name": "unregisterClient",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getNumOfClients",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"clientId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.media.TranscodingRequestParcel"
+                    }]
+                }
+            ],
+            "name": "submitRequest",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "job": "readParcelable",
+                        "__parcelType": "android.media.TranscodingJobParcel"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"clientId": "readInt32"},
+                {"jobId": "readInt32"}
+            ],
+            "name": "cancelJob",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [{"jobId": "readInt32"}],
+            "name": "getJobWithId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "job": "readParcelable",
+                        "__parcelType": "android.media.TranscodingJobParcel"
+                    }]
+                }
+            ]
+        }
+    ],
+    "name": "IMediaTranscodingService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

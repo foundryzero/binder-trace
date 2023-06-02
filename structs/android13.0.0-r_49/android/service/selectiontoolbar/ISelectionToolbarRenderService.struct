@@ -1,0 +1,52 @@
+{
+    "produced_on": "2023-06-01T06:42:35.727888731Z",
+    "source_location": "",
+    "full_name": "android.service.selectiontoolbar.ISelectionToolbarRenderService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "onConnected",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"callingUid": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "showInfo": "readParcelable",
+                        "__parcelType": "android.view.selectiontoolbar.ShowInfo"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "onShow",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"widgetToken": "readInt64"}],
+            "name": "onHide",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"callingUid": "readInt32"},
+                {"widgetToken": "readInt64"}
+            ],
+            "name": "onDismiss",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISelectionToolbarRenderService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

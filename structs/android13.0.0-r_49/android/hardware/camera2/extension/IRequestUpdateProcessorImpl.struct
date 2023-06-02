@@ -1,0 +1,77 @@
+{
+    "produced_on": "2023-06-01T06:42:35.839252722Z",
+    "source_location": "",
+    "full_name": "android.hardware.camera2.extension.IRequestUpdateProcessorImpl",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "surface": "readParcelable",
+                        "__parcelType": "android.view.Surface"
+                    }]
+                },
+                {"imageFormat": "readInt32"}
+            ],
+            "name": "onOutputSurface",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "size": "readParcelable",
+                        "__parcelType": "android.hardware.camera2.extension.Size"
+                    }]
+                }
+            ],
+            "name": "onResolutionUpdate",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"imageFormat": "readInt32"}],
+            "name": "onImageFormatUpdate",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "result": "readParcelable",
+                        "__parcelType": "android.hardware.camera2.impl.CameraMetadataNative"
+                    }]
+                },
+                {"sequenceId": "readInt32"}
+            ],
+            "name": "process",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.camera2.extension.CaptureStageImpl"
+                    }]
+                }
+            ]
+        }
+    ],
+    "name": "IRequestUpdateProcessorImpl",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

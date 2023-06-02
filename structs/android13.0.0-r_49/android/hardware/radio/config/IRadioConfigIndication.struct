@@ -1,0 +1,28 @@
+{
+    "produced_on": "2023-06-01T06:42:37.461639498Z",
+    "source_location": "",
+    "full_name": "android.hardware.radio.config.IRadioConfigIndication",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "type": "readParcelable",
+                    "__parcelType": "android.hardware.radio.config.android.hardware.radio.RadioIndicationType"
+                }]
+            },
+            {
+                "slotStatus": "readParcelableVector",
+                "__parcelType": "android.hardware.radio.config.SimSlotStatus"
+            }
+        ],
+        "name": "simSlotsStatusChanged",
+        "oneWay": true,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "IRadioConfigIndication",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

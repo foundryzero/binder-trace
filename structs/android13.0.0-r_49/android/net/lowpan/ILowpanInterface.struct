@@ -1,0 +1,444 @@
+{
+    "produced_on": "2023-06-01T06:42:34.582252784Z",
+    "source_location": "",
+    "full_name": "android.net.lowpan.ILowpanInterface",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getName",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "getNcpVersion",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getDriverVersion",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "getSupportedChannels",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.net.lowpan.LowpanChannelInfo"
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "getSupportedNetworkTypes",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "getMacAddress",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "isEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [{"enabled": "readBool"}],
+            "name": "setEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [],
+            "name": "isUp",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [],
+            "name": "isCommissioned",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [],
+            "name": "isConnected",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [],
+            "name": "getState",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [],
+            "name": "getRole",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 14,
+            "in": [],
+            "name": "getPartitionId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 15,
+            "in": [],
+            "name": "getExtendedAddress",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 16,
+            "in": [],
+            "name": "getLowpanIdentity",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.net.lowpan.LowpanIdentity"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 17,
+            "in": [],
+            "name": "getLowpanCredential",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.net.lowpan.LowpanCredential"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 18,
+            "in": [],
+            "name": "getLinkAddresses",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 19,
+            "in": [],
+            "name": "getLinkNetworks",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.net.IpPrefix"
+                }
+            ]
+        },
+        {
+            "code": 20,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "provision": "readParcelable",
+                        "__parcelType": "android.net.lowpan.LowpanProvision"
+                    }]
+                }
+            ],
+            "name": "join",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 21,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "provision": "readParcelable",
+                        "__parcelType": "android.net.lowpan.LowpanProvision"
+                    }]
+                }
+            ],
+            "name": "form",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 22,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "provision": "readParcelable",
+                        "__parcelType": "android.net.lowpan.LowpanProvision"
+                    }]
+                }
+            ],
+            "name": "attach",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 23,
+            "in": [],
+            "name": "leave",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 24,
+            "in": [],
+            "name": "reset",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 25,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "beaconInfo": "readParcelable",
+                        "__parcelType": "android.net.lowpan.LowpanBeaconInfo"
+                    }]
+                }
+            ],
+            "name": "startCommissioningSession",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 26,
+            "in": [],
+            "name": "closeCommissioningSession",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 27,
+            "in": [{"packet": "readByteVector"}],
+            "name": "sendToCommissioner",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 28,
+            "in": [],
+            "name": "beginLowPower",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 29,
+            "in": [],
+            "name": "pollForData",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 30,
+            "in": [],
+            "name": "onHostWake",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 31,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "addListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 32,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "removeListener",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 33,
+            "in": [
+                {"properties": "readMap"},
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "startNetScan",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 34,
+            "in": [],
+            "name": "stopNetScan",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 35,
+            "in": [
+                {"properties": "readMap"},
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "startEnergyScan",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 36,
+            "in": [],
+            "name": "stopEnergyScan",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 37,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "prefix": "readParcelable",
+                        "__parcelType": "android.net.IpPrefix"
+                    }]
+                },
+                {"flags": "readInt32"}
+            ],
+            "name": "addOnMeshPrefix",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 38,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "prefix": "readParcelable",
+                        "__parcelType": "android.net.IpPrefix"
+                    }]
+                }
+            ],
+            "name": "removeOnMeshPrefix",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 39,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "prefix": "readParcelable",
+                        "__parcelType": "android.net.IpPrefix"
+                    }]
+                },
+                {"flags": "readInt32"}
+            ],
+            "name": "addExternalRoute",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 40,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "prefix": "readParcelable",
+                        "__parcelType": "android.net.IpPrefix"
+                    }]
+                }
+            ],
+            "name": "removeExternalRoute",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ILowpanInterface",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

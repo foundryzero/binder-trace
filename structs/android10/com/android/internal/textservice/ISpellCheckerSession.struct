@@ -1,0 +1,51 @@
+{
+    "produced_on": "2022-12-02T13:44:07.733359049Z",
+    "source_location": "",
+    "full_name": "com.android.internal.textservice.ISpellCheckerSession",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {
+                    "textInfos": "readParcelableVector",
+                    "__parcelType": "android.view.textservice.TextInfo"
+                },
+                {"suggestionsLimit": "readInt32"},
+                {"multipleWords": "readBool"}
+            ],
+            "name": "onGetSuggestionsMultiple",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {
+                    "textInfos": "readParcelableVector",
+                    "__parcelType": "android.view.textservice.TextInfo"
+                },
+                {"suggestionsLimit": "readInt32"}
+            ],
+            "name": "onGetSentenceSuggestionsMultiple",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "onCancel",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "onClose",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISpellCheckerSession",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

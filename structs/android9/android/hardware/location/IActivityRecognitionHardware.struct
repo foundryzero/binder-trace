@@ -1,0 +1,87 @@
+{
+    "produced_on": "2022-08-19T10:42:52.624877837Z",
+    "source_location": "",
+    "full_name": "android.hardware.location.IActivityRecognitionHardware",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getSupportedActivities",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"activityType": "readString16"}],
+            "name": "isActivitySupported",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"sink": "readStrongBinder"}],
+            "name": "registerSink",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"sink": "readStrongBinder"}],
+            "name": "unregisterSink",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"activityType": "readString16"},
+                {"eventType": "readInt32"},
+                {"reportLatencyNs": "readInt64"}
+            ],
+            "name": "enableActivityEvent",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"activityType": "readString16"},
+                {"eventType": "readInt32"}
+            ],
+            "name": "disableActivityEvent",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "flush",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "IActivityRecognitionHardware",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

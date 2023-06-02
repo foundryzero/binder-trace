@@ -1,0 +1,97 @@
+{
+    "produced_on": "2022-08-19T10:42:51.799904602Z",
+    "source_location": "",
+    "full_name": "com.android.systemui.shared.recents.ISystemUiProxy",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sourceCrop": "readParcelable",
+                        "__parcelType": "android.graphics.Rect"
+                    }]
+                },
+                {"width": "readInt32"},
+                {"height": "readInt32"},
+                {"minLayer": "readInt32"},
+                {"maxLayer": "readInt32"},
+                {"useIdentityTransform": "readBool"},
+                {"rotation": "readInt32"}
+            ],
+            "name": "screenshot",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.systemui.shared.system.GraphicBufferCompat"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"taskId": "readInt32"}],
+            "name": "startScreenPinning",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"flags": "readInt32"}],
+            "name": "setInteractionState",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "onSplitScreenInvoked",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"fromHome": "readBool"}],
+            "name": "onOverviewShown",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "getNonMinimizedSplitScreenSecondaryBounds",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.graphics.Rect"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"alpha": "readFloat"},
+                {"animate": "readBool"}
+            ],
+            "name": "setBackButtonAlpha",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISystemUiProxy",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

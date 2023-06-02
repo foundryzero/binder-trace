@@ -1,0 +1,147 @@
+{
+    "produced_on": "2022-08-26T09:55:22.154989428Z",
+    "source_location": "",
+    "full_name": "android.telephony.ims.aidl.IImsRcsController",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"subId": "readInt32"},
+                {"c": "readStrongBinder"}
+            ],
+            "name": "registerImsRegistrationCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"subId": "readInt32"},
+                {"c": "readStrongBinder"}
+            ],
+            "name": "unregisterImsRegistrationCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"subId": "readInt32"},
+                {"consumer": "readStrongBinder"}
+            ],
+            "name": "getImsRcsRegistrationState",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"subId": "readInt32"},
+                {"consumer": "readStrongBinder"}
+            ],
+            "name": "getImsRcsRegistrationTransportType",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"subId": "readInt32"},
+                {"c": "readStrongBinder"}
+            ],
+            "name": "registerRcsAvailabilityCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"subId": "readInt32"},
+                {"c": "readStrongBinder"}
+            ],
+            "name": "unregisterRcsAvailabilityCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"subId": "readInt32"},
+                {"capability": "readInt32"},
+                {"radioTech": "readInt32"}
+            ],
+            "name": "isCapable",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"subId": "readInt32"},
+                {"capability": "readInt32"}
+            ],
+            "name": "isAvailable",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"subId": "readInt32"},
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"},
+                {
+                    "contactNumbers": "readList",
+                    "__parcelType": "android.net.Uri"
+                },
+                {"c": "readStrongBinder"}
+            ],
+            "name": "requestCapabilities",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [{"subId": "readInt32"}],
+            "name": "getUcePublishState",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"subId": "readInt32"},
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "isUceSettingEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"subId": "readInt32"},
+                {"isEnabled": "readBool"}
+            ],
+            "name": "setUceSettingEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IImsRcsController",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

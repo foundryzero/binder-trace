@@ -1,0 +1,65 @@
+{
+    "produced_on": "2022-12-02T13:44:07.781780437Z",
+    "source_location": "",
+    "full_name": "android.location.IGeocodeProvider",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"latitude": "readDouble"},
+                {"longitude": "readDouble"},
+                {"maxResults": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "params": "readParcelable",
+                        "__parcelType": "android.location.GeocoderParams"
+                    }]
+                }
+            ],
+            "name": "getFromLocation",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"},
+                {
+                    "addrs": "readList",
+                    "__parcelType": "android.location.Address"
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"locationName": "readString16"},
+                {"lowerLeftLatitude": "readDouble"},
+                {"lowerLeftLongitude": "readDouble"},
+                {"upperRightLatitude": "readDouble"},
+                {"upperRightLongitude": "readDouble"},
+                {"maxResults": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "params": "readParcelable",
+                        "__parcelType": "android.location.GeocoderParams"
+                    }]
+                }
+            ],
+            "name": "getFromLocationName",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"},
+                {
+                    "addrs": "readList",
+                    "__parcelType": "android.location.Address"
+                }
+            ]
+        }
+    ],
+    "name": "IGeocodeProvider",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

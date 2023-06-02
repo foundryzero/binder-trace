@@ -1,0 +1,36 @@
+{
+    "produced_on": "2023-06-01T06:42:35.326680135Z",
+    "source_location": "",
+    "full_name": "android.content.res.IResourcesManager",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"process": "readString16"},
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "fd": "readParcelable",
+                    "__parcelType": "android.content.res.ParcelFileDescriptor"
+                }]
+            },
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "finishCallback": "readParcelable",
+                    "__parcelType": "android.os.RemoteCallback"
+                }]
+            }
+        ],
+        "name": "dumpResources",
+        "oneWay": false,
+        "out": [
+            {"__exception": "readException"},
+            {"__return": "readBool"}
+        ]
+    }],
+    "name": "IResourcesManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

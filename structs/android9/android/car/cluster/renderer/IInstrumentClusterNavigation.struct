@@ -1,0 +1,41 @@
+{
+    "produced_on": "2022-08-19T10:42:50.584400463Z",
+    "source_location": "",
+    "full_name": "android.car.cluster.renderer.IInstrumentClusterNavigation",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"eventType": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"bundle": "readBundle"}]
+                }
+            ],
+            "name": "onEvent",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "getInstrumentClusterInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.car.navigation.CarNavigationInstrumentCluster"
+                    }]
+                }
+            ]
+        }
+    ],
+    "name": "IInstrumentClusterNavigation",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

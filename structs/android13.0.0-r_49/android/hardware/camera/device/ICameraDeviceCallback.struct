@@ -1,0 +1,64 @@
+{
+    "produced_on": "2023-06-01T06:42:36.873941130Z",
+    "source_location": "",
+    "full_name": "android.hardware.camera.device.ICameraDeviceCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{
+                "msgs": "readParcelableVector",
+                "__parcelType": "android.hardware.camera.device.NotifyMsg"
+            }],
+            "name": "notify",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{
+                "results": "readParcelableVector",
+                "__parcelType": "android.hardware.camera.device.CaptureResult"
+            }],
+            "name": "processCaptureResult",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{
+                "bufReqs": "readParcelableVector",
+                "__parcelType": "android.hardware.camera.device.BufferRequest"
+            }],
+            "name": "requestStreamBuffers",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.camera.device.BufferRequestStatus"
+                    }]
+                },
+                {
+                    "buffers": "readParcelableVector",
+                    "__parcelType": "android.hardware.camera.device.StreamBufferRet"
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{
+                "buffers": "readParcelableVector",
+                "__parcelType": "android.hardware.camera.device.StreamBuffer"
+            }],
+            "name": "returnStreamBuffers",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICameraDeviceCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

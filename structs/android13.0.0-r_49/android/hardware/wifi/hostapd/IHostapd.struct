@@ -1,0 +1,89 @@
+{
+    "produced_on": "2023-06-01T06:42:38.808701529Z",
+    "source_location": "",
+    "full_name": "android.hardware.wifi.hostapd.IHostapd",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "ifaceParams": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.hostapd.IfaceParams"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "nwParams": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.hostapd.NetworkParams"
+                    }]
+                }
+            ],
+            "name": "addAccessPoint",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"ifaceName": "readString16"},
+                {"clientAddress": "readByteVector"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "reasonCode": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.hostapd.Ieee80211ReasonCode"
+                    }]
+                }
+            ],
+            "name": "forceClientDisconnect",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "registerCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"ifaceName": "readString16"}],
+            "name": "removeAccessPoint",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "level": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.hostapd.DebugLevel"
+                    }]
+                }
+            ],
+            "name": "setDebugParams",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "terminate",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IHostapd",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

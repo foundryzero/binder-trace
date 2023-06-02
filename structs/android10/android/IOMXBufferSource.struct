@@ -1,0 +1,55 @@
+{
+    "produced_on": "2022-12-02T13:44:06.399858948Z",
+    "source_location": "",
+    "full_name": "android.IOMXBufferSource",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "onOmxExecuting",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "onOmxIdle",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "onOmxLoaded",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"bufferID": "readInt32"}],
+            "name": "onInputBufferAdded",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"bufferID": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "fenceParcel": "readParcelable",
+                        "__parcelType": "android.OMXFenceParcelable"
+                    }]
+                }
+            ],
+            "name": "onInputBufferEmptied",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IOMXBufferSource",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,38 @@
+{
+    "produced_on": "2022-08-19T10:46:52.293911450Z",
+    "source_location": "",
+    "components": [
+        {"selection": "readBundle"},
+        {"numEvents": "readInt32"},
+        {
+            "__backreference": "numEvents",
+            "__repeated": [
+                {"eventType": "readInt32"},
+                {"datasetId": "readString16"},
+                {"clientState": "readBundle"},
+                {"selectedDatasetIds": "readString16Vector"},
+                {"ignoredDatasets": "readArraySet"},
+                {
+                    "changedFieldIds": "readTypedVector",
+                    "__parcelType": "android.view.autofill.AutofillId"
+                },
+                {"changedDatasetIds": "readString16Vector"},
+                {
+                    "manuallyFilledFieldIds": "readTypedVector",
+                    "__parcelType": "android.view.autofill.AutofillId"
+                },
+                {
+                    "__backreference": "manuallyFilledFieldIds",
+                    "__conditional": [{
+                        "__backreference": "size",
+                        "__repeated": [{"add": "readString16Vector"}]
+                    }]
+                }
+            ]
+        }
+    ],
+    "full_name": "android.service.autofill.FillEventHistory",
+    "name": "FillEventHistory",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

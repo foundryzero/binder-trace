@@ -1,0 +1,79 @@
+{
+    "produced_on": "2022-08-26T09:55:22.022425540Z",
+    "source_location": "",
+    "full_name": "android.net.wifi.ISoftApCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"state": "readInt32"},
+                {"failureReason": "readInt32"}
+            ],
+            "name": "onStateChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{
+                "clients": "readList",
+                "__parcelType": "android.net.wifi.WifiClient"
+            }],
+            "name": "onConnectedClientsChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "softApInfo": "readParcelable",
+                        "__parcelType": "android.net.wifi.SoftApInfo"
+                    }]
+                }
+            ],
+            "name": "onInfoChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "capability": "readParcelable",
+                        "__parcelType": "android.net.wifi.SoftApCapability"
+                    }]
+                }
+            ],
+            "name": "onCapabilityChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "client": "readParcelable",
+                        "__parcelType": "android.net.wifi.WifiClient"
+                    }]
+                },
+                {"blockedReason": "readInt32"}
+            ],
+            "name": "onBlockedClientConnecting",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISoftApCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

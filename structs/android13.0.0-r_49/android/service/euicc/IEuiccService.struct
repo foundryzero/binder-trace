@@ -1,0 +1,191 @@
+{
+    "produced_on": "2023-06-01T06:42:35.065066228Z",
+    "source_location": "",
+    "full_name": "android.service.euicc.IEuiccService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"slotId": "readInt32"},
+                {"portIndex": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "subscription": "readParcelable",
+                        "__parcelType": "android.telephony.euicc.DownloadableSubscription"
+                    }]
+                },
+                {"switchAfterDownload": "readBool"},
+                {"forceDeactivateSim": "readBool"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"resolvedBundle": "readBundle"}]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "downloadSubscription",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"slotId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "subscription": "readParcelable",
+                        "__parcelType": "android.telephony.euicc.DownloadableSubscription"
+                    }]
+                },
+                {"forceDeactivateSim": "readBool"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "getDownloadableSubscriptionMetadata",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"slotId": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "getEid",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"slotId": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "getOtaStatus",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"slotId": "readInt32"},
+                {"statusChangedCallback": "readStrongBinder"}
+            ],
+            "name": "startOtaIfNecessary",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"slotId": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "getEuiccProfileInfoList",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"slotId": "readInt32"},
+                {"forceDeactivateSim": "readBool"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "getDefaultDownloadableSubscriptionList",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"slotId": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "getEuiccInfo",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"slotId": "readInt32"},
+                {"iccid": "readString16"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "deleteSubscription",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"slotId": "readInt32"},
+                {"portIndex": "readInt32"},
+                {"iccid": "readString16"},
+                {"forceDeactivateSim": "readBool"},
+                {"callback": "readStrongBinder"},
+                {"useLegacyApi": "readBool"}
+            ],
+            "name": "switchToSubscription",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"slotId": "readInt32"},
+                {"iccid": "readString16"},
+                {"nickname": "readString16"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "updateSubscriptionNickname",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"slotId": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "eraseSubscriptions",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"slotIndex": "readInt32"},
+                {"options": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "eraseSubscriptionsWithOptions",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"slotId": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "retainSubscriptionsForFactoryReset",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "dump",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IEuiccService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,29 @@
+{
+    "produced_on": "2022-08-26T09:55:20.481835536Z",
+    "source_location": "",
+    "full_name": "android.os.IVoldMountCallback",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "fuseFd": "readParcelable",
+                    "__parcelType": "FileDescriptor"
+                }]
+            },
+            {"path": "readString16"},
+            {"internalPath": "readString16"}
+        ],
+        "name": "onVolumeChecking",
+        "oneWay": false,
+        "out": [
+            {"__exception": "readException"},
+            {"__return": "readBool"}
+        ]
+    }],
+    "name": "IVoldMountCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

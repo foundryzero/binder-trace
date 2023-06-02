@@ -1,0 +1,63 @@
+{
+    "produced_on": "2023-06-01T06:42:37.421830853Z",
+    "source_location": "",
+    "components": [
+        {"DIRECTION_DOWNLINK": "readByte"},
+        {"DIRECTION_UPLINK": "readByte"},
+        {"DIRECTION_BIDIRECTIONAL": "readByte"},
+        {"PROTOCOL_UNSPECIFIED": "readByte"},
+        {"PROTOCOL_TCP": "readByte"},
+        {"PROTOCOL_UDP": "readByte"},
+        {"PROTOCOL_ESP": "readByte"},
+        {"PROTOCOL_AH": "readByte"},
+        {"localAddresses": "readString16Vector"},
+        {"remoteAddresses": "readString16Vector"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "localPort": "readParcelable",
+                "__parcelType": "android.hardware.radio.data.PortRange"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "remotePort": "readParcelable",
+                "__parcelType": "android.hardware.radio.data.PortRange"
+            }]
+        },
+        {"protocol": "readByte"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "tos": "readParcelable",
+                "__parcelType": "android.hardware.radio.data.QosFilterTypeOfService"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "flowLabel": "readParcelable",
+                "__parcelType": "android.hardware.radio.data.QosFilterIpv6FlowLabel"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "spi": "readParcelable",
+                "__parcelType": "android.hardware.radio.data.QosFilterIpsecSpi"
+            }]
+        },
+        {"direction": "readByte"},
+        {"precedence": "readInt32"}
+    ],
+    "full_name": "android.hardware.radio.data.QosFilter",
+    "name": "QosFilter",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

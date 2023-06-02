@@ -1,0 +1,211 @@
+{
+    "produced_on": "2023-06-01T06:42:35.042920744Z",
+    "source_location": "",
+    "full_name": "com.android.ims.internal.IImsService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"phoneId": "readInt32"},
+                {"serviceClass": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "incomingCallIntent": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                },
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "open",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"serviceId": "readInt32"}],
+            "name": "close",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"serviceId": "readInt32"},
+                {"serviceType": "readInt32"},
+                {"callType": "readInt32"}
+            ],
+            "name": "isConnected",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"serviceId": "readInt32"}],
+            "name": "isOpened",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"serviceId": "readInt32"},
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "setRegistrationListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"phoneId": "readInt32"},
+                {"serviceClass": "readInt32"},
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "addRegistrationListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"serviceId": "readInt32"},
+                {"serviceType": "readInt32"},
+                {"callType": "readInt32"}
+            ],
+            "name": "createCallProfile",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.telephony.ims.ImsCallProfile"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"serviceId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "profile": "readParcelable",
+                        "__parcelType": "android.telephony.ims.ImsCallProfile"
+                    }]
+                },
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "createCallSession",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"serviceId": "readInt32"},
+                {"callId": "readString16"}
+            ],
+            "name": "getPendingCallSession",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [{"serviceId": "readInt32"}],
+            "name": "getUtInterface",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [{"phoneId": "readInt32"}],
+            "name": "getConfigInterface",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [{"phoneId": "readInt32"}],
+            "name": "turnOnIms",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [{"phoneId": "readInt32"}],
+            "name": "turnOffIms",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [{"serviceId": "readInt32"}],
+            "name": "getEcbmInterface",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"serviceId": "readInt32"},
+                {"uiTtyMode": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "onComplete": "readParcelable",
+                        "__parcelType": "android.os.Message"
+                    }]
+                }
+            ],
+            "name": "setUiTTYMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [{"serviceId": "readInt32"}],
+            "name": "getMultiEndpointInterface",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        }
+    ],
+    "name": "IImsService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,51 @@
+{
+    "produced_on": "2022-08-19T10:42:53.507104495Z",
+    "source_location": "",
+    "full_name": "com.android.internal.app.procstats.IProcessStats",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getCurrentStats",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"},
+                {
+                    "historic": "readList",
+                    "__parcelType": "android.os.ParcelFileDescriptor"
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"minTime": "readInt64"}],
+            "name": "getStatsOverTime",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.os.ParcelFileDescriptor"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getCurrentMemoryState",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        }
+    ],
+    "name": "IProcessStats",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

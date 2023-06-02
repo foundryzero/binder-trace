@@ -1,0 +1,203 @@
+{
+    "produced_on": "2023-06-01T06:42:35.289362594Z",
+    "source_location": "",
+    "full_name": "com.android.ims.internal.uce.options.IOptionsService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"optionsServiceHandle": "readInt32"}],
+            "name": "getVersion",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.ims.internal.uce.common.StatusCode"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"optionsServiceHandle": "readInt32"},
+                {"optionsListener": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "optionsServiceListenerHdl": "readParcelable",
+                        "__parcelType": "com.android.ims.internal.uce.common.UceLong"
+                    }]
+                }
+            ],
+            "name": "addListener",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.ims.internal.uce.common.StatusCode"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"optionsServiceHandle": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "optionsServiceListenerHdl": "readParcelable",
+                        "__parcelType": "com.android.ims.internal.uce.common.UceLong"
+                    }]
+                }
+            ],
+            "name": "removeListener",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.ims.internal.uce.common.StatusCode"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"optionsServiceHandle": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "capInfo": "readParcelable",
+                        "__parcelType": "com.android.ims.internal.uce.common.CapInfo"
+                    }]
+                },
+                {"reqUserData": "readInt32"}
+            ],
+            "name": "setMyInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.ims.internal.uce.common.StatusCode"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"optionsServiceHandle": "readInt32"},
+                {"reqUserdata": "readInt32"}
+            ],
+            "name": "getMyInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.ims.internal.uce.common.StatusCode"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"optionsServiceHandle": "readInt32"},
+                {"remoteURI": "readString16"},
+                {"reqUserData": "readInt32"}
+            ],
+            "name": "getContactCap",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.ims.internal.uce.common.StatusCode"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"optionsServiceHandle": "readInt32"},
+                {"remoteURIList": "readString16Vector"},
+                {"reqUserData": "readInt32"}
+            ],
+            "name": "getContactListCap",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.ims.internal.uce.common.StatusCode"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"optionsServiceHandle": "readInt32"},
+                {"tId": "readInt32"},
+                {"sipResponseCode": "readInt32"},
+                {"reasonPhrase": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "capInfo": "readParcelable",
+                        "__parcelType": "com.android.ims.internal.uce.options.OptionsCapInfo"
+                    }]
+                },
+                {"bContactInBL": "readBool"}
+            ],
+            "name": "responseIncomingOptions",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.ims.internal.uce.common.StatusCode"
+                    }]
+                }
+            ]
+        }
+    ],
+    "name": "IOptionsService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

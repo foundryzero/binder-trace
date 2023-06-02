@@ -1,0 +1,167 @@
+{
+    "produced_on": "2023-06-01T06:42:38.523208481Z",
+    "source_location": "",
+    "full_name": "android.hardware.usb.IUsbCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {
+                    "currentPortStatus": "readParcelableVector",
+                    "__parcelType": "android.hardware.usb.PortStatus"
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "retval": "readParcelable",
+                        "__parcelType": "android.hardware.usb.Status"
+                    }]
+                }
+            ],
+            "name": "notifyPortStatusChange",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"portName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "newRole": "readParcelable",
+                        "__parcelType": "android.hardware.usb.PortRole"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "retval": "readParcelable",
+                        "__parcelType": "android.hardware.usb.Status"
+                    }]
+                },
+                {"transactionId": "readInt64"}
+            ],
+            "name": "notifyRoleSwitchStatus",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"portName": "readString16"},
+                {"enable": "readBool"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "retval": "readParcelable",
+                        "__parcelType": "android.hardware.usb.Status"
+                    }]
+                },
+                {"transactionId": "readInt64"}
+            ],
+            "name": "notifyEnableUsbDataStatus",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"portName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "retval": "readParcelable",
+                        "__parcelType": "android.hardware.usb.Status"
+                    }]
+                },
+                {"transactionId": "readInt64"}
+            ],
+            "name": "notifyEnableUsbDataWhileDockedStatus",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"portName": "readString16"},
+                {"enable": "readBool"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "retval": "readParcelable",
+                        "__parcelType": "android.hardware.usb.Status"
+                    }]
+                },
+                {"transactionId": "readInt64"}
+            ],
+            "name": "notifyContaminantEnabledStatus",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"portName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "retval": "readParcelable",
+                        "__parcelType": "android.hardware.usb.Status"
+                    }]
+                },
+                {"transactionId": "readInt64"}
+            ],
+            "name": "notifyQueryPortStatus",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"portName": "readString16"},
+                {"limit": "readBool"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "retval": "readParcelable",
+                        "__parcelType": "android.hardware.usb.Status"
+                    }]
+                },
+                {"transactionId": "readInt64"}
+            ],
+            "name": "notifyLimitPowerTransferStatus",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"portName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "retval": "readParcelable",
+                        "__parcelType": "android.hardware.usb.Status"
+                    }]
+                },
+                {"transactionId": "readInt64"}
+            ],
+            "name": "notifyResetUsbPortStatus",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IUsbCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

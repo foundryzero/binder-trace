@@ -1,0 +1,86 @@
+{
+    "produced_on": "2022-08-19T10:42:52.195204853Z",
+    "source_location": "",
+    "full_name": "android.media.projection.IMediaProjectionManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"uid": "readInt32"},
+                {"packageName": "readString16"}
+            ],
+            "name": "hasProjectionPermission",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"uid": "readInt32"},
+                {"packageName": "readString16"},
+                {"type": "readInt32"},
+                {"permanentGrant": "readBool"}
+            ],
+            "name": "createProjection",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"projection": "readStrongBinder"}],
+            "name": "isValidMediaProjection",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "getActiveProjectionInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.media.projection.MediaProjectionInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "stopActiveProjection",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "addCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "removeCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IMediaProjectionManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

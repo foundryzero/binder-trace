@@ -1,0 +1,28 @@
+{
+    "produced_on": "2023-06-01T06:42:35.571906645Z",
+    "source_location": "",
+    "full_name": "android.view.IDisplayChangeWindowController",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"displayId": "readInt32"},
+            {"fromRotation": "readInt32"},
+            {"toRotation": "readInt32"},
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "newDisplayAreaInfo": "readParcelable",
+                    "__parcelType": "android.window.DisplayAreaInfo"
+                }]
+            },
+            {"callback": "readStrongBinder"}
+        ],
+        "name": "onDisplayChange",
+        "oneWay": true,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "IDisplayChangeWindowController",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

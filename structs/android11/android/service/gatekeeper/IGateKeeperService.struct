@@ -1,0 +1,99 @@
+{
+    "produced_on": "2022-08-26T09:55:20.428047222Z",
+    "source_location": "",
+    "full_name": "android.service.gatekeeper.IGateKeeperService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"uid": "readInt32"},
+                {"currentPasswordHandle": "readByteVector"},
+                {"currentPassword": "readByteVector"},
+                {"desiredPassword": "readByteVector"}
+            ],
+            "name": "enroll",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.service.gatekeeper.GateKeeperResponse"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"uid": "readInt32"},
+                {"enrolledPasswordHandle": "readByteVector"},
+                {"providedPassword": "readByteVector"}
+            ],
+            "name": "verify",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.service.gatekeeper.GateKeeperResponse"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"uid": "readInt32"},
+                {"challenge": "readInt64"},
+                {"enrolledPasswordHandle": "readByteVector"},
+                {"providedPassword": "readByteVector"}
+            ],
+            "name": "verifyChallenge",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.service.gatekeeper.GateKeeperResponse"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"uid": "readInt32"}],
+            "name": "getSecureUserId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"uid": "readInt32"}],
+            "name": "clearSecureUserId",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "reportDeviceSetupComplete",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IGateKeeperService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

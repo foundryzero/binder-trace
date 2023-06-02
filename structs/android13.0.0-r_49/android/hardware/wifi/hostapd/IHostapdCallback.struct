@@ -1,0 +1,52 @@
+{
+    "produced_on": "2023-06-01T06:42:38.800163448Z",
+    "source_location": "",
+    "full_name": "android.hardware.wifi.hostapd.IHostapdCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "apInfo": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.hostapd.ApInfo"
+                    }]
+                }
+            ],
+            "name": "onApInstanceInfoChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "clientInfo": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.hostapd.ClientInfo"
+                    }]
+                }
+            ],
+            "name": "onConnectedClientsChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"ifaceName": "readString16"},
+                {"instanceName": "readString16"}
+            ],
+            "name": "onFailure",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IHostapdCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

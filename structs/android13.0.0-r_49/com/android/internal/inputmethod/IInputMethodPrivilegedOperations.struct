@@ -1,0 +1,229 @@
+{
+    "produced_on": "2023-06-01T06:42:35.272072315Z",
+    "source_location": "",
+    "full_name": "com.android.internal.inputmethod.IInputMethodPrivilegedOperations",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"vis": "readInt32"},
+                {"backDisposition": "readInt32"}
+            ],
+            "name": "setImeWindowStatusAsync",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"startInputToken": "readStrongBinder"}],
+            "name": "reportStartInputAsync",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "contentUri": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                },
+                {"packageName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "future": "readParcelable",
+                        "__parcelType": "com.android.internal.infra.AndroidFuture"
+                    }]
+                }
+            ],
+            "name": "createInputContentUriToken",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"fullscreen": "readBool"}],
+            "name": "reportFullscreenModeAsync",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"id": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "future": "readParcelable",
+                        "__parcelType": "com.android.internal.infra.AndroidFuture"
+                    }]
+                }
+            ],
+            "name": "setInputMethod",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"id": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "subtype": "readParcelable",
+                        "__parcelType": "android.view.inputmethod.InputMethodSubtype"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "future": "readParcelable",
+                        "__parcelType": "com.android.internal.infra.AndroidFuture"
+                    }]
+                }
+            ],
+            "name": "setInputMethodAndSubtype",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"flags": "readInt32"},
+                {"reason": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "future": "readParcelable",
+                        "__parcelType": "com.android.internal.infra.AndroidFuture"
+                    }]
+                }
+            ],
+            "name": "hideMySoftInput",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"flags": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "future": "readParcelable",
+                        "__parcelType": "com.android.internal.infra.AndroidFuture"
+                    }]
+                }
+            ],
+            "name": "showMySoftInput",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"packageName": "readString16"},
+                {"iconId": "readInt32"}
+            ],
+            "name": "updateStatusIconAsync",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "future": "readParcelable",
+                        "__parcelType": "com.android.internal.infra.AndroidFuture"
+                    }]
+                }
+            ],
+            "name": "switchToPreviousInputMethod",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"onlyCurrentIme": "readBool"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "future": "readParcelable",
+                        "__parcelType": "com.android.internal.infra.AndroidFuture"
+                    }]
+                }
+            ],
+            "name": "switchToNextInputMethod",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "future": "readParcelable",
+                        "__parcelType": "com.android.internal.infra.AndroidFuture"
+                    }]
+                }
+            ],
+            "name": "shouldOfferSwitchingToNextInputMethod",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [],
+            "name": "notifyUserActionAsync",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"showOrHideInputToken": "readStrongBinder"},
+                {"setVisible": "readBool"}
+            ],
+            "name": "applyImeVisibilityAsync",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"requestId": "readInt32"},
+                {"pid": "readInt32"}
+            ],
+            "name": "onStylusHandwritingReady",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [{"requestId": "readInt32"}],
+            "name": "resetStylusHandwriting",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IInputMethodPrivilegedOperations",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

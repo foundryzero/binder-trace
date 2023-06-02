@@ -1,0 +1,209 @@
+{
+    "produced_on": "2022-12-02T13:44:05.952312550Z",
+    "source_location": "",
+    "full_name": "android.apex.IApexService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"session_id": "readInt32"},
+                {"child_session_ids": "readInt32Vector"}
+            ],
+            "name": "submitStagedSession",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "packages": "readParcelable",
+                        "__parcelType": "android.apex.ApexInfoList"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"session_id": "readInt32"}],
+            "name": "markStagedSessionReady",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"session_id": "readInt32"}],
+            "name": "markStagedSessionSuccessful",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "getSessions",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.apex.ApexSessionInfo"
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"session_id": "readInt32"}],
+            "name": "getStagedSessionInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.apex.ApexSessionInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "getActivePackages",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.apex.ApexInfo"
+                }
+            ]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "getAllPackages",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.apex.ApexInfo"
+                }
+            ]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "abortActiveSession",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [{
+                "active_package_paths": "readList",
+                "__parcelType": "String"
+            }],
+            "name": "unstagePackages",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [{"package_name": "readString16"}],
+            "name": "getActivePackage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.apex.ApexInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 11,
+            "in": [{"package_path": "readString16"}],
+            "name": "activatePackage",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [{"package_path": "readString16"}],
+            "name": "deactivatePackage",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [{
+                "package_tmp_paths": "readList",
+                "__parcelType": "String"
+            }],
+            "name": "preinstallPackages",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [{
+                "package_tmp_paths": "readList",
+                "__parcelType": "String"
+            }],
+            "name": "postinstallPackages",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [{"package_tmp_path": "readString16"}],
+            "name": "stagePackage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 16,
+            "in": [{
+                "package_tmp_paths": "readList",
+                "__parcelType": "String"
+            }],
+            "name": "stagePackages",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 17,
+            "in": [],
+            "name": "rollbackActiveSession",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [],
+            "name": "resumeRollbackIfNeeded",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IApexService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

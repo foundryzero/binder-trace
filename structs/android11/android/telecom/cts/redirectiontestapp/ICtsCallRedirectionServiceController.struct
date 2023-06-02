@@ -1,0 +1,56 @@
+{
+    "produced_on": "2022-08-26T09:55:21.662778619Z",
+    "source_location": "",
+    "full_name": "android.telecom.cts.redirectiontestapp.ICtsCallRedirectionServiceController",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "reset",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "targetHandle": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "targetPhoneAccount": "readParcelable",
+                        "__parcelType": "android.telecom.PhoneAccountHandle"
+                    }]
+                },
+                {"confirmFirst": "readBool"}
+            ],
+            "name": "setRedirectCall",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "setCancelCall",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "setPlaceCallUnmodified",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICtsCallRedirectionServiceController",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

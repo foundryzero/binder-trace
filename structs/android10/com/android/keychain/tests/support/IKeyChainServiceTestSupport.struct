@@ -1,0 +1,76 @@
+{
+    "produced_on": "2022-12-02T13:44:05.891588166Z",
+    "source_location": "",
+    "full_name": "com.android.keychain.tests.support.IKeyChainServiceTestSupport",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "keystoreReset",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"password": "readString16"}],
+            "name": "keystoreSetPassword",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"key": "readString16"},
+                {"value": "readByteVector"}
+            ],
+            "name": "keystorePut",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"key": "readString16"},
+                {"value": "readByteVector"}
+            ],
+            "name": "keystoreImportKey",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"uid": "readInt32"},
+                {"alias": "readString16"}
+            ],
+            "name": "revokeAppPermission",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"uid": "readInt32"},
+                {"alias": "readString16"}
+            ],
+            "name": "grantAppPermission",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IKeyChainServiceTestSupport",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

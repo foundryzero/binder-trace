@@ -1,0 +1,32 @@
+{
+    "produced_on": "2022-12-02T13:44:06.578799200Z",
+    "source_location": "",
+    "full_name": "android.net.ipmemorystore.IOnSameL3NetworkResponseListener",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "status": "readParcelable",
+                    "__parcelType": "android.net.ipmemorystore.StatusParcelable"
+                }]
+            },
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "response": "readParcelable",
+                    "__parcelType": "android.net.ipmemorystore.SameL3NetworkResponseParcelable"
+                }]
+            }
+        ],
+        "name": "onSameL3NetworkResponse",
+        "oneWay": true,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "IOnSameL3NetworkResponseListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

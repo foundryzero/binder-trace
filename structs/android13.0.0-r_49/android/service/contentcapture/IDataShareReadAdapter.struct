@@ -1,0 +1,40 @@
+{
+    "produced_on": "2023-06-01T06:42:35.736150619Z",
+    "source_location": "",
+    "full_name": "android.service.contentcapture.IDataShareReadAdapter",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "fd": "readParcelable",
+                        "__parcelType": "android.service.contentcapture.ParcelFileDescriptor"
+                    }]
+                }
+            ],
+            "name": "start",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"errorCode": "readInt32"}],
+            "name": "error",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "finish",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IDataShareReadAdapter",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

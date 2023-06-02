@@ -1,0 +1,677 @@
+{
+    "produced_on": "2022-08-19T10:42:52.341855901Z",
+    "source_location": "",
+    "full_name": "com.android.internal.telecom.IConnectionService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"adapter": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionInfo": "readParcelable",
+                        "__parcelType": "com.android.internal.telecom.Session.Info"
+                    }]
+                }
+            ],
+            "name": "addConnectionServiceAdapter",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"adapter": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionInfo": "readParcelable",
+                        "__parcelType": "com.android.internal.telecom.Session.Info"
+                    }]
+                }
+            ],
+            "name": "removeConnectionServiceAdapter",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "connectionManagerPhoneAccount": "readParcelable",
+                        "__parcelType": "android.telecom.PhoneAccountHandle"
+                    }]
+                },
+                {"callId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.telecom.ConnectionRequest"
+                    }]
+                },
+                {"isIncoming": "readBool"},
+                {"isUnknown": "readBool"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionInfo": "readParcelable",
+                        "__parcelType": "com.android.internal.telecom.Session.Info"
+                    }]
+                }
+            ],
+            "name": "createConnection",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"callId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionInfo": "readParcelable",
+                        "__parcelType": "com.android.internal.telecom.Session.Info"
+                    }]
+                }
+            ],
+            "name": "createConnectionComplete",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "connectionManagerPhoneAccount": "readParcelable",
+                        "__parcelType": "android.telecom.PhoneAccountHandle"
+                    }]
+                },
+                {"callId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.telecom.ConnectionRequest"
+                    }]
+                },
+                {"isIncoming": "readBool"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionInfo": "readParcelable",
+                        "__parcelType": "com.android.internal.telecom.Session.Info"
+                    }]
+                }
+            ],
+            "name": "createConnectionFailed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"callId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionInfo": "readParcelable",
+                        "__parcelType": "com.android.internal.telecom.Session.Info"
+                    }]
+                }
+            ],
+            "name": "abort",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"callId": "readString16"},
+                {"videoState": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionInfo": "readParcelable",
+                        "__parcelType": "com.android.internal.telecom.Session.Info"
+                    }]
+                }
+            ],
+            "name": "answerVideo",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"callId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionInfo": "readParcelable",
+                        "__parcelType": "com.android.internal.telecom.Session.Info"
+                    }]
+                }
+            ],
+            "name": "answer",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"callId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "address": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionInfo": "readParcelable",
+                        "__parcelType": "com.android.internal.telecom.Session.Info"
+                    }]
+                }
+            ],
+            "name": "deflect",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"callId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionInfo": "readParcelable",
+                        "__parcelType": "com.android.internal.telecom.Session.Info"
+                    }]
+                }
+            ],
+            "name": "reject",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"callId": "readString16"},
+                {"message": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionInfo": "readParcelable",
+                        "__parcelType": "com.android.internal.telecom.Session.Info"
+                    }]
+                }
+            ],
+            "name": "rejectWithMessage",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"callId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionInfo": "readParcelable",
+                        "__parcelType": "com.android.internal.telecom.Session.Info"
+                    }]
+                }
+            ],
+            "name": "disconnect",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"callId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionInfo": "readParcelable",
+                        "__parcelType": "com.android.internal.telecom.Session.Info"
+                    }]
+                }
+            ],
+            "name": "silence",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"callId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionInfo": "readParcelable",
+                        "__parcelType": "com.android.internal.telecom.Session.Info"
+                    }]
+                }
+            ],
+            "name": "hold",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"callId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionInfo": "readParcelable",
+                        "__parcelType": "com.android.internal.telecom.Session.Info"
+                    }]
+                }
+            ],
+            "name": "unhold",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [
+                {"activeCallId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callAudioState": "readParcelable",
+                        "__parcelType": "android.telecom.CallAudioState"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionInfo": "readParcelable",
+                        "__parcelType": "com.android.internal.telecom.Session.Info"
+                    }]
+                }
+            ],
+            "name": "onCallAudioStateChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [
+                {"callId": "readString16"},
+                {"digit": "readChar"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionInfo": "readParcelable",
+                        "__parcelType": "com.android.internal.telecom.Session.Info"
+                    }]
+                }
+            ],
+            "name": "playDtmfTone",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"callId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionInfo": "readParcelable",
+                        "__parcelType": "com.android.internal.telecom.Session.Info"
+                    }]
+                }
+            ],
+            "name": "stopDtmfTone",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 19,
+            "in": [
+                {"conferenceCallId": "readString16"},
+                {"callId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionInfo": "readParcelable",
+                        "__parcelType": "com.android.internal.telecom.Session.Info"
+                    }]
+                }
+            ],
+            "name": "conference",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 20,
+            "in": [
+                {"callId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionInfo": "readParcelable",
+                        "__parcelType": "com.android.internal.telecom.Session.Info"
+                    }]
+                }
+            ],
+            "name": "splitFromConference",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 21,
+            "in": [
+                {"conferenceCallId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionInfo": "readParcelable",
+                        "__parcelType": "com.android.internal.telecom.Session.Info"
+                    }]
+                }
+            ],
+            "name": "mergeConference",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 22,
+            "in": [
+                {"conferenceCallId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionInfo": "readParcelable",
+                        "__parcelType": "com.android.internal.telecom.Session.Info"
+                    }]
+                }
+            ],
+            "name": "swapConference",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 23,
+            "in": [
+                {"callId": "readString16"},
+                {"proceed": "readBool"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionInfo": "readParcelable",
+                        "__parcelType": "com.android.internal.telecom.Session.Info"
+                    }]
+                }
+            ],
+            "name": "onPostDialContinue",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 24,
+            "in": [
+                {"callId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionInfo": "readParcelable",
+                        "__parcelType": "com.android.internal.telecom.Session.Info"
+                    }]
+                }
+            ],
+            "name": "pullExternalCall",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 25,
+            "in": [
+                {"callId": "readString16"},
+                {"event": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"extras": "readBundle"}]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionInfo": "readParcelable",
+                        "__parcelType": "com.android.internal.telecom.Session.Info"
+                    }]
+                }
+            ],
+            "name": "sendCallEvent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 26,
+            "in": [
+                {"callId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"extras": "readBundle"}]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionInfo": "readParcelable",
+                        "__parcelType": "com.android.internal.telecom.Session.Info"
+                    }]
+                }
+            ],
+            "name": "onExtrasChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 27,
+            "in": [
+                {"callId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "fromInCall": "readParcelable",
+                        "__parcelType": "android.os.ParcelFileDescriptor"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "toInCall": "readParcelable",
+                        "__parcelType": "android.os.ParcelFileDescriptor"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionInfo": "readParcelable",
+                        "__parcelType": "com.android.internal.telecom.Session.Info"
+                    }]
+                }
+            ],
+            "name": "startRtt",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 28,
+            "in": [
+                {"callId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionInfo": "readParcelable",
+                        "__parcelType": "com.android.internal.telecom.Session.Info"
+                    }]
+                }
+            ],
+            "name": "stopRtt",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 29,
+            "in": [
+                {"callId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "fromInCall": "readParcelable",
+                        "__parcelType": "android.os.ParcelFileDescriptor"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "toInCall": "readParcelable",
+                        "__parcelType": "android.os.ParcelFileDescriptor"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionInfo": "readParcelable",
+                        "__parcelType": "com.android.internal.telecom.Session.Info"
+                    }]
+                }
+            ],
+            "name": "respondToRttUpgradeRequest",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 30,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionInfo": "readParcelable",
+                        "__parcelType": "com.android.internal.telecom.Session.Info"
+                    }]
+                }
+            ],
+            "name": "connectionServiceFocusLost",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 31,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionInfo": "readParcelable",
+                        "__parcelType": "com.android.internal.telecom.Session.Info"
+                    }]
+                }
+            ],
+            "name": "connectionServiceFocusGained",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 32,
+            "in": [
+                {"callId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.telecom.ConnectionRequest"
+                    }]
+                },
+                {"error": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionInfo": "readParcelable",
+                        "__parcelType": "com.android.internal.telecom.Session.Info"
+                    }]
+                }
+            ],
+            "name": "handoverFailed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 33,
+            "in": [
+                {"callId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionInfo": "readParcelable",
+                        "__parcelType": "com.android.internal.telecom.Session.Info"
+                    }]
+                }
+            ],
+            "name": "handoverComplete",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IConnectionService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

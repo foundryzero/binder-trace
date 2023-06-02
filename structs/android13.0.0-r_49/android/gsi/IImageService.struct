@@ -1,0 +1,151 @@
+{
+    "produced_on": "2023-06-01T06:42:36.290599982Z",
+    "source_location": "",
+    "full_name": "android.gsi.IImageService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"name": "readString16"},
+                {"size": "readInt64"},
+                {"flags": "readInt32"},
+                {"on_progress": "readStrongBinder"}
+            ],
+            "name": "createBackingImage",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"name": "readString16"}],
+            "name": "deleteBackingImage",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"name": "readString16"},
+                {"timeout_ms": "readInt32"}
+            ],
+            "name": "mapImageDevice",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "mapping": "readParcelable",
+                        "__parcelType": "android.gsi.MappedImage"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"name": "readString16"}],
+            "name": "unmapImageDevice",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"name": "readString16"}],
+            "name": "backingImageExists",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [{"name": "readString16"}],
+            "name": "isImageMapped",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [{"name": "readString16"}],
+            "name": "getAvbPublicKey",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "dst": "readParcelable",
+                        "__parcelType": "android.gsi.AvbPublicKey"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "getAllBackingImages",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "String"
+                }
+            ]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"name": "readString16"},
+                {"bytes": "readInt64"}
+            ],
+            "name": "zeroFillNewImage",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [],
+            "name": "removeAllImages",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [],
+            "name": "removeDisabledImages",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [{"name": "readString16"}],
+            "name": "isImageDisabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [{"name": "readString16"}],
+            "name": "getMappedImageDevice",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        }
+    ],
+    "name": "IImageService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

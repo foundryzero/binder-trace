@@ -1,0 +1,194 @@
+{
+    "produced_on": "2022-08-19T10:42:53.202443797Z",
+    "source_location": "",
+    "full_name": "android.app.slice.ISliceManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"pkg": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "uri": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                },
+                {
+                    "specs": "readParcelableVector",
+                    "__parcelType": "android.app.slice.SliceSpec"
+                },
+                {"token": "readStrongBinder"}
+            ],
+            "name": "pinSlice",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"pkg": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "uri": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                },
+                {"token": "readStrongBinder"}
+            ],
+            "name": "unpinSlice",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"pkg": "readString16"}],
+            "name": "hasSliceAccess",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "uri": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                },
+                {"pkg": "readString16"}
+            ],
+            "name": "getPinnedSpecs",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.app.slice.SliceSpec"
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"pkg": "readString16"}],
+            "name": "getPinnedSlices",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.net.Uri"
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [{"user": "readInt32"}],
+            "name": "getBackupPayload",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"payload": "readByteVector"},
+                {"user": "readInt32"}
+            ],
+            "name": "applyRestore",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"callingPkg": "readString16"},
+                {"toPkg": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "uri": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                }
+            ],
+            "name": "grantSlicePermission",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"callingPkg": "readString16"},
+                {"toPkg": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "uri": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                }
+            ],
+            "name": "revokeSlicePermission",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "uri": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                },
+                {"pkg": "readString16"},
+                {"pid": "readInt32"},
+                {"uid": "readInt32"},
+                {"autoGrantPermissions": "readString16Vector"}
+            ],
+            "name": "checkSlicePermission",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "uri": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                },
+                {"pkg": "readString16"},
+                {"callingPkg": "readString16"},
+                {"allSlices": "readBool"}
+            ],
+            "name": "grantPermissionFromUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISliceManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

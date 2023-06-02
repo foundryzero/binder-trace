@@ -1,0 +1,163 @@
+{
+    "produced_on": "2023-06-01T06:42:38.287645399Z",
+    "source_location": "",
+    "full_name": "android.hardware.automotive.evs.IEvsEnumerator",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"carCamera": "readStrongBinder"}],
+            "name": "closeCamera",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"display": "readStrongBinder"}],
+            "name": "closeDisplay",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"evsUltrasonicsArray": "readStrongBinder"}],
+            "name": "closeUltrasonicsArray",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "getCameraList",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.automotive.evs.CameraDesc"
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "getDisplayIdList",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "getDisplayState",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.automotive.evs.DisplayState"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "description": "readParcelable",
+                        "__parcelType": "android.hardware.automotive.evs.CameraDesc"
+                    }]
+                }
+            ],
+            "name": "getStreamList",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.automotive.evs.Stream"
+                }
+            ]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "getUltrasonicsArrayList",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.automotive.evs.UltrasonicsArrayDesc"
+                }
+            ]
+        },
+        {
+            "code": 9,
+            "in": [],
+            "name": "isHardware",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"cameraId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "streamCfg": "readParcelable",
+                        "__parcelType": "android.hardware.automotive.evs.Stream"
+                    }]
+                }
+            ],
+            "name": "openCamera",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [{"id": "readInt32"}],
+            "name": "openDisplay",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [{"ultrasonicsArrayId": "readString16"}],
+            "name": "openUltrasonicsArray",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "registerStatusCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IEvsEnumerator",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

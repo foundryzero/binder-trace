@@ -1,0 +1,32 @@
+{
+    "produced_on": "2023-06-01T06:42:34.916508254Z",
+    "source_location": "",
+    "components": [
+        {"name": "readString16"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "format": "readParcelable",
+                "__parcelType": "android.media.audio.common.AudioFormatDescription"
+            }]
+        },
+        {
+            "channelMasks": "readParcelableVector",
+            "__parcelType": "android.media.audio.common.AudioChannelLayout"
+        },
+        {"sampleRates": "readInt32Vector"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "encapsulationType": "readParcelable",
+                "__parcelType": "android.media.audio.common.AudioEncapsulationType"
+            }]
+        }
+    ],
+    "full_name": "android.media.audio.common.AudioProfile",
+    "name": "AudioProfile",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

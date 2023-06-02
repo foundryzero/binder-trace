@@ -1,0 +1,102 @@
+{
+    "produced_on": "2023-06-01T06:42:33.140701764Z",
+    "source_location": "",
+    "full_name": "com.android.car.internal.test.IJavaTestBinder",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "p": "readParcelable",
+                        "__parcelType": "com.android.car.internal.test.TestLargeParcelable"
+                    }]
+                }
+            ],
+            "name": "echoTestLargeParcelable",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.car.internal.test.TestLargeParcelable"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "p": "readParcelable",
+                        "__parcelType": "com.android.car.internal.LargeParcelable"
+                    }]
+                }
+            ],
+            "name": "echoLargeParcelable",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.car.internal.LargeParcelable"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "p": "readParcelable",
+                        "__parcelType": "com.android.car.internal.test.TestLargeParcelable"
+                    }]
+                },
+                {"v": "readInt64"}
+            ],
+            "name": "echoLongWithTestLargeParcelable",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "p": "readParcelable",
+                        "__parcelType": "com.android.car.internal.LargeParcelable"
+                    }]
+                },
+                {"v": "readInt64"}
+            ],
+            "name": "echoLongWithLargeParcelable",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        }
+    ],
+    "name": "IJavaTestBinder",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

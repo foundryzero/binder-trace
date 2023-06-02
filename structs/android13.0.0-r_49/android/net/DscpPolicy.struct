@@ -1,0 +1,22 @@
+{
+    "produced_on": "2023-06-01T10:15:33.330713954Z",
+    "source_location": "",
+    "components": [
+        {"mPolicyId": "readInt32"},
+        {"mDscp": "readInt32"},
+        {"mSrcPort": "readInt32"},
+        {"mProtocol": "readInt32"},
+        {"nullcheck": "readBool"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [
+                {"mDstPortRange": "readInt32"},
+                {"mDstPortRange": "readInt32"}
+            ]
+        }
+    ],
+    "full_name": "android.net.DscpPolicy",
+    "name": "DscpPolicy",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

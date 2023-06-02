@@ -1,0 +1,65 @@
+{
+    "produced_on": "2023-06-01T06:42:35.517429120Z",
+    "source_location": "",
+    "full_name": "android.app.ILocaleManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "locales": "readParcelable",
+                        "__parcelType": "android.os.LocaleList"
+                    }]
+                }
+            ],
+            "name": "setApplicationLocales",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "getApplicationLocales",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.os.LocaleList"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getSystemLocales",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.os.LocaleList"
+                    }]
+                }
+            ]
+        }
+    ],
+    "name": "ILocaleManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,43 @@
+{
+    "produced_on": "2023-06-01T06:42:35.805909178Z",
+    "source_location": "",
+    "full_name": "android.companion.ICompanionDeviceDiscoveryService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.companion.AssociationRequest"
+                    }]
+                },
+                {"callingPackage": "readString16"},
+                {"applicationCallback": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "serviceCallback": "readParcelable",
+                        "__parcelType": "android.companion.AndroidFuture<String>"
+                    }]
+                }
+            ],
+            "name": "startDiscovery",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "onAssociationCreated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICompanionDeviceDiscoveryService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

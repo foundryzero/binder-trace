@@ -1,0 +1,81 @@
+{
+    "produced_on": "2022-08-04T09:32:19.145803473Z",
+    "source_location": "",
+    "full_name": "android.hardware.biometrics.IBiometricServiceReceiverInternal",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"requireConfirmation": "readBool"},
+                {"token": "readByteVector"},
+                {"isStrongBiometric": "readBool"}
+            ],
+            "name": "onAuthenticationSucceeded",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "onAuthenticationFailed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"cookie": "readInt32"},
+                {"modality": "readInt32"},
+                {"error": "readInt32"},
+                {"vendorCode": "readInt32"}
+            ],
+            "name": "onError",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"acquiredInfo": "readInt32"},
+                {"message": "readString16"}
+            ],
+            "name": "onAcquired",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"reason": "readInt32"},
+                {"credentialAttestation": "readByteVector"}
+            ],
+            "name": "onDialogDismissed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "onTryAgainPressed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "onDeviceCredentialPressed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{"event": "readInt32"}],
+            "name": "onSystemEvent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IBiometricServiceReceiverInternal",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

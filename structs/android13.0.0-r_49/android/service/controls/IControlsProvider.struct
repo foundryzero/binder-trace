@@ -1,0 +1,55 @@
+{
+    "produced_on": "2023-06-01T06:42:35.754930722Z",
+    "source_location": "",
+    "full_name": "android.service.controls.IControlsProvider",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"subscriber": "readStrongBinder"}],
+            "name": "load",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"subscriber": "readStrongBinder"}],
+            "name": "loadSuggested",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {
+                    "controlIds": "readList",
+                    "__parcelType": "String"
+                },
+                {"subscriber": "readStrongBinder"}
+            ],
+            "name": "subscribe",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"controlId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "action": "readParcelable",
+                        "__parcelType": "android.service.controls.actions.ControlActionWrapper"
+                    }]
+                },
+                {"cb": "readStrongBinder"}
+            ],
+            "name": "action",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IControlsProvider",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

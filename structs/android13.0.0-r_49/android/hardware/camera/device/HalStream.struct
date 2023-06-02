@@ -1,0 +1,46 @@
+{
+    "produced_on": "2023-06-01T06:42:36.887859043Z",
+    "source_location": "",
+    "components": [
+        {"id": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "overrideFormat": "readParcelable",
+                "__parcelType": "android.hardware.camera.device.android.hardware.graphics.common.PixelFormat"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "producerUsage": "readParcelable",
+                "__parcelType": "android.hardware.camera.device.android.hardware.graphics.common.BufferUsage"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "consumerUsage": "readParcelable",
+                "__parcelType": "android.hardware.camera.device.android.hardware.graphics.common.BufferUsage"
+            }]
+        },
+        {"maxBuffers": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "overrideDataSpace": "readParcelable",
+                "__parcelType": "android.hardware.camera.device.android.hardware.graphics.common.Dataspace"
+            }]
+        },
+        {"physicalCameraId": "readString16"},
+        {"supportOffline": "readBool"}
+    ],
+    "full_name": "android.hardware.camera.device.HalStream",
+    "name": "HalStream",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

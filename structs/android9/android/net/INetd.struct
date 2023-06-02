@@ -1,0 +1,483 @@
+{
+    "produced_on": "2022-08-19T10:42:50.993247825Z",
+    "source_location": "",
+    "full_name": "android.net.INetd",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "isAlive",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"chainName": "readString16"},
+                {"isWhitelist": "readBool"},
+                {"uids": "readInt32Vector"}
+            ],
+            "name": "firewallReplaceUidChain",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"enable": "readBool"}],
+            "name": "bandwidthEnableDataSaver",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"netId": "readInt32"},
+                {"permission": "readString16"}
+            ],
+            "name": "networkCreatePhysical",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"netId": "readInt32"},
+                {"hasDns": "readBool"},
+                {"secure": "readBool"}
+            ],
+            "name": "networkCreateVpn",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"netId": "readInt32"}],
+            "name": "networkDestroy",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"netId": "readInt32"},
+                {"iface": "readString16"}
+            ],
+            "name": "networkAddInterface",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"netId": "readInt32"},
+                {"iface": "readString16"}
+            ],
+            "name": "networkRemoveInterface",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"netId": "readInt32"},
+                {
+                    "uidRanges": "readParcelableVector",
+                    "__parcelType": "android.net.UidRange"
+                }
+            ],
+            "name": "networkAddUidRanges",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"netId": "readInt32"},
+                {
+                    "uidRanges": "readParcelableVector",
+                    "__parcelType": "android.net.UidRange"
+                }
+            ],
+            "name": "networkRemoveUidRanges",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"add": "readBool"},
+                {
+                    "uidRanges": "readParcelableVector",
+                    "__parcelType": "android.net.UidRange"
+                }
+            ],
+            "name": "networkRejectNonSecureVpn",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {
+                    "uidRanges": "readParcelableVector",
+                    "__parcelType": "android.net.UidRange"
+                },
+                {"exemptUids": "readInt32Vector"}
+            ],
+            "name": "socketDestroy",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"netId": "readInt32"},
+                {"servers": "readString16Vector"},
+                {"domains": "readString16Vector"},
+                {"params": "readInt32Vector"},
+                {"tlsName": "readString16"},
+                {"tlsServers": "readString16Vector"},
+                {"tlsFingerprints": "readString16Vector"}
+            ],
+            "name": "setResolverConfiguration",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [{"netId": "readInt32"}],
+            "name": "getResolverInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"servers": "readString16Vector"},
+                {"domains": "readString16Vector"},
+                {"params": "readInt32Vector"},
+                {"stats": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 15,
+            "in": [],
+            "name": "tetherApplyDnsInterfaces",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 16,
+            "in": [],
+            "name": "tetherGetStats",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.os.PersistableBundle"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 17,
+            "in": [
+                {"ifName": "readString16"},
+                {"addrString": "readString16"},
+                {"prefixLength": "readInt32"}
+            ],
+            "name": "interfaceAddAddress",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"ifName": "readString16"},
+                {"addrString": "readString16"},
+                {"prefixLength": "readInt32"}
+            ],
+            "name": "interfaceDelAddress",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 19,
+            "in": [
+                {"family": "readInt32"},
+                {"which": "readInt32"},
+                {"ifname": "readString16"},
+                {"parameter": "readString16"},
+                {"value": "readString16"}
+            ],
+            "name": "setProcSysNet",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 20,
+            "in": [],
+            "name": "getMetricsReportingLevel",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 21,
+            "in": [{"level": "readInt32"}],
+            "name": "setMetricsReportingLevel",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 22,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "socket": "readParcelable",
+                        "__parcelType": "FileDescriptor"
+                    }]
+                },
+                {"newUid": "readInt32"}
+            ],
+            "name": "ipSecSetEncapSocketOwner",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 23,
+            "in": [
+                {"transformId": "readInt32"},
+                {"sourceAddress": "readString16"},
+                {"destinationAddress": "readString16"},
+                {"spi": "readInt32"}
+            ],
+            "name": "ipSecAllocateSpi",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 24,
+            "in": [
+                {"transformId": "readInt32"},
+                {"mode": "readInt32"},
+                {"sourceAddress": "readString16"},
+                {"destinationAddress": "readString16"},
+                {"underlyingNetId": "readInt32"},
+                {"spi": "readInt32"},
+                {"markValue": "readInt32"},
+                {"markMask": "readInt32"},
+                {"authAlgo": "readString16"},
+                {"authKey": "readByteVector"},
+                {"authTruncBits": "readInt32"},
+                {"cryptAlgo": "readString16"},
+                {"cryptKey": "readByteVector"},
+                {"cryptTruncBits": "readInt32"},
+                {"aeadAlgo": "readString16"},
+                {"aeadKey": "readByteVector"},
+                {"aeadIcvBits": "readInt32"},
+                {"encapType": "readInt32"},
+                {"encapLocalPort": "readInt32"},
+                {"encapRemotePort": "readInt32"}
+            ],
+            "name": "ipSecAddSecurityAssociation",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 25,
+            "in": [
+                {"transformId": "readInt32"},
+                {"sourceAddress": "readString16"},
+                {"destinationAddress": "readString16"},
+                {"spi": "readInt32"},
+                {"markValue": "readInt32"},
+                {"markMask": "readInt32"}
+            ],
+            "name": "ipSecDeleteSecurityAssociation",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 26,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "socket": "readParcelable",
+                        "__parcelType": "FileDescriptor"
+                    }]
+                },
+                {"transformId": "readInt32"},
+                {"direction": "readInt32"},
+                {"sourceAddress": "readString16"},
+                {"destinationAddress": "readString16"},
+                {"spi": "readInt32"}
+            ],
+            "name": "ipSecApplyTransportModeTransform",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 27,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "socket": "readParcelable",
+                        "__parcelType": "FileDescriptor"
+                    }]
+                }
+            ],
+            "name": "ipSecRemoveTransportModeTransform",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 28,
+            "in": [
+                {"transformId": "readInt32"},
+                {"direction": "readInt32"},
+                {"sourceAddress": "readString16"},
+                {"destinationAddress": "readString16"},
+                {"spi": "readInt32"},
+                {"markValue": "readInt32"},
+                {"markMask": "readInt32"}
+            ],
+            "name": "ipSecAddSecurityPolicy",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 29,
+            "in": [
+                {"transformId": "readInt32"},
+                {"direction": "readInt32"},
+                {"sourceAddress": "readString16"},
+                {"destinationAddress": "readString16"},
+                {"spi": "readInt32"},
+                {"markValue": "readInt32"},
+                {"markMask": "readInt32"}
+            ],
+            "name": "ipSecUpdateSecurityPolicy",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 30,
+            "in": [
+                {"transformId": "readInt32"},
+                {"direction": "readInt32"},
+                {"sourceAddress": "readString16"},
+                {"destinationAddress": "readString16"},
+                {"markValue": "readInt32"},
+                {"markMask": "readInt32"}
+            ],
+            "name": "ipSecDeleteSecurityPolicy",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 31,
+            "in": [
+                {"deviceName": "readString16"},
+                {"localAddress": "readString16"},
+                {"remoteAddress": "readString16"},
+                {"iKey": "readInt32"},
+                {"oKey": "readInt32"}
+            ],
+            "name": "addVirtualTunnelInterface",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 32,
+            "in": [
+                {"deviceName": "readString16"},
+                {"localAddress": "readString16"},
+                {"remoteAddress": "readString16"},
+                {"iKey": "readInt32"},
+                {"oKey": "readInt32"}
+            ],
+            "name": "updateVirtualTunnelInterface",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 33,
+            "in": [{"deviceName": "readString16"}],
+            "name": "removeVirtualTunnelInterface",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 34,
+            "in": [
+                {"ifName": "readString16"},
+                {"prefix": "readString16"},
+                {"mark": "readInt32"},
+                {"mask": "readInt32"}
+            ],
+            "name": "wakeupAddInterface",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 35,
+            "in": [
+                {"ifName": "readString16"},
+                {"prefix": "readString16"},
+                {"mark": "readInt32"},
+                {"mask": "readInt32"}
+            ],
+            "name": "wakeupDelInterface",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 36,
+            "in": [
+                {"ifName": "readString16"},
+                {"mode": "readInt32"}
+            ],
+            "name": "setIPv6AddrGenMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 37,
+            "in": [],
+            "name": "trafficCheckBpfStatsEnable",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "INetd",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

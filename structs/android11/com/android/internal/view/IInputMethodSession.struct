@@ -1,0 +1,135 @@
+{
+    "produced_on": "2022-08-26T09:55:24.348264304Z",
+    "source_location": "",
+    "full_name": "com.android.internal.view.IInputMethodSession",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"token": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "text": "readParcelable",
+                        "__parcelType": "android.view.inputmethod.ExtractedText"
+                    }]
+                }
+            ],
+            "name": "updateExtractedText",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"oldSelStart": "readInt32"},
+                {"oldSelEnd": "readInt32"},
+                {"newSelStart": "readInt32"},
+                {"newSelEnd": "readInt32"},
+                {"candidatesStart": "readInt32"},
+                {"candidatesEnd": "readInt32"}
+            ],
+            "name": "updateSelection",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"focusChanged": "readBool"}],
+            "name": "viewClicked",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "newCursor": "readParcelable",
+                        "__parcelType": "android.graphics.Rect"
+                    }]
+                }
+            ],
+            "name": "updateCursor",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{
+                "completions": "readParcelableVector",
+                "__parcelType": "android.view.inputmethod.CompletionInfo"
+            }],
+            "name": "displayCompletions",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"action": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"data": "readBundle"}]
+                }
+            ],
+            "name": "appPrivateCommand",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"showFlags": "readInt32"},
+                {"hideFlags": "readInt32"}
+            ],
+            "name": "toggleSoftInput",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "finishSession",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "cursorAnchorInfo": "readParcelable",
+                        "__parcelType": "android.view.inputmethod.CursorAnchorInfo"
+                    }]
+                }
+            ],
+            "name": "updateCursorAnchorInfo",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [],
+            "name": "notifyImeHidden",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [],
+            "name": "removeImeSurface",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IInputMethodSession",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

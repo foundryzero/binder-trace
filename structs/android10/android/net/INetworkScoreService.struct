@@ -1,0 +1,134 @@
+{
+    "produced_on": "2022-12-02T13:44:07.023043898Z",
+    "source_location": "",
+    "full_name": "android.net.INetworkScoreService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{
+                "networks": "readParcelableVector",
+                "__parcelType": "android.net.ScoredNetwork"
+            }],
+            "name": "updateScores",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "clearScores",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"packageName": "readString16"}],
+            "name": "setActiveScorer",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "disableScoring",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"networkType": "readInt32"},
+                {"scoreCache": "readStrongBinder"},
+                {"filterType": "readInt32"}
+            ],
+            "name": "registerNetworkScoreCache",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"networkType": "readInt32"},
+                {"scoreCache": "readStrongBinder"}
+            ],
+            "name": "unregisterNetworkScoreCache",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{
+                "networks": "readParcelableVector",
+                "__parcelType": "android.net.NetworkKey"
+            }],
+            "name": "requestScores",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [{"callingUid": "readInt32"}],
+            "name": "isCallerActiveScorer",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [],
+            "name": "getActiveScorerPackage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [],
+            "name": "getActiveScorer",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.net.NetworkScorerAppData"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 11,
+            "in": [],
+            "name": "getAllValidScorers",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.net.NetworkScorerAppData"
+                }
+            ]
+        }
+    ],
+    "name": "INetworkScoreService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,61 @@
+{
+    "produced_on": "2022-08-02T11:06:06.439951306Z",
+    "source_location": "",
+    "components": [
+        {"iface": "readString16"},
+        {"addressCount": "readInt32"},
+        {
+            "__backreference": "addressCount",
+            "__repeated": [{
+                "addLinkAddress": "readParcelable",
+                "__parcelType": "__dynamic"
+            }]
+        },
+        {"addressCount": "readInt32"},
+        {"addressCount": "readInt32"},
+        {"setUsePrivateDns": "readBool"},
+        {"setPrivateDnsServerName": "readString16"},
+        {"addressCount": "readInt32"},
+        {"setDomains": "readString16"},
+        {"setDhcpServerAddress": "readByteVector"},
+        {"setMtu": "readInt32"},
+        {"setTcpBufferSizes": "readString16"},
+        {"addressCount": "readInt32"},
+        {
+            "__backreference": "addressCount",
+            "__repeated": [{
+                "addRoute": "readParcelable",
+                "__parcelType": "__dynamic"
+            }]
+        },
+        {"nullcheck": "readByte"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "setHttpProxy": "readParcelable",
+                "__parcelType": "__dynamic"
+            }]
+        },
+        {
+            "setNat64Prefix": "readParcelable",
+            "__parcelType": "__dynamic"
+        },
+        {
+            "readList": "readList",
+            "__parcelType": "android.net.LinkProperties"
+        },
+        {"setWakeOnLanSupported": "readBool"},
+        {
+            "setCaptivePortalApiUrl": "readParcelable",
+            "__parcelType": "__dynamic"
+        },
+        {
+            "setCaptivePortalData": "readParcelable",
+            "__parcelType": "__dynamic"
+        }
+    ],
+    "full_name": "android.net.LinkProperties",
+    "name": "LinkProperties",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

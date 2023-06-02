@@ -1,0 +1,60 @@
+{
+    "produced_on": "2022-08-26T09:55:19.286927869Z",
+    "source_location": "",
+    "full_name": "com.android.car.companiondevicesupport.api.external.IDeviceCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "companionDevice": "readParcelable",
+                        "__parcelType": "com.android.car.companiondevicesupport.api.external.CompanionDevice"
+                    }]
+                }
+            ],
+            "name": "onSecureChannelEstablished",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "companionDevice": "readParcelable",
+                        "__parcelType": "com.android.car.companiondevicesupport.api.external.CompanionDevice"
+                    }]
+                },
+                {"message": "readByteVector"}
+            ],
+            "name": "onMessageReceived",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "companionDevice": "readParcelable",
+                        "__parcelType": "com.android.car.companiondevicesupport.api.external.CompanionDevice"
+                    }]
+                },
+                {"error": "readInt32"}
+            ],
+            "name": "onDeviceError",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IDeviceCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

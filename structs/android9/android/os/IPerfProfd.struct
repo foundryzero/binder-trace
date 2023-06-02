@@ -1,0 +1,48 @@
+{
+    "produced_on": "2022-08-19T10:42:51.079183270Z",
+    "source_location": "",
+    "full_name": "android.os.IPerfProfd",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"collectionInterval": "readInt32"},
+                {"iterations": "readInt32"},
+                {"process": "readInt32"},
+                {"samplingPeriod": "readInt32"},
+                {"samplingFrequency": "readInt32"},
+                {"sampleDuration": "readInt32"},
+                {"stackProfile": "readBool"},
+                {"useElfSymbolizer": "readBool"},
+                {"sendToDropbox": "readBool"}
+            ],
+            "name": "startProfiling",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"config": "readString16"}],
+            "name": "startProfilingString",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"config_proto": "readByteVector"}],
+            "name": "startProfilingProtobuf",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "stopProfiling",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IPerfProfd",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

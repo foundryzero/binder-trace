@@ -1,0 +1,51 @@
+{
+    "produced_on": "2022-08-19T10:42:50.542038721Z",
+    "source_location": "",
+    "full_name": "android.car.hardware.power.ICarPower",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "registerListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "unregisterListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "requestShutdownOnNextSuspend",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "getBootReason",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"listener": "readStrongBinder"},
+                {"token": "readInt32"}
+            ],
+            "name": "finished",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICarPower",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

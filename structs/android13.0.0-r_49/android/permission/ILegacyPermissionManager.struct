@@ -1,0 +1,112 @@
+{
+    "produced_on": "2023-06-01T06:42:35.671359940Z",
+    "source_location": "",
+    "full_name": "android.permission.ILegacyPermissionManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"packageName": "readString16"},
+                {"message": "readString16"},
+                {"callingFeatureId": "readString16"},
+                {"pid": "readInt32"},
+                {"uid": "readInt32"}
+            ],
+            "name": "checkDeviceIdentifierAccess",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"packageName": "readString16"},
+                {"message": "readString16"},
+                {"callingFeatureId": "readString16"},
+                {"pid": "readInt32"},
+                {"uid": "readInt32"}
+            ],
+            "name": "checkPhoneNumberAccess",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"packageNames": "readString16Vector"},
+                {"userId": "readInt32"}
+            ],
+            "name": "grantDefaultPermissionsToEnabledCarrierApps",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"packageNames": "readString16Vector"},
+                {"userId": "readInt32"}
+            ],
+            "name": "grantDefaultPermissionsToEnabledImsServices",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"packageNames": "readString16Vector"},
+                {"userId": "readInt32"}
+            ],
+            "name": "grantDefaultPermissionsToEnabledTelephonyDataServices",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"packageNames": "readString16Vector"},
+                {"userId": "readInt32"}
+            ],
+            "name": "revokeDefaultPermissionsFromDisabledTelephonyDataServices",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "grantDefaultPermissionsToActiveLuiApp",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"packageNames": "readString16Vector"},
+                {"userId": "readInt32"}
+            ],
+            "name": "revokeDefaultPermissionsFromLuiApps",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "grantDefaultPermissionsToCarrierServiceApp",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ILegacyPermissionManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

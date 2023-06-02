@@ -1,0 +1,108 @@
+{
+    "produced_on": "2022-08-19T10:42:52.231657306Z",
+    "source_location": "",
+    "full_name": "android.media.soundtrigger.ISoundTriggerDetectionService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "uuid": "readParcelable",
+                        "__parcelType": "android.os.ParcelUuid"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"params": "readBundle"}]
+                },
+                {"client": "readStrongBinder"}
+            ],
+            "name": "setClient",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "uuid": "readParcelable",
+                        "__parcelType": "android.os.ParcelUuid"
+                    }]
+                }
+            ],
+            "name": "removeClient",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "uuid": "readParcelable",
+                        "__parcelType": "android.os.ParcelUuid"
+                    }]
+                },
+                {"opId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "event": "readParcelable",
+                        "__parcelType": "android.media.soundtrigger.SoundTrigger.GenericRecognitionEvent"
+                    }]
+                }
+            ],
+            "name": "onGenericRecognitionEvent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "uuid": "readParcelable",
+                        "__parcelType": "android.os.ParcelUuid"
+                    }]
+                },
+                {"opId": "readInt32"},
+                {"status": "readInt32"}
+            ],
+            "name": "onError",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "uuid": "readParcelable",
+                        "__parcelType": "android.os.ParcelUuid"
+                    }]
+                },
+                {"opId": "readInt32"}
+            ],
+            "name": "onStopOperation",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISoundTriggerDetectionService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

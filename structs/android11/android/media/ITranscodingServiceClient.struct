@@ -1,0 +1,75 @@
+{
+    "produced_on": "2022-08-26T09:55:21.744191211Z",
+    "source_location": "",
+    "full_name": "android.media.ITranscodingServiceClient",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getName",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"jobId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "result": "readParcelable",
+                        "__parcelType": "android.media.TranscodingResultParcel"
+                    }]
+                }
+            ],
+            "name": "onTranscodingFinished",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"jobId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "errorCode": "readParcelable",
+                        "__parcelType": "android.media.TranscodingErrorCode"
+                    }]
+                }
+            ],
+            "name": "onTranscodingFailed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"jobId": "readInt32"},
+                {"oldAwaitNumber": "readInt32"},
+                {"newAwaitNumber": "readInt32"}
+            ],
+            "name": "onAwaitNumberOfJobsChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"jobId": "readInt32"},
+                {"progress": "readInt32"}
+            ],
+            "name": "onProgressUpdate",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ITranscodingServiceClient",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

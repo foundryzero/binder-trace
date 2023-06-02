@@ -1,0 +1,40 @@
+{
+    "produced_on": "2023-06-01T06:42:34.425710845Z",
+    "source_location": "",
+    "components": [
+        {"supportedTypes": "readInt64"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "upstreamNetwork": "readParcelable",
+                "__parcelType": "android.net.Network"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "config": "readParcelable",
+                "__parcelType": "android.net.TetheringConfigurationParcel"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "states": "readParcelable",
+                "__parcelType": "android.net.TetherStatesParcel"
+            }]
+        },
+        {
+            "tetheredClients": "readList",
+            "__parcelType": "android.net.TetheredClient"
+        },
+        {"offloadStatus": "readInt32"}
+    ],
+    "full_name": "android.net.TetheringCallbackStartedParcel",
+    "name": "TetheringCallbackStartedParcel",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

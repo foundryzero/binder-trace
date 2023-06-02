@@ -1,0 +1,59 @@
+{
+    "produced_on": "2022-08-04T09:32:21.130389248Z",
+    "source_location": "",
+    "full_name": "com.android.internal.location.ILocationProviderManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{
+                "packageNames": "readList",
+                "__parcelType": "String"
+            }],
+            "name": "onSetAdditionalProviderPackages",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"allowed": "readBool"}],
+            "name": "onSetAllowed",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "properties": "readParcelable",
+                        "__parcelType": "com.android.internal.location.ProviderProperties"
+                    }]
+                }
+            ],
+            "name": "onSetProperties",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "location": "readParcelable",
+                        "__parcelType": "android.location.Location"
+                    }]
+                }
+            ],
+            "name": "onReportLocation",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ILocationProviderManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,34 @@
+{
+    "produced_on": "2023-06-01T06:42:34.573525649Z",
+    "source_location": "",
+    "full_name": "android.security.IGenerateRkpKeyService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"securityLevel": "readInt32"}],
+            "name": "notifyKeyGenerated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"securityLevel": "readInt32"}],
+            "name": "generateKey",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.security.Status"
+                    }]
+                }
+            ]
+        }
+    ],
+    "name": "IGenerateRkpKeyService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

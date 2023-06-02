@@ -1,0 +1,82 @@
+{
+    "produced_on": "2022-08-04T09:32:19.439199694Z",
+    "source_location": "",
+    "full_name": "android.window.ITaskOrganizer",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "taskInfo": "readParcelable",
+                        "__parcelType": "android.window.ActivityManager.RunningTaskInfo"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "leash": "readParcelable",
+                        "__parcelType": "android.view.SurfaceControl"
+                    }]
+                }
+            ],
+            "name": "onTaskAppeared",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "taskInfo": "readParcelable",
+                        "__parcelType": "android.window.ActivityManager.RunningTaskInfo"
+                    }]
+                }
+            ],
+            "name": "onTaskVanished",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "taskInfo": "readParcelable",
+                        "__parcelType": "android.window.ActivityManager.RunningTaskInfo"
+                    }]
+                }
+            ],
+            "name": "onTaskInfoChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "taskInfo": "readParcelable",
+                        "__parcelType": "android.window.ActivityManager.RunningTaskInfo"
+                    }]
+                }
+            ],
+            "name": "onBackPressedOnTaskRoot",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ITaskOrganizer",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

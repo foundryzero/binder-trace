@@ -1,0 +1,50 @@
+{
+    "produced_on": "2022-12-02T14:11:51.075850950Z",
+    "source_location": "",
+    "components": [
+        {"version": "readInt32"},
+        {"authorityId": "readInt32"},
+        {"totalElapsedTime": "readInt64"},
+        {"numSyncs": "readInt32"},
+        {"numSourcePoll": "readInt32"},
+        {"numSourceOther": "readInt32"},
+        {"numSourceLocal": "readInt32"},
+        {"numSourceUser": "readInt32"},
+        {"lastSuccessTime": "readInt64"},
+        {"lastSuccessSource": "readInt32"},
+        {"lastFailureTime": "readInt64"},
+        {"lastFailureSource": "readInt32"},
+        {"lastFailureMesg": "readString16"},
+        {"initialFailureTime": "readInt64"},
+        {"pending": "readInt32"},
+        {"initialize": "readInt32"},
+        {
+            "__backreference": "version",
+            "__conditional": [
+                {"numSourceFeed": "readInt32"},
+                {"numFailures": "readInt32"},
+                {"numCancels": "readInt32"},
+                {"lastTodayResetTime": "readInt64"},
+                {
+                    "readFromParcel": "readParcelable",
+                    "__parcelType": "android.content.todayStats"
+                },
+                {
+                    "readFromParcel": "readParcelable",
+                    "__parcelType": "android.content.yesterdayStats"
+                }
+            ]
+        },
+        {
+            "__backreference": "version",
+            "__conditional": [
+                {"readLongArray": "readInt64Vector"},
+                {"readLongArray": "readInt64Vector"}
+            ]
+        }
+    ],
+    "full_name": "android.content.SyncStatusInfo",
+    "name": "SyncStatusInfo",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

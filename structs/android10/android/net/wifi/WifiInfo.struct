@@ -1,0 +1,51 @@
+{
+    "produced_on": "2022-12-02T13:45:54.017395583Z",
+    "source_location": "",
+    "components": [
+        {"setNetworkId": "readInt32"},
+        {"setRssi": "readInt32"},
+        {"setLinkSpeed": "readInt32"},
+        {"setTxLinkSpeedMbps": "readInt32"},
+        {"setRxLinkSpeedMbps": "readInt32"},
+        {"setFrequency": "readInt32"},
+        {"nullcheck": "readByte"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{"setInetAddress": "readByteVector"}]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "mWifiSsid": "readParcelable",
+                "__parcelType": "android.net.wifi.WifiSsid"
+            }]
+        },
+        {"mBSSID": "readString16"},
+        {"mMacAddress": "readString16"},
+        {"mMeteredHint": "readInt32"},
+        {"mEphemeral": "readInt32"},
+        {"mTrusted": "readInt32"},
+        {"score": "readInt32"},
+        {"txSuccess": "readInt64"},
+        {"txSuccessRate": "readDouble"},
+        {"txRetries": "readInt64"},
+        {"txRetriesRate": "readDouble"},
+        {"txBad": "readInt64"},
+        {"txBadRate": "readDouble"},
+        {"rxSuccess": "readInt64"},
+        {"rxSuccessRate": "readDouble"},
+        {
+            "mSupplicantState": "readParcelable",
+            "__parcelType": "android.net.wifi.SupplicantState"
+        },
+        {"mOsuAp": "readInt32"},
+        {"mNetworkSuggestionOrSpecifierPackageName": "readString16"},
+        {"mFqdn": "readString16"},
+        {"mProviderFriendlyName": "readString16"}
+    ],
+    "full_name": "android.net.wifi.WifiInfo",
+    "name": "WifiInfo",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

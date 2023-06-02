@@ -1,0 +1,44 @@
+{
+    "produced_on": "2022-08-26T09:55:20.489967975Z",
+    "source_location": "",
+    "full_name": "android.os.IVoldTaskListener",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"status": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "extras": "readParcelable",
+                        "__parcelType": "android.os.PersistableBundle"
+                    }]
+                }
+            ],
+            "name": "onStatus",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"status": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "extras": "readParcelable",
+                        "__parcelType": "android.os.PersistableBundle"
+                    }]
+                }
+            ],
+            "name": "onFinished",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IVoldTaskListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

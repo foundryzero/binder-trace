@@ -1,0 +1,63 @@
+{
+    "produced_on": "2022-12-02T14:07:41.557657486Z",
+    "source_location": "",
+    "components": [
+        {"iface": "readString16"},
+        {"addressCount": "readInt32"},
+        {
+            "__backreference": "addressCount",
+            "__repeated": [{
+                "addLinkAddress": "readParcelable",
+                "__parcelType": "__dynamic"
+            }]
+        },
+        {"addressCount": "readInt32"},
+        {
+            "__backreference": "addressCount",
+            "__repeated": [{"addDnsServer": "readByteVector"}]
+        },
+        {"addressCount": "readInt32"},
+        {
+            "__backreference": "addressCount",
+            "__repeated": [{"addValidatedPrivateDnsServer": "readByteVector"}]
+        },
+        {"setUsePrivateDns": "readBool"},
+        {"setPrivateDnsServerName": "readString16"},
+        {"addressCount": "readInt32"},
+        {
+            "__backreference": "addressCount",
+            "__repeated": [{"addPcscfServer": "readByteVector"}]
+        },
+        {"setDomains": "readString16"},
+        {"setMtu": "readInt32"},
+        {"setTcpBufferSizes": "readString16"},
+        {"addressCount": "readInt32"},
+        {
+            "__backreference": "addressCount",
+            "__repeated": [{
+                "addRoute": "readParcelable",
+                "__parcelType": "__dynamic"
+            }]
+        },
+        {"nullcheck": "readByte"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "setHttpProxy": "readParcelable",
+                "__parcelType": "__dynamic"
+            }]
+        },
+        {
+            "setNat64Prefix": "readParcelable",
+            "__parcelType": "__dynamic"
+        },
+        {
+            "readList": "readList",
+            "__parcelType": "android.net.LinkProperties"
+        }
+    ],
+    "full_name": "android.net.LinkProperties",
+    "name": "LinkProperties",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

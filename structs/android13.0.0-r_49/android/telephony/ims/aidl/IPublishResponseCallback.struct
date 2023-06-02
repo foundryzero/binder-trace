@@ -1,0 +1,39 @@
+{
+    "produced_on": "2023-06-01T06:42:35.094792485Z",
+    "source_location": "",
+    "full_name": "android.telephony.ims.aidl.IPublishResponseCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"code": "readInt32"}],
+            "name": "onCommandError",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"code": "readInt32"},
+                {"reason": "readString16"}
+            ],
+            "name": "onNetworkResponse",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"code": "readInt32"},
+                {"reasonPhrase": "readString16"},
+                {"reasonHeaderCause": "readInt32"},
+                {"reasonHeaderText": "readString16"}
+            ],
+            "name": "onNetworkRespHeader",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IPublishResponseCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

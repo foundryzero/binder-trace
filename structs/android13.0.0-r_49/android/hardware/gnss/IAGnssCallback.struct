@@ -1,0 +1,32 @@
+{
+    "produced_on": "2023-06-01T06:42:38.913385035Z",
+    "source_location": "",
+    "full_name": "android.hardware.gnss.IAGnssCallback",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "type": "readParcelable",
+                    "__parcelType": "android.hardware.gnss.AGnssType"
+                }]
+            },
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "status": "readParcelable",
+                    "__parcelType": "android.hardware.gnss.AGnssStatusValue"
+                }]
+            }
+        ],
+        "name": "agnssStatusCb",
+        "oneWay": false,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "IAGnssCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

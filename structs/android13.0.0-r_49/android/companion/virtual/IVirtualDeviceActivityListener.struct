@@ -1,0 +1,34 @@
+{
+    "produced_on": "2023-06-01T06:42:35.798242831Z",
+    "source_location": "",
+    "full_name": "android.companion.virtual.IVirtualDeviceActivityListener",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"displayId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "topActivity": "readParcelable",
+                        "__parcelType": "android.content.ComponentName"
+                    }]
+                }
+            ],
+            "name": "onTopActivityChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"displayId": "readInt32"}],
+            "name": "onDisplayEmpty",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IVirtualDeviceActivityListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

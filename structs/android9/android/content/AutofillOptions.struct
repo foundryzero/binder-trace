@@ -1,0 +1,26 @@
+{
+    "produced_on": "2022-08-02T10:58:26.031693234Z",
+    "source_location": "",
+    "components": [
+        {"loggingLevel": "readInt32"},
+        {"compatMode": "readBool"},
+        {"augmentedAutofillEnabled": "readBool"},
+        {"whitelistedActivitiesForAugmentedAutofill": "readArraySet"},
+        {"appDisabledExpiration": "readInt64"},
+        {"size": "readInt32"},
+        {
+            "__backreference": "size",
+            "__conditional": [{
+                "__backreference": "size",
+                "__repeated": [
+                    {"put": "readString16"},
+                    {"put": "readInt64"}
+                ]
+            }]
+        }
+    ],
+    "full_name": "android.content.AutofillOptions",
+    "name": "AutofillOptions",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

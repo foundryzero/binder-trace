@@ -1,0 +1,54 @@
+{
+    "produced_on": "2022-12-02T13:44:05.786578957Z",
+    "source_location": "",
+    "full_name": "android.car.ICar",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"helper": "readStrongBinder"}],
+            "name": "setCarServiceHelper",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"userHandle": "readInt32"},
+                {"unlocked": "readInt32"}
+            ],
+            "name": "setUserLockStatus",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"userHandle": "readInt32"}],
+            "name": "onSwitchUser",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"serviceName": "readString16"}],
+            "name": "getCarService",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "getCarConnectionType",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        }
+    ],
+    "name": "ICar",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,522 @@
+{
+    "produced_on": "2023-06-01T06:42:34.623296609Z",
+    "source_location": "",
+    "full_name": "com.android.wm.shell.splitscreen.ISplitScreen",
+    "calls": [
+        {
+            "code": 2,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "registerSplitScreenListener",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "unregisterSplitScreenListener",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"taskId": "readInt32"}],
+            "name": "removeFromSideStage",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"toTopTaskId": "readInt32"}],
+            "name": "exitSplitScreen",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"exitSplitScreenOnHide": "readBool"}],
+            "name": "exitSplitScreenOnHide",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"taskId": "readInt32"},
+                {"position": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"options": "readBundle"}]
+                }
+            ],
+            "name": "startTask",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"packageName": "readString16"},
+                {"shortcutId": "readString16"},
+                {"position": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"options": "readBundle"}]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "user": "readParcelable",
+                        "__parcelType": "android.os.UserHandle"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "instanceId": "readParcelable",
+                        "__parcelType": "com.android.internal.logging.InstanceId"
+                    }]
+                }
+            ],
+            "name": "startShortcut",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "intent": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "fillInIntent": "readParcelable",
+                        "__parcelType": "android.content.Intent"
+                    }]
+                },
+                {"position": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"options": "readBundle"}]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "instanceId": "readParcelable",
+                        "__parcelType": "com.android.internal.logging.InstanceId"
+                    }]
+                }
+            ],
+            "name": "startIntent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"taskId1": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"options1": "readBundle"}]
+                },
+                {"taskId2": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"options2": "readBundle"}]
+                },
+                {"splitPosition": "readInt32"},
+                {"splitRatio": "readFloat"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "remoteTransition": "readParcelable",
+                        "__parcelType": "android.window.RemoteTransition"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "instanceId": "readParcelable",
+                        "__parcelType": "com.android.internal.logging.InstanceId"
+                    }]
+                }
+            ],
+            "name": "startTasks",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "pendingIntent": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"options1": "readBundle"}]
+                },
+                {"taskId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"options2": "readBundle"}]
+                },
+                {"sidePosition": "readInt32"},
+                {"splitRatio": "readFloat"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "remoteTransition": "readParcelable",
+                        "__parcelType": "android.window.RemoteTransition"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "instanceId": "readParcelable",
+                        "__parcelType": "com.android.internal.logging.InstanceId"
+                    }]
+                }
+            ],
+            "name": "startIntentAndTask",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "shortcutInfo": "readParcelable",
+                        "__parcelType": "android.content.pm.ShortcutInfo"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"options1": "readBundle"}]
+                },
+                {"taskId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"options2": "readBundle"}]
+                },
+                {"splitPosition": "readInt32"},
+                {"splitRatio": "readFloat"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "remoteTransition": "readParcelable",
+                        "__parcelType": "android.window.RemoteTransition"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "instanceId": "readParcelable",
+                        "__parcelType": "com.android.internal.logging.InstanceId"
+                    }]
+                }
+            ],
+            "name": "startShortcutAndTask",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"taskId1": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"options1": "readBundle"}]
+                },
+                {"taskId2": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"options2": "readBundle"}]
+                },
+                {"splitPosition": "readInt32"},
+                {"splitRatio": "readFloat"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "adapter": "readParcelable",
+                        "__parcelType": "android.view.RemoteAnimationAdapter"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "instanceId": "readParcelable",
+                        "__parcelType": "com.android.internal.logging.InstanceId"
+                    }]
+                }
+            ],
+            "name": "startTasksWithLegacyTransition",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "pendingIntent": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"options1": "readBundle"}]
+                },
+                {"taskId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"options2": "readBundle"}]
+                },
+                {"splitPosition": "readInt32"},
+                {"splitRatio": "readFloat"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "adapter": "readParcelable",
+                        "__parcelType": "android.view.RemoteAnimationAdapter"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "instanceId": "readParcelable",
+                        "__parcelType": "com.android.internal.logging.InstanceId"
+                    }]
+                }
+            ],
+            "name": "startIntentAndTaskWithLegacyTransition",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "shortcutInfo": "readParcelable",
+                        "__parcelType": "android.content.pm.ShortcutInfo"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"options1": "readBundle"}]
+                },
+                {"taskId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"options2": "readBundle"}]
+                },
+                {"splitPosition": "readInt32"},
+                {"splitRatio": "readFloat"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "adapter": "readParcelable",
+                        "__parcelType": "android.view.RemoteAnimationAdapter"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "instanceId": "readParcelable",
+                        "__parcelType": "com.android.internal.logging.InstanceId"
+                    }]
+                }
+            ],
+            "name": "startShortcutAndTaskWithLegacyTransition",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 19,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "pendingIntent1": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"options1": "readBundle"}]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "pendingIntent2": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"options2": "readBundle"}]
+                },
+                {"splitPosition": "readInt32"},
+                {"splitRatio": "readFloat"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "adapter": "readParcelable",
+                        "__parcelType": "android.view.RemoteAnimationAdapter"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "instanceId": "readParcelable",
+                        "__parcelType": "com.android.internal.logging.InstanceId"
+                    }]
+                }
+            ],
+            "name": "startIntentsWithLegacyTransition",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 20,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "pendingIntent1": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"options1": "readBundle"}]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "pendingIntent2": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"options2": "readBundle"}]
+                },
+                {"splitPosition": "readInt32"},
+                {"splitRatio": "readFloat"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "remoteTransition": "readParcelable",
+                        "__parcelType": "android.window.RemoteTransition"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "instanceId": "readParcelable",
+                        "__parcelType": "com.android.internal.logging.InstanceId"
+                    }]
+                }
+            ],
+            "name": "startIntents",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [{
+                "appTargets": "readParcelableVector",
+                "__parcelType": "android.view.RemoteAnimationTarget"
+            }],
+            "name": "onGoingToRecentsLegacy",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.view.RemoteAnimationTarget"
+                }
+            ]
+        },
+        {
+            "code": 15,
+            "in": [{
+                "appTargets": "readParcelableVector",
+                "__parcelType": "android.view.RemoteAnimationTarget"
+            }],
+            "name": "onStartingSplitLegacy",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.view.RemoteAnimationTarget"
+                }
+            ]
+        }
+    ],
+    "name": "ISplitScreen",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

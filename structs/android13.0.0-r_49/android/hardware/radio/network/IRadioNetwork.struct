@@ -1,0 +1,377 @@
+{
+    "produced_on": "2023-06-01T06:42:37.377701578Z",
+    "source_location": "",
+    "full_name": "android.hardware.radio.network.IRadioNetwork",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"serial": "readInt32"}],
+            "name": "getAllowedNetworkTypesBitmap",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"serial": "readInt32"}],
+            "name": "getAvailableBandModes",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"serial": "readInt32"}],
+            "name": "getAvailableNetworks",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"serial": "readInt32"}],
+            "name": "getBarringInfo",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"serial": "readInt32"}],
+            "name": "getCdmaRoamingPreference",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"serial": "readInt32"}],
+            "name": "getCellInfoList",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"serial": "readInt32"}],
+            "name": "getDataRegistrationState",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{"serial": "readInt32"}],
+            "name": "getImsRegistrationState",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [{"serial": "readInt32"}],
+            "name": "getNetworkSelectionMode",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [{"serial": "readInt32"}],
+            "name": "getOperator",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [{"serial": "readInt32"}],
+            "name": "getSignalStrength",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [{"serial": "readInt32"}],
+            "name": "getSystemSelectionChannels",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [{"serial": "readInt32"}],
+            "name": "getVoiceRadioTechnology",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [{"serial": "readInt32"}],
+            "name": "getVoiceRegistrationState",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [{"serial": "readInt32"}],
+            "name": "isNrDualConnectivityEnabled",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [],
+            "name": "responseAcknowledgement",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [
+                {"serial": "readInt32"},
+                {"networkTypeBitmap": "readInt32"}
+            ],
+            "name": "setAllowedNetworkTypesBitmap",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "mode": "readParcelable",
+                        "__parcelType": "android.hardware.radio.network.RadioBandMode"
+                    }]
+                }
+            ],
+            "name": "setBandMode",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 19,
+            "in": [
+                {"serial": "readInt32"},
+                {"facility": "readString16"},
+                {"oldPassword": "readString16"},
+                {"newPassword": "readString16"}
+            ],
+            "name": "setBarringPassword",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 20,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.hardware.radio.network.CdmaRoamingType"
+                    }]
+                }
+            ],
+            "name": "setCdmaRoamingPreference",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 21,
+            "in": [
+                {"serial": "readInt32"},
+                {"rate": "readInt32"}
+            ],
+            "name": "setCellInfoListRate",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 22,
+            "in": [
+                {"serial": "readInt32"},
+                {"indicationFilter": "readInt32"}
+            ],
+            "name": "setIndicationFilter",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 23,
+            "in": [
+                {"serial": "readInt32"},
+                {"hysteresisMs": "readInt32"},
+                {"hysteresisDlKbps": "readInt32"},
+                {"hysteresisUlKbps": "readInt32"},
+                {"thresholdsDownlinkKbps": "readInt32Vector"},
+                {"thresholdsUplinkKbps": "readInt32Vector"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "accessNetwork": "readParcelable",
+                        "__parcelType": "android.hardware.radio.AccessNetwork"
+                    }]
+                }
+            ],
+            "name": "setLinkCapacityReportingCriteria",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 24,
+            "in": [
+                {"serial": "readInt32"},
+                {"enable": "readBool"}
+            ],
+            "name": "setLocationUpdates",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 25,
+            "in": [{"serial": "readInt32"}],
+            "name": "setNetworkSelectionModeAutomatic",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 26,
+            "in": [
+                {"serial": "readInt32"},
+                {"operatorNumeric": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "ran": "readParcelable",
+                        "__parcelType": "android.hardware.radio.AccessNetwork"
+                    }]
+                }
+            ],
+            "name": "setNetworkSelectionModeManual",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 27,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "nrDualConnectivityState": "readParcelable",
+                        "__parcelType": "android.hardware.radio.network.NrDualConnectivityState"
+                    }]
+                }
+            ],
+            "name": "setNrDualConnectivityState",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 28,
+            "in": [
+                {"radioNetworkResponse": "readStrongBinder"},
+                {"radioNetworkIndication": "readStrongBinder"}
+            ],
+            "name": "setResponseFunctions",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 29,
+            "in": [
+                {"serial": "readInt32"},
+                {
+                    "signalThresholdInfos": "readParcelableVector",
+                    "__parcelType": "android.hardware.radio.network.SignalThresholdInfo"
+                }
+            ],
+            "name": "setSignalStrengthReportingCriteria",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 30,
+            "in": [
+                {"serial": "readInt32"},
+                {"enable": "readBool"}
+            ],
+            "name": "setSuppServiceNotifications",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 31,
+            "in": [
+                {"serial": "readInt32"},
+                {"specifyChannels": "readBool"},
+                {
+                    "specifiers": "readParcelableVector",
+                    "__parcelType": "android.hardware.radio.network.RadioAccessSpecifier"
+                }
+            ],
+            "name": "setSystemSelectionChannels",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 32,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.hardware.radio.network.NetworkScanRequest"
+                    }]
+                }
+            ],
+            "name": "startNetworkScan",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 33,
+            "in": [{"serial": "readInt32"}],
+            "name": "stopNetworkScan",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 34,
+            "in": [
+                {"serial": "readInt32"},
+                {"netPin": "readString16"}
+            ],
+            "name": "supplyNetworkDepersonalization",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 35,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "usageSetting": "readParcelable",
+                        "__parcelType": "android.hardware.radio.network.UsageSetting"
+                    }]
+                }
+            ],
+            "name": "setUsageSetting",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 36,
+            "in": [{"serial": "readInt32"}],
+            "name": "getUsageSetting",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IRadioNetwork",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

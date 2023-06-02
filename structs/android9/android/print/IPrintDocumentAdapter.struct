@@ -1,0 +1,91 @@
+{
+    "produced_on": "2022-08-19T10:42:53.262904339Z",
+    "source_location": "",
+    "full_name": "android.print.IPrintDocumentAdapter",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"observer": "readStrongBinder"}],
+            "name": "setObserver",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "start",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "oldAttributes": "readParcelable",
+                        "__parcelType": "android.print.PrintAttributes"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "newAttributes": "readParcelable",
+                        "__parcelType": "android.print.PrintAttributes"
+                    }]
+                },
+                {"callback": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"metadata": "readBundle"}]
+                },
+                {"sequence": "readInt32"}
+            ],
+            "name": "layout",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {
+                    "pages": "readParcelableVector",
+                    "__parcelType": "android.print.PageRange"
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "fd": "readParcelable",
+                        "__parcelType": "android.os.ParcelFileDescriptor"
+                    }]
+                },
+                {"callback": "readStrongBinder"},
+                {"sequence": "readInt32"}
+            ],
+            "name": "write",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "finish",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"reason": "readString16"}],
+            "name": "kill",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IPrintDocumentAdapter",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

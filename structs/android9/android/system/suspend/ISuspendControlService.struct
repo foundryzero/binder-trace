@@ -1,0 +1,53 @@
+{
+    "produced_on": "2022-08-04T09:32:15.614367953Z",
+    "source_location": "",
+    "full_name": "android.system.suspend.ISuspendControlService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "enableAutosuspend",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "registerCallback",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "forceSuspend",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "getWakeLockStats",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.system.suspend.WakeLockInfo"
+                }
+            ]
+        }
+    ],
+    "name": "ISuspendControlService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

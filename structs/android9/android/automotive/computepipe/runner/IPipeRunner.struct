@@ -1,0 +1,144 @@
+{
+    "produced_on": "2022-08-04T09:32:14.109916372Z",
+    "source_location": "",
+    "full_name": "android.automotive.computepipe.runner.IPipeRunner",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "statecb": "readParcelable",
+                        "__parcelType": "android.automotive.computepipe.runner.IPipeStateCallback"
+                    }]
+                }
+            ],
+            "name": "init",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "getPipeDescriptor",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.automotive.computepipe.runner.PipeDescriptor"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"configId": "readInt32"}],
+            "name": "setPipeInputSource",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"configId": "readInt32"}],
+            "name": "setPipeOffloadOptions",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"configId": "readInt32"}],
+            "name": "setPipeTermination",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"configId": "readInt32"},
+                {"maxInFlightCount": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "handler": "readParcelable",
+                        "__parcelType": "android.automotive.computepipe.runner.IPipeStream"
+                    }]
+                }
+            ],
+            "name": "setPipeOutputConfig",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "applyPipeConfigs",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "resetPipeConfigs",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [],
+            "name": "startPipe",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [],
+            "name": "stopPipe",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"bufferId": "readInt32"},
+                {"streamId": "readInt32"}
+            ],
+            "name": "doneWithPacket",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [],
+            "name": "getPipeDebugger",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.automotive.computepipe.runner.IPipeDebugger"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 13,
+            "in": [],
+            "name": "releaseRunner",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IPipeRunner",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

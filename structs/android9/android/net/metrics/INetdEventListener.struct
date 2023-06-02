@@ -1,0 +1,83 @@
+{
+    "produced_on": "2022-08-19T10:42:51.005135698Z",
+    "source_location": "",
+    "full_name": "android.net.metrics.INetdEventListener",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"netId": "readInt32"},
+                {"eventType": "readInt32"},
+                {"returnCode": "readInt32"},
+                {"latencyMs": "readInt32"},
+                {"hostname": "readString16"},
+                {"ipAddresses": "readString16Vector"},
+                {"ipAddressesCount": "readInt32"},
+                {"uid": "readInt32"}
+            ],
+            "name": "onDnsEvent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"netId": "readInt32"},
+                {"ipAddress": "readString16"},
+                {"hostname": "readString16"},
+                {"validated": "readBool"}
+            ],
+            "name": "onPrivateDnsValidationEvent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"netId": "readInt32"},
+                {"error": "readInt32"},
+                {"latencyMs": "readInt32"},
+                {"ipAddr": "readString16"},
+                {"port": "readInt32"},
+                {"uid": "readInt32"}
+            ],
+            "name": "onConnectEvent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"prefix": "readString16"},
+                {"uid": "readInt32"},
+                {"ethertype": "readInt32"},
+                {"ipNextHeader": "readInt32"},
+                {"dstHw": "readByteVector"},
+                {"srcIp": "readString16"},
+                {"dstIp": "readString16"},
+                {"srcPort": "readInt32"},
+                {"dstPort": "readInt32"},
+                {"timestampNs": "readInt64"}
+            ],
+            "name": "onWakeupEvent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"networkIds": "readInt32Vector"},
+                {"sentPackets": "readInt32Vector"},
+                {"lostPackets": "readInt32Vector"},
+                {"rttUs": "readInt32Vector"},
+                {"sentAckDiffMs": "readInt32Vector"}
+            ],
+            "name": "onTcpSocketStatsEvent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "INetdEventListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

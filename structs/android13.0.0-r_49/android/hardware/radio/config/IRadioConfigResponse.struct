@@ -1,0 +1,136 @@
+{
+    "produced_on": "2023-06-01T06:42:37.454047916Z",
+    "source_location": "",
+    "full_name": "android.hardware.radio.config.IRadioConfigResponse",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "info": "readParcelable",
+                        "__parcelType": "android.hardware.radio.config.android.hardware.radio.RadioResponseInfo"
+                    }]
+                },
+                {"modemReducedFeatureSet1": "readBool"}
+            ],
+            "name": "getHalDeviceCapabilitiesResponse",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "info": "readParcelable",
+                        "__parcelType": "android.hardware.radio.config.android.hardware.radio.RadioResponseInfo"
+                    }]
+                },
+                {"numOfLiveModems": "readByte"}
+            ],
+            "name": "getNumOfLiveModemsResponse",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "info": "readParcelable",
+                        "__parcelType": "android.hardware.radio.config.android.hardware.radio.RadioResponseInfo"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "phoneCapability": "readParcelable",
+                        "__parcelType": "android.hardware.radio.config.PhoneCapability"
+                    }]
+                }
+            ],
+            "name": "getPhoneCapabilityResponse",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "info": "readParcelable",
+                        "__parcelType": "android.hardware.radio.config.android.hardware.radio.RadioResponseInfo"
+                    }]
+                },
+                {
+                    "slotStatus": "readParcelableVector",
+                    "__parcelType": "android.hardware.radio.config.SimSlotStatus"
+                }
+            ],
+            "name": "getSimSlotsStatusResponse",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "info": "readParcelable",
+                        "__parcelType": "android.hardware.radio.config.android.hardware.radio.RadioResponseInfo"
+                    }]
+                }
+            ],
+            "name": "setNumOfLiveModemsResponse",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "info": "readParcelable",
+                        "__parcelType": "android.hardware.radio.config.android.hardware.radio.RadioResponseInfo"
+                    }]
+                }
+            ],
+            "name": "setPreferredDataModemResponse",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "info": "readParcelable",
+                        "__parcelType": "android.hardware.radio.config.android.hardware.radio.RadioResponseInfo"
+                    }]
+                }
+            ],
+            "name": "setSimSlotsMappingResponse",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IRadioConfigResponse",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

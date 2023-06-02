@@ -1,0 +1,41 @@
+{
+    "produced_on": "2023-06-01T06:42:34.164508186Z",
+    "source_location": "",
+    "full_name": "android.system.virtualmachineservice.IVirtualMachineService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "notifyPayloadStarted",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "notifyPayloadReady",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"exitCode": "readInt32"}],
+            "name": "notifyPayloadFinished",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"errorCode": "readInt32"},
+                {"message": "readString16"}
+            ],
+            "name": "notifyError",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IVirtualMachineService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

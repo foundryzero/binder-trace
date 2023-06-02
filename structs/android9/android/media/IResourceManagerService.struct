@@ -1,0 +1,96 @@
+{
+    "produced_on": "2022-08-04T09:32:17.346005195Z",
+    "source_location": "",
+    "full_name": "android.media.IResourceManagerService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{
+                "policies": "readParcelableVector",
+                "__parcelType": "android.media.MediaResourcePolicyParcel"
+            }],
+            "name": "config",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"pid": "readInt32"},
+                {"uid": "readInt32"},
+                {"clientId": "readInt64"},
+                {"client": "readStrongBinder"},
+                {
+                    "resources": "readParcelableVector",
+                    "__parcelType": "android.media.MediaResourceParcel"
+                }
+            ],
+            "name": "addResource",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"pid": "readInt32"},
+                {"clientId": "readInt64"},
+                {
+                    "resources": "readParcelableVector",
+                    "__parcelType": "android.media.MediaResourceParcel"
+                }
+            ],
+            "name": "removeResource",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"pid": "readInt32"},
+                {"clientId": "readInt64"}
+            ],
+            "name": "removeClient",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"callingPid": "readInt32"},
+                {
+                    "resources": "readParcelableVector",
+                    "__parcelType": "android.media.MediaResourceParcel"
+                }
+            ],
+            "name": "reclaimResource",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"originalPid": "readInt32"},
+                {"newPid": "readInt32"}
+            ],
+            "name": "overridePid",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"pid": "readInt32"},
+                {"clientId": "readInt64"}
+            ],
+            "name": "markClientForPendingRemoval",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IResourceManagerService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

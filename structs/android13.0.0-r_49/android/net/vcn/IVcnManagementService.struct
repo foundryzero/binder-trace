@@ -1,0 +1,138 @@
+{
+    "produced_on": "2023-06-01T06:42:35.789840914Z",
+    "source_location": "",
+    "full_name": "android.net.vcn.IVcnManagementService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "subscriptionGroup": "readParcelable",
+                        "__parcelType": "android.os.ParcelUuid"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "config": "readParcelable",
+                        "__parcelType": "android.net.vcn.VcnConfig"
+                    }]
+                },
+                {"opPkgName": "readString16"}
+            ],
+            "name": "setVcnConfig",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "subscriptionGroup": "readParcelable",
+                        "__parcelType": "android.os.ParcelUuid"
+                    }]
+                },
+                {"opPkgName": "readString16"}
+            ],
+            "name": "clearVcnConfig",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"opPkgName": "readString16"}],
+            "name": "getConfiguredSubscriptionGroups",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.os.ParcelUuid"
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "addVcnUnderlyingNetworkPolicyListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "removeVcnUnderlyingNetworkPolicyListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "nc": "readParcelable",
+                        "__parcelType": "android.net.NetworkCapabilities"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "lp": "readParcelable",
+                        "__parcelType": "android.net.LinkProperties"
+                    }]
+                }
+            ],
+            "name": "getUnderlyingNetworkPolicy",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.net.vcn.VcnUnderlyingNetworkPolicy"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "subscriptionGroup": "readParcelable",
+                        "__parcelType": "android.os.ParcelUuid"
+                    }]
+                },
+                {"callback": "readStrongBinder"},
+                {"opPkgName": "readString16"}
+            ],
+            "name": "registerVcnStatusCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "unregisterVcnStatusCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IVcnManagementService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

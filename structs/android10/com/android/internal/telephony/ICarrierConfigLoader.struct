@@ -1,0 +1,74 @@
+{
+    "produced_on": "2022-12-02T13:44:06.746366462Z",
+    "source_location": "",
+    "full_name": "com.android.internal.telephony.ICarrierConfigLoader",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"subId": "readInt32"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "getConfigForSubId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.os.PersistableBundle"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"subId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "overrides": "readParcelable",
+                        "__parcelType": "android.os.PersistableBundle"
+                    }]
+                }
+            ],
+            "name": "overrideConfig",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"subId": "readInt32"}],
+            "name": "notifyConfigChangedForSubId",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"phoneId": "readInt32"},
+                {"simState": "readString16"}
+            ],
+            "name": "updateConfigForPhoneId",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "getDefaultCarrierServicePackageName",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        }
+    ],
+    "name": "ICarrierConfigLoader",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

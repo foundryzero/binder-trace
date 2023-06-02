@@ -1,0 +1,46 @@
+{
+    "produced_on": "2023-06-01T06:42:38.290802909Z",
+    "source_location": "",
+    "components": [
+        {"id": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "streamType": "readParcelable",
+                "__parcelType": "android.hardware.automotive.evs.StreamType"
+            }]
+        },
+        {"width": "readInt32"},
+        {"height": "readInt32"},
+        {"framerate": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "format": "readParcelable",
+                "__parcelType": "android.hardware.graphics.common.PixelFormat"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "usage": "readParcelable",
+                "__parcelType": "android.hardware.graphics.common.BufferUsage"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "rotation": "readParcelable",
+                "__parcelType": "android.hardware.automotive.evs.Rotation"
+            }]
+        }
+    ],
+    "full_name": "android.hardware.automotive.evs.Stream",
+    "name": "Stream",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

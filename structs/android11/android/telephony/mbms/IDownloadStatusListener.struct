@@ -1,0 +1,33 @@
+{
+    "produced_on": "2022-08-26T09:55:22.120322238Z",
+    "source_location": "",
+    "full_name": "android.telephony.mbms.IDownloadStatusListener",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "request": "readParcelable",
+                    "__parcelType": "android.telephony.mbms.DownloadRequest"
+                }]
+            },
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "fileInfo": "readParcelable",
+                    "__parcelType": "android.telephony.mbms.FileInfo"
+                }]
+            },
+            {"status": "readInt32"}
+        ],
+        "name": "onStatusUpdated",
+        "oneWay": false,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "IDownloadStatusListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

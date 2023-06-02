@@ -1,0 +1,111 @@
+{
+    "produced_on": "2022-08-19T10:42:53.415422427Z",
+    "source_location": "",
+    "full_name": "android.os.IStatsCompanionService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "statsdReady",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"timestampMs": "readInt64"}],
+            "name": "setAnomalyAlarm",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "cancelAnomalyAlarm",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"nextPullTimeMs": "readInt64"}],
+            "name": "setPullingAlarm",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "cancelPullingAlarm",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"timestampMs": "readInt64"}],
+            "name": "setAlarmForSubscriberTriggering",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "cancelAlarmForSubscriberTriggering",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{"pullCode": "readInt32"}],
+            "name": "pullData",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.os.StatsLogEventWrapper"
+                }
+            ]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"intentSender": "readStrongBinder"},
+                {"lastReportTimeNs": "readInt64"}
+            ],
+            "name": "sendDataBroadcast",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"intentSender": "readStrongBinder"},
+                {"configUid": "readInt64"},
+                {"configId": "readInt64"},
+                {"subscriptionId": "readInt64"},
+                {"subscriptionRuleId": "readInt64"},
+                {"cookies": "readString16Vector"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "dimensionsValue": "readParcelable",
+                        "__parcelType": "android.os.StatsDimensionsValue"
+                    }]
+                }
+            ],
+            "name": "sendSubscriberBroadcast",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [],
+            "name": "triggerUidSnapshot",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IStatsCompanionService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

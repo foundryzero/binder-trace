@@ -1,0 +1,31 @@
+{
+    "produced_on": "2023-06-01T06:42:35.125203700Z",
+    "source_location": "",
+    "full_name": "android.telephony.IBootstrapAuthenticationCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"token": "readInt32"},
+                {"gbaKey": "readByteVector"},
+                {"btId": "readString16"}
+            ],
+            "name": "onKeysAvailable",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"token": "readInt32"},
+                {"reason": "readInt32"}
+            ],
+            "name": "onAuthenticationFailure",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IBootstrapAuthenticationCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

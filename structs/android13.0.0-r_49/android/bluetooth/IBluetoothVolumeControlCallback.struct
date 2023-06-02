@@ -1,0 +1,25 @@
+{
+    "produced_on": "2023-06-01T06:42:34.243670786Z",
+    "source_location": "",
+    "full_name": "android.bluetooth.IBluetoothVolumeControlCallback",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "device": "readParcelable",
+                    "__parcelType": "android.bluetooth.BluetoothDevice"
+                }]
+            },
+            {"volumeOffset": "readInt32"}
+        ],
+        "name": "onVolumeOffsetChanged",
+        "oneWay": true,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "IBluetoothVolumeControlCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

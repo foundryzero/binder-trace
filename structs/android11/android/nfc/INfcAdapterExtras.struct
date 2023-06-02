@@ -1,0 +1,101 @@
+{
+    "produced_on": "2022-08-26T09:55:22.939701029Z",
+    "source_location": "",
+    "full_name": "android.nfc.INfcAdapterExtras",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"pkg": "readString16"},
+                {"b": "readStrongBinder"}
+            ],
+            "name": "open",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"__return": "readBundle"}]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"pkg": "readString16"},
+                {"b": "readStrongBinder"}
+            ],
+            "name": "close",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"__return": "readBundle"}]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"pkg": "readString16"},
+                {"data_in": "readByteVector"}
+            ],
+            "name": "transceive",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"__return": "readBundle"}]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"pkg": "readString16"}],
+            "name": "getCardEmulationRoute",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"pkg": "readString16"},
+                {"route": "readInt32"}
+            ],
+            "name": "setCardEmulationRoute",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"pkg": "readString16"},
+                {"token": "readByteVector"}
+            ],
+            "name": "authenticate",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"pkg": "readString16"}],
+            "name": "getDriverName",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        }
+    ],
+    "name": "INfcAdapterExtras",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

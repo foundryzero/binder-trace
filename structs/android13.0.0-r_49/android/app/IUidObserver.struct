@@ -1,0 +1,66 @@
+{
+    "produced_on": "2023-06-01T06:42:35.518164585Z",
+    "source_location": "",
+    "full_name": "android.app.IUidObserver",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"uid": "readInt32"},
+                {"disabled": "readBool"}
+            ],
+            "name": "onUidGone",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"uid": "readInt32"}],
+            "name": "onUidActive",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"uid": "readInt32"},
+                {"disabled": "readBool"}
+            ],
+            "name": "onUidIdle",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"uid": "readInt32"},
+                {"procState": "readInt32"},
+                {"procStateSeq": "readInt64"},
+                {"capability": "readInt32"}
+            ],
+            "name": "onUidStateChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"uid": "readInt32"}],
+            "name": "onUidProcAdjChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"uid": "readInt32"},
+                {"cached": "readBool"}
+            ],
+            "name": "onUidCachedChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IUidObserver",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

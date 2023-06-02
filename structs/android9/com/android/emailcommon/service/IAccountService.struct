@@ -1,0 +1,44 @@
+{
+    "produced_on": "2022-08-19T10:42:50.798263595Z",
+    "source_location": "",
+    "full_name": "com.android.emailcommon.service.IAccountService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"accountId": "readInt64"}],
+            "name": "getAccountColor",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"accountType": "readString16"}],
+            "name": "getConfigurationData",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"__return": "readBundle"}]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getDeviceId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        }
+    ],
+    "name": "IAccountService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,34 @@
+{
+    "produced_on": "2022-12-02T13:44:07.016692657Z",
+    "source_location": "",
+    "full_name": "android.net.nsd.INsdManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getMessenger",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.os.Messenger"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"enable": "readBool"}],
+            "name": "setEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "INsdManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

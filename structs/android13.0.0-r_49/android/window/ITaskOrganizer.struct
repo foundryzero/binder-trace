@@ -1,0 +1,136 @@
+{
+    "produced_on": "2023-06-01T06:42:35.659538912Z",
+    "source_location": "",
+    "full_name": "android.window.ITaskOrganizer",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "info": "readParcelable",
+                        "__parcelType": "android.window.StartingWindowInfo"
+                    }]
+                },
+                {"appToken": "readStrongBinder"}
+            ],
+            "name": "addStartingWindow",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "removalInfo": "readParcelable",
+                        "__parcelType": "android.window.StartingWindowRemovalInfo"
+                    }]
+                }
+            ],
+            "name": "removeStartingWindow",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"taskId": "readInt32"}],
+            "name": "copySplashScreenView",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"taskId": "readInt32"}],
+            "name": "onAppSplashScreenViewRemoved",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "taskInfo": "readParcelable",
+                        "__parcelType": "android.window.ActivityManager.RunningTaskInfo"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "leash": "readParcelable",
+                        "__parcelType": "android.view.SurfaceControl"
+                    }]
+                }
+            ],
+            "name": "onTaskAppeared",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "taskInfo": "readParcelable",
+                        "__parcelType": "android.window.ActivityManager.RunningTaskInfo"
+                    }]
+                }
+            ],
+            "name": "onTaskVanished",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "taskInfo": "readParcelable",
+                        "__parcelType": "android.window.ActivityManager.RunningTaskInfo"
+                    }]
+                }
+            ],
+            "name": "onTaskInfoChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "taskInfo": "readParcelable",
+                        "__parcelType": "android.window.ActivityManager.RunningTaskInfo"
+                    }]
+                }
+            ],
+            "name": "onBackPressedOnTaskRoot",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [{"taskId": "readInt32"}],
+            "name": "onImeDrawnOnTask",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ITaskOrganizer",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

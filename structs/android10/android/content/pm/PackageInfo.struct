@@ -1,0 +1,91 @@
+{
+    "produced_on": "2022-12-02T14:09:21.873383148Z",
+    "source_location": "",
+    "components": [
+        {"packageName": "readString16"},
+        {"versionCode": "readInt32"},
+        {"versionCodeMajor": "readInt32"},
+        {"versionName": "readString16"},
+        {"baseRevisionCode": "readInt32"},
+        {"splitRevisionCodes": "readInt32Vector"},
+        {"sharedUserId": "readString16"},
+        {"sharedUserLabel": "readInt32"},
+        {"hasApp": "readInt32"},
+        {
+            "__backreference": "hasApp",
+            "__conditional": [{
+                "applicationInfo": "readParcelable",
+                "__parcelType": "android.content.pm.ApplicationInfo"
+            }]
+        },
+        {"firstInstallTime": "readInt64"},
+        {"lastUpdateTime": "readInt64"},
+        {"gids": "readInt32Vector"},
+        {
+            "activities": "readTypedVector",
+            "__parcelType": "android.content.pm.ActivityInfo"
+        },
+        {
+            "receivers": "readTypedVector",
+            "__parcelType": "android.content.pm.ActivityInfo"
+        },
+        {
+            "services": "readTypedVector",
+            "__parcelType": "android.content.pm.ServiceInfo"
+        },
+        {
+            "providers": "readTypedVector",
+            "__parcelType": "android.content.pm.ProviderInfo"
+        },
+        {
+            "instrumentation": "readTypedVector",
+            "__parcelType": "android.content.pm.InstrumentationInfo"
+        },
+        {
+            "permissions": "readTypedVector",
+            "__parcelType": "android.content.pm.PermissionInfo"
+        },
+        {"requestedPermissionsFlags": "readInt32Vector"},
+        {
+            "signatures": "readTypedVector",
+            "__parcelType": "android.content.pm.Signature"
+        },
+        {
+            "configPreferences": "readTypedVector",
+            "__parcelType": "android.content.pm.ConfigurationInfo"
+        },
+        {
+            "reqFeatures": "readTypedVector",
+            "__parcelType": "android.content.pm.FeatureInfo"
+        },
+        {
+            "featureGroups": "readTypedVector",
+            "__parcelType": "android.content.pm.FeatureGroupInfo"
+        },
+        {"installLocation": "readInt32"},
+        {"isStub": "readInt32"},
+        {"coreApp": "readInt32"},
+        {"requiredForAllUsers": "readInt32"},
+        {"restrictedAccountType": "readString16"},
+        {"requiredAccountType": "readString16"},
+        {"overlayTarget": "readString16"},
+        {"overlayCategory": "readString16"},
+        {"overlayPriority": "readInt32"},
+        {"mOverlayIsStatic": "readBool"},
+        {"compileSdkVersion": "readInt32"},
+        {"compileSdkVersionCodename": "readString16"},
+        {"hasSigningInfo": "readInt32"},
+        {
+            "__backreference": "hasSigningInfo",
+            "__conditional": [{
+                "signingInfo": "readParcelable",
+                "__parcelType": "android.content.pm.SigningInfo"
+            }]
+        },
+        {"isApex": "readBool"}
+    ],
+    "full_name": "android.content.pm.PackageInfo",
+    "name": "PackageInfo",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

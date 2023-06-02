@@ -1,0 +1,45 @@
+{
+    "produced_on": "2023-06-01T06:42:35.751673005Z",
+    "source_location": "",
+    "full_name": "android.service.resumeonreboot.IResumeOnRebootService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"unwrappedBlob": "readByteVector"},
+                {"lifeTimeInMillis": "readInt64"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "resultCallback": "readParcelable",
+                        "__parcelType": "android.os.RemoteCallback"
+                    }]
+                }
+            ],
+            "name": "wrapSecret",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"wrappedBlob": "readByteVector"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "resultCallback": "readParcelable",
+                        "__parcelType": "android.os.RemoteCallback"
+                    }]
+                }
+            ],
+            "name": "unwrap",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IResumeOnRebootService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

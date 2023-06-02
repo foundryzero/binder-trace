@@ -1,0 +1,47 @@
+{
+    "produced_on": "2023-06-01T06:42:38.768448185Z",
+    "source_location": "",
+    "components": [
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "ipVersion": "readParcelable",
+                "__parcelType": "android.hardware.wifi.supplicant.IpVersion"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "classifierParamMask": "readParcelable",
+                "__parcelType": "android.hardware.wifi.supplicant.QosPolicyClassifierParamsMask"
+            }]
+        },
+        {"srcIp": "readByteVector"},
+        {"dstIp": "readByteVector"},
+        {"srcPort": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "dstPortRange": "readParcelable",
+                "__parcelType": "android.hardware.wifi.supplicant.PortRange"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "protocolNextHdr": "readParcelable",
+                "__parcelType": "android.hardware.wifi.supplicant.ProtocolNextHeader"
+            }]
+        },
+        {"flowLabelIpv6": "readByteVector"},
+        {"domainName": "readString16"}
+    ],
+    "full_name": "android.hardware.wifi.supplicant.QosPolicyClassifierParams",
+    "name": "QosPolicyClassifierParams",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

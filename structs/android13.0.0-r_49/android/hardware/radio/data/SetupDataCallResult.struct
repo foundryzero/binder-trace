@@ -1,0 +1,72 @@
+{
+    "produced_on": "2023-06-01T06:42:37.417463758Z",
+    "source_location": "",
+    "components": [
+        {"DATA_CONNECTION_STATUS_INACTIVE": "readInt32"},
+        {"DATA_CONNECTION_STATUS_DORMANT": "readInt32"},
+        {"DATA_CONNECTION_STATUS_ACTIVE": "readInt32"},
+        {"HANDOVER_FAILURE_MODE_LEGACY": "readByte"},
+        {"HANDOVER_FAILURE_MODE_DO_FALLBACK": "readByte"},
+        {"HANDOVER_FAILURE_MODE_NO_FALLBACK_RETRY_HANDOVER": "readByte"},
+        {"HANDOVER_FAILURE_MODE_NO_FALLBACK_RETRY_SETUP_NORMAL": "readByte"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "cause": "readParcelable",
+                "__parcelType": "android.hardware.radio.data.DataCallFailCause"
+            }]
+        },
+        {"suggestedRetryTime": "readInt64"},
+        {"cid": "readInt32"},
+        {"active": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "type": "readParcelable",
+                "__parcelType": "android.hardware.radio.data.PdpProtocolType"
+            }]
+        },
+        {"ifname": "readString16"},
+        {
+            "addresses": "readParcelableVector",
+            "__parcelType": "android.hardware.radio.data.LinkAddress"
+        },
+        {"dnses": "readString16Vector"},
+        {"gateways": "readString16Vector"},
+        {"pcscf": "readString16Vector"},
+        {"mtuV4": "readInt32"},
+        {"mtuV6": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "defaultQos": "readParcelable",
+                "__parcelType": "android.hardware.radio.data.Qos"
+            }]
+        },
+        {
+            "qosSessions": "readParcelableVector",
+            "__parcelType": "android.hardware.radio.data.QosSession"
+        },
+        {"handoverFailureMode": "readByte"},
+        {"pduSessionId": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "sliceInfo": "readParcelable",
+                "__parcelType": "android.hardware.radio.data.SliceInfo"
+            }]
+        },
+        {
+            "trafficDescriptors": "readParcelableVector",
+            "__parcelType": "android.hardware.radio.data.TrafficDescriptor"
+        }
+    ],
+    "full_name": "android.hardware.radio.data.SetupDataCallResult",
+    "name": "SetupDataCallResult",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

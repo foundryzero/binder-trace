@@ -1,0 +1,26 @@
+{
+    "produced_on": "2023-06-01T06:42:37.491087204Z",
+    "source_location": "",
+    "components": [
+        {"REDIRECTING_REASON_UNKNOWN": "readInt32"},
+        {"REDIRECTING_REASON_CALL_FORWARDING_BUSY": "readInt32"},
+        {"REDIRECTING_REASON_CALL_FORWARDING_NO_REPLY": "readInt32"},
+        {"REDIRECTING_REASON_CALLED_DTE_OUT_OF_ORDER": "readInt32"},
+        {"REDIRECTING_REASON_CALL_FORWARDING_BY_THE_CALLED_DTE": "readInt32"},
+        {"REDIRECTING_REASON_CALL_FORWARDING_UNCONDITIONAL": "readInt32"},
+        {"REDIRECTING_REASON_RESERVED": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "redirectingNumber": "readParcelable",
+                "__parcelType": "android.hardware.radio.voice.CdmaNumberInfoRecord"
+            }]
+        },
+        {"redirectingReason": "readInt32"}
+    ],
+    "full_name": "android.hardware.radio.voice.CdmaRedirectingNumberInfoRecord",
+    "name": "CdmaRedirectingNumberInfoRecord",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

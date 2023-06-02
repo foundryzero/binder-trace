@@ -1,0 +1,42 @@
+{
+    "produced_on": "2023-06-01T06:42:34.045739208Z",
+    "source_location": "",
+    "full_name": "android.media.IMediaCommunicationServiceCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "token": "readParcelable",
+                        "__parcelType": "android.media.Session2Token"
+                    }]
+                }
+            ],
+            "name": "onSession2Created",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "tokens": "readParcelable",
+                        "__parcelType": "android.media.MediaParceledListSlice"
+                    }]
+                }
+            ],
+            "name": "onSession2Changed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IMediaCommunicationServiceCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

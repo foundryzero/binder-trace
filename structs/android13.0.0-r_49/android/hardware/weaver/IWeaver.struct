@@ -1,0 +1,58 @@
+{
+    "produced_on": "2023-06-01T06:42:36.701307520Z",
+    "source_location": "",
+    "full_name": "android.hardware.weaver.IWeaver",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getConfig",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.weaver.WeaverConfig"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"slotId": "readInt32"},
+                {"key": "readByteVector"}
+            ],
+            "name": "read",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.weaver.WeaverReadResponse"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"slotId": "readInt32"},
+                {"key": "readByteVector"},
+                {"value": "readByteVector"}
+            ],
+            "name": "write",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IWeaver",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

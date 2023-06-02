@@ -1,0 +1,158 @@
+{
+    "produced_on": "2022-08-26T09:55:22.725176706Z",
+    "source_location": "",
+    "full_name": "com.android.internal.telecom.IInCallService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"inCallAdapter": "readStrongBinder"}],
+            "name": "setInCallAdapter",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "call": "readParcelable",
+                        "__parcelType": "android.telecom.ParcelableCall"
+                    }]
+                }
+            ],
+            "name": "addCall",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "call": "readParcelable",
+                        "__parcelType": "android.telecom.ParcelableCall"
+                    }]
+                }
+            ],
+            "name": "updateCall",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"callId": "readString16"},
+                {"remaining": "readString16"}
+            ],
+            "name": "setPostDial",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"callId": "readString16"},
+                {"remaining": "readString16"}
+            ],
+            "name": "setPostDialWait",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callAudioState": "readParcelable",
+                        "__parcelType": "android.telecom.CallAudioState"
+                    }]
+                }
+            ],
+            "name": "onCallAudioStateChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"showDialpad": "readBool"}],
+            "name": "bringToForeground",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{"canAddCall": "readBool"}],
+            "name": "onCanAddCallChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [],
+            "name": "silenceRinger",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"callId": "readString16"},
+                {"event": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"extras": "readBundle"}]
+                }
+            ],
+            "name": "onConnectionEvent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"callId": "readString16"},
+                {"id": "readInt32"}
+            ],
+            "name": "onRttUpgradeRequest",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"callId": "readString16"},
+                {"reason": "readInt32"}
+            ],
+            "name": "onRttInitiationFailure",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"callId": "readString16"},
+                {"error": "readInt32"}
+            ],
+            "name": "onHandoverFailed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [{"callId": "readString16"}],
+            "name": "onHandoverComplete",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IInCallService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

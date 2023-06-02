@@ -1,0 +1,111 @@
+{
+    "produced_on": "2022-08-19T10:42:51.802913103Z",
+    "source_location": "",
+    "full_name": "com.android.systemui.shared.recents.IOverviewProxy",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"sysUiProxy": "readStrongBinder"}],
+            "name": "onBind",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"downHitTarget": "readInt32"}],
+            "name": "onPreMotionEvent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "event": "readParcelable",
+                        "__parcelType": "android.view.MotionEvent"
+                    }]
+                }
+            ],
+            "name": "onMotionEvent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "onQuickScrubStart",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "onQuickScrubEnd",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"progress": "readFloat"}],
+            "name": "onQuickScrubProgress",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "onOverviewToggle",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{"triggeredFromAltTab": "readBool"}],
+            "name": "onOverviewShown",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"triggeredFromAltTab": "readBool"},
+                {"triggeredFromHomeKey": "readBool"}
+            ],
+            "name": "onOverviewHidden",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "event": "readParcelable",
+                        "__parcelType": "android.view.MotionEvent"
+                    }]
+                }
+            ],
+            "name": "onQuickStep",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"actionType": "readInt32"},
+                {"viewType": "readInt32"}
+            ],
+            "name": "onTip",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IOverviewProxy",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

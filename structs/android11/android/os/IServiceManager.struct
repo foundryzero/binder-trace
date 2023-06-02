@@ -1,0 +1,103 @@
+{
+    "produced_on": "2022-08-26T09:55:24.464243338Z",
+    "source_location": "",
+    "full_name": "android.os.IServiceManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"name": "readString16"}],
+            "name": "getService",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"name": "readString16"}],
+            "name": "checkService",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"name": "readString16"},
+                {"service": "readStrongBinder"},
+                {"allowIsolated": "readBool"},
+                {"dumpPriority": "readInt32"}
+            ],
+            "name": "addService",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"dumpPriority": "readInt32"}],
+            "name": "listServices",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"name": "readString16"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "registerForNotifications",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"name": "readString16"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "unregisterForNotifications",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"name": "readString16"}],
+            "name": "isDeclared",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"name": "readString16"},
+                {"service": "readStrongBinder"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "registerClientCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"name": "readString16"},
+                {"service": "readStrongBinder"}
+            ],
+            "name": "tryUnregisterService",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IServiceManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

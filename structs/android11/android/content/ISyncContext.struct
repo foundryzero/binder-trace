@@ -1,0 +1,33 @@
+{
+    "produced_on": "2022-08-26T09:55:23.366610585Z",
+    "source_location": "",
+    "full_name": "android.content.ISyncContext",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "sendHeartbeat",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "result": "readParcelable",
+                        "__parcelType": "android.content.SyncResult"
+                    }]
+                }
+            ],
+            "name": "onFinished",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISyncContext",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

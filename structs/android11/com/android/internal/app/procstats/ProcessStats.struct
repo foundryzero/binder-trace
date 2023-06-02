@@ -1,0 +1,46 @@
+{
+    "produced_on": "2022-08-26T10:00:41.053004918Z",
+    "source_location": "",
+    "components": [
+        {"version": "readInt32"},
+        {"mNumAggregated": "readInt32"},
+        {"mTimePeriodStartClock": "readInt64"},
+        {"mTimePeriodStartRealtime": "readInt64"},
+        {"mTimePeriodEndRealtime": "readInt64"},
+        {"mTimePeriodStartUptime": "readInt64"},
+        {"mTimePeriodEndUptime": "readInt64"},
+        {"mInternalSinglePssCount": "readInt64"},
+        {"mInternalSinglePssTime": "readInt64"},
+        {"mInternalAllMemPssCount": "readInt64"},
+        {"mInternalAllMemPssTime": "readInt64"},
+        {"mInternalAllPollPssCount": "readInt64"},
+        {"mInternalAllPollPssTime": "readInt64"},
+        {"mExternalPssCount": "readInt64"},
+        {"mExternalPssTime": "readInt64"},
+        {"mExternalSlowPssCount": "readInt64"},
+        {"mExternalSlowPssTime": "readInt64"},
+        {"mRuntime": "readString16"},
+        {"mHasSwappedOutPss": "readInt32"},
+        {"mFlags": "readInt32"},
+        {
+            "readFromParcel": "readParcelable",
+            "__parcelType": "com.android.internal.app.procstats.mTableData"
+        },
+        {"NPROC": "readInt32"},
+        {"NPKG": "readInt32"},
+        {"NPAGETYPES": "readInt32"},
+        {
+            "__backreference": "NPAGETYPES",
+            "__repeated": [
+                {"add": "readInt32"},
+                {"add": "readString16"},
+                {"add": "readString16"},
+                {"add": "readInt32Vector"}
+            ]
+        }
+    ],
+    "full_name": "com.android.internal.app.procstats.ProcessStats",
+    "name": "ProcessStats",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

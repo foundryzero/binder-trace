@@ -1,0 +1,133 @@
+{
+    "produced_on": "2023-06-01T06:42:34.554750184Z",
+    "source_location": "",
+    "full_name": "com.android.internal.telecom.ICallDiagnosticService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"adapter": "readStrongBinder"}],
+            "name": "setAdapter",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "call": "readParcelable",
+                        "__parcelType": "android.telecom.ParcelableCall"
+                    }]
+                }
+            ],
+            "name": "initializeDiagnosticCall",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "call": "readParcelable",
+                        "__parcelType": "android.telecom.ParcelableCall"
+                    }]
+                }
+            ],
+            "name": "updateCall",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callAudioState": "readParcelable",
+                        "__parcelType": "android.telecom.CallAudioState"
+                    }]
+                }
+            ],
+            "name": "updateCallAudioState",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"callId": "readString16"}],
+            "name": "removeDiagnosticCall",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"callId": "readString16"},
+                {"message": "readInt32"},
+                {"value": "readInt32"}
+            ],
+            "name": "receiveDeviceToDeviceMessage",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"callId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callQuality": "readParcelable",
+                        "__parcelType": "android.telephony.CallQuality"
+                    }]
+                }
+            ],
+            "name": "callQualityChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "qualityReport": "readParcelable",
+                        "__parcelType": "android.telecom.BluetoothCallQualityReport"
+                    }]
+                }
+            ],
+            "name": "receiveBluetoothCallQualityReport",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"callId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "disconnectCause": "readParcelable",
+                        "__parcelType": "android.telecom.DisconnectCause"
+                    }]
+                }
+            ],
+            "name": "notifyCallDisconnected",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICallDiagnosticService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

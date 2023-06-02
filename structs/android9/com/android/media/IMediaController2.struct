@@ -1,0 +1,309 @@
+{
+    "produced_on": "2022-08-19T10:42:51.614432742Z",
+    "source_location": "",
+    "full_name": "com.android.media.IMediaController2",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"state": "readInt32"}],
+            "name": "onPlayerStateChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"eventTimeMs": "readInt64"},
+                {"positionMs": "readInt64"}
+            ],
+            "name": "onPositionChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"speed": "readFloat"}],
+            "name": "onPlaybackSpeedChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"bufferedPositionMs": "readInt64"}],
+            "name": "onBufferedPositionChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {
+                    "playlist": "readList",
+                    "__parcelType": "android.os.Bundle"
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"metadata": "readBundle"}]
+                }
+            ],
+            "name": "onPlaylistChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"metadata": "readBundle"}]
+                }
+            ],
+            "name": "onPlaylistMetadataChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"playbackInfo": "readBundle"}]
+                }
+            ],
+            "name": "onPlaybackInfoChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{"repeatMode": "readInt32"}],
+            "name": "onRepeatModeChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [{"shuffleMode": "readInt32"}],
+            "name": "onShuffleModeChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"errorCode": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"extras": "readBundle"}]
+                }
+            ],
+            "name": "onError",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"sessionBinder": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"commandGroup": "readBundle"}]
+                },
+                {"playerState": "readInt32"},
+                {"positionEventTimeMs": "readInt64"},
+                {"positionMs": "readInt64"},
+                {"playbackSpeed": "readFloat"},
+                {"bufferedPositionMs": "readInt64"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"playbackInfo": "readBundle"}]
+                },
+                {"repeatMode": "readInt32"},
+                {"shuffleMode": "readInt32"},
+                {
+                    "playlist": "readList",
+                    "__parcelType": "android.os.Bundle"
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionActivity": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                }
+            ],
+            "name": "onConnected",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [],
+            "name": "onDisconnected",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [{
+                "commandButtonlist": "readList",
+                "__parcelType": "android.os.Bundle"
+            }],
+            "name": "onCustomLayoutChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"commands": "readBundle"}]
+                }
+            ],
+            "name": "onAllowedCommandsChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"command": "readBundle"}]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"args": "readBundle"}]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiver": "readParcelable",
+                        "__parcelType": "android.os.ResultReceiver"
+                    }]
+                }
+            ],
+            "name": "onCustomCommand",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"rootHints": "readBundle"}]
+                },
+                {"rootMediaId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"rootExtra": "readBundle"}]
+                }
+            ],
+            "name": "onGetLibraryRootDone",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [
+                {"mediaId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"result": "readBundle"}]
+                }
+            ],
+            "name": "onGetItemDone",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"rootMediaId": "readString16"},
+                {"itemCount": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"extras": "readBundle"}]
+                }
+            ],
+            "name": "onChildrenChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 19,
+            "in": [
+                {"parentId": "readString16"},
+                {"page": "readInt32"},
+                {"pageSize": "readInt32"},
+                {
+                    "result": "readList",
+                    "__parcelType": "android.os.Bundle"
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"extras": "readBundle"}]
+                }
+            ],
+            "name": "onGetChildrenDone",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 20,
+            "in": [
+                {"query": "readString16"},
+                {"itemCount": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"extras": "readBundle"}]
+                }
+            ],
+            "name": "onSearchResultChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 21,
+            "in": [
+                {"query": "readString16"},
+                {"page": "readInt32"},
+                {"pageSize": "readInt32"},
+                {
+                    "result": "readList",
+                    "__parcelType": "android.os.Bundle"
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"extras": "readBundle"}]
+                }
+            ],
+            "name": "onGetSearchResultDone",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IMediaController2",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

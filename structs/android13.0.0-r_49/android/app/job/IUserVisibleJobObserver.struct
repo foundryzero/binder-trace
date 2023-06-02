@@ -1,0 +1,25 @@
+{
+    "produced_on": "2023-06-01T06:42:35.128187457Z",
+    "source_location": "",
+    "full_name": "android.app.job.IUserVisibleJobObserver",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "summary": "readParcelable",
+                    "__parcelType": "android.app.job.UserVisibleJobSummary"
+                }]
+            },
+            {"isRunning": "readBool"}
+        ],
+        "name": "onUserVisibleJobStateChanged",
+        "oneWay": true,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "IUserVisibleJobObserver",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

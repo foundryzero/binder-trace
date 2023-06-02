@@ -1,0 +1,38 @@
+{
+    "produced_on": "2022-08-26T09:55:23.297731035Z",
+    "source_location": "",
+    "full_name": "android.service.autofill.IAutofillFieldClassificationService",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "callback": "readParcelable",
+                    "__parcelType": "android.os.RemoteCallback"
+                }]
+            },
+            {
+                "actualValues": "readList",
+                "__parcelType": "android.view.autofill.AutofillValue"
+            },
+            {"userDataValues": "readString16Vector"},
+            {"categoryIds": "readString16Vector"},
+            {"defaultAlgorithm": "readString16"},
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{"defaultArgs": "readBundle"}]
+            },
+            {"algorithms": "readMap"},
+            {"args": "readMap"}
+        ],
+        "name": "calculateScores",
+        "oneWay": true,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "IAutofillFieldClassificationService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

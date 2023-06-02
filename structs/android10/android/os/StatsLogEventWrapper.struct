@@ -1,0 +1,35 @@
+{
+    "produced_on": "2022-12-02T14:06:52.839441944Z",
+    "source_location": "",
+    "components": [
+        {"mTag": "readInt32"},
+        {"mElapsedTimeNs": "readInt64"},
+        {"mWallClockTimeNs": "readInt64"},
+        {"numWorkChains": "readInt32"},
+        {
+            "__backreference": "numWorkChains",
+            "__conditional": [{
+                "__backreference": "numWorkChains",
+                "__repeated": [
+                    {"workChainSize": "readInt32"},
+                    {
+                        "__backreference": "workChainSize",
+                        "__repeated": [
+                            {"uid": "readInt32"},
+                            {"tag": "readString16"}
+                        ]
+                    }
+                ]
+            }]
+        },
+        {"numTypes": "readInt32"},
+        {
+            "__backreference": "numTypes",
+            "__repeated": [{"type": "readInt32"}]
+        }
+    ],
+    "full_name": "android.os.StatsLogEventWrapper",
+    "name": "StatsLogEventWrapper",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

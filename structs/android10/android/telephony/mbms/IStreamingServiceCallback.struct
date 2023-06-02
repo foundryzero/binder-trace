@@ -1,0 +1,51 @@
+{
+    "produced_on": "2022-12-02T13:44:06.664412462Z",
+    "source_location": "",
+    "full_name": "android.telephony.mbms.IStreamingServiceCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"errorCode": "readInt32"},
+                {"message": "readString16"}
+            ],
+            "name": "onError",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"state": "readInt32"},
+                {"reason": "readInt32"}
+            ],
+            "name": "onStreamStateUpdated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "onMediaDescriptionUpdated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"signalStrength": "readInt32"}],
+            "name": "onBroadcastSignalStrengthUpdated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"methodType": "readInt32"}],
+            "name": "onStreamMethodUpdated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IStreamingServiceCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

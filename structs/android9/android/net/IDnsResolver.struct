@@ -1,0 +1,120 @@
+{
+    "produced_on": "2022-08-04T09:32:15.105508219Z",
+    "source_location": "",
+    "full_name": "android.net.IDnsResolver",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "isAlive",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "registerEventListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "resolverParams": "readParcelable",
+                        "__parcelType": "android.net.ResolverParamsParcel"
+                    }]
+                }
+            ],
+            "name": "setResolverConfiguration",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"netId": "readInt32"}],
+            "name": "getResolverInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"servers": "readString16Vector"},
+                {"domains": "readString16Vector"},
+                {"tlsServers": "readString16Vector"},
+                {"params": "readInt32Vector"},
+                {"stats": "readInt32Vector"},
+                {"wait_for_pending_req_timeout_count": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"netId": "readInt32"}],
+            "name": "startPrefix64Discovery",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"netId": "readInt32"}],
+            "name": "stopPrefix64Discovery",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"netId": "readInt32"}],
+            "name": "getPrefix64",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [{"netId": "readInt32"}],
+            "name": "createNetworkCache",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [{"netId": "readInt32"}],
+            "name": "destroyNetworkCache",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [{"logSeverity": "readInt32"}],
+            "name": "setLogSeverity",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [{"netId": "readInt32"}],
+            "name": "flushNetworkCache",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"netId": "readInt32"},
+                {"prefix": "readString16"}
+            ],
+            "name": "setPrefix64",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IDnsResolver",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

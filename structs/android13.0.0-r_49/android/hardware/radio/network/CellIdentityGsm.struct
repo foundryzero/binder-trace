@@ -1,0 +1,25 @@
+{
+    "produced_on": "2023-06-01T06:42:37.369692805Z",
+    "source_location": "",
+    "components": [
+        {"mcc": "readString16"},
+        {"mnc": "readString16"},
+        {"lac": "readInt32"},
+        {"cid": "readInt32"},
+        {"arfcn": "readInt32"},
+        {"bsic": "readByte"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "operatorNames": "readParcelable",
+                "__parcelType": "android.hardware.radio.network.OperatorInfo"
+            }]
+        },
+        {"additionalPlmns": "readString16Vector"}
+    ],
+    "full_name": "android.hardware.radio.network.CellIdentityGsm",
+    "name": "CellIdentityGsm",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

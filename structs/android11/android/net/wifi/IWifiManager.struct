@@ -1,0 +1,1287 @@
+{
+    "produced_on": "2022-08-26T09:55:22.067057126Z",
+    "source_location": "",
+    "full_name": "android.net.wifi.IWifiManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getSupportedFeatures",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "getWifiActivityEnergyInfoAsync",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"packageName": "readString16"},
+                {"featureId": "readString16"}
+            ],
+            "name": "getConfiguredNetworks",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.ParceledListSlice"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"packageName": "readString16"},
+                {"featureId": "readString16"}
+            ],
+            "name": "getPrivilegedConfiguredNetworks",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.ParceledListSlice"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{
+                "scanResult": "readList",
+                "__parcelType": "android.net.wifi.ScanResult"
+            }],
+            "name": "getAllMatchingFqdnsForScanResults",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readMap"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [{
+                "scanResult": "readList",
+                "__parcelType": "android.net.wifi.ScanResult"
+            }],
+            "name": "getMatchingOsuProviders",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readMap"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [{
+                "osuProviders": "readList",
+                "__parcelType": "android.net.wifi.hotspot2.OsuProvider"
+            }],
+            "name": "getMatchingPasspointConfigsForOsuProviders",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readMap"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "config": "readParcelable",
+                        "__parcelType": "android.net.wifi.WifiConfiguration"
+                    }]
+                },
+                {"packageName": "readString16"}
+            ],
+            "name": "addOrUpdateNetwork",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "config": "readParcelable",
+                        "__parcelType": "android.net.wifi.hotspot2.PasspointConfiguration"
+                    }]
+                },
+                {"packageName": "readString16"}
+            ],
+            "name": "addOrUpdatePasspointConfiguration",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"fqdn": "readString16"},
+                {"packageName": "readString16"}
+            ],
+            "name": "removePasspointConfiguration",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [{"packageName": "readString16"}],
+            "name": "getPasspointConfigurations",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.net.wifi.hotspot2.PasspointConfiguration"
+                }
+            ]
+        },
+        {
+            "code": 12,
+            "in": [{
+                "fqdnList": "readList",
+                "__parcelType": "String"
+            }],
+            "name": "getWifiConfigsForPasspointProfiles",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.net.wifi.WifiConfiguration"
+                }
+            ]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"bssid": "readInt64"},
+                {"fileName": "readString16"}
+            ],
+            "name": "queryPasspointIcon",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [{"fqdn": "readString16"}],
+            "name": "matchProviderWithCurrentNetwork",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"holdoff": "readInt64"},
+                {"ess": "readBool"}
+            ],
+            "name": "deauthenticateNetwork",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [
+                {"netId": "readInt32"},
+                {"packageName": "readString16"}
+            ],
+            "name": "removeNetwork",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 17,
+            "in": [
+                {"netId": "readInt32"},
+                {"disableOthers": "readBool"},
+                {"packageName": "readString16"}
+            ],
+            "name": "enableNetwork",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"netId": "readInt32"},
+                {"packageName": "readString16"}
+            ],
+            "name": "disableNetwork",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 19,
+            "in": [{"choice": "readBool"}],
+            "name": "allowAutojoinGlobal",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 20,
+            "in": [
+                {"netId": "readInt32"},
+                {"choice": "readBool"}
+            ],
+            "name": "allowAutojoin",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 21,
+            "in": [
+                {"fqdn": "readString16"},
+                {"enableAutoJoin": "readBool"}
+            ],
+            "name": "allowAutojoinPasspoint",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 22,
+            "in": [
+                {"fqdn": "readString16"},
+                {"enable": "readBool"}
+            ],
+            "name": "setMacRandomizationSettingPasspointEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 23,
+            "in": [
+                {"fqdn": "readString16"},
+                {"meteredOverride": "readInt32"}
+            ],
+            "name": "setPasspointMeteredOverride",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 24,
+            "in": [
+                {"packageName": "readString16"},
+                {"featureId": "readString16"}
+            ],
+            "name": "startScan",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 25,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "getScanResults",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.net.wifi.ScanResult"
+                }
+            ]
+        },
+        {
+            "code": 26,
+            "in": [{"packageName": "readString16"}],
+            "name": "disconnect",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 27,
+            "in": [{"packageName": "readString16"}],
+            "name": "reconnect",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 28,
+            "in": [{"packageName": "readString16"}],
+            "name": "reassociate",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 29,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "getConnectionInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.net.wifi.WifiInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 30,
+            "in": [
+                {"packageName": "readString16"},
+                {"enable": "readBool"}
+            ],
+            "name": "setWifiEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 31,
+            "in": [],
+            "name": "getWifiEnabledState",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 32,
+            "in": [],
+            "name": "getCountryCode",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 33,
+            "in": [],
+            "name": "is5GHzBandSupported",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 34,
+            "in": [],
+            "name": "is6GHzBandSupported",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 35,
+            "in": [{"standard": "readInt32"}],
+            "name": "isWifiStandardSupported",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 36,
+            "in": [],
+            "name": "getDhcpInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.net.DhcpInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 37,
+            "in": [{"isAvailable": "readBool"}],
+            "name": "setScanAlwaysAvailable",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 38,
+            "in": [],
+            "name": "isScanAlwaysAvailable",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 39,
+            "in": [
+                {"lock": "readStrongBinder"},
+                {"lockType": "readInt32"},
+                {"tag": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "ws": "readParcelable",
+                        "__parcelType": "android.os.WorkSource"
+                    }]
+                }
+            ],
+            "name": "acquireWifiLock",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 40,
+            "in": [
+                {"lock": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "ws": "readParcelable",
+                        "__parcelType": "android.os.WorkSource"
+                    }]
+                }
+            ],
+            "name": "updateWifiLockWorkSource",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 41,
+            "in": [{"lock": "readStrongBinder"}],
+            "name": "releaseWifiLock",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 42,
+            "in": [],
+            "name": "initializeMulticastFiltering",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 43,
+            "in": [],
+            "name": "isMulticastEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 44,
+            "in": [
+                {"binder": "readStrongBinder"},
+                {"tag": "readString16"}
+            ],
+            "name": "acquireMulticastLock",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 45,
+            "in": [{"tag": "readString16"}],
+            "name": "releaseMulticastLock",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 46,
+            "in": [
+                {"ifaceName": "readString16"},
+                {"mode": "readInt32"}
+            ],
+            "name": "updateInterfaceIpState",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 47,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "wifiConfig": "readParcelable",
+                        "__parcelType": "android.net.wifi.WifiConfiguration"
+                    }]
+                }
+            ],
+            "name": "startSoftAp",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 48,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "softApConfig": "readParcelable",
+                        "__parcelType": "android.net.wifi.SoftApConfiguration"
+                    }]
+                }
+            ],
+            "name": "startTetheredHotspot",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 49,
+            "in": [],
+            "name": "stopSoftAp",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 50,
+            "in": [
+                {"callback": "readStrongBinder"},
+                {"packageName": "readString16"},
+                {"featureId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "customConfig": "readParcelable",
+                        "__parcelType": "android.net.wifi.SoftApConfiguration"
+                    }]
+                }
+            ],
+            "name": "startLocalOnlyHotspot",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 51,
+            "in": [],
+            "name": "stopLocalOnlyHotspot",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 52,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "startWatchLocalOnlyHotspot",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 53,
+            "in": [],
+            "name": "stopWatchLocalOnlyHotspot",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 54,
+            "in": [],
+            "name": "getWifiApEnabledState",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 55,
+            "in": [],
+            "name": "getWifiApConfiguration",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.net.wifi.WifiConfiguration"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 56,
+            "in": [],
+            "name": "getSoftApConfiguration",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.net.wifi.SoftApConfiguration"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 57,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "wifiConfig": "readParcelable",
+                        "__parcelType": "android.net.wifi.WifiConfiguration"
+                    }]
+                },
+                {"packageName": "readString16"}
+            ],
+            "name": "setWifiApConfiguration",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 58,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "softApConfig": "readParcelable",
+                        "__parcelType": "android.net.wifi.SoftApConfiguration"
+                    }]
+                },
+                {"packageName": "readString16"}
+            ],
+            "name": "setSoftApConfiguration",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 59,
+            "in": [{"packageName": "readString16"}],
+            "name": "notifyUserOfApBandConversion",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 60,
+            "in": [
+                {"remoteIPAddress": "readString16"},
+                {"enable": "readBool"}
+            ],
+            "name": "enableTdls",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 61,
+            "in": [
+                {"remoteMacAddress": "readString16"},
+                {"enable": "readBool"}
+            ],
+            "name": "enableTdlsWithMacAddress",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 62,
+            "in": [],
+            "name": "getCurrentNetworkWpsNfcConfigurationToken",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 63,
+            "in": [{"verbose": "readInt32"}],
+            "name": "enableVerboseLogging",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 64,
+            "in": [],
+            "name": "getVerboseLoggingLevel",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 65,
+            "in": [
+                {"SSID": "readString16"},
+                {"packageName": "readString16"}
+            ],
+            "name": "disableEphemeralNetwork",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 66,
+            "in": [{"packageName": "readString16"}],
+            "name": "factoryReset",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 67,
+            "in": [],
+            "name": "getCurrentNetwork",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.net.Network"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 68,
+            "in": [],
+            "name": "retrieveBackupData",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 69,
+            "in": [{"data": "readByteVector"}],
+            "name": "restoreBackupData",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 70,
+            "in": [],
+            "name": "retrieveSoftApBackupData",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 71,
+            "in": [{"data": "readByteVector"}],
+            "name": "restoreSoftApBackupData",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.net.wifi.SoftApConfiguration"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 72,
+            "in": [
+                {"supplicantData": "readByteVector"},
+                {"ipConfigData": "readByteVector"}
+            ],
+            "name": "restoreSupplicantBackupData",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 73,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "provider": "readParcelable",
+                        "__parcelType": "android.net.wifi.hotspot2.OsuProvider"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "startSubscriptionProvisioning",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 74,
+            "in": [
+                {"binder": "readStrongBinder"},
+                {"callback": "readStrongBinder"},
+                {"callbackIdentifier": "readInt32"}
+            ],
+            "name": "registerSoftApCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 75,
+            "in": [{"callbackIdentifier": "readInt32"}],
+            "name": "unregisterSoftApCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 76,
+            "in": [
+                {"binder": "readStrongBinder"},
+                {"listener": "readStrongBinder"},
+                {"listenerIdentifier": "readInt32"}
+            ],
+            "name": "addOnWifiUsabilityStatsListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 77,
+            "in": [{"listenerIdentifier": "readInt32"}],
+            "name": "removeOnWifiUsabilityStatsListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 78,
+            "in": [
+                {"binder": "readStrongBinder"},
+                {"callback": "readStrongBinder"},
+                {"callbackIdentifier": "readInt32"}
+            ],
+            "name": "registerTrafficStateCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 79,
+            "in": [{"callbackIdentifier": "readInt32"}],
+            "name": "unregisterTrafficStateCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 80,
+            "in": [
+                {"binder": "readStrongBinder"},
+                {"callback": "readStrongBinder"},
+                {"callbackIdentifier": "readInt32"}
+            ],
+            "name": "registerNetworkRequestMatchCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 81,
+            "in": [{"callbackIdentifier": "readInt32"}],
+            "name": "unregisterNetworkRequestMatchCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 82,
+            "in": [
+                {
+                    "networkSuggestions": "readList",
+                    "__parcelType": "android.net.wifi.WifiNetworkSuggestion"
+                },
+                {"packageName": "readString16"},
+                {"featureId": "readString16"}
+            ],
+            "name": "addNetworkSuggestions",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 83,
+            "in": [
+                {
+                    "networkSuggestions": "readList",
+                    "__parcelType": "android.net.wifi.WifiNetworkSuggestion"
+                },
+                {"packageName": "readString16"}
+            ],
+            "name": "removeNetworkSuggestions",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 84,
+            "in": [{"packageName": "readString16"}],
+            "name": "getNetworkSuggestions",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.net.wifi.WifiNetworkSuggestion"
+                }
+            ]
+        },
+        {
+            "code": 85,
+            "in": [],
+            "name": "getFactoryMacAddresses",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 86,
+            "in": [{"state": "readInt32"}],
+            "name": "setDeviceMobilityState",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 87,
+            "in": [
+                {"binder": "readStrongBinder"},
+                {"enrolleeUri": "readString16"},
+                {"selectedNetworkId": "readInt32"},
+                {"netRole": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "startDppAsConfiguratorInitiator",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 88,
+            "in": [
+                {"binder": "readStrongBinder"},
+                {"configuratorUri": "readString16"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "startDppAsEnrolleeInitiator",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 89,
+            "in": [],
+            "name": "stopDppSession",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 90,
+            "in": [
+                {"seqNum": "readInt32"},
+                {"score": "readInt32"},
+                {"predictionHorizonSec": "readInt32"}
+            ],
+            "name": "updateWifiUsabilityScore",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 91,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "config": "readParcelable",
+                        "__parcelType": "android.net.wifi.WifiConfiguration"
+                    }]
+                },
+                {"netId": "readInt32"},
+                {"binder": "readStrongBinder"},
+                {"listener": "readStrongBinder"},
+                {"callbackIdentifier": "readInt32"}
+            ],
+            "name": "connect",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 92,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "config": "readParcelable",
+                        "__parcelType": "android.net.wifi.WifiConfiguration"
+                    }]
+                },
+                {"binder": "readStrongBinder"},
+                {"listener": "readStrongBinder"},
+                {"callbackIdentifier": "readInt32"}
+            ],
+            "name": "save",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 93,
+            "in": [
+                {"netId": "readInt32"},
+                {"binder": "readStrongBinder"},
+                {"listener": "readStrongBinder"},
+                {"callbackIdentifier": "readInt32"}
+            ],
+            "name": "forget",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 94,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "registerScanResultsCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 95,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "unregisterScanResultsCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 96,
+            "in": [
+                {"binder": "readStrongBinder"},
+                {"listener": "readStrongBinder"},
+                {"listenerIdentifier": "readInt32"},
+                {"packageName": "readString16"},
+                {"featureId": "readString16"}
+            ],
+            "name": "registerSuggestionConnectionStatusListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 97,
+            "in": [
+                {"listenerIdentifier": "readInt32"},
+                {"packageName": "readString16"}
+            ],
+            "name": "unregisterSuggestionConnectionStatusListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 98,
+            "in": [{"rssi": "readInt32"}],
+            "name": "calculateSignalLevel",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 99,
+            "in": [{
+                "scanResults": "readList",
+                "__parcelType": "android.net.wifi.ScanResult"
+            }],
+            "name": "getWifiConfigForMatchedNetworkSuggestionsSharedWithUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.net.wifi.WifiConfiguration"
+                }
+            ]
+        },
+        {
+            "code": 100,
+            "in": [
+                {"binder": "readStrongBinder"},
+                {"scorer": "readStrongBinder"}
+            ],
+            "name": "setWifiConnectedNetworkScorer",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 101,
+            "in": [],
+            "name": "clearWifiConnectedNetworkScorer",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 102,
+            "in": [
+                {
+                    "networkSuggestions": "readList",
+                    "__parcelType": "android.net.wifi.WifiNetworkSuggestion"
+                },
+                {
+                    "scanResults": "readList",
+                    "__parcelType": "android.net.wifi.ScanResult"
+                },
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "getMatchingScanResults",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readMap"}
+            ]
+        },
+        {
+            "code": 103,
+            "in": [{"enable": "readBool"}],
+            "name": "setScanThrottleEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 104,
+            "in": [],
+            "name": "isScanThrottleEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 105,
+            "in": [{
+                "scanResult": "readList",
+                "__parcelType": "android.net.wifi.ScanResult"
+            }],
+            "name": "getAllMatchingPasspointProfilesForScanResults",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readMap"}
+            ]
+        },
+        {
+            "code": 106,
+            "in": [{"enable": "readBool"}],
+            "name": "setAutoWakeupEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 107,
+            "in": [],
+            "name": "isAutoWakeupEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "IWifiManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

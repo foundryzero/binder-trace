@@ -1,0 +1,147 @@
+from typing import Optional
+
+import hexdump
+import pyperclip
+
+from prompt_toolkit.filters import Condition
+from prompt_toolkit.formatted_text import FormattedText
+from prompt_toolkit.key_binding import KeyBindings
+from prompt_toolkit.layout import AnyContainer, Dimension, HSplit, FormattedTextControl, Window
+from prompt_toolkit.layout.dimension import AnyDimension
+from binder_trace.tui import listing
+
+from binder_trace.tui.selection import SelectionViewList
+from binder_trace.tui.data_types import DisplayTransaction
+from binder_trace.tui.widget.frame import SelectableFrame
+
+
+class HexdumpFrame:
+
+    def __init__(self, transactions: SelectionViewList, fields: SelectionViewList, max_lines: int) -> None:
+        self.transactions = transactions
+        self.fields = fields
+        self.max_lines = max_lines
+
+        self.transactions.on_selection_change += self.update_content
+        self.fields.on_selection_change += self.update_content_and_jump_to_selection
+
+        self.offset = 0
+
+        self.container = SelectableFrame(
+            title="Hexdump",
+            body=self.get_content,
+            width=Dimension(min=56, preferred=76, max=76),
+            height=Dimension(preferred=max_lines)
+        )
+
+    def key_bindings(self) -> KeyBindings:
+        kb = KeyBindings()
+
+        @kb.add('up', filter=Condition(lambda: self.activated))
+        def _(event):
+            if self.transactions.selection_valid():
+                self.offset = max(0, self.offset - 1)
+
+        @kb.add('down', filter=Condition(lambda: self.activated))
+        def _(event):
+            if self.transactions.selection_valid():
+                if self.offset + self.max_lines + 1 <= self.max_data_line_count():
+                    self.offset += 1
+
+        @kb.add('s-up', filter=Condition(lambda: self.activated))
+        def _(event):
+            if self.transactions.selection_valid():
+                self.offset = max(0, self.offset - self.max_lines)
+
+        @kb.add('s-down', filter=Condition(lambda: self.activated))
+        def _(event):
+            if self.transactions.selection_valid():
+                self.offset = min(self.offset + self.max_lines, self.max_data_line_count() - self.max_lines)
+
+        @kb.add('home', filter=Condition(lambda: self.activated))
+        def _(event):
+            if self.transactions.selection_valid():
+                self.offset = 0
+
+        @kb.add('end', filter=Condition(lambda: self.activated))
+        def _(event):
+            if self.transactions.selection_valid():
+                data_len = len(self.transactions.selected().raw_data)
+                max_data_lines = data_len//16 + 1
+                self.offset = max_data_lines - self.max_lines
+
+
+        return kb
+
+    @property
+    def activated(self) -> bool:
+        return self.container.activated
+
+    @activated.setter
+    def activated(self, value: bool):
+        self.container.activated = value
+
+    def copy_to_clipboard(self):
+        if self.transactions.selection_valid():
+            pyperclip.copy(hexdump.hexdump(self.transactions.selected().raw_data, "return"))
+
+    def max_data_line_count(self):
+        data_len = len(self.transactions.selected().raw_data)
+        return data_len//16 + 1
+
+
+    def update_content(self, _, offset=0):
+        self.offset = offset
+        self.container.body = self.get_content()
+
+    def update_content_and_jump_to_selection(self, _):
+        position = self.selected_field_position()
+        offset = 0
+        if position:
+            # Set the offset to the first line containing the selected field
+            start = position.start // 16
+            end = position.end // 16
+
+            if end - offset > self.max_lines:
+                # The field is too big to fit so just show as much as possible
+                offset = start
+            elif start >= self.offset and end <= self.offset + self.max_lines:
+                # Do nothing its already in view
+                offset = self.offset
+            elif start < self.offset:
+                # Scroll up to the field
+                offset = start
+            else:
+                offset = self.offset + (end - self.offset + self.max_lines)
+
+        self.update_content(_, offset)
+
+    def get_content(self) -> AnyContainer:
+        return HSplit(
+            children=[
+                Window(
+                    ignore_content_height=True,
+                    content=FormattedTextControl(
+                        text=self.to_hexdump(self.transactions.selected() if self.transactions.selection_valid() else None)
+                    )
+                ),
+            ]
+        )
+
+    def selected_field_position(self):
+        return self.fields.selected().field.position or None if self.fields.selection_valid() else None
+
+
+    def to_hexdump(self, transaction: Optional[DisplayTransaction]) -> FormattedText:
+        position = self.selected_field_position()
+        selection = [(position, "class:hexdump.selected")] if position else []
+
+        return listing.to_hexdump(
+            transaction.raw_data if transaction else b'',
+            "class:hexdump.default",
+            selection,
+            offset=self.offset*16
+        )
+
+    def __pt_container__(self) -> AnyContainer:
+        return self.container

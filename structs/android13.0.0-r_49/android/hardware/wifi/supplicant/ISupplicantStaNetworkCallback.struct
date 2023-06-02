@@ -1,0 +1,77 @@
+{
+    "produced_on": "2023-06-01T06:42:38.766303140Z",
+    "source_location": "",
+    "full_name": "android.hardware.wifi.supplicant.ISupplicantStaNetworkCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "onNetworkEapIdentityRequest",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "params": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.NetworkRequestEapSimGsmAuthParams"
+                    }]
+                }
+            ],
+            "name": "onNetworkEapSimGsmAuthRequest",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "params": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.NetworkRequestEapSimUmtsAuthParams"
+                    }]
+                }
+            ],
+            "name": "onNetworkEapSimUmtsAuthRequest",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "ind": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.TransitionDisableIndication"
+                    }]
+                }
+            ],
+            "name": "onTransitionDisable",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"depth": "readInt32"},
+                {"subject": "readByteVector"},
+                {"certHash": "readByteVector"},
+                {"certBlob": "readByteVector"}
+            ],
+            "name": "onServerCertificateAvailable",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISupplicantStaNetworkCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

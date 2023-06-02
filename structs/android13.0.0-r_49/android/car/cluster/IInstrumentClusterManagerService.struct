@@ -1,0 +1,40 @@
+{
+    "produced_on": "2023-06-01T06:42:33.061032796Z",
+    "source_location": "",
+    "full_name": "android.car.cluster.IInstrumentClusterManagerService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "intent": "readParcelable",
+                        "__parcelType": "android.content.Intent"
+                    }]
+                }
+            ],
+            "name": "startClusterActivity",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "registerCallback",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "unregisterCallback",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IInstrumentClusterManagerService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

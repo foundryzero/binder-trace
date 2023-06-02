@@ -1,0 +1,359 @@
+{
+    "produced_on": "2022-08-19T10:42:52.134691734Z",
+    "source_location": "",
+    "full_name": "com.android.ims.internal.IImsCallSession",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "close",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "getCallId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getCallProfile",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.telephony.ims.ImsCallProfile"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "getLocalCallProfile",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.telephony.ims.ImsCallProfile"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "getRemoteCallProfile",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.telephony.ims.ImsCallProfile"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [{"name": "readString16"}],
+            "name": "getProperty",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "getState",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "isInCall",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "setListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [{"muted": "readBool"}],
+            "name": "setMute",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"callee": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "profile": "readParcelable",
+                        "__parcelType": "android.telephony.ims.ImsCallProfile"
+                    }]
+                }
+            ],
+            "name": "start",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"participants": "readString16Vector"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "profile": "readParcelable",
+                        "__parcelType": "android.telephony.ims.ImsCallProfile"
+                    }]
+                }
+            ],
+            "name": "startConference",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"callType": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "profile": "readParcelable",
+                        "__parcelType": "android.telephony.ims.ImsStreamMediaProfile"
+                    }]
+                }
+            ],
+            "name": "accept",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [{"deflectNumber": "readString16"}],
+            "name": "deflect",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [{"reason": "readInt32"}],
+            "name": "reject",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [{"reason": "readInt32"}],
+            "name": "terminate",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "profile": "readParcelable",
+                        "__parcelType": "android.telephony.ims.ImsStreamMediaProfile"
+                    }]
+                }
+            ],
+            "name": "hold",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "profile": "readParcelable",
+                        "__parcelType": "android.telephony.ims.ImsStreamMediaProfile"
+                    }]
+                }
+            ],
+            "name": "resume",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 19,
+            "in": [],
+            "name": "merge",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 20,
+            "in": [
+                {"callType": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "profile": "readParcelable",
+                        "__parcelType": "android.telephony.ims.ImsStreamMediaProfile"
+                    }]
+                }
+            ],
+            "name": "update",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 21,
+            "in": [{"participants": "readString16Vector"}],
+            "name": "extendToConference",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 22,
+            "in": [{"participants": "readString16Vector"}],
+            "name": "inviteParticipants",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 23,
+            "in": [{"participants": "readString16Vector"}],
+            "name": "removeParticipants",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 24,
+            "in": [
+                {"c": "readChar"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "result": "readParcelable",
+                        "__parcelType": "android.os.Message"
+                    }]
+                }
+            ],
+            "name": "sendDtmf",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 25,
+            "in": [{"c": "readChar"}],
+            "name": "startDtmf",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 26,
+            "in": [],
+            "name": "stopDtmf",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 27,
+            "in": [{"ussdMessage": "readString16"}],
+            "name": "sendUssd",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 28,
+            "in": [],
+            "name": "getVideoCallProvider",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 29,
+            "in": [],
+            "name": "isMultiparty",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 30,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "toProfile": "readParcelable",
+                        "__parcelType": "android.telephony.ims.ImsCallProfile"
+                    }]
+                }
+            ],
+            "name": "sendRttModifyRequest",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 31,
+            "in": [{"status": "readBool"}],
+            "name": "sendRttModifyResponse",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 32,
+            "in": [{"rttMessage": "readString16"}],
+            "name": "sendRttMessage",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IImsCallSession",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

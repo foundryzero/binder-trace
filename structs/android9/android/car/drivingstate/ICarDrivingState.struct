@@ -1,0 +1,41 @@
+{
+    "produced_on": "2022-08-19T10:42:50.671827269Z",
+    "source_location": "",
+    "full_name": "android.car.drivingstate.ICarDrivingState",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "registerDrivingStateChangeListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "unregisterDrivingStateChangeListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getCurrentDrivingState",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.car.drivingstate.CarDrivingStateEvent"
+                    }]
+                }
+            ]
+        }
+    ],
+    "name": "ICarDrivingState",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

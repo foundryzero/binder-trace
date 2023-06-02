@@ -1,0 +1,25 @@
+{
+    "produced_on": "2023-06-01T06:42:35.903682676Z",
+    "source_location": "",
+    "full_name": "android.location.provider.IProviderRequestListener",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"provider": "readString16"},
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "request": "readParcelable",
+                    "__parcelType": "android.location.provider.ProviderRequest"
+                }]
+            }
+        ],
+        "name": "onProviderRequestChanged",
+        "oneWay": true,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "IProviderRequestListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,51 @@
+{
+    "produced_on": "2022-08-19T10:42:53.645957661Z",
+    "source_location": "",
+    "full_name": "android.os.IThermalService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "registerThermalEventListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "unregisterThermalEventListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"isThrottling": "readBool"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "temperature": "readParcelable",
+                        "__parcelType": "android.os.Temperature"
+                    }]
+                }
+            ],
+            "name": "notifyThrottling",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "isThrottling",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "IThermalService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

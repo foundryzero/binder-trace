@@ -1,0 +1,58 @@
+{
+    "produced_on": "2022-12-02T13:44:07.667725321Z",
+    "source_location": "",
+    "full_name": "android.os.IVibratorService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "hasVibrator",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "hasAmplitudeControl",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"uid": "readInt32"},
+                {"opPkg": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "effect": "readParcelable",
+                        "__parcelType": "android.os.VibrationEffect"
+                    }]
+                },
+                {"usageHint": "readInt32"},
+                {"reason": "readString16"},
+                {"token": "readStrongBinder"}
+            ],
+            "name": "vibrate",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"token": "readStrongBinder"}],
+            "name": "cancelVibrate",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IVibratorService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

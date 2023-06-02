@@ -1,0 +1,28 @@
+{
+    "produced_on": "2023-06-01T06:42:38.215725723Z",
+    "source_location": "",
+    "components": [
+        {"requestId": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "messageType": "readParcelable",
+                "__parcelType": "android.hardware.automotive.vehicle.SwitchUserMessageType"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "status": "readParcelable",
+                "__parcelType": "android.hardware.automotive.vehicle.SwitchUserStatus"
+            }]
+        },
+        {"errorMessage": "readString16"}
+    ],
+    "full_name": "android.hardware.automotive.vehicle.SwitchUserResponse",
+    "name": "SwitchUserResponse",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

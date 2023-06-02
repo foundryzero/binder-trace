@@ -1,0 +1,69 @@
+{
+    "produced_on": "2023-06-01T06:42:36.537115215Z",
+    "source_location": "",
+    "full_name": "android.app.stubs.shared.ICloseSystemDialogsTestsService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "sendCloseSystemDialogsBroadcast",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"reason": "readString16"}],
+            "name": "closeSystemDialogsViaWindowManager",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"reason": "readString16"}],
+            "name": "closeSystemDialogsViaActivityManager",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"timeoutMs": "readInt64"}],
+            "name": "waitForAccessibilityServiceWindow",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"notificationId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiver": "readParcelable",
+                        "__parcelType": "android.os.ResultReceiver"
+                    }]
+                },
+                {"usePendingIntent": "readBool"}
+            ],
+            "name": "postNotification",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"timeoutMs": "readInt64"}],
+            "name": "waitUntilReady",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "ICloseSystemDialogsTestsService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

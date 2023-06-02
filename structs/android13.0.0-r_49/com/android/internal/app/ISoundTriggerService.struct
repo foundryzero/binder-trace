@@ -1,0 +1,58 @@
+{
+    "produced_on": "2023-06-01T06:42:35.161446824Z",
+    "source_location": "",
+    "full_name": "com.android.internal.app.ISoundTriggerService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "originatorIdentity": "readParcelable",
+                        "__parcelType": "android.media.permission.Identity"
+                    }]
+                },
+                {"client": "readStrongBinder"}
+            ],
+            "name": "attachAsOriginator",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "middlemanIdentity": "readParcelable",
+                        "__parcelType": "android.media.permission.Identity"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "originatorIdentity": "readParcelable",
+                        "__parcelType": "android.media.permission.Identity"
+                    }]
+                },
+                {"client": "readStrongBinder"}
+            ],
+            "name": "attachAsMiddleman",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        }
+    ],
+    "name": "ISoundTriggerService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,29 @@
+{
+    "produced_on": "2022-08-04T09:32:17.476813043Z",
+    "source_location": "",
+    "components": [
+        {"tetheringType": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "localIPv4Address": "readParcelable",
+                "__parcelType": "android.net.LinkAddress"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "staticClientAddress": "readParcelable",
+                "__parcelType": "android.net.LinkAddress"
+            }]
+        },
+        {"exemptFromEntitlementCheck": "readBool"},
+        {"showProvisioningUi": "readBool"}
+    ],
+    "full_name": "android.net.TetheringRequestParcel",
+    "name": "TetheringRequestParcel",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

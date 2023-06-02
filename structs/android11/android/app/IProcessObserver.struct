@@ -1,0 +1,42 @@
+{
+    "produced_on": "2022-08-26T09:55:23.925902704Z",
+    "source_location": "",
+    "full_name": "android.app.IProcessObserver",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"pid": "readInt32"},
+                {"uid": "readInt32"},
+                {"foregroundActivities": "readBool"}
+            ],
+            "name": "onForegroundActivitiesChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"pid": "readInt32"},
+                {"uid": "readInt32"},
+                {"serviceTypes": "readInt32"}
+            ],
+            "name": "onForegroundServicesChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"pid": "readInt32"},
+                {"uid": "readInt32"}
+            ],
+            "name": "onProcessDied",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IProcessObserver",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

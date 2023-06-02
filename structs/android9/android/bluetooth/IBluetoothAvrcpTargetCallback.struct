@@ -1,0 +1,138 @@
+{
+    "produced_on": "2022-08-04T09:32:16.078814417Z",
+    "source_location": "",
+    "full_name": "android.bluetooth.IBluetoothAvrcpTargetCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"status": "readInt32"}],
+            "name": "OnRegistered",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"addr": "readString16"},
+                {"features": "readInt32"}
+            ],
+            "name": "OnGetRemoteFeatures",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"addr": "readString16"}],
+            "name": "OnGetPlayStatus",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"addr": "readString16"}],
+            "name": "OnListPlayerAppAttr",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"addr": "readString16"},
+                {"attr_id": "readInt32"}
+            ],
+            "name": "OnListPlayerAppValues",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"addr": "readString16"},
+                {"attrs": "readInt32Vector"}
+            ],
+            "name": "OnGetPlayerAppValue",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"addr": "readString16"},
+                {"attrs": "readInt32Vector"}
+            ],
+            "name": "OnGetPlayerAppAttrsText",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"addr": "readString16"},
+                {"attr_id": "readInt32"},
+                {"values": "readInt32Vector"}
+            ],
+            "name": "OnGetPlayerAppValuesText",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"addr": "readString16"},
+                {
+                    "values": "readParcelableVector",
+                    "__parcelType": "android.bluetooth.BluetoothAvrcpIntValue"
+                }
+            ],
+            "name": "OnSetPlayerAppValue",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"addr": "readString16"},
+                {"attrs": "readInt32Vector"}
+            ],
+            "name": "OnGetElementAttrs",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"addr": "readString16"},
+                {"event_id": "readInt32"},
+                {"param": "readInt32"}
+            ],
+            "name": "OnRegisterNotification",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"addr": "readString16"},
+                {"volume": "readInt32"},
+                {"ctype": "readInt32"}
+            ],
+            "name": "OnVolumeChange",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"addr": "readString16"},
+                {"id": "readInt32"},
+                {"key_state": "readInt32"}
+            ],
+            "name": "OnPassThroughCommand",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IBluetoothAvrcpTargetCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

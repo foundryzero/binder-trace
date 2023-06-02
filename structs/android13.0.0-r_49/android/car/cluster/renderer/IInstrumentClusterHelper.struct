@@ -1,0 +1,42 @@
+{
+    "produced_on": "2023-06-01T06:42:33.063355748Z",
+    "source_location": "",
+    "full_name": "android.car.cluster.renderer.IInstrumentClusterHelper",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "intent": "readParcelable",
+                        "__parcelType": "android.content.Intent"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"activityOptionsBundle": "readBundle"}]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "startFixedActivityModeForDisplayAndUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"displayId": "readInt32"}],
+            "name": "stopFixedActivityMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IInstrumentClusterHelper",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

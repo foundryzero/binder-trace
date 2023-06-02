@@ -1,0 +1,187 @@
+{
+    "produced_on": "2022-08-04T09:32:20.185818800Z",
+    "source_location": "",
+    "full_name": "android.app.role.IRoleManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"roleName": "readString16"}],
+            "name": "isRoleAvailable",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"roleName": "readString16"},
+                {"packageName": "readString16"}
+            ],
+            "name": "isRoleHeld",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"roleName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "getRoleHoldersAsUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "String"
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"roleName": "readString16"},
+                {"packageName": "readString16"},
+                {"flags": "readInt32"},
+                {"userId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callback": "readParcelable",
+                        "__parcelType": "android.os.RemoteCallback"
+                    }]
+                }
+            ],
+            "name": "addRoleHolderAsUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"roleName": "readString16"},
+                {"packageName": "readString16"},
+                {"flags": "readInt32"},
+                {"userId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callback": "readParcelable",
+                        "__parcelType": "android.os.RemoteCallback"
+                    }]
+                }
+            ],
+            "name": "removeRoleHolderAsUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"roleName": "readString16"},
+                {"flags": "readInt32"},
+                {"userId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callback": "readParcelable",
+                        "__parcelType": "android.os.RemoteCallback"
+                    }]
+                }
+            ],
+            "name": "clearRoleHoldersAsUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"listener": "readStrongBinder"},
+                {"userId": "readInt32"}
+            ],
+            "name": "addOnRoleHoldersChangedListenerAsUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"listener": "readStrongBinder"},
+                {"userId": "readInt32"}
+            ],
+            "name": "removeOnRoleHoldersChangedListenerAsUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [{
+                "roleNames": "readList",
+                "__parcelType": "String"
+            }],
+            "name": "setRoleNamesFromController",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"roleName": "readString16"},
+                {"packageName": "readString16"}
+            ],
+            "name": "addRoleHolderFromController",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"roleName": "readString16"},
+                {"packageName": "readString16"}
+            ],
+            "name": "removeRoleHolderFromController",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [{"packageName": "readString16"}],
+            "name": "getHeldRolesFromController",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "String"
+                }
+            ]
+        },
+        {
+            "code": 13,
+            "in": [{"userId": "readInt32"}],
+            "name": "getDefaultSmsPackage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        }
+    ],
+    "name": "IRoleManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

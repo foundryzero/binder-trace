@@ -1,0 +1,441 @@
+{
+    "produced_on": "2022-08-26T09:55:23.092161349Z",
+    "source_location": "",
+    "full_name": "android.hardware.hdmi.IHdmiControlService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getSupportedTypes",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "getActiveSource",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.hdmi.HdmiDeviceInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "oneTouchPlay",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "queryDisplayStatus",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "addHdmiControlStatusChangeListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "removeHdmiControlStatusChangeListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "addHdmiCecVolumeControlFeatureListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "removeHdmiCecVolumeControlFeatureListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "addHotplugEventListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "removeHotplugEventListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "addDeviceEventListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"deviceId": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "deviceSelect",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"portId": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "portSelect",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"deviceType": "readInt32"},
+                {"keyCode": "readInt32"},
+                {"isPressed": "readBool"}
+            ],
+            "name": "sendKeyEvent",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"deviceType": "readInt32"},
+                {"keyCode": "readInt32"},
+                {"isPressed": "readBool"}
+            ],
+            "name": "sendVolumeKeyEvent",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [],
+            "name": "getPortInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.hardware.hdmi.HdmiPortInfo"
+                }
+            ]
+        },
+        {
+            "code": 17,
+            "in": [],
+            "name": "canChangeSystemAudioMode",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 18,
+            "in": [],
+            "name": "getSystemAudioMode",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 19,
+            "in": [],
+            "name": "getPhysicalAddress",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 20,
+            "in": [
+                {"enabled": "readBool"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "setSystemAudioMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 21,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "addSystemAudioModeChangeListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 22,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "removeSystemAudioModeChangeListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 23,
+            "in": [{"enabled": "readBool"}],
+            "name": "setArcMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 24,
+            "in": [{"enabled": "readBool"}],
+            "name": "setProhibitMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 25,
+            "in": [
+                {"oldIndex": "readInt32"},
+                {"newIndex": "readInt32"},
+                {"maxIndex": "readInt32"}
+            ],
+            "name": "setSystemAudioVolume",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 26,
+            "in": [{"mute": "readBool"}],
+            "name": "setSystemAudioMute",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 27,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "setInputChangeListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 28,
+            "in": [],
+            "name": "getInputDevices",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.hardware.hdmi.HdmiDeviceInfo"
+                }
+            ]
+        },
+        {
+            "code": 29,
+            "in": [],
+            "name": "getDeviceList",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.hardware.hdmi.HdmiDeviceInfo"
+                }
+            ]
+        },
+        {
+            "code": 30,
+            "in": [
+                {"logicalAddress": "readInt32"},
+                {"powerStatus": "readInt32"}
+            ],
+            "name": "powerOffRemoteDevice",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 31,
+            "in": [
+                {"logicalAddress": "readInt32"},
+                {"powerStatus": "readInt32"}
+            ],
+            "name": "powerOnRemoteDevice",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 32,
+            "in": [{"physicalAddress": "readInt32"}],
+            "name": "askRemoteDeviceToBecomeActiveSource",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 33,
+            "in": [
+                {"deviceType": "readInt32"},
+                {"targetAddress": "readInt32"},
+                {"params": "readByteVector"},
+                {"hasVendorId": "readBool"}
+            ],
+            "name": "sendVendorCommand",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 34,
+            "in": [
+                {"listener": "readStrongBinder"},
+                {"deviceType": "readInt32"}
+            ],
+            "name": "addVendorCommandListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 35,
+            "in": [
+                {"deviceType": "readInt32"},
+                {"deviceId": "readInt32"}
+            ],
+            "name": "sendStandby",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 36,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "setHdmiRecordListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 37,
+            "in": [
+                {"recorderAddress": "readInt32"},
+                {"recordSource": "readByteVector"}
+            ],
+            "name": "startOneTouchRecord",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 38,
+            "in": [{"recorderAddress": "readInt32"}],
+            "name": "stopOneTouchRecord",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 39,
+            "in": [
+                {"recorderAddress": "readInt32"},
+                {"sourceType": "readInt32"},
+                {"recordSource": "readByteVector"}
+            ],
+            "name": "startTimerRecording",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 40,
+            "in": [
+                {"recorderAddress": "readInt32"},
+                {"sourceType": "readInt32"},
+                {"recordSource": "readByteVector"}
+            ],
+            "name": "clearTimerRecording",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 41,
+            "in": [
+                {"portId": "readInt32"},
+                {"offset": "readInt32"},
+                {"length": "readInt32"},
+                {"data": "readByteVector"}
+            ],
+            "name": "sendMhlVendorCommand",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 42,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "addHdmiMhlVendorCommandListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 43,
+            "in": [{"isStandbyModeOn": "readBool"}],
+            "name": "setStandbyMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 44,
+            "in": [{"isHdmiCecVolumeControlEnabled": "readBool"}],
+            "name": "setHdmiCecVolumeControlEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 45,
+            "in": [],
+            "name": "isHdmiCecVolumeControlEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 46,
+            "in": [
+                {"deviceType": "readInt32"},
+                {"volume": "readInt32"},
+                {"maxVolume": "readInt32"},
+                {"isMute": "readBool"}
+            ],
+            "name": "reportAudioStatus",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 47,
+            "in": [],
+            "name": "setSystemAudioModeOnForAudioOnlySource",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IHdmiControlService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

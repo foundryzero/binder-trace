@@ -1,0 +1,61 @@
+{
+    "produced_on": "2023-06-01T06:42:39.218457213Z",
+    "source_location": "",
+    "full_name": "android.hardware.vibrator.IVibratorManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getCapabilities",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "getVibratorIds",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"vibratorId": "readInt32"}],
+            "name": "getVibrator",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"vibratorIds": "readInt32Vector"}],
+            "name": "prepareSynced",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "triggerSynced",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "cancelSynced",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IVibratorManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

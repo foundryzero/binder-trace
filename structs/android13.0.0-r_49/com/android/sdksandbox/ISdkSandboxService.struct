@@ -1,0 +1,32 @@
+{
+    "produced_on": "2023-06-01T06:42:34.060050288Z",
+    "source_location": "",
+    "full_name": "com.android.sdksandbox.ISdkSandboxService",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"sdkToken": "readStrongBinder"},
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "info": "readParcelable",
+                    "__parcelType": "android.content.pm.ApplicationInfo"
+                }]
+            },
+            {"sdkProviderClassName": "readString16"},
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{"params": "readBundle"}]
+            },
+            {"callback": "readStrongBinder"}
+        ],
+        "name": "loadSdk",
+        "oneWay": true,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "ISdkSandboxService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

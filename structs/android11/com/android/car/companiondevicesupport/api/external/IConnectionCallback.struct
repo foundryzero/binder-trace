@@ -1,0 +1,42 @@
+{
+    "produced_on": "2022-08-26T09:55:19.276479828Z",
+    "source_location": "",
+    "full_name": "com.android.car.companiondevicesupport.api.external.IConnectionCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "companionDevice": "readParcelable",
+                        "__parcelType": "com.android.car.companiondevicesupport.api.external.CompanionDevice"
+                    }]
+                }
+            ],
+            "name": "onDeviceConnected",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "companionDevice": "readParcelable",
+                        "__parcelType": "com.android.car.companiondevicesupport.api.external.CompanionDevice"
+                    }]
+                }
+            ],
+            "name": "onDeviceDisconnected",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IConnectionCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

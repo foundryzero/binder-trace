@@ -1,0 +1,29 @@
+{
+    "produced_on": "2023-06-01T06:42:38.209278453Z",
+    "source_location": "",
+    "components": [
+        {"requestId": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "action": "readParcelable",
+                "__parcelType": "android.hardware.automotive.vehicle.InitialUserInfoResponseAction"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "userToSwitchOrCreate": "readParcelable",
+                "__parcelType": "android.hardware.automotive.vehicle.UserInfo"
+            }]
+        },
+        {"userLocales": "readString16"},
+        {"userNameToCreate": "readString16"}
+    ],
+    "full_name": "android.hardware.automotive.vehicle.InitialUserInfoResponse",
+    "name": "InitialUserInfoResponse",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

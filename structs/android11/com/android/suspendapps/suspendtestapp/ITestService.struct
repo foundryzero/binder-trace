@@ -1,0 +1,78 @@
+{
+    "produced_on": "2022-08-26T09:55:21.689087051Z",
+    "source_location": "",
+    "full_name": "com.android.suspendapps.suspendtestapp.ITestService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "isPackageSuspended",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "getSuspendedAppExtras",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"__return": "readBundle"}]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"timeoutMs": "readInt64"}],
+            "name": "waitForActivityStart",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.Intent"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"timeoutMs": "readInt64"}],
+            "name": "waitForActivityStop",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"action": "readString16"},
+                {"reporter": "readStrongBinder"}
+            ],
+            "name": "registerBroadcastReporter",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"action": "readString16"}],
+            "name": "unregisterBroadcastReporter",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ITestService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

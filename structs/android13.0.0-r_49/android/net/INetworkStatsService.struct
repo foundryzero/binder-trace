@@ -1,0 +1,237 @@
+{
+    "produced_on": "2023-06-01T06:42:34.386115060Z",
+    "source_location": "",
+    "full_name": "android.net.INetworkStatsService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "openSession",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"flags": "readInt32"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "openSessionForUsageStats",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"uid": "readInt32"}],
+            "name": "getDataLayerSnapshotForUid",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.net.NetworkStats"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"transport": "readInt32"}],
+            "name": "getUidStatsForTransport",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.net.NetworkStats"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "getMobileIfaces",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"uid": "readInt32"},
+                {"tag": "readInt32"},
+                {"operationCount": "readInt32"}
+            ],
+            "name": "incrementOperationCount",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {
+                    "defaultNetworks": "readParcelableVector",
+                    "__parcelType": "android.net.Network"
+                },
+                {
+                    "snapshots": "readParcelableVector",
+                    "__parcelType": "android.net.NetworkStateSnapshot"
+                },
+                {"activeIface": "readString16"},
+                {
+                    "underlyingNetworkInfos": "readParcelableVector",
+                    "__parcelType": "android.net.UnderlyingNetworkInfo"
+                }
+            ],
+            "name": "notifyNetworkStatus",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "forceUpdate",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.net.DataUsageRequest"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "registerUsageCallback",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.net.DataUsageRequest"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.net.DataUsageRequest"
+                    }]
+                }
+            ],
+            "name": "unregisterUsageRequest",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"uid": "readInt32"},
+                {"type": "readInt32"}
+            ],
+            "name": "getUidStats",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"iface": "readString16"},
+                {"type": "readInt32"}
+            ],
+            "name": "getIfaceStats",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [{"type": "readInt32"}],
+            "name": "getTotalStats",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"tag": "readString16"},
+                {"provider": "readStrongBinder"}
+            ],
+            "name": "registerNetworkStatsProvider",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"uid": "readInt32"},
+                {"uidForeground": "readBool"}
+            ],
+            "name": "noteUidForeground",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [{"thresholdBytes": "readInt64"}],
+            "name": "advisePersistThreshold",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [
+                {"iface": "readString16"},
+                {"warning": "readInt64"},
+                {"limit": "readInt64"}
+            ],
+            "name": "setStatsProviderWarningAndLimitAsync",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "INetworkStatsService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

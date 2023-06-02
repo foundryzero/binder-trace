@@ -1,0 +1,30 @@
+{
+    "produced_on": "2023-06-01T06:42:37.406935003Z",
+    "source_location": "",
+    "components": [
+        {"teleserviceId": "readInt32"},
+        {"isServicePresent": "readBool"},
+        {"serviceCategory": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "address": "readParcelable",
+                "__parcelType": "android.hardware.radio.messaging.CdmaSmsAddress"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "subAddress": "readParcelable",
+                "__parcelType": "android.hardware.radio.messaging.CdmaSmsSubaddress"
+            }]
+        },
+        {"bearerData": "readByteVector"}
+    ],
+    "full_name": "android.hardware.radio.messaging.CdmaSmsMessage",
+    "name": "CdmaSmsMessage",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

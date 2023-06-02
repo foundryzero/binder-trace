@@ -1,0 +1,25 @@
+{
+    "produced_on": "2022-08-26T09:55:24.098179710Z",
+    "source_location": "",
+    "full_name": "android.view.IDisplayWindowRotationCallback",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"targetRotation": "readInt32"},
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "t": "readParcelable",
+                    "__parcelType": "android.window.WindowContainerTransaction"
+                }]
+            }
+        ],
+        "name": "continueRotateDisplay",
+        "oneWay": false,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "IDisplayWindowRotationCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

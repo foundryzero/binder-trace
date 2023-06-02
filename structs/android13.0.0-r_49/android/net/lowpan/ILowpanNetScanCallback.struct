@@ -1,0 +1,33 @@
+{
+    "produced_on": "2023-06-01T06:42:34.578234466Z",
+    "source_location": "",
+    "full_name": "android.net.lowpan.ILowpanNetScanCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "beacon": "readParcelable",
+                        "__parcelType": "android.net.lowpan.LowpanBeaconInfo"
+                    }]
+                }
+            ],
+            "name": "onNetScanBeacon",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "onNetScanFinished",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ILowpanNetScanCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

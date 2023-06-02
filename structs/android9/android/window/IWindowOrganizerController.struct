@@ -1,0 +1,93 @@
+{
+    "produced_on": "2022-08-04T09:32:19.432664335Z",
+    "source_location": "",
+    "full_name": "android.window.IWindowOrganizerController",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "t": "readParcelable",
+                        "__parcelType": "android.window.WindowContainerTransaction"
+                    }]
+                }
+            ],
+            "name": "applyTransaction",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "t": "readParcelable",
+                        "__parcelType": "android.window.WindowContainerTransaction"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "applySyncTransaction",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getTaskOrganizerController",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "getDisplayAreaOrganizerController",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "token": "readParcelable",
+                        "__parcelType": "android.window.WindowContainerToken"
+                    }]
+                }
+            ],
+            "name": "takeScreenshot",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "outSurfaceControl": "readParcelable",
+                        "__parcelType": "android.view.SurfaceControl"
+                    }]
+                }
+            ]
+        }
+    ],
+    "name": "IWindowOrganizerController",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

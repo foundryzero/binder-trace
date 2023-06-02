@@ -1,0 +1,81 @@
+{
+    "produced_on": "2023-06-01T06:42:37.458097075Z",
+    "source_location": "",
+    "full_name": "android.hardware.radio.config.IRadioConfig",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"serial": "readInt32"}],
+            "name": "getHalDeviceCapabilities",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"serial": "readInt32"}],
+            "name": "getNumOfLiveModems",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"serial": "readInt32"}],
+            "name": "getPhoneCapability",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"serial": "readInt32"}],
+            "name": "getSimSlotsStatus",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"serial": "readInt32"},
+                {"numOfLiveModems": "readByte"}
+            ],
+            "name": "setNumOfLiveModems",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"serial": "readInt32"},
+                {"modemId": "readByte"}
+            ],
+            "name": "setPreferredDataModem",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"radioConfigResponse": "readStrongBinder"},
+                {"radioConfigIndication": "readStrongBinder"}
+            ],
+            "name": "setResponseFunctions",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"serial": "readInt32"},
+                {
+                    "slotMap": "readParcelableVector",
+                    "__parcelType": "android.hardware.radio.config.SlotPortMapping"
+                }
+            ],
+            "name": "setSimSlotsMapping",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IRadioConfig",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

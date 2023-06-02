@@ -1,0 +1,118 @@
+{
+    "produced_on": "2022-12-02T13:44:07.220285877Z",
+    "source_location": "",
+    "full_name": "android.content.rollback.IRollbackManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getAvailableRollbacks",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.ParceledListSlice"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "getRecentlyExecutedRollbacks",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.ParceledListSlice"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"rollbackId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "causePackages": "readParcelable",
+                        "__parcelType": "android.content.pm.ParceledListSlice"
+                    }]
+                },
+                {"callerPackageName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "statusReceiver": "readParcelable",
+                        "__parcelType": "android.content.IntentSender"
+                    }]
+                }
+            ],
+            "name": "commitRollback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"packageName": "readString16"},
+                {"userIds": "readInt32Vector"},
+                {"appId": "readInt32"},
+                {"ceDataInode": "readInt64"},
+                {"seInfo": "readString16"},
+                {"token": "readInt32"}
+            ],
+            "name": "snapshotAndRestoreUserData",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "reloadPersistedData",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"packageName": "readString16"}],
+            "name": "expireRollbackForPackage",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"sessionId": "readInt32"}],
+            "name": "notifyStagedSession",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"originalSessionId": "readInt32"},
+                {"apkSessionId": "readInt32"}
+            ],
+            "name": "notifyStagedApkSession",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IRollbackManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

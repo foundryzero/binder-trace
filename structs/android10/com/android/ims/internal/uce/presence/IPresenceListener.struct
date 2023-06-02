@@ -1,0 +1,137 @@
+{
+    "produced_on": "2022-12-02T13:44:06.855334358Z",
+    "source_location": "",
+    "full_name": "com.android.ims.internal.uce.presence.IPresenceListener",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"version": "readString16"}],
+            "name": "getVersionCb",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "statusCode": "readParcelable",
+                        "__parcelType": "com.android.ims.internal.uce.common.StatusCode"
+                    }]
+                }
+            ],
+            "name": "serviceAvailable",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "statusCode": "readParcelable",
+                        "__parcelType": "com.android.ims.internal.uce.common.StatusCode"
+                    }]
+                }
+            ],
+            "name": "serviceUnAvailable",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "publishTrigger": "readParcelable",
+                        "__parcelType": "com.android.ims.internal.uce.presence.PresPublishTriggerType"
+                    }]
+                }
+            ],
+            "name": "publishTriggering",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "cmdStatus": "readParcelable",
+                        "__parcelType": "com.android.ims.internal.uce.presence.PresCmdStatus"
+                    }]
+                }
+            ],
+            "name": "cmdStatus",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sipResponse": "readParcelable",
+                        "__parcelType": "com.android.ims.internal.uce.presence.PresSipResponse"
+                    }]
+                }
+            ],
+            "name": "sipResponseReceived",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"presentityURI": "readString16"},
+                {
+                    "tupleInfo": "readParcelableVector",
+                    "__parcelType": "com.android.ims.internal.uce.presence.PresTupleInfo"
+                }
+            ],
+            "name": "capInfoReceived",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "rlmiInfo": "readParcelable",
+                        "__parcelType": "com.android.ims.internal.uce.presence.PresRlmiInfo"
+                    }]
+                },
+                {
+                    "resInfo": "readParcelableVector",
+                    "__parcelType": "com.android.ims.internal.uce.presence.PresResInfo"
+                }
+            ],
+            "name": "listCapInfoReceived",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [],
+            "name": "unpublishMessageSent",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IPresenceListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

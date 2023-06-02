@@ -1,0 +1,114 @@
+{
+    "produced_on": "2023-06-01T06:42:34.584929907Z",
+    "source_location": "",
+    "full_name": "android.net.lowpan.ILowpanInterfaceListener",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"value": "readBool"}],
+            "name": "onEnabledChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"value": "readBool"}],
+            "name": "onConnectedChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"value": "readBool"}],
+            "name": "onUpChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"value": "readString16"}],
+            "name": "onRoleChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"value": "readString16"}],
+            "name": "onStateChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "value": "readParcelable",
+                        "__parcelType": "android.net.lowpan.LowpanIdentity"
+                    }]
+                }
+            ],
+            "name": "onLowpanIdentityChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "value": "readParcelable",
+                        "__parcelType": "android.net.IpPrefix"
+                    }]
+                }
+            ],
+            "name": "onLinkNetworkAdded",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "value": "readParcelable",
+                        "__parcelType": "android.net.IpPrefix"
+                    }]
+                }
+            ],
+            "name": "onLinkNetworkRemoved",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [{"value": "readString16"}],
+            "name": "onLinkAddressAdded",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [{"value": "readString16"}],
+            "name": "onLinkAddressRemoved",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [{"packet": "readByteVector"}],
+            "name": "onReceiveFromCommissioner",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ILowpanInterfaceListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,68 @@
+{
+    "produced_on": "2022-08-26T09:55:20.722030758Z",
+    "source_location": "",
+    "full_name": "android.bluetooth.IBluetoothLeScanner",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "RegisterScanner",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"scanner_id": "readInt32"}],
+            "name": "UnregisterScanner",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "UnregisterAll",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"client_id": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "settings": "readParcelable",
+                        "__parcelType": "android.bluetooth.ScanSettings"
+                    }]
+                },
+                {
+                    "filters": "readParcelableVector",
+                    "__parcelType": "android.bluetooth.ScanFilter"
+                }
+            ],
+            "name": "StartScan",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"client_id": "readInt32"}],
+            "name": "StopScan",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "IBluetoothLeScanner",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

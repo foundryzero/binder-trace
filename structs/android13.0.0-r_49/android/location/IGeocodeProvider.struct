@@ -1,0 +1,53 @@
+{
+    "produced_on": "2023-06-01T06:42:35.905207783Z",
+    "source_location": "",
+    "full_name": "android.location.IGeocodeProvider",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"latitude": "readDouble"},
+                {"longitude": "readDouble"},
+                {"maxResults": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "params": "readParcelable",
+                        "__parcelType": "android.location.GeocoderParams"
+                    }]
+                },
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "getFromLocation",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"locationName": "readString16"},
+                {"lowerLeftLatitude": "readDouble"},
+                {"lowerLeftLongitude": "readDouble"},
+                {"upperRightLatitude": "readDouble"},
+                {"upperRightLongitude": "readDouble"},
+                {"maxResults": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "params": "readParcelable",
+                        "__parcelType": "android.location.GeocoderParams"
+                    }]
+                },
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "getFromLocationName",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IGeocodeProvider",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

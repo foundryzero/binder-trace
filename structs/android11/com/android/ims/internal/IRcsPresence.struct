@@ -1,0 +1,62 @@
+{
+    "produced_on": "2022-08-26T09:55:24.487340201Z",
+    "source_location": "",
+    "full_name": "com.android.ims.internal.IRcsPresence",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {
+                    "contactsNumber": "readList",
+                    "__parcelType": "String"
+                },
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "requestCapability",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"contactNumber": "readString16"},
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "requestAvailability",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"contactNumber": "readString16"},
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "requestAvailabilityNoThrottle",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "getPublishState",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        }
+    ],
+    "name": "IRcsPresence",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

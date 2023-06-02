@@ -1,0 +1,257 @@
+{
+    "produced_on": "2022-08-26T09:55:21.889773957Z",
+    "source_location": "",
+    "full_name": "com.android.systemui.shared.recents.ISystemUiProxy",
+    "calls": [
+        {
+            "code": 2,
+            "in": [{"taskId": "readInt32"}],
+            "name": "startScreenPinning",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "onSplitScreenInvoked",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"fromHome": "readBool"}],
+            "name": "onOverviewShown",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "getNonMinimizedSplitScreenSecondaryBounds",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.graphics.Rect"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"alpha": "readFloat"},
+                {"animate": "readBool"}
+            ],
+            "name": "setBackButtonAlpha",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 20,
+            "in": [
+                {"alpha": "readFloat"},
+                {"animate": "readBool"}
+            ],
+            "name": "setNavBarButtonAlpha",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "event": "readParcelable",
+                        "__parcelType": "android.view.MotionEvent"
+                    }]
+                }
+            ],
+            "name": "onStatusBarMotionEvent",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [{"progress": "readFloat"}],
+            "name": "onAssistantProgress",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 19,
+            "in": [{"velocity": "readFloat"}],
+            "name": "onAssistantGestureCompletion",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"bundle": "readBundle"}]
+                }
+            ],
+            "name": "startAssistant",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"name": "readString16"},
+                {"displayId": "readInt32"}
+            ],
+            "name": "monitorGestureInput",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"__return": "readBundle"}]
+                }
+            ]
+        },
+        {
+            "code": 16,
+            "in": [{"displayId": "readInt32"}],
+            "name": "notifyAccessibilityButtonClicked",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [],
+            "name": "notifyAccessibilityButtonLongClicked",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [],
+            "name": "stopScreenPinning",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 21,
+            "in": [
+                {"visible": "readBool"},
+                {"shelfHeight": "readInt32"}
+            ],
+            "name": "setShelfHeight",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 22,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "screenImage": "readParcelable",
+                        "__parcelType": "android.graphics.Bitmap"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "locationInScreen": "readParcelable",
+                        "__parcelType": "android.graphics.Rect"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "visibleInsets": "readParcelable",
+                        "__parcelType": "android.graphics.Insets"
+                    }]
+                },
+                {"taskId": "readInt32"}
+            ],
+            "name": "handleImageAsScreenshot",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 23,
+            "in": [{"minimized": "readBool"}],
+            "name": "setSplitScreenMinimized",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 24,
+            "in": [],
+            "name": "notifySwipeToHomeFinished",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 25,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "setPinnedStackAnimationListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 26,
+            "in": [{"rotation": "readInt32"}],
+            "name": "onQuickSwitchToNewTask",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 27,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"screenImageBundle": "readBundle"}]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "locationInScreen": "readParcelable",
+                        "__parcelType": "android.graphics.Rect"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "visibleInsets": "readParcelable",
+                        "__parcelType": "android.graphics.Insets"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "task": "readParcelable",
+                        "__parcelType": "com.android.systemui.shared.recents.Task.TaskKey"
+                    }]
+                }
+            ],
+            "name": "handleImageBundleAsScreenshot",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISystemUiProxy",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

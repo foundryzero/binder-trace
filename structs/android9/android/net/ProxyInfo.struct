@@ -1,0 +1,30 @@
+{
+    "produced_on": "2022-08-19T11:09:14.511209162Z",
+    "source_location": "",
+    "components": [
+        {"nullcheck": "readByte"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [
+                {
+                    "url": "readParcelable",
+                    "__parcelType": "android.net.Uri"
+                },
+                {"localPort": "readInt32"}
+            ]
+        },
+        {"nullcheck": "readByte"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [
+                {"host": "readString16"},
+                {"port": "readInt32"}
+            ]
+        },
+        {"exclList": "readString16"}
+    ],
+    "full_name": "android.net.ProxyInfo",
+    "name": "ProxyInfo",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

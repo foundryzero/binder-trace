@@ -1,0 +1,53 @@
+{
+    "produced_on": "2022-12-02T13:44:07.676955223Z",
+    "source_location": "",
+    "full_name": "android.os.IHardwarePropertiesManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"type": "readInt32"},
+                {"source": "readInt32"}
+            ],
+            "name": "getDeviceTemperatures",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.os.float"
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"callingPackage": "readString16"}],
+            "name": "getCpuUsages",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.os.CpuUsageInfo"
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"callingPackage": "readString16"}],
+            "name": "getFanSpeeds",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.os.float"
+                }
+            ]
+        }
+    ],
+    "name": "IHardwarePropertiesManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

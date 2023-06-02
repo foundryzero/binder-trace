@@ -1,0 +1,41 @@
+{
+    "produced_on": "2023-06-01T06:42:35.595836385Z",
+    "source_location": "",
+    "full_name": "android.view.IScrollCaptureCallbacks",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "onCaptureStarted",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"flags": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "capturedArea": "readParcelable",
+                        "__parcelType": "android.graphics.Rect"
+                    }]
+                }
+            ],
+            "name": "onImageRequestCompleted",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "onCaptureEnded",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IScrollCaptureCallbacks",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

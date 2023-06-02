@@ -1,0 +1,52 @@
+{
+    "produced_on": "2022-08-04T09:32:19.336679764Z",
+    "source_location": "",
+    "full_name": "android.service.autofill.augmented.IFillCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"cancellation": "readStrongBinder"}],
+            "name": "onCancellable",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {
+                    "inlineSuggestionsData": "readList",
+                    "__parcelType": "android.service.autofill.Dataset"
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"clientState": "readBundle"}]
+                },
+                {"showingFillWindow": "readBool"}
+            ],
+            "name": "onSuccess",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "isCompleted",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "cancel",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IFillCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,45 @@
+{
+    "produced_on": "2023-06-01T06:42:34.700037733Z",
+    "source_location": "",
+    "full_name": "android.media.musicrecognition.IMusicRecognitionManagerCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "result": "readParcelable",
+                        "__parcelType": "android.media.MediaMetadata"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"extras": "readBundle"}]
+                }
+            ],
+            "name": "onRecognitionSucceeded",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"failureCode": "readInt32"}],
+            "name": "onRecognitionFailed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "onAudioStreamClosed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IMusicRecognitionManagerCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

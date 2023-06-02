@@ -1,0 +1,55 @@
+{
+    "produced_on": "2022-08-19T10:42:52.697863775Z",
+    "source_location": "",
+    "full_name": "android.service.settings.suggestions.ISuggestionService",
+    "calls": [
+        {
+            "code": 2,
+            "in": [],
+            "name": "getSuggestions",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.service.settings.suggestions.Suggestion"
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "suggestion": "readParcelable",
+                        "__parcelType": "android.service.settings.suggestions.Suggestion"
+                    }]
+                }
+            ],
+            "name": "dismissSuggestion",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "suggestion": "readParcelable",
+                        "__parcelType": "android.service.settings.suggestions.Suggestion"
+                    }]
+                }
+            ],
+            "name": "launchSuggestion",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISuggestionService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,109 @@
+{
+    "produced_on": "2022-12-02T13:44:06.933345141Z",
+    "source_location": "",
+    "full_name": "android.media.IMediaRouterService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"client": "readStrongBinder"},
+                {"packageName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "registerClientAsUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"client": "readStrongBinder"}],
+            "name": "unregisterClient",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"client": "readStrongBinder"},
+                {"groupId": "readString16"}
+            ],
+            "name": "registerClientGroupId",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"client": "readStrongBinder"}],
+            "name": "getState",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.media.MediaRouterClientState"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"client": "readStrongBinder"}],
+            "name": "isPlaybackActive",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"client": "readStrongBinder"},
+                {"routeTypes": "readInt32"},
+                {"activeScan": "readBool"}
+            ],
+            "name": "setDiscoveryRequest",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"client": "readStrongBinder"},
+                {"routeId": "readString16"},
+                {"explicit": "readBool"}
+            ],
+            "name": "setSelectedRoute",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"client": "readStrongBinder"},
+                {"routeId": "readString16"},
+                {"volume": "readInt32"}
+            ],
+            "name": "requestSetVolume",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"client": "readStrongBinder"},
+                {"routeId": "readString16"},
+                {"direction": "readInt32"}
+            ],
+            "name": "requestUpdateVolume",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IMediaRouterService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

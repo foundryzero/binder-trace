@@ -1,0 +1,44 @@
+{
+    "produced_on": "2022-08-19T10:42:53.025365909Z",
+    "source_location": "",
+    "full_name": "android.app.backup.IBackupObserver",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"currentPackage": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "backupProgress": "readParcelable",
+                        "__parcelType": "android.app.backup.BackupProgress"
+                    }]
+                }
+            ],
+            "name": "onUpdate",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"target": "readString16"},
+                {"status": "readInt32"}
+            ],
+            "name": "onResult",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"status": "readInt32"}],
+            "name": "backupFinished",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IBackupObserver",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

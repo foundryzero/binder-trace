@@ -1,0 +1,649 @@
+{
+    "produced_on": "2023-06-01T06:42:35.698382328Z",
+    "source_location": "",
+    "full_name": "android.os.storage.IStorageManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "registerListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "unregisterListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 20,
+            "in": [{"observer": "readStrongBinder"}],
+            "name": "shutdown",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 22,
+            "in": [
+                {"rawPath": "readString16"},
+                {"canonicalPath": "readString16"},
+                {"token": "readStrongBinder"},
+                {"nonce": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "obbInfo": "readParcelable",
+                        "__parcelType": "android.content.res.ObbInfo"
+                    }]
+                }
+            ],
+            "name": "mountObb",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 23,
+            "in": [
+                {"rawPath": "readString16"},
+                {"force": "readBool"},
+                {"token": "readStrongBinder"},
+                {"nonce": "readInt32"}
+            ],
+            "name": "unmountObb",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 24,
+            "in": [{"rawPath": "readString16"}],
+            "name": "isObbMounted",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 25,
+            "in": [{"rawPath": "readString16"}],
+            "name": "getMountedObbPath",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 30,
+            "in": [
+                {"userId": "readInt32"},
+                {"callingPackage": "readString16"},
+                {"flags": "readInt32"}
+            ],
+            "name": "getVolumeList",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.os.storage.StorageVolume"
+                }
+            ]
+        },
+        {
+            "code": 35,
+            "in": [
+                {"callingPkg": "readString16"},
+                {"path": "readString16"}
+            ],
+            "name": "mkdirs",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 42,
+            "in": [],
+            "name": "lastMaintenance",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 43,
+            "in": [],
+            "name": "runMaintenance",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 45,
+            "in": [],
+            "name": "getDisks",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.os.storage.DiskInfo"
+                }
+            ]
+        },
+        {
+            "code": 46,
+            "in": [{"flags": "readInt32"}],
+            "name": "getVolumes",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.os.storage.VolumeInfo"
+                }
+            ]
+        },
+        {
+            "code": 47,
+            "in": [{"flags": "readInt32"}],
+            "name": "getVolumeRecords",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.os.storage.VolumeRecord"
+                }
+            ]
+        },
+        {
+            "code": 48,
+            "in": [{"volId": "readString16"}],
+            "name": "mount",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 49,
+            "in": [{"volId": "readString16"}],
+            "name": "unmount",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 50,
+            "in": [{"volId": "readString16"}],
+            "name": "format",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 51,
+            "in": [{"diskId": "readString16"}],
+            "name": "partitionPublic",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 52,
+            "in": [{"diskId": "readString16"}],
+            "name": "partitionPrivate",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 53,
+            "in": [
+                {"diskId": "readString16"},
+                {"ratio": "readInt32"}
+            ],
+            "name": "partitionMixed",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 54,
+            "in": [
+                {"fsUuid": "readString16"},
+                {"nickname": "readString16"}
+            ],
+            "name": "setVolumeNickname",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 55,
+            "in": [
+                {"fsUuid": "readString16"},
+                {"flags": "readInt32"},
+                {"mask": "readInt32"}
+            ],
+            "name": "setVolumeUserFlags",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 56,
+            "in": [{"fsUuid": "readString16"}],
+            "name": "forgetVolume",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 57,
+            "in": [],
+            "name": "forgetAllVolumes",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 58,
+            "in": [],
+            "name": "getPrimaryStorageUuid",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 59,
+            "in": [
+                {"volumeUuid": "readString16"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "setPrimaryStorageUuid",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 60,
+            "in": [
+                {"volId": "readString16"},
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "benchmark",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 61,
+            "in": [
+                {"flags": "readInt32"},
+                {"mask": "readInt32"}
+            ],
+            "name": "setDebugFlags",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 62,
+            "in": [
+                {"userId": "readInt32"},
+                {"serialNumber": "readInt32"},
+                {"ephemeral": "readBool"}
+            ],
+            "name": "createUserKey",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 63,
+            "in": [{"userId": "readInt32"}],
+            "name": "destroyUserKey",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 64,
+            "in": [
+                {"userId": "readInt32"},
+                {"serialNumber": "readInt32"},
+                {"secret": "readByteVector"}
+            ],
+            "name": "unlockUserKey",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 65,
+            "in": [{"userId": "readInt32"}],
+            "name": "lockUserKey",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 66,
+            "in": [{"userId": "readInt32"}],
+            "name": "isUserKeyUnlocked",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 67,
+            "in": [
+                {"volumeUuid": "readString16"},
+                {"userId": "readInt32"},
+                {"serialNumber": "readInt32"},
+                {"flags": "readInt32"}
+            ],
+            "name": "prepareUserStorage",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 68,
+            "in": [
+                {"volumeUuid": "readString16"},
+                {"userId": "readInt32"},
+                {"flags": "readInt32"}
+            ],
+            "name": "destroyUserStorage",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 71,
+            "in": [
+                {"userId": "readInt32"},
+                {"serialNumber": "readInt32"},
+                {"secret": "readByteVector"}
+            ],
+            "name": "addUserKeyAuth",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 72,
+            "in": [{"userId": "readInt32"}],
+            "name": "fixateNewestUserKeyAuth",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 73,
+            "in": [
+                {"flags": "readInt32"},
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "fstrim",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 74,
+            "in": [],
+            "name": "mountProxyFileDescriptorBridge",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.internal.os.AppFuseMount"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 75,
+            "in": [
+                {"mountPointId": "readInt32"},
+                {"fileId": "readInt32"},
+                {"mode": "readInt32"}
+            ],
+            "name": "openProxyFileDescriptor",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.os.ParcelFileDescriptor"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 76,
+            "in": [
+                {"volumeUuid": "readString16"},
+                {"uid": "readInt32"}
+            ],
+            "name": "getCacheQuotaBytes",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 77,
+            "in": [
+                {"volumeUuid": "readString16"},
+                {"uid": "readInt32"}
+            ],
+            "name": "getCacheSizeBytes",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 78,
+            "in": [
+                {"volumeUuid": "readString16"},
+                {"flags": "readInt32"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "getAllocatableBytes",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 79,
+            "in": [
+                {"volumeUuid": "readString16"},
+                {"bytes": "readInt64"},
+                {"flags": "readInt32"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "allocateBytes",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 80,
+            "in": [],
+            "name": "runIdleMaintenance",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 81,
+            "in": [],
+            "name": "abortIdleMaintenance",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 84,
+            "in": [],
+            "name": "commitChanges",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 85,
+            "in": [],
+            "name": "supportsCheckpoint",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 86,
+            "in": [{"numTries": "readInt32"}],
+            "name": "startCheckpoint",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 87,
+            "in": [],
+            "name": "needsCheckpoint",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 88,
+            "in": [
+                {"message": "readString16"},
+                {"retry": "readBool"}
+            ],
+            "name": "abortChanges",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 89,
+            "in": [
+                {"userId": "readInt32"},
+                {"serialNumber": "readInt32"},
+                {"secret": "readByteVector"}
+            ],
+            "name": "clearUserKeyAuth",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 90,
+            "in": [{"path": "readString16"}],
+            "name": "fixupAppDir",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 91,
+            "in": [
+                {"pkgName": "readString16"},
+                {"pid": "readInt32"},
+                {"userId": "readInt32"}
+            ],
+            "name": "disableAppDataIsolation",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 92,
+            "in": [
+                {"packageName": "readString16"},
+                {"requestCode": "readInt32"}
+            ],
+            "name": "getManageSpaceActivityIntent",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 93,
+            "in": [
+                {"volumeUuid": "readString16"},
+                {"uid": "readInt32"},
+                {"tid": "readInt32"},
+                {"reason": "readInt32"}
+            ],
+            "name": "notifyAppIoBlocked",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 94,
+            "in": [
+                {"volumeUuid": "readString16"},
+                {"uid": "readInt32"},
+                {"tid": "readInt32"},
+                {"reason": "readInt32"}
+            ],
+            "name": "notifyAppIoResumed",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 95,
+            "in": [
+                {"uid": "readInt32"},
+                {"packageName": "readString16"}
+            ],
+            "name": "getExternalStorageMountMode",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 96,
+            "in": [
+                {"volumeUuid": "readString16"},
+                {"uid": "readInt32"},
+                {"tid": "readInt32"},
+                {"reason": "readInt32"}
+            ],
+            "name": "isAppIoBlocked",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 97,
+            "in": [{"authority": "readString16"}],
+            "name": "setCloudMediaProvider",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 98,
+            "in": [],
+            "name": "getCloudMediaProvider",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        }
+    ],
+    "name": "IStorageManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

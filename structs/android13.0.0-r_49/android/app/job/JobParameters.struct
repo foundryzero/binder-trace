@@ -1,0 +1,42 @@
+{
+    "produced_on": "2023-06-01T06:45:02.158540851Z",
+    "source_location": "",
+    "components": [
+        {"jobId": "readInt32"},
+        {"extras": "readBundle"},
+        {"transientExtras": "readBundle"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [
+                {
+                    "clipData": "readParcelable",
+                    "__parcelType": "android.content.ClipData"
+                },
+                {"clipGrantFlags": "readInt32"}
+            ]
+        },
+        {"callback": "readStrongBinder"},
+        {"overrideDeadlineExpired": "readInt32"},
+        {"mIsExpedited": "readBool"},
+        {
+            "mTriggeredContentUris": "readTypedVector",
+            "__parcelType": "android.net.Uri"
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "network": "readParcelable",
+                "__parcelType": "android.net.Network"
+            }]
+        },
+        {"mStopReason": "readInt32"},
+        {"mInternalStopReason": "readInt32"},
+        {"debugStopReason": "readString16"}
+    ],
+    "full_name": "android.app.job.JobParameters",
+    "name": "JobParameters",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

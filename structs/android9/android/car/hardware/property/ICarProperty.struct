@@ -1,0 +1,80 @@
+{
+    "produced_on": "2022-08-19T10:42:50.568610965Z",
+    "source_location": "",
+    "full_name": "android.car.hardware.property.ICarProperty",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"propId": "readInt32"},
+                {"rate": "readFloat"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "registerListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"propId": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "unregisterListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getPropertyList",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.car.hardware.CarPropertyConfig"
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"prop": "readInt32"},
+                {"zone": "readInt32"}
+            ],
+            "name": "getProperty",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.car.hardware.CarPropertyValue"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "prop": "readParcelable",
+                        "__parcelType": "android.car.hardware.CarPropertyValue"
+                    }]
+                }
+            ],
+            "name": "setProperty",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICarProperty",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

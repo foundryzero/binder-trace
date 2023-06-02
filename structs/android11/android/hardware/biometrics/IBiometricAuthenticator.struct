@@ -1,0 +1,96 @@
+{
+    "produced_on": "2022-08-26T09:55:23.126016856Z",
+    "source_location": "",
+    "full_name": "android.hardware.biometrics.IBiometricAuthenticator",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"requireConfirmation": "readBool"},
+                {"token": "readStrongBinder"},
+                {"sessionId": "readInt64"},
+                {"userId": "readInt32"},
+                {"wrapperReceiver": "readStrongBinder"},
+                {"opPackageName": "readString16"},
+                {"cookie": "readInt32"},
+                {"callingUid": "readInt32"},
+                {"callingPid": "readInt32"},
+                {"callingUserId": "readInt32"}
+            ],
+            "name": "prepareForAuthentication",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"cookie": "readInt32"}],
+            "name": "startPreparedClient",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"opPackageName": "readString16"},
+                {"callingUid": "readInt32"},
+                {"callingPid": "readInt32"},
+                {"callingUserId": "readInt32"},
+                {"fromClient": "readBool"}
+            ],
+            "name": "cancelAuthenticationFromService",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"opPackageName": "readString16"}],
+            "name": "isHardwareDetected",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"userId": "readInt32"},
+                {"opPackageName": "readString16"}
+            ],
+            "name": "hasEnrolledTemplates",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [{"token": "readByteVector"}],
+            "name": "resetLockout",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"uid": "readInt32"}],
+            "name": "setActiveUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{"callingUserId": "readInt32"}],
+            "name": "getAuthenticatorId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        }
+    ],
+    "name": "IBiometricAuthenticator",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,962 @@
+{
+    "produced_on": "2023-06-01T06:42:38.763752130Z",
+    "source_location": "",
+    "full_name": "android.hardware.wifi.supplicant.ISupplicantStaNetwork",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "disable",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"noConnect": "readBool"}],
+            "name": "enable",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"enable": "readBool"}],
+            "name": "enableSaePkOnlyMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "enableSuiteBEapOpenSslCiphers",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"enable": "readBool"}],
+            "name": "enableTlsSuiteBEapPhase1Param",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "getAuthAlg",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.AuthAlgMask"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "getBssid",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "getEapAltSubjectMatch",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [],
+            "name": "getEapAnonymousIdentity",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [],
+            "name": "getEapCACert",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [],
+            "name": "getEapCAPath",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [],
+            "name": "getEapClientCert",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [],
+            "name": "getEapDomainSuffixMatch",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 14,
+            "in": [],
+            "name": "getEapEngine",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 15,
+            "in": [],
+            "name": "getEapEngineId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 16,
+            "in": [],
+            "name": "getEapIdentity",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 17,
+            "in": [],
+            "name": "getEapMethod",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.EapMethod"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 18,
+            "in": [],
+            "name": "getEapPassword",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 19,
+            "in": [],
+            "name": "getEapPhase2Method",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.EapPhase2Method"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 20,
+            "in": [],
+            "name": "getEapPrivateKeyId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 21,
+            "in": [],
+            "name": "getEapSubjectMatch",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 22,
+            "in": [],
+            "name": "getEdmg",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 23,
+            "in": [],
+            "name": "getGroupCipher",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.GroupCipherMask"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 24,
+            "in": [],
+            "name": "getGroupMgmtCipher",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.GroupMgmtCipherMask"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 25,
+            "in": [],
+            "name": "getId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 26,
+            "in": [],
+            "name": "getIdStr",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 27,
+            "in": [],
+            "name": "getInterfaceName",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 28,
+            "in": [],
+            "name": "getKeyMgmt",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.KeyMgmtMask"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 29,
+            "in": [],
+            "name": "getOcsp",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.OcspType"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 30,
+            "in": [],
+            "name": "getPairwiseCipher",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.PairwiseCipherMask"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 31,
+            "in": [],
+            "name": "getProto",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.ProtoMask"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 32,
+            "in": [],
+            "name": "getPsk",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 33,
+            "in": [],
+            "name": "getPskPassphrase",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 34,
+            "in": [],
+            "name": "getRequirePmf",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 35,
+            "in": [],
+            "name": "getSaePassword",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 36,
+            "in": [],
+            "name": "getSaePasswordId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 37,
+            "in": [],
+            "name": "getScanSsid",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 38,
+            "in": [],
+            "name": "getSsid",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 39,
+            "in": [],
+            "name": "getType",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.IfaceType"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 40,
+            "in": [],
+            "name": "getWapiCertSuite",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 41,
+            "in": [{"keyIdx": "readInt32"}],
+            "name": "getWepKey",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 42,
+            "in": [],
+            "name": "getWepTxKeyIdx",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 43,
+            "in": [],
+            "name": "getWpsNfcConfigurationToken",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 44,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "registerCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 45,
+            "in": [],
+            "name": "select",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 46,
+            "in": [
+                {"identity": "readByteVector"},
+                {"encryptedIdentity": "readByteVector"}
+            ],
+            "name": "sendNetworkEapIdentityResponse",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 47,
+            "in": [],
+            "name": "sendNetworkEapSimGsmAuthFailure",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 48,
+            "in": [{
+                "params": "readParcelableVector",
+                "__parcelType": "android.hardware.wifi.supplicant.NetworkResponseEapSimGsmAuthParams"
+            }],
+            "name": "sendNetworkEapSimGsmAuthResponse",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 49,
+            "in": [],
+            "name": "sendNetworkEapSimUmtsAuthFailure",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 50,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "params": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.NetworkResponseEapSimUmtsAuthParams"
+                    }]
+                }
+            ],
+            "name": "sendNetworkEapSimUmtsAuthResponse",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 51,
+            "in": [{"auts": "readByteVector"}],
+            "name": "sendNetworkEapSimUmtsAutsResponse",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 52,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "authAlgMask": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.AuthAlgMask"
+                    }]
+                }
+            ],
+            "name": "setAuthAlg",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 53,
+            "in": [{"bssid": "readByteVector"}],
+            "name": "setBssid",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 54,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "keys": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.DppConnectionKeys"
+                    }]
+                }
+            ],
+            "name": "setDppKeys",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 55,
+            "in": [{"match": "readString16"}],
+            "name": "setEapAltSubjectMatch",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 56,
+            "in": [{"identity": "readByteVector"}],
+            "name": "setEapAnonymousIdentity",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 57,
+            "in": [{"path": "readString16"}],
+            "name": "setEapCACert",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 58,
+            "in": [{"path": "readString16"}],
+            "name": "setEapCAPath",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 59,
+            "in": [{"path": "readString16"}],
+            "name": "setEapClientCert",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 60,
+            "in": [{"match": "readString16"}],
+            "name": "setEapDomainSuffixMatch",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 61,
+            "in": [{"identity": "readByteVector"}],
+            "name": "setEapEncryptedImsiIdentity",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 62,
+            "in": [{"enable": "readBool"}],
+            "name": "setEapEngine",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 63,
+            "in": [{"id": "readString16"}],
+            "name": "setEapEngineID",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 64,
+            "in": [{"enable": "readBool"}],
+            "name": "setEapErp",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 65,
+            "in": [{"identity": "readByteVector"}],
+            "name": "setEapIdentity",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 66,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "method": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.EapMethod"
+                    }]
+                }
+            ],
+            "name": "setEapMethod",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 67,
+            "in": [{"password": "readByteVector"}],
+            "name": "setEapPassword",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 68,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "method": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.EapPhase2Method"
+                    }]
+                }
+            ],
+            "name": "setEapPhase2Method",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 69,
+            "in": [{"id": "readString16"}],
+            "name": "setEapPrivateKeyId",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 70,
+            "in": [{"match": "readString16"}],
+            "name": "setEapSubjectMatch",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 71,
+            "in": [{"enable": "readBool"}],
+            "name": "setEdmg",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 72,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "groupCipherMask": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.GroupCipherMask"
+                    }]
+                }
+            ],
+            "name": "setGroupCipher",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 73,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "groupMgmtCipherMask": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.GroupMgmtCipherMask"
+                    }]
+                }
+            ],
+            "name": "setGroupMgmtCipher",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 74,
+            "in": [{"idStr": "readString16"}],
+            "name": "setIdStr",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 75,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "keyMgmtMask": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.KeyMgmtMask"
+                    }]
+                }
+            ],
+            "name": "setKeyMgmt",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 76,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "ocspType": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.OcspType"
+                    }]
+                }
+            ],
+            "name": "setOcsp",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 77,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "pairwiseCipherMask": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.PairwiseCipherMask"
+                    }]
+                }
+            ],
+            "name": "setPairwiseCipher",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 78,
+            "in": [{"serializedEntry": "readByteVector"}],
+            "name": "setPmkCache",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 79,
+            "in": [{"enable": "readBool"}],
+            "name": "setProactiveKeyCaching",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 80,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "protoMask": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.ProtoMask"
+                    }]
+                }
+            ],
+            "name": "setProto",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 81,
+            "in": [{"psk": "readByteVector"}],
+            "name": "setPsk",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 82,
+            "in": [{"psk": "readString16"}],
+            "name": "setPskPassphrase",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 83,
+            "in": [{"enable": "readBool"}],
+            "name": "setRequirePmf",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 84,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "mode": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.SaeH2eMode"
+                    }]
+                }
+            ],
+            "name": "setSaeH2eMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 85,
+            "in": [{"saePassword": "readString16"}],
+            "name": "setSaePassword",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 86,
+            "in": [{"saePasswordId": "readString16"}],
+            "name": "setSaePasswordId",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 87,
+            "in": [{"enable": "readBool"}],
+            "name": "setScanSsid",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 88,
+            "in": [{"ssid": "readByteVector"}],
+            "name": "setSsid",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 89,
+            "in": [{"id": "readInt32"}],
+            "name": "setUpdateIdentifier",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 90,
+            "in": [{"suite": "readString16"}],
+            "name": "setWapiCertSuite",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 91,
+            "in": [
+                {"keyIdx": "readInt32"},
+                {"wepKey": "readByteVector"}
+            ],
+            "name": "setWepKey",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 92,
+            "in": [{"keyIdx": "readInt32"}],
+            "name": "setWepTxKeyIdx",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 93,
+            "in": [{"selectedRcoi": "readByteVector"}],
+            "name": "setRoamingConsortiumSelection",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISupplicantStaNetwork",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

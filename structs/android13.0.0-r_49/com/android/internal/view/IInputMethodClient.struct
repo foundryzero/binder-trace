@@ -1,0 +1,115 @@
+{
+    "produced_on": "2023-06-01T06:42:35.206599206Z",
+    "source_location": "",
+    "full_name": "com.android.internal.view.IInputMethodClient",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "res": "readParcelable",
+                        "__parcelType": "com.android.internal.inputmethod.InputBindResult"
+                    }]
+                }
+            ],
+            "name": "onBindMethod",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "res": "readParcelable",
+                        "__parcelType": "com.android.internal.inputmethod.InputBindResult"
+                    }]
+                },
+                {"id": "readInt32"}
+            ],
+            "name": "onBindAccessibilityService",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"sequence": "readInt32"},
+                {"unbindReason": "readInt32"}
+            ],
+            "name": "onUnbindMethod",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"sequence": "readInt32"},
+                {"id": "readInt32"}
+            ],
+            "name": "onUnbindAccessibilityService",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"active": "readBool"},
+                {"fullscreen": "readBool"},
+                {"reportToImeController": "readBool"}
+            ],
+            "name": "setActive",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"fullscreen": "readBool"}],
+            "name": "scheduleStartInputIfNecessary",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"fullscreen": "readBool"}],
+            "name": "reportFullscreenMode",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"bindSequence": "readInt32"},
+                {
+                    "matrixValues": "readParcelableVector",
+                    "__parcelType": "com.android.internal.view.float"
+                }
+            ],
+            "name": "updateVirtualDisplayToScreenMatrix",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [{"enabled": "readBool"}],
+            "name": "setImeTraceEnabled",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [{"message": "readString16"}],
+            "name": "throwExceptionFromSystem",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IInputMethodClient",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

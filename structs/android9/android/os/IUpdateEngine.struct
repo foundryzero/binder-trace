@@ -1,0 +1,80 @@
+{
+    "produced_on": "2022-08-19T10:42:51.065430484Z",
+    "source_location": "",
+    "full_name": "android.os.IUpdateEngine",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"url": "readString16"},
+                {"payload_offset": "readInt64"},
+                {"payload_size": "readInt64"},
+                {"headerKeyValuePairs": "readString16Vector"}
+            ],
+            "name": "applyPayload",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "bind",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "unbind",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "suspend",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "resume",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "cancel",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "resetStatus",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{"metadataFilename": "readString16"}],
+            "name": "verifyPayloadApplicable",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "IUpdateEngine",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

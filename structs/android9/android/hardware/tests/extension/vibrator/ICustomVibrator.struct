@@ -1,0 +1,63 @@
+{
+    "produced_on": "2022-08-04T09:32:16.457145796Z",
+    "source_location": "",
+    "full_name": "android.hardware.tests.extension.vibrator.ICustomVibrator",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getVendorCapabilities",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "directionality": "readParcelable",
+                        "__parcelType": "android.hardware.tests.extension.vibrator.Directionality"
+                    }]
+                }
+            ],
+            "name": "setDirectionality",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "effect": "readParcelable",
+                        "__parcelType": "android.hardware.tests.extension.vibrator.VendorEffect"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callback": "readParcelable",
+                        "__parcelType": "android.hardware.tests.extension.vibrator.android.hardware.vibrator.IVibratorCallback"
+                    }]
+                }
+            ],
+            "name": "perform",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        }
+    ],
+    "name": "ICustomVibrator",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

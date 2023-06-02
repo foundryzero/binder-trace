@@ -1,0 +1,123 @@
+{
+    "produced_on": "2022-08-04T09:32:15.564305920Z",
+    "source_location": "",
+    "full_name": "android.net.INetdUnsolicitedEventListener",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"isActive": "readBool"},
+                {"timerLabel": "readInt32"},
+                {"timestampNs": "readInt64"},
+                {"uid": "readInt32"}
+            ],
+            "name": "onInterfaceClassActivityChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"alertName": "readString16"},
+                {"ifName": "readString16"}
+            ],
+            "name": "onQuotaLimitReached",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"ifName": "readString16"},
+                {"lifetimeS": "readInt64"},
+                {"servers": "readString16Vector"}
+            ],
+            "name": "onInterfaceDnsServerInfo",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"addr": "readString16"},
+                {"ifName": "readString16"},
+                {"flags": "readInt32"},
+                {"scope": "readInt32"}
+            ],
+            "name": "onInterfaceAddressUpdated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"addr": "readString16"},
+                {"ifName": "readString16"},
+                {"flags": "readInt32"},
+                {"scope": "readInt32"}
+            ],
+            "name": "onInterfaceAddressRemoved",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"ifName": "readString16"}],
+            "name": "onInterfaceAdded",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"ifName": "readString16"}],
+            "name": "onInterfaceRemoved",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"ifName": "readString16"},
+                {"up": "readBool"}
+            ],
+            "name": "onInterfaceChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"ifName": "readString16"},
+                {"up": "readBool"}
+            ],
+            "name": "onInterfaceLinkStateChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"updated": "readBool"},
+                {"route": "readString16"},
+                {"gateway": "readString16"},
+                {"ifName": "readString16"}
+            ],
+            "name": "onRouteChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"uid": "readInt32"},
+                {"hex": "readString16"}
+            ],
+            "name": "onStrictCleartextDetected",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "INetdUnsolicitedEventListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

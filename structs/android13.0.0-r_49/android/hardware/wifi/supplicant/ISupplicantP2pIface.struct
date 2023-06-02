@@ -1,0 +1,634 @@
+{
+    "produced_on": "2023-06-01T06:42:38.690620894Z",
+    "source_location": "",
+    "full_name": "android.hardware.wifi.supplicant.ISupplicantP2pIface",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"query": "readByteVector"},
+                {"response": "readByteVector"}
+            ],
+            "name": "addBonjourService",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"persistent": "readBool"},
+                {"persistentNetworkId": "readInt32"}
+            ],
+            "name": "addGroup",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"ssid": "readByteVector"},
+                {"pskPassphrase": "readString16"},
+                {"persistent": "readBool"},
+                {"freq": "readInt32"},
+                {"peerAddress": "readByteVector"},
+                {"joinExistingGroup": "readBool"}
+            ],
+            "name": "addGroupWithConfig",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "addNetwork",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.ISupplicantP2pNetwork"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"version": "readInt32"},
+                {"serviceName": "readString16"}
+            ],
+            "name": "addUpnpService",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "cancelConnect",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"identifier": "readInt64"}],
+            "name": "cancelServiceDiscovery",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{"groupIfName": "readString16"}],
+            "name": "cancelWps",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"periodInMillis": "readInt32"},
+                {"intervalInMillis": "readInt32"}
+            ],
+            "name": "configureExtListen",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"peerAddress": "readByteVector"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "provisionMethod": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.WpsProvisionMethod"
+                    }]
+                },
+                {"preSelectedPin": "readString16"},
+                {"joinExistingGroup": "readBool"},
+                {"persistent": "readBool"},
+                {"goIntent": "readInt32"}
+            ],
+            "name": "connect",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [],
+            "name": "createNfcHandoverRequestMessage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [],
+            "name": "createNfcHandoverSelectMessage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [{"enable": "readBool"}],
+            "name": "enableWfd",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [{"timeoutInSec": "readInt32"}],
+            "name": "find",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [],
+            "name": "flush",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [],
+            "name": "flushServices",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [],
+            "name": "getDeviceAddress",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 18,
+            "in": [],
+            "name": "getEdmg",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 19,
+            "in": [{"peerAddress": "readByteVector"}],
+            "name": "getGroupCapability",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.P2pGroupCapabilityMask"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 20,
+            "in": [],
+            "name": "getName",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 21,
+            "in": [{"id": "readInt32"}],
+            "name": "getNetwork",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.ISupplicantP2pNetwork"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 22,
+            "in": [{"peerAddress": "readByteVector"}],
+            "name": "getSsid",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 23,
+            "in": [],
+            "name": "getType",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.IfaceType"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 24,
+            "in": [
+                {"groupIfName": "readString16"},
+                {"goDeviceAddress": "readByteVector"},
+                {"peerAddress": "readByteVector"}
+            ],
+            "name": "invite",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 25,
+            "in": [],
+            "name": "listNetworks",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 26,
+            "in": [
+                {"peerAddress": "readByteVector"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "provisionMethod": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.WpsProvisionMethod"
+                    }]
+                }
+            ],
+            "name": "provisionDiscovery",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 27,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callback": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.ISupplicantP2pIfaceCallback"
+                    }]
+                }
+            ],
+            "name": "registerCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 28,
+            "in": [
+                {"persistentNetworkId": "readInt32"},
+                {"peerAddress": "readByteVector"}
+            ],
+            "name": "reinvoke",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 29,
+            "in": [{"peerAddress": "readByteVector"}],
+            "name": "reject",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 30,
+            "in": [{"query": "readByteVector"}],
+            "name": "removeBonjourService",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 31,
+            "in": [{"groupIfName": "readString16"}],
+            "name": "removeGroup",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 32,
+            "in": [{"id": "readInt32"}],
+            "name": "removeNetwork",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 33,
+            "in": [
+                {"version": "readInt32"},
+                {"serviceName": "readString16"}
+            ],
+            "name": "removeUpnpService",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 34,
+            "in": [{"select": "readByteVector"}],
+            "name": "reportNfcHandoverInitiation",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 35,
+            "in": [{"request": "readByteVector"}],
+            "name": "reportNfcHandoverResponse",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 36,
+            "in": [
+                {"peerAddress": "readByteVector"},
+                {"query": "readByteVector"}
+            ],
+            "name": "requestServiceDiscovery",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 37,
+            "in": [],
+            "name": "saveConfig",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 38,
+            "in": [{
+                "ranges": "readParcelableVector",
+                "__parcelType": "android.hardware.wifi.supplicant.FreqRange"
+            }],
+            "name": "setDisallowedFrequencies",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 39,
+            "in": [{"enable": "readBool"}],
+            "name": "setEdmg",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 40,
+            "in": [
+                {"groupIfName": "readString16"},
+                {"timeoutInSec": "readInt32"}
+            ],
+            "name": "setGroupIdle",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 41,
+            "in": [
+                {"channel": "readInt32"},
+                {"operatingClass": "readInt32"}
+            ],
+            "name": "setListenChannel",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 42,
+            "in": [{"enable": "readBool"}],
+            "name": "setMacRandomization",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 43,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "mode": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.MiracastMode"
+                    }]
+                }
+            ],
+            "name": "setMiracastMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 44,
+            "in": [
+                {"groupIfName": "readString16"},
+                {"enable": "readBool"}
+            ],
+            "name": "setPowerSave",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 45,
+            "in": [{"postfix": "readByteVector"}],
+            "name": "setSsidPostfix",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 46,
+            "in": [{"info": "readByteVector"}],
+            "name": "setWfdDeviceInfo",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 47,
+            "in": [{"info": "readByteVector"}],
+            "name": "setWfdR2DeviceInfo",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 48,
+            "in": [
+                {"peerAddress": "readByteVector"},
+                {"isLegacyClient": "readBool"}
+            ],
+            "name": "removeClient",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 49,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "configMethods": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.WpsConfigMethods"
+                    }]
+                }
+            ],
+            "name": "setWpsConfigMethods",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 50,
+            "in": [{"name": "readString16"}],
+            "name": "setWpsDeviceName",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 51,
+            "in": [{"type": "readByteVector"}],
+            "name": "setWpsDeviceType",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 52,
+            "in": [{"manufacturer": "readString16"}],
+            "name": "setWpsManufacturer",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 53,
+            "in": [{"modelName": "readString16"}],
+            "name": "setWpsModelName",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 54,
+            "in": [{"modelNumber": "readString16"}],
+            "name": "setWpsModelNumber",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 55,
+            "in": [{"serialNumber": "readString16"}],
+            "name": "setWpsSerialNumber",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 56,
+            "in": [
+                {"groupIfName": "readString16"},
+                {"bssid": "readByteVector"}
+            ],
+            "name": "startWpsPbc",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 57,
+            "in": [
+                {"groupIfName": "readString16"},
+                {"bssid": "readByteVector"}
+            ],
+            "name": "startWpsPinDisplay",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 58,
+            "in": [
+                {"groupIfName": "readString16"},
+                {"pin": "readString16"}
+            ],
+            "name": "startWpsPinKeypad",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 59,
+            "in": [],
+            "name": "stopFind",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 60,
+            "in": [{"timeoutInSec": "readInt32"}],
+            "name": "findOnSocialChannels",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 61,
+            "in": [
+                {"freqInHz": "readInt32"},
+                {"timeoutInSec": "readInt32"}
+            ],
+            "name": "findOnSpecificFrequency",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 62,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "frameTypeMask": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.P2pFrameTypeMask"
+                    }]
+                },
+                {"vendorElemBytes": "readByteVector"}
+            ],
+            "name": "setVendorElements",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISupplicantP2pIface",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

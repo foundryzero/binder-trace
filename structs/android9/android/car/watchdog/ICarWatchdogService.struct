@@ -1,0 +1,44 @@
+{
+    "produced_on": "2022-08-04T09:32:13.621780210Z",
+    "source_location": "",
+    "full_name": "android.car.watchdog.ICarWatchdogService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"client": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "timeout": "readParcelable",
+                        "__parcelType": "android.automotive.watchdog.TimeoutLength"
+                    }]
+                }
+            ],
+            "name": "registerClient",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"client": "readStrongBinder"}],
+            "name": "unregisterClient",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"client": "readStrongBinder"},
+                {"sessionId": "readInt32"}
+            ],
+            "name": "tellClientAlive",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICarWatchdogService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

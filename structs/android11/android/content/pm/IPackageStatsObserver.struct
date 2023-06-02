@@ -1,0 +1,25 @@
+{
+    "produced_on": "2022-08-26T09:55:23.404944665Z",
+    "source_location": "",
+    "full_name": "android.content.pm.IPackageStatsObserver",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "pStats": "readParcelable",
+                    "__parcelType": "android.content.pm.PackageStats"
+                }]
+            },
+            {"succeeded": "readBool"}
+        ],
+        "name": "onGetStatsCompleted",
+        "oneWay": true,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "IPackageStatsObserver",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,114 @@
+{
+    "produced_on": "2022-08-26T09:55:23.472444706Z",
+    "source_location": "",
+    "full_name": "android.webkit.IWebViewUpdateService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "notifyRelroCreationCompleted",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "waitForAndGetProvider",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.webkit.WebViewProviderResponse"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"newProvider": "readString16"}],
+            "name": "changeProviderAndSetting",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "getValidWebViewPackages",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.webkit.WebViewProviderInfo"
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "getAllWebViewPackages",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.webkit.WebViewProviderInfo"
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "getCurrentWebViewPackageName",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "getCurrentWebViewPackage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.PackageInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "isMultiProcessEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [{"enable": "readBool"}],
+            "name": "enableMultiProcess",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IWebViewUpdateService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

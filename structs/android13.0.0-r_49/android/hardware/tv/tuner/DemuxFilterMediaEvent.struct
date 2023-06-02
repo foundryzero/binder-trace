@@ -1,0 +1,45 @@
+{
+    "produced_on": "2023-06-01T06:42:39.132618754Z",
+    "source_location": "",
+    "components": [
+        {"streamId": "readInt32"},
+        {"isPtsPresent": "readBool"},
+        {"pts": "readInt64"},
+        {"isDtsPresent": "readBool"},
+        {"dts": "readInt64"},
+        {"dataLength": "readInt64"},
+        {"offset": "readInt64"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "avMemory": "readParcelable",
+                "__parcelType": "android.hardware.common.NativeHandle"
+            }]
+        },
+        {"isSecureMemory": "readBool"},
+        {"avDataId": "readInt64"},
+        {"mpuSequenceNumber": "readInt32"},
+        {"isPesPrivateData": "readBool"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "extraMetaData": "readParcelable",
+                "__parcelType": "android.hardware.tv.tuner.DemuxFilterMediaEventExtraMetaData"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "scIndexMask": "readParcelable",
+                "__parcelType": "android.hardware.tv.tuner.DemuxFilterScIndexMask"
+            }]
+        }
+    ],
+    "full_name": "android.hardware.tv.tuner.DemuxFilterMediaEvent",
+    "name": "DemuxFilterMediaEvent",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

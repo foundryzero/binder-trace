@@ -1,0 +1,318 @@
+{
+    "produced_on": "2023-06-01T06:42:37.398641734Z",
+    "source_location": "",
+    "full_name": "android.hardware.radio.network.IRadioNetworkIndication",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.hardware.radio.RadioIndicationType"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "cellIdentity": "readParcelable",
+                        "__parcelType": "android.hardware.radio.network.CellIdentity"
+                    }]
+                },
+                {
+                    "barringInfos": "readParcelableVector",
+                    "__parcelType": "android.hardware.radio.network.BarringInfo"
+                }
+            ],
+            "name": "barringInfoChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.hardware.radio.RadioIndicationType"
+                    }]
+                },
+                {"version": "readInt32"}
+            ],
+            "name": "cdmaPrlChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.hardware.radio.RadioIndicationType"
+                    }]
+                },
+                {
+                    "records": "readParcelableVector",
+                    "__parcelType": "android.hardware.radio.network.CellInfo"
+                }
+            ],
+            "name": "cellInfoList",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.hardware.radio.RadioIndicationType"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "lce": "readParcelable",
+                        "__parcelType": "android.hardware.radio.network.LinkCapacityEstimate"
+                    }]
+                }
+            ],
+            "name": "currentLinkCapacityEstimate",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.hardware.radio.RadioIndicationType"
+                    }]
+                },
+                {
+                    "configs": "readParcelableVector",
+                    "__parcelType": "android.hardware.radio.network.PhysicalChannelConfig"
+                }
+            ],
+            "name": "currentPhysicalChannelConfigs",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.hardware.radio.RadioIndicationType"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "signalStrength": "readParcelable",
+                        "__parcelType": "android.hardware.radio.network.SignalStrength"
+                    }]
+                }
+            ],
+            "name": "currentSignalStrength",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.hardware.radio.RadioIndicationType"
+                    }]
+                }
+            ],
+            "name": "imsNetworkStateChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.hardware.radio.RadioIndicationType"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "result": "readParcelable",
+                        "__parcelType": "android.hardware.radio.network.NetworkScanResult"
+                    }]
+                }
+            ],
+            "name": "networkScanResult",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.hardware.radio.RadioIndicationType"
+                    }]
+                }
+            ],
+            "name": "networkStateChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.hardware.radio.RadioIndicationType"
+                    }]
+                },
+                {"nitzTime": "readString16"},
+                {"receivedTimeMs": "readInt64"},
+                {"ageMs": "readInt64"}
+            ],
+            "name": "nitzTimeReceived",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.hardware.radio.RadioIndicationType"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "cellIdentity": "readParcelable",
+                        "__parcelType": "android.hardware.radio.network.CellIdentity"
+                    }]
+                },
+                {"chosenPlmn": "readString16"},
+                {"domain": "readInt32"},
+                {"causeCode": "readInt32"},
+                {"additionalCauseCode": "readInt32"}
+            ],
+            "name": "registrationFailed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.hardware.radio.RadioIndicationType"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "state": "readParcelable",
+                        "__parcelType": "android.hardware.radio.network.PhoneRestrictedState"
+                    }]
+                }
+            ],
+            "name": "restrictedStateChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.hardware.radio.RadioIndicationType"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "suppSvc": "readParcelable",
+                        "__parcelType": "android.hardware.radio.network.SuppSvcNotification"
+                    }]
+                }
+            ],
+            "name": "suppSvcNotify",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.hardware.radio.RadioIndicationType"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "rat": "readParcelable",
+                        "__parcelType": "android.hardware.radio.RadioTechnology"
+                    }]
+                }
+            ],
+            "name": "voiceRadioTechChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IRadioNetworkIndication",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

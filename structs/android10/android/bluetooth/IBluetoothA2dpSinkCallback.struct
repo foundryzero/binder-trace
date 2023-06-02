@@ -1,0 +1,48 @@
+{
+    "produced_on": "2022-12-02T13:44:06.175136972Z",
+    "source_location": "",
+    "full_name": "android.bluetooth.IBluetoothA2dpSinkCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"status": "readInt32"}],
+            "name": "OnRegistered",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"device_address": "readString16"},
+                {"state": "readInt32"}
+            ],
+            "name": "OnConnectionState",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"device_address": "readString16"},
+                {"state": "readInt32"}
+            ],
+            "name": "OnAudioState",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"device_address": "readString16"},
+                {"sample_rate": "readInt32"},
+                {"channel_count": "readInt32"}
+            ],
+            "name": "OnAudioConfig",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IBluetoothA2dpSinkCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

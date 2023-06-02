@@ -1,0 +1,92 @@
+{
+    "produced_on": "2023-06-01T06:42:36.356933750Z",
+    "source_location": "",
+    "full_name": "android.aidl.versioned.tests.IFooInterface",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "originalApi",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "u": "readParcelable",
+                        "__parcelType": "android.aidl.versioned.tests.BazUnion"
+                    }]
+                }
+            ],
+            "name": "acceptUnionAndReturnString",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "inFoo": "readParcelable",
+                        "__parcelType": "android.aidl.versioned.tests.Foo"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "inoutFoo": "readParcelable",
+                        "__parcelType": "android.aidl.versioned.tests.Foo"
+                    }]
+                },
+                {"value": "readInt32"}
+            ],
+            "name": "ignoreParcelablesAndRepeatInt",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "outFoo": "readParcelable",
+                        "__parcelType": "android.aidl.versioned.tests.Foo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{
+                "foos": "readParcelableVector",
+                "__parcelType": "android.aidl.versioned.tests.Foo"
+            }],
+            "name": "returnsLengthOfFooArray",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "newApi",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IFooInterface",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,453 @@
+{
+    "produced_on": "2022-08-26T09:55:22.483305824Z",
+    "source_location": "",
+    "full_name": "android.media.IMediaRouterService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"client": "readStrongBinder"},
+                {"packageName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "registerClientAsUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"client": "readStrongBinder"}],
+            "name": "unregisterClient",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"client": "readStrongBinder"},
+                {"groupId": "readString16"}
+            ],
+            "name": "registerClientGroupId",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"client": "readStrongBinder"}],
+            "name": "getState",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.media.MediaRouterClientState"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"client": "readStrongBinder"}],
+            "name": "isPlaybackActive",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"client": "readStrongBinder"},
+                {"routeTypes": "readInt32"},
+                {"activeScan": "readBool"}
+            ],
+            "name": "setDiscoveryRequest",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"client": "readStrongBinder"},
+                {"routeId": "readString16"},
+                {"explicit": "readBool"}
+            ],
+            "name": "setSelectedRoute",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"client": "readStrongBinder"},
+                {"routeId": "readString16"},
+                {"volume": "readInt32"}
+            ],
+            "name": "requestSetVolume",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"client": "readStrongBinder"},
+                {"routeId": "readString16"},
+                {"direction": "readInt32"}
+            ],
+            "name": "requestUpdateVolume",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [],
+            "name": "getSystemRoutes",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.media.MediaRoute2Info"
+                }
+            ]
+        },
+        {
+            "code": 11,
+            "in": [],
+            "name": "getSystemSessionInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.media.RoutingSessionInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"router": "readStrongBinder"},
+                {"packageName": "readString16"}
+            ],
+            "name": "registerRouter2",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [{"router": "readStrongBinder"}],
+            "name": "unregisterRouter2",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"router": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "preference": "readParcelable",
+                        "__parcelType": "android.media.RouteDiscoveryPreference"
+                    }]
+                }
+            ],
+            "name": "setDiscoveryRequestWithRouter2",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"router": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "route": "readParcelable",
+                        "__parcelType": "android.media.MediaRoute2Info"
+                    }]
+                },
+                {"volume": "readInt32"}
+            ],
+            "name": "setRouteVolumeWithRouter2",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [
+                {"router": "readStrongBinder"},
+                {"requestId": "readInt32"},
+                {"managerRequestId": "readInt64"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "oldSession": "readParcelable",
+                        "__parcelType": "android.media.RoutingSessionInfo"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "route": "readParcelable",
+                        "__parcelType": "android.media.MediaRoute2Info"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"sessionHints": "readBundle"}]
+                }
+            ],
+            "name": "requestCreateSessionWithRouter2",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [
+                {"router": "readStrongBinder"},
+                {"sessionId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "route": "readParcelable",
+                        "__parcelType": "android.media.MediaRoute2Info"
+                    }]
+                }
+            ],
+            "name": "selectRouteWithRouter2",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"router": "readStrongBinder"},
+                {"sessionId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "route": "readParcelable",
+                        "__parcelType": "android.media.MediaRoute2Info"
+                    }]
+                }
+            ],
+            "name": "deselectRouteWithRouter2",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 19,
+            "in": [
+                {"router": "readStrongBinder"},
+                {"sessionId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "route": "readParcelable",
+                        "__parcelType": "android.media.MediaRoute2Info"
+                    }]
+                }
+            ],
+            "name": "transferToRouteWithRouter2",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 20,
+            "in": [
+                {"router": "readStrongBinder"},
+                {"sessionId": "readString16"},
+                {"volume": "readInt32"}
+            ],
+            "name": "setSessionVolumeWithRouter2",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 21,
+            "in": [
+                {"router": "readStrongBinder"},
+                {"sessionId": "readString16"}
+            ],
+            "name": "releaseSessionWithRouter2",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 22,
+            "in": [{"manager": "readStrongBinder"}],
+            "name": "getActiveSessions",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.media.RoutingSessionInfo"
+                }
+            ]
+        },
+        {
+            "code": 23,
+            "in": [
+                {"manager": "readStrongBinder"},
+                {"packageName": "readString16"}
+            ],
+            "name": "registerManager",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 24,
+            "in": [{"manager": "readStrongBinder"}],
+            "name": "unregisterManager",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 25,
+            "in": [
+                {"manager": "readStrongBinder"},
+                {"requestId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "route": "readParcelable",
+                        "__parcelType": "android.media.MediaRoute2Info"
+                    }]
+                },
+                {"volume": "readInt32"}
+            ],
+            "name": "setRouteVolumeWithManager",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 26,
+            "in": [
+                {"manager": "readStrongBinder"},
+                {"requestId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "oldSession": "readParcelable",
+                        "__parcelType": "android.media.RoutingSessionInfo"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "route": "readParcelable",
+                        "__parcelType": "android.media.MediaRoute2Info"
+                    }]
+                }
+            ],
+            "name": "requestCreateSessionWithManager",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 27,
+            "in": [
+                {"manager": "readStrongBinder"},
+                {"requestId": "readInt32"},
+                {"sessionId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "route": "readParcelable",
+                        "__parcelType": "android.media.MediaRoute2Info"
+                    }]
+                }
+            ],
+            "name": "selectRouteWithManager",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 28,
+            "in": [
+                {"manager": "readStrongBinder"},
+                {"requestId": "readInt32"},
+                {"sessionId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "route": "readParcelable",
+                        "__parcelType": "android.media.MediaRoute2Info"
+                    }]
+                }
+            ],
+            "name": "deselectRouteWithManager",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 29,
+            "in": [
+                {"manager": "readStrongBinder"},
+                {"requestId": "readInt32"},
+                {"sessionId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "route": "readParcelable",
+                        "__parcelType": "android.media.MediaRoute2Info"
+                    }]
+                }
+            ],
+            "name": "transferToRouteWithManager",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 30,
+            "in": [
+                {"manager": "readStrongBinder"},
+                {"requestId": "readInt32"},
+                {"sessionId": "readString16"},
+                {"volume": "readInt32"}
+            ],
+            "name": "setSessionVolumeWithManager",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 31,
+            "in": [
+                {"manager": "readStrongBinder"},
+                {"requestId": "readInt32"},
+                {"sessionId": "readString16"}
+            ],
+            "name": "releaseSessionWithManager",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IMediaRouterService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

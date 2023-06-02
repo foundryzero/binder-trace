@@ -1,0 +1,33 @@
+{
+    "produced_on": "2023-06-01T06:42:34.559696556Z",
+    "source_location": "",
+    "full_name": "com.android.internal.telecom.ICallScreeningAdapter",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"callId": "readString16"},
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "componentName": "readParcelable",
+                    "__parcelType": "android.content.ComponentName"
+                }]
+            },
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "response": "readParcelable",
+                    "__parcelType": "com.android.internal.telecom.CallScreeningService.ParcelableCallResponse"
+                }]
+            }
+        ],
+        "name": "onScreeningResponse",
+        "oneWay": true,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "ICallScreeningAdapter",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

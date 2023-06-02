@@ -1,0 +1,35 @@
+{
+    "produced_on": "2023-06-01T06:42:35.890905508Z",
+    "source_location": "",
+    "full_name": "android.hardware.biometrics.IBiometricStateListener",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"newState": "readInt32"}],
+            "name": "onStateChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"action": "readInt32"}],
+            "name": "onBiometricAction",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"userId": "readInt32"},
+                {"sensorId": "readInt32"},
+                {"hasEnrollments": "readBool"}
+            ],
+            "name": "onEnrollmentsChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IBiometricStateListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

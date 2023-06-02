@@ -1,0 +1,48 @@
+{
+    "produced_on": "2023-06-01T06:42:35.577741091Z",
+    "source_location": "",
+    "full_name": "android.view.selectiontoolbar.ISelectionToolbarManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "showInfo": "readParcelable",
+                        "__parcelType": "android.view.selectiontoolbar.ShowInfo"
+                    }]
+                },
+                {"callback": "readStrongBinder"},
+                {"userId": "readInt32"}
+            ],
+            "name": "showToolbar",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"widgetToken": "readInt64"},
+                {"userId": "readInt32"}
+            ],
+            "name": "hideToolbar",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"widgetToken": "readInt64"},
+                {"userId": "readInt32"}
+            ],
+            "name": "dismissToolbar",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISelectionToolbarManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

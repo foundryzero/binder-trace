@@ -1,0 +1,51 @@
+{
+    "produced_on": "2023-06-01T06:42:37.388126327Z",
+    "source_location": "",
+    "components": [
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "regState": "readParcelable",
+                "__parcelType": "android.hardware.radio.network.RegState"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "rat": "readParcelable",
+                "__parcelType": "android.hardware.radio.RadioTechnology"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "reasonForDenial": "readParcelable",
+                "__parcelType": "android.hardware.radio.network.RegistrationFailCause"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "cellIdentity": "readParcelable",
+                "__parcelType": "android.hardware.radio.network.CellIdentity"
+            }]
+        },
+        {"registeredPlmn": "readString16"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "accessTechnologySpecificInfo": "readParcelable",
+                "__parcelType": "android.hardware.radio.network.AccessTechnologySpecificInfo"
+            }]
+        }
+    ],
+    "full_name": "android.hardware.radio.network.RegStateResult",
+    "name": "RegStateResult",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

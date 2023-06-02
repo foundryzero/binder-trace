@@ -1,0 +1,85 @@
+{
+    "produced_on": "2023-06-01T06:42:38.473043865Z",
+    "source_location": "",
+    "full_name": "android.hardware.drm.ICryptoPlugin",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "args": "readParcelable",
+                        "__parcelType": "android.hardware.drm.DecryptArgs"
+                    }]
+                }
+            ],
+            "name": "decrypt",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "getLogMessages",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.hardware.drm.LogMessage"
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"width": "readInt32"},
+                {"height": "readInt32"}
+            ],
+            "name": "notifyResolution",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"mime": "readString16"}],
+            "name": "requiresSecureDecoderComponent",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"sessionId": "readByteVector"}],
+            "name": "setMediaDrmSession",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "base": "readParcelable",
+                        "__parcelType": "android.hardware.drm.SharedBuffer"
+                    }]
+                }
+            ],
+            "name": "setSharedBufferBase",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICryptoPlugin",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

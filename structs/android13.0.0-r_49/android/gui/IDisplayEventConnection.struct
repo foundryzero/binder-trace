@@ -1,0 +1,58 @@
+{
+    "produced_on": "2023-06-01T06:42:35.939273394Z",
+    "source_location": "",
+    "full_name": "android.gui.IDisplayEventConnection",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "stealReceiveChannel",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "outChannel": "readParcelable",
+                        "__parcelType": "android.gui.BitTube"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"count": "readInt32"}],
+            "name": "setVsyncRate",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "requestNextVsync",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "getLatestVsyncEventData",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.gui.ParcelableVsyncEventData"
+                    }]
+                }
+            ]
+        }
+    ],
+    "name": "IDisplayEventConnection",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

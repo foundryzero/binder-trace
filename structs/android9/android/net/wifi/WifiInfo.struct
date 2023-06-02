@@ -1,0 +1,40 @@
+{
+    "produced_on": "2022-08-19T10:46:21.755802144Z",
+    "source_location": "",
+    "components": [
+        {"setNetworkId": "readInt32"},
+        {"setRssi": "readInt32"},
+        {"setLinkSpeed": "readInt32"},
+        {"setFrequency": "readInt32"},
+        {"nullcheck": "readByte"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{"setInetAddress": "readByteVector"}]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "mWifiSsid": "readParcelable",
+                "__parcelType": "android.net.wifi.WifiSsid"
+            }]
+        },
+        {"mBSSID": "readString16"},
+        {"mMacAddress": "readString16"},
+        {"mMeteredHint": "readInt32"},
+        {"mEphemeral": "readInt32"},
+        {"score": "readInt32"},
+        {"txSuccessRate": "readDouble"},
+        {"txRetriesRate": "readDouble"},
+        {"txBadRate": "readDouble"},
+        {"rxSuccessRate": "readDouble"},
+        {
+            "mSupplicantState": "readParcelable",
+            "__parcelType": "android.net.wifi.SupplicantState"
+        }
+    ],
+    "full_name": "android.net.wifi.WifiInfo",
+    "name": "WifiInfo",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

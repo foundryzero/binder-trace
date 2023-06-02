@@ -1,0 +1,43 @@
+{
+    "produced_on": "2022-08-19T10:42:50.513500935Z",
+    "source_location": "",
+    "full_name": "android.car.trust.ICarTrustAgentTokenResponseCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"handle": "readInt64"},
+                {"uid": "readInt32"}
+            ],
+            "name": "onEscrowTokenAdded",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"token": "readByteVector"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"handle": "readInt64"},
+                {"successful": "readBool"}
+            ],
+            "name": "onEscrowTokenRemoved",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"handle": "readInt64"},
+                {"active": "readBool"}
+            ],
+            "name": "onEscrowTokenActiveStateChanged",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICarTrustAgentTokenResponseCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,79 @@
+{
+    "produced_on": "2023-06-01T06:42:35.956197902Z",
+    "source_location": "",
+    "full_name": "android.media.tv.tuner.ITunerLnb",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"tunerLnbCallback": "readStrongBinder"}],
+            "name": "setCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "voltage": "readParcelable",
+                        "__parcelType": "android.hardware.tv.tuner.LnbVoltage"
+                    }]
+                }
+            ],
+            "name": "setVoltage",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "tone": "readParcelable",
+                        "__parcelType": "android.hardware.tv.tuner.LnbTone"
+                    }]
+                }
+            ],
+            "name": "setTone",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "position": "readParcelable",
+                        "__parcelType": "android.hardware.tv.tuner.LnbPosition"
+                    }]
+                }
+            ],
+            "name": "setSatellitePosition",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"diseqcMessage": "readByteVector"}],
+            "name": "sendDiseqcMessage",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "close",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ITunerLnb",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

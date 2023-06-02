@@ -1,0 +1,120 @@
+{
+    "produced_on": "2023-06-01T06:42:38.743723640Z",
+    "source_location": "",
+    "full_name": "android.hardware.wifi.supplicant.ISupplicantP2pNetwork",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getBssid",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "getClientList",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.wifi.supplicant.MacAddress"
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "getInterfaceName",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "getSsid",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "getType",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.IfaceType"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "isCurrent",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "isGroupOwner",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [],
+            "name": "isPersistent",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [{
+                "clients": "readParcelableVector",
+                "__parcelType": "android.hardware.wifi.supplicant.MacAddress"
+            }],
+            "name": "setClientList",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISupplicantP2pNetwork",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

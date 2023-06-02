@@ -1,0 +1,160 @@
+{
+    "produced_on": "2023-06-01T06:42:36.369884399Z",
+    "source_location": "",
+    "full_name": "hidl2aidl.test.IFoo",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"in1": "readString16"},
+                {"in2": "readString16"}
+            ],
+            "name": "multipleInputs",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"in1": "readString16"},
+                {"in2": "readString16"}
+            ],
+            "name": "multipleInputsAndOutputs",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "out1": "readParcelable",
+                        "__parcelType": "hidl2aidl.test.IFoo.BigStruct"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "out2": "readParcelable",
+                        "__parcelType": "hidl2aidl.test.IFoo.BigStruct"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "multipleOutputs",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "out1": "readParcelable",
+                        "__parcelType": "hidl2aidl.test.IFoo.BigStruct"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "out2": "readParcelable",
+                        "__parcelType": "hidl2aidl.test.IFoo.BigStruct"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "oneOutput",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "removedOutput",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"a": "readString16"},
+                {"b": "readString16"}
+            ],
+            "name": "someBar",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"a": "readByte"}],
+            "name": "someFoo",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "outer": "readParcelable",
+                        "__parcelType": "hidl2aidl.test.Outer"
+                    }]
+                }
+            ],
+            "name": "useImportedStruct",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [],
+            "name": "useStruct",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "hidl2aidl.test.IFoo.BigStruct"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 10,
+            "in": [{"a": "readString16"}],
+            "name": "versionTest_",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [{"a": "readString16"}],
+            "name": "versionTest_two_",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "IFoo",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

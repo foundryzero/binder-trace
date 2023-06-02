@@ -1,0 +1,161 @@
+{
+    "produced_on": "2023-06-01T06:42:35.953991717Z",
+    "source_location": "",
+    "full_name": "android.media.tv.tuner.ITunerFrontend",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"tunerFrontendCallback": "readStrongBinder"}],
+            "name": "setCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "settings": "readParcelable",
+                        "__parcelType": "android.hardware.tv.tuner.FrontendSettings"
+                    }]
+                }
+            ],
+            "name": "tune",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "stopTune",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "settings": "readParcelable",
+                        "__parcelType": "android.hardware.tv.tuner.FrontendSettings"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "frontendScanType": "readParcelable",
+                        "__parcelType": "android.hardware.tv.tuner.FrontendScanType"
+                    }]
+                }
+            ],
+            "name": "scan",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "stopScan",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"lnb": "readStrongBinder"}],
+            "name": "setLnb",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"ciCamId": "readInt32"}],
+            "name": "linkCiCamToFrontend",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [{"ciCamId": "readInt32"}],
+            "name": "unlinkCiCamToFrontend",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [],
+            "name": "close",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [{
+                "statusTypes": "readParcelableVector",
+                "__parcelType": "android.hardware.tv.tuner.FrontendStatusType"
+            }],
+            "name": "getStatus",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.tv.tuner.FrontendStatus"
+                }
+            ]
+        },
+        {
+            "code": 11,
+            "in": [],
+            "name": "getFrontendId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [],
+            "name": "getHardwareInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [{"pid": "readInt32"}],
+            "name": "removeOutputPid",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [{
+                "statusTypes": "readParcelableVector",
+                "__parcelType": "android.hardware.tv.tuner.FrontendStatusType"
+            }],
+            "name": "getFrontendStatusReadiness",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.tv.tuner.FrontendStatusReadiness"
+                }
+            ]
+        }
+    ],
+    "name": "ITunerFrontend",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

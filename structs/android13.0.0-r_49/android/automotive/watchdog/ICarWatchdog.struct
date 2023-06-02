@@ -1,0 +1,147 @@
+{
+    "produced_on": "2023-06-01T06:42:33.389900301Z",
+    "source_location": "",
+    "full_name": "android.automotive.watchdog.ICarWatchdog",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"client": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "timeout": "readParcelable",
+                        "__parcelType": "android.automotive.watchdog.TimeoutLength"
+                    }]
+                }
+            ],
+            "name": "registerClient",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"client": "readStrongBinder"}],
+            "name": "unregisterClient",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"mediator": "readStrongBinder"}],
+            "name": "registerMediator",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"mediator": "readStrongBinder"}],
+            "name": "unregisterMediator",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"monitor": "readStrongBinder"}],
+            "name": "registerMonitor",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"monitor": "readStrongBinder"}],
+            "name": "unregisterMonitor",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"client": "readStrongBinder"},
+                {"sessionId": "readInt32"}
+            ],
+            "name": "tellClientAlive",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"mediator": "readStrongBinder"},
+                {"clientsNotResponding": "readInt32Vector"},
+                {"sessionId": "readInt32"}
+            ],
+            "name": "tellMediatorAlive",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"monitor": "readStrongBinder"},
+                {"pid": "readInt32"}
+            ],
+            "name": "tellDumpFinished",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.automotive.watchdog.StateType"
+                    }]
+                },
+                {"arg1": "readInt32"},
+                {"arg2": "readInt32"}
+            ],
+            "name": "notifySystemStateChange",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {
+                    "resourceTypes": "readParcelableVector",
+                    "__parcelType": "android.automotive.watchdog.ResourceType"
+                },
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "addResourceOveruseListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "removeResourceOveruseListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [{
+                "resourceTypes": "readParcelableVector",
+                "__parcelType": "android.automotive.watchdog.ResourceType"
+            }],
+            "name": "getResourceOveruseStats",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.automotive.watchdog.ResourceOveruseStats"
+                }
+            ]
+        }
+    ],
+    "name": "ICarWatchdog",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,112 @@
+{
+    "produced_on": "2023-06-01T06:42:38.208682292Z",
+    "source_location": "",
+    "full_name": "android.hardware.automotive.vehicle.IVehicle",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getAllPropConfigs",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.automotive.vehicle.VehiclePropConfigs"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"props": "readInt32Vector"}],
+            "name": "getPropConfigs",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.automotive.vehicle.VehiclePropConfigs"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"callback": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "requests": "readParcelable",
+                        "__parcelType": "android.hardware.automotive.vehicle.GetValueRequests"
+                    }]
+                }
+            ],
+            "name": "getValues",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"callback": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "requests": "readParcelable",
+                        "__parcelType": "android.hardware.automotive.vehicle.SetValueRequests"
+                    }]
+                }
+            ],
+            "name": "setValues",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"callback": "readStrongBinder"},
+                {
+                    "options": "readParcelableVector",
+                    "__parcelType": "android.hardware.automotive.vehicle.SubscribeOptions"
+                },
+                {"maxSharedMemoryFileCount": "readInt32"}
+            ],
+            "name": "subscribe",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"callback": "readStrongBinder"},
+                {"propIds": "readInt32Vector"}
+            ],
+            "name": "unsubscribe",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"callback": "readStrongBinder"},
+                {"sharedMemoryId": "readInt64"}
+            ],
+            "name": "returnSharedMemory",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IVehicle",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

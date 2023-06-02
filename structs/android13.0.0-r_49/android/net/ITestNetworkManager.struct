@@ -1,0 +1,62 @@
+{
+    "produced_on": "2023-06-01T06:42:34.405717803Z",
+    "source_location": "",
+    "full_name": "android.net.ITestNetworkManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"isTun": "readBool"},
+                {"bringUp": "readBool"},
+                {
+                    "addrs": "readParcelableVector",
+                    "__parcelType": "android.net.LinkAddress"
+                },
+                {"iface": "readString16"}
+            ],
+            "name": "createInterface",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.net.TestNetworkInterface"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"iface": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "lp": "readParcelable",
+                        "__parcelType": "android.net.LinkProperties"
+                    }]
+                },
+                {"isMetered": "readBool"},
+                {"administratorUids": "readInt32Vector"},
+                {"binder": "readStrongBinder"}
+            ],
+            "name": "setupTestNetwork",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"netId": "readInt32"}],
+            "name": "teardownTestNetwork",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ITestNetworkManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

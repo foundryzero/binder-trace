@@ -1,0 +1,51 @@
+{
+    "produced_on": "2023-06-01T06:42:36.585840741Z",
+    "source_location": "",
+    "full_name": "android.hardware.soundtrigger3.ISoundTriggerHwCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"model": "readInt32"}],
+            "name": "modelUnloaded",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"model": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "event": "readParcelable",
+                        "__parcelType": "android.media.soundtrigger.PhraseRecognitionEvent"
+                    }]
+                }
+            ],
+            "name": "phraseRecognitionCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"model": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "event": "readParcelable",
+                        "__parcelType": "android.media.soundtrigger.RecognitionEvent"
+                    }]
+                }
+            ],
+            "name": "recognitionCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISoundTriggerHwCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

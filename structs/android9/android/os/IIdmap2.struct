@@ -1,0 +1,68 @@
+{
+    "produced_on": "2022-08-04T09:32:21.082108803Z",
+    "source_location": "",
+    "full_name": "android.os.IIdmap2",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"overlayApkPath": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "getIdmapPath",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"overlayApkPath": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "removeIdmap",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"targetApkPath": "readString16"},
+                {"overlayApkPath": "readString16"},
+                {"fulfilledPolicies": "readInt32"},
+                {"enforceOverlayable": "readBool"},
+                {"userId": "readInt32"}
+            ],
+            "name": "verifyIdmap",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"targetApkPath": "readString16"},
+                {"overlayApkPath": "readString16"},
+                {"fulfilledPolicies": "readInt32"},
+                {"enforceOverlayable": "readBool"},
+                {"userId": "readInt32"}
+            ],
+            "name": "createIdmap",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        }
+    ],
+    "name": "IIdmap2",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

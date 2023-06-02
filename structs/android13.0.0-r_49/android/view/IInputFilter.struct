@@ -1,0 +1,41 @@
+{
+    "produced_on": "2023-06-01T06:42:35.597747854Z",
+    "source_location": "",
+    "full_name": "android.view.IInputFilter",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"host": "readStrongBinder"}],
+            "name": "install",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "uninstall",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "event": "readParcelable",
+                        "__parcelType": "android.view.InputEvent"
+                    }]
+                },
+                {"policyFlags": "readInt32"}
+            ],
+            "name": "filterInputEvent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IInputFilter",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

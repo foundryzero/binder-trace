@@ -1,0 +1,275 @@
+{
+    "produced_on": "2022-08-26T09:55:24.210624482Z",
+    "source_location": "",
+    "full_name": "android.os.incremental.IIncrementalService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"path": "readString16"}],
+            "name": "openStorage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"path": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "params": "readParcelable",
+                        "__parcelType": "android.content.pm.DataLoaderParamsParcel"
+                    }]
+                },
+                {"createMode": "readInt32"},
+                {"statusListener": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "healthCheckParams": "readParcelable",
+                        "__parcelType": "android.os.incremental.StorageHealthCheckParams"
+                    }]
+                },
+                {"healthListener": "readStrongBinder"}
+            ],
+            "name": "createStorage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"path": "readString16"},
+                {"otherStorageId": "readInt32"},
+                {"createMode": "readInt32"}
+            ],
+            "name": "createLinkedStorage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"storageId": "readInt32"},
+                {"sourcePath": "readString16"},
+                {"targetFullPath": "readString16"},
+                {"bindType": "readInt32"}
+            ],
+            "name": "makeBindMount",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"storageId": "readInt32"},
+                {"targetFullPath": "readString16"}
+            ],
+            "name": "deleteBindMount",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"storageId": "readInt32"},
+                {"path": "readString16"}
+            ],
+            "name": "makeDirectory",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"storageId": "readInt32"},
+                {"path": "readString16"}
+            ],
+            "name": "makeDirectories",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"storageId": "readInt32"},
+                {"path": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "params": "readParcelable",
+                        "__parcelType": "android.os.incremental.IncrementalNewFileParams"
+                    }]
+                }
+            ],
+            "name": "makeFile",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"storageId": "readInt32"},
+                {"targetPath": "readString16"},
+                {"sourcePath": "readString16"},
+                {"start": "readInt64"},
+                {"end": "readInt64"}
+            ],
+            "name": "makeFileFromRange",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"sourceStorageId": "readInt32"},
+                {"sourcePath": "readString16"},
+                {"destStorageId": "readInt32"},
+                {"destPath": "readString16"}
+            ],
+            "name": "makeLink",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"storageId": "readInt32"},
+                {"path": "readString16"}
+            ],
+            "name": "unlink",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"storageId": "readInt32"},
+                {"path": "readString16"},
+                {"start": "readInt64"},
+                {"end": "readInt64"}
+            ],
+            "name": "isFileRangeLoaded",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"storageId": "readInt32"},
+                {"path": "readString16"}
+            ],
+            "name": "getMetadataByPath",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"storageId": "readInt32"},
+                {"fileId": "readByteVector"}
+            ],
+            "name": "getMetadataById",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 15,
+            "in": [{"storageId": "readInt32"}],
+            "name": "startLoading",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 16,
+            "in": [{"storageId": "readInt32"}],
+            "name": "deleteStorage",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [{"storageId": "readInt32"}],
+            "name": "disableReadLogs",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"storageId": "readInt32"},
+                {"apkFullPath": "readString16"},
+                {"libDirRelativePath": "readString16"},
+                {"abi": "readString16"},
+                {"extractNativeLibs": "readBool"}
+            ],
+            "name": "configureNativeBinaries",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 19,
+            "in": [{"storageId": "readInt32"}],
+            "name": "waitForNativeBinariesExtraction",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "IIncrementalService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

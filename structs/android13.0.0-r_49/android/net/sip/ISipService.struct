@@ -1,0 +1,147 @@
+{
+    "produced_on": "2023-06-01T06:42:36.051148973Z",
+    "source_location": "",
+    "full_name": "android.net.sip.ISipService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "localProfile": "readParcelable",
+                        "__parcelType": "android.net.sip.SipProfile"
+                    }]
+                },
+                {"opPackageName": "readString16"}
+            ],
+            "name": "open",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "localProfile": "readParcelable",
+                        "__parcelType": "android.net.sip.SipProfile"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "incomingCallPendingIntent": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                },
+                {"listener": "readStrongBinder"},
+                {"opPackageName": "readString16"}
+            ],
+            "name": "open3",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"localProfileUri": "readString16"},
+                {"opPackageName": "readString16"}
+            ],
+            "name": "close",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"localProfileUri": "readString16"},
+                {"opPackageName": "readString16"}
+            ],
+            "name": "isOpened",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"localProfileUri": "readString16"},
+                {"opPackageName": "readString16"}
+            ],
+            "name": "isRegistered",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"localProfileUri": "readString16"},
+                {"listener": "readStrongBinder"},
+                {"opPackageName": "readString16"}
+            ],
+            "name": "setRegistrationListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "localProfile": "readParcelable",
+                        "__parcelType": "android.net.sip.SipProfile"
+                    }]
+                },
+                {"listener": "readStrongBinder"},
+                {"opPackageName": "readString16"}
+            ],
+            "name": "createSession",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"callId": "readString16"},
+                {"opPackageName": "readString16"}
+            ],
+            "name": "getPendingSession",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [{"opPackageName": "readString16"}],
+            "name": "getProfiles",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.net.sip.SipProfile"
+                }
+            ]
+        }
+    ],
+    "name": "ISipService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

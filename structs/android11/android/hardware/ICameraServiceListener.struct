@@ -1,0 +1,65 @@
+{
+    "produced_on": "2022-08-26T09:55:21.811691611Z",
+    "source_location": "",
+    "full_name": "android.hardware.ICameraServiceListener",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"status": "readInt32"},
+                {"cameraId": "readString16"}
+            ],
+            "name": "onStatusChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"status": "readInt32"},
+                {"cameraId": "readString16"},
+                {"physicalCameraId": "readString16"}
+            ],
+            "name": "onPhysicalCameraStatusChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"status": "readInt32"},
+                {"cameraId": "readString16"}
+            ],
+            "name": "onTorchStatusChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "onCameraAccessPrioritiesChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"cameraId": "readString16"},
+                {"clientPackageId": "readString16"}
+            ],
+            "name": "onCameraOpened",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"cameraId": "readString16"}],
+            "name": "onCameraClosed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICameraServiceListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

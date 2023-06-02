@@ -1,0 +1,33 @@
+{
+    "produced_on": "2022-08-26T09:55:22.054798217Z",
+    "source_location": "",
+    "full_name": "android.net.wifi.INetworkRequestUserSelectionCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "wificonfiguration": "readParcelable",
+                        "__parcelType": "android.net.wifi.WifiConfiguration"
+                    }]
+                }
+            ],
+            "name": "select",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "reject",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "INetworkRequestUserSelectionCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

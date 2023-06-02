@@ -1,0 +1,68 @@
+{
+    "produced_on": "2023-06-01T06:42:36.746235305Z",
+    "source_location": "",
+    "full_name": "android.hardware.uwb.IUwbChip",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getName",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"clientCallback": "readStrongBinder"}],
+            "name": "open",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "close",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "coreInit",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"sessionId": "readInt32"}],
+            "name": "sessionInit",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "getSupportedAndroidUciVersion",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [{"data": "readByteVector"}],
+            "name": "sendUciMessage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        }
+    ],
+    "name": "IUwbChip",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

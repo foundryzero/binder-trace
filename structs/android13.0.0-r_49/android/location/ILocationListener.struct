@@ -1,0 +1,40 @@
+{
+    "produced_on": "2023-06-01T06:42:35.899755137Z",
+    "source_location": "",
+    "full_name": "android.location.ILocationListener",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {
+                    "locations": "readList",
+                    "__parcelType": "android.location.Location"
+                },
+                {"onCompleteCallback": "readStrongBinder"}
+            ],
+            "name": "onLocationChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"provider": "readString16"},
+                {"enabled": "readBool"}
+            ],
+            "name": "onProviderEnabledChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"requestCode": "readInt32"}],
+            "name": "onFlushComplete",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ILocationListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

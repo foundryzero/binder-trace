@@ -1,0 +1,56 @@
+{
+    "produced_on": "2022-08-26T09:55:21.449467757Z",
+    "source_location": "",
+    "full_name": "android.media.eco.IECOServiceInfoListener",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getType",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "getName",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getECOSession",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "newInfo": "readParcelable",
+                        "__parcelType": "android.media.eco.ECOData"
+                    }]
+                }
+            ],
+            "name": "onNewInfo",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IECOServiceInfoListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

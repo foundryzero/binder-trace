@@ -1,0 +1,71 @@
+{
+    "produced_on": "2022-08-04T09:32:15.134313221Z",
+    "source_location": "",
+    "full_name": "android.net.wifi.nl80211.IClientInterface",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getPacketCounters",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "signalPoll",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getMacAddress",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "getInterfaceName",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "getWifiScannerImpl",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"frame": "readByteVector"},
+                {"callback": "readStrongBinder"},
+                {"mcs": "readInt32"}
+            ],
+            "name": "SendMgmtFrame",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IClientInterface",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

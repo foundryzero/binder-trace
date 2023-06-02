@@ -1,0 +1,846 @@
+{
+    "produced_on": "2023-06-01T06:42:35.309395860Z",
+    "source_location": "",
+    "full_name": "android.accounts.IAccountManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "account": "readParcelable",
+                        "__parcelType": "android.accounts.Account"
+                    }]
+                }
+            ],
+            "name": "getPassword",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "account": "readParcelable",
+                        "__parcelType": "android.accounts.Account"
+                    }]
+                },
+                {"key": "readString16"}
+            ],
+            "name": "getUserData",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"userId": "readInt32"}],
+            "name": "getAuthenticatorTypes",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.accounts.AuthenticatorDescription"
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"packageName": "readString16"},
+                {"uid": "readInt32"},
+                {"opPackageName": "readString16"}
+            ],
+            "name": "getAccountsForPackage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.accounts.Account"
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"type": "readString16"},
+                {"packageName": "readString16"},
+                {"opPackageName": "readString16"}
+            ],
+            "name": "getAccountsByTypeForPackage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.accounts.Account"
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"accountType": "readString16"},
+                {"userId": "readInt32"},
+                {"opPackageName": "readString16"}
+            ],
+            "name": "getAccountsAsUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.accounts.Account"
+                }
+            ]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"response": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "account": "readParcelable",
+                        "__parcelType": "android.accounts.Account"
+                    }]
+                },
+                {"features": "readString16Vector"},
+                {"opPackageName": "readString16"}
+            ],
+            "name": "hasFeatures",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"response": "readStrongBinder"},
+                {"accountType": "readString16"},
+                {"features": "readString16Vector"},
+                {"opPackageName": "readString16"}
+            ],
+            "name": "getAccountByTypeAndFeatures",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"response": "readStrongBinder"},
+                {"accountType": "readString16"},
+                {"features": "readString16Vector"},
+                {"opPackageName": "readString16"}
+            ],
+            "name": "getAccountsByFeatures",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "account": "readParcelable",
+                        "__parcelType": "android.accounts.Account"
+                    }]
+                },
+                {"password": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"extras": "readBundle"}]
+                },
+                {"opPackageName": "readString16"}
+            ],
+            "name": "addAccountExplicitly",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"response": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "account": "readParcelable",
+                        "__parcelType": "android.accounts.Account"
+                    }]
+                },
+                {"expectActivityLaunch": "readBool"},
+                {"userId": "readInt32"}
+            ],
+            "name": "removeAccountAsUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "account": "readParcelable",
+                        "__parcelType": "android.accounts.Account"
+                    }]
+                }
+            ],
+            "name": "removeAccountExplicitly",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"response": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "account": "readParcelable",
+                        "__parcelType": "android.accounts.Account"
+                    }]
+                },
+                {"userFrom": "readInt32"},
+                {"userTo": "readInt32"}
+            ],
+            "name": "copyAccountToUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"accountType": "readString16"},
+                {"authToken": "readString16"}
+            ],
+            "name": "invalidateAuthToken",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "account": "readParcelable",
+                        "__parcelType": "android.accounts.Account"
+                    }]
+                },
+                {"authTokenType": "readString16"}
+            ],
+            "name": "peekAuthToken",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 16,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "account": "readParcelable",
+                        "__parcelType": "android.accounts.Account"
+                    }]
+                },
+                {"authTokenType": "readString16"},
+                {"authToken": "readString16"}
+            ],
+            "name": "setAuthToken",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "account": "readParcelable",
+                        "__parcelType": "android.accounts.Account"
+                    }]
+                },
+                {"password": "readString16"}
+            ],
+            "name": "setPassword",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "account": "readParcelable",
+                        "__parcelType": "android.accounts.Account"
+                    }]
+                }
+            ],
+            "name": "clearPassword",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 19,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "account": "readParcelable",
+                        "__parcelType": "android.accounts.Account"
+                    }]
+                },
+                {"key": "readString16"},
+                {"value": "readString16"}
+            ],
+            "name": "setUserData",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 20,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "account": "readParcelable",
+                        "__parcelType": "android.accounts.Account"
+                    }]
+                },
+                {"authTokenType": "readString16"},
+                {"uid": "readInt32"},
+                {"value": "readBool"}
+            ],
+            "name": "updateAppPermission",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 21,
+            "in": [
+                {"response": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "account": "readParcelable",
+                        "__parcelType": "android.accounts.Account"
+                    }]
+                },
+                {"authTokenType": "readString16"},
+                {"notifyOnAuthFailure": "readBool"},
+                {"expectActivityLaunch": "readBool"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"options": "readBundle"}]
+                }
+            ],
+            "name": "getAuthToken",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 22,
+            "in": [
+                {"response": "readStrongBinder"},
+                {"accountType": "readString16"},
+                {"authTokenType": "readString16"},
+                {"requiredFeatures": "readString16Vector"},
+                {"expectActivityLaunch": "readBool"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"options": "readBundle"}]
+                }
+            ],
+            "name": "addAccount",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 23,
+            "in": [
+                {"response": "readStrongBinder"},
+                {"accountType": "readString16"},
+                {"authTokenType": "readString16"},
+                {"requiredFeatures": "readString16Vector"},
+                {"expectActivityLaunch": "readBool"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"options": "readBundle"}]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "addAccountAsUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 24,
+            "in": [
+                {"response": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "account": "readParcelable",
+                        "__parcelType": "android.accounts.Account"
+                    }]
+                },
+                {"authTokenType": "readString16"},
+                {"expectActivityLaunch": "readBool"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"options": "readBundle"}]
+                }
+            ],
+            "name": "updateCredentials",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 25,
+            "in": [
+                {"response": "readStrongBinder"},
+                {"accountType": "readString16"},
+                {"expectActivityLaunch": "readBool"}
+            ],
+            "name": "editProperties",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 26,
+            "in": [
+                {"response": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "account": "readParcelable",
+                        "__parcelType": "android.accounts.Account"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"options": "readBundle"}]
+                },
+                {"expectActivityLaunch": "readBool"},
+                {"userId": "readInt32"}
+            ],
+            "name": "confirmCredentialsAsUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 27,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "account": "readParcelable",
+                        "__parcelType": "android.accounts.Account"
+                    }]
+                }
+            ],
+            "name": "accountAuthenticated",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 28,
+            "in": [
+                {"response": "readStrongBinder"},
+                {"accountType": "readString16"},
+                {"authTokenType": "readString16"}
+            ],
+            "name": "getAuthTokenLabel",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 29,
+            "in": [
+                {"parentUserId": "readInt32"},
+                {"userId": "readInt32"},
+                {"opPackageName": "readString16"}
+            ],
+            "name": "addSharedAccountsFromParentUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 30,
+            "in": [
+                {"response": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "accountToRename": "readParcelable",
+                        "__parcelType": "android.accounts.Account"
+                    }]
+                },
+                {"newName": "readString16"}
+            ],
+            "name": "renameAccount",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 31,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "account": "readParcelable",
+                        "__parcelType": "android.accounts.Account"
+                    }]
+                }
+            ],
+            "name": "getPreviousName",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 32,
+            "in": [
+                {"response": "readStrongBinder"},
+                {"accountType": "readString16"},
+                {"authTokenType": "readString16"},
+                {"requiredFeatures": "readString16Vector"},
+                {"expectActivityLaunch": "readBool"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"options": "readBundle"}]
+                }
+            ],
+            "name": "startAddAccountSession",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 33,
+            "in": [
+                {"response": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "account": "readParcelable",
+                        "__parcelType": "android.accounts.Account"
+                    }]
+                },
+                {"authTokenType": "readString16"},
+                {"expectActivityLaunch": "readBool"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"options": "readBundle"}]
+                }
+            ],
+            "name": "startUpdateCredentialsSession",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 34,
+            "in": [
+                {"response": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"sessionBundle": "readBundle"}]
+                },
+                {"expectActivityLaunch": "readBool"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"appInfo": "readBundle"}]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "finishSessionAsUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 35,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "account": "readParcelable",
+                        "__parcelType": "android.accounts.Account"
+                    }]
+                }
+            ],
+            "name": "someUserHasAccount",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 36,
+            "in": [
+                {"response": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "account": "readParcelable",
+                        "__parcelType": "android.accounts.Account"
+                    }]
+                },
+                {"statusToken": "readString16"}
+            ],
+            "name": "isCredentialsUpdateSuggested",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 37,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "account": "readParcelable",
+                        "__parcelType": "android.accounts.Account"
+                    }]
+                }
+            ],
+            "name": "getPackagesAndVisibilityForAccount",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readMap"}
+            ]
+        },
+        {
+            "code": 38,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "account": "readParcelable",
+                        "__parcelType": "android.accounts.Account"
+                    }]
+                },
+                {"password": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"extras": "readBundle"}]
+                },
+                {"visibility": "readMap"},
+                {"opPackageName": "readString16"}
+            ],
+            "name": "addAccountExplicitlyWithVisibility",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 39,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "a": "readParcelable",
+                        "__parcelType": "android.accounts.Account"
+                    }]
+                },
+                {"packageName": "readString16"},
+                {"newVisibility": "readInt32"}
+            ],
+            "name": "setAccountVisibility",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 40,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "a": "readParcelable",
+                        "__parcelType": "android.accounts.Account"
+                    }]
+                },
+                {"packageName": "readString16"}
+            ],
+            "name": "getAccountVisibility",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 41,
+            "in": [
+                {"packageName": "readString16"},
+                {"accountType": "readString16"}
+            ],
+            "name": "getAccountsAndVisibilityForPackage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readMap"}
+            ]
+        },
+        {
+            "code": 42,
+            "in": [
+                {"accountTypes": "readString16Vector"},
+                {"opPackageName": "readString16"}
+            ],
+            "name": "registerAccountListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 43,
+            "in": [
+                {"accountTypes": "readString16Vector"},
+                {"opPackageName": "readString16"}
+            ],
+            "name": "unregisterAccountListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 44,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "account": "readParcelable",
+                        "__parcelType": "android.accounts.Account"
+                    }]
+                },
+                {"packageName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "userHandle": "readParcelable",
+                        "__parcelType": "android.os.UserHandle"
+                    }]
+                }
+            ],
+            "name": "hasAccountAccess",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 45,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "account": "readParcelable",
+                        "__parcelType": "android.accounts.Account"
+                    }]
+                },
+                {"packageName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "userHandle": "readParcelable",
+                        "__parcelType": "android.os.UserHandle"
+                    }]
+                }
+            ],
+            "name": "createRequestAccountAccessIntentSenderAsUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.IntentSender"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 46,
+            "in": [{"token": "readString16"}],
+            "name": "onAccountAccessed",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IAccountManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,1475 @@
+{
+    "produced_on": "2022-08-26T09:55:22.867411204Z",
+    "source_location": "",
+    "full_name": "android.net.IConnectivityManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getActiveNetwork",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.net.Network"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"uid": "readInt32"},
+                {"ignoreBlocked": "readBool"}
+            ],
+            "name": "getActiveNetworkForUid",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.net.Network"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getActiveNetworkInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.net.NetworkInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"uid": "readInt32"},
+                {"ignoreBlocked": "readBool"}
+            ],
+            "name": "getActiveNetworkInfoForUid",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.net.NetworkInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"networkType": "readInt32"}],
+            "name": "getNetworkInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.net.NetworkInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "network": "readParcelable",
+                        "__parcelType": "android.net.Network"
+                    }]
+                },
+                {"uid": "readInt32"},
+                {"ignoreBlocked": "readBool"}
+            ],
+            "name": "getNetworkInfoForUid",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.net.NetworkInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "getAllNetworkInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.net.NetworkInfo"
+                }
+            ]
+        },
+        {
+            "code": 8,
+            "in": [{"networkType": "readInt32"}],
+            "name": "getNetworkForType",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.net.Network"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 9,
+            "in": [],
+            "name": "getAllNetworks",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.net.Network"
+                }
+            ]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"userId": "readInt32"},
+                {"callingPackageName": "readString16"}
+            ],
+            "name": "getDefaultNetworkCapabilitiesForUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.net.NetworkCapabilities"
+                }
+            ]
+        },
+        {
+            "code": 11,
+            "in": [{"networkType": "readInt32"}],
+            "name": "isNetworkSupported",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [],
+            "name": "getActiveLinkProperties",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.net.LinkProperties"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 13,
+            "in": [{"networkType": "readInt32"}],
+            "name": "getLinkPropertiesForType",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.net.LinkProperties"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "network": "readParcelable",
+                        "__parcelType": "android.net.Network"
+                    }]
+                }
+            ],
+            "name": "getLinkProperties",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.net.LinkProperties"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "network": "readParcelable",
+                        "__parcelType": "android.net.Network"
+                    }]
+                },
+                {"callingPackageName": "readString16"}
+            ],
+            "name": "getNetworkCapabilities",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.net.NetworkCapabilities"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 16,
+            "in": [],
+            "name": "getAllNetworkState",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.net.NetworkState"
+                }
+            ]
+        },
+        {
+            "code": 17,
+            "in": [],
+            "name": "getActiveNetworkQuotaInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.net.NetworkQuotaInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 18,
+            "in": [],
+            "name": "isActiveNetworkMetered",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 19,
+            "in": [
+                {"networkType": "readInt32"},
+                {"hostAddress": "readByteVector"}
+            ],
+            "name": "requestRouteToHostAddress",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 20,
+            "in": [{"iface": "readString16"}],
+            "name": "getLastTetherError",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 21,
+            "in": [],
+            "name": "getTetherableIfaces",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 22,
+            "in": [],
+            "name": "getTetheredIfaces",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 23,
+            "in": [],
+            "name": "getTetheringErroredIfaces",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 24,
+            "in": [],
+            "name": "getTetherableUsbRegexs",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 25,
+            "in": [],
+            "name": "getTetherableWifiRegexs",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 26,
+            "in": [
+                {"networkType": "readInt32"},
+                {"percentage": "readInt32"}
+            ],
+            "name": "reportInetCondition",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 27,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "network": "readParcelable",
+                        "__parcelType": "android.net.Network"
+                    }]
+                },
+                {"hasConnectivity": "readBool"}
+            ],
+            "name": "reportNetworkConnectivity",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 28,
+            "in": [],
+            "name": "getGlobalProxy",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.net.ProxyInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 29,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "p": "readParcelable",
+                        "__parcelType": "android.net.ProxyInfo"
+                    }]
+                }
+            ],
+            "name": "setGlobalProxy",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 30,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "nework": "readParcelable",
+                        "__parcelType": "android.net.Network"
+                    }]
+                }
+            ],
+            "name": "getProxyForNetwork",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.net.ProxyInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 31,
+            "in": [
+                {"oldPackage": "readString16"},
+                {"newPackage": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "prepareVpn",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 32,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"},
+                {"vpnType": "readInt32"}
+            ],
+            "name": "setVpnPackageAuthorization",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 33,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "config": "readParcelable",
+                        "__parcelType": "com.android.internal.net.VpnConfig"
+                    }]
+                }
+            ],
+            "name": "establishVpn",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.os.ParcelFileDescriptor"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 34,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "profile": "readParcelable",
+                        "__parcelType": "com.android.internal.net.VpnProfile"
+                    }]
+                },
+                {"packageName": "readString16"}
+            ],
+            "name": "provisionVpnProfile",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 35,
+            "in": [{"packageName": "readString16"}],
+            "name": "deleteVpnProfile",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 36,
+            "in": [{"packageName": "readString16"}],
+            "name": "startVpnProfile",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 37,
+            "in": [{"packageName": "readString16"}],
+            "name": "stopVpnProfile",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 38,
+            "in": [{"userId": "readInt32"}],
+            "name": "getVpnConfig",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.internal.net.VpnConfig"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 39,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "profile": "readParcelable",
+                        "__parcelType": "com.android.internal.net.VpnProfile"
+                    }]
+                }
+            ],
+            "name": "startLegacyVpn",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 40,
+            "in": [{"userId": "readInt32"}],
+            "name": "getLegacyVpnInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.internal.net.LegacyVpnInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 41,
+            "in": [],
+            "name": "updateLockdownVpn",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 42,
+            "in": [
+                {"userId": "readInt32"},
+                {"packageName": "readString16"}
+            ],
+            "name": "isAlwaysOnVpnPackageSupported",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 43,
+            "in": [
+                {"userId": "readInt32"},
+                {"packageName": "readString16"},
+                {"lockdown": "readBool"},
+                {
+                    "lockdownWhitelist": "readList",
+                    "__parcelType": "String"
+                }
+            ],
+            "name": "setAlwaysOnVpnPackage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 44,
+            "in": [{"userId": "readInt32"}],
+            "name": "getAlwaysOnVpnPackage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 45,
+            "in": [{"userId": "readInt32"}],
+            "name": "isVpnLockdownEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 46,
+            "in": [{"userId": "readInt32"}],
+            "name": "getVpnLockdownWhitelist",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "String"
+                }
+            ]
+        },
+        {
+            "code": 47,
+            "in": [{"suggestedTimeOutMs": "readInt32"}],
+            "name": "checkMobileProvisioning",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 48,
+            "in": [],
+            "name": "getMobileProvisioningUrl",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 49,
+            "in": [
+                {"visible": "readBool"},
+                {"networkType": "readInt32"},
+                {"action": "readString16"}
+            ],
+            "name": "setProvisioningNotificationVisible",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 50,
+            "in": [{"enable": "readBool"}],
+            "name": "setAirplaneMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 51,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "network": "readParcelable",
+                        "__parcelType": "android.net.Network"
+                    }]
+                }
+            ],
+            "name": "requestBandwidthUpdate",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 52,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "messenger": "readParcelable",
+                        "__parcelType": "android.os.Messenger"
+                    }]
+                },
+                {"name": "readString16"}
+            ],
+            "name": "registerNetworkFactory",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 53,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "messenger": "readParcelable",
+                        "__parcelType": "android.os.Messenger"
+                    }]
+                }
+            ],
+            "name": "unregisterNetworkFactory",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 54,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "messenger": "readParcelable",
+                        "__parcelType": "android.os.Messenger"
+                    }]
+                },
+                {"name": "readString16"}
+            ],
+            "name": "registerNetworkProvider",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 55,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "messenger": "readParcelable",
+                        "__parcelType": "android.os.Messenger"
+                    }]
+                }
+            ],
+            "name": "unregisterNetworkProvider",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 56,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.net.NetworkRequest"
+                    }]
+                }
+            ],
+            "name": "declareNetworkRequestUnfulfillable",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 57,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "messenger": "readParcelable",
+                        "__parcelType": "android.os.Messenger"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "ni": "readParcelable",
+                        "__parcelType": "android.net.NetworkInfo"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "lp": "readParcelable",
+                        "__parcelType": "android.net.LinkProperties"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "nc": "readParcelable",
+                        "__parcelType": "android.net.NetworkCapabilities"
+                    }]
+                },
+                {"score": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "config": "readParcelable",
+                        "__parcelType": "android.net.NetworkAgentConfig"
+                    }]
+                },
+                {"factorySerialNumber": "readInt32"}
+            ],
+            "name": "registerNetworkAgent",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.net.Network"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 58,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "networkCapabilities": "readParcelable",
+                        "__parcelType": "android.net.NetworkCapabilities"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "messenger": "readParcelable",
+                        "__parcelType": "android.os.Messenger"
+                    }]
+                },
+                {"timeoutSec": "readInt32"},
+                {"binder": "readStrongBinder"},
+                {"legacy": "readInt32"},
+                {"callingPackageName": "readString16"}
+            ],
+            "name": "requestNetwork",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.net.NetworkRequest"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 59,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "networkCapabilities": "readParcelable",
+                        "__parcelType": "android.net.NetworkCapabilities"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "operation": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                },
+                {"callingPackageName": "readString16"}
+            ],
+            "name": "pendingRequestForNetwork",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.net.NetworkRequest"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 60,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "operation": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                }
+            ],
+            "name": "releasePendingNetworkRequest",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 61,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "networkCapabilities": "readParcelable",
+                        "__parcelType": "android.net.NetworkCapabilities"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "messenger": "readParcelable",
+                        "__parcelType": "android.os.Messenger"
+                    }]
+                },
+                {"binder": "readStrongBinder"},
+                {"callingPackageName": "readString16"}
+            ],
+            "name": "listenForNetwork",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.net.NetworkRequest"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 62,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "networkCapabilities": "readParcelable",
+                        "__parcelType": "android.net.NetworkCapabilities"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "operation": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                },
+                {"callingPackageName": "readString16"}
+            ],
+            "name": "pendingListenForNetwork",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 63,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "networkRequest": "readParcelable",
+                        "__parcelType": "android.net.NetworkRequest"
+                    }]
+                }
+            ],
+            "name": "releaseNetworkRequest",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 64,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "network": "readParcelable",
+                        "__parcelType": "android.net.Network"
+                    }]
+                },
+                {"accept": "readBool"},
+                {"always": "readBool"}
+            ],
+            "name": "setAcceptUnvalidated",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 65,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "network": "readParcelable",
+                        "__parcelType": "android.net.Network"
+                    }]
+                },
+                {"accept": "readBool"},
+                {"always": "readBool"}
+            ],
+            "name": "setAcceptPartialConnectivity",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 66,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "network": "readParcelable",
+                        "__parcelType": "android.net.Network"
+                    }]
+                }
+            ],
+            "name": "setAvoidUnvalidated",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 67,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "network": "readParcelable",
+                        "__parcelType": "android.net.Network"
+                    }]
+                }
+            ],
+            "name": "startCaptivePortalApp",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 68,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "network": "readParcelable",
+                        "__parcelType": "android.net.Network"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"appExtras": "readBundle"}]
+                }
+            ],
+            "name": "startCaptivePortalAppInternal",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 69,
+            "in": [],
+            "name": "shouldAvoidBadWifi",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 70,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "Network": "readParcelable",
+                        "__parcelType": "android.net.Network"
+                    }]
+                }
+            ],
+            "name": "getMultipathPreference",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 71,
+            "in": [],
+            "name": "getDefaultRequest",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.net.NetworkRequest"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 72,
+            "in": [{"networkType": "readInt32"}],
+            "name": "getRestoreDefaultNetworkDelay",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 73,
+            "in": [
+                {"address": "readString16"},
+                {"prefixLength": "readInt32"}
+            ],
+            "name": "addVpnAddress",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 74,
+            "in": [
+                {"address": "readString16"},
+                {"prefixLength": "readInt32"}
+            ],
+            "name": "removeVpnAddress",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 75,
+            "in": [{
+                "networks": "readParcelableVector",
+                "__parcelType": "android.net.Network"
+            }],
+            "name": "setUnderlyingNetworksForVpn",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 76,
+            "in": [],
+            "name": "factoryReset",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 77,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "network": "readParcelable",
+                        "__parcelType": "android.net.Network"
+                    }]
+                },
+                {"intervalSeconds": "readInt32"},
+                {"cb": "readStrongBinder"},
+                {"srcAddr": "readString16"},
+                {"srcPort": "readInt32"},
+                {"dstAddr": "readString16"}
+            ],
+            "name": "startNattKeepalive",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 78,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "network": "readParcelable",
+                        "__parcelType": "android.net.Network"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "fd": "readParcelable",
+                        "__parcelType": "FileDescriptor"
+                    }]
+                },
+                {"resourceId": "readInt32"},
+                {"intervalSeconds": "readInt32"},
+                {"cb": "readStrongBinder"},
+                {"srcAddr": "readString16"},
+                {"dstAddr": "readString16"}
+            ],
+            "name": "startNattKeepaliveWithFd",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 79,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "network": "readParcelable",
+                        "__parcelType": "android.net.Network"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "fd": "readParcelable",
+                        "__parcelType": "FileDescriptor"
+                    }]
+                },
+                {"intervalSeconds": "readInt32"},
+                {"cb": "readStrongBinder"}
+            ],
+            "name": "startTcpKeepalive",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 80,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "network": "readParcelable",
+                        "__parcelType": "android.net.Network"
+                    }]
+                },
+                {"slot": "readInt32"}
+            ],
+            "name": "stopKeepalive",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 81,
+            "in": [],
+            "name": "getCaptivePortalServerUrl",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 82,
+            "in": [],
+            "name": "getNetworkWatchlistConfigHash",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 83,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "connectionInfo": "readParcelable",
+                        "__parcelType": "android.net.ConnectionInfo"
+                    }]
+                }
+            ],
+            "name": "getConnectionOwnerUid",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 84,
+            "in": [],
+            "name": "isCallerCurrentAlwaysOnVpnApp",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 85,
+            "in": [],
+            "name": "isCallerCurrentAlwaysOnVpnLockdownApp",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 86,
+            "in": [
+                {"callback": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.net.NetworkRequest"
+                    }]
+                },
+                {"callingPackageName": "readString16"}
+            ],
+            "name": "registerConnectivityDiagnosticsCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 87,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "unregisterConnectivityDiagnosticsCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 88,
+            "in": [],
+            "name": "startOrGetTestNetworkService",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 89,
+            "in": [
+                {"detectionMethod": "readInt32"},
+                {"timestampMillis": "readInt64"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "network": "readParcelable",
+                        "__parcelType": "android.net.Network"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "extras": "readParcelable",
+                        "__parcelType": "android.os.PersistableBundle"
+                    }]
+                }
+            ],
+            "name": "simulateDataStall",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IConnectivityManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

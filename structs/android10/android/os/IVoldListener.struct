@@ -1,0 +1,107 @@
+{
+    "produced_on": "2022-12-02T13:44:06.141414553Z",
+    "source_location": "",
+    "full_name": "android.os.IVoldListener",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"diskId": "readString16"},
+                {"flags": "readInt32"}
+            ],
+            "name": "onDiskCreated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"diskId": "readString16"}],
+            "name": "onDiskScanned",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"diskId": "readString16"},
+                {"sizeBytes": "readInt64"},
+                {"label": "readString16"},
+                {"sysPath": "readString16"}
+            ],
+            "name": "onDiskMetadataChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"diskId": "readString16"}],
+            "name": "onDiskDestroyed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"volId": "readString16"},
+                {"type": "readInt32"},
+                {"diskId": "readString16"},
+                {"partGuid": "readString16"}
+            ],
+            "name": "onVolumeCreated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"volId": "readString16"},
+                {"state": "readInt32"}
+            ],
+            "name": "onVolumeStateChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"volId": "readString16"},
+                {"fsType": "readString16"},
+                {"fsUuid": "readString16"},
+                {"fsLabel": "readString16"}
+            ],
+            "name": "onVolumeMetadataChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"volId": "readString16"},
+                {"path": "readString16"}
+            ],
+            "name": "onVolumePathChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"volId": "readString16"},
+                {"internalPath": "readString16"}
+            ],
+            "name": "onVolumeInternalPathChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [{"volId": "readString16"}],
+            "name": "onVolumeDestroyed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IVoldListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

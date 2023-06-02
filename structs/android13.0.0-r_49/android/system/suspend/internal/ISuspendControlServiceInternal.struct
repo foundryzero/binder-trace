@@ -1,0 +1,73 @@
+{
+    "produced_on": "2023-06-01T06:42:36.512223994Z",
+    "source_location": "",
+    "full_name": "android.system.suspend.internal.ISuspendControlServiceInternal",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"token": "readStrongBinder"}],
+            "name": "enableAutosuspend",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "forceSuspend",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getWakeLockStats",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.system.suspend.internal.WakeLockInfo"
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "getWakeupStats",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.system.suspend.internal.WakeupInfo"
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "getSuspendStats",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.system.suspend.internal.SuspendInfo"
+                    }]
+                }
+            ]
+        }
+    ],
+    "name": "ISuspendControlServiceInternal",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

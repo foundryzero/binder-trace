@@ -1,0 +1,61 @@
+{
+    "produced_on": "2023-06-01T06:42:35.089469470Z",
+    "source_location": "",
+    "full_name": "android.telephony.mbms.IMbmsGroupCallSessionCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"errorCode": "readInt32"},
+                {"message": "readString16"}
+            ],
+            "name": "onError",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "currentSai": "readParcelable",
+                        "__parcelType": "java.util.List"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "availableSais": "readParcelable",
+                        "__parcelType": "java.util.List"
+                    }]
+                }
+            ],
+            "name": "onAvailableSaisUpdated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"interfaceName": "readString16"},
+                {"index": "readInt32"}
+            ],
+            "name": "onServiceInterfaceAvailable",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "onMiddlewareReady",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IMbmsGroupCallSessionCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

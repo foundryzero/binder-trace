@@ -1,0 +1,86 @@
+{
+    "produced_on": "2022-12-02T13:44:07.496859623Z",
+    "source_location": "",
+    "full_name": "android.app.contentsuggestions.IContentSuggestionsManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"userId": "readInt32"},
+                {"taskId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"imageContextRequestExtras": "readBundle"}]
+                }
+            ],
+            "name": "provideContextImage",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"userId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.app.contentsuggestions.SelectionsRequest"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "suggestContentSelections",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"userId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.app.contentsuggestions.ClassificationsRequest"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "classifyContentSelections",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"userId": "readInt32"},
+                {"requestId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"interaction": "readBundle"}]
+                }
+            ],
+            "name": "notifyInteraction",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"userId": "readInt32"},
+                {"receiver": "readStrongBinder"}
+            ],
+            "name": "isEnabled",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IContentSuggestionsManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

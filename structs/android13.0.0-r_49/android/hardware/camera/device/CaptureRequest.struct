@@ -1,0 +1,38 @@
+{
+    "produced_on": "2023-06-01T06:42:36.869499161Z",
+    "source_location": "",
+    "components": [
+        {"frameNumber": "readInt32"},
+        {"fmqSettingsSize": "readInt64"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "settings": "readParcelable",
+                "__parcelType": "android.hardware.camera.device.CameraMetadata"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "inputBuffer": "readParcelable",
+                "__parcelType": "android.hardware.camera.device.StreamBuffer"
+            }]
+        },
+        {"inputWidth": "readInt32"},
+        {"inputHeight": "readInt32"},
+        {
+            "outputBuffers": "readParcelableVector",
+            "__parcelType": "android.hardware.camera.device.StreamBuffer"
+        },
+        {
+            "physicalCameraSettings": "readParcelableVector",
+            "__parcelType": "android.hardware.camera.device.PhysicalCameraSetting"
+        }
+    ],
+    "full_name": "android.hardware.camera.device.CaptureRequest",
+    "name": "CaptureRequest",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

@@ -1,0 +1,66 @@
+{
+    "produced_on": "2023-06-01T06:42:35.870817690Z",
+    "source_location": "",
+    "full_name": "android.hardware.fingerprint.IUdfpsOverlayController",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"requestId": "readInt64"},
+                {"sensorId": "readInt32"},
+                {"reason": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "showUdfpsOverlay",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"sensorId": "readInt32"}],
+            "name": "hideUdfpsOverlay",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"sensorId": "readInt32"},
+                {"acquiredInfo": "readInt32"}
+            ],
+            "name": "onAcquired",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"sensorId": "readInt32"},
+                {"remaining": "readInt32"}
+            ],
+            "name": "onEnrollmentProgress",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"sensorId": "readInt32"}],
+            "name": "onEnrollmentHelp",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"sensorId": "readInt32"},
+                {"message": "readString16"}
+            ],
+            "name": "setDebugMessage",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IUdfpsOverlayController",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

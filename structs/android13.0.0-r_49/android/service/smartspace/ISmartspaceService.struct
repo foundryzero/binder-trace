@@ -1,0 +1,124 @@
+{
+    "produced_on": "2023-06-01T06:42:35.752282621Z",
+    "source_location": "",
+    "full_name": "android.service.smartspace.ISmartspaceService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "context": "readParcelable",
+                        "__parcelType": "android.app.smartspace.SmartspaceConfig"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionId": "readParcelable",
+                        "__parcelType": "android.app.smartspace.SmartspaceSessionId"
+                    }]
+                }
+            ],
+            "name": "onCreateSmartspaceSession",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionId": "readParcelable",
+                        "__parcelType": "android.app.smartspace.SmartspaceSessionId"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "event": "readParcelable",
+                        "__parcelType": "android.app.smartspace.SmartspaceTargetEvent"
+                    }]
+                }
+            ],
+            "name": "notifySmartspaceEvent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionId": "readParcelable",
+                        "__parcelType": "android.app.smartspace.SmartspaceSessionId"
+                    }]
+                }
+            ],
+            "name": "requestSmartspaceUpdate",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionId": "readParcelable",
+                        "__parcelType": "android.app.smartspace.SmartspaceSessionId"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "registerSmartspaceUpdates",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionId": "readParcelable",
+                        "__parcelType": "android.app.smartspace.SmartspaceSessionId"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "unregisterSmartspaceUpdates",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionId": "readParcelable",
+                        "__parcelType": "android.app.smartspace.SmartspaceSessionId"
+                    }]
+                }
+            ],
+            "name": "onDestroySmartspaceSession",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISmartspaceService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

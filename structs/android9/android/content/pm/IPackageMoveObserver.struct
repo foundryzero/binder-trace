@@ -1,0 +1,35 @@
+{
+    "produced_on": "2022-08-19T10:42:52.892316605Z",
+    "source_location": "",
+    "full_name": "android.content.pm.IPackageMoveObserver",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"moveId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"extras": "readBundle"}]
+                }
+            ],
+            "name": "onCreated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"moveId": "readInt32"},
+                {"status": "readInt32"},
+                {"estMillis": "readInt64"}
+            ],
+            "name": "onStatusChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IPackageMoveObserver",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

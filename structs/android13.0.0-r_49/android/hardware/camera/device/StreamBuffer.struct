@@ -1,0 +1,44 @@
+{
+    "produced_on": "2023-06-01T06:42:36.888640409Z",
+    "source_location": "",
+    "components": [
+        {"streamId": "readInt32"},
+        {"bufferId": "readInt64"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "buffer": "readParcelable",
+                "__parcelType": "android.hardware.common.NativeHandle"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "status": "readParcelable",
+                "__parcelType": "android.hardware.camera.device.BufferStatus"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "acquireFence": "readParcelable",
+                "__parcelType": "android.hardware.common.NativeHandle"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "releaseFence": "readParcelable",
+                "__parcelType": "android.hardware.common.NativeHandle"
+            }]
+        }
+    ],
+    "full_name": "android.hardware.camera.device.StreamBuffer",
+    "name": "StreamBuffer",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

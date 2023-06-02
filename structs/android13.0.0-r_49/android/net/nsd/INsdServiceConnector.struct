@@ -1,0 +1,82 @@
+{
+    "produced_on": "2023-06-01T06:42:34.395755284Z",
+    "source_location": "",
+    "full_name": "android.net.nsd.INsdServiceConnector",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"listenerKey": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "serviceInfo": "readParcelable",
+                        "__parcelType": "android.net.nsd.NsdServiceInfo"
+                    }]
+                }
+            ],
+            "name": "registerService",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"listenerKey": "readInt32"}],
+            "name": "unregisterService",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"listenerKey": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "serviceInfo": "readParcelable",
+                        "__parcelType": "android.net.nsd.NsdServiceInfo"
+                    }]
+                }
+            ],
+            "name": "discoverServices",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"listenerKey": "readInt32"}],
+            "name": "stopDiscovery",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"listenerKey": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "serviceInfo": "readParcelable",
+                        "__parcelType": "android.net.nsd.NsdServiceInfo"
+                    }]
+                }
+            ],
+            "name": "resolveService",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "startDaemon",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "INsdServiceConnector",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

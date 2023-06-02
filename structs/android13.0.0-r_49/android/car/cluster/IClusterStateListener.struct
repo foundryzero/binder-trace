@@ -1,0 +1,25 @@
+{
+    "produced_on": "2023-06-01T06:42:33.065609520Z",
+    "source_location": "",
+    "full_name": "android.car.cluster.IClusterStateListener",
+    "calls": [{
+        "code": 2,
+        "in": [
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "state": "readParcelable",
+                    "__parcelType": "android.car.cluster.ClusterState"
+                }]
+            },
+            {"changes": "readInt32"}
+        ],
+        "name": "onClusterStateChanged",
+        "oneWay": true,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "IClusterStateListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

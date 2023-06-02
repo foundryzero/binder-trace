@@ -1,0 +1,54 @@
+{
+    "produced_on": "2022-08-26T09:55:23.324735927Z",
+    "source_location": "",
+    "full_name": "android.service.carrier.ICarrierMessagingCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"result": "readInt32"}],
+            "name": "onFilterComplete",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"result": "readInt32"},
+                {"messageRef": "readInt32"}
+            ],
+            "name": "onSendSmsComplete",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"result": "readInt32"},
+                {"messageRefs": "readInt32Vector"}
+            ],
+            "name": "onSendMultipartSmsComplete",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"result": "readInt32"},
+                {"sendConfPdu": "readByteVector"}
+            ],
+            "name": "onSendMmsComplete",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"result": "readInt32"}],
+            "name": "onDownloadMmsComplete",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICarrierMessagingCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

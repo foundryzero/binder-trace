@@ -1,0 +1,55 @@
+{
+    "produced_on": "2023-06-01T06:42:34.130775553Z",
+    "source_location": "",
+    "full_name": "com.android.compos.ICompOsService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"names": "readString16Vector"},
+                {"values": "readString16Vector"}
+            ],
+            "name": "initializeSystemProperties",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "compilation_mode": "readParcelable",
+                        "__parcelType": "com.android.compos.CompilationMode"
+                    }]
+                },
+                {"systemDirFd": "readInt32"},
+                {"outputDirFd": "readInt32"},
+                {"stagingDirFd": "readInt32"},
+                {"targetDirName": "readString16"},
+                {"zygoteArch": "readString16"},
+                {"systemServerCompilerFilter": "readString16"}
+            ],
+            "name": "odrefresh",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByte"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getPublicKey",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        }
+    ],
+    "name": "ICompOsService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

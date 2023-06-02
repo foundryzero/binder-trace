@@ -1,0 +1,58 @@
+{
+    "produced_on": "2023-06-01T06:42:35.107564233Z",
+    "source_location": "",
+    "full_name": "android.telephony.ims.aidl.IImsRegistration",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getRegistrationTechnology",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"c": "readStrongBinder"}],
+            "name": "addRegistrationCallback",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"c": "readStrongBinder"}],
+            "name": "removeRegistrationCallback",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"sipCode": "readInt32"},
+                {"sipReason": "readString16"}
+            ],
+            "name": "triggerFullNetworkRegistration",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "triggerUpdateSipDelegateRegistration",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "triggerSipDelegateDeregistration",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IImsRegistration",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

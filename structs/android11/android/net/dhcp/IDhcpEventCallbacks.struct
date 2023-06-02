@@ -1,0 +1,36 @@
+{
+    "produced_on": "2022-08-26T09:55:19.700736621Z",
+    "source_location": "",
+    "full_name": "android.net.dhcp.IDhcpEventCallbacks",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{
+                "newLeases": "readList",
+                "__parcelType": "android.net.dhcp.DhcpLeaseParcelable"
+            }],
+            "name": "onLeasesChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "currentPrefix": "readParcelable",
+                        "__parcelType": "android.net.dhcp.android.net.IpPrefix"
+                    }]
+                }
+            ],
+            "name": "onNewPrefixRequest",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IDhcpEventCallbacks",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,72 @@
+{
+    "produced_on": "2022-08-04T09:32:17.914553377Z",
+    "source_location": "",
+    "full_name": "com.android.internal.telephony.IOns",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"enable": "readBool"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "setEnable",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"callingPackage": "readString16"}],
+            "name": "isEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"subId": "readInt32"},
+                {"needValidation": "readBool"},
+                {"callbackStub": "readStrongBinder"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "setPreferredDataSubscriptionId",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "getPreferredDataSubscriptionId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {
+                    "availableNetworks": "readList",
+                    "__parcelType": "android.telephony.AvailableNetworkInfo"
+                },
+                {"callbackStub": "readStrongBinder"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "updateAvailableNetworks",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IOns",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

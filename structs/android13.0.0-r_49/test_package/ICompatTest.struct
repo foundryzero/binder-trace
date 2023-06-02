@@ -1,0 +1,56 @@
+{
+    "produced_on": "2023-06-01T06:42:36.564034595Z",
+    "source_location": "",
+    "full_name": "test_package.ICompatTest",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "inBaz": "readParcelable",
+                        "__parcelType": "test_package.Baz"
+                    }]
+                }
+            ],
+            "name": "repeatBaz",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "test_package.Baz"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"repeated": "readString16"}],
+            "name": "RepeatStringNullableLater",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "NewMethodThatReturns10",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        }
+    ],
+    "name": "ICompatTest",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,28 @@
+{
+    "produced_on": "2023-06-01T06:42:37.717296833Z",
+    "source_location": "",
+    "full_name": "android.hardware.graphics.allocator.IAllocator",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"descriptor": "readByteVector"},
+            {"count": "readInt32"}
+        ],
+        "name": "allocate",
+        "oneWay": false,
+        "out": [
+            {"__exception": "readException"},
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "__return": "readParcelable",
+                    "__parcelType": "android.hardware.graphics.allocator.AllocationResult"
+                }]
+            }
+        ]
+    }],
+    "name": "IAllocator",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

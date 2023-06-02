@@ -1,0 +1,95 @@
+{
+    "produced_on": "2023-06-01T06:42:35.561423539Z",
+    "source_location": "",
+    "full_name": "android.app.IActivityController",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "intent": "readParcelable",
+                        "__parcelType": "android.content.Intent"
+                    }]
+                },
+                {"pkg": "readString16"}
+            ],
+            "name": "activityStarting",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"pkg": "readString16"}],
+            "name": "activityResuming",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"processName": "readString16"},
+                {"pid": "readInt32"},
+                {"shortMsg": "readString16"},
+                {"longMsg": "readString16"},
+                {"timeMillis": "readInt64"},
+                {"stackTrace": "readString16"}
+            ],
+            "name": "appCrashed",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"processName": "readString16"},
+                {"pid": "readInt32"},
+                {"annotation": "readString16"}
+            ],
+            "name": "appEarlyNotResponding",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"processName": "readString16"},
+                {"pid": "readInt32"},
+                {"processStats": "readString16"}
+            ],
+            "name": "appNotResponding",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [{"msg": "readString16"}],
+            "name": "systemNotResponding",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        }
+    ],
+    "name": "IActivityController",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

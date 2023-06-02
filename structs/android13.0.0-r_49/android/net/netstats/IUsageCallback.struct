@@ -1,0 +1,42 @@
+{
+    "produced_on": "2023-06-01T06:42:34.386879608Z",
+    "source_location": "",
+    "full_name": "android.net.netstats.IUsageCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.net.DataUsageRequest"
+                    }]
+                }
+            ],
+            "name": "onThresholdReached",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.net.DataUsageRequest"
+                    }]
+                }
+            ],
+            "name": "onCallbackReleased",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IUsageCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,39 @@
+{
+    "produced_on": "2022-08-19T10:59:24.592103120Z",
+    "source_location": "",
+    "components": [
+        {"mAbsoluteStart": "readInt32"},
+        {"mAbsoluteEnd": "readInt32"},
+        {"mEventType": "readInt32"},
+        {"mEntityType": "readString16"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{"readString": "readString16"}]
+        },
+        {"mPackageName": "readString16"},
+        {"mWidgetType": "readString16"},
+        {"mInvocationMethod": "readInt32"},
+        {"mResultId": "readString16"},
+        {"mEventTime": "readInt64"},
+        {"mDurationSinceSessionStart": "readInt64"},
+        {"mDurationSincePreviousEvent": "readInt64"},
+        {"mEventIndex": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "createFromParcel": "readParcelable",
+                "__parcelType": "android.view.textclassifier.TextClassificationSessionId"
+            }]
+        },
+        {"mStart": "readInt32"},
+        {"mEnd": "readInt32"},
+        {"mSmartStart": "readInt32"},
+        {"mSmartEnd": "readInt32"}
+    ],
+    "full_name": "android.view.textclassifier.SelectionEvent",
+    "name": "SelectionEvent",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

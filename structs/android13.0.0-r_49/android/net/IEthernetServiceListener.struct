@@ -1,0 +1,36 @@
+{
+    "produced_on": "2023-06-01T06:42:34.393425725Z",
+    "source_location": "",
+    "full_name": "android.net.IEthernetServiceListener",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"state": "readInt32"}],
+            "name": "onEthernetStateChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"iface": "readString16"},
+                {"state": "readInt32"},
+                {"role": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "configuration": "readParcelable",
+                        "__parcelType": "android.net.IpConfiguration"
+                    }]
+                }
+            ],
+            "name": "onInterfaceStateChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IEthernetServiceListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

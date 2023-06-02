@@ -1,0 +1,33 @@
+{
+    "produced_on": "2023-06-01T06:42:35.068476810Z",
+    "source_location": "",
+    "full_name": "android.service.carrier.ICarrierService",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"phoneId": "readInt32"},
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "id": "readParcelable",
+                    "__parcelType": "android.service.carrier.CarrierIdentifier"
+                }]
+            },
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "result": "readParcelable",
+                    "__parcelType": "android.os.ResultReceiver"
+                }]
+            }
+        ],
+        "name": "getCarrierConfig",
+        "oneWay": true,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "ICarrierService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,135 @@
+{
+    "produced_on": "2023-06-01T06:42:33.472361442Z",
+    "source_location": "",
+    "full_name": "com.android.car.radio.service.IRadioAppService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "addCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "removeCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sel": "readParcelable",
+                        "__parcelType": "android.hardware.radio.ProgramSelector"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "tune",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"forward": "readBool"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "seek",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"forward": "readBool"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "step",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"forward": "readBool"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "skip",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"mode": "readInt32"}],
+            "name": "setSkipMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{"muted": "readBool"}],
+            "name": "setMuted",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "band": "readParcelable",
+                        "__parcelType": "com.android.car.radio.bands.ProgramType"
+                    }]
+                }
+            ],
+            "name": "switchBand",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [],
+            "name": "isProgramListSupported",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [],
+            "name": "getRegionConfig",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.car.radio.bands.RegionConfig"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 12,
+            "in": [],
+            "name": "tuneToDefaultIfNeeded",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IRadioAppService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

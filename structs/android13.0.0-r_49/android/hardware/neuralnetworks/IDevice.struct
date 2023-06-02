@@ -1,0 +1,228 @@
+{
+    "produced_on": "2023-06-01T06:42:37.941987697Z",
+    "source_location": "",
+    "full_name": "android.hardware.neuralnetworks.IDevice",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "desc": "readParcelable",
+                        "__parcelType": "android.hardware.neuralnetworks.BufferDesc"
+                    }]
+                },
+                {"preparedModels": "readStrongBinder"},
+                {
+                    "inputRoles": "readParcelableVector",
+                    "__parcelType": "android.hardware.neuralnetworks.BufferRole"
+                },
+                {
+                    "outputRoles": "readParcelableVector",
+                    "__parcelType": "android.hardware.neuralnetworks.BufferRole"
+                }
+            ],
+            "name": "allocate",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.neuralnetworks.DeviceBuffer"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "getCapabilities",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.neuralnetworks.Capabilities"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getNumberOfCacheFilesNeeded",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.neuralnetworks.NumberOfCacheFiles"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "getSupportedExtensions",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.neuralnetworks.Extension"
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "model": "readParcelable",
+                        "__parcelType": "android.hardware.neuralnetworks.Model"
+                    }]
+                }
+            ],
+            "name": "getSupportedOperations",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.neuralnetworks.boolean"
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "getType",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.neuralnetworks.DeviceType"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "getVersionString",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "model": "readParcelable",
+                        "__parcelType": "android.hardware.neuralnetworks.Model"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "preference": "readParcelable",
+                        "__parcelType": "android.hardware.neuralnetworks.ExecutionPreference"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "priority": "readParcelable",
+                        "__parcelType": "android.hardware.neuralnetworks.Priority"
+                    }]
+                },
+                {"deadlineNs": "readInt64"},
+                {
+                    "modelCache": "readParcelableVector",
+                    "__parcelType": "android.hardware.neuralnetworks.ParcelFileDescriptor"
+                },
+                {
+                    "dataCache": "readParcelableVector",
+                    "__parcelType": "android.hardware.neuralnetworks.ParcelFileDescriptor"
+                },
+                {"token": "readByteVector"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "prepareModel",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"deadlineNs": "readInt64"},
+                {
+                    "modelCache": "readParcelableVector",
+                    "__parcelType": "android.hardware.neuralnetworks.ParcelFileDescriptor"
+                },
+                {
+                    "dataCache": "readParcelableVector",
+                    "__parcelType": "android.hardware.neuralnetworks.ParcelFileDescriptor"
+                },
+                {"token": "readByteVector"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "prepareModelFromCache",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "model": "readParcelable",
+                        "__parcelType": "android.hardware.neuralnetworks.Model"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "config": "readParcelable",
+                        "__parcelType": "android.hardware.neuralnetworks.PrepareModelConfig"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "prepareModelWithConfig",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IDevice",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

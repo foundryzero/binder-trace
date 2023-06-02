@@ -1,0 +1,38 @@
+{
+    "produced_on": "2023-06-01T06:42:35.695784053Z",
+    "source_location": "",
+    "full_name": "android.os.ISchedulingPolicyService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"pid": "readInt32"},
+                {"tid": "readInt32"},
+                {"prio": "readInt32"},
+                {"isForApp": "readBool"}
+            ],
+            "name": "requestPriority",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"enable": "readBool"},
+                {"client": "readStrongBinder"}
+            ],
+            "name": "requestCpusetBoost",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        }
+    ],
+    "name": "ISchedulingPolicyService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

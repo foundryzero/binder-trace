@@ -1,0 +1,31 @@
+{
+    "produced_on": "2023-06-01T06:42:37.450298544Z",
+    "source_location": "",
+    "components": [
+        {"FLOW_ID_RANGE_MIN": "readByte"},
+        {"FLOW_ID_RANGE_MAX": "readByte"},
+        {"fiveQi": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "downlink": "readParcelable",
+                "__parcelType": "android.hardware.radio.data.QosBandwidth"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "uplink": "readParcelable",
+                "__parcelType": "android.hardware.radio.data.QosBandwidth"
+            }]
+        },
+        {"qfi": "readByte"},
+        {"averagingWindowMs": "readChar"}
+    ],
+    "full_name": "android.hardware.radio.data.NrQos",
+    "name": "NrQos",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

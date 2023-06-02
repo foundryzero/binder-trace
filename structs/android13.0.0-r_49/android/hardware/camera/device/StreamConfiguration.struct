@@ -1,0 +1,32 @@
+{
+    "produced_on": "2023-06-01T06:42:36.893295711Z",
+    "source_location": "",
+    "components": [
+        {
+            "streams": "readParcelableVector",
+            "__parcelType": "android.hardware.camera.device.Stream"
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "operationMode": "readParcelable",
+                "__parcelType": "android.hardware.camera.device.StreamConfigurationMode"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "sessionParams": "readParcelable",
+                "__parcelType": "android.hardware.camera.device.CameraMetadata"
+            }]
+        },
+        {"streamConfigCounter": "readInt32"},
+        {"multiResolutionInputImage": "readBool"}
+    ],
+    "full_name": "android.hardware.camera.device.StreamConfiguration",
+    "name": "StreamConfiguration",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

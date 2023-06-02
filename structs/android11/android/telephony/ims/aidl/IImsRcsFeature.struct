@@ -1,0 +1,171 @@
+{
+    "produced_on": "2022-08-26T09:55:22.176991277Z",
+    "source_location": "",
+    "full_name": "android.telephony.ims.aidl.IImsRcsFeature",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "setListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "queryCapabilityStatus",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getFeatureState",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"c": "readStrongBinder"}],
+            "name": "addCapabilityCallback",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"c": "readStrongBinder"}],
+            "name": "removeCapabilityCallback",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "r": "readParcelable",
+                        "__parcelType": "android.telephony.ims.feature.CapabilityChangeRequest"
+                    }]
+                },
+                {"c": "readStrongBinder"}
+            ],
+            "name": "changeCapabilitiesConfiguration",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"capability": "readInt32"},
+                {"radioTech": "readInt32"},
+                {"c": "readStrongBinder"}
+            ],
+            "name": "queryCapabilityConfiguration",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {
+                    "uris": "readList",
+                    "__parcelType": "android.net.Uri"
+                },
+                {"operationToken": "readInt32"}
+            ],
+            "name": "requestCapabilities",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "capabilities": "readParcelable",
+                        "__parcelType": "android.telephony.ims.RcsContactUceCapability"
+                    }]
+                },
+                {"operationToken": "readInt32"}
+            ],
+            "name": "updateCapabilities",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "contactUri": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "capabilities": "readParcelable",
+                        "__parcelType": "android.telephony.ims.RcsContactUceCapability"
+                    }]
+                },
+                {"operationToken": "readInt32"}
+            ],
+            "name": "sendCapabilityRequest",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"contactUri": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "ownCapabilities": "readParcelable",
+                        "__parcelType": "android.telephony.ims.RcsContactUceCapability"
+                    }]
+                },
+                {"operationToken": "readInt32"}
+            ],
+            "name": "respondToCapabilityRequest",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "contactUri": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                },
+                {"code": "readInt32"},
+                {"reason": "readString16"},
+                {"operationToken": "readInt32"}
+            ],
+            "name": "respondToCapabilityRequestWithError",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IImsRcsFeature",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,43 @@
+{
+    "produced_on": "2022-12-02T13:44:06.172265370Z",
+    "source_location": "",
+    "full_name": "android.bluetooth.IBluetoothLowEnergyCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"status": "readInt32"},
+                {"client_id": "readInt32"}
+            ],
+            "name": "OnClientRegistered",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"status": "readInt32"},
+                {"client_id": "readInt32"},
+                {"address": "readString16"},
+                {"connected": "readBool"}
+            ],
+            "name": "OnConnectionState",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"status": "readInt32"},
+                {"address": "readString16"},
+                {"mtu": "readInt32"}
+            ],
+            "name": "OnMtuChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IBluetoothLowEnergyCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}
