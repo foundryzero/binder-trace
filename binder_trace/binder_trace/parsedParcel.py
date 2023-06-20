@@ -23,7 +23,7 @@ from typing import Any, Callable, List, Optional
 #     return field
 
 
-def parse_field(name: str, type, method, parent: Field|None = None) -> Field:
+def parse_field(name: str, type, method, parent: Optional[Field] = None) -> Field:
     field = Field(name, [], type, None, parent)
     if parent:
         parent.content.append(field)
@@ -44,10 +44,10 @@ class FieldData:
 @dataclass
 class Field:
     name: str
-    content: list[Field] | Any
-    typename: str|None = None
-    position: FieldData|None = None
-    parent: Field|None = None
+    content: list[Field]
+    typename: Optional[str] = None
+    position: Optional[FieldData] = None
+    parent: Optional[Field] = None
 
     @classmethod
     def empty(cls):
@@ -91,7 +91,7 @@ class Block:
     direction: Direction
     root_field: Field
     unsupported_call: bool = False
-    errors: Exception | None = None
+    errors: Optional[Exception] = None
 
     def __str__(self):
         return f"Block(interface_name={self.interface_name},callName={self.call_name},fields=\n\t{self.root_field})"

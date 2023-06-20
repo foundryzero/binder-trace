@@ -17,104 +17,78 @@ ANDROID_VERSION = "android-11.0.0_r25"
 
 
 def parcelableHasOverride(parcelType: str) -> bool:
-    # TODO: Is this just a big "if parcelType in overrides" check? Seems an odd way to do it.
-    match parcelType:
-        case "android.net.Uri":
-            return True
-        case "android.net.Uri$StringUri" | "android.net.Uri$OpaqueUri" | "android.net.Uri$HierarchicalUri":
-            return True
-        case "android.content.IntentFilter":
-            return True
-        case "android.content.ComponentName":
-            return True
-        case "android.internal.app.procstats.ProcessStats":
-            return True
-        case "android.view.AbsSavedState$1":
-            return True
-        case "android.net.LinkProperties":
-            return True
-        case "Rect":  # Some old code uses unqualified Rects, this just needs to rewrite them to use the correct version
-            return True
-        case "android.content.pm.TextUtils" | "android.text.TextUtils" | "CharSequence":
-            return True
-        case "android.graphics.Bitmap":
-            return True
-        case "android.view.InputChannel":
-            return True
-        case "android.content.pm.ParceledListSlice":
-            return True
-        case "android.content.pm.ResolveInfo":
-            return True
-        case "android.database.BulkCursorDescriptor":
-            return True
-        case "android.content.ContentProviderOperation":
-            return True
-        case "android.content.ContentProviderOperation$BackReference":
-            return True
-        case _:
-            return False
+    overrides = [
+        "android.net.Uri",
+        "android.net.Uri$StringUri",
+        "android.net.Uri$OpaqueUri",
+        "android.net.Uri$HierarchicalUri",
+        "android.content.IntentFilter",
+        "android.content.ComponentName",
+        "android.internal.app.procstats.ProcessStats",
+        "android.view.AbsSavedState$1",
+        "android.net.LinkProperties",
+        "android.content.pm.TextUtils",
+        "android.text.TextUtils",
+        "CharSequence",
+        "Rect",
+        "android.graphics.Bitmap",
+        "android.view.InputChannel",
+        "android.content.pm.ParceledListSlice",
+        "android.content.pm.ResolveInfo",
+        "android.database.BulkCursorDescriptor",
+        "android.content.ContentProviderOperation",
+        "android.content.ContentProviderOperation$BackReference"
+    ]
 
+    return parcelType in overrides
 
 def parcelableOverride(parcel: ParcelParser, parcelType: str, name: str, parent: Field) -> None:
-    match parcelType:
-        case "android.net.Uri":
-            parcel.parse_field(name, parcelType, functools.partial(parseUri, parcel), parent)
-        case "android.net.Uri$StringUri":
-            parcel.parse_field(name, parcelType, functools.partial(parseStringUri, parcel), parent)
-        case "android.net.Uri$OpaqueUri":
-            parcel.parse_field(name, parcelType, functools.partial(parseOpaqueUri, parcel), parent)
-        case "android.net.Uri$HierarchicalUri":
-            parcel.parse_field(name, parcelType, functools.partial(parseHierarchicalUri, parcel), parent)
-        case "android.content.IntentFilter":
-            parcel.parse_field(name, parcelType, functools.partial(parseIntentFilter, parcel), parent)
-        case "android.content.ComponentName":
-            parcel.parse_field(name, parcelType, functools.partial(parseComponentName, parcel), parent)
-        case "android.internal.app.procstats.ProcessStats":
-            parcel.parse_field(name, parcelType, functools.partial(parseProcessStats, parcel), parent)
-        case "android.view.AbsSavedState$1":
-            parseAbsSavedState(parcel, name, parent)
-        case "android.net.LinkProperties":
-            parcel.parse_field(name, parcelType, functools.partial(parseLinkProperties, parcel), parent)
-        case "android.content.pm.TextUtils" | "android.text.TextUtils" | "CharSequence":
-            parcel.parse_field(name, parcelType, functools.partial(parseCharSequence, parcel), parent)
-        case "Rect":
-            # TODO: is this ever called? Why would the type be "Rect" not android.graphics.Rect
-            parcel.readParcelable("android.graphics.Rect", parent)
-        case "android.graphics.Bitmap":
-            parcel.parse_field(name, parcelType, functools.partial(parseBitmap, parcel), parent)
-        case "android.view.InputChannel":
-            parcel.parse_field(name, parcelType, functools.partial(parseInputChannel, parcel), parent)
-        case "android.content.pm.ParceledListSlice":
-            parcel.parse_field(name, parcelType, functools.partial(parseParceledListSlice, parcel), parent)
-        case "android.content.pm.ResolveInfo":
-            parcel.parse_field(name, parcelType, functools.partial(parseResolveInfo, parcel), parent)
-        case "android.database.BulkCursorDescriptor":
-            parcel.parse_field(name, parcelType, functools.partial(parseBulkCursorDescriptor, parcel), parent)
-        case "android.content.ContentProviderOperation":
-            parcel.parse_field(name, parcelType, functools.partial(parseContentProviderOperation, parcel), parent)
-        case "android.content.ContentProviderOperation$BackReference":
-            parcel.parse_field(name, parcelType, parseBackReference, parent)
-        case _:
-            parsing_log.info("No override for " + parcelType)
-            raise ParseError("No override for " + parcelType)
-
+    override_handlers = {
+        "android.net.Uri" : parseUri,
+        "android.net.Uri$StringUri": parseStringUri,
+        "android.net.Uri$OpaqueUri": parseOpaqueUri,
+        "android.net.Uri$HierarchicalUri": parseHierarchicalUri,
+        "android.content.IntentFilter": parseIntentFilter,
+        "android.content.ComponentName": parseComponentName,
+        "android.internal.app.procstats.ProcessStats": parseProcessStats,
+        "android.net.LinkProperties": parseLinkProperties,
+        "android.content.pm.TextUtils": parseCharSequence,
+        "android.text.TextUtils": parseCharSequence,
+        "CharSequence": parseCharSequence,
+        "android.graphics.Bitmap": parseBitmap,
+        "android.view.InputChannel": parseInputChannel,
+        "android.content.pm.ParceledListSlice": parseParceledListSlice,
+        "android.content.pm.ResolveInfo": parseResolveInfo,
+        "android.database.BulkCursorDescriptor": parseBulkCursorDescriptor,
+        "android.content.ContentProviderOperation": parseContentProviderOperation,
+        "android.content.ContentProviderOperation$BackReference": parseBackReference
+        }
+    if parcelType in override_handlers:
+        parcel.parse_field(name, parcelType, functools.partial(override_handlers[parcelType], parcel), parent)
+    elif parcelType == "android.view.AbsSavedState$1":
+        parseAbsSavedState(parcel, name, parent)
+    elif parcelType == "Rect":
+        # TODO: is this ever called? Why would the type be "Rect" not android.graphics.Rect
+        parcel.readParcelable("android.graphics.Rect", parent)
+    else:
+        parsing_log.info("No override for " + parcelType)
+        raise ParseError("No override for " + parcelType)
 
 def parseUri(parcel: ParcelParser, parent: Field) -> None:
 
     code_field = parcel.parse_field("code", "uint32", parcel.readUint32, parent)
 
-    match code_field.content:
-        case binder_trace.constants.URI_NULL_TYPE_ID:
-            #TODO: Should we be outputting something for the NULL URI or is type code enough?
-            pass
-        case binder_trace.constants.URI_STRING_TYPE_ID:
-            parseStringUri(parcel, parent)
-        case binder_trace.constants.URI_OPAQUE_TYPE_ID:
-            parseOpaqueUri(parcel, parent)
-        case binder_trace.constants.URI_HIERARCHICAL_TYPE_ID:
-            parseHierarchicalUri(parcel, parent)
-        case _:
-            raise ParseError(f"Unknown URI type: {code_field.content}")
+    if code_field.content == binder_trace.constants.URI_NULL_TYPE_ID:
+        #TODO: Should we be outputting something for the NULL URI or is type code enough?
+        pass
+    elif code_field.content == binder_trace.constants.URI_STRING_TYPE_ID:
+        parseStringUri(parcel, parent)
+    elif code_field.content == binder_trace.constants.URI_OPAQUE_TYPE_ID:
+        parseOpaqueUri(parcel, parent)
+    elif code_field.content == binder_trace.constants.URI_HIERARCHICAL_TYPE_ID:
+        parseHierarchicalUri(parcel, parent)
+    else:
+        raise ParseError(f"Unknown URI type: {code_field.content}")
 
 
 def parseHierarchicalUri(parcel: ParcelParser, parent: Field) -> None:
@@ -309,159 +283,160 @@ def parseCharSequence(parcel: ParcelParser, parent: Field) -> None:
 
             spanned_string_type_field = parcel.parse_field("kind", "int32", parcel.readInt32, parent)
 
+
 def readSpan(parcel: ParcelParser, parent: Field) -> None:
     parcel.parse_field("spanStart", "int32", parcel.readInt32, parent)
     parcel.parse_field("spanEnd", "int32", parcel.readInt32, parent)
     parcel.parse_field("spanFlags", "int32", parcel.readInt32, parent)
 
+
 def parse_span(parcel: ParcelParser, kind: int, parent: Field) -> None:
-    match kind:
-        # TODO: Need to add the non-structural grouping fields
-        case binder_trace.constants.SpanType.ALIGNMENT_SPAN:
-            parcel.parse_field("mAlignment", "string", parcel.readString16, parent)
+    # TODO: Need to add the non-structural grouping fields
+    if kind == binder_trace.constants.SpanType.ALIGNMENT_SPAN:
+        parcel.parse_field("mAlignment", "string", parcel.readString16, parent)
 
-        case binder_trace.constants.SpanType.FOREGROUND_COLOR_SPAN:
-            parcel.parse_field("mColor", "int32", parcel.readInt32, parent)
+    elif kind == binder_trace.constants.SpanType.FOREGROUND_COLOR_SPAN:
+        parcel.parse_field("mColor", "int32", parcel.readInt32, parent)
 
-        case binder_trace.constants.SpanType.RELATIVE_SIZE_SPAN:
-            parcel.parse_field("mProportion", "float", parcel.readFloat, parent)
+    elif kind == binder_trace.constants.SpanType.RELATIVE_SIZE_SPAN:
+        parcel.parse_field("mProportion", "float", parcel.readFloat, parent)
 
-        case binder_trace.constants.SpanType.SCALE_X_SPAN:
-            parcel.parse_field("mProportion", "float", parcel.readFloat, parent)
+    elif kind == binder_trace.constants.SpanType.SCALE_X_SPAN:
+        parcel.parse_field("mProportion", "float", parcel.readFloat, parent)
 
-        case binder_trace.constants.SpanType.STYLE_SPAN:
-            parcel.parse_field("mStyle", "int32", parcel.readInt32, parent)
-            parcel.parse_field("mFontWeightAdjustment", "int32", parcel.readInt32, parent)
+    elif kind == binder_trace.constants.SpanType.STYLE_SPAN:
+        parcel.parse_field("mStyle", "int32", parcel.readInt32, parent)
+        parcel.parse_field("mFontWeightAdjustment", "int32", parcel.readInt32, parent)
 
-        case binder_trace.constants.SpanType.BULLET_SPAN:
-            parcel.parse_field("mGapWidth", "int32", parcel.readInt32, parent)
-            parcel.parse_field("mWantColor", "bool", parcel.readBool, parent)
-            parcel.parse_field("mColor", "int32", parcel.readInt32, parent)
-            parcel.parse_field("mBulletRadius", "int32", parcel.readInt32, parent)
+    elif kind == binder_trace.constants.SpanType.BULLET_SPAN:
+        parcel.parse_field("mGapWidth", "int32", parcel.readInt32, parent)
+        parcel.parse_field("mWantColor", "bool", parcel.readBool, parent)
+        parcel.parse_field("mColor", "int32", parcel.readInt32, parent)
+        parcel.parse_field("mBulletRadius", "int32", parcel.readInt32, parent)
 
-        case binder_trace.constants.SpanType.QUOTE_SPAN:
-            parcel.parse_field("mColor", "int32", parcel.readInt32, parent)
-            parcel.parse_field("mStripeWidth", "int32", parcel.readInt32, parent)
-            parcel.parse_field("mGapWidth", "int32", parcel.readInt32, parent)
+    elif kind == binder_trace.constants.SpanType.QUOTE_SPAN:
+        parcel.parse_field("mColor", "int32", parcel.readInt32, parent)
+        parcel.parse_field("mStripeWidth", "int32", parcel.readInt32, parent)
+        parcel.parse_field("mGapWidth", "int32", parcel.readInt32, parent)
 
-        case binder_trace.constants.SpanType.LEADING_MARGIN_SPAN:
-            parcel.parse_field("mFirst", "int32", parcel.readInt32, parent)
-            parcel.parse_field("mRest", "int32", parcel.readInt32, parent)
+    elif kind == binder_trace.constants.SpanType.LEADING_MARGIN_SPAN:
+        parcel.parse_field("mFirst", "int32", parcel.readInt32, parent)
+        parcel.parse_field("mRest", "int32", parcel.readInt32, parent)
 
-        case binder_trace.constants.SpanType.URL_SPAN:
-            parcel.parse_field("mURL", "string", parcel.readString16, parent)
+    elif kind == binder_trace.constants.SpanType.URL_SPAN:
+        parcel.parse_field("mURL", "string", parcel.readString16, parent)
 
-        case binder_trace.constants.SpanType.BACKGROUND_COLOR_SPAN:
-            parcel.parse_field("mColor", "int32", parcel.readInt32, parent)
+    elif kind == binder_trace.constants.SpanType.BACKGROUND_COLOR_SPAN:
+        parcel.parse_field("mColor", "int32", parcel.readInt32, parent)
 
-        case binder_trace.constants.SpanType.TYPEFACE_SPAN:
-            parcel.parse_field("mFamily", "int32", parcel.readString16, parent)
-            parcel.parse_field("typefacePid", "int32", parcel.readInt32, parent)
-            parcel.parse_field("typefaceId", "int32", parcel.readInt32, parent)
+    elif kind == binder_trace.constants.SpanType.TYPEFACE_SPAN:
+        parcel.parse_field("mFamily", "int32", parcel.readString16, parent)
+        parcel.parse_field("typefacePid", "int32", parcel.readInt32, parent)
+        parcel.parse_field("typefaceId", "int32", parcel.readInt32, parent)
 
-        case binder_trace.constants.SpanType.ABSOLUTE_SIZE_SPAN:
-            parcel.parse_field("mSize", "int32", parcel.readInt32, parent)
-            parcel.parse_field("mDip", "int32", parcel.readBool, parent)
+    elif kind == binder_trace.constants.SpanType.ABSOLUTE_SIZE_SPAN:
+        parcel.parse_field("mSize", "int32", parcel.readInt32, parent)
+        parcel.parse_field("mDip", "int32", parcel.readBool, parent)
 
-        case binder_trace.constants.SpanType.TEXT_APPEARANCE_SPAN:
-            parcel.parse_field("mFamilyName", "string", parcel.readString16, parent)
-            parcel.parse_field("mStyle", "int32", parcel.readInt32, parent)
-            parcel.parse_field("mTextSize", "int32", parcel.readInt32, parent)
+    elif kind == binder_trace.constants.SpanType.TEXT_APPEARANCE_SPAN:
+        parcel.parse_field("mFamilyName", "string", parcel.readString16, parent)
+        parcel.parse_field("mStyle", "int32", parcel.readInt32, parent)
+        parcel.parse_field("mTextSize", "int32", parcel.readInt32, parent)
 
-            color_nullcheck_field = parcel.parse_field("mTextColor-nullcheck", "int32", parcel.readInt32, parent)
-            if color_nullcheck_field.content:
-                parcel.parse_field(
-                    "mTextColor",
-                    "android.content.res.ColorStateList",
-                    functools.partial(parcel.readParcelable, "android.content.res.ColorStateList"),
-                    parent,
-                )
+        color_nullcheck_field = parcel.parse_field("mTextColor-nullcheck", "int32", parcel.readInt32, parent)
+        if color_nullcheck_field.content:
+            parcel.parse_field(
+                "mTextColor",
+                "android.content.res.ColorStateList",
+                functools.partial(parcel.readParcelable, "android.content.res.ColorStateList"),
+                parent,
+            )
 
-            colorlink_nullcheck_field = parcel.parse_field("mTextColorLink-nullcheck", "int32", parcel.readInt32, parent)
-            if colorlink_nullcheck_field.content:
-                parcel.parse_field(
-                    "mTextColorLink",
-                    "android.content.res.ColorStateList",
-                    functools.partial(parcel.readParcelable, "android.content.res.ColorStateList"),
-                    parent,
-                )
+        colorlink_nullcheck_field = parcel.parse_field("mTextColorLink-nullcheck", "int32", parcel.readInt32, parent)
+        if colorlink_nullcheck_field.content:
+            parcel.parse_field(
+                "mTextColorLink",
+                "android.content.res.ColorStateList",
+                functools.partial(parcel.readParcelable, "android.content.res.ColorStateList"),
+                parent,
+            )
 
-            parcel.parse_field("typefacePid", "int32", parcel.readInt32, parent)
-            parcel.parse_field("typefaceId", "int32", parcel.readInt32, parent)
-            parcel.parse_field("mTextFontWeight", "int32", parcel.readInt32, parent)
-            parcel.parse_field("mTextLocales", "", functools.partial(parcel.readParcelable, "__dynamic"), parent)
-            parcel.parse_field("mShadowRadius", "float", parcel.readFloat, parent)
-            parcel.parse_field("mShadowDx", "float", parcel.readFloat, parent)
-            parcel.parse_field("mShadowDy", "float", parcel.readFloat, parent)
-            parcel.parse_field("mShadowColor", "int32", parcel.readInt32, parent)
-            parcel.parse_field("mHasElegantTextHeight", "bool", parcel.readBool, parent)
-            parcel.parse_field("mElegantTextHeight", "bool", parcel.readBool, parent)
-            parcel.parse_field("mHasLetterSpacing", "bool", parcel.readBool, parent)
-            parcel.parse_field("mLetterSpacing", "float", parcel.readFloat, parent)
-            parcel.parse_field("mFontFeatureSettings", "string", parcel.readString16, parent)
-            parcel.parse_field("mFontVariationSettings", "string", parcel.readString16, parent)
+        parcel.parse_field("typefacePid", "int32", parcel.readInt32, parent)
+        parcel.parse_field("typefaceId", "int32", parcel.readInt32, parent)
+        parcel.parse_field("mTextFontWeight", "int32", parcel.readInt32, parent)
+        parcel.parse_field("mTextLocales", "", functools.partial(parcel.readParcelable, "__dynamic"), parent)
+        parcel.parse_field("mShadowRadius", "float", parcel.readFloat, parent)
+        parcel.parse_field("mShadowDx", "float", parcel.readFloat, parent)
+        parcel.parse_field("mShadowDy", "float", parcel.readFloat, parent)
+        parcel.parse_field("mShadowColor", "int32", parcel.readInt32, parent)
+        parcel.parse_field("mHasElegantTextHeight", "bool", parcel.readBool, parent)
+        parcel.parse_field("mElegantTextHeight", "bool", parcel.readBool, parent)
+        parcel.parse_field("mHasLetterSpacing", "bool", parcel.readBool, parent)
+        parcel.parse_field("mLetterSpacing", "float", parcel.readFloat, parent)
+        parcel.parse_field("mFontFeatureSettings", "string", parcel.readString16, parent)
+        parcel.parse_field("mFontVariationSettings", "string", parcel.readString16, parent)
 
-        case binder_trace.constants.SpanType.ANNOTATION:
-            parcel.parse_field("mKey", "string", parcel.readString16, parent)
-            parcel.parse_field("mValue", "string", parcel.readString16, parent)
+    elif kind == binder_trace.constants.SpanType.ANNOTATION:
+        parcel.parse_field("mKey", "string", parcel.readString16, parent)
+        parcel.parse_field("mValue", "string", parcel.readString16, parent)
 
-        case binder_trace.constants.SpanType.SUGGESTION_SPAN:
-            parcel.parse_field("mSuggestions", "string[]", parcel.readString16Vector, parent)
-            parcel.parse_field("mFlags", "int32", parcel.readInt32, parent)
-            parcel.parse_field("mLocaleStringForCompatibility", "string", parcel.readString16, parent)
-            parcel.parse_field("mLanguageTag", "string", parcel.readString16, parent)
-            parcel.parse_field("mHashCode", "int32", parcel.readInt32, parent)
-            parcel.parse_field("mEasyCorrectUnderlineColor", "int32", parcel.readInt32, parent)
-            parcel.parse_field("mEasyCorrectUnderlineThickness", "float", parcel.readFloat, parent)
-            parcel.parse_field("mMisspelledUnderlineColor", "int32", parcel.readInt32, parent)
-            parcel.parse_field("mMisspelledUnderlineThickness", "float", parcel.readFloat, parent)
-            parcel.parse_field("mAutoCorrectionUnderlineColor", "int32", parcel.readInt32, parent)
-            parcel.parse_field("mAutoCorrectionUnderlineThickness", "float", parcel.readFloat, parent)
-            parcel.parse_field("mGrammarErrorUnderlineColor", "int32", parcel.readInt32, parent)
-            parcel.parse_field("mGrammarErrorUnderlineThickness", "float", parcel.readFloat, parent)
+    elif kind == binder_trace.constants.SpanType.SUGGESTION_SPAN:
+        parcel.parse_field("mSuggestions", "string[]", parcel.readString16Vector, parent)
+        parcel.parse_field("mFlags", "int32", parcel.readInt32, parent)
+        parcel.parse_field("mLocaleStringForCompatibility", "string", parcel.readString16, parent)
+        parcel.parse_field("mLanguageTag", "string", parcel.readString16, parent)
+        parcel.parse_field("mHashCode", "int32", parcel.readInt32, parent)
+        parcel.parse_field("mEasyCorrectUnderlineColor", "int32", parcel.readInt32, parent)
+        parcel.parse_field("mEasyCorrectUnderlineThickness", "float", parcel.readFloat, parent)
+        parcel.parse_field("mMisspelledUnderlineColor", "int32", parcel.readInt32, parent)
+        parcel.parse_field("mMisspelledUnderlineThickness", "float", parcel.readFloat, parent)
+        parcel.parse_field("mAutoCorrectionUnderlineColor", "int32", parcel.readInt32, parent)
+        parcel.parse_field("mAutoCorrectionUnderlineThickness", "float", parcel.readFloat, parent)
+        parcel.parse_field("mGrammarErrorUnderlineColor", "int32", parcel.readInt32, parent)
+        parcel.parse_field("mGrammarErrorUnderlineThickness", "float", parcel.readFloat, parent)
 
-        case binder_trace.constants.SpanType.SPELL_CHECK_SPAN:
-            parcel.parse_field("mSpellCheckInProgress", "bool", parcel.readBool, parent)
+    elif kind == binder_trace.constants.SpanType.SPELL_CHECK_SPAN:
+        parcel.parse_field("mSpellCheckInProgress", "bool", parcel.readBool, parent)
 
-        case binder_trace.constants.SpanType.SUGGESTION_RANGE_SPAN:
-            parcel.parse_field("mBackgroundColor", "int32", parcel.readInt32, parent)
+    elif kind == binder_trace.constants.SpanType.SUGGESTION_RANGE_SPAN:
+        parcel.parse_field("mBackgroundColor", "int32", parcel.readInt32, parent)
 
-        case binder_trace.constants.SpanType.EASY_EDIT_SPAN:
-            parcel.parse_field("mPendingIntent", "", functools.partial(parcel.readParcelable, "__dynamic"), parent)
-            parcel.parse_field("mDeleteEnabled", "int32", parcel.readByte, parent)
+    elif kind == binder_trace.constants.SpanType.EASY_EDIT_SPAN:
+        parcel.parse_field("mPendingIntent", "", functools.partial(parcel.readParcelable, "__dynamic"), parent)
+        parcel.parse_field("mDeleteEnabled", "int32", parcel.readByte, parent)
 
-        case binder_trace.constants.SpanType.LOCALE_SPAN:
-            parcel.parse_field("mLocales", "", functools.partial(parcel.readParcelable, "android.os.LocaleList"), parent)
+    elif kind == binder_trace.constants.SpanType.LOCALE_SPAN:
+        parcel.parse_field("mLocales", "", functools.partial(parcel.readParcelable, "android.os.LocaleList"), parent)
 
-        case binder_trace.constants.SpanType.TTS_SPAN:
-            parcel.parse_field("mType", "string", parcel.readString16, parent)
-            parcel.parse_field("mArgs", "bundle", parcel.readBundle, parent)
+    elif kind == binder_trace.constants.SpanType.TTS_SPAN:
+        parcel.parse_field("mType", "string", parcel.readString16, parent)
+        parcel.parse_field("mArgs", "bundle", parcel.readBundle, parent)
 
-        case binder_trace.constants.SpanType.ACCESSIBILITY_CLICKABLE_SPAN:
-            parcel.parse_field("mOriginalClickableSpanId", "int32", parcel.readInt32, parent)
+    elif kind == binder_trace.constants.SpanType.ACCESSIBILITY_CLICKABLE_SPAN:
+        parcel.parse_field("mOriginalClickableSpanId", "int32", parcel.readInt32, parent)
 
-        case binder_trace.constants.SpanType.ACCESSIBILITY_URL_SPAN:
-            parcel.parse_field("mURL", "string", parcel.readString16, parent)
-            parcel.parse_field("mOriginalClickableSpanId", "int32", parcel.readInt32, parent)
+    elif kind == binder_trace.constants.SpanType.ACCESSIBILITY_URL_SPAN:
+        parcel.parse_field("mURL", "string", parcel.readString16, parent)
+        parcel.parse_field("mOriginalClickableSpanId", "int32", parcel.readInt32, parent)
 
-        case binder_trace.constants.SpanType.LINE_BACKGROUND_SPAN:
-            parcel.parse_field("mColor", "int32", parcel.readInt32, parent)
+    elif kind == binder_trace.constants.SpanType.LINE_BACKGROUND_SPAN:
+        parcel.parse_field("mColor", "int32", parcel.readInt32, parent)
 
-        case binder_trace.constants.SpanType.LINE_HEIGHT_SPAN:
-            parcel.parse_field("mHeight", "int32", parcel.readInt32, parent)
+    elif kind == binder_trace.constants.SpanType.LINE_HEIGHT_SPAN:
+        parcel.parse_field("mHeight", "int32", parcel.readInt32, parent)
 
-        case binder_trace.constants.SpanType.ACCESSIBILITY_REPLACEMENT_SPAN:
-            parcel.parse_field("contentDescription", "CharSequence", functools.partial(parseCharSequence, parcel), parent)
+    elif kind == binder_trace.constants.SpanType.ACCESSIBILITY_REPLACEMENT_SPAN:
+        parcel.parse_field("contentDescription", "CharSequence", functools.partial(parseCharSequence, parcel), parent)
 
-        case (binder_trace.constants.SpanType.SUPERSCRIPT_SPAN |
-              binder_trace.constants.SpanType.SUBSCRIPT_SPAN |
-              binder_trace.constants.SpanType.STRIKETHROUGH_SPAN |
-              binder_trace.constants.SpanType.UNDERLINE_SPAN):
-              # These types just have the basic span fields.
-              pass
+    elif kind == (binder_trace.constants.SpanType.SUPERSCRIPT_SPAN or 
+        binder_trace.constants.SpanType.SUBSCRIPT_SPAN or
+        binder_trace.constants.SpanType.STRIKETHROUGH_SPAN or
+        binder_trace.constants.SpanType.UNDERLINE_SPAN):
+        # These types just have the basic span fields.
+        pass
 
-        case _:
-            raise ParseError(f"Unknown span type '{kind}'")
+    else:
+        raise ParseError(f"Unknown span type '{kind}'")
 
     readSpan(parcel, parent)
 
@@ -470,19 +445,18 @@ def parse_span(parcel: ParcelParser, kind: int, parent: Field) -> None:
 def parseBitmap(parcel: ParcelParser, parent: Field) -> None:
     def get_width_of_pixel_for_color_type(t) -> int:
         # Lines up with the color type definitions in asop:external/skqp/src/core/SkImageInfo.cpp
-        match t:
-            case 0:
-                return 0
-            case 1 | 9:
-                return 1
-            case 2 | 3:
-                return 2
-            case 4 | 5 | 6 | 7 | 8:
-                return 4
-            case 10:
-                return 8
-            case 11 | 12:
-                return 16
+        if t == 0:
+            return 0
+        if t == 1 or t == 9:
+            return 1
+        if t == 2 or t == 3:
+            return 2
+        if t == 4 or t == 5 or t == 6 or t == 7 or t == 8:
+            return 4
+        if t == 10:
+            return 8
+        if t == 11 or t == 12:
+            return 16
         raise ParseError(f"Unknown color type: {t}")
 
     def calc_byte_size(w, h, r, t) -> int:

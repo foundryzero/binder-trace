@@ -2,6 +2,7 @@
 import logging
 import os
 import queue
+from typing import Optional
 
 from prompt_toolkit import Application
 from prompt_toolkit.application import get_app
@@ -49,7 +50,7 @@ class DummyControl(UIControl):
 class UserInterace:
 
     def __init__(self, input_queue):
-        self.filter: Filter|None = None
+        self.filter: Optional[Filter] = None
         self.input_queue = input_queue
 
         self.all_transactions = []
