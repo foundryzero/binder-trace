@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 import itertools
 from select import select
-from typing import List, Tuple
+from typing import List, Tuple, Optional
 from binder_trace.parsedParcel import Field, FieldData
 from ranges import Range, RangeDict
 from prompt_toolkit.formatted_text import FormattedText
@@ -52,7 +52,7 @@ def to_hexdump(buf: bytes, default_style: str, selections: List[Tuple[FieldData,
     # Map each byte to its class, then collapse consecutive strings of same type
     selection_style_map = RangeDict({Range(s.start, s.end): style for s, style in selections})
 
-    current: StyleRun|None = None
+    current: Optional[StyleRun] = None
     line_numbers: list[tuple[str,str]] = []
     lines: list[list[StyleRun]] = []
     line: list[StyleRun] = []

@@ -1,7 +1,7 @@
 import functools
 import logging
 import struct
-from typing import Callable
+from typing import Callable, Optional
 
 from binder_trace import constants
 from binder_trace import loggers
@@ -22,7 +22,7 @@ class ParcelParser:
         self.data = data
         self.pos = 0
 
-    def parse_field(self, name: str, type_name: str, read_func, parent: Field|None = None) -> Field:
+    def parse_field(self, name: str, type_name: str, read_func, parent: Optional[Field] = None) -> Field:
 
         field = Field(name, [], type_name, None, parent)
         if parent:

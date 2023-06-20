@@ -2,7 +2,7 @@
 
 Binder Trace is a tool for intercepting and parsing Android Binder messages. Think of it as "Wireshark for Binder".
 
-![binder-trace demo](./binder-trace.gif)
+![binder-trace demo](https://github.com/foundryzero/binder-trace/raw/main/binder-trace.gif)
 
 
 
@@ -16,8 +16,9 @@ You'll need a rooted Android device or emulator.
     >
     > `sudo apt-get install xsel`
 
-* Clone the repo and install python dependencies
-    > `pip install -r binder_trace/requirements.txt`
+* Install from PyPi 
+    > `pip install binder-trace`
+
 * Check which version of frida is installed (make sure you've pip installed the requirements)
     > `pip list | grep frida`
 * Download the matching version of frida-server from the [frida releases page](https://github.com/frida/frida/releases)
@@ -25,6 +26,8 @@ You'll need a rooted Android device or emulator.
     > `adb root`
     > 
     > `adb push frida-server /data/local/tmp`
+    >
+    > `adb shell`
     >
     > `chmod u+x /data/local/tmp/frida-server`
     >
@@ -39,6 +42,7 @@ You'll need a rooted Android device or emulator.
 | -d&nbsp;DEVICE       | The device to attach to e.g. "emulator-5554". Use `adb devices` to list available devices. If not provided defaults to the USB device. |
 | -p&nbsp;PID          | The pid of the process on DEVICE to attach to.                                                                                         |
 | -n&nbsp;NAME         | The name of the process on DEVICE to attach to e.g. "Messaging".                                                                       |
+| -a&nbsp;[9, 10, 11, 13]   | The version of android to load structures for.             |
 | -s&nbsp;STRUCTPATH   | The path to the directory of structure files.             |
 
 
@@ -60,7 +64,7 @@ emulator-5554   device
 9607  Settings       com.android.settings
 
 > cd binder_trace
-> python -m binder_trace -d emulator-5554 -n Messaging -s ../structs/android11
+> binder-trace -d emulator-5554 -n Messaging -a 11
 ```
 
 # ⌨️ Controls

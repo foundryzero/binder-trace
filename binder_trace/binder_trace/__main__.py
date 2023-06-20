@@ -30,18 +30,32 @@ def main():
     
     parser.add_argument("-d", "--device", dest="device", type=str, help="the android device to attach to")
 
-    parser.add_argument(
-        "-s", "--structpath", required=True, help="provides the path to the root of the struct directory. e.g. ../structs/android11"
+    struct_group = parser.add_mutually_exclusive_group(required=True)
+
+    struct_group.add_argument("-a",
+                        '--android-version',
+                        const='all',
+                        nargs='?',
+                        choices=['9', '10', '11', '13'],
+                        default='13',
+                        help='Android version structs to use')
+
+    struct_group.add_argument(
+        "-s", "--structpath", help="provides the path to the root of the struct directory. e.g. ../structs/android11"
     )
 
     args = parser.parse_args()
+
+
+    structs_dict = {"9" : "android9", "10": "android10", "11" : "android11", "13" : "android13.0.0-r49"}
+
+    struct_path = args.structpath or "../structs/" + structs_dict[args.android_version]
 
     if args.structpath:
         if not path.exists(args.structpath):
             print("Struct path not found.")
             exit(-1)
-
-    struct_path = args.structpath or "../struct/"
+    
     injector = None
     try:
         injector = FridaInjector(args.pid or args.name, struct_path, binder_trace.constants.ANDROID_VERSION, args.device)

@@ -1,7 +1,9 @@
 
 import datetime
+from typing import Optional
 
 from binder_trace.parsedParcel import Block, Direction, Field
+
 
 class DisplayTransaction:
 
@@ -33,7 +35,7 @@ class DisplayTransaction:
         return self.block.raw_data
 
     @property
-    def fields(self) -> Field | None:
+    def fields(self) -> Optional[Field]:
         return self.block.root_field
 
     @property
