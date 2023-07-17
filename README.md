@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="binder-trace.png" alt="binder-trace logo"/>
+  <img src="https://github.com/foundryzero/binder-trace/raw/main/binder-trace.png" alt="binder-trace logo"/>
 </p>
 
 # Binder Trace
