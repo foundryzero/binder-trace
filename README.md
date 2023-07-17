@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="binder-trace.png" alt="binder-trace logo"/>
+</p>
+
 # Binder Trace
 
 Binder Trace is a tool for intercepting and parsing Android Binder messages. Think of it as "Wireshark for Binder".
