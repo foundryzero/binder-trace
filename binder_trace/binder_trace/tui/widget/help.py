@@ -24,6 +24,8 @@ class HelpPanel:
                     Label("shift + tab    Previous pane"),
                     Label("ctrl + c       Copy pane to clipboard"),
                     Label("f              Open filter options"),
+                    Label("space          Pause/Unpause transaction recording"),
+                    Label("c              Clear"),
                     Label("h              Help"),
                     Label("q              Quit"),
                 ]),

@@ -2,6 +2,7 @@ import argparse
 import logging
 import traceback
 
+import json
 from os import path
 
 import binder_trace.loggers
@@ -36,7 +37,7 @@ def main():
                         '--android-version',
                         const='all',
                         nargs='?',
-                        choices=['9', '10', '11', '13'],
+                        choices=['9', '10', '11', '12', '13'],
                         default='13',
                         help='Android version structs to use')
 
@@ -44,23 +45,36 @@ def main():
         "-s", "--structpath", help="provides the path to the root of the struct directory. e.g. ../structs/android11"
     )
 
+    parser.add_argument(
+        "-c", "--config", help="Path to a binder-trace configuration file"
+    )
+
     args = parser.parse_args()
 
-
-    structs_dict = {"9" : "android9", "10": "android10", "11" : "android11", "13" : "android13.0.0-r49"}
-
-    struct_path = args.structpath or "../structs/" + structs_dict[args.android_version]
-
-    if args.structpath:
-        if not path.exists(args.structpath):
-            print("Struct path not found.")
-            exit(-1)
+    structs_dict = {"9": "android9", "10": "android10", "11": "android11", "12": "android-12.1.0_r27", "13": "android13.0.0-r_49"}
     
+    base_dir = path.dirname(path.abspath(__file__))
+
+    struct_path = args.structpath or path.join(base_dir, "structs", structs_dict[args.android_version])
+
+    if not path.exists(struct_path):
+        print(f"Struct path \"{struct_path}\" not found.")
+        exit(-1)
+    
+    config = None
+    if args.config:
+        if not path.exists(args.config):
+            print("Config path not found.")
+            exit(-1)
+        
+        with open(args.config, "r") as f:
+            config = json.load(f)
+
     injector = None
     try:
         injector = FridaInjector(args.pid or args.name, struct_path, binder_trace.constants.ANDROID_VERSION, args.device)
         injector.start()
-        binder_trace.tui.start_ui(injector.block_queue)
+        binder_trace.tui.start_ui(injector.block_queue, injector.pause_unpause, config)
         log.info("UI Stopped")
     except Exception as err:
         print(err)

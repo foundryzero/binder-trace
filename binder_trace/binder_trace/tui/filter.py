@@ -1,7 +1,13 @@
 from collections import UserList
+import json
 from typing import Optional, TypeVar
+
 from binder_trace.tui.data_types import DisplayTransaction
 
+INTERFACE_KEY = "interface"
+METHOD_KEY = "method"
+TYPE_KEY = "type"
+INCLUSIVE_KEY = "inclusive"
 
 class Filter:
     """
@@ -50,7 +56,19 @@ class Filter:
         method = self.method or "*"
         types = "|".join(self.types) if self.types else "*"
 
-        return f"interface={interface}, method={method}, types={types}"
+        return f"interface={interface}, method={method}, types={types}, inclusive={self.inclusive}"
+    
+    def to_json(self):
+        return json.dumps({INTERFACE_KEY: self.interface or "*", 
+                           METHOD_KEY: self.method or "*",
+                           TYPE_KEY: "|".join(self.types) if self.types else "*",
+                           INCLUSIVE_KEY: self.inclusive})
+    
+    def from_json(self, json_filter):
+        self.interface = json_filter.get(INTERFACE_KEY)
+        self.method = json_filter.get(METHOD_KEY)
+        self.inclusive = json_filter.get(INCLUSIVE_KEY, True)
+        self.types = [k for k in json_filter.get(TYPE_KEY, "").split("|") if k] or None
 
 _T = TypeVar('_T', bound=Filter)
 

@@ -40,7 +40,7 @@ class StructureStore:
             return binder_trace.override_IBulkCursor.getIBulkCursorInterface()
 
         # Attempt to open the struct file for the package name
-        with open(os.path.normpath(self.struct_path_root + package_name.replace(".", "/") + ".struct")) as f:
+        with open(os.path.normpath(os.path.join(self.struct_path_root, (package_name.replace(".", "/") + ".struct")))) as f:
             struct = json.load(f)
             # Refuse to read the struct if it's not an interface
             if struct["type"] != "Interface":

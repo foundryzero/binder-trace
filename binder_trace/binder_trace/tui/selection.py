@@ -139,7 +139,7 @@ class SelectionViewList(UserList[_T]):
         return item
 
     def remove(self, item: _T):
-        # We're reimplementing remove in terms of index and delete because we need the indext to update the view
+        # We're reimplementing remove in terms of index and delete because we need the index to update the view
         i = self.index(item)
         super().__delitem__(i)
         self._delete_from_view(i)

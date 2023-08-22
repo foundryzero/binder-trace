@@ -49,6 +49,7 @@ def on_message(struct_store, message, data):
     parcel = ParcelParser(struct_store, data)
 
     block = None
+    parsing_log.debug(str(message))
 
     if block_metadata["type"] == "TRANSACT":
         # If the message is a transaction it will have an interfaceToken header before the data
@@ -107,9 +108,12 @@ def on_message_out(struct_store, parcel: ParcelParser, code, descriptor):
 
 
     # TODO: change this for a better exception
-    except FileNotFoundError:  # Thrown if we try to read an interface that doesn't have an associated struct file
+    except FileNotFoundError as e:  # Thrown if we try to read an interface that doesn't have an associated struct file
         # TODO: Work out what to do with unhandled blocks
         block = None
+        parsing_log.debug(e)
+        parsing_log.debug(traceback.format_exc())
+
         # block = Block(descriptor, str(code), p, frameNumber, code=code, noAidl=True)
 
     return block
@@ -156,9 +160,11 @@ def on_message_in(struct_store, parcel: ParcelParser, code):
             parsing_log.error(traceback.format_exc())
 
 
-    except FileNotFoundError:
+    except FileNotFoundError as e:
         # TODO: This probably means the type isn't supported. Create a block with "unsupported_call" set
         block = None
+        parsing_log.debug(e)
+        parsing_log.debug(traceback.format_exc())
     return block
 
 

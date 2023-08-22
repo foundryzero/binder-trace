@@ -24,6 +24,7 @@ from binder_trace.tui.widget.hexdump import HexdumpFrame
 from binder_trace.tui.widget.structure import StructureFrame
 from binder_trace.tui.widget.transactions import TransactionFrame
 
+CONFIG_FILTERS_KEY = "filters"
 
 log = logging.getLogger(loggers.LOG)
 
@@ -47,9 +48,9 @@ class DummyControl(UIControl):
     def is_focusable(self) -> bool:
         return True
 
-class UserInterace:
+class UserInterface:
 
-    def __init__(self, input_queue):
+    def __init__(self, input_queue, pause_unpause, config):
         self.filter: Optional[Filter] = None
         self.input_queue = input_queue
 
@@ -64,7 +65,15 @@ class UserInterace:
         self.structure_pane = StructureFrame(self.transactions, 1)
         self.hexdump_pane = HexdumpFrame(self.transactions, self.structure_pane.field_selection, 1)
 
+        self.pause_unpause = pause_unpause
+        self.recording = True
+
+        self.config = config
+
         self.resize_components(os.get_terminal_size())
+
+    def get_recording(self):
+        return self.recording
 
     def run(self):
         self.focusable = [self.transaction_table, self.hexdump_pane, self.structure_pane]
@@ -85,6 +94,15 @@ class UserInterace:
             for i, f in enumerate(self.focusable):
                 f.activated = i == self.focus_index
 
+        @kb1.add('C')
+        @kb1.add('c')
+        def _(event):
+            self.transactions.clear()
+
+        @kb1.add('space')
+        def _(event):
+            self.recording = self.pause_unpause()
+
         dummy_control = DummyControl()
         main_layout = HSplit(
             key_bindings=kb1,
@@ -94,7 +112,7 @@ class UserInterace:
                     self.hexdump_pane,
                     self.structure_pane,
                 ]),
-                StatusToolbar(self.transactions, self.filter_panel),
+                StatusToolbar(self.transactions, self.filter_panel, self.get_recording),
                 Window(content=dummy_control)
             ],
         )
@@ -149,18 +167,20 @@ class UserInterace:
 
         kb = KeyBindings()
 
+        @kb.add('Q')
         @kb.add('q')
         def _(event):
             log.info("Q pressed. App exiting.")
             event.app.exit(exception=KeyboardInterrupt, style='class:aborting')
 
-
+        @kb.add('H', filter=~modal_panel_visible | show_help)
         @kb.add('h', filter=~modal_panel_visible | show_help)
         @kb.add("enter", filter=show_help)
         def _(event):
             self.help_panel.visible = not self.help_panel.visible
 
 
+        @kb.add('F', filter=~modal_panel_visible)
         @kb.add('f', filter=~modal_panel_visible)
         @kb.add("enter", filter=show_filters)
         def _(event):
@@ -169,7 +189,7 @@ class UserInterace:
                 get_app().layout.focus(self.filter_panel.interface_textarea)
             else:
                 self.filter = self.filter_panel.filter()
-                self.transactions.assign([t for t in self.all_transactions if self.filter.passes(t)])
+                self.transactions.assign([t for t in self.all_transactions if self.filter.passes(t) and self.passes_config_filters(t)])
                 get_app().layout.focus(dummy_control)
 
         @kb.add("c-c")
@@ -222,20 +242,41 @@ class UserInterace:
 
     def get_available_blocks(self):
         blocks: list[Block] = []
-        # Retrieve every unhandled block currently avilable in the queue
+        # Retrieve every unhandled block currently available in the queue
         try:
             for _ in range(10):
                 blocks.append(self.input_queue.get_nowait())
         except queue.Empty:
             pass
         return blocks
+    
+    def passes_config_filters(self, block):
+        allowed = True
+        filters = []
+        if self.config:
+            for filter in self.config[CONFIG_FILTERS_KEY]:
+                tmp_filter = Filter()
+                tmp_filter.from_json(filter)
+                filters.append(tmp_filter)
+
+            for filter in filters:
+                filter_pass = filter.passes(block)
+                # Inclusive=True takes precedence over excludes
+                if filter_pass and filter.inclusive:
+                    allowed = True
+                    break
+                else:
+                    allowed = allowed & filter_pass
+
+        return allowed
 
     def process_data(self):
         blocks = self.get_available_blocks()
         # For every block...
         for block in blocks:
             block = DisplayTransaction(block)
-            if not self.filter or self.filter.passes(block):
+
+            if self.passes_config_filters(block) and ((not self.filter) or self.filter.passes(block)):
                 self.transactions.append(block)
 
             self.all_transactions.append(block)
