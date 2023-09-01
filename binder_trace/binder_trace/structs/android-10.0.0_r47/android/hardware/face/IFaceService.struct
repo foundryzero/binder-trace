@@ -1,0 +1,248 @@
+{
+    "produced_on": "2023-08-22T14:52:34.777615964Z",
+    "source_location": "",
+    "full_name": "android.hardware.face.IFaceService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"sessionId": "readInt64"},
+                {"userid": "readInt32"},
+                {"receiver": "readStrongBinder"},
+                {"flags": "readInt32"},
+                {"opPackageName": "readString16"}
+            ],
+            "name": "authenticate",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"requireConfirmation": "readBool"},
+                {"token": "readStrongBinder"},
+                {"sessionId": "readInt64"},
+                {"userId": "readInt32"},
+                {"wrapperReceiver": "readStrongBinder"},
+                {"opPackageName": "readString16"},
+                {"cookie": "readInt32"},
+                {"callingUid": "readInt32"},
+                {"callingPid": "readInt32"},
+                {"callingUserId": "readInt32"}
+            ],
+            "name": "prepareForAuthentication",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"cookie": "readInt32"}],
+            "name": "startPreparedClient",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"opPackageName": "readString16"}
+            ],
+            "name": "cancelAuthentication",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"opPackageName": "readString16"},
+                {"callingUid": "readInt32"},
+                {"callingPid": "readInt32"},
+                {"callingUserId": "readInt32"},
+                {"fromClient": "readBool"}
+            ],
+            "name": "cancelAuthenticationFromService",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"cryptoToken": "readByteVector"},
+                {"receiver": "readStrongBinder"},
+                {"opPackageName": "readString16"},
+                {"disabledFeatures": "readInt32Vector"}
+            ],
+            "name": "enroll",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"token": "readStrongBinder"}],
+            "name": "cancelEnrollment",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"faceId": "readInt32"},
+                {"userId": "readInt32"},
+                {"receiver": "readStrongBinder"}
+            ],
+            "name": "remove",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"faceId": "readInt32"},
+                {"name": "readString16"}
+            ],
+            "name": "rename",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"userId": "readInt32"},
+                {"opPackageName": "readString16"}
+            ],
+            "name": "getEnrolledFaces",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.hardware.face.Face"
+                }
+            ]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"deviceId": "readInt64"},
+                {"opPackageName": "readString16"}
+            ],
+            "name": "isHardwareDetected",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [{"token": "readStrongBinder"}],
+            "name": "generateChallenge",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [{"token": "readStrongBinder"}],
+            "name": "revokeChallenge",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"userId": "readInt32"},
+                {"opPackageName": "readString16"}
+            ],
+            "name": "hasEnrolledFaces",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 15,
+            "in": [{"opPackageName": "readString16"}],
+            "name": "getAuthenticatorId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 16,
+            "in": [{"token": "readByteVector"}],
+            "name": "resetLockout",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "addLockoutResetCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [{"uid": "readInt32"}],
+            "name": "setActiveUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 19,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"userId": "readInt32"},
+                {"receiver": "readStrongBinder"}
+            ],
+            "name": "enumerate",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 20,
+            "in": [
+                {"feature": "readInt32"},
+                {"enabled": "readBool"},
+                {"token": "readByteVector"},
+                {"receiver": "readStrongBinder"}
+            ],
+            "name": "setFeature",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 21,
+            "in": [
+                {"feature": "readInt32"},
+                {"receiver": "readStrongBinder"}
+            ],
+            "name": "getFeature",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 22,
+            "in": [],
+            "name": "userActivity",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IFaceService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

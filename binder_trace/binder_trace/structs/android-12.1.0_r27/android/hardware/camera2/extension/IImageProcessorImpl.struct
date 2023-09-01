@@ -1,0 +1,33 @@
+{
+    "produced_on": "2023-08-22T12:16:41.787337544Z",
+    "source_location": "",
+    "full_name": "android.hardware.camera2.extension.IImageProcessorImpl",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "outputConfigId": "readParcelable",
+                    "__parcelType": "android.hardware.camera2.extension.OutputConfigId"
+                }]
+            },
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "image": "readParcelable",
+                    "__parcelType": "android.hardware.camera2.extension.ParcelImage"
+                }]
+            },
+            {"physicalCameraId": "readString16"}
+        ],
+        "name": "onNextImageAvailable",
+        "oneWay": false,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "IImageProcessorImpl",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

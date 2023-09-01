@@ -1,0 +1,34 @@
+{
+    "produced_on": "2023-08-22T12:16:45.325663360Z",
+    "source_location": "",
+    "full_name": "android.net.ipmemorystore.IOnBlobRetrievedListener",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "status": "readParcelable",
+                    "__parcelType": "android.net.ipmemorystore.StatusParcelable"
+                }]
+            },
+            {"l2Key": "readString16"},
+            {"name": "readString16"},
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "data": "readParcelable",
+                    "__parcelType": "android.net.ipmemorystore.Blob"
+                }]
+            }
+        ],
+        "name": "onBlobRetrieved",
+        "oneWay": true,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "IOnBlobRetrievedListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

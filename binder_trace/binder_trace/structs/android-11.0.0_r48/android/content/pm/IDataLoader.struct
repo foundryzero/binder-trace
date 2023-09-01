@@ -1,0 +1,71 @@
+{
+    "produced_on": "2023-08-22T12:24:11.513637951Z",
+    "source_location": "",
+    "full_name": "android.content.pm.IDataLoader",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"id": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "params": "readParcelable",
+                        "__parcelType": "android.content.pm.DataLoaderParamsParcel"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "control": "readParcelable",
+                        "__parcelType": "android.content.pm.FileSystemControlParcel"
+                    }]
+                },
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "create",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"id": "readInt32"}],
+            "name": "start",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"id": "readInt32"}],
+            "name": "stop",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"id": "readInt32"}],
+            "name": "destroy",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"id": "readInt32"},
+                {
+                    "addedFiles": "readParcelableVector",
+                    "__parcelType": "android.content.pm.InstallationFileParcel"
+                },
+                {"removedFiles": "readString16Vector"}
+            ],
+            "name": "prepareImage",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IDataLoader",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,54 @@
+{
+    "produced_on": "2023-08-22T12:16:42.208715631Z",
+    "source_location": "",
+    "full_name": "android.service.controls.IControlsSubscriber",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"cs": "readStrongBinder"}
+            ],
+            "name": "onSubscribe",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "c": "readParcelable",
+                        "__parcelType": "android.service.controls.Control"
+                    }]
+                }
+            ],
+            "name": "onNext",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"s": "readString16"}
+            ],
+            "name": "onError",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"token": "readStrongBinder"}],
+            "name": "onComplete",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IControlsSubscriber",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

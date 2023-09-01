@@ -1,0 +1,42 @@
+{
+    "produced_on": "2023-08-22T12:24:12.025867787Z",
+    "source_location": "",
+    "full_name": "android.service.autofill.ISaveCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "intentSender": "readParcelable",
+                        "__parcelType": "android.content.IntentSender"
+                    }]
+                }
+            ],
+            "name": "onSuccess",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "message": "readParcelable",
+                        "__parcelType": "CharSequence"
+                    }]
+                }
+            ],
+            "name": "onFailure",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISaveCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

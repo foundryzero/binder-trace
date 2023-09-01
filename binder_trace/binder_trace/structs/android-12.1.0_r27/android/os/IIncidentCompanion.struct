@@ -1,0 +1,123 @@
+{
+    "produced_on": "2023-08-22T12:16:43.515010586Z",
+    "source_location": "",
+    "full_name": "android.os.IIncidentCompanion",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"callingUid": "readInt32"},
+                {"callingPackage": "readString16"},
+                {"receiverClass": "readString16"},
+                {"reportId": "readString16"},
+                {"flags": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "authorizeReport",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "cancelAuthorization",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"pkg": "readString16"},
+                {"cls": "readString16"}
+            ],
+            "name": "sendReportReadyBroadcast",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "getPendingReports",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "String"
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"uri": "readString16"}],
+            "name": "approveReport",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"uri": "readString16"}],
+            "name": "denyReport",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"pkg": "readString16"},
+                {"cls": "readString16"}
+            ],
+            "name": "getIncidentReportList",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "String"
+                }
+            ]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"pkg": "readString16"},
+                {"cls": "readString16"},
+                {"id": "readString16"}
+            ],
+            "name": "getIncidentReport",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.os.IncidentManager.IncidentReport"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"pkg": "readString16"},
+                {"cls": "readString16"},
+                {"id": "readString16"}
+            ],
+            "name": "deleteIncidentReports",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [{"pkg": "readString16"}],
+            "name": "deleteAllIncidentReports",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IIncidentCompanion",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

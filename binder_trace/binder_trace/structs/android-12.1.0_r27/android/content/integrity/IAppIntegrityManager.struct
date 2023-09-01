@@ -1,0 +1,85 @@
+{
+    "produced_on": "2023-08-22T12:16:41.617230326Z",
+    "source_location": "",
+    "full_name": "android.content.integrity.IAppIntegrityManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"version": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "rules": "readParcelable",
+                        "__parcelType": "android.content.integrity.ParceledListSlice<Rule>"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "statusReceiver": "readParcelable",
+                        "__parcelType": "android.content.IntentSender"
+                    }]
+                }
+            ],
+            "name": "updateRuleSet",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "getCurrentRuleSetVersion",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getCurrentRuleSetProvider",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "getCurrentRules",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.integrity.ParceledListSlice<Rule>"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "getWhitelistedRuleProviders",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "String"
+                }
+            ]
+        }
+    ],
+    "name": "IAppIntegrityManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

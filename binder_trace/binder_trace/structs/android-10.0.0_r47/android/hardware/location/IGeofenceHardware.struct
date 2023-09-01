@@ -1,0 +1,131 @@
+{
+    "produced_on": "2023-08-22T14:52:34.833979569Z",
+    "source_location": "",
+    "full_name": "android.hardware.location.IGeofenceHardware",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"service": "readStrongBinder"}],
+            "name": "setGpsGeofenceHardware",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"service": "readStrongBinder"}],
+            "name": "setFusedGeofenceHardware",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getMonitoringTypes",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"monitoringType": "readInt32"}],
+            "name": "getStatusOfMonitoringType",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"monitoringType": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.hardware.location.GeofenceHardwareRequestParcelable"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "addCircularFence",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"id": "readInt32"},
+                {"monitoringType": "readInt32"}
+            ],
+            "name": "removeGeofence",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"id": "readInt32"},
+                {"monitoringType": "readInt32"}
+            ],
+            "name": "pauseGeofence",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"id": "readInt32"},
+                {"monitoringType": "readInt32"},
+                {"monitorTransitions": "readInt32"}
+            ],
+            "name": "resumeGeofence",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"monitoringType": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "registerForMonitorStateChangeCallback",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"monitoringType": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "unregisterForMonitorStateChangeCallback",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "IGeofenceHardware",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,29 @@
+{
+    "produced_on": "2023-08-22T12:16:46.222099592Z",
+    "source_location": "",
+    "components": [
+        {"netId": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "networkType": "readParcelable",
+                "__parcelType": "android.net.NativeNetworkType"
+            }]
+        },
+        {"permission": "readInt32"},
+        {"secure": "readBool"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "vpnType": "readParcelable",
+                "__parcelType": "android.net.NativeVpnType"
+            }]
+        }
+    ],
+    "full_name": "android.net.NativeNetworkConfig",
+    "name": "NativeNetworkConfig",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

@@ -1,0 +1,81 @@
+{
+    "produced_on": "2023-08-22T14:52:36.641675984Z",
+    "source_location": "",
+    "full_name": "android.net.wifi.IClientInterface",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getPacketCounters",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "signalPoll",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getMacAddress",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "getInterfaceName",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "getWifiScannerImpl",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [{"mac": "readByteVector"}],
+            "name": "setMacAddress",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"frame": "readByteVector"},
+                {"callback": "readStrongBinder"},
+                {"mcs": "readInt32"}
+            ],
+            "name": "SendMgmtFrame",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IClientInterface",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

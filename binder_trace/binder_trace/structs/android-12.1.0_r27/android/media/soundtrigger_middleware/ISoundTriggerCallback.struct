@@ -1,0 +1,58 @@
+{
+    "produced_on": "2023-08-22T12:16:42.836709843Z",
+    "source_location": "",
+    "full_name": "android.media.soundtrigger_middleware.ISoundTriggerCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"modelHandle": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "event": "readParcelable",
+                        "__parcelType": "android.media.soundtrigger_middleware.RecognitionEvent"
+                    }]
+                }
+            ],
+            "name": "onRecognition",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"modelHandle": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "event": "readParcelable",
+                        "__parcelType": "android.media.soundtrigger_middleware.PhraseRecognitionEvent"
+                    }]
+                }
+            ],
+            "name": "onPhraseRecognition",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"available": "readBool"}],
+            "name": "onRecognitionAvailabilityChange",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "onModuleDied",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISoundTriggerCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

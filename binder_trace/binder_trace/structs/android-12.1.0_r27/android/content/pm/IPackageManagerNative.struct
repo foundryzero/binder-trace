@@ -1,0 +1,143 @@
+{
+    "produced_on": "2023-08-22T12:16:43.481826954Z",
+    "source_location": "",
+    "full_name": "android.content.pm.IPackageManagerNative",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"uids": "readInt32Vector"}],
+            "name": "getNamesForUids",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"packageName": "readString16"}],
+            "name": "getInstallerForPackage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"packageName": "readString16"}],
+            "name": "getVersionCodeForPackage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"packageNames": "readString16Vector"}],
+            "name": "isAudioPlaybackCaptureAllowed",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.content.pm.boolean"
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"packageName": "readString16"}],
+            "name": "getLocationFlags",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [{"packageName": "readString16"}],
+            "name": "getTargetSdkVersionForPackage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "getModuleMetadataPackageName",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "getAllPackages",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [{"observer": "readStrongBinder"}],
+            "name": "registerPackageChangeObserver",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [{"observer": "readStrongBinder"}],
+            "name": "unregisterPackageChangeObserver",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"packageName": "readString16"},
+                {"certificate": "readByteVector"}
+            ],
+            "name": "hasSha256SigningCertificate",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [{"packageName": "readString16"}],
+            "name": "isPackageDebuggable",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"featureName": "readString16"},
+                {"version": "readInt32"}
+            ],
+            "name": "hasSystemFeature",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "IPackageManagerNative",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

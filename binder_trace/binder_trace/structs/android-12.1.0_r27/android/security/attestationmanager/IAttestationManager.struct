@@ -1,0 +1,29 @@
+{
+    "produced_on": "2023-08-22T12:16:46.252999882Z",
+    "source_location": "",
+    "full_name": "android.security.attestationmanager.IAttestationManager",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {
+                "deviceIdentifiers": "readParcelableVector",
+                "__parcelType": "android.hardware.security.keymint.KeyParameter"
+            },
+            {"useIndividualAttestation": "readBool"},
+            {"attestationChallenge": "readByteVector"},
+            {"securityLevel": "readInt32"}
+        ],
+        "name": "attestDevice",
+        "oneWay": false,
+        "out": [
+            {"__exception": "readException"},
+            {
+                "__return": "readParcelableVector",
+                "__parcelType": "android.security.attestationmanager.ByteArray"
+            }
+        ]
+    }],
+    "name": "IAttestationManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

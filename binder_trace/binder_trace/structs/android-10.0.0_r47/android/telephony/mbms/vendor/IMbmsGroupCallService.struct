@@ -1,0 +1,96 @@
+{
+    "produced_on": "2023-08-22T14:52:35.921736257Z",
+    "source_location": "",
+    "full_name": "android.telephony.mbms.vendor.IMbmsGroupCallService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"callback": "readStrongBinder"},
+                {"subId": "readInt32"}
+            ],
+            "name": "initialize",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"subId": "readInt32"},
+                {"tmgi": "readInt64"}
+            ],
+            "name": "stopGroupCall",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"subscriptionId": "readInt32"},
+                {"tmgi": "readInt64"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "saiList": "readParcelable",
+                        "__parcelType": "android.telephony.mbms.vendor.List"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "frequencyList": "readParcelable",
+                        "__parcelType": "android.telephony.mbms.vendor.List"
+                    }]
+                }
+            ],
+            "name": "updateGroupCall",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"subscriptionId": "readInt32"},
+                {"tmgi": "readInt64"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "saiList": "readParcelable",
+                        "__parcelType": "android.telephony.mbms.vendor.List"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "frequencyList": "readParcelable",
+                        "__parcelType": "android.telephony.mbms.vendor.List"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "startGroupCall",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"subId": "readInt32"}],
+            "name": "dispose",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IMbmsGroupCallService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

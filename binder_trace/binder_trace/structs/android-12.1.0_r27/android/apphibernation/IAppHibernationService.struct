@@ -1,0 +1,67 @@
+{
+    "produced_on": "2023-08-22T12:16:41.573443413Z",
+    "source_location": "",
+    "full_name": "android.apphibernation.IAppHibernationService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "isHibernatingForUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"},
+                {"isHibernating": "readBool"}
+            ],
+            "name": "setHibernatingForUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"packageName": "readString16"}],
+            "name": "isHibernatingGlobally",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"packageName": "readString16"},
+                {"isHibernating": "readBool"}
+            ],
+            "name": "setHibernatingGlobally",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"userId": "readInt32"}],
+            "name": "getHibernatingPackagesForUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "String"
+                }
+            ]
+        }
+    ],
+    "name": "IAppHibernationService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

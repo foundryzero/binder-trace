@@ -1,0 +1,152 @@
+{
+    "produced_on": "2023-08-22T12:16:42.216355024Z",
+    "source_location": "",
+    "full_name": "android.service.dreams.IDreamManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "dream",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "awaken",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{
+                "componentNames": "readParcelableVector",
+                "__parcelType": "android.content.ComponentName"
+            }],
+            "name": "setDreamComponents",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "getDreamComponents",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.content.ComponentName"
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"userId": "readInt32"}],
+            "name": "getDefaultDreamComponentForUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.ComponentName"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"userId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "componentName": "readParcelable",
+                        "__parcelType": "android.content.ComponentName"
+                    }]
+                }
+            ],
+            "name": "testDream",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "isDreaming",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"immediate": "readBool"}
+            ],
+            "name": "finishSelf",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"screenState": "readInt32"},
+                {"screenBrightness": "readInt32"}
+            ],
+            "name": "startDozing",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [{"token": "readStrongBinder"}],
+            "name": "stopDozing",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [{"enabled": "readBool"}],
+            "name": "forceAmbientDisplayEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [{"userId": "readInt32"}],
+            "name": "getDreamComponentsForUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.content.ComponentName"
+                }
+            ]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"userId": "readInt32"},
+                {
+                    "componentNames": "readParcelableVector",
+                    "__parcelType": "android.content.ComponentName"
+                }
+            ],
+            "name": "setDreamComponentsForUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IDreamManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

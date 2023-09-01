@@ -1,0 +1,33 @@
+{
+    "produced_on": "2023-08-22T12:24:13.405215921Z",
+    "source_location": "",
+    "components": [
+        {"netId": "readInt32"},
+        {"sampleValiditySeconds": "readInt32"},
+        {"successThreshold": "readInt32"},
+        {"minSamples": "readInt32"},
+        {"maxSamples": "readInt32"},
+        {"baseTimeoutMsec": "readInt32"},
+        {"retryCount": "readInt32"},
+        {"servers": "readString16Vector"},
+        {"domains": "readString16Vector"},
+        {"tlsName": "readString16"},
+        {"tlsServers": "readString16Vector"},
+        {"tlsFingerprints": "readString16Vector"},
+        {"caCertificate": "readString16"},
+        {"tlsConnectTimeoutMs": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "resolverOptions": "readParcelable",
+                "__parcelType": "android.net.ResolverOptionsParcel"
+            }]
+        },
+        {"transportTypes": "readInt32Vector"}
+    ],
+    "full_name": "android.net.ResolverParamsParcel",
+    "name": "ResolverParamsParcel",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

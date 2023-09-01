@@ -1,0 +1,38 @@
+{
+    "produced_on": "2023-08-22T12:16:46.677628503Z",
+    "source_location": "",
+    "full_name": "android.bluetooth.IBluetoothLeAdvertiserCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"status": "readInt32"},
+                {"advertiser_id": "readInt32"}
+            ],
+            "name": "OnAdvertiserRegistered",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"status": "readInt32"},
+                {"is_start": "readBool"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "settings": "readParcelable",
+                        "__parcelType": "android.bluetooth.AdvertiseSettings"
+                    }]
+                }
+            ],
+            "name": "OnMultiAdvertiseCallback",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IBluetoothLeAdvertiserCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

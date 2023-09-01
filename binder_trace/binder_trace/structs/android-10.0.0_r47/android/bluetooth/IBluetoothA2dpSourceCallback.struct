@@ -1,0 +1,62 @@
+{
+    "produced_on": "2023-08-22T14:52:36.613989897Z",
+    "source_location": "",
+    "full_name": "android.bluetooth.IBluetoothA2dpSourceCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"status": "readInt32"}],
+            "name": "OnRegistered",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"device_address": "readString16"},
+                {"state": "readInt32"}
+            ],
+            "name": "OnConnectionState",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"device_address": "readString16"},
+                {"state": "readInt32"}
+            ],
+            "name": "OnAudioState",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"device_address": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "codec_config": "readParcelable",
+                        "__parcelType": "android.bluetooth.BluetoothA2dpCodecConfig"
+                    }]
+                },
+                {
+                    "codecs_local_capabilities": "readParcelableVector",
+                    "__parcelType": "android.bluetooth.BluetoothA2dpCodecConfig"
+                },
+                {
+                    "codecs_selectable_capabilities": "readParcelableVector",
+                    "__parcelType": "android.bluetooth.BluetoothA2dpCodecConfig"
+                }
+            ],
+            "name": "OnAudioConfig",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IBluetoothA2dpSourceCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

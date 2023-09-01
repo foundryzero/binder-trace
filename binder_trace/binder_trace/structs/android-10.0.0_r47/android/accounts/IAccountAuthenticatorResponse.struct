@@ -1,0 +1,40 @@
+{
+    "produced_on": "2023-08-22T14:52:34.246544350Z",
+    "source_location": "",
+    "full_name": "android.accounts.IAccountAuthenticatorResponse",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"value": "readBundle"}]
+                }
+            ],
+            "name": "onResult",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "onRequestContinued",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"errorCode": "readInt32"},
+                {"errorMessage": "readString16"}
+            ],
+            "name": "onError",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IAccountAuthenticatorResponse",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

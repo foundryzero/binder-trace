@@ -1,0 +1,139 @@
+{
+    "produced_on": "2023-08-22T12:16:40.494442202Z",
+    "source_location": "",
+    "full_name": "com.android.cts.blob.ICommandReceiver",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "blobHandle": "readParcelable",
+                        "__parcelType": "android.app.blob.BlobHandle"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "input": "readParcelable",
+                        "__parcelType": "android.os.ParcelFileDescriptor"
+                    }]
+                },
+                {"accessTypeFlags": "readInt32"},
+                {"size": "readInt64"},
+                {"timeoutSec": "readInt64"}
+            ],
+            "name": "commit",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "blobHandle": "readParcelable",
+                        "__parcelType": "android.app.blob.BlobHandle"
+                    }]
+                }
+            ],
+            "name": "openBlob",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.os.ParcelFileDescriptor"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"sessionId": "readInt64"}],
+            "name": "openSession",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "blobHandle": "readParcelable",
+                        "__parcelType": "android.app.blob.BlobHandle"
+                    }]
+                }
+            ],
+            "name": "acquireLease",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "blobHandle": "readParcelable",
+                        "__parcelType": "android.app.blob.BlobHandle"
+                    }]
+                }
+            ],
+            "name": "releaseLease",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "queryStatsForPackage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.app.usage.StorageStats"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "queryStatsForUid",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.app.usage.StorageStats"
+                    }]
+                }
+            ]
+        }
+    ],
+    "name": "ICommandReceiver",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

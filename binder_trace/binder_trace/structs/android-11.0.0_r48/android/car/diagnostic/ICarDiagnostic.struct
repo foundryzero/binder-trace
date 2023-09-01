@@ -1,0 +1,144 @@
+{
+    "produced_on": "2023-08-22T12:24:13.741583723Z",
+    "source_location": "",
+    "full_name": "android.car.diagnostic.ICarDiagnostic",
+    "calls": [
+        {
+            "code": 2,
+            "in": [
+                {"frameType": "readInt32"},
+                {"rate": "readInt32"},
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "registerOrUpdateDiagnosticListener",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getLatestLiveFrame",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.car.diagnostic.CarDiagnosticEvent"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "getFreezeFrameTimestamps",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.car.diagnostic.long"
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"timestamp": "readInt64"}],
+            "name": "getFreezeFrame",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.car.diagnostic.CarDiagnosticEvent"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [{
+                "timestamps": "readParcelableVector",
+                "__parcelType": "android.car.diagnostic.long"
+            }],
+            "name": "clearFreezeFrames",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"frameType": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "unregisterDiagnosticListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "isLiveFrameSupported",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [],
+            "name": "isFreezeFrameNotificationSupported",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [],
+            "name": "isGetFreezeFrameSupported",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [],
+            "name": "isClearFreezeFramesSupported",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [],
+            "name": "isSelectiveClearFreezeFramesSupported",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "ICarDiagnostic",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

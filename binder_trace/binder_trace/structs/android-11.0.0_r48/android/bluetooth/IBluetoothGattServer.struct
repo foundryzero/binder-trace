@@ -1,0 +1,87 @@
+{
+    "produced_on": "2023-08-22T12:24:14.498874753Z",
+    "source_location": "",
+    "full_name": "android.bluetooth.IBluetoothGattServer",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "RegisterServer",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"server_id": "readInt32"}],
+            "name": "UnregisterServer",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "UnregisterAll",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"server_id": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "service": "readParcelable",
+                        "__parcelType": "android.bluetooth.BluetoothGattService"
+                    }]
+                }
+            ],
+            "name": "AddService",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"server_id": "readInt32"},
+                {"device_address": "readString16"},
+                {"request_id": "readInt32"},
+                {"status": "readInt32"},
+                {"offset": "readInt32"},
+                {"value": "readByteVector"}
+            ],
+            "name": "SendResponse",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"server_id": "readInt32"},
+                {"device_address": "readString16"},
+                {"handle": "readInt32"},
+                {"confirm": "readBool"},
+                {"value": "readByteVector"}
+            ],
+            "name": "SendNotification",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "IBluetoothGattServer",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

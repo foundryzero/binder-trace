@@ -1,0 +1,190 @@
+{
+    "produced_on": "2023-08-22T12:16:43.165007239Z",
+    "source_location": "",
+    "full_name": "android.telephony.data.IDataService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"slotId": "readInt32"}],
+            "name": "createDataServiceProvider",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"slotId": "readInt32"}],
+            "name": "removeDataServiceProvider",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"slotId": "readInt32"},
+                {"accessNetwork": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "dataProfile": "readParcelable",
+                        "__parcelType": "android.telephony.data.DataProfile"
+                    }]
+                },
+                {"isRoaming": "readBool"},
+                {"allowRoaming": "readBool"},
+                {"reason": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "linkProperties": "readParcelable",
+                        "__parcelType": "android.net.LinkProperties"
+                    }]
+                },
+                {"pduSessionId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sliceInfo": "readParcelable",
+                        "__parcelType": "android.telephony.data.NetworkSliceInfo"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "trafficDescriptor": "readParcelable",
+                        "__parcelType": "android.telephony.data.TrafficDescriptor"
+                    }]
+                },
+                {"matchAllRuleAllowed": "readBool"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "setupDataCall",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"slotId": "readInt32"},
+                {"cid": "readInt32"},
+                {"reason": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "deactivateDataCall",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"slotId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "dataProfile": "readParcelable",
+                        "__parcelType": "android.telephony.data.DataProfile"
+                    }]
+                },
+                {"isRoaming": "readBool"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "setInitialAttachApn",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"slotId": "readInt32"},
+                {
+                    "dps": "readList",
+                    "__parcelType": "android.telephony.data.DataProfile"
+                },
+                {"isRoaming": "readBool"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "setDataProfile",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"slotId": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "requestDataCallList",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"slotId": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "registerForDataCallListChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"slotId": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "unregisterForDataCallListChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"slotId": "readInt32"},
+                {"cid": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "startHandover",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"slotId": "readInt32"},
+                {"cid": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "cancelHandover",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"slotIndex": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "registerForUnthrottleApn",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"slotIndex": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "unregisterForUnthrottleApn",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IDataService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

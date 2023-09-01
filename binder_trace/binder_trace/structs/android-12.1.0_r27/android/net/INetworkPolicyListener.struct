@@ -1,0 +1,80 @@
+{
+    "produced_on": "2023-08-22T12:16:41.942409971Z",
+    "source_location": "",
+    "full_name": "android.net.INetworkPolicyListener",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"uid": "readInt32"},
+                {"uidRules": "readInt32"}
+            ],
+            "name": "onUidRulesChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"meteredIfaces": "readString16Vector"}],
+            "name": "onMeteredIfacesChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"restrictBackground": "readBool"}],
+            "name": "onRestrictBackgroundChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"uid": "readInt32"},
+                {"uidPolicies": "readInt32"}
+            ],
+            "name": "onUidPoliciesChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"subId": "readInt32"},
+                {"overrideMask": "readInt32"},
+                {"overrideValue": "readInt32"},
+                {"networkTypes": "readInt32Vector"}
+            ],
+            "name": "onSubscriptionOverride",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"subId": "readInt32"},
+                {
+                    "plans": "readParcelableVector",
+                    "__parcelType": "android.telephony.SubscriptionPlan"
+                }
+            ],
+            "name": "onSubscriptionPlansChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"uid": "readInt32"},
+                {"oldBlockedReason": "readInt32"},
+                {"newBlockedReason": "readInt32"}
+            ],
+            "name": "onBlockedReasonChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "INetworkPolicyListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

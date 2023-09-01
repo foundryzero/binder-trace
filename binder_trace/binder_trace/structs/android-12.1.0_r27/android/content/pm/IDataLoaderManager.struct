@@ -1,0 +1,49 @@
+{
+    "produced_on": "2023-08-22T12:16:41.639493851Z",
+    "source_location": "",
+    "full_name": "android.content.pm.IDataLoaderManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"id": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "params": "readParcelable",
+                        "__parcelType": "android.content.pm.DataLoaderParamsParcel"
+                    }]
+                },
+                {"bindDelayMs": "readInt64"},
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "bindToDataLoader",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"dataLoaderId": "readInt32"}],
+            "name": "getDataLoader",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"dataLoaderId": "readInt32"}],
+            "name": "unbindFromDataLoader",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IDataLoaderManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,41 @@
+{
+    "produced_on": "2023-08-22T14:52:34.743866179Z",
+    "source_location": "",
+    "full_name": "android.hardware.IConsumerIrService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "hasIrEmitter",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"packageName": "readString16"},
+                {"carrierFrequency": "readInt32"},
+                {"pattern": "readInt32Vector"}
+            ],
+            "name": "transmit",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getCarrierFrequencies",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        }
+    ],
+    "name": "IConsumerIrService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

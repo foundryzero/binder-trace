@@ -1,0 +1,67 @@
+{
+    "produced_on": "2023-08-22T12:16:40.989137261Z",
+    "source_location": "",
+    "components": [
+        {"sourceFilePath": "readString16"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "sourceFd": "readParcelable",
+                "__parcelType": "android.os.ParcelFileDescriptor"
+            }]
+        },
+        {"destinationFilePath": "readString16"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "destinationFd": "readParcelable",
+                "__parcelType": "android.os.ParcelFileDescriptor"
+            }]
+        },
+        {"clientUid": "readInt32"},
+        {"clientPid": "readInt32"},
+        {"clientPackageName": "readString16"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "transcodingType": "readParcelable",
+                "__parcelType": "android.media.TranscodingType"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "requestedVideoTrackFormat": "readParcelable",
+                "__parcelType": "android.media.TranscodingVideoTrackFormat"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "priority": "readParcelable",
+                "__parcelType": "android.media.TranscodingSessionPriority"
+            }]
+        },
+        {"requestProgressUpdate": "readBool"},
+        {"requestSessionEventUpdate": "readBool"},
+        {"isForTesting": "readBool"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "testConfig": "readParcelable",
+                "__parcelType": "android.media.TranscodingTestConfig"
+            }]
+        },
+        {"enableStats": "readBool"}
+    ],
+    "full_name": "android.media.TranscodingRequestParcel",
+    "name": "TranscodingRequestParcel",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

@@ -1,0 +1,73 @@
+{
+    "produced_on": "2023-08-22T14:52:36.232101207Z",
+    "source_location": "",
+    "full_name": "android.car.vms.IVmsPublisherService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "layer": "readParcelable",
+                        "__parcelType": "android.car.vms.VmsLayer"
+                    }]
+                },
+                {"publisherId": "readInt32"},
+                {"message": "readByteVector"}
+            ],
+            "name": "publish",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "getSubscriptions",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.car.vms.VmsSubscriptionState"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "offering": "readParcelable",
+                        "__parcelType": "android.car.vms.VmsLayersOffering"
+                    }]
+                }
+            ],
+            "name": "setLayersOffering",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"publisherInfo": "readByteVector"}],
+            "name": "getPublisherId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        }
+    ],
+    "name": "IVmsPublisherService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,701 @@
+{
+    "produced_on": "2023-08-22T14:52:36.284377271Z",
+    "source_location": "",
+    "full_name": "test_package.ITest",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "GetName",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "TestVoidReturn",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "TestOneway",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "GiveMeMyCallingPid",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "GiveMeMyCallingUid",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "CacheCallingInfoFromOneway",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "GiveMeMyCallingPidFromOneway",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "GiveMeMyCallingUidFromOneway",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [{"value": "readInt32"}],
+            "name": "RepeatInt",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [{"value": "readInt64"}],
+            "name": "RepeatLong",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [{"value": "readFloat"}],
+            "name": "RepeatFloat",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readFloat"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [{"value": "readDouble"}],
+            "name": "RepeatDouble",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readDouble"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [{"value": "readBool"}],
+            "name": "RepeatBoolean",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 14,
+            "in": [{"value": "readChar"}],
+            "name": "RepeatChar",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readChar"}
+            ]
+        },
+        {
+            "code": 15,
+            "in": [{"value": "readByte"}],
+            "name": "RepeatByte",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByte"}
+            ]
+        },
+        {
+            "code": 16,
+            "in": [{"value": "readStrongBinder"}],
+            "name": "RepeatBinder",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 17,
+            "in": [{"value": "readStrongBinder"}],
+            "name": "RepeatNullableBinder",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "value": "readParcelable",
+                        "__parcelType": "test_package.IEmpty"
+                    }]
+                }
+            ],
+            "name": "RepeatInterface",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "test_package.IEmpty"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 19,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "value": "readParcelable",
+                        "__parcelType": "test_package.IEmpty"
+                    }]
+                }
+            ],
+            "name": "RepeatNullableInterface",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "test_package.IEmpty"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 20,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "fd": "readParcelable",
+                        "__parcelType": "test_package.ParcelFileDescriptor"
+                    }]
+                }
+            ],
+            "name": "RepeatFd",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "test_package.ParcelFileDescriptor"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 21,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "fd": "readParcelable",
+                        "__parcelType": "test_package.ParcelFileDescriptor"
+                    }]
+                }
+            ],
+            "name": "RepeatNullableFd",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "test_package.ParcelFileDescriptor"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 22,
+            "in": [{"value": "readString16"}],
+            "name": "RepeatString",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 23,
+            "in": [{"value": "readString16"}],
+            "name": "RepeatNullableString",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 24,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "value": "readParcelable",
+                        "__parcelType": "test_package.RegularPolygon"
+                    }]
+                }
+            ],
+            "name": "RepeatPolygon",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "test_package.RegularPolygon"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 25,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "value": "readParcelable",
+                        "__parcelType": "test_package.RegularPolygon"
+                    }]
+                },
+                {"newName": "readString16"}
+            ],
+            "name": "RenamePolygon",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 26,
+            "in": [{
+                "input": "readParcelableVector",
+                "__parcelType": "test_package.boolean"
+            }],
+            "name": "RepeatBooleanArray",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "test_package.boolean"
+                },
+                {
+                    "repeated": "readParcelableVector",
+                    "__parcelType": "test_package.boolean"
+                }
+            ]
+        },
+        {
+            "code": 27,
+            "in": [{"input": "readByteVector"}],
+            "name": "RepeatByteArray",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"},
+                {"repeated": "readByteVector"}
+            ]
+        },
+        {
+            "code": 28,
+            "in": [{
+                "input": "readParcelableVector",
+                "__parcelType": "test_package.char"
+            }],
+            "name": "RepeatCharArray",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "test_package.char"
+                },
+                {
+                    "repeated": "readParcelableVector",
+                    "__parcelType": "test_package.char"
+                }
+            ]
+        },
+        {
+            "code": 29,
+            "in": [{"input": "readInt32Vector"}],
+            "name": "RepeatIntArray",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"},
+                {"repeated": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 30,
+            "in": [{
+                "input": "readParcelableVector",
+                "__parcelType": "test_package.long"
+            }],
+            "name": "RepeatLongArray",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "test_package.long"
+                },
+                {
+                    "repeated": "readParcelableVector",
+                    "__parcelType": "test_package.long"
+                }
+            ]
+        },
+        {
+            "code": 31,
+            "in": [{
+                "input": "readParcelableVector",
+                "__parcelType": "test_package.float"
+            }],
+            "name": "RepeatFloatArray",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "test_package.float"
+                },
+                {
+                    "repeated": "readParcelableVector",
+                    "__parcelType": "test_package.float"
+                }
+            ]
+        },
+        {
+            "code": 32,
+            "in": [{
+                "input": "readParcelableVector",
+                "__parcelType": "test_package.double"
+            }],
+            "name": "RepeatDoubleArray",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "test_package.double"
+                },
+                {
+                    "repeated": "readParcelableVector",
+                    "__parcelType": "test_package.double"
+                }
+            ]
+        },
+        {
+            "code": 33,
+            "in": [{"input": "readString16Vector"}],
+            "name": "RepeatStringArray",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"},
+                {"repeated": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 34,
+            "in": [{
+                "input": "readParcelableVector",
+                "__parcelType": "test_package.RegularPolygon"
+            }],
+            "name": "RepeatRegularPolygonArray",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "test_package.RegularPolygon"
+                },
+                {
+                    "repeated": "readParcelableVector",
+                    "__parcelType": "test_package.RegularPolygon"
+                }
+            ]
+        },
+        {
+            "code": 35,
+            "in": [{
+                "input": "readParcelableVector",
+                "__parcelType": "test_package.boolean"
+            }],
+            "name": "RepeatNullableBooleanArray",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "test_package.boolean"
+                }
+            ]
+        },
+        {
+            "code": 36,
+            "in": [{"input": "readByteVector"}],
+            "name": "RepeatNullableByteArray",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 37,
+            "in": [{
+                "input": "readParcelableVector",
+                "__parcelType": "test_package.char"
+            }],
+            "name": "RepeatNullableCharArray",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "test_package.char"
+                }
+            ]
+        },
+        {
+            "code": 38,
+            "in": [{"input": "readInt32Vector"}],
+            "name": "RepeatNullableIntArray",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 39,
+            "in": [{
+                "input": "readParcelableVector",
+                "__parcelType": "test_package.long"
+            }],
+            "name": "RepeatNullableLongArray",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "test_package.long"
+                }
+            ]
+        },
+        {
+            "code": 40,
+            "in": [{
+                "input": "readParcelableVector",
+                "__parcelType": "test_package.float"
+            }],
+            "name": "RepeatNullableFloatArray",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "test_package.float"
+                }
+            ]
+        },
+        {
+            "code": 41,
+            "in": [{
+                "input": "readParcelableVector",
+                "__parcelType": "test_package.double"
+            }],
+            "name": "RepeatNullableDoubleArray",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "test_package.double"
+                }
+            ]
+        },
+        {
+            "code": 42,
+            "in": [{"input": "readString16Vector"}],
+            "name": "RepeatNullableStringArray",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 43,
+            "in": [{"input": "readString16Vector"}],
+            "name": "DoubleRepeatNullableStringArray",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"},
+                {"repeated": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 44,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "inFoo": "readParcelable",
+                        "__parcelType": "test_package.Foo"
+                    }]
+                }
+            ],
+            "name": "repeatFoo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "test_package.Foo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 45,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "foo": "readParcelable",
+                        "__parcelType": "test_package.Foo"
+                    }]
+                },
+                {"name": "readString16"}
+            ],
+            "name": "renameFoo",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 46,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "foo": "readParcelable",
+                        "__parcelType": "test_package.Foo"
+                    }]
+                },
+                {"name": "readString16"}
+            ],
+            "name": "renameBar",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 47,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "foo": "readParcelable",
+                        "__parcelType": "test_package.Foo"
+                    }]
+                }
+            ],
+            "name": "getF",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 48,
+            "in": [],
+            "name": "NewMethodThatReturns10",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        }
+    ],
+    "name": "ITest",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

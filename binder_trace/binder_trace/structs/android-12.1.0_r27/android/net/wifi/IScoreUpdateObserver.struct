@@ -1,0 +1,51 @@
+{
+    "produced_on": "2023-08-22T12:16:45.402817650Z",
+    "source_location": "",
+    "full_name": "android.net.wifi.IScoreUpdateObserver",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"sessionId": "readInt32"},
+                {"score": "readInt32"}
+            ],
+            "name": "notifyScoreUpdate",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"sessionId": "readInt32"}],
+            "name": "triggerUpdateOfWifiUsabilityStats",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"sessionId": "readInt32"},
+                {"isUsable": "readBool"}
+            ],
+            "name": "notifyStatusUpdate",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"sessionId": "readInt32"}],
+            "name": "requestNudOperation",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"sessionId": "readInt32"}],
+            "name": "blocklistCurrentBssid",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IScoreUpdateObserver",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

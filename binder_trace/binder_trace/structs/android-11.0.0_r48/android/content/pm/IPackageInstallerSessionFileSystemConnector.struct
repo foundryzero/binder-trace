@@ -1,0 +1,27 @@
+{
+    "produced_on": "2023-08-22T12:24:11.551721048Z",
+    "source_location": "",
+    "full_name": "android.content.pm.IPackageInstallerSessionFileSystemConnector",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"name": "readString16"},
+            {"offsetBytes": "readInt64"},
+            {"lengthBytes": "readInt64"},
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "fd": "readParcelable",
+                    "__parcelType": "android.os.ParcelFileDescriptor"
+                }]
+            }
+        ],
+        "name": "writeData",
+        "oneWay": false,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "IPackageInstallerSessionFileSystemConnector",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

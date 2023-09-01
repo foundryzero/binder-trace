@@ -1,0 +1,246 @@
+{
+    "produced_on": "2023-08-22T14:52:35.220561265Z",
+    "source_location": "",
+    "full_name": "android.speech.tts.ITextToSpeechService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"callingInstance": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "text": "readParcelable",
+                        "__parcelType": "CharSequence"
+                    }]
+                },
+                {"queueMode": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"params": "readBundle"}]
+                },
+                {"utteranceId": "readString16"}
+            ],
+            "name": "speak",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"callingInstance": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "text": "readParcelable",
+                        "__parcelType": "CharSequence"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "fileDescriptor": "readParcelable",
+                        "__parcelType": "android.os.ParcelFileDescriptor"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"params": "readBundle"}]
+                },
+                {"utteranceId": "readString16"}
+            ],
+            "name": "synthesizeToFileDescriptor",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"callingInstance": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "audioUri": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                },
+                {"queueMode": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"params": "readBundle"}]
+                },
+                {"utteranceId": "readString16"}
+            ],
+            "name": "playAudio",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"callingInstance": "readStrongBinder"},
+                {"duration": "readInt64"},
+                {"queueMode": "readInt32"},
+                {"utteranceId": "readString16"}
+            ],
+            "name": "playSilence",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "isSpeaking",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [{"callingInstance": "readStrongBinder"}],
+            "name": "stop",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "getLanguage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "getClientDefaultLanguage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"lang": "readString16"},
+                {"country": "readString16"},
+                {"variant": "readString16"}
+            ],
+            "name": "isLanguageAvailable",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"lang": "readString16"},
+                {"country": "readString16"},
+                {"variant": "readString16"}
+            ],
+            "name": "getFeaturesForLanguage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"caller": "readStrongBinder"},
+                {"lang": "readString16"},
+                {"country": "readString16"},
+                {"variant": "readString16"}
+            ],
+            "name": "loadLanguage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"caller": "readStrongBinder"},
+                {"cb": "readStrongBinder"}
+            ],
+            "name": "setCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [],
+            "name": "getVoices",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.speech.tts.Voice"
+                }
+            ]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"caller": "readStrongBinder"},
+                {"voiceName": "readString16"}
+            ],
+            "name": "loadVoice",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"lang": "readString16"},
+                {"country": "readString16"},
+                {"variant": "readString16"}
+            ],
+            "name": "getDefaultVoiceNameFor",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        }
+    ],
+    "name": "ITextToSpeechService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

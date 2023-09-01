@@ -1,0 +1,30 @@
+{
+    "produced_on": "2023-08-22T12:16:40.910846246Z",
+    "source_location": "",
+    "components": [
+        {"flags": "readInt32"},
+        {"frameCount": "readInt64"},
+        {"notificationFrameCount": "readInt64"},
+        {"selectedDeviceId": "readInt32"},
+        {"sessionId": "readInt32"},
+        {"sampleRate": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "streamType": "readParcelable",
+                "__parcelType": "android.media.AudioStreamType"
+            }]
+        },
+        {"afFrameCount": "readInt64"},
+        {"afSampleRate": "readInt32"},
+        {"afLatencyMs": "readInt32"},
+        {"outputId": "readInt32"},
+        {"portId": "readInt32"},
+        {"audioTrack": "readStrongBinder"}
+    ],
+    "full_name": "android.media.CreateTrackResponse",
+    "name": "CreateTrackResponse",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

@@ -1,0 +1,67 @@
+{
+    "produced_on": "2023-08-22T12:24:14.026389604Z",
+    "source_location": "",
+    "components": [
+        {"a": "readString16"},
+        {"b": "readInt32"},
+        {"c": "readFloat"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "d": "readParcelable",
+                "__parcelType": "test_package.Bar"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "e": "readParcelable",
+                "__parcelType": "test_package.Bar"
+            }]
+        },
+        {"f": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "shouldBeByteBar": "readParcelable",
+                "__parcelType": "test_package.ByteEnum"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "shouldBeIntBar": "readParcelable",
+                "__parcelType": "test_package.IntEnum"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "shouldBeLongBar": "readParcelable",
+                "__parcelType": "test_package.LongEnum"
+            }]
+        },
+        {
+            "shouldContainTwoByteFoos": "readParcelableVector",
+            "__parcelType": "test_package.ByteEnum"
+        },
+        {
+            "shouldContainTwoIntFoos": "readParcelableVector",
+            "__parcelType": "test_package.IntEnum"
+        },
+        {
+            "shouldContainTwoLongFoos": "readParcelableVector",
+            "__parcelType": "test_package.LongEnum"
+        },
+        {"g": "readString16Vector"}
+    ],
+    "full_name": "test_package.Foo",
+    "name": "Foo",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

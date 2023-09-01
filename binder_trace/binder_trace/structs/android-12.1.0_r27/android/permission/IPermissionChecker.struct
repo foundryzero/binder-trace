@@ -1,0 +1,76 @@
+{
+    "produced_on": "2023-08-22T12:16:43.527875598Z",
+    "source_location": "",
+    "full_name": "android.permission.IPermissionChecker",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"permission": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributionSource": "readParcelable",
+                        "__parcelType": "android.content.AttributionSourceState"
+                    }]
+                },
+                {"message": "readString16"},
+                {"forDataDelivery": "readBool"},
+                {"startDataDelivery": "readBool"},
+                {"fromDatasource": "readBool"},
+                {"attributedOp": "readInt32"}
+            ],
+            "name": "checkPermission",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"op": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributionSource": "readParcelable",
+                        "__parcelType": "android.content.AttributionSourceState"
+                    }]
+                },
+                {"fromDatasource": "readBool"}
+            ],
+            "name": "finishDataDelivery",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"op": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributionSource": "readParcelable",
+                        "__parcelType": "android.content.AttributionSourceState"
+                    }]
+                },
+                {"message": "readString16"},
+                {"forDataDelivery": "readBool"},
+                {"startDataDelivery": "readBool"}
+            ],
+            "name": "checkOp",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        }
+    ],
+    "name": "IPermissionChecker",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

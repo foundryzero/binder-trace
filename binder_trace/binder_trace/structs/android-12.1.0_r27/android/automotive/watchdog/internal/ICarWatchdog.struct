@@ -1,0 +1,107 @@
+{
+    "produced_on": "2023-08-22T12:16:45.756333519Z",
+    "source_location": "",
+    "full_name": "android.automotive.watchdog.internal.ICarWatchdog",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"service": "readStrongBinder"}],
+            "name": "registerCarWatchdogService",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"service": "readStrongBinder"}],
+            "name": "unregisterCarWatchdogService",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"monitor": "readStrongBinder"}],
+            "name": "registerMonitor",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"monitor": "readStrongBinder"}],
+            "name": "unregisterMonitor",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"service": "readStrongBinder"},
+                {"clientsNotResponding": "readInt32Vector"},
+                {"sessionId": "readInt32"}
+            ],
+            "name": "tellCarWatchdogServiceAlive",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"monitor": "readStrongBinder"},
+                {"pid": "readInt32"}
+            ],
+            "name": "tellDumpFinished",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.automotive.watchdog.internal.StateType"
+                    }]
+                },
+                {"arg1": "readInt32"},
+                {"arg2": "readInt32"}
+            ],
+            "name": "notifySystemStateChange",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{
+                "configs": "readList",
+                "__parcelType": "android.automotive.watchdog.internal.ResourceOveruseConfiguration"
+            }],
+            "name": "updateResourceOveruseConfigurations",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [],
+            "name": "getResourceOveruseConfigurations",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.automotive.watchdog.internal.ResourceOveruseConfiguration"
+                }
+            ]
+        },
+        {
+            "code": 10,
+            "in": [{"disable": "readBool"}],
+            "name": "controlProcessHealthCheck",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICarWatchdog",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

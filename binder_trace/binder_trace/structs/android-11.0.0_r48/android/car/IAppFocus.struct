@@ -1,0 +1,76 @@
+{
+    "produced_on": "2023-08-22T12:24:13.709878149Z",
+    "source_location": "",
+    "full_name": "android.car.IAppFocus",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"callback": "readStrongBinder"},
+                {"appType": "readInt32"}
+            ],
+            "name": "registerFocusListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"callback": "readStrongBinder"},
+                {"appType": "readInt32"}
+            ],
+            "name": "unregisterFocusListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getActiveAppTypes",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"callback": "readStrongBinder"},
+                {"appType": "readInt32"}
+            ],
+            "name": "isOwningFocus",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"callback": "readStrongBinder"},
+                {"appType": "readInt32"}
+            ],
+            "name": "requestAppFocus",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"callback": "readStrongBinder"},
+                {"appType": "readInt32"}
+            ],
+            "name": "abandonAppFocus",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IAppFocus",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

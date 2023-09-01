@@ -1,0 +1,231 @@
+{
+    "produced_on": "2023-08-22T12:16:42.002917053Z",
+    "source_location": "",
+    "full_name": "android.nfc.INfcTag",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nativeHandle": "readInt32"},
+                {"technology": "readInt32"}
+            ],
+            "name": "connect",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"nativeHandle": "readInt32"}],
+            "name": "reconnect",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"nativeHandle": "readInt32"}],
+            "name": "getTechList",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"nativeHandle": "readInt32"}],
+            "name": "isNdef",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"nativeHandle": "readInt32"}],
+            "name": "isPresent",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nativeHandle": "readInt32"},
+                {"data": "readByteVector"},
+                {"raw": "readBool"}
+            ],
+            "name": "transceive",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.nfc.TransceiveResult"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 7,
+            "in": [{"nativeHandle": "readInt32"}],
+            "name": "ndefRead",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.nfc.NdefMessage"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"nativeHandle": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "msg": "readParcelable",
+                        "__parcelType": "android.nfc.NdefMessage"
+                    }]
+                }
+            ],
+            "name": "ndefWrite",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [{"nativeHandle": "readInt32"}],
+            "name": "ndefMakeReadOnly",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [{"nativeHandle": "readInt32"}],
+            "name": "ndefIsWritable",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"nativeHandle": "readInt32"},
+                {"key": "readByteVector"}
+            ],
+            "name": "formatNdef",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [{"nativehandle": "readInt32"}],
+            "name": "rediscover",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.nfc.Tag"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"technology": "readInt32"},
+                {"timeout": "readInt32"}
+            ],
+            "name": "setTimeout",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 14,
+            "in": [{"technology": "readInt32"}],
+            "name": "getTimeout",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 15,
+            "in": [],
+            "name": "resetTimeouts",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [{"ndefType": "readInt32"}],
+            "name": "canMakeReadOnly",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 17,
+            "in": [{"technology": "readInt32"}],
+            "name": "getMaxTransceiveLength",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 18,
+            "in": [],
+            "name": "getExtendedLengthApdusSupported",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "INfcTag",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,148 @@
+{
+    "produced_on": "2023-08-22T12:24:11.922387694Z",
+    "source_location": "",
+    "full_name": "android.os.IVibratorService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "hasVibrator",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "isVibrating",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "registerVibratorStateListener",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "unregisterVibratorStateListener",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "hasAmplitudeControl",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [{"effectIds": "readInt32Vector"}],
+            "name": "areEffectsSupported",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [{"primitiveIds": "readInt32Vector"}],
+            "name": "arePrimitivesSupported",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.os.boolean"
+                }
+            ]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"uid": "readInt32"},
+                {"opPkg": "readString16"},
+                {"alwaysOnId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "effect": "readParcelable",
+                        "__parcelType": "android.os.VibrationEffect"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributes": "readParcelable",
+                        "__parcelType": "android.os.VibrationAttributes"
+                    }]
+                }
+            ],
+            "name": "setAlwaysOnEffect",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"uid": "readInt32"},
+                {"opPkg": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "effect": "readParcelable",
+                        "__parcelType": "android.os.VibrationEffect"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributes": "readParcelable",
+                        "__parcelType": "android.os.VibrationAttributes"
+                    }]
+                },
+                {"reason": "readString16"},
+                {"token": "readStrongBinder"}
+            ],
+            "name": "vibrate",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [{"token": "readStrongBinder"}],
+            "name": "cancelVibrate",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IVibratorService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

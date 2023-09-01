@@ -1,0 +1,196 @@
+{
+    "produced_on": "2023-08-22T12:16:43.732298004Z",
+    "source_location": "",
+    "full_name": "android.hardware.biometrics.face.ISessionCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"challenge": "readInt64"}],
+            "name": "onChallengeGenerated",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"challenge": "readInt64"}],
+            "name": "onChallengeRevoked",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "frame": "readParcelable",
+                        "__parcelType": "android.hardware.biometrics.face.AuthenticationFrame"
+                    }]
+                }
+            ],
+            "name": "onAuthenticationFrame",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "frame": "readParcelable",
+                        "__parcelType": "android.hardware.biometrics.face.EnrollmentFrame"
+                    }]
+                }
+            ],
+            "name": "onEnrollmentFrame",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "error": "readParcelable",
+                        "__parcelType": "android.hardware.biometrics.face.Error"
+                    }]
+                },
+                {"vendorCode": "readInt32"}
+            ],
+            "name": "onError",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"enrollmentId": "readInt32"},
+                {"remaining": "readInt32"}
+            ],
+            "name": "onEnrollmentProgress",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"enrollmentId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "hat": "readParcelable",
+                        "__parcelType": "android.hardware.keymaster.HardwareAuthToken"
+                    }]
+                }
+            ],
+            "name": "onAuthenticationSucceeded",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "onAuthenticationFailed",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [{"durationMillis": "readInt64"}],
+            "name": "onLockoutTimed",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [],
+            "name": "onLockoutPermanent",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [],
+            "name": "onLockoutCleared",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [],
+            "name": "onInteractionDetected",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [{"enrollmentIds": "readInt32Vector"}],
+            "name": "onEnrollmentsEnumerated",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [{
+                "features": "readParcelableVector",
+                "__parcelType": "android.hardware.biometrics.face.Feature"
+            }],
+            "name": "onFeaturesRetrieved",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "feature": "readParcelable",
+                        "__parcelType": "android.hardware.biometrics.face.Feature"
+                    }]
+                }
+            ],
+            "name": "onFeatureSet",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [{"enrollmentIds": "readInt32Vector"}],
+            "name": "onEnrollmentsRemoved",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [{"authenticatorId": "readInt64"}],
+            "name": "onAuthenticatorIdRetrieved",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [{"newAuthenticatorId": "readInt64"}],
+            "name": "onAuthenticatorIdInvalidated",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 19,
+            "in": [],
+            "name": "onSessionClosed",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISessionCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

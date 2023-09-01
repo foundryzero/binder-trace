@@ -1,0 +1,41 @@
+{
+    "produced_on": "2023-08-22T12:16:42.748299949Z",
+    "source_location": "",
+    "full_name": "com.android.wm.shell.recents.IRecentTasks",
+    "calls": [
+        {
+            "code": 2,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "registerRecentTasksListener",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "unregisterRecentTasksListener",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"maxNum": "readInt32"},
+                {"flags": "readInt32"},
+                {"userId": "readInt32"}
+            ],
+            "name": "getRecentTasks",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "com.android.wm.shell.util.GroupedRecentTaskInfo"
+                }
+            ]
+        }
+    ],
+    "name": "IRecentTasks",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

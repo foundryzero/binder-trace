@@ -1,0 +1,112 @@
+{
+    "produced_on": "2023-08-22T12:24:11.685967555Z",
+    "source_location": "",
+    "full_name": "android.hardware.face.IFaceServiceReceiver",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"deviceId": "readInt64"},
+                {"faceId": "readInt32"},
+                {"remaining": "readInt32"}
+            ],
+            "name": "onEnrollResult",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"deviceId": "readInt64"},
+                {"acquiredInfo": "readInt32"},
+                {"vendorCode": "readInt32"}
+            ],
+            "name": "onAcquired",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"deviceId": "readInt64"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "face": "readParcelable",
+                        "__parcelType": "android.hardware.face.Face"
+                    }]
+                },
+                {"userId": "readInt32"},
+                {"isStrongBiometric": "readBool"}
+            ],
+            "name": "onAuthenticationSucceeded",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"deviceId": "readInt64"}],
+            "name": "onAuthenticationFailed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"deviceId": "readInt64"},
+                {"error": "readInt32"},
+                {"vendorCode": "readInt32"}
+            ],
+            "name": "onError",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"deviceId": "readInt64"},
+                {"faceId": "readInt32"},
+                {"remaining": "readInt32"}
+            ],
+            "name": "onRemoved",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"deviceId": "readInt64"},
+                {"faceId": "readInt32"},
+                {"remaining": "readInt32"}
+            ],
+            "name": "onEnumerated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"success": "readBool"},
+                {"feature": "readInt32"}
+            ],
+            "name": "onFeatureSet",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"success": "readBool"},
+                {"feature": "readInt32"},
+                {"value": "readBool"}
+            ],
+            "name": "onFeatureGet",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IFaceServiceReceiver",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,30 @@
+{
+    "produced_on": "2023-08-22T12:16:43.881450358Z",
+    "source_location": "",
+    "components": [
+        {
+            "measurements": "readParcelableVector",
+            "__parcelType": "android.hardware.gnss.GnssMeasurement"
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "clock": "readParcelable",
+                "__parcelType": "android.hardware.gnss.GnssClock"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "elapsedRealtime": "readParcelable",
+                "__parcelType": "android.hardware.gnss.ElapsedRealtime"
+            }]
+        }
+    ],
+    "full_name": "android.hardware.gnss.GnssData",
+    "name": "GnssData",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

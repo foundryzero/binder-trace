@@ -1,0 +1,593 @@
+{
+    "produced_on": "2023-08-22T12:24:12.305561602Z",
+    "source_location": "",
+    "full_name": "com.android.internal.app.IAppOpsService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"code": "readInt32"},
+                {"uid": "readInt32"},
+                {"packageName": "readString16"}
+            ],
+            "name": "checkOperation",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"code": "readInt32"},
+                {"uid": "readInt32"},
+                {"packageName": "readString16"},
+                {"attributionTag": "readString16"},
+                {"shouldCollectAsyncNotedOp": "readBool"},
+                {"message": "readString16"},
+                {"shouldCollectMessage": "readBool"}
+            ],
+            "name": "noteOperation",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"clientId": "readStrongBinder"},
+                {"code": "readInt32"},
+                {"uid": "readInt32"},
+                {"packageName": "readString16"},
+                {"attributionTag": "readString16"},
+                {"startIfModeDefault": "readBool"},
+                {"shouldCollectAsyncNotedOp": "readBool"},
+                {"message": "readString16"},
+                {"shouldCollectMessage": "readBool"}
+            ],
+            "name": "startOperation",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"clientId": "readStrongBinder"},
+                {"code": "readInt32"},
+                {"uid": "readInt32"},
+                {"packageName": "readString16"},
+                {"attributionTag": "readString16"}
+            ],
+            "name": "finishOperation",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"op": "readInt32"},
+                {"packageName": "readString16"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "startWatchingMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "stopWatchingMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"permission": "readString16"}],
+            "name": "permissionToOpCode",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"code": "readInt32"},
+                {"usage": "readInt32"},
+                {"uid": "readInt32"},
+                {"packageName": "readString16"}
+            ],
+            "name": "checkAudioOperation",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [{"opCode": "readInt32"}],
+            "name": "shouldCollectNotes",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [{"mode": "readInt32"}],
+            "name": "setCameraAudioRestriction",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"code": "readInt32"},
+                {"proxiedUid": "readInt32"},
+                {"proxiedPackageName": "readString16"},
+                {"proxiedAttributionTag": "readString16"},
+                {"proxyUid": "readInt32"},
+                {"proxyPackageName": "readString16"},
+                {"proxyAttributionTag": "readString16"},
+                {"shouldCollectAsyncNotedOp": "readBool"},
+                {"message": "readString16"},
+                {"shouldCollectMessage": "readBool"}
+            ],
+            "name": "noteProxyOperation",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"uid": "readInt32"},
+                {"packageName": "readString16"}
+            ],
+            "name": "checkPackage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [],
+            "name": "collectRuntimeAppOpAccessMessage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.app.RuntimeAppOpAccessMessage"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"packageName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "appOp": "readParcelable",
+                        "__parcelType": "android.app.SyncNotedAppOp"
+                    }]
+                },
+                {"message": "readString16"}
+            ],
+            "name": "reportRuntimeAppOpAccessMessageAndGetConfig",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.internal.app.MessageSamplingConfig"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 15,
+            "in": [{"ops": "readInt32Vector"}],
+            "name": "getPackagesForOps",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "com.android.internal.app.AppOpsManager.PackageOps"
+                }
+            ]
+        },
+        {
+            "code": 16,
+            "in": [
+                {"uid": "readInt32"},
+                {"packageName": "readString16"},
+                {"ops": "readInt32Vector"}
+            ],
+            "name": "getOpsForPackage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "com.android.internal.app.AppOpsManager.PackageOps"
+                }
+            ]
+        },
+        {
+            "code": 17,
+            "in": [
+                {"uid": "readInt32"},
+                {"packageName": "readString16"},
+                {"attributionTag": "readString16"},
+                {
+                    "ops": "readList",
+                    "__parcelType": "String"
+                },
+                {"filter": "readInt32"},
+                {"beginTimeMillis": "readInt64"},
+                {"endTimeMillis": "readInt64"},
+                {"flags": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callback": "readParcelable",
+                        "__parcelType": "android.os.RemoteCallback"
+                    }]
+                }
+            ],
+            "name": "getHistoricalOps",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"uid": "readInt32"},
+                {"packageName": "readString16"},
+                {"attributionTag": "readString16"},
+                {
+                    "ops": "readList",
+                    "__parcelType": "String"
+                },
+                {"filter": "readInt32"},
+                {"beginTimeMillis": "readInt64"},
+                {"endTimeMillis": "readInt64"},
+                {"flags": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callback": "readParcelable",
+                        "__parcelType": "android.os.RemoteCallback"
+                    }]
+                }
+            ],
+            "name": "getHistoricalOpsFromDiskRaw",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 19,
+            "in": [{"duration": "readInt64"}],
+            "name": "offsetHistory",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 20,
+            "in": [
+                {"mode": "readInt32"},
+                {"baseSnapshotInterval": "readInt64"},
+                {"compressionStep": "readInt32"}
+            ],
+            "name": "setHistoryParameters",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 21,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "ops": "readParcelable",
+                        "__parcelType": "com.android.internal.app.AppOpsManager.HistoricalOps"
+                    }]
+                }
+            ],
+            "name": "addHistoricalOps",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 22,
+            "in": [],
+            "name": "resetHistoryParameters",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 23,
+            "in": [],
+            "name": "clearHistory",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 24,
+            "in": [{"offlineDurationMillis": "readInt64"}],
+            "name": "rebootHistory",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 25,
+            "in": [
+                {"uid": "readInt32"},
+                {"ops": "readInt32Vector"}
+            ],
+            "name": "getUidOps",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "com.android.internal.app.AppOpsManager.PackageOps"
+                }
+            ]
+        },
+        {
+            "code": 26,
+            "in": [
+                {"code": "readInt32"},
+                {"uid": "readInt32"},
+                {"mode": "readInt32"}
+            ],
+            "name": "setUidMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 27,
+            "in": [
+                {"code": "readInt32"},
+                {"uid": "readInt32"},
+                {"packageName": "readString16"},
+                {"mode": "readInt32"}
+            ],
+            "name": "setMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 28,
+            "in": [
+                {"reqUserId": "readInt32"},
+                {"reqPackageName": "readString16"}
+            ],
+            "name": "resetAllModes",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 29,
+            "in": [
+                {"code": "readInt32"},
+                {"usage": "readInt32"},
+                {"uid": "readInt32"},
+                {"mode": "readInt32"},
+                {"exceptionPackages": "readString16Vector"}
+            ],
+            "name": "setAudioRestriction",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 30,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"restrictions": "readBundle"}]
+                },
+                {"token": "readStrongBinder"},
+                {"userHandle": "readInt32"}
+            ],
+            "name": "setUserRestrictions",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 31,
+            "in": [
+                {"code": "readInt32"},
+                {"restricted": "readBool"},
+                {"token": "readStrongBinder"},
+                {"userHandle": "readInt32"},
+                {"exceptionPackages": "readString16Vector"}
+            ],
+            "name": "setUserRestriction",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 32,
+            "in": [{"userHandle": "readInt32"}],
+            "name": "removeUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 33,
+            "in": [
+                {"ops": "readInt32Vector"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "startWatchingActive",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 34,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "stopWatchingActive",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 35,
+            "in": [
+                {"code": "readInt32"},
+                {"uid": "readInt32"},
+                {"packageName": "readString16"}
+            ],
+            "name": "isOperationActive",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 36,
+            "in": [
+                {"ops": "readInt32Vector"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "startWatchingStarted",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 37,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "stopWatchingStarted",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 38,
+            "in": [
+                {"op": "readInt32"},
+                {"packageName": "readString16"},
+                {"flags": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "startWatchingModeWithFlags",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 39,
+            "in": [
+                {"ops": "readInt32Vector"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "startWatchingNoted",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 40,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "stopWatchingNoted",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 41,
+            "in": [
+                {"packageName": "readString16"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "startWatchingAsyncNoted",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 42,
+            "in": [
+                {"packageName": "readString16"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "stopWatchingAsyncNoted",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 43,
+            "in": [{"packageName": "readString16"}],
+            "name": "extractAsyncOps",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.app.AsyncNotedAppOp"
+                }
+            ]
+        },
+        {
+            "code": 44,
+            "in": [
+                {"code": "readInt32"},
+                {"uid": "readInt32"},
+                {"packageName": "readString16"}
+            ],
+            "name": "checkOperationRaw",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 45,
+            "in": [],
+            "name": "reloadNonHistoricalState",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 46,
+            "in": [
+                {"stackTrace": "readString16"},
+                {"op": "readInt32"},
+                {"packageName": "readString16"},
+                {"version": "readInt64"}
+            ],
+            "name": "collectNoteOpCallsForValidation",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IAppOpsService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

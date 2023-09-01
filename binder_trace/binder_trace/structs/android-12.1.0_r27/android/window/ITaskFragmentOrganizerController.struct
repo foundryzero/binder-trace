@@ -1,0 +1,58 @@
+{
+    "produced_on": "2023-08-22T12:16:42.495380212Z",
+    "source_location": "",
+    "full_name": "android.window.ITaskFragmentOrganizerController",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"organizer": "readStrongBinder"}],
+            "name": "registerOrganizer",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"organizer": "readStrongBinder"}],
+            "name": "unregisterOrganizer",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"organizer": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "definition": "readParcelable",
+                        "__parcelType": "android.view.RemoteAnimationDefinition"
+                    }]
+                }
+            ],
+            "name": "registerRemoteAnimations",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"organizer": "readStrongBinder"}],
+            "name": "unregisterRemoteAnimations",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"activityToken": "readStrongBinder"}],
+            "name": "isActivityEmbedded",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "ITaskFragmentOrganizerController",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

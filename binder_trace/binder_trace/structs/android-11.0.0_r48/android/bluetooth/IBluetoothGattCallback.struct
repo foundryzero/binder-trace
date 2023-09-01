@@ -1,0 +1,172 @@
+{
+    "produced_on": "2023-08-22T12:24:14.437661780Z",
+    "source_location": "",
+    "full_name": "android.bluetooth.IBluetoothGattCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"status": "readInt32"},
+                {"clientIf": "readInt32"}
+            ],
+            "name": "onClientRegistered",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"status": "readInt32"},
+                {"clientIf": "readInt32"},
+                {"connected": "readBool"},
+                {"address": "readString16"}
+            ],
+            "name": "onClientConnectionState",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"address": "readString16"},
+                {"txPhy": "readInt32"},
+                {"rxPhy": "readInt32"},
+                {"status": "readInt32"}
+            ],
+            "name": "onPhyUpdate",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"address": "readString16"},
+                {"txPhy": "readInt32"},
+                {"rxPhy": "readInt32"},
+                {"status": "readInt32"}
+            ],
+            "name": "onPhyRead",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"address": "readString16"},
+                {
+                    "services": "readList",
+                    "__parcelType": "android.bluetooth.BluetoothGattService"
+                },
+                {"status": "readInt32"}
+            ],
+            "name": "onSearchComplete",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"address": "readString16"},
+                {"status": "readInt32"},
+                {"handle": "readInt32"},
+                {"value": "readByteVector"}
+            ],
+            "name": "onCharacteristicRead",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"address": "readString16"},
+                {"status": "readInt32"},
+                {"handle": "readInt32"}
+            ],
+            "name": "onCharacteristicWrite",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"address": "readString16"},
+                {"status": "readInt32"}
+            ],
+            "name": "onExecuteWrite",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"address": "readString16"},
+                {"status": "readInt32"},
+                {"handle": "readInt32"},
+                {"value": "readByteVector"}
+            ],
+            "name": "onDescriptorRead",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"address": "readString16"},
+                {"status": "readInt32"},
+                {"handle": "readInt32"}
+            ],
+            "name": "onDescriptorWrite",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"address": "readString16"},
+                {"handle": "readInt32"},
+                {"value": "readByteVector"}
+            ],
+            "name": "onNotify",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"address": "readString16"},
+                {"rssi": "readInt32"},
+                {"status": "readInt32"}
+            ],
+            "name": "onReadRemoteRssi",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"address": "readString16"},
+                {"mtu": "readInt32"},
+                {"status": "readInt32"}
+            ],
+            "name": "onConfigureMTU",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"address": "readString16"},
+                {"interval": "readInt32"},
+                {"latency": "readInt32"},
+                {"timeout": "readInt32"},
+                {"status": "readInt32"}
+            ],
+            "name": "onConnectionUpdated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IBluetoothGattCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

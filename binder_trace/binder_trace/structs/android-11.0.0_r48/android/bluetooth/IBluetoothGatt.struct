@@ -1,0 +1,753 @@
+{
+    "produced_on": "2023-08-22T12:24:14.435360498Z",
+    "source_location": "",
+    "full_name": "android.bluetooth.IBluetoothGatt",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"states": "readInt32Vector"}],
+            "name": "getDevicesMatchingConnectionStates",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.bluetooth.BluetoothDevice"
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"callback": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "workSource": "readParcelable",
+                        "__parcelType": "android.os.WorkSource"
+                    }]
+                }
+            ],
+            "name": "registerScanner",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"scannerId": "readInt32"}],
+            "name": "unregisterScanner",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"scannerId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "settings": "readParcelable",
+                        "__parcelType": "android.bluetooth.le.ScanSettings"
+                    }]
+                },
+                {
+                    "filters": "readList",
+                    "__parcelType": "android.bluetooth.le.ScanFilter"
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "scanStorages": "readParcelable",
+                        "__parcelType": "android.bluetooth.List"
+                    }]
+                },
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "startScan",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "intent": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "settings": "readParcelable",
+                        "__parcelType": "android.bluetooth.le.ScanSettings"
+                    }]
+                },
+                {
+                    "filters": "readList",
+                    "__parcelType": "android.bluetooth.le.ScanFilter"
+                },
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "startScanForIntent",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "intent": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                },
+                {"callingPackage": "readString16"}
+            ],
+            "name": "stopScanForIntent",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"scannerId": "readInt32"}],
+            "name": "stopScan",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{"scannerId": "readInt32"}],
+            "name": "flushPendingBatchResults",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "parameters": "readParcelable",
+                        "__parcelType": "android.bluetooth.le.AdvertisingSetParameters"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "advertiseData": "readParcelable",
+                        "__parcelType": "android.bluetooth.le.AdvertiseData"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "scanResponse": "readParcelable",
+                        "__parcelType": "android.bluetooth.le.AdvertiseData"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "periodicParameters": "readParcelable",
+                        "__parcelType": "android.bluetooth.le.PeriodicAdvertisingParameters"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "periodicData": "readParcelable",
+                        "__parcelType": "android.bluetooth.le.AdvertiseData"
+                    }]
+                },
+                {"duration": "readInt32"},
+                {"maxExtAdvEvents": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "startAdvertisingSet",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "stopAdvertisingSet",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [{"advertiserId": "readInt32"}],
+            "name": "getOwnAddress",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"advertiserId": "readInt32"},
+                {"enable": "readBool"},
+                {"duration": "readInt32"},
+                {"maxExtAdvEvents": "readInt32"}
+            ],
+            "name": "enableAdvertisingSet",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"advertiserId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "data": "readParcelable",
+                        "__parcelType": "android.bluetooth.le.AdvertiseData"
+                    }]
+                }
+            ],
+            "name": "setAdvertisingData",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"advertiserId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "data": "readParcelable",
+                        "__parcelType": "android.bluetooth.le.AdvertiseData"
+                    }]
+                }
+            ],
+            "name": "setScanResponseData",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"advertiserId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "parameters": "readParcelable",
+                        "__parcelType": "android.bluetooth.le.AdvertisingSetParameters"
+                    }]
+                }
+            ],
+            "name": "setAdvertisingParameters",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [
+                {"advertiserId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "parameters": "readParcelable",
+                        "__parcelType": "android.bluetooth.le.PeriodicAdvertisingParameters"
+                    }]
+                }
+            ],
+            "name": "setPeriodicAdvertisingParameters",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [
+                {"advertiserId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "data": "readParcelable",
+                        "__parcelType": "android.bluetooth.le.AdvertiseData"
+                    }]
+                }
+            ],
+            "name": "setPeriodicAdvertisingData",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"advertiserId": "readInt32"},
+                {"enable": "readBool"}
+            ],
+            "name": "setPeriodicAdvertisingEnable",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 19,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "scanResult": "readParcelable",
+                        "__parcelType": "android.bluetooth.le.ScanResult"
+                    }]
+                },
+                {"skip": "readInt32"},
+                {"timeout": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "registerSync",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 20,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "unregisterSync",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 21,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "appId": "readParcelable",
+                        "__parcelType": "android.os.ParcelUuid"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "registerClient",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 22,
+            "in": [{"clientIf": "readInt32"}],
+            "name": "unregisterClient",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 23,
+            "in": [
+                {"clientIf": "readInt32"},
+                {"address": "readString16"},
+                {"isDirect": "readBool"},
+                {"transport": "readInt32"},
+                {"opportunistic": "readBool"},
+                {"phy": "readInt32"}
+            ],
+            "name": "clientConnect",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 24,
+            "in": [
+                {"clientIf": "readInt32"},
+                {"address": "readString16"}
+            ],
+            "name": "clientDisconnect",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 25,
+            "in": [
+                {"clientIf": "readInt32"},
+                {"address": "readString16"},
+                {"txPhy": "readInt32"},
+                {"rxPhy": "readInt32"},
+                {"phyOptions": "readInt32"}
+            ],
+            "name": "clientSetPreferredPhy",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 26,
+            "in": [
+                {"clientIf": "readInt32"},
+                {"address": "readString16"}
+            ],
+            "name": "clientReadPhy",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 27,
+            "in": [
+                {"clientIf": "readInt32"},
+                {"address": "readString16"}
+            ],
+            "name": "refreshDevice",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 28,
+            "in": [
+                {"clientIf": "readInt32"},
+                {"address": "readString16"}
+            ],
+            "name": "discoverServices",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 29,
+            "in": [
+                {"clientIf": "readInt32"},
+                {"address": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "uuid": "readParcelable",
+                        "__parcelType": "android.os.ParcelUuid"
+                    }]
+                }
+            ],
+            "name": "discoverServiceByUuid",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 30,
+            "in": [
+                {"clientIf": "readInt32"},
+                {"address": "readString16"},
+                {"handle": "readInt32"},
+                {"authReq": "readInt32"}
+            ],
+            "name": "readCharacteristic",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 31,
+            "in": [
+                {"clientIf": "readInt32"},
+                {"address": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "uuid": "readParcelable",
+                        "__parcelType": "android.os.ParcelUuid"
+                    }]
+                },
+                {"startHandle": "readInt32"},
+                {"endHandle": "readInt32"},
+                {"authReq": "readInt32"}
+            ],
+            "name": "readUsingCharacteristicUuid",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 32,
+            "in": [
+                {"clientIf": "readInt32"},
+                {"address": "readString16"},
+                {"handle": "readInt32"},
+                {"writeType": "readInt32"},
+                {"authReq": "readInt32"},
+                {"value": "readByteVector"}
+            ],
+            "name": "writeCharacteristic",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 33,
+            "in": [
+                {"clientIf": "readInt32"},
+                {"address": "readString16"},
+                {"handle": "readInt32"},
+                {"authReq": "readInt32"}
+            ],
+            "name": "readDescriptor",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 34,
+            "in": [
+                {"clientIf": "readInt32"},
+                {"address": "readString16"},
+                {"handle": "readInt32"},
+                {"authReq": "readInt32"},
+                {"value": "readByteVector"}
+            ],
+            "name": "writeDescriptor",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 35,
+            "in": [
+                {"clientIf": "readInt32"},
+                {"address": "readString16"},
+                {"handle": "readInt32"},
+                {"enable": "readBool"}
+            ],
+            "name": "registerForNotification",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 36,
+            "in": [
+                {"clientIf": "readInt32"},
+                {"address": "readString16"}
+            ],
+            "name": "beginReliableWrite",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 37,
+            "in": [
+                {"clientIf": "readInt32"},
+                {"address": "readString16"},
+                {"execute": "readBool"}
+            ],
+            "name": "endReliableWrite",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 38,
+            "in": [
+                {"clientIf": "readInt32"},
+                {"address": "readString16"}
+            ],
+            "name": "readRemoteRssi",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 39,
+            "in": [
+                {"clientIf": "readInt32"},
+                {"address": "readString16"},
+                {"mtu": "readInt32"}
+            ],
+            "name": "configureMTU",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 40,
+            "in": [
+                {"clientIf": "readInt32"},
+                {"address": "readString16"},
+                {"connectionPriority": "readInt32"}
+            ],
+            "name": "connectionParameterUpdate",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 41,
+            "in": [
+                {"clientIf": "readInt32"},
+                {"address": "readString16"},
+                {"minInterval": "readInt32"},
+                {"maxInterval": "readInt32"},
+                {"slaveLatency": "readInt32"},
+                {"supervisionTimeout": "readInt32"},
+                {"minConnectionEventLen": "readInt32"},
+                {"maxConnectionEventLen": "readInt32"}
+            ],
+            "name": "leConnectionUpdate",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 42,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "appId": "readParcelable",
+                        "__parcelType": "android.os.ParcelUuid"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "registerServer",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 43,
+            "in": [{"serverIf": "readInt32"}],
+            "name": "unregisterServer",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 44,
+            "in": [
+                {"serverIf": "readInt32"},
+                {"address": "readString16"},
+                {"isDirect": "readBool"},
+                {"transport": "readInt32"}
+            ],
+            "name": "serverConnect",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 45,
+            "in": [
+                {"serverIf": "readInt32"},
+                {"address": "readString16"}
+            ],
+            "name": "serverDisconnect",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 46,
+            "in": [
+                {"clientIf": "readInt32"},
+                {"address": "readString16"},
+                {"txPhy": "readInt32"},
+                {"rxPhy": "readInt32"},
+                {"phyOptions": "readInt32"}
+            ],
+            "name": "serverSetPreferredPhy",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 47,
+            "in": [
+                {"clientIf": "readInt32"},
+                {"address": "readString16"}
+            ],
+            "name": "serverReadPhy",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 48,
+            "in": [
+                {"serverIf": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "service": "readParcelable",
+                        "__parcelType": "android.bluetooth.BluetoothGattService"
+                    }]
+                }
+            ],
+            "name": "addService",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 49,
+            "in": [
+                {"serverIf": "readInt32"},
+                {"handle": "readInt32"}
+            ],
+            "name": "removeService",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 50,
+            "in": [{"serverIf": "readInt32"}],
+            "name": "clearServices",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 51,
+            "in": [
+                {"serverIf": "readInt32"},
+                {"address": "readString16"},
+                {"requestId": "readInt32"},
+                {"status": "readInt32"},
+                {"offset": "readInt32"},
+                {"value": "readByteVector"}
+            ],
+            "name": "sendResponse",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 52,
+            "in": [
+                {"serverIf": "readInt32"},
+                {"address": "readString16"},
+                {"handle": "readInt32"},
+                {"confirm": "readBool"},
+                {"value": "readByteVector"}
+            ],
+            "name": "sendNotification",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 53,
+            "in": [],
+            "name": "disconnectAll",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 54,
+            "in": [],
+            "name": "unregAll",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 55,
+            "in": [],
+            "name": "numHwTrackFiltersAvailable",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        }
+    ],
+    "name": "IBluetoothGatt",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,75 @@
+{
+    "produced_on": "2023-08-22T12:16:45.946775187Z",
+    "source_location": "",
+    "full_name": "com.android.server.profcollect.IProfCollectd",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "schedule",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "terminate",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"tag": "readString16"}],
+            "name": "trace_once",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"blocking": "readBool"}],
+            "name": "process",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "report",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"bb_profile_id": "readInt32"},
+                {"report": "readString16"}
+            ],
+            "name": "copy_report_to_bb",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"report": "readString16"}],
+            "name": "delete_report",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "get_supported_provider",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        }
+    ],
+    "name": "IProfCollectd",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

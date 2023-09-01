@@ -1,0 +1,79 @@
+{
+    "produced_on": "2023-08-22T12:24:12.029909068Z",
+    "source_location": "",
+    "full_name": "android.service.autofill.augmented.IAugmentedAutofillService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"debug": "readBool"},
+                {"verbose": "readBool"}
+            ],
+            "name": "onConnected",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "onDisconnected",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"sessionId": "readInt32"},
+                {"autofillManagerClient": "readStrongBinder"},
+                {"taskId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "activityComponent": "readParcelable",
+                        "__parcelType": "android.content.ComponentName"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "focusedId": "readParcelable",
+                        "__parcelType": "android.view.autofill.AutofillId"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "focusedValue": "readParcelable",
+                        "__parcelType": "android.view.autofill.AutofillValue"
+                    }]
+                },
+                {"requestTime": "readInt64"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "inlineSuggestionsRequest": "readParcelable",
+                        "__parcelType": "android.view.inputmethod.InlineSuggestionsRequest"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "onFillRequest",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "onDestroyAllFillWindowsRequest",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IAugmentedAutofillService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,108 @@
+{
+    "produced_on": "2023-08-22T14:52:35.430591056Z",
+    "source_location": "",
+    "full_name": "com.android.internal.view.IInputContextCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "textBeforeCursor": "readParcelable",
+                        "__parcelType": "CharSequence"
+                    }]
+                },
+                {"seq": "readInt32"}
+            ],
+            "name": "setTextBeforeCursor",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "textAfterCursor": "readParcelable",
+                        "__parcelType": "CharSequence"
+                    }]
+                },
+                {"seq": "readInt32"}
+            ],
+            "name": "setTextAfterCursor",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"capsMode": "readInt32"},
+                {"seq": "readInt32"}
+            ],
+            "name": "setCursorCapsMode",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "extractedText": "readParcelable",
+                        "__parcelType": "android.view.inputmethod.ExtractedText"
+                    }]
+                },
+                {"seq": "readInt32"}
+            ],
+            "name": "setExtractedText",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "selectedText": "readParcelable",
+                        "__parcelType": "CharSequence"
+                    }]
+                },
+                {"seq": "readInt32"}
+            ],
+            "name": "setSelectedText",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"result": "readBool"},
+                {"seq": "readInt32"}
+            ],
+            "name": "setRequestUpdateCursorAnchorInfoResult",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"result": "readBool"},
+                {"seq": "readInt32"}
+            ],
+            "name": "setCommitContentResult",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IInputContextCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,66 @@
+{
+    "produced_on": "2023-08-22T12:16:43.058511004Z",
+    "source_location": "",
+    "full_name": "com.android.internal.telecom.ICallDiagnosticServiceAdapter",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"callId": "readString16"},
+                {"messageId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "message": "readParcelable",
+                        "__parcelType": "CharSequence"
+                    }]
+                }
+            ],
+            "name": "displayDiagnosticMessage",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"callId": "readString16"},
+                {"messageId": "readInt32"}
+            ],
+            "name": "clearDiagnosticMessage",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"callId": "readString16"},
+                {"message": "readInt32"},
+                {"value": "readInt32"}
+            ],
+            "name": "sendDeviceToDeviceMessage",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"callId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "message": "readParcelable",
+                        "__parcelType": "CharSequence"
+                    }]
+                }
+            ],
+            "name": "overrideDisconnectMessage",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICallDiagnosticServiceAdapter",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

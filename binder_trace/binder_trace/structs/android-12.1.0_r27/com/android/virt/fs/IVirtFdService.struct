@@ -1,0 +1,72 @@
+{
+    "produced_on": "2023-08-22T12:16:45.356788377Z",
+    "source_location": "",
+    "full_name": "com.android.virt.fs.IVirtFdService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"id": "readInt32"},
+                {"offset": "readInt64"},
+                {"size": "readInt32"}
+            ],
+            "name": "readFile",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"id": "readInt32"},
+                {"offset": "readInt64"},
+                {"size": "readInt32"}
+            ],
+            "name": "readFsverityMerkleTree",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"id": "readInt32"}],
+            "name": "readFsveritySignature",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"id": "readInt32"},
+                {"buf": "readByteVector"},
+                {"offset": "readInt64"}
+            ],
+            "name": "writeFile",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"id": "readInt32"},
+                {"size": "readInt64"}
+            ],
+            "name": "resize",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IVirtFdService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

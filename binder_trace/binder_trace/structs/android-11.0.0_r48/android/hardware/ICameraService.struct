@@ -1,0 +1,243 @@
+{
+    "produced_on": "2023-08-22T12:24:10.882706447Z",
+    "source_location": "",
+    "full_name": "android.hardware.ICameraService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"type": "readInt32"}],
+            "name": "getNumberOfCameras",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"cameraId": "readInt32"}],
+            "name": "getCameraInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.CameraInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"client": "readStrongBinder"},
+                {"cameraId": "readInt32"},
+                {"opPackageName": "readString16"},
+                {"clientUid": "readInt32"},
+                {"clientPid": "readInt32"}
+            ],
+            "name": "connect",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"callbacks": "readStrongBinder"},
+                {"cameraId": "readString16"},
+                {"opPackageName": "readString16"},
+                {"featureId": "readString16"},
+                {"clientUid": "readInt32"}
+            ],
+            "name": "connectDevice",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"client": "readStrongBinder"},
+                {"cameraId": "readInt32"},
+                {"halVersion": "readInt32"},
+                {"opPackageName": "readString16"},
+                {"clientUid": "readInt32"}
+            ],
+            "name": "connectLegacy",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "addListener",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.CameraStatus"
+                }
+            ]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "getConcurrentCameraIds",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.camera2.utils.ConcurrentCameraIdCombination"
+                }
+            ]
+        },
+        {
+            "code": 8,
+            "in": [{
+                "sessions": "readParcelableVector",
+                "__parcelType": "android.hardware.camera2.utils.CameraIdAndSessionConfiguration"
+            }],
+            "name": "isConcurrentSessionConfigurationSupported",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "removeListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [{"cameraId": "readString16"}],
+            "name": "getCameraCharacteristics",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.camera2.impl.CameraMetadataNative"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 11,
+            "in": [],
+            "name": "getCameraVendorTagDescriptor",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.camera2.params.VendorTagDescriptor"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 12,
+            "in": [],
+            "name": "getCameraVendorTagCache",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.camera2.params.VendorTagDescriptorCache"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 13,
+            "in": [{"cameraId": "readInt32"}],
+            "name": "getLegacyParameters",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"cameraId": "readString16"},
+                {"apiVersion": "readInt32"}
+            ],
+            "name": "supportsCameraApi",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 15,
+            "in": [{"cameraId": "readString16"}],
+            "name": "isHiddenPhysicalCamera",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 16,
+            "in": [
+                {"cameraId": "readString16"},
+                {"enabled": "readBool"},
+                {"clientBinder": "readStrongBinder"}
+            ],
+            "name": "setTorchMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [
+                {"eventId": "readInt32"},
+                {"args": "readInt32Vector"}
+            ],
+            "name": "notifySystemEvent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [{"newState": "readInt64"}],
+            "name": "notifyDeviceStateChange",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICameraService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

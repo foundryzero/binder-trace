@@ -1,0 +1,43 @@
+{
+    "produced_on": "2023-08-22T12:24:12.551489146Z",
+    "source_location": "",
+    "full_name": "android.media.IRemoteVolumeController",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionToken": "readParcelable",
+                        "__parcelType": "android.media.MediaSession.Token"
+                    }]
+                },
+                {"flags": "readInt32"}
+            ],
+            "name": "remoteVolumeChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionToken": "readParcelable",
+                        "__parcelType": "android.media.MediaSession.Token"
+                    }]
+                }
+            ],
+            "name": "updateRemoteController",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IRemoteVolumeController",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

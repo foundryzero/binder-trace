@@ -1,0 +1,74 @@
+{
+    "produced_on": "2023-08-22T12:16:41.168502680Z",
+    "source_location": "",
+    "full_name": "android.media.IMediaCommunicationService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionToken": "readParcelable",
+                        "__parcelType": "android.media.Session2Token"
+                    }]
+                }
+            ],
+            "name": "notifySession2Created",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"controllerPackageName": "readString16"},
+                {"controllerPid": "readInt32"},
+                {"controllerUid": "readInt32"}
+            ],
+            "name": "isTrusted",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"userId": "readInt32"}],
+            "name": "getSession2Tokens",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.media.MediaParceledListSlice"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"callback": "readStrongBinder"},
+                {"packageName": "readString16"}
+            ],
+            "name": "registerCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "unregisterCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IMediaCommunicationService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

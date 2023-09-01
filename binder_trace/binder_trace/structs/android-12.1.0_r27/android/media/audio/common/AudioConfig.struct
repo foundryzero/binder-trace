@@ -1,0 +1,29 @@
+{
+    "produced_on": "2023-08-22T12:16:42.825526769Z",
+    "source_location": "",
+    "components": [
+        {"sampleRateHz": "readInt32"},
+        {"channelMask": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "format": "readParcelable",
+                "__parcelType": "android.media.audio.common.AudioFormat"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "offloadInfo": "readParcelable",
+                "__parcelType": "android.media.audio.common.AudioOffloadInfo"
+            }]
+        },
+        {"frameCount": "readInt64"}
+    ],
+    "full_name": "android.media.audio.common.AudioConfig",
+    "name": "AudioConfig",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

@@ -1,0 +1,75 @@
+{
+    "produced_on": "2023-08-22T14:52:36.634367949Z",
+    "source_location": "",
+    "full_name": "android.bluetooth.IBluetoothLowEnergy",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "RegisterClient",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"client_if": "readInt32"}],
+            "name": "UnregisterClient",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "UnregisterAll",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"client_id": "readInt32"},
+                {"address": "readString16"},
+                {"is_direct": "readBool"}
+            ],
+            "name": "Connect",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"client_id": "readInt32"},
+                {"address": "readString16"}
+            ],
+            "name": "Disconnect",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"client_id": "readInt32"},
+                {"address": "readString16"},
+                {"mtu": "readInt32"}
+            ],
+            "name": "SetMtu",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "IBluetoothLowEnergy",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

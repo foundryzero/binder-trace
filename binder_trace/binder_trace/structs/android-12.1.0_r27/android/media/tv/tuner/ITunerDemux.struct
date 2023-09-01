@@ -1,0 +1,97 @@
+{
+    "produced_on": "2023-08-22T12:16:41.032571236Z",
+    "source_location": "",
+    "full_name": "android.media.tv.tuner.ITunerDemux",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"frontend": "readStrongBinder"}],
+            "name": "setFrontendDataSource",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"mainType": "readInt32"},
+                {"subtype": "readInt32"},
+                {"bufferSize": "readInt32"},
+                {"cb": "readStrongBinder"}
+            ],
+            "name": "openFilter",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "openTimeFilter",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"tunerFilter": "readStrongBinder"}],
+            "name": "getAvSyncHwId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"avSyncHwId": "readInt32"}],
+            "name": "getAvSyncTime",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"dvbType": "readInt32"},
+                {"bufferSize": "readInt32"},
+                {"cb": "readStrongBinder"}
+            ],
+            "name": "openDvr",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [{"ciCamId": "readInt32"}],
+            "name": "connectCiCam",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "disconnectCiCam",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [],
+            "name": "close",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ITunerDemux",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

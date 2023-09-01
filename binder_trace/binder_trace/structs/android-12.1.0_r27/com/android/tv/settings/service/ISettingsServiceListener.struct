@@ -1,0 +1,50 @@
+{
+    "produced_on": "2023-08-22T12:16:44.733907350Z",
+    "source_location": "",
+    "full_name": "com.android.tv.settings.service.ISettingsServiceListener",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"state": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "preferenceParcelable": "readParcelable",
+                        "__parcelType": "com.android.tv.settings.service.PreferenceParcelable"
+                    }]
+                }
+            ],
+            "name": "notifyUpdate",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"state": "readInt32"},
+                {
+                    "preferences": "readList",
+                    "__parcelType": "com.android.tv.settings.service.PreferenceParcelable"
+                }
+            ],
+            "name": "notifyUpdateAll",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"state": "readInt32"},
+                {"title": "readString16"}
+            ],
+            "name": "notifyUpdateScreenTitle",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISettingsServiceListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

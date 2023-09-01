@@ -1,0 +1,56 @@
+{
+    "produced_on": "2023-08-22T12:24:11.850012153Z",
+    "source_location": "",
+    "full_name": "android.net.netstats.provider.INetworkStatsProviderCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"token": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "ifaceStats": "readParcelable",
+                        "__parcelType": "android.net.NetworkStats"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "uidStats": "readParcelable",
+                        "__parcelType": "android.net.NetworkStats"
+                    }]
+                }
+            ],
+            "name": "notifyStatsUpdated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "notifyAlertReached",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "notifyLimitReached",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "unregister",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "INetworkStatsProviderCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,26 @@
+{
+    "produced_on": "2023-08-22T12:24:13.037487562Z",
+    "source_location": "",
+    "full_name": "android.net.wifi.IOnWifiUsabilityStatsListener",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"seqNum": "readInt32"},
+            {"isSameBssidAndFreq": "readBool"},
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "stats": "readParcelable",
+                    "__parcelType": "android.net.wifi.WifiUsabilityStatsEntry"
+                }]
+            }
+        ],
+        "name": "onWifiUsabilityStats",
+        "oneWay": true,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "IOnWifiUsabilityStatsListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

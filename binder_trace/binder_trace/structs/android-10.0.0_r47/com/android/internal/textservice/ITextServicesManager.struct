@@ -1,0 +1,101 @@
+{
+    "produced_on": "2023-08-22T14:52:35.422887761Z",
+    "source_location": "",
+    "full_name": "com.android.internal.textservice.ITextServicesManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"userId": "readInt32"},
+                {"locale": "readString16"}
+            ],
+            "name": "getCurrentSpellChecker",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.view.textservice.SpellCheckerInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"userId": "readInt32"},
+                {"allowImplicitlySelectedSubtype": "readBool"}
+            ],
+            "name": "getCurrentSpellCheckerSubtype",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.view.textservice.SpellCheckerSubtype"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"userId": "readInt32"},
+                {"sciId": "readString16"},
+                {"locale": "readString16"},
+                {"tsListener": "readStrongBinder"},
+                {"scListener": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"bundle": "readBundle"}]
+                }
+            ],
+            "name": "getSpellCheckerService",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"userId": "readInt32"},
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "finishSpellCheckerService",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"userId": "readInt32"}],
+            "name": "isSpellCheckerEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [{"userId": "readInt32"}],
+            "name": "getEnabledSpellCheckers",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.view.textservice.SpellCheckerInfo"
+                }
+            ]
+        }
+    ],
+    "name": "ITextServicesManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

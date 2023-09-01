@@ -1,0 +1,60 @@
+{
+    "produced_on": "2023-08-22T12:16:42.504112601Z",
+    "source_location": "",
+    "full_name": "android.window.ITransitionPlayer",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"transitionToken": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "info": "readParcelable",
+                        "__parcelType": "android.window.TransitionInfo"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "t": "readParcelable",
+                        "__parcelType": "android.window.SurfaceControl.Transaction"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "finishT": "readParcelable",
+                        "__parcelType": "android.window.SurfaceControl.Transaction"
+                    }]
+                }
+            ],
+            "name": "onTransitionReady",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"transitionToken": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.window.TransitionRequestInfo"
+                    }]
+                }
+            ],
+            "name": "requestStartTransition",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ITransitionPlayer",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

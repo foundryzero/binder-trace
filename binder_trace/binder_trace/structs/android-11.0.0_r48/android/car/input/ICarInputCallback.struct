@@ -1,0 +1,46 @@
+{
+    "produced_on": "2023-08-22T12:24:13.759443506Z",
+    "source_location": "",
+    "full_name": "android.car.input.ICarInputCallback",
+    "calls": [
+        {
+            "code": 2,
+            "in": [
+                {"targetDisplayType": "readInt32"},
+                {
+                    "keyEvents": "readList",
+                    "__parcelType": "android.view.KeyEvent"
+                }
+            ],
+            "name": "onKeyEvents",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"targetDisplayType": "readInt32"},
+                {
+                    "events": "readList",
+                    "__parcelType": "android.car.input.RotaryEvent"
+                }
+            ],
+            "name": "onRotaryEvents",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"targetDisplayType": "readInt32"},
+                {"activeInputTypes": "readInt32Vector"}
+            ],
+            "name": "onCaptureStateChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICarInputCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

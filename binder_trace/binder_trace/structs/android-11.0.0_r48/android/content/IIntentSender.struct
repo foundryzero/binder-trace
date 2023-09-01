@@ -1,0 +1,34 @@
+{
+    "produced_on": "2023-08-22T12:24:11.468055782Z",
+    "source_location": "",
+    "full_name": "android.content.IIntentSender",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"code": "readInt32"},
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "intent": "readParcelable",
+                    "__parcelType": "android.content.Intent"
+                }]
+            },
+            {"resolvedType": "readString16"},
+            {"whitelistToken": "readStrongBinder"},
+            {"finishedReceiver": "readStrongBinder"},
+            {"requiredPermission": "readString16"},
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{"options": "readBundle"}]
+            }
+        ],
+        "name": "send",
+        "oneWay": true,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "IIntentSender",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

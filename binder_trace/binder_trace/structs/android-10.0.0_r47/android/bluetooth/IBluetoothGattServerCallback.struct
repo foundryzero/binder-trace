@@ -1,0 +1,124 @@
+{
+    "produced_on": "2023-08-22T14:52:36.627980604Z",
+    "source_location": "",
+    "full_name": "android.bluetooth.IBluetoothGattServerCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"status": "readInt32"},
+                {"server_id": "readInt32"}
+            ],
+            "name": "OnServerRegistered",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"status": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "service": "readParcelable",
+                        "__parcelType": "android.bluetooth.BluetoothGattService"
+                    }]
+                }
+            ],
+            "name": "OnServiceAdded",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"device_address": "readString16"},
+                {"request_id": "readInt32"},
+                {"offset": "readInt32"},
+                {"is_long": "readBool"},
+                {"handle": "readInt32"}
+            ],
+            "name": "OnCharacteristicReadRequest",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"device_address": "readString16"},
+                {"request_id": "readInt32"},
+                {"offset": "readInt32"},
+                {"is_long": "readBool"},
+                {"handle": "readInt32"}
+            ],
+            "name": "OnDescriptorReadRequest",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"device_address": "readString16"},
+                {"request_id": "readInt32"},
+                {"offset": "readInt32"},
+                {"is_prepare_write": "readBool"},
+                {"need_response": "readBool"},
+                {"value": "readByteVector"},
+                {"handle": "readInt32"}
+            ],
+            "name": "OnCharacteristicWriteRequest",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"device_address": "readString16"},
+                {"request_id": "readInt32"},
+                {"offset": "readInt32"},
+                {"is_prepare_write": "readBool"},
+                {"need_response": "readBool"},
+                {"value": "readByteVector"},
+                {"handle": "readInt32"}
+            ],
+            "name": "OnDescriptorWriteRequest",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"device_address": "readString16"},
+                {"request_id": "readInt32"},
+                {"is_execute": "readBool"}
+            ],
+            "name": "OnExecuteWriteRequest",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"device_address": "readString16"},
+                {"status": "readInt32"}
+            ],
+            "name": "OnNotificationSent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"device_address": "readString16"},
+                {"connected": "readBool"}
+            ],
+            "name": "OnConnectionStateChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IBluetoothGattServerCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

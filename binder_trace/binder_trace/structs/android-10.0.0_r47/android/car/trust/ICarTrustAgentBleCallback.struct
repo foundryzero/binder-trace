@@ -1,0 +1,56 @@
+{
+    "produced_on": "2023-08-22T14:52:36.224632669Z",
+    "source_location": "",
+    "full_name": "android.car.trust.ICarTrustAgentBleCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "onEnrollmentAdvertisingStarted",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "onEnrollmentAdvertisingFailed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "device": "readParcelable",
+                        "__parcelType": "android.bluetooth.BluetoothDevice"
+                    }]
+                }
+            ],
+            "name": "onBleEnrollmentDeviceConnected",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "device": "readParcelable",
+                        "__parcelType": "android.bluetooth.BluetoothDevice"
+                    }]
+                }
+            ],
+            "name": "onBleEnrollmentDeviceDisconnected",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICarTrustAgentBleCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

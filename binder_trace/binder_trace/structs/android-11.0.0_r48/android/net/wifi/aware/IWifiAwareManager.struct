@@ -1,0 +1,186 @@
+{
+    "produced_on": "2023-08-22T12:24:13.061970274Z",
+    "source_location": "",
+    "full_name": "android.net.wifi.aware.IWifiAwareManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "isUsageEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "getCharacteristics",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.net.wifi.aware.Characteristics"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"binder": "readStrongBinder"},
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"},
+                {"callback": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "configRequest": "readParcelable",
+                        "__parcelType": "android.net.wifi.aware.ConfigRequest"
+                    }]
+                },
+                {"notifyOnIdentityChanged": "readBool"}
+            ],
+            "name": "connect",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"clientId": "readInt32"},
+                {"binder": "readStrongBinder"}
+            ],
+            "name": "disconnect",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"},
+                {"clientId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "publishConfig": "readParcelable",
+                        "__parcelType": "android.net.wifi.aware.PublishConfig"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "publish",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"},
+                {"clientId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "subscribeConfig": "readParcelable",
+                        "__parcelType": "android.net.wifi.aware.SubscribeConfig"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "subscribe",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"clientId": "readInt32"},
+                {"discoverySessionId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "publishConfig": "readParcelable",
+                        "__parcelType": "android.net.wifi.aware.PublishConfig"
+                    }]
+                }
+            ],
+            "name": "updatePublish",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"clientId": "readInt32"},
+                {"discoverySessionId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "subscribeConfig": "readParcelable",
+                        "__parcelType": "android.net.wifi.aware.SubscribeConfig"
+                    }]
+                }
+            ],
+            "name": "updateSubscribe",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"clientId": "readInt32"},
+                {"discoverySessionId": "readInt32"},
+                {"peerId": "readInt32"},
+                {"message": "readByteVector"},
+                {"messageId": "readInt32"},
+                {"retryCount": "readInt32"}
+            ],
+            "name": "sendMessage",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"clientId": "readInt32"},
+                {"discoverySessionId": "readInt32"}
+            ],
+            "name": "terminateSession",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"uid": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "peerIds": "readParcelable",
+                        "__parcelType": "android.net.wifi.aware.List"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "requestMacAddresses",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IWifiAwareManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

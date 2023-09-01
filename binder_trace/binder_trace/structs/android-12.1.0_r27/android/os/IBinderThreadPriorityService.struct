@@ -1,0 +1,47 @@
+{
+    "produced_on": "2023-08-22T12:16:42.725410860Z",
+    "source_location": "",
+    "full_name": "android.os.IBinderThreadPriorityService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getThreadPriority",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "getThreadSchedulerGroup",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"recurse": "readStrongBinder"}],
+            "name": "callBack",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"priority": "readInt32"},
+                {"recurse": "readStrongBinder"}
+            ],
+            "name": "setPriorityAndCallBack",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IBinderThreadPriorityService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,42 @@
+{
+    "produced_on": "2023-08-22T12:16:40.854427207Z",
+    "source_location": "",
+    "components": [
+        {
+            "criteria": "readParcelableVector",
+            "__parcelType": "android.media.AudioMixMatchCriterion"
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "mixType": "readParcelable",
+                "__parcelType": "android.media.AudioMixType"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "format": "readParcelable",
+                "__parcelType": "android.media.AudioConfig"
+            }]
+        },
+        {"routeFlags": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "device": "readParcelable",
+                "__parcelType": "android.media.AudioDevice"
+            }]
+        },
+        {"cbFlags": "readInt32"},
+        {"allowPrivilegedMediaPlaybackCapture": "readBool"},
+        {"voiceCommunicationCaptureAllowed": "readBool"}
+    ],
+    "full_name": "android.media.AudioMix",
+    "name": "AudioMix",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

@@ -1,0 +1,121 @@
+{
+    "produced_on": "2023-08-22T12:16:41.357209269Z",
+    "source_location": "",
+    "full_name": "android.app.IUriGrantsManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "uri": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                },
+                {"modeFlags": "readInt32"},
+                {"toPackage": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "takePersistableUriPermission",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "uri": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                },
+                {"modeFlags": "readInt32"},
+                {"toPackage": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "releasePersistableUriPermission",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"owner": "readStrongBinder"},
+                {"fromUid": "readInt32"},
+                {"targetPkg": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "uri": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                },
+                {"mode": "readInt32"},
+                {"sourceUserId": "readInt32"},
+                {"targetUserId": "readInt32"}
+            ],
+            "name": "grantUriPermissionFromOwner",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "getGrantedUriPermissions",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.ParceledListSlice"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "clearGrantedUriPermissions",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"packageName": "readString16"},
+                {"incoming": "readBool"},
+                {"persistedOnly": "readBool"}
+            ],
+            "name": "getUriPermissions",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.ParceledListSlice"
+                    }]
+                }
+            ]
+        }
+    ],
+    "name": "IUriGrantsManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

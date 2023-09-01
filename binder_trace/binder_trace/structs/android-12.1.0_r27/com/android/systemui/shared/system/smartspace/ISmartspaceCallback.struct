@@ -1,0 +1,41 @@
+{
+    "produced_on": "2023-08-22T12:16:43.029696060Z",
+    "source_location": "",
+    "full_name": "com.android.systemui.shared.system.smartspace.ISmartspaceCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getSmartspaceState",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.systemui.shared.system.smartspace.SmartspaceState"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"selectedPage": "readInt32"}],
+            "name": "setSelectedPage",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"visibility": "readInt32"}],
+            "name": "setVisibility",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISmartspaceCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

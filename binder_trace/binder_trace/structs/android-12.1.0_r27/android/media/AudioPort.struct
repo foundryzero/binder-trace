@@ -1,0 +1,56 @@
+{
+    "produced_on": "2023-08-22T12:16:40.873019909Z",
+    "source_location": "",
+    "components": [
+        {"id": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "role": "readParcelable",
+                "__parcelType": "android.media.AudioPortRole"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "type": "readParcelable",
+                "__parcelType": "android.media.AudioPortType"
+            }]
+        },
+        {"name": "readString16"},
+        {
+            "profiles": "readParcelableVector",
+            "__parcelType": "android.media.AudioProfile"
+        },
+        {
+            "extraAudioDescriptors": "readParcelableVector",
+            "__parcelType": "android.media.ExtraAudioDescriptor"
+        },
+        {
+            "gains": "readParcelableVector",
+            "__parcelType": "android.media.AudioGain"
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "activeConfig": "readParcelable",
+                "__parcelType": "android.media.AudioPortConfig"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "ext": "readParcelable",
+                "__parcelType": "android.media.AudioPortExt"
+            }]
+        }
+    ],
+    "full_name": "android.media.AudioPort",
+    "name": "AudioPort",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

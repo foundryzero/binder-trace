@@ -1,0 +1,39 @@
+{
+    "produced_on": "2023-08-22T12:16:43.238578097Z",
+    "source_location": "",
+    "full_name": "android.telephony.ims.aidl.ISipTransport",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"subId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.telephony.ims.DelegateRequest"
+                    }]
+                },
+                {"dc": "readStrongBinder"},
+                {"mc": "readStrongBinder"}
+            ],
+            "name": "createSipDelegate",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"delegate": "readStrongBinder"},
+                {"reason": "readInt32"}
+            ],
+            "name": "destroySipDelegate",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISipTransport",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,97 @@
+{
+    "produced_on": "2023-08-22T14:52:35.624144104Z",
+    "source_location": "",
+    "full_name": "android.service.media.IMediaBrowserService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"pkg": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"rootHints": "readBundle"}]
+                },
+                {"callbacks": "readStrongBinder"}
+            ],
+            "name": "connect",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"callbacks": "readStrongBinder"}],
+            "name": "disconnect",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"uri": "readString16"},
+                {"callbacks": "readStrongBinder"}
+            ],
+            "name": "addSubscriptionDeprecated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"uri": "readString16"},
+                {"callbacks": "readStrongBinder"}
+            ],
+            "name": "removeSubscriptionDeprecated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"uri": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "cb": "readParcelable",
+                        "__parcelType": "android.os.ResultReceiver"
+                    }]
+                },
+                {"callbacks": "readStrongBinder"}
+            ],
+            "name": "getMediaItem",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"uri": "readString16"},
+                {"token": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"options": "readBundle"}]
+                },
+                {"callbacks": "readStrongBinder"}
+            ],
+            "name": "addSubscription",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"uri": "readString16"},
+                {"token": "readStrongBinder"},
+                {"callbacks": "readStrongBinder"}
+            ],
+            "name": "removeSubscription",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IMediaBrowserService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

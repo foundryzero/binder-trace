@@ -1,0 +1,129 @@
+{
+    "produced_on": "2023-08-22T14:52:35.961740202Z",
+    "source_location": "",
+    "full_name": "com.android.ims.internal.IImsUtListener",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"ut": "readStrongBinder"},
+                {"id": "readInt32"}
+            ],
+            "name": "utConfigurationUpdated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"ut": "readStrongBinder"},
+                {"id": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "error": "readParcelable",
+                        "__parcelType": "android.telephony.ims.ImsReasonInfo"
+                    }]
+                }
+            ],
+            "name": "utConfigurationUpdateFailed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"ut": "readStrongBinder"},
+                {"id": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"ssInfo": "readBundle"}]
+                }
+            ],
+            "name": "utConfigurationQueried",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"ut": "readStrongBinder"},
+                {"id": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "error": "readParcelable",
+                        "__parcelType": "android.telephony.ims.ImsReasonInfo"
+                    }]
+                }
+            ],
+            "name": "utConfigurationQueryFailed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"ut": "readStrongBinder"},
+                {"id": "readInt32"},
+                {
+                    "cbInfo": "readParcelableVector",
+                    "__parcelType": "android.telephony.ims.ImsSsInfo"
+                }
+            ],
+            "name": "utConfigurationCallBarringQueried",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"ut": "readStrongBinder"},
+                {"id": "readInt32"},
+                {
+                    "cfInfo": "readParcelableVector",
+                    "__parcelType": "android.telephony.ims.ImsCallForwardInfo"
+                }
+            ],
+            "name": "utConfigurationCallForwardQueried",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"ut": "readStrongBinder"},
+                {"id": "readInt32"},
+                {
+                    "cwInfo": "readParcelableVector",
+                    "__parcelType": "android.telephony.ims.ImsSsInfo"
+                }
+            ],
+            "name": "utConfigurationCallWaitingQueried",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "ssData": "readParcelable",
+                        "__parcelType": "android.telephony.ims.ImsSsData"
+                    }]
+                }
+            ],
+            "name": "onSupplementaryServiceIndication",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IImsUtListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

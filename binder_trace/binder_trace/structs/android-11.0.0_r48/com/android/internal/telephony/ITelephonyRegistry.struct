@@ -1,0 +1,543 @@
+{
+    "produced_on": "2023-08-22T12:24:12.402333873Z",
+    "source_location": "",
+    "full_name": "com.android.internal.telephony.ITelephonyRegistry",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"pkg": "readString16"},
+                {"featureId": "readString16"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "addOnSubscriptionsChangedListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"pkg": "readString16"},
+                {"featureId": "readString16"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "addOnOpportunisticSubscriptionsChangedListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"pkg": "readString16"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "removeOnSubscriptionsChangedListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"pkg": "readString16"},
+                {"callback": "readStrongBinder"},
+                {"events": "readInt32"},
+                {"notifyNow": "readBool"}
+            ],
+            "name": "listen",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"pkg": "readString16"},
+                {"featureId": "readString16"},
+                {"callback": "readStrongBinder"},
+                {"events": "readInt32"},
+                {"notifyNow": "readBool"}
+            ],
+            "name": "listenWithFeature",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"subId": "readInt32"},
+                {"pkg": "readString16"},
+                {"featureId": "readString16"},
+                {"callback": "readStrongBinder"},
+                {"events": "readInt32"},
+                {"notifyNow": "readBool"}
+            ],
+            "name": "listenForSubscriber",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"state": "readInt32"},
+                {"incomingNumber": "readString16"}
+            ],
+            "name": "notifyCallStateForAllSubs",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"phoneId": "readInt32"},
+                {"subId": "readInt32"},
+                {"state": "readInt32"},
+                {"incomingNumber": "readString16"}
+            ],
+            "name": "notifyCallState",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"phoneId": "readInt32"},
+                {"subId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "state": "readParcelable",
+                        "__parcelType": "android.telephony.ServiceState"
+                    }]
+                }
+            ],
+            "name": "notifyServiceStateForPhoneId",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"phoneId": "readInt32"},
+                {"subId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "signalStrength": "readParcelable",
+                        "__parcelType": "android.telephony.SignalStrength"
+                    }]
+                }
+            ],
+            "name": "notifySignalStrengthForPhoneId",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"phoneId": "readInt32"},
+                {"subId": "readInt32"},
+                {"mwi": "readBool"}
+            ],
+            "name": "notifyMessageWaitingChangedForPhoneId",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [{"cfi": "readBool"}],
+            "name": "notifyCallForwardingChanged",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"subId": "readInt32"},
+                {"cfi": "readBool"}
+            ],
+            "name": "notifyCallForwardingChangedForSubscriber",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [{"state": "readInt32"}],
+            "name": "notifyDataActivity",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"subId": "readInt32"},
+                {"state": "readInt32"}
+            ],
+            "name": "notifyDataActivityForSubscriber",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [
+                {"phoneId": "readInt32"},
+                {"subId": "readInt32"},
+                {"apnType": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "preciseState": "readParcelable",
+                        "__parcelType": "android.telephony.PreciseDataConnectionState"
+                    }]
+                }
+            ],
+            "name": "notifyDataConnectionForSubscriber",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [{"apnType": "readString16"}],
+            "name": "notifyDataConnectionFailed",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "cellLocation": "readParcelable",
+                        "__parcelType": "android.telephony.CellIdentity"
+                    }]
+                }
+            ],
+            "name": "notifyCellLocation",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 19,
+            "in": [
+                {"subId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "cellLocation": "readParcelable",
+                        "__parcelType": "android.telephony.CellIdentity"
+                    }]
+                }
+            ],
+            "name": "notifyCellLocationForSubscriber",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 20,
+            "in": [{
+                "cellInfo": "readList",
+                "__parcelType": "android.telephony.CellInfo"
+            }],
+            "name": "notifyCellInfo",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 21,
+            "in": [
+                {"phoneId": "readInt32"},
+                {"subId": "readInt32"},
+                {"ringingCallState": "readInt32"},
+                {"foregroundCallState": "readInt32"},
+                {"backgroundCallState": "readInt32"}
+            ],
+            "name": "notifyPreciseCallState",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 22,
+            "in": [
+                {"phoneId": "readInt32"},
+                {"subId": "readInt32"},
+                {"disconnectCause": "readInt32"},
+                {"preciseDisconnectCause": "readInt32"}
+            ],
+            "name": "notifyDisconnectCause",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 23,
+            "in": [
+                {"phoneId": "readInt32"},
+                {"subId": "readInt32"},
+                {"apnType": "readInt32"},
+                {"apn": "readString16"},
+                {"failCause": "readInt32"}
+            ],
+            "name": "notifyPreciseDataConnectionFailed",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 24,
+            "in": [
+                {"subId": "readInt32"},
+                {
+                    "cellInfo": "readList",
+                    "__parcelType": "android.telephony.CellInfo"
+                }
+            ],
+            "name": "notifyCellInfoForSubscriber",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 25,
+            "in": [
+                {"subId": "readInt32"},
+                {"lteState": "readInt32"}
+            ],
+            "name": "notifySrvccStateChanged",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 26,
+            "in": [
+                {"phoneId": "readInt32"},
+                {"subId": "readInt32"},
+                {"activationState": "readInt32"},
+                {"activationType": "readInt32"}
+            ],
+            "name": "notifySimActivationStateChangedForPhoneId",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 27,
+            "in": [
+                {"phoneId": "readInt32"},
+                {"subId": "readInt32"},
+                {"rawData": "readByteVector"}
+            ],
+            "name": "notifyOemHookRawEventForSubscriber",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 28,
+            "in": [],
+            "name": "notifySubscriptionInfoChanged",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 29,
+            "in": [],
+            "name": "notifyOpportunisticSubscriptionInfoChanged",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 30,
+            "in": [{"active": "readBool"}],
+            "name": "notifyCarrierNetworkChange",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 31,
+            "in": [
+                {"phoneId": "readInt32"},
+                {"subId": "readInt32"},
+                {"state": "readBool"}
+            ],
+            "name": "notifyUserMobileDataStateChangedForPhoneId",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 32,
+            "in": [
+                {"slotIndex": "readInt32"},
+                {"subId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "telephonyDisplayInfo": "readParcelable",
+                        "__parcelType": "android.telephony.TelephonyDisplayInfo"
+                    }]
+                }
+            ],
+            "name": "notifyDisplayInfoChanged",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 33,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "capability": "readParcelable",
+                        "__parcelType": "android.telephony.PhoneCapability"
+                    }]
+                }
+            ],
+            "name": "notifyPhoneCapabilityChanged",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 34,
+            "in": [{"activeDataSubId": "readInt32"}],
+            "name": "notifyActiveDataSubIdChanged",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 35,
+            "in": [
+                {"phoneId": "readInt32"},
+                {"subId": "readInt32"},
+                {"state": "readInt32"}
+            ],
+            "name": "notifyRadioPowerStateChanged",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 36,
+            "in": [
+                {"phoneId": "readInt32"},
+                {"subId": "readInt32"}
+            ],
+            "name": "notifyEmergencyNumberList",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 37,
+            "in": [
+                {"phoneId": "readInt32"},
+                {"subId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "emergencyNumber": "readParcelable",
+                        "__parcelType": "android.telephony.emergency.EmergencyNumber"
+                    }]
+                }
+            ],
+            "name": "notifyOutgoingEmergencyCall",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 38,
+            "in": [
+                {"phoneId": "readInt32"},
+                {"subId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "emergencyNumber": "readParcelable",
+                        "__parcelType": "android.telephony.emergency.EmergencyNumber"
+                    }]
+                }
+            ],
+            "name": "notifyOutgoingEmergencySms",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 39,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callQuality": "readParcelable",
+                        "__parcelType": "android.telephony.CallQuality"
+                    }]
+                },
+                {"phoneId": "readInt32"},
+                {"subId": "readInt32"},
+                {"callNetworkType": "readInt32"}
+            ],
+            "name": "notifyCallQualityChanged",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 40,
+            "in": [
+                {"subId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "imsReasonInfo": "readParcelable",
+                        "__parcelType": "android.telephony.ims.ImsReasonInfo"
+                    }]
+                }
+            ],
+            "name": "notifyImsDisconnectCause",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 41,
+            "in": [
+                {"slotIndex": "readInt32"},
+                {"subId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "cellIdentity": "readParcelable",
+                        "__parcelType": "android.telephony.CellIdentity"
+                    }]
+                },
+                {"chosenPlmn": "readString16"},
+                {"domain": "readInt32"},
+                {"causeCode": "readInt32"},
+                {"additionalCauseCode": "readInt32"}
+            ],
+            "name": "notifyRegistrationFailed",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 42,
+            "in": [
+                {"slotIndex": "readInt32"},
+                {"subId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "barringInfo": "readParcelable",
+                        "__parcelType": "android.telephony.BarringInfo"
+                    }]
+                }
+            ],
+            "name": "notifyBarringInfoChanged",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ITelephonyRegistry",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,30 @@
+{
+    "produced_on": "2023-08-22T12:16:41.557119513Z",
+    "source_location": "",
+    "full_name": "android.app.trust.IStrongAuthTracker",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"strongAuthRequired": "readInt32"},
+                {"userId": "readInt32"}
+            ],
+            "name": "onStrongAuthRequiredChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"allowed": "readBool"},
+                {"userId": "readInt32"}
+            ],
+            "name": "onIsNonStrongBiometricAllowedChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IStrongAuthTracker",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

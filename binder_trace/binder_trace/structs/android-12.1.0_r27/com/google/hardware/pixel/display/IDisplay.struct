@@ -1,0 +1,170 @@
+{
+    "produced_on": "2023-08-22T12:16:43.573946933Z",
+    "source_location": "",
+    "full_name": "com.google.hardware.pixel.display.IDisplay",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "isHbmSupported",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "state": "readParcelable",
+                        "__parcelType": "com.google.hardware.pixel.display.HbmState"
+                    }]
+                }
+            ],
+            "name": "setHbmState",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getHbmState",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.google.hardware.pixel.display.HbmState"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "isLbeSupported",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "state": "readParcelable",
+                        "__parcelType": "com.google.hardware.pixel.display.LbeState"
+                    }]
+                }
+            ],
+            "name": "setLbeState",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"ambientLux": "readInt32"}],
+            "name": "setLbeAmbientLight",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "getLbeState",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.google.hardware.pixel.display.LbeState"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "isLhbmSupported",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [{"enabled": "readBool"}],
+            "name": "setLhbmState",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [],
+            "name": "getLhbmState",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "native_handle": "readParcelable",
+                        "__parcelType": "android.hardware.common.NativeHandle"
+                    }]
+                },
+                {"imageName": "readString16"}
+            ],
+            "name": "setCompensationImageHandle",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [{"fps": "readInt32"}],
+            "name": "setMinIdleRefreshRate",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [{"delayMs": "readInt32"}],
+            "name": "setRefreshRateThrottle",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        }
+    ],
+    "name": "IDisplay",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

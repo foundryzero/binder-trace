@@ -1,0 +1,37 @@
+{
+    "produced_on": "2023-08-22T12:16:43.724620891Z",
+    "source_location": "",
+    "full_name": "android.hardware.biometrics.face.IFace",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getSensorProps",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.biometrics.face.SensorProps"
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"sensorId": "readInt32"},
+                {"userId": "readInt32"},
+                {"cb": "readStrongBinder"}
+            ],
+            "name": "createSession",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        }
+    ],
+    "name": "IFace",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

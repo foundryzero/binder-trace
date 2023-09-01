@@ -1,0 +1,131 @@
+{
+    "produced_on": "2023-08-22T12:16:41.560191123Z",
+    "source_location": "",
+    "full_name": "android.app.trust.ITrustManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"successful": "readBool"},
+                {"userId": "readInt32"}
+            ],
+            "name": "reportUnlockAttempt",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"timeoutMs": "readInt32"},
+                {"userId": "readInt32"}
+            ],
+            "name": "reportUnlockLockout",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"userId": "readInt32"}],
+            "name": "reportEnabledTrustAgentsChanged",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"trustListener": "readStrongBinder"}],
+            "name": "registerTrustListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"trustListener": "readStrongBinder"}],
+            "name": "unregisterTrustListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "reportKeyguardShowingChanged",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"userId": "readInt32"},
+                {"locked": "readBool"}
+            ],
+            "name": "setDeviceLockedForUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{"userId": "readInt32"}],
+            "name": "isDeviceLocked",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [{"userId": "readInt32"}],
+            "name": "isDeviceSecure",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [{"userId": "readInt32"}],
+            "name": "isTrustUsuallyManaged",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"userId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "source": "readParcelable",
+                        "__parcelType": "android.hardware.biometrics.BiometricSourceType"
+                    }]
+                }
+            ],
+            "name": "unlockedByBiometricForUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "target": "readParcelable",
+                        "__parcelType": "android.hardware.biometrics.BiometricSourceType"
+                    }]
+                }
+            ],
+            "name": "clearAllBiometricRecognized",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ITrustManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

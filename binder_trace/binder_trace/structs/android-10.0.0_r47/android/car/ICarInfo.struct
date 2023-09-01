@@ -1,0 +1,34 @@
+{
+    "produced_on": "2023-08-22T14:52:36.181408272Z",
+    "source_location": "",
+    "full_name": "android.car.ICarInfo",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getBasicInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"__return": "readBundle"}]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"key": "readString16"}],
+            "name": "getStringInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        }
+    ],
+    "name": "ICarInfo",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

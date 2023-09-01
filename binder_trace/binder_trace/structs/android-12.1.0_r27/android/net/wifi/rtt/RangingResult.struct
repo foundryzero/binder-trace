@@ -1,0 +1,37 @@
+{
+    "produced_on": "2023-08-22T14:59:13.965766427Z",
+    "source_location": "",
+    "components": [
+        {"status": "readInt32"},
+        {"macAddressPresent": "readBool"},
+        {
+            "__backreference": "macAddressPresent",
+            "__conditional": [{
+                "mac": "readParcelable",
+                "__parcelType": "android.net.MacAddress"
+            }]
+        },
+        {"peerHandlePresent": "readBool"},
+        {
+            "__backreference": "peerHandlePresent",
+            "__conditional": [{"peerHandle": "readInt32"}]
+        },
+        {"distanceMm": "readInt32"},
+        {"distanceStdDevMm": "readInt32"},
+        {"rssi": "readInt32"},
+        {"numAttemptedMeasurements": "readInt32"},
+        {"numSuccessfulMeasurements": "readInt32"},
+        {"lci": "readByteVector"},
+        {"lcr": "readByteVector"},
+        {
+            "responderLocation": "readParcelable",
+            "__parcelType": "__dynamic"
+        },
+        {"timestamp": "readInt64"},
+        {"isllmcMeasurement": "readBool"}
+    ],
+    "full_name": "android.net.wifi.rtt.RangingResult",
+    "name": "RangingResult",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

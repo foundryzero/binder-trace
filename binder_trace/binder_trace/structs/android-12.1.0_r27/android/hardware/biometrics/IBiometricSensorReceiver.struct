@@ -1,0 +1,50 @@
+{
+    "produced_on": "2023-08-22T12:16:41.762664794Z",
+    "source_location": "",
+    "full_name": "android.hardware.biometrics.IBiometricSensorReceiver",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"sensorId": "readInt32"},
+                {"token": "readByteVector"}
+            ],
+            "name": "onAuthenticationSucceeded",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"sensorId": "readInt32"}],
+            "name": "onAuthenticationFailed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"sensorId": "readInt32"},
+                {"cookie": "readInt32"},
+                {"error": "readInt32"},
+                {"vendorCode": "readInt32"}
+            ],
+            "name": "onError",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"sensorId": "readInt32"},
+                {"acquiredInfo": "readInt32"},
+                {"vendorCode": "readInt32"}
+            ],
+            "name": "onAcquired",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IBiometricSensorReceiver",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

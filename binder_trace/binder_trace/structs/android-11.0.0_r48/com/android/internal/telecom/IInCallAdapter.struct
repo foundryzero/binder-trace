@@ -1,0 +1,352 @@
+{
+    "produced_on": "2023-08-22T12:24:12.742784509Z",
+    "source_location": "",
+    "full_name": "com.android.internal.telecom.IInCallAdapter",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"callId": "readString16"},
+                {"videoState": "readInt32"}
+            ],
+            "name": "answerCall",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"callId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "address": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                }
+            ],
+            "name": "deflectCall",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"callId": "readString16"},
+                {"rejectWithMessage": "readBool"},
+                {"textMessage": "readString16"}
+            ],
+            "name": "rejectCall",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"callId": "readString16"},
+                {"rejectReason": "readInt32"}
+            ],
+            "name": "rejectCallWithReason",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"callId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "targetNumber": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                },
+                {"isConfirmationRequired": "readBool"}
+            ],
+            "name": "transferCall",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"callId": "readString16"},
+                {"otherCallId": "readString16"}
+            ],
+            "name": "consultativeTransfer",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"callId": "readString16"}],
+            "name": "disconnectCall",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{"callId": "readString16"}],
+            "name": "holdCall",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [{"callId": "readString16"}],
+            "name": "unholdCall",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [{"shouldMute": "readBool"}],
+            "name": "mute",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"route": "readInt32"},
+                {"bluetoothAddress": "readString16"}
+            ],
+            "name": "setAudioRoute",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [{"callId": "readString16"}],
+            "name": "enterBackgroundAudioProcessing",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"callId": "readString16"},
+                {"shouldRing": "readBool"}
+            ],
+            "name": "exitBackgroundAudioProcessing",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"callId": "readString16"},
+                {"digit": "readChar"}
+            ],
+            "name": "playDtmfTone",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [{"callId": "readString16"}],
+            "name": "stopDtmfTone",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [
+                {"callId": "readString16"},
+                {"proceed": "readBool"}
+            ],
+            "name": "postDialContinue",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [
+                {"callId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "accountHandle": "readParcelable",
+                        "__parcelType": "android.telecom.PhoneAccountHandle"
+                    }]
+                },
+                {"setDefault": "readBool"}
+            ],
+            "name": "phoneAccountSelected",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"callId": "readString16"},
+                {"otherCallId": "readString16"}
+            ],
+            "name": "conference",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 19,
+            "in": [{"callId": "readString16"}],
+            "name": "splitFromConference",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 20,
+            "in": [{"callId": "readString16"}],
+            "name": "mergeConference",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 21,
+            "in": [{"callId": "readString16"}],
+            "name": "swapConference",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 22,
+            "in": [
+                {"callId": "readString16"},
+                {
+                    "participants": "readList",
+                    "__parcelType": "android.net.Uri"
+                }
+            ],
+            "name": "addConferenceParticipants",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 23,
+            "in": [],
+            "name": "turnOnProximitySensor",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 24,
+            "in": [{"screenOnImmediately": "readBool"}],
+            "name": "turnOffProximitySensor",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 25,
+            "in": [{"callId": "readString16"}],
+            "name": "pullExternalCall",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 26,
+            "in": [
+                {"callId": "readString16"},
+                {"event": "readString16"},
+                {"targetSdkVer": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"extras": "readBundle"}]
+                }
+            ],
+            "name": "sendCallEvent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 27,
+            "in": [
+                {"callId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"extras": "readBundle"}]
+                }
+            ],
+            "name": "putExtras",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 28,
+            "in": [
+                {"callId": "readString16"},
+                {
+                    "keys": "readList",
+                    "__parcelType": "String"
+                }
+            ],
+            "name": "removeExtras",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 29,
+            "in": [{"callId": "readString16"}],
+            "name": "sendRttRequest",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 30,
+            "in": [
+                {"callId": "readString16"},
+                {"id": "readInt32"},
+                {"accept": "readBool"}
+            ],
+            "name": "respondToRttRequest",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 31,
+            "in": [{"callId": "readString16"}],
+            "name": "stopRtt",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 32,
+            "in": [
+                {"callId": "readString16"},
+                {"mode": "readInt32"}
+            ],
+            "name": "setRttMode",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 33,
+            "in": [
+                {"callId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "destAcct": "readParcelable",
+                        "__parcelType": "android.telecom.PhoneAccountHandle"
+                    }]
+                },
+                {"videoState": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"extras": "readBundle"}]
+                }
+            ],
+            "name": "handoverTo",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IInCallAdapter",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

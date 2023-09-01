@@ -1,0 +1,45 @@
+{
+    "produced_on": "2023-08-22T14:52:35.882202883Z",
+    "source_location": "",
+    "full_name": "android.telephony.ims.aidl.IImsSmsListener",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"token": "readInt32"},
+                {"messageRef": "readInt32"},
+                {"status": "readInt32"},
+                {"reason": "readInt32"}
+            ],
+            "name": "onSendSmsResult",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"token": "readInt32"},
+                {"messageRef": "readInt32"},
+                {"format": "readString16"},
+                {"pdu": "readByteVector"}
+            ],
+            "name": "onSmsStatusReportReceived",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"token": "readInt32"},
+                {"format": "readString16"},
+                {"pdu": "readByteVector"}
+            ],
+            "name": "onSmsReceived",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IImsSmsListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}
