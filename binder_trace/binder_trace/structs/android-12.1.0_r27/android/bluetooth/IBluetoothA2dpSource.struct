@@ -1,0 +1,86 @@
+{
+    "produced_on": "2023-08-22T12:16:46.662224663Z",
+    "source_location": "",
+    "full_name": "android.bluetooth.IBluetoothA2dpSource",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "Register",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "Unregister",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{
+                "codec_priorities": "readParcelableVector",
+                "__parcelType": "android.bluetooth.BluetoothA2dpCodecConfig"
+            }],
+            "name": "Enable",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "Disable",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"device_address": "readString16"}],
+            "name": "Connect",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [{"device_address": "readString16"}],
+            "name": "Disconnect",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"device_address": "readString16"},
+                {
+                    "codec_preferences": "readParcelableVector",
+                    "__parcelType": "android.bluetooth.BluetoothA2dpCodecConfig"
+                }
+            ],
+            "name": "ConfigCodec",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "IBluetoothA2dpSource",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

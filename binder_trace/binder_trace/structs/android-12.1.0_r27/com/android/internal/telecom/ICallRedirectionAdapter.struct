@@ -1,0 +1,49 @@
+{
+    "produced_on": "2023-08-22T12:16:43.059397814Z",
+    "source_location": "",
+    "full_name": "com.android.internal.telecom.ICallRedirectionAdapter",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "cancelCall",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "placeCallUnmodified",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "handle": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "targetPhoneAccount": "readParcelable",
+                        "__parcelType": "android.telecom.PhoneAccountHandle"
+                    }]
+                },
+                {"confirmFirst": "readBool"}
+            ],
+            "name": "redirectCall",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICallRedirectionAdapter",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

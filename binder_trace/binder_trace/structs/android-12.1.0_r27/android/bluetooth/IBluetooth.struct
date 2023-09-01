@@ -1,0 +1,295 @@
+{
+    "produced_on": "2023-08-22T12:16:46.659379778Z",
+    "source_location": "",
+    "full_name": "android.bluetooth.IBluetooth",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "IsEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "GetState",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "Enable",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "EnableNoAutoConnect",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "Disable",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "GetAddress",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "GetUUIDs",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.bluetooth.UUID"
+                }
+            ]
+        },
+        {
+            "code": 8,
+            "in": [{"name": "readString16"}],
+            "name": "SetName",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [],
+            "name": "GetName",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [{"scan_mode": "readInt32"}],
+            "name": "SetScanMode",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [{"scan_enable": "readBool"}],
+            "name": "SetScanEnable",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"device_address": "readString16"},
+                {"variant": "readInt32"},
+                {"accept": "readBool"},
+                {"passkey": "readInt32"}
+            ],
+            "name": "SspReply",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"device_address": "readString16"},
+                {"transport": "readInt32"}
+            ],
+            "name": "CreateBond",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 14,
+            "in": [],
+            "name": "GetBondedDevices",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 15,
+            "in": [{"device_address": "readString16"}],
+            "name": "RemoveBond",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 16,
+            "in": [{"device_address": "readString16"}],
+            "name": "GetRemoteDeviceProperties",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 17,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "RegisterCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "UnregisterCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 19,
+            "in": [],
+            "name": "IsMultiAdvertisementSupported",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 20,
+            "in": [],
+            "name": "GetLowEnergyInterface",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 21,
+            "in": [],
+            "name": "GetLeAdvertiserInterface",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 22,
+            "in": [],
+            "name": "GetLeScannerInterface",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 23,
+            "in": [],
+            "name": "GetGattClientInterface",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 24,
+            "in": [],
+            "name": "GetGattServerInterface",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 25,
+            "in": [],
+            "name": "GetA2dpSinkInterface",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 26,
+            "in": [],
+            "name": "GetA2dpSourceInterface",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 27,
+            "in": [],
+            "name": "GetAvrcpControlInterface",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 28,
+            "in": [],
+            "name": "GetAvrcpTargetInterface",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        }
+    ],
+    "name": "IBluetooth",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

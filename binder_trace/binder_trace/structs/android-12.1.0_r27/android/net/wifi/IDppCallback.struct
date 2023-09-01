@@ -1,0 +1,50 @@
+{
+    "produced_on": "2023-08-22T12:16:45.391584516Z",
+    "source_location": "",
+    "full_name": "android.net.wifi.IDppCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"newNetworkId": "readInt32"}],
+            "name": "onSuccessConfigReceived",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"status": "readInt32"}],
+            "name": "onSuccess",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"status": "readInt32"},
+                {"ssid": "readString16"},
+                {"channelList": "readString16"},
+                {"bandArray": "readInt32Vector"}
+            ],
+            "name": "onFailure",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"status": "readInt32"}],
+            "name": "onProgress",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"uri": "readString16"}],
+            "name": "onBootstrapUriGenerated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IDppCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

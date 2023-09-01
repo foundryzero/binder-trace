@@ -1,0 +1,294 @@
+{
+    "produced_on": "2023-08-22T12:24:12.985060990Z",
+    "source_location": "",
+    "full_name": "com.android.internal.telephony.euicc.IEuiccController",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"cardId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "resolutionIntent": "readParcelable",
+                        "__parcelType": "android.content.Intent"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"resolutionExtras": "readBundle"}]
+                }
+            ],
+            "name": "continueOperation",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"cardId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "subscription": "readParcelable",
+                        "__parcelType": "android.telephony.euicc.DownloadableSubscription"
+                    }]
+                },
+                {"callingPackage": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callbackIntent": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                }
+            ],
+            "name": "getDownloadableSubscriptionMetadata",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"cardId": "readInt32"},
+                {"callingPackage": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callbackIntent": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                }
+            ],
+            "name": "getDefaultDownloadableSubscriptionList",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"cardId": "readInt32"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "getEid",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"cardId": "readInt32"}],
+            "name": "getOtaStatus",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"cardId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "subscription": "readParcelable",
+                        "__parcelType": "android.telephony.euicc.DownloadableSubscription"
+                    }]
+                },
+                {"switchAfterDownload": "readBool"},
+                {"callingPackage": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"resolvedBundle": "readBundle"}]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callbackIntent": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                }
+            ],
+            "name": "downloadSubscription",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"cardId": "readInt32"}],
+            "name": "getEuiccInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.telephony.euicc.EuiccInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"cardId": "readInt32"},
+                {"subscriptionId": "readInt32"},
+                {"callingPackage": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callbackIntent": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                }
+            ],
+            "name": "deleteSubscription",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"cardId": "readInt32"},
+                {"subscriptionId": "readInt32"},
+                {"callingPackage": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callbackIntent": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                }
+            ],
+            "name": "switchToSubscription",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"cardId": "readInt32"},
+                {"subscriptionId": "readInt32"},
+                {"nickname": "readString16"},
+                {"callingPackage": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callbackIntent": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                }
+            ],
+            "name": "updateSubscriptionNickname",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"cardId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callbackIntent": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                }
+            ],
+            "name": "eraseSubscriptions",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"cardId": "readInt32"},
+                {"options": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callbackIntent": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                }
+            ],
+            "name": "eraseSubscriptionsWithOptions",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"cardId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callbackIntent": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                }
+            ],
+            "name": "retainSubscriptionsForFactoryReset",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"isSupported": "readBool"},
+                {
+                    "countriesList": "readList",
+                    "__parcelType": "String"
+                }
+            ],
+            "name": "setSupportedCountries",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [{"isSupported": "readBool"}],
+            "name": "getSupportedCountries",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "String"
+                }
+            ]
+        },
+        {
+            "code": 16,
+            "in": [{"countryIso": "readString16"}],
+            "name": "isSupportedCountry",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "IEuiccController",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

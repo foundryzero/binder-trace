@@ -1,0 +1,176 @@
+{
+    "produced_on": "2023-08-22T12:16:41.512265286Z",
+    "source_location": "",
+    "full_name": "android.app.people.IPeopleManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"},
+                {"shortcutId": "readString16"}
+            ],
+            "name": "getConversation",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.app.people.ConversationChannel"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "getRecentConversations",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.ParceledListSlice"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"},
+                {"shortcutId": "readString16"}
+            ],
+            "name": "removeRecentConversation",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "removeAllRecentConversations",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"},
+                {"shortcutId": "readString16"}
+            ],
+            "name": "isConversation",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"},
+                {"shortcutId": "readString16"}
+            ],
+            "name": "getLastInteraction",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"},
+                {"conversationId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "status": "readParcelable",
+                        "__parcelType": "android.app.people.ConversationStatus"
+                    }]
+                }
+            ],
+            "name": "addOrUpdateStatus",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"},
+                {"conversationId": "readString16"},
+                {"statusId": "readString16"}
+            ],
+            "name": "clearStatus",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"},
+                {"conversationId": "readString16"}
+            ],
+            "name": "clearStatuses",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"},
+                {"conversationId": "readString16"}
+            ],
+            "name": "getStatuses",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.ParceledListSlice"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"},
+                {"shortcutId": "readString16"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "registerConversationListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "unregisterConversationListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IPeopleManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

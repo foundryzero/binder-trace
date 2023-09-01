@@ -1,0 +1,95 @@
+{
+    "produced_on": "2023-08-22T14:07:06.140529025Z",
+    "source_location": "",
+    "components": [
+        {"networkId": "readInt32"},
+        {"status": "readInt32"},
+        {
+            "readFromParcel": "readParcelable",
+            "__parcelType": "android.net.wifi.mNetworkSelectionStatus"
+        },
+        {"SSID": "readString16"},
+        {"BSSID": "readString16"},
+        {"apBand": "readInt32"},
+        {"apChannel": "readInt32"},
+        {"FQDN": "readString16"},
+        {"providerFriendlyName": "readString16"},
+        {"isHomeProviderNetwork": "readInt32"},
+        {"numRoamingConsortiumIds": "readInt32"},
+        {
+            "__backreference": "numRoamingConsortiumIds",
+            "__repeated": [{"roamingConsortiumIds": "readInt64"}]
+        },
+        {"preSharedKey": "readString16"},
+        {
+            "__backreference": "config",
+            "__repeated": [{"wepKeys": "readString16"}]
+        },
+        {"wepTxKeyIndex": "readInt32"},
+        {"priority": "readInt32"},
+        {"mDeletionPriority": "readInt32"},
+        {"hiddenSSID": "readInt32"},
+        {"requirePmf": "readInt32"},
+        {"updateIdentifier": "readString16"},
+        {"numSecurityParams": "readInt32"},
+        {
+            "__backreference": "numSecurityParams",
+            "__repeated": [{
+                "add": "readParcelable",
+                "__parcelType": "android.net.wifi.SecurityParams"
+            }]
+        },
+        {
+            "enterpriseConfig": "readParcelable",
+            "__parcelType": "__dynamic"
+        },
+        {
+            "setIpConfiguration": "readParcelable",
+            "__parcelType": "__dynamic"
+        },
+        {"dhcpServer": "readString16"},
+        {"defaultGwMacAddress": "readString16"},
+        {"validatedInternetAccess": "readInt32"},
+        {"isLegacyPasspointConfig": "readInt32"},
+        {"ephemeral": "readInt32"},
+        {"trusted": "readInt32"},
+        {"oemPaid": "readInt32"},
+        {"oemPrivate": "readInt32"},
+        {"carrierMerged": "readInt32"},
+        {"fromWifiNetworkSuggestion": "readInt32"},
+        {"fromWifiNetworkSpecifier": "readInt32"},
+        {"meteredHint": "readInt32"},
+        {"meteredOverride": "readInt32"},
+        {"useExternalScores": "readInt32"},
+        {"creatorUid": "readInt32"},
+        {"lastConnectUid": "readInt32"},
+        {"lastUpdateUid": "readInt32"},
+        {"creatorName": "readString16"},
+        {"lastUpdateName": "readString16"},
+        {"numScorerOverride": "readInt32"},
+        {"numScorerOverrideAndSwitchedNetwork": "readInt32"},
+        {"numAssociation": "readInt32"},
+        {"allowAutojoin": "readBool"},
+        {"numNoInternetAccessReports": "readInt32"},
+        {"noInternetAccessExpected": "readInt32"},
+        {"shared": "readInt32"},
+        {"mPasspointManagementObjectTree": "readString16"},
+        {"setAssociationStatus": "readInt32"},
+        {"setAssociationStatus": "readInt64"},
+        {
+            "mRandomizedMacAddress": "readParcelable",
+            "__parcelType": "__dynamic"
+        },
+        {"macRandomizationSetting": "readInt32"},
+        {"osu": "readInt32"},
+        {"randomizedMacExpirationTimeMs": "readInt64"},
+        {"randomizedMacLastModifiedTimeMs": "readInt64"},
+        {"carrierId": "readInt32"},
+        {"mPasspointUniqueId": "readString16"},
+        {"subscriptionId": "readInt32"}
+    ],
+    "full_name": "android.net.wifi.WifiConfiguration",
+    "name": "WifiConfiguration",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

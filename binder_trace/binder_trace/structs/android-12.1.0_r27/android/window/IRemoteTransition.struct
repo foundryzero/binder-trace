@@ -1,0 +1,63 @@
+{
+    "produced_on": "2023-08-22T12:16:42.490972252Z",
+    "source_location": "",
+    "full_name": "android.window.IRemoteTransition",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "info": "readParcelable",
+                        "__parcelType": "android.window.TransitionInfo"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "t": "readParcelable",
+                        "__parcelType": "android.window.SurfaceControl.Transaction"
+                    }]
+                },
+                {"finishCallback": "readStrongBinder"}
+            ],
+            "name": "startAnimation",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"transition": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "info": "readParcelable",
+                        "__parcelType": "android.window.TransitionInfo"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "t": "readParcelable",
+                        "__parcelType": "android.window.SurfaceControl.Transaction"
+                    }]
+                },
+                {"mergeTarget": "readStrongBinder"},
+                {"finishCallback": "readStrongBinder"}
+            ],
+            "name": "mergeAnimation",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IRemoteTransition",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

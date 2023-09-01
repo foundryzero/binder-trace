@@ -1,0 +1,50 @@
+{
+    "produced_on": "2023-08-22T12:16:43.578875315Z",
+    "source_location": "",
+    "full_name": "google.hardware.power.extension.pixel.IPowerExt",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"mode": "readString16"},
+                {"enabled": "readBool"}
+            ],
+            "name": "setMode",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"mode": "readString16"}],
+            "name": "isModeSupported",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"boost": "readString16"},
+                {"durationMs": "readInt32"}
+            ],
+            "name": "setBoost",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"boost": "readString16"}],
+            "name": "isBoostSupported",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "IPowerExt",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

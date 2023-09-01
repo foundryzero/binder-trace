@@ -1,0 +1,121 @@
+{
+    "produced_on": "2023-08-22T14:52:34.276916946Z",
+    "source_location": "",
+    "full_name": "android.app.IAlarmManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"type": "readInt32"},
+                {"triggerAtTime": "readInt64"},
+                {"windowLength": "readInt64"},
+                {"interval": "readInt64"},
+                {"flags": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "operation": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                },
+                {"listener": "readStrongBinder"},
+                {"listenerTag": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "workSource": "readParcelable",
+                        "__parcelType": "android.os.WorkSource"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "alarmClock": "readParcelable",
+                        "__parcelType": "android.app.AlarmManager.AlarmClockInfo"
+                    }]
+                }
+            ],
+            "name": "set",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"millis": "readInt64"}],
+            "name": "setTime",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"zone": "readString16"}],
+            "name": "setTimeZone",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "operation": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                },
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "remove",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "getNextWakeFromIdleTime",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [{"userId": "readInt32"}],
+            "name": "getNextAlarmClock",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.app.AlarmManager.AlarmClockInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "currentNetworkTimeMillis",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        }
+    ],
+    "name": "IAlarmManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

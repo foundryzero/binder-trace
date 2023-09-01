@@ -1,7 +1,7 @@
 from prompt_toolkit.key_binding import KeyBindings
 from prompt_toolkit.layout import AnyContainer, HSplit, VerticalAlign, VSplit
 from prompt_toolkit.key_binding.bindings.focus import focus_next, focus_previous
-from prompt_toolkit.widgets import Frame, CheckboxList, Box, TextArea, Label
+from prompt_toolkit.widgets import Frame, Checkbox, CheckboxList, Box, TextArea, Label
 
 from binder_trace.tui.filter import Filter
 
@@ -26,7 +26,7 @@ class FiltersPanel:
 
         self.interface_textarea = TextArea(multiline=False, style="class:dialog.textarea")
         self.method_textarea = TextArea(multiline=False, style="class:dialog.textarea")
-
+        self.exclude = Checkbox()
         self.type_filter_checkboxes = TypeCheckboxlist()
 
         float_frame = Box(
@@ -50,6 +50,11 @@ class FiltersPanel:
                         Label("Type", width=10, dont_extend_height=False),
                         self.type_filter_checkboxes,
                     ]),
+                    VSplit(children=[
+                        Label("Exclude", width=10),
+                        self.exclude,
+                    ]),
+
                 ]
             )
         )
@@ -72,7 +77,8 @@ class FiltersPanel:
         return Filter(
             self.interface_textarea.text,
             self.method_textarea.text,
-            self.type_filter_checkboxes.current_values)
+            self.type_filter_checkboxes.current_values,
+            not self.exclude.checked)
 
     def __pt_container__(self) -> AnyContainer:
         return self.container

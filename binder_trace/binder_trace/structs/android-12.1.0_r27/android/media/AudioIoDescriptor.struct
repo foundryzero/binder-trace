@@ -1,0 +1,33 @@
+{
+    "produced_on": "2023-08-22T12:16:40.851805467Z",
+    "source_location": "",
+    "components": [
+        {"ioHandle": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "patch": "readParcelable",
+                "__parcelType": "android.media.AudioPatch"
+            }]
+        },
+        {"samplingRate": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "format": "readParcelable",
+                "__parcelType": "android.media.audio.common.AudioFormat"
+            }]
+        },
+        {"channelMask": "readInt32"},
+        {"frameCount": "readInt64"},
+        {"frameCountHAL": "readInt64"},
+        {"latency": "readInt32"},
+        {"portId": "readInt32"}
+    ],
+    "full_name": "android.media.AudioIoDescriptor",
+    "name": "AudioIoDescriptor",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

@@ -1,0 +1,188 @@
+{
+    "produced_on": "2023-08-22T12:16:42.940277662Z",
+    "source_location": "",
+    "full_name": "android.media.midi.IMidiManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getDevices",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.media.midi.MidiDeviceInfo"
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"clientToken": "readStrongBinder"},
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "registerListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"clientToken": "readStrongBinder"},
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "unregisterListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"clientToken": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "device": "readParcelable",
+                        "__parcelType": "android.media.midi.MidiDeviceInfo"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "openDevice",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"clientToken": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "bluetoothDevice": "readParcelable",
+                        "__parcelType": "android.bluetooth.BluetoothDevice"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "openBluetoothDevice",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"clientToken": "readStrongBinder"},
+                {"deviceToken": "readStrongBinder"}
+            ],
+            "name": "closeDevice",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"server": "readStrongBinder"},
+                {"numInputPorts": "readInt32"},
+                {"numOutputPorts": "readInt32"},
+                {"inputPortNames": "readString16Vector"},
+                {"outputPortNames": "readString16Vector"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"properties": "readBundle"}]
+                },
+                {"type": "readInt32"}
+            ],
+            "name": "registerDeviceServer",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.media.midi.MidiDeviceInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 8,
+            "in": [{"server": "readStrongBinder"}],
+            "name": "unregisterDeviceServer",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"packageName": "readString16"},
+                {"className": "readString16"}
+            ],
+            "name": "getServiceDeviceInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.media.midi.MidiDeviceInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "deviceInfo": "readParcelable",
+                        "__parcelType": "android.media.midi.MidiDeviceInfo"
+                    }]
+                }
+            ],
+            "name": "getDeviceStatus",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.media.midi.MidiDeviceStatus"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"server": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "status": "readParcelable",
+                        "__parcelType": "android.media.midi.MidiDeviceStatus"
+                    }]
+                }
+            ],
+            "name": "setDeviceStatus",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IMidiManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

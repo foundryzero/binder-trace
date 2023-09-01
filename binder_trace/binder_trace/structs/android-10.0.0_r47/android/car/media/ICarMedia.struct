@@ -1,0 +1,41 @@
+{
+    "produced_on": "2023-08-22T14:52:36.215292128Z",
+    "source_location": "",
+    "full_name": "android.car.media.ICarMedia",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getMediaSource",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"mediaSource": "readString16"}],
+            "name": "setMediaSource",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "registerMediaSourceListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "unregisterMediaSourceListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICarMedia",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

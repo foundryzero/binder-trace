@@ -1,0 +1,33 @@
+{
+    "produced_on": "2023-08-22T12:16:46.015692410Z",
+    "source_location": "",
+    "components": [
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "key": "readParcelable",
+                "__parcelType": "android.system.keystore2.KeyDescriptor"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "keySecurityLevel": "readParcelable",
+                "__parcelType": "android.hardware.security.keymint.SecurityLevel"
+            }]
+        },
+        {
+            "authorizations": "readParcelableVector",
+            "__parcelType": "android.system.keystore2.Authorization"
+        },
+        {"certificate": "readByteVector"},
+        {"certificateChain": "readByteVector"},
+        {"modificationTimeMs": "readInt64"}
+    ],
+    "full_name": "android.system.keystore2.KeyMetadata",
+    "name": "KeyMetadata",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

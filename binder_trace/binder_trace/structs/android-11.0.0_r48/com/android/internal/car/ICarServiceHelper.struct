@@ -1,0 +1,50 @@
+{
+    "produced_on": "2023-08-22T12:24:10.834293016Z",
+    "source_location": "",
+    "full_name": "com.android.internal.car.ICarServiceHelper",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"timeoutMs": "readInt32"}],
+            "name": "forceSuspend",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"userId": "readInt32"},
+                {"displayIds": "readInt32Vector"}
+            ],
+            "name": "setDisplayWhitelistForUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"displayIds": "readInt32Vector"}],
+            "name": "setPassengerDisplays",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"enableSourcePreferred": "readBool"},
+                {
+                    "sourcePreferredComponents": "readList",
+                    "__parcelType": "android.content.ComponentName"
+                }
+            ],
+            "name": "setSourcePreferredComponents",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICarServiceHelper",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,94 @@
+{
+    "produced_on": "2023-08-22T12:16:40.674353043Z",
+    "source_location": "",
+    "components": [
+        {"kZero": "readInt32"},
+        {"kOne": "readInt32"},
+        {"kOnes": "readInt32"},
+        {"kByteOne": "readByte"},
+        {"kLongOnes": "readInt64"},
+        {"kEmpty": "readString16"},
+        {"kFoo": "readString16"},
+        {"a": "readString16"},
+        {"b": "readInt32"},
+        {"c": "readFloat"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "d": "readParcelable",
+                "__parcelType": "test_package.Bar"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "e": "readParcelable",
+                "__parcelType": "test_package.Bar"
+            }]
+        },
+        {"f": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "shouldBeByteBar": "readParcelable",
+                "__parcelType": "test_package.ByteEnum"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "shouldBeIntBar": "readParcelable",
+                "__parcelType": "test_package.IntEnum"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "shouldBeLongBar": "readParcelable",
+                "__parcelType": "test_package.LongEnum"
+            }]
+        },
+        {
+            "shouldContainTwoByteFoos": "readParcelableVector",
+            "__parcelType": "test_package.ByteEnum"
+        },
+        {
+            "shouldContainTwoIntFoos": "readParcelableVector",
+            "__parcelType": "test_package.IntEnum"
+        },
+        {
+            "shouldContainTwoLongFoos": "readParcelableVector",
+            "__parcelType": "test_package.LongEnum"
+        },
+        {"g": "readString16Vector"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "u": "readParcelable",
+                "__parcelType": "test_package.SimpleUnion"
+            }]
+        },
+        {"BIT0": "readInt32"},
+        {"BIT1": "readInt32"},
+        {"BIT2": "readInt32"},
+        {"shouldSetBit0AndBit2": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "shouldBeConstS1": "readParcelable",
+                "__parcelType": "test_package.SimpleUnion"
+            }]
+        }
+    ],
+    "full_name": "test_package.Foo",
+    "name": "Foo",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

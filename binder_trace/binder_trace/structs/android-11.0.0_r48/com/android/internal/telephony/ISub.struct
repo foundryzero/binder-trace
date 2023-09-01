@@ -1,0 +1,632 @@
+{
+    "produced_on": "2023-08-22T12:24:12.934752985Z",
+    "source_location": "",
+    "full_name": "com.android.internal.telephony.ISub",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "getAllSubInfoList",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.telephony.SubscriptionInfo"
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "getAllSubInfoCount",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"subId": "readInt32"},
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "getActiveSubscriptionInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.telephony.SubscriptionInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"iccId": "readString16"},
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "getActiveSubscriptionInfoForIccId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.telephony.SubscriptionInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"slotIndex": "readInt32"},
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "getActiveSubscriptionInfoForSimSlotIndex",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.telephony.SubscriptionInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "getActiveSubscriptionInfoList",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.telephony.SubscriptionInfo"
+                }
+            ]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "getActiveSubInfoCount",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "getActiveSubInfoCountMax",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "getAvailableSubscriptionInfoList",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.telephony.SubscriptionInfo"
+                }
+            ]
+        },
+        {
+            "code": 10,
+            "in": [{"callingPackage": "readString16"}],
+            "name": "getAccessibleSubscriptionInfoList",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.telephony.SubscriptionInfo"
+                }
+            ]
+        },
+        {
+            "code": 11,
+            "in": [{"cardId": "readInt32"}],
+            "name": "requestEmbeddedSubscriptionInfoListRefresh",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"iccId": "readString16"},
+                {"slotIndex": "readInt32"}
+            ],
+            "name": "addSubInfoRecord",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"uniqueId": "readString16"},
+                {"displayName": "readString16"},
+                {"slotIndex": "readInt32"},
+                {"subscriptionType": "readInt32"}
+            ],
+            "name": "addSubInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"uniqueId": "readString16"},
+                {"subscriptionType": "readInt32"}
+            ],
+            "name": "removeSubInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"tint": "readInt32"},
+                {"subId": "readInt32"}
+            ],
+            "name": "setIconTint",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 16,
+            "in": [
+                {"displayName": "readString16"},
+                {"subId": "readInt32"},
+                {"nameSource": "readInt32"}
+            ],
+            "name": "setDisplayNameUsingSrc",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 17,
+            "in": [
+                {"number": "readString16"},
+                {"subId": "readInt32"}
+            ],
+            "name": "setDisplayNumber",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"roaming": "readInt32"},
+                {"subId": "readInt32"}
+            ],
+            "name": "setDataRoaming",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 19,
+            "in": [
+                {"opportunistic": "readBool"},
+                {"subId": "readInt32"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "setOpportunistic",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 20,
+            "in": [
+                {"subIdList": "readInt32Vector"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "createSubscriptionGroup",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.os.ParcelUuid"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 21,
+            "in": [
+                {"subId": "readInt32"},
+                {"needValidation": "readBool"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "setPreferredDataSubscriptionId",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 22,
+            "in": [],
+            "name": "getPreferredDataSubscriptionId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 23,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "getOpportunisticSubscriptions",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.telephony.SubscriptionInfo"
+                }
+            ]
+        },
+        {
+            "code": 24,
+            "in": [
+                {"subIdList": "readInt32Vector"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "groupUuid": "readParcelable",
+                        "__parcelType": "android.os.ParcelUuid"
+                    }]
+                },
+                {"callingPackage": "readString16"}
+            ],
+            "name": "removeSubscriptionsFromGroup",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 25,
+            "in": [
+                {"subIdList": "readInt32Vector"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "groupUuid": "readParcelable",
+                        "__parcelType": "android.os.ParcelUuid"
+                    }]
+                },
+                {"callingPackage": "readString16"}
+            ],
+            "name": "addSubscriptionsIntoGroup",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 26,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "groupUuid": "readParcelable",
+                        "__parcelType": "android.os.ParcelUuid"
+                    }]
+                },
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "getSubscriptionsInGroup",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.telephony.SubscriptionInfo"
+                }
+            ]
+        },
+        {
+            "code": 27,
+            "in": [{"subId": "readInt32"}],
+            "name": "getSlotIndex",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 28,
+            "in": [{"slotIndex": "readInt32"}],
+            "name": "getSubId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 29,
+            "in": [],
+            "name": "getDefaultSubId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 30,
+            "in": [],
+            "name": "clearSubInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 31,
+            "in": [{"subId": "readInt32"}],
+            "name": "getPhoneId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 32,
+            "in": [],
+            "name": "getDefaultDataSubId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 33,
+            "in": [{"subId": "readInt32"}],
+            "name": "setDefaultDataSubId",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 34,
+            "in": [],
+            "name": "getDefaultVoiceSubId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 35,
+            "in": [{"subId": "readInt32"}],
+            "name": "setDefaultVoiceSubId",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 36,
+            "in": [],
+            "name": "getDefaultSmsSubId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 37,
+            "in": [{"subId": "readInt32"}],
+            "name": "setDefaultSmsSubId",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 38,
+            "in": [{"visibleOnly": "readBool"}],
+            "name": "getActiveSubIdList",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 39,
+            "in": [
+                {"subId": "readInt32"},
+                {"propKey": "readString16"},
+                {"propValue": "readString16"}
+            ],
+            "name": "setSubscriptionProperty",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 40,
+            "in": [
+                {"subId": "readInt32"},
+                {"propKey": "readString16"},
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "getSubscriptionProperty",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 41,
+            "in": [
+                {"enable": "readBool"},
+                {"subId": "readInt32"}
+            ],
+            "name": "setSubscriptionEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 42,
+            "in": [{"subId": "readInt32"}],
+            "name": "isSubscriptionEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 43,
+            "in": [{"slotIndex": "readInt32"}],
+            "name": "getEnabledSubscriptionId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 44,
+            "in": [{"slotIndex": "readInt32"}],
+            "name": "getSimStateForSlotIndex",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 45,
+            "in": [
+                {"subId": "readInt32"},
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "isActiveSubId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 46,
+            "in": [],
+            "name": "getActiveDataSubscriptionId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 47,
+            "in": [],
+            "name": "canDisablePhysicalSubscription",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 48,
+            "in": [
+                {"enabled": "readBool"},
+                {"subscriptionId": "readInt32"}
+            ],
+            "name": "setUiccApplicationsEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        }
+    ],
+    "name": "ISub",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

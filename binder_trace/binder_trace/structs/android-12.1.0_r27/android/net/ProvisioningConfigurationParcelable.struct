@@ -1,0 +1,71 @@
+{
+    "produced_on": "2023-08-22T12:16:45.311490959Z",
+    "source_location": "",
+    "components": [
+        {"enableIPv4": "readBool"},
+        {"enableIPv6": "readBool"},
+        {"usingMultinetworkPolicyTracker": "readBool"},
+        {"usingIpReachabilityMonitor": "readBool"},
+        {"requestedPreDhcpActionMs": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "initialConfig": "readParcelable",
+                "__parcelType": "android.net.InitialConfigurationParcelable"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "staticIpConfig": "readParcelable",
+                "__parcelType": "android.net.StaticIpConfiguration"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "apfCapabilities": "readParcelable",
+                "__parcelType": "android.net.apf.ApfCapabilities"
+            }]
+        },
+        {"provisioningTimeoutMs": "readInt32"},
+        {"ipv6AddrGenMode": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "network": "readParcelable",
+                "__parcelType": "android.net.Network"
+            }]
+        },
+        {"displayName": "readString16"},
+        {"enablePreconnection": "readBool"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "scanResultInfo": "readParcelable",
+                "__parcelType": "android.net.ScanResultInfoParcelable"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "layer2Info": "readParcelable",
+                "__parcelType": "android.net.Layer2InformationParcelable"
+            }]
+        },
+        {
+            "options": "readList",
+            "__parcelType": "android.net.networkstack.aidl.dhcp.DhcpOption"
+        }
+    ],
+    "full_name": "android.net.ProvisioningConfigurationParcelable",
+    "name": "ProvisioningConfigurationParcelable",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

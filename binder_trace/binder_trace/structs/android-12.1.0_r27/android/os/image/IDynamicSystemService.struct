@@ -1,0 +1,192 @@
+{
+    "produced_on": "2023-08-22T12:16:42.084605756Z",
+    "source_location": "",
+    "full_name": "android.os.image.IDynamicSystemService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"dsuSlot": "readString16"}],
+            "name": "startInstallation",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"name": "readString16"},
+                {"size": "readInt64"},
+                {"readOnly": "readBool"}
+            ],
+            "name": "createPartition",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "closePartition",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "finishInstallation",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "getInstallationProgress",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.gsi.GsiProgress"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "abort",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "isInUse",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "isInstalled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [],
+            "name": "isEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [],
+            "name": "remove",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"enable": "readBool"},
+                {"oneShot": "readBool"}
+            ],
+            "name": "setEnable",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "fd": "readParcelable",
+                        "__parcelType": "android.os.image.ParcelFileDescriptor"
+                    }]
+                },
+                {"size": "readInt64"}
+            ],
+            "name": "setAshmem",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [{"bytes": "readInt64"}],
+            "name": "submitFromAshmem",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 14,
+            "in": [],
+            "name": "getAvbPublicKey",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "dst": "readParcelable",
+                        "__parcelType": "android.gsi.AvbPublicKey"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 15,
+            "in": [],
+            "name": "suggestScratchSize",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        }
+    ],
+    "name": "IDynamicSystemService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

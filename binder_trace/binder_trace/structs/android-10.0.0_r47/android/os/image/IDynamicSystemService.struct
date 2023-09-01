@@ -1,0 +1,120 @@
+{
+    "produced_on": "2023-08-22T14:52:35.003691938Z",
+    "source_location": "",
+    "full_name": "android.os.image.IDynamicSystemService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"systemSize": "readInt64"},
+                {"userdataSize": "readInt64"}
+            ],
+            "name": "startInstallation",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "getInstallationProgress",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.gsi.GsiProgress"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "abort",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "isInUse",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "isInstalled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "isEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "remove",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [{"enable": "readBool"}],
+            "name": "setEnable",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [{"buf": "readByteVector"}],
+            "name": "write",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [],
+            "name": "commit",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "IDynamicSystemService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

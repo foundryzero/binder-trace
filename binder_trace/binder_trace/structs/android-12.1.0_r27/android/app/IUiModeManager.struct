@@ -1,0 +1,203 @@
+{
+    "produced_on": "2023-08-22T12:16:41.353427523Z",
+    "source_location": "",
+    "full_name": "android.app.IUiModeManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"flags": "readInt32"},
+                {"priority": "readInt32"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "enableCarMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"flags": "readInt32"}],
+            "name": "disableCarMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"flags": "readInt32"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "disableCarModeByCallingPackage",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "getCurrentModeType",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"mode": "readInt32"}],
+            "name": "setNightMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "getNightMode",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [{"mode": "readInt32"}],
+            "name": "setApplicationNightMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "isUiModeLocked",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [],
+            "name": "isNightModeLocked",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [{"active": "readBool"}],
+            "name": "setNightModeActivated",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [],
+            "name": "getCustomNightModeStart",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [{"time": "readInt64"}],
+            "name": "setCustomNightModeStart",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [],
+            "name": "getCustomNightModeEnd",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 14,
+            "in": [{"time": "readInt64"}],
+            "name": "setCustomNightModeEnd",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"binder": "readStrongBinder"},
+                {"projectionType": "readInt32"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "requestProjection",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 16,
+            "in": [
+                {"projectionType": "readInt32"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "releaseProjection",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 17,
+            "in": [
+                {"listener": "readStrongBinder"},
+                {"projectionType": "readInt32"}
+            ],
+            "name": "addOnProjectionStateChangedListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "removeOnProjectionStateChangedListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 19,
+            "in": [{"projectionType": "readInt32"}],
+            "name": "getProjectingPackages",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "String"
+                }
+            ]
+        },
+        {
+            "code": 20,
+            "in": [],
+            "name": "getActiveProjectionTypes",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        }
+    ],
+    "name": "IUiModeManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

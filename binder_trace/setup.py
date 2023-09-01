@@ -14,7 +14,7 @@ setup(
     install_requires=required,
     packages=find_packages(),
     package_data={'binder_trace': ['structs/**/*.struct', 'js/interceptbinder.js']},
-    version="1.0.3",
+    version="1.0.5",
     author='Foundry Zero',
     author_email='info@foundryzero.co.uk',
     url='https://github.com/foundryzero/binder-trace',

@@ -1,0 +1,25 @@
+{
+    "produced_on": "2023-08-22T14:52:36.289702531Z",
+    "source_location": "",
+    "full_name": "android.os.cts.IParcelExceptionService",
+    "calls": [{
+        "code": 1,
+        "in": [],
+        "name": "writeBinderThrowException",
+        "oneWay": false,
+        "out": [
+            {"__exception": "readException"},
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "__return": "readParcelable",
+                    "__parcelType": "android.os.cts.ExceptionalParcelable"
+                }]
+            }
+        ]
+    }],
+    "name": "IParcelExceptionService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,160 @@
+{
+    "produced_on": "2023-08-22T12:16:45.552481175Z",
+    "source_location": "",
+    "full_name": "android.car.vms.IVmsBrokerService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"callback": "readStrongBinder"},
+                {"legacyClient": "readBool"}
+            ],
+            "name": "registerClient",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.car.vms.VmsRegistrationInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"token": "readStrongBinder"}],
+            "name": "unregisterClient",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"providerId": "readInt32"}
+            ],
+            "name": "getProviderInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.car.vms.VmsProviderInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"token": "readStrongBinder"},
+                {
+                    "layers": "readList",
+                    "__parcelType": "android.car.vms.VmsAssociatedLayer"
+                }
+            ],
+            "name": "setSubscriptions",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"enabled": "readBool"}
+            ],
+            "name": "setMonitoringEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "providerInfo": "readParcelable",
+                        "__parcelType": "android.car.vms.VmsProviderInfo"
+                    }]
+                }
+            ],
+            "name": "registerProvider",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"providerId": "readInt32"},
+                {
+                    "offerings": "readList",
+                    "__parcelType": "android.car.vms.VmsLayerDependency"
+                }
+            ],
+            "name": "setProviderOfferings",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"providerId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "layer": "readParcelable",
+                        "__parcelType": "android.car.vms.VmsLayer"
+                    }]
+                },
+                {"packet": "readByteVector"}
+            ],
+            "name": "publishPacket",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"providerId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "layer": "readParcelable",
+                        "__parcelType": "android.car.vms.VmsLayer"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "packet": "readParcelable",
+                        "__parcelType": "android.os.SharedMemory"
+                    }]
+                }
+            ],
+            "name": "publishLargePacket",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IVmsBrokerService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

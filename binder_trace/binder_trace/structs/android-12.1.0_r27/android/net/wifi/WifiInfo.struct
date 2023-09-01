@@ -1,0 +1,64 @@
+{
+    "produced_on": "2023-08-22T12:25:48.985954551Z",
+    "source_location": "",
+    "components": [
+        {"setNetworkId": "readInt32"},
+        {"setRssi": "readInt32"},
+        {"setLinkSpeed": "readInt32"},
+        {"setTxLinkSpeedMbps": "readInt32"},
+        {"setRxLinkSpeedMbps": "readInt32"},
+        {"setFrequency": "readInt32"},
+        {"nullcheck": "readByte"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{"setInetAddress": "readByteVector"}]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "mWifiSsid": "readParcelable",
+                "__parcelType": "android.net.wifi.WifiSsid"
+            }]
+        },
+        {"mBSSID": "readString16"},
+        {"mMacAddress": "readString16"},
+        {"mMeteredHint": "readInt32"},
+        {"mEphemeral": "readInt32"},
+        {"mTrusted": "readInt32"},
+        {"mOemPaid": "readInt32"},
+        {"mOemPrivate": "readInt32"},
+        {"mCarrierMerged": "readInt32"},
+        {"score": "readInt32"},
+        {"txSuccess": "readInt64"},
+        {"mSuccessfulTxPacketsPerSecond": "readDouble"},
+        {"txRetries": "readInt64"},
+        {"mTxRetriedTxPacketsPerSecond": "readDouble"},
+        {"txBad": "readInt64"},
+        {"mLostTxPacketsPerSecond": "readDouble"},
+        {"rxSuccess": "readInt64"},
+        {"mSuccessfulRxPacketsPerSecond": "readDouble"},
+        {
+            "mSupplicantState": "readParcelable",
+            "__parcelType": "android.net.wifi.SupplicantState"
+        },
+        {"mOsuAp": "readInt32"},
+        {"mRequestingPackageName": "readString16"},
+        {"mFqdn": "readString16"},
+        {"mProviderFriendlyName": "readString16"},
+        {"mWifiStandard": "readInt32"},
+        {"mMaxSupportedTxLinkSpeed": "readInt32"},
+        {"mMaxSupportedRxLinkSpeed": "readInt32"},
+        {"mPasspointUniqueId": "readString16"},
+        {"mSubscriptionId": "readInt32"},
+        {
+            "mInformationElements": "readTypedVector",
+            "__parcelType": "android.net.wifi.ScanResult.InformationElement"
+        },
+        {"mSecurityType": "readInt32"}
+    ],
+    "full_name": "android.net.wifi.WifiInfo",
+    "name": "WifiInfo",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

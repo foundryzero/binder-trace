@@ -1,0 +1,53 @@
+{
+    "produced_on": "2023-08-22T14:52:35.380353639Z",
+    "source_location": "",
+    "full_name": "com.android.internal.backup.IObbBackupService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"packageName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "data": "readParcelable",
+                        "__parcelType": "android.os.ParcelFileDescriptor"
+                    }]
+                },
+                {"token": "readInt32"},
+                {"callbackBinder": "readStrongBinder"}
+            ],
+            "name": "backupObbs",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"pkgName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "data": "readParcelable",
+                        "__parcelType": "android.os.ParcelFileDescriptor"
+                    }]
+                },
+                {"fileSize": "readInt64"},
+                {"type": "readInt32"},
+                {"path": "readString16"},
+                {"mode": "readInt64"},
+                {"mtime": "readInt64"},
+                {"token": "readInt32"},
+                {"callbackBinder": "readStrongBinder"}
+            ],
+            "name": "restoreObbFile",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IObbBackupService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,213 @@
+{
+    "produced_on": "2023-08-22T14:52:35.592180992Z",
+    "source_location": "",
+    "full_name": "android.media.tv.ITvInputClient",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"inputId": "readString16"},
+                {"token": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "channel": "readParcelable",
+                        "__parcelType": "android.view.InputChannel"
+                    }]
+                },
+                {"seq": "readInt32"}
+            ],
+            "name": "onSessionCreated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"seq": "readInt32"}],
+            "name": "onSessionReleased",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"name": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"args": "readBundle"}]
+                },
+                {"seq": "readInt32"}
+            ],
+            "name": "onSessionEvent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "channelUri": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                },
+                {"seq": "readInt32"}
+            ],
+            "name": "onChannelRetuned",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {
+                    "tracks": "readList",
+                    "__parcelType": "android.media.tv.TvTrackInfo"
+                },
+                {"seq": "readInt32"}
+            ],
+            "name": "onTracksChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"type": "readInt32"},
+                {"trackId": "readString16"},
+                {"seq": "readInt32"}
+            ],
+            "name": "onTrackSelected",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"seq": "readInt32"}],
+            "name": "onVideoAvailable",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"reason": "readInt32"},
+                {"seq": "readInt32"}
+            ],
+            "name": "onVideoUnavailable",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [{"seq": "readInt32"}],
+            "name": "onContentAllowed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"rating": "readString16"},
+                {"seq": "readInt32"}
+            ],
+            "name": "onContentBlocked",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"left": "readInt32"},
+                {"top": "readInt32"},
+                {"right": "readInt32"},
+                {"bottom": "readInt32"},
+                {"seq": "readInt32"}
+            ],
+            "name": "onLayoutSurface",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"status": "readInt32"},
+                {"seq": "readInt32"}
+            ],
+            "name": "onTimeShiftStatusChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"timeMs": "readInt64"},
+                {"seq": "readInt32"}
+            ],
+            "name": "onTimeShiftStartPositionChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"timeMs": "readInt64"},
+                {"seq": "readInt32"}
+            ],
+            "name": "onTimeShiftCurrentPositionChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"seq": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "channelUri": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                }
+            ],
+            "name": "onTuned",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "recordedProgramUri": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                },
+                {"seq": "readInt32"}
+            ],
+            "name": "onRecordingStopped",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [
+                {"error": "readInt32"},
+                {"seq": "readInt32"}
+            ],
+            "name": "onError",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ITvInputClient",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

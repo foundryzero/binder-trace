@@ -1,0 +1,82 @@
+{
+    "produced_on": "2023-08-22T12:16:40.736267447Z",
+    "source_location": "",
+    "full_name": "android.telephony.cts.embmstestapp.ICtsStreamingMiddlewareControl",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "reset",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "getStreamingSessionCalls",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.telephony.cts.embmstestapp.List"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"error": "readInt32"}],
+            "name": "forceErrorCode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"errorCode": "readInt32"},
+                {"message": "readString16"}
+            ],
+            "name": "fireErrorOnStream",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"errorCode": "readInt32"},
+                {"message": "readString16"}
+            ],
+            "name": "fireErrorOnSession",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "fireOnMediaDescriptionUpdated",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"signalStrength": "readInt32"}],
+            "name": "fireOnBroadcastSignalStrengthUpdated",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{"methodType": "readInt32"}],
+            "name": "fireOnStreamMethodUpdated",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICtsStreamingMiddlewareControl",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

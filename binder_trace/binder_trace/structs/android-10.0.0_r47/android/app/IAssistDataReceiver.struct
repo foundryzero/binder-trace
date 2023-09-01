@@ -1,0 +1,39 @@
+{
+    "produced_on": "2023-08-22T14:52:34.278757938Z",
+    "source_location": "",
+    "full_name": "android.app.IAssistDataReceiver",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"resultData": "readBundle"}]
+                }
+            ],
+            "name": "onHandleAssistData",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "screenshot": "readParcelable",
+                        "__parcelType": "android.graphics.Bitmap"
+                    }]
+                }
+            ],
+            "name": "onHandleAssistScreenshot",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IAssistDataReceiver",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

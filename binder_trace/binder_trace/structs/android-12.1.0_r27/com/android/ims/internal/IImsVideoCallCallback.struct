@@ -1,0 +1,98 @@
+{
+    "produced_on": "2023-08-22T12:16:43.297911053Z",
+    "source_location": "",
+    "full_name": "com.android.ims.internal.IImsVideoCallCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "videoProfile": "readParcelable",
+                        "__parcelType": "android.telecom.VideoProfile"
+                    }]
+                }
+            ],
+            "name": "receiveSessionModifyRequest",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"status": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "requestedProfile": "readParcelable",
+                        "__parcelType": "android.telecom.VideoProfile"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "responseProfile": "readParcelable",
+                        "__parcelType": "android.telecom.VideoProfile"
+                    }]
+                }
+            ],
+            "name": "receiveSessionModifyResponse",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"event": "readInt32"}],
+            "name": "handleCallSessionEvent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"width": "readInt32"},
+                {"height": "readInt32"}
+            ],
+            "name": "changePeerDimensions",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"dataUsage": "readInt64"}],
+            "name": "changeCallDataUsage",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "cameraCapabilities": "readParcelable",
+                        "__parcelType": "com.android.ims.internal.VideoProfile.CameraCapabilities"
+                    }]
+                }
+            ],
+            "name": "changeCameraCapabilities",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"videoQuality": "readInt32"}],
+            "name": "changeVideoQuality",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IImsVideoCallCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

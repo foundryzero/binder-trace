@@ -1,0 +1,150 @@
+{
+    "produced_on": "2023-08-22T12:16:41.760458234Z",
+    "source_location": "",
+    "full_name": "android.hardware.biometrics.IBiometricAuthenticator",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"callback": "readStrongBinder"},
+                {"opPackageName": "readString16"}
+            ],
+            "name": "createTestSession",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"opPackageName": "readString16"}],
+            "name": "getSensorProperties",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.biometrics.SensorPropertiesInternal"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"clearSchedulerBuffer": "readBool"}],
+            "name": "dumpSensorServiceStateProto",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"requireConfirmation": "readBool"},
+                {"token": "readStrongBinder"},
+                {"operationId": "readInt64"},
+                {"userId": "readInt32"},
+                {"sensorReceiver": "readStrongBinder"},
+                {"opPackageName": "readString16"},
+                {"requestId": "readInt64"},
+                {"cookie": "readInt32"},
+                {"allowBackgroundAuthentication": "readBool"}
+            ],
+            "name": "prepareForAuthentication",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"cookie": "readInt32"}],
+            "name": "startPreparedClient",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"opPackageName": "readString16"},
+                {"requestId": "readInt64"}
+            ],
+            "name": "cancelAuthenticationFromService",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"opPackageName": "readString16"}],
+            "name": "isHardwareDetected",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"userId": "readInt32"},
+                {"opPackageName": "readString16"}
+            ],
+            "name": "hasEnrolledTemplates",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [{"userId": "readInt32"}],
+            "name": "getLockoutModeForUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"userId": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "invalidateAuthenticatorId",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [{"callingUserId": "readInt32"}],
+            "name": "getAuthenticatorId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"opPackageName": "readString16"},
+                {"userId": "readInt32"},
+                {"hardwareAuthToken": "readByteVector"}
+            ],
+            "name": "resetLockout",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IBiometricAuthenticator",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,36 @@
+{
+    "produced_on": "2023-08-22T12:24:12.359823895Z",
+    "source_location": "",
+    "full_name": "com.android.internal.inputmethod.IMultiClientInputMethod",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"privOps": "readStrongBinder"}],
+            "name": "initialize",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"clientId": "readInt32"},
+                {"uid": "readInt32"},
+                {"pid": "readInt32"},
+                {"selfReportedDisplayId": "readInt32"}
+            ],
+            "name": "addClient",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"clientId": "readInt32"}],
+            "name": "removeClient",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IMultiClientInputMethod",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

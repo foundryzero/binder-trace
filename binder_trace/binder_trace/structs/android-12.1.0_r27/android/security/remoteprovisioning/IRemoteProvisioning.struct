@@ -1,0 +1,136 @@
+{
+    "produced_on": "2023-08-22T12:16:46.290691607Z",
+    "source_location": "",
+    "full_name": "android.security.remoteprovisioning.IRemoteProvisioning",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"expiredBy": "readInt64"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "secLevel": "readParcelable",
+                        "__parcelType": "android.hardware.security.keymint.SecurityLevel"
+                    }]
+                }
+            ],
+            "name": "getPoolStatus",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.security.remoteprovisioning.AttestationPoolStatus"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"testMode": "readBool"},
+                {"numCsr": "readInt32"},
+                {"eek": "readByteVector"},
+                {"challenge": "readByteVector"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "secLevel": "readParcelable",
+                        "__parcelType": "android.hardware.security.keymint.SecurityLevel"
+                    }]
+                }
+            ],
+            "name": "generateCsr",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "protectedData": "readParcelable",
+                        "__parcelType": "android.hardware.security.keymint.ProtectedData"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "deviceInfo": "readParcelable",
+                        "__parcelType": "android.hardware.security.keymint.DeviceInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"publicKey": "readByteVector"},
+                {"batchCert": "readByteVector"},
+                {"certs": "readByteVector"},
+                {"expirationDate": "readInt64"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "secLevel": "readParcelable",
+                        "__parcelType": "android.hardware.security.keymint.SecurityLevel"
+                    }]
+                }
+            ],
+            "name": "provisionCertChain",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"is_test_mode": "readBool"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "secLevel": "readParcelable",
+                        "__parcelType": "android.hardware.security.keymint.SecurityLevel"
+                    }]
+                }
+            ],
+            "name": "generateKeyPair",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "getImplementationInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.security.remoteprovisioning.ImplInfo"
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "deleteAllKeys",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        }
+    ],
+    "name": "IRemoteProvisioning",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

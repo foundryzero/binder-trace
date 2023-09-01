@@ -1,0 +1,27 @@
+{
+    "produced_on": "2023-08-22T12:24:12.585039123Z",
+    "source_location": "",
+    "full_name": "android.media.midi.IBluetoothMidiService",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "bluetoothDevice": "readParcelable",
+                    "__parcelType": "android.bluetooth.BluetoothDevice"
+                }]
+            }
+        ],
+        "name": "addBluetoothDevice",
+        "oneWay": false,
+        "out": [
+            {"__exception": "readException"},
+            {"__return": "readStrongBinder"}
+        ]
+    }],
+    "name": "IBluetoothMidiService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

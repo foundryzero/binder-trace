@@ -73,20 +73,22 @@ emulator-5554   device
 
 # ⌨️ Controls
 
-| Key              | Action                        |
-|------------------|-------------------------------|
-| `up`             | Move up                       |
-| `down`           | Move down                     |
-| `shift + up`     | Page up                       |
-| `shift + down`   | Page down                     |
-| `home`           | Go to top                     |
-| `end`            | Go to bottom                  |
-| `tab`            | Next pane                     |
-| `shift + tab`    | Previous pane                 |
-| `ctrl + c`       | Copy pane to clipboard        |
-| `f`              | Open filter options           |
-| `h`              | Open help                     |
-| `q`              | Quit                          |
+| Key              | Action                                 |
+|------------------|----------------------------------------|
+| `up`             | Move up                                |
+| `down`           | Move down                              |
+| `shift + up`     | Page up                                |
+| `shift + down`   | Page down                              |
+| `home`           | Go to top                              |
+| `end`            | Go to bottom                           |
+| `tab`            | Next pane                              |
+| `shift + tab`    | Previous pane                          |
+| `ctrl + c`       | Copy pane to clipboard                 |
+| `f`              | Open filter options                    |
+| `space`          | Pause/Unpause transaction recording    |
+| `c`              | Clear                                  |
+| `h`              | Open help                              |
+| `q`              | Quit                                   |
 
 # 🔎 Filtering
 If you're interested in specific messages you can filter the displayed results with the following options. 

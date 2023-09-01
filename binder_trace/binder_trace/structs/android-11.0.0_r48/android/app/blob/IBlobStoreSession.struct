@@ -1,0 +1,135 @@
+{
+    "produced_on": "2023-08-22T12:24:10.981177157Z",
+    "source_location": "",
+    "full_name": "android.app.blob.IBlobStoreSession",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"offsetBytes": "readInt64"},
+                {"lengthBytes": "readInt64"}
+            ],
+            "name": "openWrite",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.os.ParcelFileDescriptor"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "openRead",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.os.ParcelFileDescriptor"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"packageName": "readString16"},
+                {"certificate": "readByteVector"}
+            ],
+            "name": "allowPackageAccess",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "allowSameSignatureAccess",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "allowPublicAccess",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"packageName": "readString16"},
+                {"certificate": "readByteVector"}
+            ],
+            "name": "isPackageAccessAllowed",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "isSameSignatureAccessAllowed",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "isPublicAccessAllowed",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [],
+            "name": "getSize",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [],
+            "name": "close",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [],
+            "name": "abandon",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "commit",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IBlobStoreSession",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

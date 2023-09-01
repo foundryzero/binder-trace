@@ -1,0 +1,3566 @@
+{
+    "produced_on": "2023-08-22T12:24:12.967099974Z",
+    "source_location": "",
+    "full_name": "com.android.internal.telephony.ITelephony",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"number": "readString16"}],
+            "name": "dial",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"number": "readString16"}
+            ],
+            "name": "call",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"callingPackage": "readString16"}],
+            "name": "isRadioOn",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "isRadioOnWithFeature",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"subId": "readInt32"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "isRadioOnForSubscriber",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"subId": "readInt32"},
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "isRadioOnForSubscriberWithFeature",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"subId": "readInt32"},
+                {"pin": "readString16"}
+            ],
+            "name": "supplyPinForSubscriber",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"subId": "readInt32"},
+                {"puk": "readString16"},
+                {"pin": "readString16"}
+            ],
+            "name": "supplyPukForSubscriber",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"subId": "readInt32"},
+                {"pin": "readString16"}
+            ],
+            "name": "supplyPinReportResultForSubscriber",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"subId": "readInt32"},
+                {"puk": "readString16"},
+                {"pin": "readString16"}
+            ],
+            "name": "supplyPukReportResultForSubscriber",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [{"dialString": "readString16"}],
+            "name": "handlePinMmi",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"subId": "readInt32"},
+                {"ussdRequest": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "wrappedCallback": "readParcelable",
+                        "__parcelType": "android.os.ResultReceiver"
+                    }]
+                }
+            ],
+            "name": "handleUssdRequest",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"subId": "readInt32"},
+                {"dialString": "readString16"}
+            ],
+            "name": "handlePinMmiForSubscriber",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 14,
+            "in": [],
+            "name": "toggleRadioOnOff",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [{"subId": "readInt32"}],
+            "name": "toggleRadioOnOffForSubscriber",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [{"turnOn": "readBool"}],
+            "name": "setRadio",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 17,
+            "in": [
+                {"subId": "readInt32"},
+                {"turnOn": "readBool"}
+            ],
+            "name": "setRadioForSubscriber",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 18,
+            "in": [{"turnOn": "readBool"}],
+            "name": "setRadioPower",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 19,
+            "in": [],
+            "name": "updateServiceLocation",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 20,
+            "in": [{"subId": "readInt32"}],
+            "name": "updateServiceLocationForSubscriber",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 21,
+            "in": [],
+            "name": "enableLocationUpdates",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 22,
+            "in": [{"subId": "readInt32"}],
+            "name": "enableLocationUpdatesForSubscriber",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 23,
+            "in": [],
+            "name": "disableLocationUpdates",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 24,
+            "in": [{"subId": "readInt32"}],
+            "name": "disableLocationUpdatesForSubscriber",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 25,
+            "in": [],
+            "name": "enableDataConnectivity",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 26,
+            "in": [],
+            "name": "disableDataConnectivity",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 27,
+            "in": [{"subId": "readInt32"}],
+            "name": "isDataConnectivityPossible",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 28,
+            "in": [
+                {"callingPkg": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "getCellLocation",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.telephony.CellIdentity"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 29,
+            "in": [{"phoneId": "readInt32"}],
+            "name": "getNetworkCountryIsoForPhone",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 30,
+            "in": [
+                {"callingPkg": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "getNeighboringCellInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.telephony.NeighboringCellInfo"
+                }
+            ]
+        },
+        {
+            "code": 31,
+            "in": [],
+            "name": "getCallState",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 32,
+            "in": [{"slotIndex": "readInt32"}],
+            "name": "getCallStateForSlot",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 33,
+            "in": [],
+            "name": "getDataActivity",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 34,
+            "in": [{"subId": "readInt32"}],
+            "name": "getDataActivityForSubId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 35,
+            "in": [],
+            "name": "getDataState",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 36,
+            "in": [{"subId": "readInt32"}],
+            "name": "getDataStateForSubId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 37,
+            "in": [],
+            "name": "getActivePhoneType",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 38,
+            "in": [{"slotIndex": "readInt32"}],
+            "name": "getActivePhoneTypeForSlot",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 39,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "getCdmaEriIconIndex",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 40,
+            "in": [
+                {"subId": "readInt32"},
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "getCdmaEriIconIndexForSubscriber",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 41,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "getCdmaEriIconMode",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 42,
+            "in": [
+                {"subId": "readInt32"},
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "getCdmaEriIconModeForSubscriber",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 43,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "getCdmaEriText",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 44,
+            "in": [
+                {"subId": "readInt32"},
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "getCdmaEriTextForSubscriber",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 45,
+            "in": [],
+            "name": "needsOtaServiceProvisioning",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 46,
+            "in": [
+                {"subId": "readInt32"},
+                {"alphaTag": "readString16"},
+                {"number": "readString16"}
+            ],
+            "name": "setVoiceMailNumber",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 47,
+            "in": [
+                {"subId": "readInt32"},
+                {"activationState": "readInt32"}
+            ],
+            "name": "setVoiceActivationState",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 48,
+            "in": [
+                {"subId": "readInt32"},
+                {"activationState": "readInt32"}
+            ],
+            "name": "setDataActivationState",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 49,
+            "in": [
+                {"subId": "readInt32"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "getVoiceActivationState",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 50,
+            "in": [
+                {"subId": "readInt32"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "getDataActivationState",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 51,
+            "in": [
+                {"subId": "readInt32"},
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "getVoiceMessageCountForSubscriber",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 52,
+            "in": [{"subId": "readInt32"}],
+            "name": "isConcurrentVoiceAndDataAllowed",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 53,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"subId": "readInt32"}
+            ],
+            "name": "getVisualVoicemailSettings",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"__return": "readBundle"}]
+                }
+            ]
+        },
+        {
+            "code": 54,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"},
+                {"subId": "readInt32"}
+            ],
+            "name": "getVisualVoicemailPackageName",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 55,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"subId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "settings": "readParcelable",
+                        "__parcelType": "android.telephony.VisualVoicemailSmsFilterSettings"
+                    }]
+                }
+            ],
+            "name": "enableVisualVoicemailSmsFilter",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 56,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"subId": "readInt32"}
+            ],
+            "name": "disableVisualVoicemailSmsFilter",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 57,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"subId": "readInt32"}
+            ],
+            "name": "getVisualVoicemailSmsFilterSettings",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.telephony.VisualVoicemailSmsFilterSettings"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 58,
+            "in": [{"subId": "readInt32"}],
+            "name": "getActiveVisualVoicemailSmsFilterSettings",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.telephony.VisualVoicemailSmsFilterSettings"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 59,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"callingAttributeTag": "readString16"},
+                {"subId": "readInt32"},
+                {"number": "readString16"},
+                {"port": "readInt32"},
+                {"text": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sentIntent": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                }
+            ],
+            "name": "sendVisualVoicemailSmsForSubscriber",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 60,
+            "in": [
+                {"callingPackageName": "readString16"},
+                {"inputCode": "readString16"}
+            ],
+            "name": "sendDialerSpecialCode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 61,
+            "in": [
+                {"subId": "readInt32"},
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "getNetworkTypeForSubscriber",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 62,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "getDataNetworkType",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 63,
+            "in": [
+                {"subId": "readInt32"},
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "getDataNetworkTypeForSubscriber",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 64,
+            "in": [
+                {"subId": "readInt32"},
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "getVoiceNetworkTypeForSubscriber",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 65,
+            "in": [],
+            "name": "hasIccCard",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 66,
+            "in": [{"slotIndex": "readInt32"}],
+            "name": "hasIccCardUsingSlotIndex",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 67,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "getLteOnCdmaMode",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 68,
+            "in": [
+                {"subId": "readInt32"},
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "getLteOnCdmaModeForSubscriber",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 69,
+            "in": [
+                {"callingPkg": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "getAllCellInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.telephony.CellInfo"
+                }
+            ]
+        },
+        {
+            "code": 70,
+            "in": [
+                {"subId": "readInt32"},
+                {"cb": "readStrongBinder"},
+                {"callingPkg": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "requestCellInfoUpdate",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 71,
+            "in": [
+                {"subId": "readInt32"},
+                {"cb": "readStrongBinder"},
+                {"callingPkg": "readString16"},
+                {"callingFeatureId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "ws": "readParcelable",
+                        "__parcelType": "android.os.WorkSource"
+                    }]
+                }
+            ],
+            "name": "requestCellInfoUpdateWithWorkSource",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 72,
+            "in": [{"rateInMillis": "readInt32"}],
+            "name": "setCellInfoListRate",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 73,
+            "in": [
+                {"slotIndex": "readInt32"},
+                {"callingPackage": "readString16"},
+                {"AID": "readString16"},
+                {"p2": "readInt32"}
+            ],
+            "name": "iccOpenLogicalChannelBySlot",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.telephony.IccOpenLogicalChannelResponse"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 74,
+            "in": [
+                {"subId": "readInt32"},
+                {"callingPackage": "readString16"},
+                {"AID": "readString16"},
+                {"p2": "readInt32"}
+            ],
+            "name": "iccOpenLogicalChannel",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.telephony.IccOpenLogicalChannelResponse"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 75,
+            "in": [
+                {"slotIndex": "readInt32"},
+                {"channel": "readInt32"}
+            ],
+            "name": "iccCloseLogicalChannelBySlot",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 76,
+            "in": [
+                {"subId": "readInt32"},
+                {"channel": "readInt32"}
+            ],
+            "name": "iccCloseLogicalChannel",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 77,
+            "in": [
+                {"slotIndex": "readInt32"},
+                {"channel": "readInt32"},
+                {"cla": "readInt32"},
+                {"instruction": "readInt32"},
+                {"p1": "readInt32"},
+                {"p2": "readInt32"},
+                {"p3": "readInt32"},
+                {"data": "readString16"}
+            ],
+            "name": "iccTransmitApduLogicalChannelBySlot",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 78,
+            "in": [
+                {"subId": "readInt32"},
+                {"channel": "readInt32"},
+                {"cla": "readInt32"},
+                {"instruction": "readInt32"},
+                {"p1": "readInt32"},
+                {"p2": "readInt32"},
+                {"p3": "readInt32"},
+                {"data": "readString16"}
+            ],
+            "name": "iccTransmitApduLogicalChannel",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 79,
+            "in": [
+                {"slotIndex": "readInt32"},
+                {"callingPackage": "readString16"},
+                {"cla": "readInt32"},
+                {"instruction": "readInt32"},
+                {"p1": "readInt32"},
+                {"p2": "readInt32"},
+                {"p3": "readInt32"},
+                {"data": "readString16"}
+            ],
+            "name": "iccTransmitApduBasicChannelBySlot",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 80,
+            "in": [
+                {"subId": "readInt32"},
+                {"callingPackage": "readString16"},
+                {"cla": "readInt32"},
+                {"instruction": "readInt32"},
+                {"p1": "readInt32"},
+                {"p2": "readInt32"},
+                {"p3": "readInt32"},
+                {"data": "readString16"}
+            ],
+            "name": "iccTransmitApduBasicChannel",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 81,
+            "in": [
+                {"subId": "readInt32"},
+                {"fileID": "readInt32"},
+                {"command": "readInt32"},
+                {"p1": "readInt32"},
+                {"p2": "readInt32"},
+                {"p3": "readInt32"},
+                {"filePath": "readString16"}
+            ],
+            "name": "iccExchangeSimIO",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 82,
+            "in": [
+                {"subId": "readInt32"},
+                {"content": "readString16"}
+            ],
+            "name": "sendEnvelopeWithStatus",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 83,
+            "in": [{"itemID": "readInt32"}],
+            "name": "nvReadItem",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 84,
+            "in": [
+                {"itemID": "readInt32"},
+                {"itemValue": "readString16"}
+            ],
+            "name": "nvWriteItem",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 85,
+            "in": [{"preferredRoamingList": "readByteVector"}],
+            "name": "nvWriteCdmaPrl",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 86,
+            "in": [{"slotIndex": "readInt32"}],
+            "name": "resetModemConfig",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 87,
+            "in": [{"slotIndex": "readInt32"}],
+            "name": "rebootModem",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 88,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "getCalculatedPreferredNetworkType",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 89,
+            "in": [{"subId": "readInt32"}],
+            "name": "getPreferredNetworkType",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 90,
+            "in": [{"subId": "readInt32"}],
+            "name": "isTetheringApnRequiredForSubscriber",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 91,
+            "in": [{"slotId": "readInt32"}],
+            "name": "enableIms",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 92,
+            "in": [{"slotId": "readInt32"}],
+            "name": "disableIms",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 93,
+            "in": [{"slotIndex": "readInt32"}],
+            "name": "resetIms",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 94,
+            "in": [
+                {"slotId": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "getMmTelFeatureAndListen",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 95,
+            "in": [
+                {"slotId": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "getRcsFeatureAndListen",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 96,
+            "in": [
+                {"slotId": "readInt32"},
+                {"featureType": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "unregisterImsFeatureCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 97,
+            "in": [
+                {"slotId": "readInt32"},
+                {"feature": "readInt32"}
+            ],
+            "name": "getImsRegistration",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 98,
+            "in": [
+                {"slotId": "readInt32"},
+                {"feature": "readInt32"}
+            ],
+            "name": "getImsConfig",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 99,
+            "in": [
+                {"slotIndex": "readInt32"},
+                {"isCarrierService": "readBool"},
+                {"featureTypes": "readInt32Vector"},
+                {"packageName": "readString16"}
+            ],
+            "name": "setBoundImsServiceOverride",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 100,
+            "in": [
+                {"slotIndex": "readInt32"},
+                {"isCarrierImsService": "readBool"},
+                {"featureType": "readInt32"}
+            ],
+            "name": "getBoundImsServicePackage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 101,
+            "in": [
+                {"subId": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "getImsMmTelFeatureState",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 102,
+            "in": [{"subId": "readInt32"}],
+            "name": "setNetworkSelectionModeAutomatic",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 103,
+            "in": [
+                {"subId": "readInt32"},
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "getCellNetworkScanResults",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.internal.telephony.CellNetworkScanResult"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 104,
+            "in": [
+                {"subId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.telephony.NetworkScanRequest"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "messenger": "readParcelable",
+                        "__parcelType": "android.os.Messenger"
+                    }]
+                },
+                {"binder": "readStrongBinder"},
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "requestNetworkScan",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 105,
+            "in": [
+                {"subId": "readInt32"},
+                {"scanId": "readInt32"}
+            ],
+            "name": "stopNetworkScan",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 106,
+            "in": [
+                {"subId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "operatorInfo": "readParcelable",
+                        "__parcelType": "com.android.internal.telephony.OperatorInfo"
+                    }]
+                },
+                {"persisSelection": "readBool"}
+            ],
+            "name": "setNetworkSelectionModeManual",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 107,
+            "in": [{"subId": "readInt32"}],
+            "name": "getAllowedNetworkTypes",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 108,
+            "in": [
+                {"subId": "readInt32"},
+                {"allowedNetworkTypes": "readInt64"}
+            ],
+            "name": "setAllowedNetworkTypes",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 109,
+            "in": [
+                {"subId": "readInt32"},
+                {"reason": "readInt32"}
+            ],
+            "name": "getAllowedNetworkTypesForReason",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 110,
+            "in": [{"subId": "readInt32"}],
+            "name": "getEffectiveAllowedNetworkTypes",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 111,
+            "in": [
+                {"subId": "readInt32"},
+                {"reason": "readInt32"},
+                {"allowedNetworkTypes": "readInt64"}
+            ],
+            "name": "setAllowedNetworkTypesForReason",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 112,
+            "in": [
+                {"subId": "readInt32"},
+                {"networkType": "readInt32"}
+            ],
+            "name": "setPreferredNetworkType",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 113,
+            "in": [
+                {"subId": "readInt32"},
+                {"enable": "readBool"}
+            ],
+            "name": "setUserDataEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 114,
+            "in": [{"subId": "readInt32"}],
+            "name": "getDataEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 115,
+            "in": [{"subId": "readInt32"}],
+            "name": "isUserDataEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 116,
+            "in": [{"subId": "readInt32"}],
+            "name": "isDataEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 117,
+            "in": [{"subId": "readInt32"}],
+            "name": "isManualNetworkSelectionAllowed",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 118,
+            "in": [
+                {"subId": "readInt32"},
+                {"isEnable": "readBool"}
+            ],
+            "name": "setAlwaysReportSignalStrength",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 119,
+            "in": [
+                {"apnType": "readString16"},
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "getPcscfAddress",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 120,
+            "in": [{"registered": "readBool"}],
+            "name": "setImsRegistrationState",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 121,
+            "in": [{"subId": "readInt32"}],
+            "name": "getCdmaMdn",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 122,
+            "in": [{"subId": "readInt32"}],
+            "name": "getCdmaMin",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 123,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "range": "readParcelable",
+                        "__parcelType": "android.telephony.PhoneNumberRange"
+                    }]
+                },
+                {"timeoutMillis": "readInt64"},
+                {"callback": "readStrongBinder"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "requestNumberVerification",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 124,
+            "in": [{"subId": "readInt32"}],
+            "name": "getCarrierPrivilegeStatus",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 125,
+            "in": [
+                {"subId": "readInt32"},
+                {"uid": "readInt32"}
+            ],
+            "name": "getCarrierPrivilegeStatusForUid",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 126,
+            "in": [
+                {"subId": "readInt32"},
+                {"pkgName": "readString16"}
+            ],
+            "name": "checkCarrierPrivilegesForPackage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 127,
+            "in": [{"pkgName": "readString16"}],
+            "name": "checkCarrierPrivilegesForPackageAnyPhone",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 128,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "intent": "readParcelable",
+                        "__parcelType": "android.content.Intent"
+                    }]
+                },
+                {"phoneId": "readInt32"}
+            ],
+            "name": "getCarrierPackageNamesForIntentAndPhone",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "String"
+                }
+            ]
+        },
+        {
+            "code": 129,
+            "in": [
+                {"subId": "readInt32"},
+                {"alphaTag": "readString16"},
+                {"number": "readString16"}
+            ],
+            "name": "setLine1NumberForDisplayForSubscriber",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 130,
+            "in": [
+                {"subId": "readInt32"},
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "getLine1NumberForDisplay",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 131,
+            "in": [
+                {"subId": "readInt32"},
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "getLine1AlphaTagForDisplay",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 132,
+            "in": [
+                {"subId": "readInt32"},
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "getMergedSubscriberIds",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 133,
+            "in": [
+                {"subId": "readInt32"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "getMergedImsisFromGroup",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 134,
+            "in": [
+                {"subId": "readInt32"},
+                {"brand": "readString16"}
+            ],
+            "name": "setOperatorBrandOverride",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 135,
+            "in": [
+                {"subId": "readInt32"},
+                {
+                    "gsmRoamingList": "readList",
+                    "__parcelType": "String"
+                },
+                {
+                    "gsmNonRoamingList": "readList",
+                    "__parcelType": "String"
+                },
+                {
+                    "cdmaRoamingList": "readList",
+                    "__parcelType": "String"
+                },
+                {
+                    "cdmaNonRoamingList": "readList",
+                    "__parcelType": "String"
+                }
+            ],
+            "name": "setRoamingOverride",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 136,
+            "in": [{"oemReq": "readByteVector"}],
+            "name": "invokeOemRilRequestRaw",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"},
+                {"oemResp": "readByteVector"}
+            ]
+        },
+        {
+            "code": 137,
+            "in": [],
+            "name": "needMobileRadioShutdown",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 138,
+            "in": [],
+            "name": "shutdownMobileRadios",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 139,
+            "in": [{
+                "rafs": "readParcelableVector",
+                "__parcelType": "android.telephony.RadioAccessFamily"
+            }],
+            "name": "setRadioCapability",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 140,
+            "in": [
+                {"phoneId": "readInt32"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "getRadioAccessFamily",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 141,
+            "in": [{"enable": "readBool"}],
+            "name": "enableVideoCalling",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 142,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "isVideoCallingEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 143,
+            "in": [
+                {"subId": "readInt32"},
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "canChangeDtmfToneLength",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 144,
+            "in": [
+                {"subId": "readInt32"},
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "isWorldPhone",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 145,
+            "in": [],
+            "name": "isTtyModeSupported",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 146,
+            "in": [{"subscriptionId": "readInt32"}],
+            "name": "isRttSupported",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 147,
+            "in": [],
+            "name": "isHearingAidCompatibilitySupported",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 148,
+            "in": [{"subId": "readInt32"}],
+            "name": "isImsRegistered",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 149,
+            "in": [{"subId": "readInt32"}],
+            "name": "isWifiCallingAvailable",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 150,
+            "in": [{"subId": "readInt32"}],
+            "name": "isVideoTelephonyAvailable",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 151,
+            "in": [{"subId": "readInt32"}],
+            "name": "getImsRegTechnologyForMmTel",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 152,
+            "in": [{"callingPackage": "readString16"}],
+            "name": "getDeviceId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 153,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "getDeviceIdWithFeature",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 154,
+            "in": [
+                {"slotIndex": "readInt32"},
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "getImeiForSlot",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 155,
+            "in": [{"slotIndex": "readInt32"}],
+            "name": "getTypeAllocationCodeForSlot",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 156,
+            "in": [
+                {"slotIndex": "readInt32"},
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "getMeidForSlot",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 157,
+            "in": [{"slotIndex": "readInt32"}],
+            "name": "getManufacturerCodeForSlot",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 158,
+            "in": [
+                {"slotIndex": "readInt32"},
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "getDeviceSoftwareVersionForSlot",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 159,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "phoneAccount": "readParcelable",
+                        "__parcelType": "android.telecom.PhoneAccount"
+                    }]
+                }
+            ],
+            "name": "getSubIdForPhoneAccount",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 160,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "phoneAccountHandle": "readParcelable",
+                        "__parcelType": "android.telecom.PhoneAccountHandle"
+                    }]
+                },
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "getSubIdForPhoneAccountHandle",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 161,
+            "in": [{"subscriptionId": "readInt32"}],
+            "name": "getPhoneAccountHandleForSubscriptionId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.telecom.PhoneAccountHandle"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 162,
+            "in": [{"subId": "readInt32"}],
+            "name": "factoryReset",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 163,
+            "in": [{"subId": "readInt32"}],
+            "name": "getSimLocaleForSubscriber",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 164,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "result": "readParcelable",
+                        "__parcelType": "android.os.ResultReceiver"
+                    }]
+                }
+            ],
+            "name": "requestModemActivityInfo",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 165,
+            "in": [
+                {"subId": "readInt32"},
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "getServiceStateForSubscriber",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.telephony.ServiceState"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 166,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "accountHandle": "readParcelable",
+                        "__parcelType": "android.telecom.PhoneAccountHandle"
+                    }]
+                }
+            ],
+            "name": "getVoicemailRingtoneUri",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 167,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "phoneAccountHandle": "readParcelable",
+                        "__parcelType": "android.telecom.PhoneAccountHandle"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "uri": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                }
+            ],
+            "name": "setVoicemailRingtoneUri",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 168,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "accountHandle": "readParcelable",
+                        "__parcelType": "android.telecom.PhoneAccountHandle"
+                    }]
+                }
+            ],
+            "name": "isVoicemailVibrationEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 169,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "phoneAccountHandle": "readParcelable",
+                        "__parcelType": "android.telecom.PhoneAccountHandle"
+                    }]
+                },
+                {"enabled": "readBool"}
+            ],
+            "name": "setVoicemailVibrationEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 170,
+            "in": [{"phoneId": "readInt32"}],
+            "name": "getPackagesWithCarrierPrivileges",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "String"
+                }
+            ]
+        },
+        {
+            "code": 171,
+            "in": [],
+            "name": "getPackagesWithCarrierPrivilegesForAllPhones",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "String"
+                }
+            ]
+        },
+        {
+            "code": 172,
+            "in": [
+                {"subId": "readInt32"},
+                {"appType": "readInt32"}
+            ],
+            "name": "getAidForAppType",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 173,
+            "in": [{"subId": "readInt32"}],
+            "name": "getEsn",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 174,
+            "in": [{"subId": "readInt32"}],
+            "name": "getCdmaPrlVersion",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 175,
+            "in": [],
+            "name": "getTelephonyHistograms",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.telephony.TelephonyHistogram"
+                }
+            ]
+        },
+        {
+            "code": 176,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "carrierRestrictionRules": "readParcelable",
+                        "__parcelType": "android.telephony.CarrierRestrictionRules"
+                    }]
+                }
+            ],
+            "name": "setAllowedCarriers",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 177,
+            "in": [],
+            "name": "getAllowedCarriers",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.telephony.CarrierRestrictionRules"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 178,
+            "in": [{"subId": "readInt32"}],
+            "name": "getSubscriptionCarrierId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 179,
+            "in": [{"subId": "readInt32"}],
+            "name": "getSubscriptionCarrierName",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 180,
+            "in": [{"subId": "readInt32"}],
+            "name": "getSubscriptionSpecificCarrierId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 181,
+            "in": [{"subId": "readInt32"}],
+            "name": "getSubscriptionSpecificCarrierName",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 182,
+            "in": [
+                {"slotIndex": "readInt32"},
+                {"mccmnc": "readString16"},
+                {"isSubscriptionMccMnc": "readBool"}
+            ],
+            "name": "getCarrierIdFromMccMnc",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 183,
+            "in": [
+                {"subId": "readInt32"},
+                {"visible": "readBool"}
+            ],
+            "name": "carrierActionSetMeteredApnsEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 184,
+            "in": [
+                {"subId": "readInt32"},
+                {"enabled": "readBool"}
+            ],
+            "name": "carrierActionSetRadioEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 185,
+            "in": [
+                {"subId": "readInt32"},
+                {"report": "readBool"}
+            ],
+            "name": "carrierActionReportDefaultNetworkStatus",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 186,
+            "in": [{"subId": "readInt32"}],
+            "name": "carrierActionResetAll",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 187,
+            "in": [
+                {"subId": "readInt32"},
+                {"callForwardingReason": "readInt32"}
+            ],
+            "name": "getCallForwarding",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.telephony.CallForwardingInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 188,
+            "in": [
+                {"subId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callForwardingInfo": "readParcelable",
+                        "__parcelType": "android.telephony.CallForwardingInfo"
+                    }]
+                }
+            ],
+            "name": "setCallForwarding",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 189,
+            "in": [{"subId": "readInt32"}],
+            "name": "getCallWaitingStatus",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 190,
+            "in": [
+                {"subId": "readInt32"},
+                {"isEnable": "readBool"}
+            ],
+            "name": "setCallWaitingStatus",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 191,
+            "in": [
+                {"enabled": "readBool"},
+                {"subId": "readInt32"}
+            ],
+            "name": "setPolicyDataEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 192,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"},
+                {"subid": "readInt32"}
+            ],
+            "name": "getClientRequestStats",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.telephony.ClientRequestStats"
+                }
+            ]
+        },
+        {
+            "code": 193,
+            "in": [
+                {"slotIndex": "readInt32"},
+                {"state": "readInt32"}
+            ],
+            "name": "setSimPowerStateForSlot",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 194,
+            "in": [
+                {"subId": "readInt32"},
+                {"appType": "readInt32"},
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "getForbiddenPlmns",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 195,
+            "in": [
+                {"subId": "readInt32"},
+                {"appType": "readInt32"},
+                {
+                    "fplmns": "readList",
+                    "__parcelType": "String"
+                },
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "setForbiddenPlmns",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 196,
+            "in": [{"subId": "readInt32"}],
+            "name": "getEmergencyCallbackMode",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 197,
+            "in": [{"subId": "readInt32"}],
+            "name": "getSignalStrength",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.telephony.SignalStrength"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 198,
+            "in": [
+                {"subId": "readInt32"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "getCardIdForDefaultEuicc",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 199,
+            "in": [{"callingPackage": "readString16"}],
+            "name": "getUiccCardsInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.telephony.UiccCardInfo"
+                }
+            ]
+        },
+        {
+            "code": 200,
+            "in": [],
+            "name": "getUiccSlotsInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.telephony.UiccSlotInfo"
+                }
+            ]
+        },
+        {
+            "code": 201,
+            "in": [{"physicalSlots": "readInt32Vector"}],
+            "name": "switchSlots",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 202,
+            "in": [{"subId": "readInt32"}],
+            "name": "isDataRoamingEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 203,
+            "in": [
+                {"subId": "readInt32"},
+                {"isEnabled": "readBool"}
+            ],
+            "name": "setDataRoamingEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 204,
+            "in": [{"subId": "readInt32"}],
+            "name": "getCdmaRoamingMode",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 205,
+            "in": [
+                {"subId": "readInt32"},
+                {"mode": "readInt32"}
+            ],
+            "name": "setCdmaRoamingMode",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 206,
+            "in": [
+                {"subId": "readInt32"},
+                {"mode": "readInt32"}
+            ],
+            "name": "setCdmaSubscriptionMode",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 207,
+            "in": [
+                {"subId": "readInt32"},
+                {"mccmnc": "readString16"},
+                {"imsi": "readString16"},
+                {"iccid": "readString16"},
+                {"gid1": "readString16"},
+                {"gid2": "readString16"},
+                {"plmn": "readString16"},
+                {"spn": "readString16"},
+                {"carrierPrivilegeRules": "readString16"},
+                {"apn": "readString16"}
+            ],
+            "name": "setCarrierTestOverride",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 208,
+            "in": [{"subId": "readInt32"}],
+            "name": "getCarrierIdListVersion",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 209,
+            "in": [{"subId": "readInt32"}],
+            "name": "refreshUiccProfile",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 210,
+            "in": [
+                {"subId": "readInt32"},
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "getNumberOfModemsWithSimultaneousDataConnections",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 211,
+            "in": [{"subId": "readInt32"}],
+            "name": "getNetworkSelectionMode",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 212,
+            "in": [],
+            "name": "isInEmergencySmsMode",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 213,
+            "in": [
+                {"slotIndex": "readInt32"},
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "getRadioPowerState",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 214,
+            "in": [
+                {"subId": "readInt32"},
+                {"c": "readStrongBinder"}
+            ],
+            "name": "registerImsRegistrationCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 215,
+            "in": [
+                {"subId": "readInt32"},
+                {"c": "readStrongBinder"}
+            ],
+            "name": "unregisterImsRegistrationCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 216,
+            "in": [
+                {"subId": "readInt32"},
+                {"consumer": "readStrongBinder"}
+            ],
+            "name": "getImsMmTelRegistrationState",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 217,
+            "in": [
+                {"subId": "readInt32"},
+                {"consumer": "readStrongBinder"}
+            ],
+            "name": "getImsMmTelRegistrationTransportType",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 218,
+            "in": [
+                {"subId": "readInt32"},
+                {"c": "readStrongBinder"}
+            ],
+            "name": "registerMmTelCapabilityCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 219,
+            "in": [
+                {"subId": "readInt32"},
+                {"c": "readStrongBinder"}
+            ],
+            "name": "unregisterMmTelCapabilityCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 220,
+            "in": [
+                {"subId": "readInt32"},
+                {"capability": "readInt32"},
+                {"regTech": "readInt32"}
+            ],
+            "name": "isCapable",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 221,
+            "in": [
+                {"subId": "readInt32"},
+                {"capability": "readInt32"},
+                {"regTech": "readInt32"}
+            ],
+            "name": "isAvailable",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 222,
+            "in": [
+                {"subId": "readInt32"},
+                {"callback": "readStrongBinder"},
+                {"capability": "readInt32"},
+                {"transportType": "readInt32"}
+            ],
+            "name": "isMmTelCapabilitySupported",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 223,
+            "in": [{"subId": "readInt32"}],
+            "name": "isAdvancedCallingSettingEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 224,
+            "in": [
+                {"subId": "readInt32"},
+                {"isEnabled": "readBool"}
+            ],
+            "name": "setAdvancedCallingSettingEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 225,
+            "in": [{"subId": "readInt32"}],
+            "name": "isVtSettingEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 226,
+            "in": [
+                {"subId": "readInt32"},
+                {"isEnabled": "readBool"}
+            ],
+            "name": "setVtSettingEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 227,
+            "in": [{"subId": "readInt32"}],
+            "name": "isVoWiFiSettingEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 228,
+            "in": [
+                {"subId": "readInt32"},
+                {"isEnabled": "readBool"}
+            ],
+            "name": "setVoWiFiSettingEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 229,
+            "in": [{"subId": "readInt32"}],
+            "name": "isVoWiFiRoamingSettingEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 230,
+            "in": [
+                {"subId": "readInt32"},
+                {"isEnabled": "readBool"}
+            ],
+            "name": "setVoWiFiRoamingSettingEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 231,
+            "in": [
+                {"subId": "readInt32"},
+                {"isCapable": "readBool"},
+                {"mode": "readInt32"}
+            ],
+            "name": "setVoWiFiNonPersistent",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 232,
+            "in": [{"subId": "readInt32"}],
+            "name": "getVoWiFiModeSetting",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 233,
+            "in": [
+                {"subId": "readInt32"},
+                {"mode": "readInt32"}
+            ],
+            "name": "setVoWiFiModeSetting",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 234,
+            "in": [{"subId": "readInt32"}],
+            "name": "getVoWiFiRoamingModeSetting",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 235,
+            "in": [
+                {"subId": "readInt32"},
+                {"mode": "readInt32"}
+            ],
+            "name": "setVoWiFiRoamingModeSetting",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 236,
+            "in": [
+                {"subId": "readInt32"},
+                {"isEnabled": "readBool"}
+            ],
+            "name": "setRttCapabilitySetting",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 237,
+            "in": [{"subId": "readInt32"}],
+            "name": "isTtyOverVolteEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 238,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "getEmergencyNumberList",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readMap"}
+            ]
+        },
+        {
+            "code": 239,
+            "in": [
+                {"number": "readString16"},
+                {"exactMatch": "readBool"}
+            ],
+            "name": "isEmergencyNumber",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 240,
+            "in": [{"subId": "readInt32"}],
+            "name": "getCertsFromCarrierPrivilegeAccessRules",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "String"
+                }
+            ]
+        },
+        {
+            "code": 241,
+            "in": [
+                {"subId": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "registerImsProvisioningChangedCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 242,
+            "in": [
+                {"subId": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "unregisterImsProvisioningChangedCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 243,
+            "in": [
+                {"subId": "readInt32"},
+                {"capability": "readInt32"},
+                {"tech": "readInt32"},
+                {"isProvisioned": "readBool"}
+            ],
+            "name": "setImsProvisioningStatusForCapability",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 244,
+            "in": [
+                {"subId": "readInt32"},
+                {"capability": "readInt32"},
+                {"tech": "readInt32"}
+            ],
+            "name": "getImsProvisioningStatusForCapability",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 245,
+            "in": [
+                {"subId": "readInt32"},
+                {"capability": "readInt32"}
+            ],
+            "name": "getRcsProvisioningStatusForCapability",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 246,
+            "in": [
+                {"subId": "readInt32"},
+                {"capability": "readInt32"},
+                {"isProvisioned": "readBool"}
+            ],
+            "name": "setRcsProvisioningStatusForCapability",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 247,
+            "in": [
+                {"subId": "readInt32"},
+                {"capability": "readInt32"},
+                {"tech": "readInt32"}
+            ],
+            "name": "isMmTelCapabilityProvisionedInCache",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 248,
+            "in": [
+                {"subId": "readInt32"},
+                {"capability": "readInt32"},
+                {"tech": "readInt32"},
+                {"isProvisioned": "readBool"}
+            ],
+            "name": "cacheMmTelCapabilityProvisioning",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 249,
+            "in": [
+                {"subId": "readInt32"},
+                {"key": "readInt32"}
+            ],
+            "name": "getImsProvisioningInt",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 250,
+            "in": [
+                {"subId": "readInt32"},
+                {"key": "readInt32"}
+            ],
+            "name": "getImsProvisioningString",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 251,
+            "in": [
+                {"subId": "readInt32"},
+                {"key": "readInt32"},
+                {"value": "readInt32"}
+            ],
+            "name": "setImsProvisioningInt",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 252,
+            "in": [
+                {"subId": "readInt32"},
+                {"key": "readInt32"},
+                {"value": "readString16"}
+            ],
+            "name": "setImsProvisioningString",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 253,
+            "in": [],
+            "name": "startEmergencyCallbackMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 254,
+            "in": [
+                {"action": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "num": "readParcelable",
+                        "__parcelType": "android.telephony.emergency.EmergencyNumber"
+                    }]
+                }
+            ],
+            "name": "updateEmergencyNumberListTestMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 255,
+            "in": [],
+            "name": "getEmergencyNumberListTestMode",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "String"
+                }
+            ]
+        },
+        {
+            "code": 256,
+            "in": [{"subId": "readInt32"}],
+            "name": "getEmergencyNumberDbVersion",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 257,
+            "in": [],
+            "name": "notifyOtaEmergencyNumberDbInstalled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 258,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "otaParcelFileDescriptor": "readParcelable",
+                        "__parcelType": "android.os.ParcelFileDescriptor"
+                    }]
+                }
+            ],
+            "name": "updateOtaEmergencyNumberDbFilePath",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 259,
+            "in": [],
+            "name": "resetOtaEmergencyNumberDbFilePath",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 260,
+            "in": [
+                {"slotIndex": "readInt32"},
+                {"enable": "readBool"}
+            ],
+            "name": "enableModemForSlot",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 261,
+            "in": [{"isMultiSimCarrierRestricted": "readBool"}],
+            "name": "setMultiSimCarrierRestriction",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 262,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "isMultiSimSupported",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 263,
+            "in": [{"numOfSims": "readInt32"}],
+            "name": "switchMultiSimConfig",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 264,
+            "in": [
+                {"subId": "readInt32"},
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "doesSwitchMultiSimConfigTriggerReboot",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 265,
+            "in": [],
+            "name": "getSlotsMapping",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 266,
+            "in": [],
+            "name": "getRadioHalVersion",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 267,
+            "in": [],
+            "name": "getCurrentPackageName",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 268,
+            "in": [
+                {"subId": "readInt32"},
+                {"appType": "readInt32"}
+            ],
+            "name": "isApplicationOnUicc",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 269,
+            "in": [
+                {"slotIndex": "readInt32"},
+                {"callingPackage": "readString16"},
+                {"callingFeatureId": "readString16"}
+            ],
+            "name": "isModemEnabledForSlot",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 270,
+            "in": [
+                {"apnType": "readInt32"},
+                {"subId": "readInt32"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "isDataEnabledForApn",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 271,
+            "in": [
+                {"apnType": "readInt32"},
+                {"subId": "readInt32"}
+            ],
+            "name": "isApnMetered",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 272,
+            "in": [
+                {
+                    "specifiers": "readList",
+                    "__parcelType": "android.telephony.RadioAccessSpecifier"
+                },
+                {"subId": "readInt32"},
+                {"resultCallback": "readStrongBinder"}
+            ],
+            "name": "setSystemSelectionChannels",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 273,
+            "in": [
+                {"subId": "readInt32"},
+                {"mvnoType": "readInt32"},
+                {"mvnoMatchData": "readString16"}
+            ],
+            "name": "isMvnoMatched",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 274,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"callingAttributeTag": "readString16"},
+                {"subIdResult": "readStrongBinder"}
+            ],
+            "name": "enqueueSmsPickResult",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 275,
+            "in": [{"subId": "readInt32"}],
+            "name": "getMmsUserAgent",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 276,
+            "in": [{"subId": "readInt32"}],
+            "name": "getMmsUAProfUrl",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 277,
+            "in": [
+                {"subId": "readInt32"},
+                {"allow": "readBool"}
+            ],
+            "name": "setDataAllowedDuringVoiceCall",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 278,
+            "in": [{"subId": "readInt32"}],
+            "name": "isDataAllowedInVoiceCall",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 279,
+            "in": [
+                {"subId": "readInt32"},
+                {"allow": "readBool"}
+            ],
+            "name": "setAlwaysAllowMmsData",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 280,
+            "in": [{"isCepEnabled": "readBool"}],
+            "name": "setCepEnabled",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 281,
+            "in": [
+                {"subId": "readInt32"},
+                {"config": "readByteVector"},
+                {"isCompressed": "readBool"}
+            ],
+            "name": "notifyRcsAutoConfigurationReceived",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 282,
+            "in": [{"subId": "readInt32"}],
+            "name": "isIccLockEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 283,
+            "in": [
+                {"subId": "readInt32"},
+                {"enabled": "readBool"},
+                {"password": "readString16"}
+            ],
+            "name": "setIccLockEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 284,
+            "in": [
+                {"subId": "readInt32"},
+                {"oldPassword": "readString16"},
+                {"newPassword": "readString16"}
+            ],
+            "name": "changeIccLockPassword",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 285,
+            "in": [],
+            "name": "requestUserActivityNotification",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 286,
+            "in": [],
+            "name": "userActivity",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 287,
+            "in": [{"subId": "readInt32"}],
+            "name": "getManualNetworkSelectionPlmn",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 288,
+            "in": [],
+            "name": "canConnectTo5GInDsdsMode",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "ITelephony",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

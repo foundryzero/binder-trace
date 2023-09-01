@@ -1,0 +1,88 @@
+{
+    "produced_on": "2023-08-22T12:24:13.057596645Z",
+    "source_location": "",
+    "full_name": "android.net.wifi.aware.IWifiAwareDiscoverySessionCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"discoverySessionId": "readInt32"}],
+            "name": "onSessionStarted",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "onSessionConfigSuccess",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"reason": "readInt32"}],
+            "name": "onSessionConfigFail",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"reason": "readInt32"}],
+            "name": "onSessionTerminated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"peerId": "readInt32"},
+                {"serviceSpecificInfo": "readByteVector"},
+                {"matchFilter": "readByteVector"}
+            ],
+            "name": "onMatch",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"peerId": "readInt32"},
+                {"serviceSpecificInfo": "readByteVector"},
+                {"matchFilter": "readByteVector"},
+                {"distanceMm": "readInt32"}
+            ],
+            "name": "onMatchWithDistance",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"messageId": "readInt32"}],
+            "name": "onMessageSendSuccess",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"messageId": "readInt32"},
+                {"reason": "readInt32"}
+            ],
+            "name": "onMessageSendFail",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"peerId": "readInt32"},
+                {"message": "readByteVector"}
+            ],
+            "name": "onMessageReceived",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IWifiAwareDiscoverySessionCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,65 @@
+{
+    "produced_on": "2023-08-22T12:16:42.633564326Z",
+    "source_location": "",
+    "full_name": "com.android.internal.inputmethod.IMultiClientInputMethodSession",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"inputContext": "readStrongBinder"},
+                {"missingMethods": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attribute": "readParcelable",
+                        "__parcelType": "android.view.inputmethod.EditorInfo"
+                    }]
+                },
+                {"controlFlags": "readInt32"},
+                {"softInputMode": "readInt32"},
+                {"targetWindowHandle": "readInt32"}
+            ],
+            "name": "startInputOrWindowGainedFocus",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"flags": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "resultReceiver": "readParcelable",
+                        "__parcelType": "android.os.ResultReceiver"
+                    }]
+                }
+            ],
+            "name": "showSoftInput",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"flags": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "resultReceiver": "readParcelable",
+                        "__parcelType": "android.os.ResultReceiver"
+                    }]
+                }
+            ],
+            "name": "hideSoftInput",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IMultiClientInputMethodSession",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

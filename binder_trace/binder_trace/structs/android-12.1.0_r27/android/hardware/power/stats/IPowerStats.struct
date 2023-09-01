@@ -1,0 +1,88 @@
+{
+    "produced_on": "2023-08-22T12:16:44.478573050Z",
+    "source_location": "",
+    "full_name": "android.hardware.power.stats.IPowerStats",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getPowerEntityInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.power.stats.PowerEntity"
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"powerEntityIds": "readInt32Vector"}],
+            "name": "getStateResidency",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.power.stats.StateResidencyResult"
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getEnergyConsumerInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.power.stats.EnergyConsumer"
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"energyConsumerIds": "readInt32Vector"}],
+            "name": "getEnergyConsumed",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.power.stats.EnergyConsumerResult"
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "getEnergyMeterInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.power.stats.Channel"
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [{"channelIds": "readInt32Vector"}],
+            "name": "readEnergyMeter",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.power.stats.EnergyMeasurement"
+                }
+            ]
+        }
+    ],
+    "name": "IPowerStats",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

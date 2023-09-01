@@ -1,0 +1,33 @@
+{
+    "produced_on": "2023-08-22T13:58:40.112284961Z",
+    "source_location": "",
+    "components": [
+        {"featureState": "readInt32"},
+        {"scanState": "readInt32"},
+        {"activeDisplayState": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "activeDisplay": "readParcelable",
+                "__parcelType": "android.hardware.display.WifiDisplay"
+            }]
+        },
+        {"displays": "readInt32"},
+        {
+            "__backreference": "displays",
+            "__repeated": [{
+                "displays": "readParcelable",
+                "__parcelType": "android.hardware.display.WifiDisplay"
+            }]
+        },
+        {
+            "sessionInfo": "readParcelable",
+            "__parcelType": "android.hardware.display.WifiDisplaySessionInfo"
+        }
+    ],
+    "full_name": "android.hardware.display.WifiDisplayStatus",
+    "name": "WifiDisplayStatus",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

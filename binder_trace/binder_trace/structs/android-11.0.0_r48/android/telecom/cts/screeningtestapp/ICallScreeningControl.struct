@@ -1,0 +1,70 @@
+{
+    "produced_on": "2023-08-22T12:24:14.051850520Z",
+    "source_location": "",
+    "full_name": "android.telecom.cts.screeningtestapp.ICallScreeningControl",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "reset",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"shouldDisallowCall": "readBool"},
+                {"shouldRejectCall": "readBool"},
+                {"shouldSkipCall": "readBool"},
+                {"shouldSkipCallLog": "readBool"},
+                {"shouldSkipNotification": "readBool"}
+            ],
+            "name": "setCallResponse",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "waitForBind",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "waitForActivity",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "getCachedHandle",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "getCachedDisconnectCause",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        }
+    ],
+    "name": "ICallScreeningControl",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

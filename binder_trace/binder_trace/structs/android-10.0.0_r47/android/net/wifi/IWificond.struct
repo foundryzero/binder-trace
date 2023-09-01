@@ -1,0 +1,127 @@
+{
+    "produced_on": "2023-08-22T14:52:36.646386171Z",
+    "source_location": "",
+    "full_name": "android.net.wifi.IWificond",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"iface_name": "readString16"}],
+            "name": "createApInterface",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"iface_name": "readString16"}],
+            "name": "createClientInterface",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"iface_name": "readString16"}],
+            "name": "tearDownApInterface",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"iface_name": "readString16"}],
+            "name": "tearDownClientInterface",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "tearDownInterfaces",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "GetClientInterfaces",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "IBinder"
+                }
+            ]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "GetApInterfaces",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "IBinder"
+                }
+            ]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "getAvailable2gChannels",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [],
+            "name": "getAvailable5gNonDFSChannels",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [],
+            "name": "getAvailableDFSChannels",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "RegisterCallback",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "UnregisterCallback",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IWificond",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

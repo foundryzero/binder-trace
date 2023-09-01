@@ -1,0 +1,47 @@
+{
+    "produced_on": "2023-08-22T12:24:12.002265375Z",
+    "source_location": "",
+    "full_name": "android.se.omapi.ISecureElementService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getReaders",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"reader": "readString16"}],
+            "name": "getReader",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"reader": "readString16"},
+                {"aid": "readByteVector"},
+                {"packageNames": "readString16Vector"}
+            ],
+            "name": "isNFCEventAllowed",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.se.omapi.boolean"
+                }
+            ]
+        }
+    ],
+    "name": "ISecureElementService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

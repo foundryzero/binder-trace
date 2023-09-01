@@ -1,0 +1,46 @@
+{
+    "produced_on": "2023-08-22T13:14:44.220279253Z",
+    "source_location": "",
+    "components": [
+        {"iface": "readString16"},
+        {"addressCount": "readInt32"},
+        {
+            "__backreference": "addressCount",
+            "__repeated": [{
+                "addLinkAddress": "readParcelable",
+                "__parcelType": "__dynamic"
+            }]
+        },
+        {"addressCount": "readInt32"},
+        {
+            "__backreference": "addressCount",
+            "__repeated": [{"addDnsServer": "readByteVector"}]
+        },
+        {"setDomains": "readString16"},
+        {"setMtu": "readInt32"},
+        {"addressCount": "readInt32"},
+        {
+            "__backreference": "addressCount",
+            "__repeated": [{
+                "addRoute": "readParcelable",
+                "__parcelType": "__dynamic"
+            }]
+        },
+        {"nullcheck": "readByte"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "setHttpProxy": "readParcelable",
+                "__parcelType": "__dynamic"
+            }]
+        },
+        {
+            "readList": "readList",
+            "__parcelType": "android.net.LinkProperties"
+        }
+    ],
+    "full_name": "android.net.LinkProperties",
+    "name": "LinkProperties",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

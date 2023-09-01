@@ -1,0 +1,35 @@
+{
+    "produced_on": "2023-08-22T12:16:40.908071254Z",
+    "source_location": "",
+    "components": [
+        {"flags": "readInt32"},
+        {"frameCount": "readInt64"},
+        {"notificationFrameCount": "readInt64"},
+        {"selectedDeviceId": "readInt32"},
+        {"sessionId": "readInt32"},
+        {"sampleRate": "readInt32"},
+        {"inputId": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "cblk": "readParcelable",
+                "__parcelType": "android.media.SharedFileRegion"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "buffers": "readParcelable",
+                "__parcelType": "android.media.SharedFileRegion"
+            }]
+        },
+        {"portId": "readInt32"},
+        {"audioRecord": "readStrongBinder"}
+    ],
+    "full_name": "android.media.CreateRecordResponse",
+    "name": "CreateRecordResponse",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

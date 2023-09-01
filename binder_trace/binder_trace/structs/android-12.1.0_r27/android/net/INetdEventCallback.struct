@@ -1,0 +1,62 @@
+{
+    "produced_on": "2023-08-22T12:16:41.939264640Z",
+    "source_location": "",
+    "full_name": "android.net.INetdEventCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"netId": "readInt32"},
+                {"eventType": "readInt32"},
+                {"returnCode": "readInt32"},
+                {"hostname": "readString16"},
+                {"ipAddresses": "readString16Vector"},
+                {"ipAddressesCount": "readInt32"},
+                {"timestamp": "readInt64"},
+                {"uid": "readInt32"}
+            ],
+            "name": "onDnsEvent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"netId": "readInt32"},
+                {"added": "readBool"},
+                {"prefixString": "readString16"},
+                {"prefixLength": "readInt32"}
+            ],
+            "name": "onNat64PrefixEvent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"netId": "readInt32"},
+                {"ipAddress": "readString16"},
+                {"hostname": "readString16"},
+                {"validated": "readBool"}
+            ],
+            "name": "onPrivateDnsValidationEvent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"ipAddr": "readString16"},
+                {"port": "readInt32"},
+                {"timestamp": "readInt64"},
+                {"uid": "readInt32"}
+            ],
+            "name": "onConnectEvent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "INetdEventCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

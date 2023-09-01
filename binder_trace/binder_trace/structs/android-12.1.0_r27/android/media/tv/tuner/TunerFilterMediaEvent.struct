@@ -1,0 +1,36 @@
+{
+    "produced_on": "2023-08-22T12:16:41.072076212Z",
+    "source_location": "",
+    "components": [
+        {"streamId": "readChar"},
+        {"isPtsPresent": "readBool"},
+        {"pts": "readInt64"},
+        {"dataLength": "readInt32"},
+        {"offset": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "avMemory": "readParcelable",
+                "__parcelType": "android.hardware.common.NativeHandle"
+            }]
+        },
+        {"isSecureMemory": "readBool"},
+        {"avDataId": "readInt64"},
+        {"mpuSequenceNumber": "readInt32"},
+        {"isPesPrivateData": "readBool"},
+        {"isAudioExtraMetaData": "readBool"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "audio": "readParcelable",
+                "__parcelType": "android.media.tv.tuner.TunerAudioExtraMetaData"
+            }]
+        }
+    ],
+    "full_name": "android.media.tv.tuner.TunerFilterMediaEvent",
+    "name": "TunerFilterMediaEvent",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

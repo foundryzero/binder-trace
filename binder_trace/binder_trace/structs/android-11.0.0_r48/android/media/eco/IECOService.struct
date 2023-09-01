@@ -1,0 +1,47 @@
+{
+    "produced_on": "2023-08-22T12:24:13.328625025Z",
+    "source_location": "",
+    "full_name": "android.media.eco.IECOService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"width": "readInt32"},
+                {"height": "readInt32"},
+                {"isCameraRecording": "readBool"}
+            ],
+            "name": "obtainSession",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "getNumOfSessions",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getSessions",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "IBinder"
+                }
+            ]
+        }
+    ],
+    "name": "IECOService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

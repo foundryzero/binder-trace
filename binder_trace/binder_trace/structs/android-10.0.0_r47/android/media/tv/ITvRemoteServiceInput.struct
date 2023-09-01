@@ -1,0 +1,96 @@
+{
+    "produced_on": "2023-08-22T14:52:35.611347145Z",
+    "source_location": "",
+    "full_name": "android.media.tv.ITvRemoteServiceInput",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"name": "readString16"},
+                {"width": "readInt32"},
+                {"height": "readInt32"},
+                {"maxPointers": "readInt32"}
+            ],
+            "name": "openInputBridge",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"token": "readStrongBinder"}],
+            "name": "closeInputBridge",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"token": "readStrongBinder"}],
+            "name": "clearInputBridge",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"timestamp": "readInt64"}
+            ],
+            "name": "sendTimestamp",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"keyCode": "readInt32"}
+            ],
+            "name": "sendKeyDown",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"keyCode": "readInt32"}
+            ],
+            "name": "sendKeyUp",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"pointerId": "readInt32"},
+                {"x": "readInt32"},
+                {"y": "readInt32"}
+            ],
+            "name": "sendPointerDown",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"pointerId": "readInt32"}
+            ],
+            "name": "sendPointerUp",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [{"token": "readStrongBinder"}],
+            "name": "sendPointerSync",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ITvRemoteServiceInput",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

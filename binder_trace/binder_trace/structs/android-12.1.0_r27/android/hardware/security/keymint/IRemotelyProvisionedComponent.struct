@@ -1,0 +1,79 @@
+{
+    "produced_on": "2023-08-22T12:16:44.595108083Z",
+    "source_location": "",
+    "full_name": "android.hardware.security.keymint.IRemotelyProvisionedComponent",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getHardwareInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.security.keymint.RpcHardwareInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"testMode": "readBool"}],
+            "name": "generateEcdsaP256KeyPair",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "macedPublicKey": "readParcelable",
+                        "__parcelType": "android.hardware.security.keymint.MacedPublicKey"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"testMode": "readBool"},
+                {
+                    "keysToSign": "readParcelableVector",
+                    "__parcelType": "android.hardware.security.keymint.MacedPublicKey"
+                },
+                {"endpointEncryptionCertChain": "readByteVector"},
+                {"challenge": "readByteVector"}
+            ],
+            "name": "generateCertificateRequest",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "deviceInfo": "readParcelable",
+                        "__parcelType": "android.hardware.security.keymint.DeviceInfo"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "protectedData": "readParcelable",
+                        "__parcelType": "android.hardware.security.keymint.ProtectedData"
+                    }]
+                }
+            ]
+        }
+    ],
+    "name": "IRemotelyProvisionedComponent",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

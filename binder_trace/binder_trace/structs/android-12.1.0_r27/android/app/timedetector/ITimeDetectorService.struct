@@ -1,0 +1,129 @@
+{
+    "produced_on": "2023-08-22T12:16:41.547208749Z",
+    "source_location": "",
+    "full_name": "android.app.timedetector.ITimeDetectorService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getCapabilitiesAndConfig",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.app.time.TimeCapabilitiesAndConfig"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "timeConfiguration": "readParcelable",
+                        "__parcelType": "android.app.time.TimeConfiguration"
+                    }]
+                }
+            ],
+            "name": "updateConfiguration",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "timeSuggestion": "readParcelable",
+                        "__parcelType": "android.app.time.ExternalTimeSuggestion"
+                    }]
+                }
+            ],
+            "name": "suggestExternalTime",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "timeSuggestion": "readParcelable",
+                        "__parcelType": "android.app.timedetector.GnssTimeSuggestion"
+                    }]
+                }
+            ],
+            "name": "suggestGnssTime",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "timeSuggestion": "readParcelable",
+                        "__parcelType": "android.app.timedetector.ManualTimeSuggestion"
+                    }]
+                }
+            ],
+            "name": "suggestManualTime",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "timeSuggestion": "readParcelable",
+                        "__parcelType": "android.app.timedetector.NetworkTimeSuggestion"
+                    }]
+                }
+            ],
+            "name": "suggestNetworkTime",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "timeSuggestion": "readParcelable",
+                        "__parcelType": "android.app.timedetector.TelephonyTimeSuggestion"
+                    }]
+                }
+            ],
+            "name": "suggestTelephonyTime",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ITimeDetectorService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

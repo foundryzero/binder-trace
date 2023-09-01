@@ -1,0 +1,59 @@
+{
+    "produced_on": "2023-08-22T14:52:34.064705515Z",
+    "source_location": "",
+    "full_name": "android.os.IDumpstate",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"name": "readString16"},
+                {"listener": "readStrongBinder"},
+                {"getSectionDetails": "readBool"}
+            ],
+            "name": "setListener",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"callingUid": "readInt32"},
+                {"callingPackage": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "bugreportFd": "readParcelable",
+                        "__parcelType": "FileDescriptor"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "screenshotFd": "readParcelable",
+                        "__parcelType": "FileDescriptor"
+                    }]
+                },
+                {"bugreportMode": "readInt32"},
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "startBugreport",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "cancelBugreport",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IDumpstate",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,135 @@
+{
+    "produced_on": "2023-08-22T12:24:11.912565843Z",
+    "source_location": "",
+    "full_name": "android.os.IThermalService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "registerThermalEventListener",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"listener": "readStrongBinder"},
+                {"type": "readInt32"}
+            ],
+            "name": "registerThermalEventListenerWithType",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "unregisterThermalEventListener",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "getCurrentTemperatures",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.os.Temperature"
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"type": "readInt32"}],
+            "name": "getCurrentTemperaturesWithType",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.os.Temperature"
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "registerThermalStatusListener",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "unregisterThermalStatusListener",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "getCurrentThermalStatus",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [],
+            "name": "getCurrentCoolingDevices",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.os.CoolingDevice"
+                }
+            ]
+        },
+        {
+            "code": 10,
+            "in": [{"type": "readInt32"}],
+            "name": "getCurrentCoolingDevicesWithType",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.os.CoolingDevice"
+                }
+            ]
+        },
+        {
+            "code": 11,
+            "in": [{"forecastSeconds": "readInt32"}],
+            "name": "getThermalHeadroom",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readFloat"}
+            ]
+        }
+    ],
+    "name": "IThermalService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,83 @@
+{
+    "produced_on": "2023-08-22T14:52:34.104885565Z",
+    "source_location": "",
+    "full_name": "android.content.pm.IPackageManagerNative",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"uids": "readInt32Vector"}],
+            "name": "getNamesForUids",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"packageName": "readString16"}],
+            "name": "getInstallerForPackage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"packageName": "readString16"}],
+            "name": "getVersionCodeForPackage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"packageNames": "readString16Vector"}],
+            "name": "isAudioPlaybackCaptureAllowed",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.content.pm.boolean"
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"packageName": "readString16"}],
+            "name": "getLocationFlags",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [{"packageName": "readString16"}],
+            "name": "getTargetSdkVersionForPackage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "getModuleMetadataPackageName",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        }
+    ],
+    "name": "IPackageManagerNative",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

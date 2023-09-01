@@ -1,0 +1,30 @@
+{
+    "produced_on": "2023-08-22T12:24:13.174854849Z",
+    "source_location": "",
+    "components": [
+        {"width": "readInt32"},
+        {"height": "readInt32"},
+        {"layers": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "format": "readParcelable",
+                "__parcelType": "android.hardware.graphics.common.PixelFormat"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "usage": "readParcelable",
+                "__parcelType": "android.hardware.graphics.common.BufferUsage"
+            }]
+        },
+        {"stride": "readInt32"}
+    ],
+    "full_name": "android.hardware.graphics.common.HardwareBufferDescription",
+    "name": "HardwareBufferDescription",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

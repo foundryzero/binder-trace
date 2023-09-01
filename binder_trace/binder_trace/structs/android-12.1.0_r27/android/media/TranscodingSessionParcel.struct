@@ -1,0 +1,28 @@
+{
+    "produced_on": "2023-08-22T12:16:40.991648348Z",
+    "source_location": "",
+    "components": [
+        {"sessionId": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "request": "readParcelable",
+                "__parcelType": "android.media.TranscodingRequestParcel"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "videoTrackFormat": "readParcelable",
+                "__parcelType": "android.media.TranscodingVideoTrackFormat"
+            }]
+        },
+        {"awaitNumberOfSessions": "readInt32"}
+    ],
+    "full_name": "android.media.TranscodingSessionParcel",
+    "name": "TranscodingSessionParcel",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

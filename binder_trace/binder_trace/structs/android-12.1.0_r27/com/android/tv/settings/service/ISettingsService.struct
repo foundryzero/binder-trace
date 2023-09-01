@@ -1,0 +1,127 @@
+{
+    "produced_on": "2023-08-22T12:16:44.732820055Z",
+    "source_location": "",
+    "full_name": "com.android.tv.settings.service.ISettingsService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"state": "readInt32"}],
+            "name": "getPreferences",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "com.android.tv.settings.service.PreferenceParcelable"
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"state": "readInt32"},
+                {"key": "readString16"}
+            ],
+            "name": "getPreference",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.tv.settings.service.PreferenceParcelable"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "registerListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "unRegisterListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"state": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"extras": "readBundle"}]
+                }
+            ],
+            "name": "onCreate",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"state": "readInt32"}],
+            "name": "onStart",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"state": "readInt32"}],
+            "name": "onResume",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{"state": "readInt32"}],
+            "name": "onPause",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [{"state": "readInt32"}],
+            "name": "onStop",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [{"state": "readInt32"}],
+            "name": "onDestroy",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"state": "readInt32"},
+                {"key": "readString16"},
+                {"status": "readBool"}
+            ],
+            "name": "onPreferenceClick",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"packageName": "readString16"},
+                {"uri": "readString16"}
+            ],
+            "name": "grantSliceAccess",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISettingsService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

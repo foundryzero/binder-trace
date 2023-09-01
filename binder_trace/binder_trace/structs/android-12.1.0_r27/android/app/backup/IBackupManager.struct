@@ -1,0 +1,756 @@
+{
+    "produced_on": "2023-08-22T12:16:41.487771411Z",
+    "source_location": "",
+    "full_name": "android.app.backup.IBackupManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"userId": "readInt32"},
+                {"packageName": "readString16"}
+            ],
+            "name": "dataChangedForUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"packageName": "readString16"}],
+            "name": "dataChanged",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"userId": "readInt32"},
+                {"transportName": "readString16"},
+                {"packageName": "readString16"}
+            ],
+            "name": "clearBackupDataForUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"transportName": "readString16"},
+                {"packageName": "readString16"}
+            ],
+            "name": "clearBackupData",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"userId": "readInt32"},
+                {"transportNames": "readString16Vector"},
+                {"observer": "readStrongBinder"}
+            ],
+            "name": "initializeTransportsForUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"userId": "readInt32"},
+                {"packageName": "readString16"},
+                {"agent": "readStrongBinder"}
+            ],
+            "name": "agentConnectedForUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"packageName": "readString16"},
+                {"agent": "readStrongBinder"}
+            ],
+            "name": "agentConnected",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"userId": "readInt32"},
+                {"packageName": "readString16"}
+            ],
+            "name": "agentDisconnectedForUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [{"packageName": "readString16"}],
+            "name": "agentDisconnected",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"userId": "readInt32"},
+                {"packageName": "readString16"},
+                {"token": "readInt32"}
+            ],
+            "name": "restoreAtInstallForUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"packageName": "readString16"},
+                {"token": "readInt32"}
+            ],
+            "name": "restoreAtInstall",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"userId": "readInt32"},
+                {"isEnabled": "readBool"}
+            ],
+            "name": "setBackupEnabledForUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [{"isEnabled": "readBool"}],
+            "name": "setBackupEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"userId": "readInt32"},
+                {"doAutoRestore": "readBool"}
+            ],
+            "name": "setAutoRestoreForUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [{"doAutoRestore": "readBool"}],
+            "name": "setAutoRestore",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [{"userId": "readInt32"}],
+            "name": "isBackupEnabledForUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 17,
+            "in": [],
+            "name": "isBackupEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"currentPw": "readString16"},
+                {"newPw": "readString16"}
+            ],
+            "name": "setBackupPassword",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 19,
+            "in": [],
+            "name": "hasBackupPassword",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 20,
+            "in": [{"userId": "readInt32"}],
+            "name": "backupNowForUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 21,
+            "in": [],
+            "name": "backupNow",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 22,
+            "in": [
+                {"userId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "fd": "readParcelable",
+                        "__parcelType": "android.os.ParcelFileDescriptor"
+                    }]
+                },
+                {"includeApks": "readBool"},
+                {"includeObbs": "readBool"},
+                {"includeShared": "readBool"},
+                {"doWidgets": "readBool"},
+                {"allApps": "readBool"},
+                {"allIncludesSystem": "readBool"},
+                {"doCompress": "readBool"},
+                {"doKeyValue": "readBool"},
+                {"packageNames": "readString16Vector"}
+            ],
+            "name": "adbBackup",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 23,
+            "in": [
+                {"userId": "readInt32"},
+                {"packageNames": "readString16Vector"}
+            ],
+            "name": "fullTransportBackupForUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 24,
+            "in": [
+                {"userId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "fd": "readParcelable",
+                        "__parcelType": "android.os.ParcelFileDescriptor"
+                    }]
+                }
+            ],
+            "name": "adbRestore",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 25,
+            "in": [
+                {"userId": "readInt32"},
+                {"token": "readInt32"},
+                {"allow": "readBool"},
+                {"curPassword": "readString16"},
+                {"encryptionPassword": "readString16"},
+                {"observer": "readStrongBinder"}
+            ],
+            "name": "acknowledgeFullBackupOrRestoreForUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 26,
+            "in": [
+                {"token": "readInt32"},
+                {"allow": "readBool"},
+                {"curPassword": "readString16"},
+                {"encryptionPassword": "readString16"},
+                {"observer": "readStrongBinder"}
+            ],
+            "name": "acknowledgeFullBackupOrRestore",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 27,
+            "in": [
+                {"userId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "transportComponent": "readParcelable",
+                        "__parcelType": "android.content.ComponentName"
+                    }]
+                },
+                {"name": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "configurationIntent": "readParcelable",
+                        "__parcelType": "android.content.Intent"
+                    }]
+                },
+                {"currentDestinationString": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "dataManagementIntent": "readParcelable",
+                        "__parcelType": "android.content.Intent"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "dataManagementLabel": "readParcelable",
+                        "__parcelType": "CharSequence"
+                    }]
+                }
+            ],
+            "name": "updateTransportAttributesForUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 28,
+            "in": [{"userId": "readInt32"}],
+            "name": "getCurrentTransportForUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 29,
+            "in": [],
+            "name": "getCurrentTransport",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 30,
+            "in": [{"userId": "readInt32"}],
+            "name": "getCurrentTransportComponentForUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.ComponentName"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 31,
+            "in": [{"userId": "readInt32"}],
+            "name": "listAllTransportsForUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 32,
+            "in": [],
+            "name": "listAllTransports",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 33,
+            "in": [{"userId": "readInt32"}],
+            "name": "listAllTransportComponentsForUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.content.ComponentName"
+                }
+            ]
+        },
+        {
+            "code": 34,
+            "in": [],
+            "name": "getTransportWhitelist",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 35,
+            "in": [
+                {"userId": "readInt32"},
+                {"transport": "readString16"}
+            ],
+            "name": "selectBackupTransportForUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 36,
+            "in": [{"transport": "readString16"}],
+            "name": "selectBackupTransport",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 37,
+            "in": [
+                {"userId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "transport": "readParcelable",
+                        "__parcelType": "android.content.ComponentName"
+                    }]
+                },
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "selectBackupTransportAsyncForUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 38,
+            "in": [
+                {"userId": "readInt32"},
+                {"transport": "readString16"}
+            ],
+            "name": "getConfigurationIntentForUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.Intent"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 39,
+            "in": [{"transport": "readString16"}],
+            "name": "getConfigurationIntent",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.Intent"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 40,
+            "in": [
+                {"userId": "readInt32"},
+                {"transport": "readString16"}
+            ],
+            "name": "getDestinationStringForUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 41,
+            "in": [{"transport": "readString16"}],
+            "name": "getDestinationString",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 42,
+            "in": [
+                {"userId": "readInt32"},
+                {"transport": "readString16"}
+            ],
+            "name": "getDataManagementIntentForUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.Intent"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 43,
+            "in": [{"transport": "readString16"}],
+            "name": "getDataManagementIntent",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.Intent"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 44,
+            "in": [
+                {"userId": "readInt32"},
+                {"transport": "readString16"}
+            ],
+            "name": "getDataManagementLabelForUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "CharSequence"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 45,
+            "in": [
+                {"userId": "readInt32"},
+                {"packageName": "readString16"},
+                {"transportID": "readString16"}
+            ],
+            "name": "beginRestoreSessionForUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 46,
+            "in": [
+                {"userId": "readInt32"},
+                {"token": "readInt32"},
+                {"result": "readInt64"}
+            ],
+            "name": "opCompleteForUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 47,
+            "in": [
+                {"token": "readInt32"},
+                {"result": "readInt64"}
+            ],
+            "name": "opComplete",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 48,
+            "in": [
+                {"whichUser": "readInt32"},
+                {"makeActive": "readBool"}
+            ],
+            "name": "setBackupServiceActive",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 49,
+            "in": [{"whichUser": "readInt32"}],
+            "name": "isBackupServiceActive",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 50,
+            "in": [{"userId": "readInt32"}],
+            "name": "isUserReadyForBackup",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 51,
+            "in": [
+                {"userId": "readInt32"},
+                {"packageName": "readString16"}
+            ],
+            "name": "getAvailableRestoreTokenForUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 52,
+            "in": [
+                {"userId": "readInt32"},
+                {"packageName": "readString16"}
+            ],
+            "name": "isAppEligibleForBackupForUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 53,
+            "in": [
+                {"userId": "readInt32"},
+                {"packages": "readString16Vector"}
+            ],
+            "name": "filterAppsEligibleForBackupForUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 54,
+            "in": [
+                {"userId": "readInt32"},
+                {"packages": "readString16Vector"},
+                {"observer": "readStrongBinder"},
+                {"monitor": "readStrongBinder"},
+                {"flags": "readInt32"}
+            ],
+            "name": "requestBackupForUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 55,
+            "in": [
+                {"packages": "readString16Vector"},
+                {"observer": "readStrongBinder"},
+                {"monitor": "readStrongBinder"},
+                {"flags": "readInt32"}
+            ],
+            "name": "requestBackup",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 56,
+            "in": [{"userId": "readInt32"}],
+            "name": "cancelBackupsForUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 57,
+            "in": [],
+            "name": "cancelBackups",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 58,
+            "in": [{"ancestralSerialNumber": "readInt64"}],
+            "name": "getUserForAncestralSerialNumber",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.os.UserHandle"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 59,
+            "in": [{"ancestralSerialNumber": "readInt64"}],
+            "name": "setAncestralSerialNumber",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 60,
+            "in": [
+                {"packageName": "readString16"},
+                {
+                    "keys": "readList",
+                    "__parcelType": "String"
+                }
+            ],
+            "name": "excludeKeysFromRestore",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IBackupManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

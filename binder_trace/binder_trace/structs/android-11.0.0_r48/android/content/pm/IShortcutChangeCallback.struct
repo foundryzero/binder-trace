@@ -1,0 +1,52 @@
+{
+    "produced_on": "2023-08-22T12:24:11.599799413Z",
+    "source_location": "",
+    "full_name": "android.content.pm.IShortcutChangeCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"packageName": "readString16"},
+                {
+                    "shortcuts": "readList",
+                    "__parcelType": "android.content.pm.ShortcutInfo"
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "user": "readParcelable",
+                        "__parcelType": "android.os.UserHandle"
+                    }]
+                }
+            ],
+            "name": "onShortcutsAddedOrUpdated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"packageName": "readString16"},
+                {
+                    "shortcuts": "readList",
+                    "__parcelType": "android.content.pm.ShortcutInfo"
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "user": "readParcelable",
+                        "__parcelType": "android.os.UserHandle"
+                    }]
+                }
+            ],
+            "name": "onShortcutsRemoved",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IShortcutChangeCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

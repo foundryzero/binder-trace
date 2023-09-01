@@ -1,0 +1,70 @@
+{
+    "produced_on": "2023-08-22T12:24:11.744719759Z",
+    "source_location": "",
+    "full_name": "android.hardware.location.IGeofenceHardwareCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"geofenceId": "readInt32"},
+                {"transition": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "location": "readParcelable",
+                        "__parcelType": "android.location.Location"
+                    }]
+                },
+                {"timestamp": "readInt64"},
+                {"monitoringType": "readInt32"}
+            ],
+            "name": "onGeofenceTransition",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"geofenceId": "readInt32"},
+                {"status": "readInt32"}
+            ],
+            "name": "onGeofenceAdd",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"geofenceId": "readInt32"},
+                {"status": "readInt32"}
+            ],
+            "name": "onGeofenceRemove",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"geofenceId": "readInt32"},
+                {"status": "readInt32"}
+            ],
+            "name": "onGeofencePause",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"geofenceId": "readInt32"},
+                {"status": "readInt32"}
+            ],
+            "name": "onGeofenceResume",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IGeofenceHardwareCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

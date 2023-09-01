@@ -1,0 +1,43 @@
+{
+    "produced_on": "2023-08-22T14:52:34.678806228Z",
+    "source_location": "",
+    "full_name": "android.content.pm.ICrossProfileApps",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"caller": "readStrongBinder"},
+                {"callingPackage": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "component": "readParcelable",
+                        "__parcelType": "android.content.ComponentName"
+                    }]
+                },
+                {"userId": "readInt32"},
+                {"launchMainActivity": "readBool"}
+            ],
+            "name": "startActivityAsUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"callingPackage": "readString16"}],
+            "name": "getTargetUserProfiles",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.os.UserHandle"
+                }
+            ]
+        }
+    ],
+    "name": "ICrossProfileApps",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

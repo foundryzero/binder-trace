@@ -1,0 +1,38 @@
+{
+    "produced_on": "2023-08-22T12:16:43.610637365Z",
+    "source_location": "",
+    "full_name": "android.hardware.automotive.audiocontrol.IFocusListener",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"usage": "readString16"},
+                {"zoneId": "readInt32"}
+            ],
+            "name": "abandonAudioFocus",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"usage": "readString16"},
+                {"zoneId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "focusGain": "readParcelable",
+                        "__parcelType": "android.hardware.automotive.audiocontrol.AudioFocusChange"
+                    }]
+                }
+            ],
+            "name": "requestAudioFocus",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IFocusListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

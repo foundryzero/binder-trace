@@ -1,0 +1,141 @@
+{
+    "produced_on": "2023-08-22T12:16:40.762999613Z",
+    "source_location": "",
+    "full_name": "com.android.internal.telephony.IIccPhoneBook",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"efid": "readInt32"}],
+            "name": "getAdnRecordsInEf",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "com.android.internal.telephony.uicc.AdnRecord"
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"subId": "readInt32"},
+                {"efid": "readInt32"}
+            ],
+            "name": "getAdnRecordsInEfForSubscriber",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "com.android.internal.telephony.uicc.AdnRecord"
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"efid": "readInt32"},
+                {"oldTag": "readString16"},
+                {"oldPhoneNumber": "readString16"},
+                {"newTag": "readString16"},
+                {"newPhoneNumber": "readString16"},
+                {"pin2": "readString16"}
+            ],
+            "name": "updateAdnRecordsInEfBySearch",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"subId": "readInt32"},
+                {"efid": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "values": "readParcelable",
+                        "__parcelType": "android.content.ContentValues"
+                    }]
+                },
+                {"pin2": "readString16"}
+            ],
+            "name": "updateAdnRecordsInEfBySearchForSubscriber",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"subId": "readInt32"},
+                {"efid": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "values": "readParcelable",
+                        "__parcelType": "android.content.ContentValues"
+                    }]
+                },
+                {"index": "readInt32"},
+                {"pin2": "readString16"}
+            ],
+            "name": "updateAdnRecordsInEfByIndexForSubscriber",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [{"efid": "readInt32"}],
+            "name": "getAdnRecordsSize",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"subId": "readInt32"},
+                {"efid": "readInt32"}
+            ],
+            "name": "getAdnRecordsSizeForSubscriber",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [{"subId": "readInt32"}],
+            "name": "getAdnRecordsCapacityForSubscriber",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.internal.telephony.uicc.AdnCapacity"
+                    }]
+                }
+            ]
+        }
+    ],
+    "name": "IIccPhoneBook",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

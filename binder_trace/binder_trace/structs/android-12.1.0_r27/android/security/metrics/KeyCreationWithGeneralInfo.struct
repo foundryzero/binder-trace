@@ -1,0 +1,37 @@
+{
+    "produced_on": "2023-08-22T12:16:46.271455721Z",
+    "source_location": "",
+    "components": [
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "algorithm": "readParcelable",
+                "__parcelType": "android.security.metrics.Algorithm"
+            }]
+        },
+        {"key_size": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "ec_curve": "readParcelable",
+                "__parcelType": "android.security.metrics.EcCurve"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "key_origin": "readParcelable",
+                "__parcelType": "android.security.metrics.KeyOrigin"
+            }]
+        },
+        {"error_code": "readInt32"},
+        {"attestation_requested": "readBool"}
+    ],
+    "full_name": "android.security.metrics.KeyCreationWithGeneralInfo",
+    "name": "KeyCreationWithGeneralInfo",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

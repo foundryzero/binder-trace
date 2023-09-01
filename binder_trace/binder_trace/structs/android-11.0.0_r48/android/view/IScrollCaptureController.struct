@@ -1,0 +1,73 @@
+{
+    "produced_on": "2023-08-22T12:24:12.158029817Z",
+    "source_location": "",
+    "full_name": "android.view.IScrollCaptureController",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"client": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "scrollBounds": "readParcelable",
+                        "__parcelType": "android.graphics.Rect"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "positionInWindow": "readParcelable",
+                        "__parcelType": "android.graphics.Point"
+                    }]
+                }
+            ],
+            "name": "onClientConnected",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "onClientUnavailable",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "onCaptureStarted",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"frameNumber": "readInt64"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "capturedArea": "readParcelable",
+                        "__parcelType": "android.graphics.Rect"
+                    }]
+                }
+            ],
+            "name": "onCaptureBufferSent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "onConnectionClosed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IScrollCaptureController",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

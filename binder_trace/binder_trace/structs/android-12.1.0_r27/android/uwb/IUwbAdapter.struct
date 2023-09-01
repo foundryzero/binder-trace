@@ -1,0 +1,181 @@
+{
+    "produced_on": "2023-08-22T12:16:42.318584132Z",
+    "source_location": "",
+    "full_name": "android.uwb.IUwbAdapter",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"adapterStateCallbacks": "readStrongBinder"}],
+            "name": "registerAdapterStateCallbacks",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"callbacks": "readStrongBinder"}],
+            "name": "unregisterAdapterStateCallbacks",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getTimestampResolutionNanos",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "getSpecificationInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.os.PersistableBundle"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributionSource": "readParcelable",
+                        "__parcelType": "android.content.AttributionSource"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionHandle": "readParcelable",
+                        "__parcelType": "android.uwb.SessionHandle"
+                    }]
+                },
+                {"rangingCallbacks": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "parameters": "readParcelable",
+                        "__parcelType": "android.os.PersistableBundle"
+                    }]
+                }
+            ],
+            "name": "openRanging",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionHandle": "readParcelable",
+                        "__parcelType": "android.uwb.SessionHandle"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "parameters": "readParcelable",
+                        "__parcelType": "android.os.PersistableBundle"
+                    }]
+                }
+            ],
+            "name": "startRanging",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionHandle": "readParcelable",
+                        "__parcelType": "android.uwb.SessionHandle"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "parameters": "readParcelable",
+                        "__parcelType": "android.os.PersistableBundle"
+                    }]
+                }
+            ],
+            "name": "reconfigureRanging",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionHandle": "readParcelable",
+                        "__parcelType": "android.uwb.SessionHandle"
+                    }]
+                }
+            ],
+            "name": "stopRanging",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionHandle": "readParcelable",
+                        "__parcelType": "android.uwb.SessionHandle"
+                    }]
+                }
+            ],
+            "name": "closeRanging",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [{"enabled": "readBool"}],
+            "name": "setEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [],
+            "name": "getAdapterState",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        }
+    ],
+    "name": "IUwbAdapter",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

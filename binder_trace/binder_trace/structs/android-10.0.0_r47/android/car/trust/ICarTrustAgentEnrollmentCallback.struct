@@ -1,0 +1,68 @@
+{
+    "produced_on": "2023-08-22T14:52:36.226399039Z",
+    "source_location": "",
+    "full_name": "android.car.trust.ICarTrustAgentEnrollmentCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "device": "readParcelable",
+                        "__parcelType": "android.bluetooth.BluetoothDevice"
+                    }]
+                },
+                {"errorCode": "readInt32"}
+            ],
+            "name": "onEnrollmentHandshakeFailure",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "device": "readParcelable",
+                        "__parcelType": "android.bluetooth.BluetoothDevice"
+                    }]
+                },
+                {"authString": "readString16"}
+            ],
+            "name": "onAuthStringAvailable",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"handle": "readInt64"}],
+            "name": "onEscrowTokenAdded",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"handle": "readInt64"}],
+            "name": "onEscrowTokenRemoved",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"handle": "readInt64"},
+                {"active": "readBool"}
+            ],
+            "name": "onEscrowTokenActiveStateChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICarTrustAgentEnrollmentCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

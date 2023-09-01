@@ -1,0 +1,131 @@
+{
+    "produced_on": "2023-08-22T12:16:41.051296401Z",
+    "source_location": "",
+    "full_name": "android.media.tv.tuner.ITunerService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getFrontendIds",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"ids": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"frontendHandle": "readInt32"}],
+            "name": "getFrontendInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.media.tv.tuner.TunerFrontendInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"id": "readInt32"}],
+            "name": "getFrontendDtmbCapabilities",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.media.tv.tuner.TunerFrontendDtmbCapabilities"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"frontendHandle": "readInt32"}],
+            "name": "openFrontend",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"lnbHandle": "readInt32"}],
+            "name": "openLnb",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [{"lnbName": "readString16"}],
+            "name": "openLnbByName",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [{"demuxHandle": "readInt32"}],
+            "name": "openDemux",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "getDemuxCaps",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.media.tv.tuner.TunerDemuxCapabilities"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 9,
+            "in": [{"descramblerHandle": "readInt32"}],
+            "name": "openDescrambler",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [],
+            "name": "getTunerHalVersion",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        }
+    ],
+    "name": "ITunerService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

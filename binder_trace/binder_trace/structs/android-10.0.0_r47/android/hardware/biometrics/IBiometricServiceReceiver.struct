@@ -1,0 +1,51 @@
+{
+    "produced_on": "2023-08-22T14:52:34.757145350Z",
+    "source_location": "",
+    "full_name": "android.hardware.biometrics.IBiometricServiceReceiver",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "onAuthenticationSucceeded",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "onAuthenticationFailed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"error": "readInt32"},
+                {"message": "readString16"}
+            ],
+            "name": "onError",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"acquiredInfo": "readInt32"},
+                {"message": "readString16"}
+            ],
+            "name": "onAcquired",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"reason": "readInt32"}],
+            "name": "onDialogDismissed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IBiometricServiceReceiver",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

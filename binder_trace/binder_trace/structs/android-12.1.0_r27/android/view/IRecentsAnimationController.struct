@@ -1,0 +1,131 @@
+{
+    "produced_on": "2023-08-22T12:16:42.352893830Z",
+    "source_location": "",
+    "full_name": "android.view.IRecentsAnimationController",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"taskId": "readInt32"}],
+            "name": "screenshotTask",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.window.TaskSnapshot"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"taskId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "finishTransaction": "readParcelable",
+                        "__parcelType": "android.window.PictureInPictureSurfaceTransaction"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "overlay": "readParcelable",
+                        "__parcelType": "android.view.SurfaceControl"
+                    }]
+                }
+            ],
+            "name": "setFinishTaskTransaction",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"moveHomeToTop": "readBool"},
+                {"sendUserLeaveHint": "readBool"}
+            ],
+            "name": "finish",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"enabled": "readBool"}],
+            "name": "setInputConsumerEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"behindSystemBars": "readBool"}],
+            "name": "setAnimationTargetsBehindSystemBars",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "hideCurrentInputMethod",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "cleanupScreenshot",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"defer": "readBool"},
+                {"screenshot": "readBool"}
+            ],
+            "name": "setDeferCancelUntilNextTransition",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [{"willFinishToHome": "readBool"}],
+            "name": "setWillFinishToHome",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [{"taskId": "readInt32"}],
+            "name": "removeTask",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [{"moveHomeToTop": "readBool"}],
+            "name": "detachNavigationBarFromApp",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [{"duration": "readInt64"}],
+            "name": "animateNavigationBarToApp",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IRecentsAnimationController",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

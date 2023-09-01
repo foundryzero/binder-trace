@@ -1,0 +1,29 @@
+{
+    "produced_on": "2023-08-22T14:52:35.213827452Z",
+    "source_location": "",
+    "full_name": "android.service.sms.IFinancialSmsService",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "callback": "readParcelable",
+                    "__parcelType": "android.os.RemoteCallback"
+                }]
+            },
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{"params": "readBundle"}]
+            }
+        ],
+        "name": "getSmsMessages",
+        "oneWay": true,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "IFinancialSmsService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

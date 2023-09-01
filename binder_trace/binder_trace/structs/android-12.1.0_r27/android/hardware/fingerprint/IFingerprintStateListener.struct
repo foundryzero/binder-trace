@@ -1,0 +1,28 @@
+{
+    "produced_on": "2023-08-22T12:16:41.845418781Z",
+    "source_location": "",
+    "full_name": "android.hardware.fingerprint.IFingerprintStateListener",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"newState": "readInt32"}],
+            "name": "onStateChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"userId": "readInt32"},
+                {"sensorId": "readInt32"},
+                {"hasEnrollments": "readBool"}
+            ],
+            "name": "onEnrollmentsChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IFingerprintStateListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

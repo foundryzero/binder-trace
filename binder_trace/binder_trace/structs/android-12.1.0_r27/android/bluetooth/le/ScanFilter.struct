@@ -1,0 +1,83 @@
+{
+    "produced_on": "2023-08-22T13:40:18.582906130Z",
+    "source_location": "",
+    "components": [
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{"setDeviceName": "readString16"}]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{"address": "readString16"}]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [
+                {
+                    "uuid": "readParcelable",
+                    "__parcelType": "__dynamic"
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "uuidMask": "readParcelable",
+                        "__parcelType": "__dynamic"
+                    }]
+                }
+            ]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [
+                {
+                    "solicitationUuid": "readParcelable",
+                    "__parcelType": "__dynamic"
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "solicitationUuidMask": "readParcelable",
+                        "__parcelType": "__dynamic"
+                    }]
+                }
+            ]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [
+                {
+                    "servcieDataUuid": "readParcelable",
+                    "__parcelType": "__dynamic"
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [
+                        {"serviceDataLength": "readInt32"},
+                        {"readByteArray": "readByteVector"}
+                    ]
+                }
+            ]
+        },
+        {"manufacturerId": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [
+                {"manufacturerDataLength": "readInt32"},
+                {"readByteArray": "readByteVector"}
+            ]
+        }
+    ],
+    "full_name": "android.bluetooth.le.ScanFilter",
+    "name": "ScanFilter",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

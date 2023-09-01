@@ -1,0 +1,190 @@
+{
+    "produced_on": "2023-08-22T14:52:36.618540110Z",
+    "source_location": "",
+    "full_name": "android.bluetooth.IBluetoothAvrcpTarget",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "Register",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"id": "readInt32"}],
+            "name": "Unregister",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "UnregisterAll",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "Enable",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "Disable",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"addr": "readString16"},
+                {"play_status": "readInt32"},
+                {"song_len": "readInt32"},
+                {"song_pos": "readInt32"}
+            ],
+            "name": "GetPlayStatusResponse",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"addr": "readString16"},
+                {"attrs": "readInt32Vector"}
+            ],
+            "name": "ListPlayerAppAttrResponse",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"addr": "readString16"},
+                {
+                    "values": "readParcelableVector",
+                    "__parcelType": "android.bluetooth.BluetoothAvrcpIntValue"
+                }
+            ],
+            "name": "GetPlayerAppValueResponse",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"addr": "readString16"},
+                {
+                    "attrs": "readParcelableVector",
+                    "__parcelType": "android.bluetooth.BluetoothAvrcpStringValue"
+                }
+            ],
+            "name": "GetPlayerAppAttrTextResponse",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"addr": "readString16"},
+                {
+                    "values": "readParcelableVector",
+                    "__parcelType": "android.bluetooth.BluetoothAvrcpStringValue"
+                }
+            ],
+            "name": "GetPlayerAppValueTextResponse",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"addr": "readString16"},
+                {
+                    "attrs": "readParcelableVector",
+                    "__parcelType": "android.bluetooth.BluetoothAvrcpStringValue"
+                }
+            ],
+            "name": "GetElementAttrResponse",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"addr": "readString16"},
+                {"rsp_status": "readInt32"}
+            ],
+            "name": "SetPlayerAppValueResponse",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"event_id": "readInt32"},
+                {"type": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "param": "readParcelable",
+                        "__parcelType": "android.bluetooth.BluetoothAvrcpRegisterNotificationResponse"
+                    }]
+                }
+            ],
+            "name": "RegisterNotificationResponse",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 14,
+            "in": [{"volume": "readInt32"}],
+            "name": "SetVolume",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "IBluetoothAvrcpTarget",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

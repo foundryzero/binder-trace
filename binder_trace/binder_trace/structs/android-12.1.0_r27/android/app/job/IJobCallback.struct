@@ -1,0 +1,70 @@
+{
+    "produced_on": "2023-08-22T12:16:41.158127924Z",
+    "source_location": "",
+    "full_name": "android.app.job.IJobCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"jobId": "readInt32"},
+                {"ongoing": "readBool"}
+            ],
+            "name": "acknowledgeStartMessage",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"jobId": "readInt32"},
+                {"reschedule": "readBool"}
+            ],
+            "name": "acknowledgeStopMessage",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"jobId": "readInt32"}],
+            "name": "dequeueWork",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.app.job.JobWorkItem"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"jobId": "readInt32"},
+                {"workId": "readInt32"}
+            ],
+            "name": "completeWork",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"jobId": "readInt32"},
+                {"reschedule": "readBool"}
+            ],
+            "name": "jobFinished",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IJobCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

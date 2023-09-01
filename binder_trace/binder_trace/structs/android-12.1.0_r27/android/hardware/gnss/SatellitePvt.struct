@@ -1,0 +1,40 @@
+{
+    "produced_on": "2023-08-22T12:16:43.911947919Z",
+    "source_location": "",
+    "components": [
+        {"HAS_POSITION_VELOCITY_CLOCK_INFO": "readInt32"},
+        {"HAS_IONO": "readInt32"},
+        {"HAS_TROPO": "readInt32"},
+        {"flags": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "satPosEcef": "readParcelable",
+                "__parcelType": "android.hardware.gnss.SatellitePositionEcef"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "satVelEcef": "readParcelable",
+                "__parcelType": "android.hardware.gnss.SatelliteVelocityEcef"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "satClockInfo": "readParcelable",
+                "__parcelType": "android.hardware.gnss.SatelliteClockInfo"
+            }]
+        },
+        {"ionoDelayMeters": "readDouble"},
+        {"tropoDelayMeters": "readDouble"}
+    ],
+    "full_name": "android.hardware.gnss.SatellitePvt",
+    "name": "SatellitePvt",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

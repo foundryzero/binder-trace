@@ -1,0 +1,69 @@
+{
+    "produced_on": "2023-08-22T12:16:46.666793366Z",
+    "source_location": "",
+    "full_name": "android.bluetooth.IBluetoothAvrcpControlCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"status": "readInt32"},
+                {"id": "readInt32"}
+            ],
+            "name": "OnRegistered",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"rc_connect": "readBool"},
+                {"bt_connect": "readBool"},
+                {"device_address": "readString16"}
+            ],
+            "name": "OnConnectionState",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"device_address": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "track_info": "readParcelable",
+                        "__parcelType": "android.bluetooth.BluetoothAvrcpMediaAttr"
+                    }]
+                }
+            ],
+            "name": "OnTrackChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"device_address": "readString16"},
+                {"abs_vol": "readInt32"},
+                {"label": "readInt32"}
+            ],
+            "name": "OnSetAbsVolumeRequest",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"device_address": "readString16"},
+                {"label": "readInt32"}
+            ],
+            "name": "OnRegisterForAbsVolumeCallbackRequest",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IBluetoothAvrcpControlCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

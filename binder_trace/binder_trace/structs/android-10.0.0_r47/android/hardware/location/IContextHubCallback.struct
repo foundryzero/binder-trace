@@ -1,0 +1,26 @@
+{
+    "produced_on": "2023-08-22T14:52:34.825157229Z",
+    "source_location": "",
+    "full_name": "android.hardware.location.IContextHubCallback",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"hubId": "readInt32"},
+            {"nanoAppId": "readInt32"},
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "msg": "readParcelable",
+                    "__parcelType": "android.hardware.location.ContextHubMessage"
+                }]
+            }
+        ],
+        "name": "onMessageReceipt",
+        "oneWay": true,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "IContextHubCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

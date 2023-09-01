@@ -1,0 +1,537 @@
+{
+    "produced_on": "2023-08-22T12:16:42.035567325Z",
+    "source_location": "",
+    "full_name": "android.os.INetworkManagementService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"obs": "readStrongBinder"}],
+            "name": "registerObserver",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"obs": "readStrongBinder"}],
+            "name": "unregisterObserver",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "listInterfaces",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"iface": "readString16"}],
+            "name": "getInterfaceConfig",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.net.InterfaceConfiguration"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"iface": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "cfg": "readParcelable",
+                        "__parcelType": "android.net.InterfaceConfiguration"
+                    }]
+                }
+            ],
+            "name": "setInterfaceConfig",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"iface": "readString16"}],
+            "name": "clearInterfaceAddresses",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"iface": "readString16"}],
+            "name": "setInterfaceDown",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{"iface": "readString16"}],
+            "name": "setInterfaceUp",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"iface": "readString16"},
+                {"enable": "readBool"}
+            ],
+            "name": "setInterfaceIpv6PrivacyExtensions",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [{"iface": "readString16"}],
+            "name": "disableIpv6",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [{"iface": "readString16"}],
+            "name": "enableIpv6",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"iface": "readString16"},
+                {"mode": "readInt32"}
+            ],
+            "name": "setIPv6AddrGenMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"netId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "route": "readParcelable",
+                        "__parcelType": "android.net.RouteInfo"
+                    }]
+                }
+            ],
+            "name": "addRoute",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"netId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "route": "readParcelable",
+                        "__parcelType": "android.net.RouteInfo"
+                    }]
+                }
+            ],
+            "name": "removeRoute",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [],
+            "name": "shutdown",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [],
+            "name": "getIpForwardingEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 17,
+            "in": [{"enabled": "readBool"}],
+            "name": "setIpForwardingEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [{"dhcpRanges": "readString16Vector"}],
+            "name": "startTethering",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 19,
+            "in": [
+                {"usingLegacyDnsProxy": "readBool"},
+                {"dhcpRanges": "readString16Vector"}
+            ],
+            "name": "startTetheringWithConfiguration",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 20,
+            "in": [],
+            "name": "stopTethering",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 21,
+            "in": [],
+            "name": "isTetheringStarted",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 22,
+            "in": [{"iface": "readString16"}],
+            "name": "tetherInterface",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 23,
+            "in": [{"iface": "readString16"}],
+            "name": "untetherInterface",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 24,
+            "in": [],
+            "name": "listTetheredInterfaces",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 25,
+            "in": [],
+            "name": "getDnsForwarders",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 26,
+            "in": [
+                {"fromIface": "readString16"},
+                {"toIface": "readString16"}
+            ],
+            "name": "startInterfaceForwarding",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 27,
+            "in": [
+                {"fromIface": "readString16"},
+                {"toIface": "readString16"}
+            ],
+            "name": "stopInterfaceForwarding",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 28,
+            "in": [
+                {"internalInterface": "readString16"},
+                {"externalInterface": "readString16"}
+            ],
+            "name": "enableNat",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 29,
+            "in": [
+                {"internalInterface": "readString16"},
+                {"externalInterface": "readString16"}
+            ],
+            "name": "disableNat",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 30,
+            "in": [
+                {"provider": "readStrongBinder"},
+                {"name": "readString16"}
+            ],
+            "name": "registerTetheringStatsProvider",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 31,
+            "in": [{"provider": "readStrongBinder"}],
+            "name": "unregisterTetheringStatsProvider",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 32,
+            "in": [{"provider": "readStrongBinder"}],
+            "name": "tetherLimitReached",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 33,
+            "in": [{"how": "readInt32"}],
+            "name": "getNetworkStatsTethering",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.net.NetworkStats"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 34,
+            "in": [
+                {"iface": "readString16"},
+                {"quotaBytes": "readInt64"}
+            ],
+            "name": "setInterfaceQuota",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 35,
+            "in": [{"iface": "readString16"}],
+            "name": "removeInterfaceQuota",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 36,
+            "in": [
+                {"iface": "readString16"},
+                {"alertBytes": "readInt64"}
+            ],
+            "name": "setInterfaceAlert",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 37,
+            "in": [{"iface": "readString16"}],
+            "name": "removeInterfaceAlert",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 38,
+            "in": [{"alertBytes": "readInt64"}],
+            "name": "setGlobalAlert",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 39,
+            "in": [
+                {"uid": "readInt32"},
+                {"enable": "readBool"}
+            ],
+            "name": "setUidOnMeteredNetworkDenylist",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 40,
+            "in": [
+                {"uid": "readInt32"},
+                {"enable": "readBool"}
+            ],
+            "name": "setUidOnMeteredNetworkAllowlist",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 41,
+            "in": [{"enable": "readBool"}],
+            "name": "setDataSaverModeEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 42,
+            "in": [
+                {"uid": "readInt32"},
+                {"policy": "readInt32"}
+            ],
+            "name": "setUidCleartextNetworkPolicy",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 43,
+            "in": [],
+            "name": "isBandwidthControlEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 44,
+            "in": [{"enabled": "readBool"}],
+            "name": "setFirewallEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 45,
+            "in": [],
+            "name": "isFirewallEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 46,
+            "in": [
+                {"iface": "readString16"},
+                {"allow": "readBool"}
+            ],
+            "name": "setFirewallInterfaceRule",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 47,
+            "in": [
+                {"chain": "readInt32"},
+                {"uid": "readInt32"},
+                {"rule": "readInt32"}
+            ],
+            "name": "setFirewallUidRule",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 48,
+            "in": [
+                {"chain": "readInt32"},
+                {"uids": "readInt32Vector"},
+                {"rules": "readInt32Vector"}
+            ],
+            "name": "setFirewallUidRules",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 49,
+            "in": [
+                {"chain": "readInt32"},
+                {"enable": "readBool"}
+            ],
+            "name": "setFirewallChainEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 50,
+            "in": [{"uid": "readInt32"}],
+            "name": "allowProtect",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 51,
+            "in": [{"uid": "readInt32"}],
+            "name": "denyProtect",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 52,
+            "in": [
+                {"iface": "readString16"},
+                {
+                    "routes": "readList",
+                    "__parcelType": "android.net.RouteInfo"
+                }
+            ],
+            "name": "addInterfaceToLocalNetwork",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 53,
+            "in": [{"iface": "readString16"}],
+            "name": "removeInterfaceFromLocalNetwork",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 54,
+            "in": [{
+                "routes": "readList",
+                "__parcelType": "android.net.RouteInfo"
+            }],
+            "name": "removeRoutesFromLocalNetwork",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 55,
+            "in": [{"uid": "readInt32"}],
+            "name": "isNetworkRestricted",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "INetworkManagementService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,65 @@
+{
+    "produced_on": "2023-08-22T13:05:20.080222536Z",
+    "source_location": "",
+    "components": [
+        {"nullcheck": "readByte"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{"mId": "readString16"}]
+        },
+        {"nullcheck": "readByte"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{"mName": "readString16"}]
+        },
+        {"nullcheck": "readByte"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{"mDesc": "readString16"}]
+        },
+        {"mImportance": "readInt32"},
+        {"mBypassDnd": "readByte"},
+        {"mLockscreenVisibility": "readInt32"},
+        {"nullcheck": "readByte"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "mSound": "readParcelable",
+                "__parcelType": "android.net.Uri"
+            }]
+        },
+        {"mLights": "readByte"},
+        {"mVibration": "readInt64Vector"},
+        {"mUserLockedFields": "readInt32"},
+        {"mFgServiceShown": "readByte"},
+        {"mVibrationEnabled": "readByte"},
+        {"mShowBadge": "readByte"},
+        {"mDeleted": "readByte"},
+        {"nullcheck": "readByte"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{"mGroup": "readString16"}]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "createFromParcel": "readParcelable",
+                "__parcelType": "android.media.AudioAttributes"
+            }]
+        },
+        {"mLightColor": "readInt32"},
+        {"mBlockableSystem": "readBool"},
+        {"mAllowBubbles": "readInt32"},
+        {"mImportanceLockedByOEM": "readBool"},
+        {"mOriginalImportance": "readInt32"},
+        {"mParentId": "readString16"},
+        {"mConversationId": "readString16"},
+        {"mDemoted": "readBool"},
+        {"mImportantConvo": "readBool"}
+    ],
+    "full_name": "android.app.NotificationChannel",
+    "name": "NotificationChannel",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

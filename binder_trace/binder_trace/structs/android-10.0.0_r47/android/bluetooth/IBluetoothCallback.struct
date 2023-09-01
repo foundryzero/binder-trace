@@ -1,0 +1,105 @@
+{
+    "produced_on": "2023-08-22T14:52:36.622092811Z",
+    "source_location": "",
+    "full_name": "android.bluetooth.IBluetoothCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"prev_state": "readInt32"},
+                {"new_state": "readInt32"}
+            ],
+            "name": "OnBluetoothStateChange",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"scan_enabled": "readBool"}],
+            "name": "OnScanEnableChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"device_address": "readString16"},
+                {"connected": "readBool"}
+            ],
+            "name": "OnDeviceConnectionStateChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"device_address": "readString16"},
+                {"device_name": "readString16"},
+                {"cod": "readInt32"},
+                {"pairing_variant": "readInt32"},
+                {"pass_key": "readInt32"}
+            ],
+            "name": "OnSspRequest",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"status": "readInt32"},
+                {"device_addresses": "readString16Vector"}
+            ],
+            "name": "OnGetBondedDevices",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"status": "readInt32"},
+                {"device_address": "readString16"},
+                {"state": "readInt32"}
+            ],
+            "name": "OnBondStateChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"status": "readInt32"},
+                {"device_address": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "props": "readParcelable",
+                        "__parcelType": "android.bluetooth.BluetoothRemoteDeviceProps"
+                    }]
+                }
+            ],
+            "name": "OnGetRemoteDeviceProperties",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "props": "readParcelable",
+                        "__parcelType": "android.bluetooth.BluetoothRemoteDeviceProps"
+                    }]
+                }
+            ],
+            "name": "OnDeviceFound",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IBluetoothCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

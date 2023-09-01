@@ -1,0 +1,75 @@
+{
+    "produced_on": "2023-08-22T12:22:55.409983631Z",
+    "source_location": "",
+    "components": [
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "wifiSsid": "readParcelable",
+                "__parcelType": "android.net.wifi.WifiSsid"
+            }]
+        },
+        {"sr": "readString16"},
+        {"sr": "readString16"},
+        {"sr": "readInt64"},
+        {"sr": "readInt32"},
+        {"sr": "readString16"},
+        {"sr": "readInt32"},
+        {"sr": "readInt32"},
+        {"sr": "readInt64"},
+        {"sr": "readInt32"},
+        {"sr": "readInt32"},
+        {"sr": "readInt32"},
+        {"sr": "readInt32"},
+        {"sr": "readInt32"},
+        {"mWifiStandard": "readInt32"},
+        {"seen": "readInt64"},
+        {"untrusted": "readInt32"},
+        {"numUsage": "readInt32"},
+        {"venueName": "readString16"},
+        {"operatorFriendlyName": "readString16"},
+        {"flags": "readInt64"},
+        {
+            "informationElements": "readTypedVector",
+            "__parcelType": "android.net.wifi.ScanResult.InformationElement"
+        },
+        {"n": "readInt32"},
+        {
+            "__backreference": "n",
+            "__conditional": [{
+                "__backreference": "n",
+                "__repeated": [{"add": "readString16"}]
+            }]
+        },
+        {"n": "readInt32"},
+        {
+            "__backreference": "n",
+            "__conditional": [{
+                "__backreference": "n",
+                "__repeated": [
+                    {"vendorId": "readInt32"},
+                    {"elementId": "readInt32"},
+                    {"len": "readInt32"},
+                    {"readByteArray": "readByteVector"}
+                ]
+            }]
+        },
+        {"n": "readInt32"},
+        {
+            "__backreference": "n",
+            "__conditional": [{
+                "__backreference": "n",
+                "__repeated": [
+                    {"id": "readInt32"},
+                    {"level": "readInt32"}
+                ]
+            }]
+        },
+        {"ifaceName": "readString16"}
+    ],
+    "full_name": "android.net.wifi.ScanResult",
+    "name": "ScanResult",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

@@ -1,0 +1,105 @@
+{
+    "produced_on": "2023-08-22T14:52:34.755666926Z",
+    "source_location": "",
+    "full_name": "android.hardware.biometrics.IBiometricService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"sessionId": "readInt64"},
+                {"userId": "readInt32"},
+                {"receiver": "readStrongBinder"},
+                {"opPackageName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"bundle": "readBundle"}]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "authenticate",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"opPackageName": "readString16"}
+            ],
+            "name": "cancelAuthentication",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"opPackageName": "readString16"}],
+            "name": "canAuthenticate",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "registerEnabledOnKeyguardCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"userId": "readInt32"}],
+            "name": "setActiveUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"cookie": "readInt32"},
+                {"requireConfirmation": "readBool"},
+                {"userId": "readInt32"}
+            ],
+            "name": "onReadyForAuthentication",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"token": "readByteVector"}],
+            "name": "resetLockout",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "onConfirmDeviceCredentialSuccess",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"error": "readInt32"},
+                {"message": "readString16"}
+            ],
+            "name": "onConfirmDeviceCredentialError",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "registerCancellationCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IBiometricService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

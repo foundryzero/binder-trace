@@ -1,0 +1,78 @@
+{
+    "produced_on": "2023-08-22T12:24:10.998586380Z",
+    "source_location": "",
+    "full_name": "android.media.IMediaController2",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"seq": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"connectionResult": "readBundle"}]
+                }
+            ],
+            "name": "notifyConnected",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"seq": "readInt32"}],
+            "name": "notifyDisconnected",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"seq": "readInt32"},
+                {"playbackActive": "readBool"}
+            ],
+            "name": "notifyPlaybackActiveChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"seq": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "command": "readParcelable",
+                        "__parcelType": "android.media.Session2Command"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"args": "readBundle"}]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "resultReceiver": "readParcelable",
+                        "__parcelType": "android.os.ResultReceiver"
+                    }]
+                }
+            ],
+            "name": "sendSessionCommand",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"seq": "readInt32"}],
+            "name": "cancelSessionCommand",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IMediaController2",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,65 @@
+{
+    "produced_on": "2023-08-22T14:52:34.758552422Z",
+    "source_location": "",
+    "full_name": "android.hardware.biometrics.IBiometricServiceReceiverInternal",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"requireConfirmation": "readBool"},
+                {"token": "readByteVector"}
+            ],
+            "name": "onAuthenticationSucceeded",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"cookie": "readInt32"},
+                {"requireConfirmation": "readBool"}
+            ],
+            "name": "onAuthenticationFailed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"cookie": "readInt32"},
+                {"error": "readInt32"},
+                {"message": "readString16"}
+            ],
+            "name": "onError",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"acquiredInfo": "readInt32"},
+                {"message": "readString16"}
+            ],
+            "name": "onAcquired",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"reason": "readInt32"}],
+            "name": "onDialogDismissed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "onTryAgainPressed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IBiometricServiceReceiverInternal",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

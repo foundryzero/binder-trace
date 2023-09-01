@@ -1,0 +1,293 @@
+{
+    "produced_on": "2023-08-22T12:24:14.243455250Z",
+    "source_location": "",
+    "full_name": "android.gsi.IGsiService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "stream": "readParcelable",
+                        "__parcelType": "android.os.ParcelFileDescriptor"
+                    }]
+                },
+                {"bytes": "readInt64"}
+            ],
+            "name": "commitGsiChunkFromStream",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "getInstallProgress",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.gsi.GsiProgress"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "stream": "readParcelable",
+                        "__parcelType": "android.os.ParcelFileDescriptor"
+                    }]
+                },
+                {"size": "readInt64"}
+            ],
+            "name": "setGsiAshmem",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"bytes": "readInt64"}],
+            "name": "commitGsiChunkFromAshmem",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"oneShot": "readBool"},
+                {"dsuSlot": "readString16"}
+            ],
+            "name": "enableGsi",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"oneShot": "readBool"},
+                {"dsuSlot": "readString16"},
+                {"result": "readStrongBinder"}
+            ],
+            "name": "enableGsiAsync",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "isGsiEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "cancelGsiInstall",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [],
+            "name": "isGsiInstallInProgress",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [],
+            "name": "removeGsi",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [{"result": "readStrongBinder"}],
+            "name": "removeGsiAsync",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [],
+            "name": "disableGsi",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [],
+            "name": "isGsiInstalled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 14,
+            "in": [],
+            "name": "isGsiRunning",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 15,
+            "in": [],
+            "name": "getActiveDsuSlot",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 16,
+            "in": [],
+            "name": "getInstalledGsiImageDir",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 17,
+            "in": [],
+            "name": "getInstalledDsuSlots",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "String"
+                }
+            ]
+        },
+        {
+            "code": 18,
+            "in": [{"installDir": "readString16"}],
+            "name": "openInstall",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 19,
+            "in": [],
+            "name": "closeInstall",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 20,
+            "in": [
+                {"name": "readString16"},
+                {"size": "readInt64"},
+                {"readOnly": "readBool"}
+            ],
+            "name": "createPartition",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 21,
+            "in": [{"name": "readString16"}],
+            "name": "zeroPartition",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 22,
+            "in": [{"prefix": "readString16"}],
+            "name": "openImageService",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 23,
+            "in": [],
+            "name": "dumpDeviceMapperDevices",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 24,
+            "in": [],
+            "name": "getAvbPublicKey",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "dst": "readParcelable",
+                        "__parcelType": "android.gsi.AvbPublicKey"
+                    }]
+                }
+            ]
+        }
+    ],
+    "name": "IGsiService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,99 @@
+{
+    "produced_on": "2023-08-22T12:24:11.794921811Z",
+    "source_location": "",
+    "full_name": "android.net.IEthernetManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getAvailableInterfaces",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"iface": "readString16"}],
+            "name": "getConfiguration",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.net.IpConfiguration"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"iface": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "config": "readParcelable",
+                        "__parcelType": "android.net.IpConfiguration"
+                    }]
+                }
+            ],
+            "name": "setConfiguration",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"iface": "readString16"}],
+            "name": "isAvailable",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "addListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "removeListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"include": "readBool"}],
+            "name": "setIncludeTestInterfaces",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "requestTetheredInterface",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "releaseTetheredInterface",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IEthernetManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

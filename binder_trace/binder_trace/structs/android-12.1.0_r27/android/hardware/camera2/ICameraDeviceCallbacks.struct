@@ -1,0 +1,103 @@
+{
+    "produced_on": "2023-08-22T12:16:40.801436845Z",
+    "source_location": "",
+    "full_name": "android.hardware.camera2.ICameraDeviceCallbacks",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"errorCode": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "resultExtras": "readParcelable",
+                        "__parcelType": "android.hardware.camera2.impl.CaptureResultExtras"
+                    }]
+                }
+            ],
+            "name": "onDeviceError",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "onDeviceIdle",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "resultExtras": "readParcelable",
+                        "__parcelType": "android.hardware.camera2.impl.CaptureResultExtras"
+                    }]
+                },
+                {"timestamp": "readInt64"}
+            ],
+            "name": "onCaptureStarted",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "result": "readParcelable",
+                        "__parcelType": "android.hardware.camera2.impl.CameraMetadataNative"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "resultExtras": "readParcelable",
+                        "__parcelType": "android.hardware.camera2.impl.CaptureResultExtras"
+                    }]
+                },
+                {
+                    "physicalCaptureResultInfos": "readParcelableVector",
+                    "__parcelType": "android.hardware.camera2.impl.PhysicalCaptureResultInfo"
+                }
+            ],
+            "name": "onResultReceived",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"streamId": "readInt32"}],
+            "name": "onPrepared",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"lastFrameNumber": "readInt64"},
+                {"repeatingRequestId": "readInt32"}
+            ],
+            "name": "onRepeatingRequestError",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "onRequestQueueEmpty",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICameraDeviceCallbacks",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

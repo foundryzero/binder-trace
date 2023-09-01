@@ -28,6 +28,8 @@ class FridaInjector:
 
         self.struct_store = StructureStore(struct_path)
 
+        self.recording = True
+
         with open(os.path.normpath(self.SCRIPT_FILE)) as f:
             self.script_content = f.read()
 
@@ -55,11 +57,16 @@ class FridaInjector:
 
         log.info("Injector stopped")
 
+    def pause_unpause(self):
+        self.recording = not self.recording
+        return self.recording
+
     def _message_handler(self, message, data):
         try:
-            block = parsing.on_message(self.struct_store, message, data)
-            if block:
-                self.block_queue.put(block)
+            if self.recording:
+                block = parsing.on_message(self.struct_store, message, data)
+                if block:
+                    self.block_queue.put(block)
         except Exception as e:
             parsing_log.error(e)
             parsing_log.error(traceback.format_exc())
