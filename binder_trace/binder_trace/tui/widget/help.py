@@ -12,7 +12,7 @@ class HelpPanel:
             padding_right=2,
             body=HSplit(
                 children=[
-                    Label(f"{'-'*20}Gerneral{'-'*27}"),
+                    Label(f"{'-'*20}General{'-'*27}"),
                     Label("up             Move up"),
                     Label("down           Move down"),
                     Label("shift + up     Page up"),
@@ -22,7 +22,6 @@ class HelpPanel:
                     Label("tab            Next pane"),
                     Label("shift + tab    Previous pane"),
                     Label("ctrl + c       Copy pane to clipboard"),
-                    Label("f              Open filter options"),
                     Label("space          Pause/Unpause transaction recording"),
                     Label("c              Clear"),
                     Label("h              Help"),
@@ -31,6 +30,8 @@ class HelpPanel:
                     Label("p              Toggle order asc/desc"),
                     Label("w              Jump to next interface"),
                     Label("s              Jump to previous interface"),
+                    Label("a              Toggle all filters on"),
+                    Label("n              Toggle all filters off"),
                     Label("enter          Toggle Filter"),
                 ]
             ),
