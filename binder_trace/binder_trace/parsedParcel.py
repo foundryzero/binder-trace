@@ -1,12 +1,10 @@
 from __future__ import annotations
-from asyncore import read
 
+from asyncore import read
 from dataclasses import dataclass
 from enum import Enum
 from http.client import INSUFFICIENT_STORAGE
 from typing import Any, Callable, List, Optional
-
-
 
 # def parse_field(name: str, read_type: str|Callable, parent: Field|None = None):
 #     if isinstance(read_type, str):
@@ -98,4 +96,3 @@ class Block:
 
     def __repr__(self) -> str:
         return f"Block(interface_name={self.interface_name},callName={self.call_name},fields=\n{self.root_field})"
-

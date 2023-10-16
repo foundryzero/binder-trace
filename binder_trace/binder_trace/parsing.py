@@ -3,10 +3,9 @@ import logging
 import traceback
 
 import binder_trace.overrides
-
 from binder_trace import loggers
 from binder_trace.parcel import ParcelParser
-from binder_trace.parsedParcel import Block, Field, FieldData, Direction
+from binder_trace.parsedParcel import Block, Direction, Field, FieldData
 from binder_trace.parseerror import ParseError
 
 log = logging.getLogger(loggers.LOG)
@@ -20,7 +19,7 @@ and cannot store state.
 frameNumber = -1
 
 
-def on_message(struct_store, message, data):
+def on_message(struct_store, message, data, android_version):
     """
     Decodes and parses a binder parcel, and writes it to the block_queue, archiver, and logger if present.
 
@@ -46,26 +45,17 @@ def on_message(struct_store, message, data):
 
     block_metadata = message["payload"]
 
-    parcel = ParcelParser(struct_store, data)
+    parcel = ParcelParser(struct_store, data, android_version)
 
     block = None
     parsing_log.debug(str(message))
 
     if block_metadata["type"] == "TRANSACT":
         # If the message is a transaction it will have an interfaceToken header before the data
-        block = on_message_in(
-            struct_store,
-            parcel,
-            block_metadata["code"]
-        )
+        block = on_message_in(struct_store, parcel, block_metadata["code"])
 
     elif block_metadata["type"] == "REPLY":  # in this case the message will be of the form "REPLY <code> <descriptor>"
-        block = on_message_out(
-            struct_store,
-            parcel,
-            block_metadata["code"],
-            block_metadata["descriptor"]
-        )
+        block = on_message_out(struct_store, parcel, block_metadata["code"], block_metadata["descriptor"])
 
     else:
         log.warn(f"Unknown message block type: {block_metadata['type']}")
@@ -85,7 +75,7 @@ def on_message_out(struct_store, parcel: ParcelParser, code, descriptor):
     try:
         interface = struct_store.get_interface(descriptor)
         call = get_call(interface, code)
-        root_field = Field('', [])
+        root_field = Field("", [])
         block = Block(
             parcel.data,
             interface["full_name"],
@@ -93,7 +83,7 @@ def on_message_out(struct_store, parcel: ParcelParser, code, descriptor):
             code,
             oneway=False,
             direction=Direction.OUT,
-            root_field=root_field
+            root_field=root_field,
         )
 
         try:
@@ -105,7 +95,6 @@ def on_message_out(struct_store, parcel: ParcelParser, code, descriptor):
             block.errors = e
             parsing_log.error(e)
             parsing_log.error(traceback.format_exc())
-
 
     # TODO: change this for a better exception
     except FileNotFoundError as e:  # Thrown if we try to read an interface that doesn't have an associated struct file
@@ -138,7 +127,7 @@ def on_message_in(struct_store, parcel: ParcelParser, code):
         interface = struct_store.get_interface(descriptor)
 
         call = get_call(interface, code)
-        root_field = Field('', [token])
+        root_field = Field("", [token])
         block = Block(
             parcel.data,
             interface["full_name"],
@@ -146,7 +135,7 @@ def on_message_in(struct_store, parcel: ParcelParser, code):
             code,
             call["oneWay"],
             direction=Direction.IN,
-            root_field=root_field
+            root_field=root_field,
         )
 
         try:
@@ -158,7 +147,6 @@ def on_message_in(struct_store, parcel: ParcelParser, code):
             block.errors = e
             parsing_log.error(e)
             parsing_log.error(traceback.format_exc())
-
 
     except FileNotFoundError as e:
         # TODO: This probably means the type isn't supported. Create a block with "unsupported_call" set
@@ -192,11 +180,10 @@ def parse_generic_type(definition, parcel, parent):
 
 
 def parse_value_from_definition(definition, parcel, parent):
-
     # This is expected to be a simple value definition like:
     #   {"effectType": "readInt32"},
     #   {"volume": "readFloat"}
-    assert (len(definition) == 1), f"Only one key expected: {definition}"
+    assert len(definition) == 1, f"Only one key expected: {definition}"
 
     name, read_func = next(iter(definition.items()))
     reader = getattr(parcel, read_func)

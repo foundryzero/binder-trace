@@ -1,20 +1,19 @@
-import frida
 import logging
 import os
 import queue
 import threading
 import traceback
 
-from binder_trace import loggers
-from binder_trace import parsing
-from binder_trace.structure import StructureStore
+import frida
 
+from binder_trace import loggers, parsing
+from binder_trace.structure import StructureStore
 
 log = logging.getLogger(loggers.LOG)
 parsing_log = logging.getLogger(loggers.PARSING_LOG)
 
-class FridaInjector:
 
+class FridaInjector:
     SCRIPT_FILE = os.path.join(os.path.dirname(__file__), "js/interceptbinder.js")
 
     def __init__(self, process_identifier, struct_path, android_version, device_name):
@@ -37,11 +36,11 @@ class FridaInjector:
             self.device = frida.get_device(device_name)
         else:
             self.device = frida.get_usb_device()
-    
+
     def start(self):
         self.session = self.device.attach(self.process_identifier)
         self.script = self.session.create_script(self.script_content)
-        self.script.on('message', self._message_handler)
+        self.script.on("message", self._message_handler)
 
         log.info("Starting injector")
         self._handler_process = threading.Thread(target=self._start)
@@ -64,7 +63,7 @@ class FridaInjector:
     def _message_handler(self, message, data):
         try:
             if self.recording:
-                block = parsing.on_message(self.struct_store, message, data)
+                block = parsing.on_message(self.struct_store, message, data, self.android_version)
                 if block:
                     self.block_queue.put(block)
         except Exception as e:
@@ -84,5 +83,3 @@ class FridaInjector:
         # script.unload()
         self.session.detach()
         log.info("Script unloaded")
-
-

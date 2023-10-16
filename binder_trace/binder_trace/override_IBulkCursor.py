@@ -75,13 +75,15 @@ def getIBulkCursorInterface():
     interface["name"] = "IBulkCursor"
     interface["type"] = "Interface"
 
-    calls = [getCursorWindowTransaction1(),
-             deactivateTransaction2(),
-             requeryTransaction3(),
-             onMoveTransaction4(),
-             getExtrasTransaction5(),
-             respondTransaction6(),
-             closeTransaction7()]
+    calls = [
+        getCursorWindowTransaction1(),
+        deactivateTransaction2(),
+        requeryTransaction3(),
+        onMoveTransaction4(),
+        getExtrasTransaction5(),
+        respondTransaction6(),
+        closeTransaction7(),
+    ]
 
     interface["calls"] = calls
 

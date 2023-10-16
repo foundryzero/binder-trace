@@ -1,9 +1,16 @@
 {
-    "filters" : [
-        {"interface": "android.app.IActivityManager", "inclusive": false},
-        {"interface": "android.os.IServiceManager",  "inclusive": false},
-        {"interface": "android.content.IContentProvider",  "inclusive": false},
-        {"interface": "android.content.IContentService",  "inclusive": false},
-        {"interface": "android.content.pm.IPackageManager", "inclusive": false}
+    "filters": [
+        {
+            "interface": "android.gui.IDisplayEventConnection",
+            "method": "requestNextVsync",
+            "type": "",
+            "inclusive": false
+        },
+        {
+            "interface": "android.content.IContentProvider",
+            "method": "",
+            "type": "call",
+            "inclusive": false
+        }
     ]
 }

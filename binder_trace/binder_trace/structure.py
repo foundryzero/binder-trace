@@ -1,6 +1,6 @@
+import functools
 import json
 import os
-import functools
 
 import binder_trace.override_IBulkCursor
 import binder_trace.override_IContentProvider
@@ -8,7 +8,6 @@ import binder_trace.overrides
 
 
 class StructureStore:
-
     def __init__(self, path):
         self.struct_path_root = path
 
@@ -40,7 +39,9 @@ class StructureStore:
             return binder_trace.override_IBulkCursor.getIBulkCursorInterface()
 
         # Attempt to open the struct file for the package name
-        with open(os.path.normpath(os.path.join(self.struct_path_root, (package_name.replace(".", "/") + ".struct")))) as f:
+        with open(
+            os.path.normpath(os.path.join(self.struct_path_root, (package_name.replace(".", "/") + ".struct")))
+        ) as f:
             struct = json.load(f)
             # Refuse to read the struct if it's not an interface
             if struct["type"] != "Interface":

@@ -18,13 +18,12 @@ def queryTransaction1():
     c["out"] = []
     c["out"].append({"__exception": "readException"})
     c["out"].append({"nullcheck": "readInt32"})
-    c["out"].append({
-        "__backreference": "nullcheck",
-        "__conditional": [{
-            "__return": "readParcelable",
-            "__parcelType": "android.database.BulkCursorDescriptor"
-        }]
-    })
+    c["out"].append(
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{"__return": "readParcelable", "__parcelType": "android.database.BulkCursorDescriptor"}],
+        }
+    )
     c["name"] = "query"
     c["oneWay"] = False
     return c
@@ -108,10 +107,12 @@ def applyBatchTransaction20():
     c["in"].append({"featureId": "readString16"})
     c["in"].append({"authority": "readString16"})
     c["in"].append({"numOperations": "readInt32"})
-    c["in"].append({
-        "__backreference": "numOperations",
-        "__repeated": [{"operation": "readParcelable", "__parcelType": "android.content.ContentProviderOperation"}]
-    })
+    c["in"].append(
+        {
+            "__backreference": "numOperations",
+            "__repeated": [{"operation": "readParcelable", "__parcelType": "android.content.ContentProviderOperation"}],
+        }
+    )
 
     c["out"] = []
     c["name"] = "applyBatch"
@@ -245,26 +246,28 @@ def getIContentProviderInterface():
     interface["name"] = "IContentProvider"
     interface["type"] = "Interface"
 
-    calls = [queryTransaction1(),
-             getTypeTransaction2(),
-             insertTransaction3(),
-             deleteTransaction4(),
-             updateTransaction10(),
-             bulkInsertTransaction13(),
-             openFileTransaction14(),
-             openAssetFileTransaction15(),
-             applyBatchTransaction20(),
-             callTransaction21(),
-             getStreamTypesTransaction22(),
-             openTypedAssetFileTransaction23(),
-             createCancelationSignalTransaction24(),
-             canonicalizeTransaction25(),
-             uncanonicalizeTransaction26(),
-             refreshTransaction27(),
-             checkUriPermissionTransaction28(),
-             asyncGetTypeTransaction29(),
-             asyncCanonicalizeTransaction30(),
-             asyncUncanonicalizeTransaction31()]
+    calls = [
+        queryTransaction1(),
+        getTypeTransaction2(),
+        insertTransaction3(),
+        deleteTransaction4(),
+        updateTransaction10(),
+        bulkInsertTransaction13(),
+        openFileTransaction14(),
+        openAssetFileTransaction15(),
+        applyBatchTransaction20(),
+        callTransaction21(),
+        getStreamTypesTransaction22(),
+        openTypedAssetFileTransaction23(),
+        createCancelationSignalTransaction24(),
+        canonicalizeTransaction25(),
+        uncanonicalizeTransaction26(),
+        refreshTransaction27(),
+        checkUriPermissionTransaction28(),
+        asyncGetTypeTransaction29(),
+        asyncCanonicalizeTransaction30(),
+        asyncUncanonicalizeTransaction31(),
+    ]
 
     interface["calls"] = calls
 

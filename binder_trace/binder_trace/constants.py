@@ -1,7 +1,6 @@
 """
 Constants used by android throughout the binder subsystem.
 """
-ANDROID_VERSION = 11
 
 EX_HAS_NOTED_APPOPS_REPLY_HEADER = -127
 EX_HAS_STRICTMODE_REPLY_HEADER = -128
@@ -66,6 +65,7 @@ class BlobType:
     Represents the type of Blob used in Parcel.readBlob
     We can't access ashmem from here, so the only one that really matters is BLOB_INPLACE
     """
+
     BLOB_INPLACE = 0
     BLOB_ASHMEM_IMMUTABLE = 1
     BLOB_ASHMEM_MUTABLE = 2
@@ -76,6 +76,7 @@ class SpanType:
     Represents the type of span in a CharSequence.
     New span types must be added here and implemented in the override for TextUtils / CharSequence in overrides.py
     """
+
     ALIGNMENT_SPAN = 1
     FIRST_SPAN = ALIGNMENT_SPAN
     FOREGROUND_COLOR_SPAN = 2

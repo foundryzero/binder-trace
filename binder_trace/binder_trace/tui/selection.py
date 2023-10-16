@@ -1,10 +1,29 @@
 from collections import UserList
+from contextlib import contextmanager
 from dataclasses import dataclass
-from typing import Iterable, TypeVar
+from typing import Callable, Iterable, TypeVar
 
 from prompt_toolkit.utils import Event
 
 from binder_trace.tui.util import clamp
+
+
+# Class to suspend event calls until a process has finished so it is not overused
+class SuspendableEvent(Event):
+    def __init__(self, sender):
+        self.suspend = False
+        super().__init__(sender)
+
+    @contextmanager
+    def suspended(self):
+        self.suspend = True
+        yield self
+        self.suspend = False
+        self.fire()
+
+    def __call__(self) -> None:
+        if not self.suspend:
+            super().__call__()
 
 
 @dataclass
@@ -15,17 +34,17 @@ class View:
     def size(self):
         return self.end - self.start
 
-_T = TypeVar('_T')
+
+_T = TypeVar("_T")
+
 
 class SelectionViewList(UserList[_T]):
-
     def __init__(self, iterable=None, max_view_size=80, view_padding=5):
         super().__init__(iterable)
-
         self.max_view_size = max_view_size
         self.view_padding = view_padding
-        self.on_update_event = Event(self)
-        self.on_selection_change = Event(self)
+        self.on_update_event = SuspendableEvent(self)
+        self.on_selection_change = SuspendableEvent(self)
         self._reset_view()
 
     def _reset_view(self):
@@ -40,7 +59,6 @@ class SelectionViewList(UserList[_T]):
 
     def move_selection(self, step: int):
         if self.selection_valid():
-
             if step != 0:
                 self.selection = clamp(0, len(self) - 1, self.selection + step)
                 self._update_view(step)
@@ -53,7 +71,7 @@ class SelectionViewList(UserList[_T]):
         return self.data[self.selection]
 
     def view_slice(self):
-        return self.data[self.view.start:self.view.end]
+        return self.data[self.view.start : self.view.end]
 
     def resize_view(self, view_size):
         if self.selection_valid():
@@ -104,16 +122,16 @@ class SelectionViewList(UserList[_T]):
             self.move_selection(-1)
 
         self.on_update_event()
-            # TODO: once the selection is within padding of the start of the window it shoud move up
-            # if i <= self.view.end:
-            #     self.view.end = min(self.view.end, len(self))
-            # if i < self.selection:
-            #     self.selection -= 1
-            # elif i == self.selection:
-            #     self.selection = min(self.selection, len(self))
-            # if i <= self.view.start:
-            #     self.view.start = max(0, self.view.start - 1)
-            #     self.view.end -= 1
+        # TODO: once the selection is within padding of the start of the window it shoud move up
+        # if i <= self.view.end:
+        #     self.view.end = min(self.view.end, len(self))
+        # if i < self.selection:
+        #     self.selection -= 1
+        # elif i == self.selection:
+        #     self.selection = min(self.selection, len(self))
+        # if i <= self.view.start:
+        #     self.view.start = max(0, self.view.start - 1)
+        #     self.view.end -= 1
 
     def append(self, item: _T):
         super().append(item)
@@ -156,4 +174,3 @@ class SelectionViewList(UserList[_T]):
         self.clear()
         self.data += items
         self._reset_view()
-
