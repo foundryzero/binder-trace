@@ -48,7 +48,7 @@ class ErrorDisplayField(DisplayField):
 class StringDisplayField(DisplayField):
     def __init__(self, field) -> None:
         super().__init__(field)
-        self.is_list = isinstance(self.field.content, list)
+        self.is_list = isinstance(self.field.content, list) and len(self.field.content) == 2
 
     # Returns display string format
     def display(self, selected=False, indent=0) -> str:

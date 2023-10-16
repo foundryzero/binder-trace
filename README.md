@@ -94,10 +94,12 @@ emulator-5554   device
 ## 📈 Frequency pane
 | Key              | Action                                 |
 |------------------|----------------------------------------|
-| `p`           |   Toggle order asc/desc|
-| `w`           |   Jump to next interface|
-| `s`           |   Jump to previous interface|
-| `enter`       |   Toggle Filter|
+| `p`           |   Toggle order asc/desc                   |
+| `w`           |   Jump to next interface                  |
+| `s`           |   Jump to previous interface              |
+| `a`           |   Toggle all filters on                   |
+| `n`           |   Toggle all filters off                  |
+| `enter`       |   Toggle Filter                           |
 
 # 🔎 Config File
 To filter define any or all of the interface, method, type and inclusive options. To not use an option leave it blank `""`
@@ -107,7 +109,7 @@ To filter define any or all of the interface, method, type and inclusive options
 ```
 > binder-trace -d emulator-5554 -n Contacts -a 13
 ```
-![Before Config](binder-trace-before-config.png)
+![Before Config](https://github.com/foundryzero/binder-trace/raw/main/binder-trace-before-config.png)
 
 ## With -c argument
 ### config.json
@@ -136,4 +138,4 @@ To filter define any or all of the interface, method, type and inclusive options
 
 `android.gui.IDisplayEventConnection`->`requestNextVsync`->`""` and `android.content.IContentProvider`->`""` ->`call` have been filtered out
 
-![After Config](binder-trace-after-config.png)
+![After Config](https://github.com/foundryzero/binder-trace/raw/main/binder-trace-after-config.png)
