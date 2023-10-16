@@ -2,22 +2,28 @@ from typing import Optional
 
 import hexdump
 import pyperclip
-
 from prompt_toolkit.filters import Condition
 from prompt_toolkit.formatted_text import FormattedText
 from prompt_toolkit.key_binding import KeyBindings
-from prompt_toolkit.layout import AnyContainer, Dimension, HSplit, FormattedTextControl, Window
+from prompt_toolkit.layout import (
+    AnyContainer,
+    Dimension,
+    FormattedTextControl,
+    HSplit,
+    Window,
+)
 from prompt_toolkit.layout.dimension import AnyDimension
-from binder_trace.tui import listing
 
-from binder_trace.tui.selection import SelectionViewList
+from binder_trace.tui import listing
 from binder_trace.tui.data_types import DisplayTransaction
+from binder_trace.tui.selection import SelectionViewList
 from binder_trace.tui.widget.frame import SelectableFrame
 
 
 class HexdumpFrame:
-
-    def __init__(self, transactions: SelectionViewList, fields: SelectionViewList, max_lines: int) -> None:
+    def __init__(
+        self, transactions: SelectionViewList, fields: SelectionViewList, max_lines: int
+    ) -> None:
         self.transactions = transactions
         self.fields = fields
         self.max_lines = max_lines
@@ -31,45 +37,47 @@ class HexdumpFrame:
             title="Hexdump",
             body=self.get_content,
             width=Dimension(min=56, preferred=76, max=76),
-            height=Dimension(preferred=max_lines)
+            height=Dimension(preferred=max_lines),
         )
 
     def key_bindings(self) -> KeyBindings:
         kb = KeyBindings()
 
-        @kb.add('up', filter=Condition(lambda: self.activated))
+        @kb.add("up", filter=Condition(lambda: self.activated))
         def _(event):
             if self.transactions.selection_valid():
                 self.offset = max(0, self.offset - 1)
 
-        @kb.add('down', filter=Condition(lambda: self.activated))
+        @kb.add("down", filter=Condition(lambda: self.activated))
         def _(event):
             if self.transactions.selection_valid():
                 if self.offset + self.max_lines + 1 <= self.max_data_line_count():
                     self.offset += 1
 
-        @kb.add('s-up', filter=Condition(lambda: self.activated))
+        @kb.add("s-up", filter=Condition(lambda: self.activated))
         def _(event):
             if self.transactions.selection_valid():
                 self.offset = max(0, self.offset - self.max_lines)
 
-        @kb.add('s-down', filter=Condition(lambda: self.activated))
+        @kb.add("s-down", filter=Condition(lambda: self.activated))
         def _(event):
             if self.transactions.selection_valid():
-                self.offset = min(self.offset + self.max_lines, self.max_data_line_count() - self.max_lines)
+                self.offset = min(
+                    self.offset + self.max_lines,
+                    self.max_data_line_count() - self.max_lines,
+                )
 
-        @kb.add('home', filter=Condition(lambda: self.activated))
+        @kb.add("home", filter=Condition(lambda: self.activated))
         def _(event):
             if self.transactions.selection_valid():
                 self.offset = 0
 
-        @kb.add('end', filter=Condition(lambda: self.activated))
+        @kb.add("end", filter=Condition(lambda: self.activated))
         def _(event):
             if self.transactions.selection_valid():
                 data_len = len(self.transactions.selected().raw_data)
-                max_data_lines = data_len//16 + 1
+                max_data_lines = data_len // 16 + 1
                 self.offset = max_data_lines - self.max_lines
-
 
         return kb
 
@@ -83,12 +91,13 @@ class HexdumpFrame:
 
     def copy_to_clipboard(self):
         if self.transactions.selection_valid():
-            pyperclip.copy(hexdump.hexdump(self.transactions.selected().raw_data, "return"))
+            pyperclip.copy(
+                hexdump.hexdump(self.transactions.selected().raw_data, "return")
+            )
 
     def max_data_line_count(self):
         data_len = len(self.transactions.selected().raw_data)
-        return data_len//16 + 1
-
+        return data_len // 16 + 1
 
     def update_content(self, _, offset=0):
         self.offset = offset
@@ -122,25 +131,32 @@ class HexdumpFrame:
                 Window(
                     ignore_content_height=True,
                     content=FormattedTextControl(
-                        text=self.to_hexdump(self.transactions.selected() if self.transactions.selection_valid() else None)
-                    )
+                        text=self.to_hexdump(
+                            self.transactions.selected()
+                            if self.transactions.selection_valid()
+                            else None
+                        )
+                    ),
                 ),
             ]
         )
 
     def selected_field_position(self):
-        return self.fields.selected().field.position or None if self.fields.selection_valid() else None
-
+        return (
+            self.fields.selected().field.field.position or None
+            if self.fields.selection_valid()
+            else None
+        )
 
     def to_hexdump(self, transaction: Optional[DisplayTransaction]) -> FormattedText:
         position = self.selected_field_position()
-        selection = [(position, "class:hexdump.selected")] if position else []
+        selection = self.fields.selected().field.position() if position else []
 
         return listing.to_hexdump(
-            transaction.raw_data if transaction else b'',
+            transaction.raw_data if transaction else b"",
             "class:hexdump.default",
             selection,
-            offset=self.offset*16
+            offset=self.offset * 16,
         )
 
     def __pt_container__(self) -> AnyContainer:

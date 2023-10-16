@@ -1,131 +1,136 @@
 #!/usr/bin/env python3
 
 from typing import Type, Union
+
 from prompt_toolkit import Application
-from prompt_toolkit.layout.layout import Layout
-from prompt_toolkit.layout.dimension import Dimension as D, sum_layout_dimensions, max_layout_dimensions, to_dimension
-from prompt_toolkit.widgets import Box, TextArea, Label, Button
 from prompt_toolkit.cache import SimpleCache
-# from prompt_toolkit.widgets.base import Border
-from prompt_toolkit.layout.containers import Window, VSplit, HSplit, HorizontalAlign, VerticalAlign
 from prompt_toolkit.key_binding.key_bindings import KeyBindings
+
+# from prompt_toolkit.widgets.base import Border
+from prompt_toolkit.layout.containers import HorizontalAlign, HSplit, VerticalAlign, VSplit, Window
+from prompt_toolkit.layout.dimension import Dimension as D
+from prompt_toolkit.layout.dimension import max_layout_dimensions, sum_layout_dimensions, to_dimension
+from prompt_toolkit.layout.layout import Layout
 from prompt_toolkit.utils import take_using_weights
+from prompt_toolkit.widgets import Box, Button, Label, TextArea
 
 from binder_trace.tui.selection import SelectionViewList
 
+
 class EmptyBorder:
-    HORIZONTAL = ''
-    VERTICAL = ''
+    HORIZONTAL = ""
+    VERTICAL = ""
 
-    TOP_LEFT = ''
-    TOP_RIGHT = ''
-    BOTTOM_LEFT = ''
-    BOTTOM_RIGHT = ''
+    TOP_LEFT = ""
+    TOP_RIGHT = ""
+    BOTTOM_LEFT = ""
+    BOTTOM_RIGHT = ""
 
-    LEFT_T = ''
-    RIGHT_T = ''
-    TOP_T = ''
-    BOTTOM_T = ''
+    LEFT_T = ""
+    RIGHT_T = ""
+    TOP_T = ""
+    BOTTOM_T = ""
 
-    INTERSECT = ''
+    INTERSECT = ""
 
 
 class SpaceBorder:
-    " Box drawing characters. (Spaces) "
-    HORIZONTAL = ' '
-    VERTICAL = ' '
+    "Box drawing characters. (Spaces)"
+    HORIZONTAL = " "
+    VERTICAL = " "
 
-    TOP_LEFT = ' '
-    TOP_RIGHT = ' '
-    BOTTOM_LEFT = ' '
-    BOTTOM_RIGHT = ' '
+    TOP_LEFT = " "
+    TOP_RIGHT = " "
+    BOTTOM_LEFT = " "
+    BOTTOM_RIGHT = " "
 
-    LEFT_T = ' '
-    RIGHT_T = ' '
-    TOP_T = ' '
-    BOTTOM_T = ' '
+    LEFT_T = " "
+    RIGHT_T = " "
+    TOP_T = " "
+    BOTTOM_T = " "
 
-    INTERSECT = ' '
+    INTERSECT = " "
 
 
 class AsciiBorder:
-    " Box drawing characters. (ASCII) "
-    HORIZONTAL = '-'
-    VERTICAL = '|'
+    "Box drawing characters. (ASCII)"
+    HORIZONTAL = "-"
+    VERTICAL = "|"
 
-    TOP_LEFT = '+'
-    TOP_RIGHT = '+'
-    BOTTOM_LEFT = '+'
-    BOTTOM_RIGHT = '+'
+    TOP_LEFT = "+"
+    TOP_RIGHT = "+"
+    BOTTOM_LEFT = "+"
+    BOTTOM_RIGHT = "+"
 
-    LEFT_T = '+'
-    RIGHT_T = '+'
-    TOP_T = '+'
-    BOTTOM_T = '+'
+    LEFT_T = "+"
+    RIGHT_T = "+"
+    TOP_T = "+"
+    BOTTOM_T = "+"
 
-    INTERSECT = '+'
+    INTERSECT = "+"
 
 
 class ThinBorder:
-    " Box drawing characters. (Thin) "
-    HORIZONTAL = '\u2500'
-    VERTICAL = '\u2502'
+    "Box drawing characters. (Thin)"
+    HORIZONTAL = "\u2500"
+    VERTICAL = "\u2502"
 
-    TOP_LEFT = '\u250c'
-    TOP_RIGHT = '\u2510'
-    BOTTOM_LEFT = '\u2514'
-    BOTTOM_RIGHT = '\u2518'
+    TOP_LEFT = "\u250c"
+    TOP_RIGHT = "\u2510"
+    BOTTOM_LEFT = "\u2514"
+    BOTTOM_RIGHT = "\u2518"
 
-    LEFT_T = '\u251c'
-    RIGHT_T = '\u2524'
-    TOP_T = '\u252c'
-    BOTTOM_T = '\u2534'
+    LEFT_T = "\u251c"
+    RIGHT_T = "\u2524"
+    TOP_T = "\u252c"
+    BOTTOM_T = "\u2534"
 
-    INTERSECT = '\u253c'
+    INTERSECT = "\u253c"
 
 
 class RoundedBorder(ThinBorder):
-    " Box drawing characters. (Rounded) "
-    TOP_LEFT = '\u256d'
-    TOP_RIGHT = '\u256e'
-    BOTTOM_LEFT = '\u2570'
-    BOTTOM_RIGHT = '\u256f'
+    "Box drawing characters. (Rounded)"
+    TOP_LEFT = "\u256d"
+    TOP_RIGHT = "\u256e"
+    BOTTOM_LEFT = "\u2570"
+    BOTTOM_RIGHT = "\u256f"
 
 
 class ThickBorder:
-    " Box drawing characters. (Thick) "
-    HORIZONTAL = '\u2501'
-    VERTICAL = '\u2503'
+    "Box drawing characters. (Thick)"
+    HORIZONTAL = "\u2501"
+    VERTICAL = "\u2503"
 
-    TOP_LEFT = '\u250f'
-    TOP_RIGHT = '\u2513'
-    BOTTOM_LEFT = '\u2517'
-    BOTTOM_RIGHT = '\u251b'
+    TOP_LEFT = "\u250f"
+    TOP_RIGHT = "\u2513"
+    BOTTOM_LEFT = "\u2517"
+    BOTTOM_RIGHT = "\u251b"
 
-    LEFT_T = '\u2523'
-    RIGHT_T = '\u252b'
-    TOP_T = '\u2533'
-    BOTTOM_T = '\u253b'
+    LEFT_T = "\u2523"
+    RIGHT_T = "\u252b"
+    TOP_T = "\u2533"
+    BOTTOM_T = "\u253b"
 
-    INTERSECT = '\u254b'
+    INTERSECT = "\u254b"
 
 
 class DoubleBorder:
-    " Box drawing characters. (Thin) "
-    HORIZONTAL = '\u2550'
-    VERTICAL = '\u2551'
+    "Box drawing characters. (Thin)"
+    HORIZONTAL = "\u2550"
+    VERTICAL = "\u2551"
 
-    TOP_LEFT = '\u2554'
-    TOP_RIGHT = '\u2557'
-    BOTTOM_LEFT = '\u255a'
-    BOTTOM_RIGHT = '\u255d'
+    TOP_LEFT = "\u2554"
+    TOP_RIGHT = "\u2557"
+    BOTTOM_LEFT = "\u255a"
+    BOTTOM_RIGHT = "\u255d"
 
-    LEFT_T = '\u2560'
-    RIGHT_T = '\u2563'
-    TOP_T = '\u2566'
-    BOTTOM_T = '\u2569'
+    LEFT_T = "\u2560"
+    RIGHT_T = "\u2563"
+    TOP_T = "\u2566"
+    BOTTOM_T = "\u2569"
 
-    INTERSECT = '\u256c'
+    INTERSECT = "\u256c"
+
 
 AnyBorderStyle = Union[
     Type[EmptyBorder],
@@ -149,13 +154,25 @@ class Merge:
 
 
 class Table(HSplit):
-
-    def __init__(self, table,
-                 borders: AnyBorderStyle=ThinBorder, column_width=None, column_widths=[],
-                 window_too_small=None, align=VerticalAlign.JUSTIFY,
-                 padding=0, padding_char=None, padding_style='',
-                 width=None, height=None, z_index=None,
-                 modal=False, key_bindings=None, style='', selected_style=''):
+    def __init__(
+        self,
+        table,
+        borders: AnyBorderStyle = ThinBorder,
+        column_width=None,
+        column_widths=[],
+        window_too_small=None,
+        align=VerticalAlign.JUSTIFY,
+        padding=0,
+        padding_char=None,
+        padding_style="",
+        width=None,
+        height=None,
+        z_index=None,
+        modal=False,
+        key_bindings=None,
+        style="",
+        selected_style="",
+    ):
         self.borders = borders
         self.column_width = column_width
         self.column_widths = column_widths
@@ -179,7 +196,7 @@ class Table(HSplit):
             z_index=z_index,
             modal=modal,
             key_bindings=key_bindings,
-            style=style
+            style=style,
         )
         self.row_cache = SimpleCache(maxsize=30)
 
@@ -200,6 +217,7 @@ class Table(HSplit):
         """
         List of child objects, including padding & borders.
         """
+
         def get():
             result = []
 
@@ -304,9 +322,7 @@ class _BaseRow(VSplit):
         # the whole width.)
         sizes = [d.min for d in dimensions]
 
-        child_generator = take_using_weights(
-            items=list(range(len(dimensions))),
-            weights=[d.weight for d in dimensions])
+        child_generator = take_using_weights(items=list(range(len(dimensions))), weights=[d.weight for d in dimensions])
 
         i = next(child_generator)
 
@@ -334,7 +350,7 @@ class _BaseRow(VSplit):
             for c in children:
                 if isinstance(c, _Cell):
                     inc = (c.merge * 2) - 1
-                    tmp.append(sum(sizes[i:i + inc]))
+                    tmp.append(sum(sizes[i : i + inc]))
                 else:
                     inc = 1
                     tmp.append(sizes[i])
@@ -345,11 +361,23 @@ class _BaseRow(VSplit):
 
 
 class _Row(_BaseRow):
-    def __init__(self, row, table, borders,
-                 window_too_small=None, align=HorizontalAlign.JUSTIFY,
-                 padding=D.exact(0), padding_char=None, padding_style='',
-                 width=None, height=None, z_index=None,
-                 modal=False, key_bindings=None, style=''):
+    def __init__(
+        self,
+        row,
+        table,
+        borders,
+        window_too_small=None,
+        align=HorizontalAlign.JUSTIFY,
+        padding=D.exact(0),
+        padding_char=None,
+        padding_style="",
+        width=None,
+        height=None,
+        z_index=None,
+        modal=False,
+        key_bindings=None,
+        style="",
+    ):
         self.table = table
         self.borders = borders
 
@@ -377,7 +405,8 @@ class _Row(_BaseRow):
             z_index=z_index,
             modal=modal,
             key_bindings=key_bindings,
-            style=style)
+            style=style,
+        )
 
     @property
     def raw_columns(self):
@@ -388,6 +417,7 @@ class _Row(_BaseRow):
         """
         List of child objects, including padding & borders.
         """
+
         def get():
             result = []
 
@@ -421,11 +451,24 @@ class _Row(_BaseRow):
 
 
 class _Border(_BaseRow):
-    def __init__(self, prev, next, table, borders,
-                 window_too_small=None, align=HorizontalAlign.JUSTIFY,
-                 padding=D.exact(0), padding_char=None, padding_style='',
-                 width=None, height=None, z_index=None,
-                 modal=False, key_bindings=None, style=''):
+    def __init__(
+        self,
+        prev,
+        next,
+        table,
+        borders,
+        window_too_small=None,
+        align=HorizontalAlign.JUSTIFY,
+        padding=D.exact(0),
+        padding_char=None,
+        padding_style="",
+        width=None,
+        height=None,
+        z_index=None,
+        modal=False,
+        key_bindings=None,
+        style="",
+    ):
         assert prev or next
         self.prev = prev
         self.next = next
@@ -446,7 +489,8 @@ class _Border(_BaseRow):
             z_index=z_index,
             modal=modal,
             key_bindings=key_bindings,
-            style=style)
+            style=style,
+        )
 
     def has_borders(self, row):
         yield None  # first (outer) border
@@ -470,6 +514,7 @@ class _Border(_BaseRow):
         """
         List of child objects, including padding & borders.
         """
+
         def get():
             result = []
 
@@ -525,13 +570,26 @@ class _Border(_BaseRow):
 
 
 class _Cell(HSplit):
-    def __init__(self, cell, table, row, merge=1,
-                 padding=0, char=None,
-                 padding_left=None, padding_right=None,
-                 padding_top=None, padding_bottom=None,
-                 window_too_small=None,
-                 width=None, height=None, z_index=None,
-                 modal=False, key_bindings=None, style=''):
+    def __init__(
+        self,
+        cell,
+        table,
+        row,
+        merge=1,
+        padding=0,
+        char=None,
+        padding_left=None,
+        padding_right=None,
+        padding_top=None,
+        padding_bottom=None,
+        window_too_small=None,
+        width=None,
+        height=None,
+        z_index=None,
+        modal=False,
+        key_bindings=None,
+        style="",
+    ):
         self.table = table
         self.row = row
         self.merge = merge
@@ -569,7 +627,8 @@ class _Cell(HSplit):
             z_index=z_index,
             modal=modal,
             key_bindings=key_bindings,
-            style=style)
+            style=style,
+        )
 
 
 def demo():
@@ -589,10 +648,11 @@ def demo():
     sht3 = "The quick brown fox jumps over the lazy dog."
 
     kb = KeyBindings()
-    @kb.add('c-c')
+
+    @kb.add("c-c")
     def _(event):
-        " Abort when Control-C has been pressed. "
-        event.app.exit(exception=KeyboardInterrupt, style='class:aborting')
+        "Abort when Control-C has been pressed."
+        event.app.exit(exception=KeyboardInterrupt, style="class:aborting")
 
     table = [
         [TextArea(sht1), Label(txt2), TextArea(txt1)],
@@ -606,16 +666,12 @@ def demo():
 
     layout = Layout(
         Box(
-            Table(
-                table=table,
-                column_width=D.exact(15),
-                column_widths=[None],
-                borders=DoubleBorder),
+            Table(table=table, column_width=D.exact(15), column_widths=[None], borders=DoubleBorder),
             padding=1,
         ),
     )
     return Application(layout, key_bindings=kb)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     demo().run()

@@ -2,9 +2,8 @@ import functools
 import logging
 
 import binder_trace.constants
-from binder_trace.parcel import ParcelParser
-
 from binder_trace import loggers
+from binder_trace.parcel import ParcelParser
 from binder_trace.parsedParcel import Field, parse_field
 from binder_trace.parseerror import ParseError
 
@@ -37,14 +36,15 @@ def parcelableHasOverride(parcelType: str) -> bool:
         "android.content.pm.ResolveInfo",
         "android.database.BulkCursorDescriptor",
         "android.content.ContentProviderOperation",
-        "android.content.ContentProviderOperation$BackReference"
+        "android.content.ContentProviderOperation$BackReference",
     ]
 
     return parcelType in overrides
 
+
 def parcelableOverride(parcel: ParcelParser, parcelType: str, name: str, parent: Field) -> None:
     override_handlers = {
-        "android.net.Uri" : parseUri,
+        "android.net.Uri": parseUri,
         "android.net.Uri$StringUri": parseStringUri,
         "android.net.Uri$OpaqueUri": parseOpaqueUri,
         "android.net.Uri$HierarchicalUri": parseHierarchicalUri,
@@ -61,8 +61,8 @@ def parcelableOverride(parcel: ParcelParser, parcelType: str, name: str, parent:
         "android.content.pm.ResolveInfo": parseResolveInfo,
         "android.database.BulkCursorDescriptor": parseBulkCursorDescriptor,
         "android.content.ContentProviderOperation": parseContentProviderOperation,
-        "android.content.ContentProviderOperation$BackReference": parseBackReference
-        }
+        "android.content.ContentProviderOperation$BackReference": parseBackReference,
+    }
     if parcelType in override_handlers:
         parcel.parse_field(name, parcelType, functools.partial(override_handlers[parcelType], parcel), parent)
     elif parcelType == "android.view.AbsSavedState$1":
@@ -74,12 +74,12 @@ def parcelableOverride(parcel: ParcelParser, parcelType: str, name: str, parent:
         parsing_log.info("No override for " + parcelType)
         raise ParseError("No override for " + parcelType)
 
-def parseUri(parcel: ParcelParser, parent: Field) -> None:
 
+def parseUri(parcel: ParcelParser, parent: Field) -> None:
     code_field = parcel.parse_field("code", "uint32", parcel.readUint32, parent)
 
     if code_field.content == binder_trace.constants.URI_NULL_TYPE_ID:
-        #TODO: Should we be outputting something for the NULL URI or is type code enough?
+        # TODO: Should we be outputting something for the NULL URI or is type code enough?
         pass
     elif code_field.content == binder_trace.constants.URI_STRING_TYPE_ID:
         parseStringUri(parcel, parent)
@@ -112,7 +112,7 @@ def parseOpaqueUri(parcel: ParcelParser, parent: Field) -> None:
 
 
 def parseStringUri(parcel: ParcelParser, parent: Field) -> None:
-    if binder_trace.constants.ANDROID_VERSION > 9:
+    if parcel.android_version > 9:
         parcel.parse_field("uriString", "string", parcel.readString8, parent)
     else:
         parcel.parse_field("uriString", "string", parcel.readString16, parent)
@@ -189,15 +189,15 @@ def parseAddressList(parcel: ParcelParser, name: str, parent: Field) -> None:
     for i in range(count_field.content):
         parcel.parse_field("", "Address", functools.partial(readAddress, parcel), parent)
 
-def readAddress(parcel: ParcelParser, parent: Field) -> None:
 
+def readAddress(parcel: ParcelParser, parent: Field) -> None:
     addr_field = parcel.parse_field("addr", "ByteVector", parcel.readByteVector, parent)
 
     if len(addr_field.content) == 16:
         parcel.parse_field("scopeId", "int32", parcel.readInt32, parent)
 
-def parseLinkProperties(parcel: ParcelParser, parent: Field) -> None:
 
+def parseLinkProperties(parcel: ParcelParser, parent: Field) -> None:
     parcel.parse_field("iface", "string", parcel.readString16, parent)
 
     parcel.parse_field(
@@ -218,7 +218,9 @@ def parseLinkProperties(parcel: ParcelParser, parent: Field) -> None:
     parcel.parse_field("setMtu", "int32", parcel.readInt32, parent)
     parcel.parse_field("setTcpBufferSizes", "string", parcel.readString16, parent)
 
-    parcel.parse_field("Routes", "", functools.partial(parcel.readParcelableVectorWithoutNullChecks, "__dynamic"), parent)
+    parcel.parse_field(
+        "Routes", "", functools.partial(parcel.readParcelableVectorWithoutNullChecks, "__dynamic"), parent
+    )
 
     null_check_field = parcel.parse_field("HttpProxy-nullcheck", "", parcel.readBool, parent)
     if null_check_field.content:
@@ -236,35 +238,35 @@ def parseLinkProperties(parcel: ParcelParser, parent: Field) -> None:
 
 def parseCharSequence(parcel: ParcelParser, parent: Field) -> None:
     span_names = {
-        binder_trace.constants.SpanType.ALIGNMENT_SPAN : "AlignmentSpan",
-        binder_trace.constants.SpanType.FOREGROUND_COLOR_SPAN : "ForegroundColorSpan",
-        binder_trace.constants.SpanType.RELATIVE_SIZE_SPAN : "RelativeSizeSpan",
-        binder_trace.constants.SpanType.SCALE_X_SPAN : "ScaleXSpan",
-        binder_trace.constants.SpanType.STRIKETHROUGH_SPAN : "StrikethroughSpan",
-        binder_trace.constants.SpanType.UNDERLINE_SPAN : "UnderlineSpan",
-        binder_trace.constants.SpanType.STYLE_SPAN : "StyleSpan",
-        binder_trace.constants.SpanType.BULLET_SPAN : "BulletSpan",
-        binder_trace.constants.SpanType.QUOTE_SPAN : "QuoteSpan",
-        binder_trace.constants.SpanType.LEADING_MARGIN_SPAN : "LeadingMarginSpan",
-        binder_trace.constants.SpanType.URL_SPAN : "URLSpan",
-        binder_trace.constants.SpanType.BACKGROUND_COLOR_SPAN : "BackgroundColorSpan",
-        binder_trace.constants.SpanType.TYPEFACE_SPAN : "TypefaceSpan",
-        binder_trace.constants.SpanType.SUPERSCRIPT_SPAN : "SuperscriptSpan",
-        binder_trace.constants.SpanType.SUBSCRIPT_SPAN : "SubscriptSpan",
-        binder_trace.constants.SpanType.ABSOLUTE_SIZE_SPAN : "AbsoluteSizeSpan",
-        binder_trace.constants.SpanType.TEXT_APPEARANCE_SPAN : "TextAppearanceSpan",
-        binder_trace.constants.SpanType.ANNOTATION : "Annotation",
-        binder_trace.constants.SpanType.SUGGESTION_SPAN : "SuggestionSpan",
-        binder_trace.constants.SpanType.SPELL_CHECK_SPAN : "SpellCheckSpan",
-        binder_trace.constants.SpanType.SUGGESTION_RANGE_SPAN : "SuggestionRangeSpan",
-        binder_trace.constants.SpanType.EASY_EDIT_SPAN : "EasyEditSpan",
-        binder_trace.constants.SpanType.LOCALE_SPAN : "LocaleSpan",
-        binder_trace.constants.SpanType.TTS_SPAN : "TtsSpan",
-        binder_trace.constants.SpanType.ACCESSIBILITY_CLICKABLE_SPAN : "AccessibilityClickableSpan",
-        binder_trace.constants.SpanType.ACCESSIBILITY_URL_SPAN : "AccessibilityURLSpan",
-        binder_trace.constants.SpanType.LINE_BACKGROUND_SPAN : "LineBackgroundSpan",
-        binder_trace.constants.SpanType.LINE_HEIGHT_SPAN : "LineHeightSpan",
-        binder_trace.constants.SpanType.ACCESSIBILITY_REPLACEMENT_SPAN : "AccessibilityReplacementSpan",
+        binder_trace.constants.SpanType.ALIGNMENT_SPAN: "AlignmentSpan",
+        binder_trace.constants.SpanType.FOREGROUND_COLOR_SPAN: "ForegroundColorSpan",
+        binder_trace.constants.SpanType.RELATIVE_SIZE_SPAN: "RelativeSizeSpan",
+        binder_trace.constants.SpanType.SCALE_X_SPAN: "ScaleXSpan",
+        binder_trace.constants.SpanType.STRIKETHROUGH_SPAN: "StrikethroughSpan",
+        binder_trace.constants.SpanType.UNDERLINE_SPAN: "UnderlineSpan",
+        binder_trace.constants.SpanType.STYLE_SPAN: "StyleSpan",
+        binder_trace.constants.SpanType.BULLET_SPAN: "BulletSpan",
+        binder_trace.constants.SpanType.QUOTE_SPAN: "QuoteSpan",
+        binder_trace.constants.SpanType.LEADING_MARGIN_SPAN: "LeadingMarginSpan",
+        binder_trace.constants.SpanType.URL_SPAN: "URLSpan",
+        binder_trace.constants.SpanType.BACKGROUND_COLOR_SPAN: "BackgroundColorSpan",
+        binder_trace.constants.SpanType.TYPEFACE_SPAN: "TypefaceSpan",
+        binder_trace.constants.SpanType.SUPERSCRIPT_SPAN: "SuperscriptSpan",
+        binder_trace.constants.SpanType.SUBSCRIPT_SPAN: "SubscriptSpan",
+        binder_trace.constants.SpanType.ABSOLUTE_SIZE_SPAN: "AbsoluteSizeSpan",
+        binder_trace.constants.SpanType.TEXT_APPEARANCE_SPAN: "TextAppearanceSpan",
+        binder_trace.constants.SpanType.ANNOTATION: "Annotation",
+        binder_trace.constants.SpanType.SUGGESTION_SPAN: "SuggestionSpan",
+        binder_trace.constants.SpanType.SPELL_CHECK_SPAN: "SpellCheckSpan",
+        binder_trace.constants.SpanType.SUGGESTION_RANGE_SPAN: "SuggestionRangeSpan",
+        binder_trace.constants.SpanType.EASY_EDIT_SPAN: "EasyEditSpan",
+        binder_trace.constants.SpanType.LOCALE_SPAN: "LocaleSpan",
+        binder_trace.constants.SpanType.TTS_SPAN: "TtsSpan",
+        binder_trace.constants.SpanType.ACCESSIBILITY_CLICKABLE_SPAN: "AccessibilityClickableSpan",
+        binder_trace.constants.SpanType.ACCESSIBILITY_URL_SPAN: "AccessibilityURLSpan",
+        binder_trace.constants.SpanType.LINE_BACKGROUND_SPAN: "LineBackgroundSpan",
+        binder_trace.constants.SpanType.LINE_HEIGHT_SPAN: "LineHeightSpan",
+        binder_trace.constants.SpanType.ACCESSIBILITY_REPLACEMENT_SPAN: "AccessibilityReplacementSpan",
     }
 
     spanned_string_type_field = parcel.parse_field("kind", "int32", parcel.readInt32, parent)
@@ -273,13 +275,14 @@ def parseCharSequence(parcel: ParcelParser, parent: Field) -> None:
     if string_field.content and spanned_string_type_field.content != 1:
         spanned_string_type_field = parcel.parse_field("kind", "int32", parcel.readInt32, parent)
         while spanned_string_type_field.content:
-
             if not isinstance(spanned_string_type_field.content, int):
                 raise ParseError("Expected integer CharSequence kind type")
 
             span_type_name = span_names.get(spanned_string_type_field.content)
 
-            parcel.parse_field("span", span_type_name, functools.partial(parse_span, parcel, spanned_string_type_field.content), parent)
+            parcel.parse_field(
+                "span", span_type_name, functools.partial(parse_span, parcel, spanned_string_type_field.content), parent
+            )
 
             spanned_string_type_field = parcel.parse_field("kind", "int32", parcel.readInt32, parent)
 
@@ -428,10 +431,12 @@ def parse_span(parcel: ParcelParser, kind: int, parent: Field) -> None:
     elif kind == binder_trace.constants.SpanType.ACCESSIBILITY_REPLACEMENT_SPAN:
         parcel.parse_field("contentDescription", "CharSequence", functools.partial(parseCharSequence, parcel), parent)
 
-    elif kind == (binder_trace.constants.SpanType.SUPERSCRIPT_SPAN or 
-        binder_trace.constants.SpanType.SUBSCRIPT_SPAN or
-        binder_trace.constants.SpanType.STRIKETHROUGH_SPAN or
-        binder_trace.constants.SpanType.UNDERLINE_SPAN):
+    elif kind == (
+        binder_trace.constants.SpanType.SUPERSCRIPT_SPAN
+        or binder_trace.constants.SpanType.SUBSCRIPT_SPAN
+        or binder_trace.constants.SpanType.STRIKETHROUGH_SPAN
+        or binder_trace.constants.SpanType.UNDERLINE_SPAN
+    ):
         # These types just have the basic span fields.
         pass
 
@@ -464,7 +469,6 @@ def parseBitmap(parcel: ParcelParser, parent: Field) -> None:
             return 0
         return ((h - 1) * r) + (w * get_width_of_pixel_for_color_type(t))
 
-
     parcel.parse_field("isMutable", "int32", parcel.readInt32, parent)
     color_type_field = parcel.parse_field("colorType", "int32", parcel.readInt32, parent)
 
@@ -478,10 +482,7 @@ def parseBitmap(parcel: ParcelParser, parent: Field) -> None:
     parcel.parse_field("density", "int32", parcel.readInt32, parent)
 
     blob_size = calc_byte_size(
-        width_field.content,
-        height_field.content,
-        row_bytes_field.content,
-        color_type_field.content
+        width_field.content, height_field.content, row_bytes_field.content, color_type_field.content
     )
 
     parcel.parse_field("blob", "byte[]", functools.partial(parcel.readBlob, blob_size), parent)
@@ -496,7 +497,6 @@ def parseInputChannel(parcel: ParcelParser, parent: Field):
 
 
 def parseResolveInfo(parcel: ParcelParser, parent: Field) -> None:
-
     component_info_field = parcel.parse_field("componentInfoType", "int32", parcel.readInt32, parent)
     component_info_type = component_info_field.content
     if component_info_type == 1:
@@ -547,6 +547,7 @@ def parseResolveInfo(parcel: ParcelParser, parent: Field) -> None:
     parcel.parse_field("handleAllWebDataURI", "bool", parcel.readBool, parent)
     parcel.parse_field("isInstantAppAvailable", "bool", parcel.readBool, parent)
 
+
 def parseParceledListSlice(parcel: ParcelParser, parent: Field) -> None:
     count_field = parcel.parse_field("N", "int32", parcel.readInt32, parent)
 
@@ -582,8 +583,8 @@ def parseBulkCursorDescriptor(parcel: ParcelParser, parent: Field) -> None:
             parent,
         )
 
-def parseContentProviderOperation(parcel: ParcelParser, parent: Field):
 
+def parseContentProviderOperation(parcel: ParcelParser, parent: Field):
     parcel.parse_field("mType", "int32", parcel.readInt32, parent)
     parcel.parse_field("mUri", "android.net.Uri", functools.partial(parcel.readParcelable, "android.net.Uri"), parent)
 
@@ -615,6 +616,7 @@ def parseContentProviderOperation(parcel: ParcelParser, parent: Field):
 
     parcel.parse_field("mYieldAllowed", "bool", parcel.readBool, parent)
     parcel.parse_field("mExceptionAllowed", "bool", parcel.readBool, parent)
+
 
 def parseBackReference(parcel: ParcelParser, parent: Field) -> None:
     parcel.parse_field("fromIndex", "int32", parcel.readInt32, parent)

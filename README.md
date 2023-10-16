@@ -48,7 +48,7 @@ You'll need a rooted Android device or emulator.
 | -n&nbsp;NAME         | The name of the process on DEVICE to attach to e.g. "Messaging".                                                                       |
 | -a&nbsp;[9, 10, 11, 13]   | The version of android to load structures for.             |
 | -s&nbsp;STRUCTPATH   | The path to the directory of structure files.             |
-
+| -c&nbsp;CONFIG   | The path to the config file to filter.             |
 
 # ▶️ Starting binder trace
 
@@ -73,6 +73,7 @@ emulator-5554   device
 
 # ⌨️ Controls
 
+## 🌐 Global 
 | Key              | Action                                 |
 |------------------|----------------------------------------|
 | `up`             | Move up                                |
@@ -84,17 +85,55 @@ emulator-5554   device
 | `tab`            | Next pane                              |
 | `shift + tab`    | Previous pane                          |
 | `ctrl + c`       | Copy pane to clipboard                 |
-| `f`              | Open filter options                    |
 | `space`          | Pause/Unpause transaction recording    |
 | `c`              | Clear                                  |
 | `h`              | Open help                              |
+| `r`              | Reload config file                     |
 | `q`              | Quit                                   |
 
-# 🔎 Filtering
-If you're interested in specific messages you can filter the displayed results with the following options. 
+## 📈 Frequency pane
+| Key              | Action                                 |
+|------------------|----------------------------------------|
+| `p`           |   Toggle order asc/desc|
+| `w`           |   Jump to next interface|
+| `s`           |   Jump to previous interface|
+| `enter`       |   Toggle Filter|
 
-* __Interface__ - limit results to interfaces that contain the case sensitive search string e.g. "com.android" or "Sms".
-* __Method__ - limit results to function names containing the specified case sensitive string.
-* __Type__ - Limit results to certain types of messages e.g. requests or responses.
+# 🔎 Config File
+To filter define any or all of the interface, method, type and inclusive options. To not use an option leave it blank `""`
 
-Once you've entered your filter options just press `Enter` to apply them.
+## Without -c argument
+
+```
+> binder-trace -d emulator-5554 -n Contacts -a 13
+```
+![Before Config](binder-trace-before-config.png)
+
+## With -c argument
+### config.json
+```py
+{
+    "filters": [
+        {
+            "interface": "android.gui.IDisplayEventConnection",
+            "method": "requestNextVsync",
+            "type": "",
+            "inclusive": false
+        },
+        {
+            "interface": "android.content.IContentProvider",
+            "method": "",
+            "type": "call",
+            "inclusive": false
+        }
+    ]
+}
+```
+
+```
+> binder-trace -d emulator-5554 -n Contacts -a 13 -c .\binder_trace\binder_trace\config.json
+```
+
+`android.gui.IDisplayEventConnection`->`requestNextVsync`->`""` and `android.content.IContentProvider`->`""` ->`call` have been filtered out
+
+![After Config](binder-trace-after-config.png)

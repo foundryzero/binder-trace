@@ -2,11 +2,10 @@ import csv
 import io
 
 import pyperclip
-
 from prompt_toolkit.filters import Condition
 from prompt_toolkit.key_binding import KeyBindings
-from prompt_toolkit.layout.dimension import AnyDimension, Dimension
 from prompt_toolkit.layout import AnyContainer
+from prompt_toolkit.layout.dimension import AnyDimension, Dimension
 
 from binder_trace.tui import table
 from binder_trace.tui.selection import SelectionViewList
@@ -14,9 +13,14 @@ from binder_trace.tui.widget.frame import SelectableFrame
 
 
 class TransactionFrame:
-
-    def __init__(self, transactions: SelectionViewList, height: AnyDimension = None) -> None:
+    def __init__(
+        self,
+        transactions: SelectionViewList,
+        frequency_counter: SelectionViewList,
+        height: AnyDimension = None,
+    ) -> None:
         self.transactions = transactions
+        self.frequency_counter = frequency_counter
         self.transactions.on_update_event += self.update_table
 
         self.headings = [
@@ -60,14 +64,16 @@ class TransactionFrame:
 
     def update_table(self, _):
         self.table.children.clear()
+
         self.table.add_row(self.headings, "class:transactions.heading", id(self.headings))
         for i in range(self.transactions.view.start, self.transactions.view.end):
             row, style = self._to_row(self.transactions[i])
             self.table.add_row(
                 row,
                 f"{style} reverse" if i == self.transactions.selection else style,
-                (id(self.transactions[i]), i == self.transactions.selection)
+                (id(self.transactions[i]), i == self.transactions.selection),
             )
+
         self.pad_table()
 
     def pad_table(self):
@@ -83,31 +89,30 @@ class TransactionFrame:
         for _ in range(padding):
             self.table.add_row(empty_row, "class:transaction.default", id(empty_row))
 
-
     def key_bindings(self) -> KeyBindings:
         kb = KeyBindings()
 
-        @kb.add('up', filter=Condition(lambda: self.activated))
+        @kb.add("up", filter=Condition(lambda: self.activated))
         def _(event):
             self.transactions.move_selection(-1)
 
-        @kb.add('down', filter=Condition(lambda: self.activated))
+        @kb.add("down", filter=Condition(lambda: self.activated))
         def _(event):
             self.transactions.move_selection(1)
 
-        @kb.add('s-up', filter=Condition(lambda: self.activated))
+        @kb.add("s-up", filter=Condition(lambda: self.activated))
         def _(event):
             self.transactions.move_selection(-self.transactions.max_view_size)
 
-        @kb.add('s-down', filter=Condition(lambda: self.activated))
+        @kb.add("s-down", filter=Condition(lambda: self.activated))
         def _(event):
             self.transactions.move_selection(self.transactions.max_view_size)
 
-        @kb.add('home', filter=Condition(lambda: self.activated))
+        @kb.add("home", filter=Condition(lambda: self.activated))
         def _(event):
             self.transactions.move_selection(-self.transactions.selection)
 
-        @kb.add('end', filter=Condition(lambda: self.activated))
+        @kb.add("end", filter=Condition(lambda: self.activated))
         def _(event):
             self.transactions.move_selection(len(self.transactions) - self.transactions.selection)
 
@@ -122,20 +127,13 @@ class TransactionFrame:
     def activated(self, value):
         self.container.activated = value
 
-
     def copy_to_clipboard(self):
         if self.transactions.selection_valid():
             output = io.StringIO()
             writer = csv.writer(output, quoting=csv.QUOTE_NONE)
             for t in self.transactions.data:
-                writer.writerow([
-                    t.interface,
-                    str(t.method_number),
-                    t.method,
-                    hex(len(t.raw_data))
-                ])
+                writer.writerow([t.interface, str(t.method_number), t.method, hex(len(t.raw_data))])
             pyperclip.copy(output.getvalue())
-
 
     def _to_row(self, transaction):
         # TODO: Cache the rows so we don't need to recreate them.

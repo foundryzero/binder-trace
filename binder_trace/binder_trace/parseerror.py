@@ -1,10 +1,9 @@
-
-
 class ParseError(Exception):
     """
     An exception that wraps another exception, providing more details about the state of the current parcel that caused
     that exception.
     """
+
     def __init__(self, message, parcelSoFar=None, extras=None, wrapped=None):
         super().__init__(message)
         self.message = message

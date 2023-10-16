@@ -3,28 +3,30 @@ import logging
 import struct
 from typing import Callable, Optional
 
-from binder_trace import constants
-from binder_trace import loggers
+from binder_trace import constants, loggers
+
 # All the functions here need to be camelCase because they need to match the ones on the Java side to be matched with
 # getattr. Ideally the structures would contain tags that mapped to function names rather than actual function names.
 from binder_trace.parsedParcel import Field, FieldData
 from binder_trace.parseerror import ParseError
 
 parsing_log = logging.getLogger(loggers.PARSING_LOG)
+log = logging.getLogger(loggers.LOG)
 
 class ParcelParser:
     """
     A parser capable of reading data types that make up a parcel from a buffer.
     """
 
-    def __init__(self, struct_store, data):
+    def __init__(self, struct_store, data, android_version):
         self.struct_store = struct_store
         self.data = data
         self.pos = 0
+        self.android_version = android_version
 
     def parse_field(self, name: str, type_name: str, read_func, parent: Optional[Field] = None) -> Field:
-
         field = Field(name, [], type_name, None, parent)
+
         if parent:
             parent.content.append(field)
 
@@ -34,7 +36,6 @@ class ParcelParser:
 
         field.position = FieldData(start, end)
         return field
-
 
     def add(self, i: int) -> None:
         """
@@ -84,7 +85,7 @@ class ParcelParser:
     def _readBytes(self, length: int) -> bytes:
         self._bounds_check(length)
 
-        buffer = self.data[self.pos: self.pos + length]
+        buffer = self.data[self.pos : self.pos + length]
         self.add(length)
         return buffer
 
@@ -126,7 +127,7 @@ class ParcelParser:
         parent.content = b[0]
 
     def readChar(self, parent: Field) -> None:
-        b = self.data[self.pos:self.pos + 4].decode('utf_16_le')
+        b = self.data[self.pos : self.pos + 4].decode("utf_16_le")
         self.add(4)
         parent.content = b
 
@@ -163,8 +164,15 @@ class ParcelParser:
             self.align4()
 
             parent.content.append(
-                Field("Value", s.decode(encoding, errors="replace"), encoding, FieldData(start, end), parent)
+                Field(
+                    "Value",
+                    s.decode(encoding, errors="replace"),
+                    encoding,
+                    FieldData(start, end),
+                    parent,
+                )
             )
+            
 
     def readString16(self, parent: Field) -> None:
         self._read_string("utf_16_le", 2, parent)
@@ -174,7 +182,7 @@ class ParcelParser:
 
     def read_interface_token(self, parent: Field) -> None:
         self.parse_field("Strict Mode Policy", "uint32", self.readUint32, parent)
-        if constants.ANDROID_VERSION >= 11:
+        if self.android_version >= 11:
             self.parse_field("Work Source UID", "uint32", self.readUint32, parent)
             self.parse_field("Version Header", "uint32", self.readUint32, parent)
         elif constants.ANDROID_VERSION == 10:
@@ -226,7 +234,12 @@ class ParcelParser:
         # code_field.name = f"{type_description} ({code:#x})"
 
         if code == constants.EX_HAS_NOTED_APPOPS_REPLY_HEADER:
-            self.parse_field("App Ops Reply Header", "EX_HAS_NOTED_APPOPS_REPLY_HEADER", self.read_app_op_exception, parent)
+            self.parse_field(
+                "App Ops Reply Header",
+                "EX_HAS_NOTED_APPOPS_REPLY_HEADER",
+                self.read_app_op_exception,
+                parent,
+            )
             self.parse_field("", "Exception", self.readException, parent)
         elif code == constants.EX_HAS_STRICTMODE_REPLY_HEADER:
             self.parse_field("Header Length", "int32", self.readInt32, parent)
@@ -259,10 +272,20 @@ class ParcelParser:
         type_field = parent.content[-1].content
 
         if type_field == constants.BlobType.BLOB_INPLACE:
-            self.parse_field("Blob Bytes", "byte[]", functools.partial(self.readBytes, length), parent)
+            self.parse_field(
+                "Blob Bytes",
+                "byte[]",
+                functools.partial(self.readBytes, length),
+                parent,
+            )
         else:
             # The blob is stored in ASHMEM, which we can't (currently) read, so for now just return the fd number
-            self.parse_field("ASHMEM File Descriptor", "file-descriptor", self.readFileDescriptor, parent)
+            self.parse_field(
+                "ASHMEM File Descriptor",
+                "file-descriptor",
+                self.readFileDescriptor,
+                parent,
+            )
 
     # Some parcelables read from java code, which I'm calling 'dynamic', have the type encoded in a header directly
     # Additionally, there is no null check on the parcelable itself
@@ -315,6 +338,7 @@ class ParcelParser:
             self.readDynamicParcelable(parent)
 
         import binder_trace.overrides
+
         if binder_trace.overrides.parcelableHasOverride(parcelableName):
             binder_trace.overrides.parcelableOverride(self, parcelableName, "", parent)
 
@@ -337,14 +361,18 @@ class ParcelParser:
             raise ParseError("Expected integer length field")
 
         for i in range(size_field.content):
-
             # fields.append(self.parse_field(str(i), type_name, reader))
             null_check_field = self.parse_field("nullcheck", "uint32", self.readUint32, parent)
             if not null_check_field.content:
                 # TODO: Do we need to output a field here as a placeholder?
                 continue
 
-            self.parse_field(str(i), "", functools.partial(self.readParcelable, parcelableName), parent)
+            self.parse_field(
+                str(i),
+                "",
+                functools.partial(self.readParcelable, parcelableName),
+                parent,
+            )
 
     def readParcelableVectorWithoutNullChecks(self, parcelableName, parent) -> None:
         self._read_vector("Parcelable", functools.partial(self.readParcelable, parcelableName), parent)
@@ -392,8 +420,7 @@ class ParcelParser:
         self.parse_field("handle/ptr", "uint64", self.readUint64, parent)
         self.parse_field("cookie", "uint64", self.readUint64, parent)
 
-        # TODO: If this is just a constant this can't be doing a lot.
-        if constants.ANDROID_VERSION > 9:
+        if self.android_version > 9:
             self.parse_field("status", "uint32", self.readUint32, parent)
 
     def readValue(self, parent: Field) -> None:
@@ -476,7 +503,10 @@ class ParcelParser:
         if size_field.content > 0:
             magic_field = self.parse_field("magic", "int32", self.readInt32, parent)
 
-            if magic_field.content not in [constants.BUNDLE_MAGIC, constants.BUNDLE_MAGIC_NATIVE]:
+            if magic_field.content not in [
+                constants.BUNDLE_MAGIC,
+                constants.BUNDLE_MAGIC_NATIVE,
+            ]:
                 raise ParseError(f"Error: bad magic number for bundle: {magic_field.content:#x}")
 
             bundle_type = "Native Bundle" if magic_field.content == constants.BUNDLE_MAGIC_NATIVE else "Java Bundle"

@@ -1,4 +1,3 @@
-
 import datetime
 from typing import Optional
 
@@ -6,13 +5,12 @@ from binder_trace.parsedParcel import Block, Direction, Field
 
 
 class DisplayTransaction:
-
     def __init__(self, block: Block) -> None:
         if not block or not block.root_field:
             raise ValueError("no block")
 
         self.block: Block = block
-        self.timestamp = datetime.datetime.now().strftime('%H:%M:%S'),
+        self.timestamp = (datetime.datetime.now().strftime("%H:%M:%S"),)
 
     @property
     def unsupported_call(self) -> bool:
@@ -41,15 +39,13 @@ class DisplayTransaction:
     @property
     def direction_indicator(self) -> str:
         if self.block.direction == Direction.IN:
-            return '\u21D0' if self.block.oneway else '\u21D2'
+            return "\u21D0" if self.block.oneway else "\u21D2"
         elif self.block.direction == Direction.OUT:
-            return '\u21CF'
+            return "\u21CF"
         else:
-            return ''
-
+            return ""
 
     def style(self) -> str:
-
         if self.unsupported_call:
             style = "class:transaction.unsupported"
         elif self.block.errors:
@@ -79,4 +75,3 @@ class DisplayTransaction:
             type_name = "unknown"  # Should be impossible
 
         return type_name
-

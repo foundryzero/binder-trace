@@ -1,7 +1,6 @@
-import hexdump
 import pyperclip
-
 from prompt_toolkit.filters import Condition
+from prompt_toolkit.formatted_text import HTML, FormattedText
 from prompt_toolkit.key_binding import KeyBindings
 from prompt_toolkit.layout import AnyContainer, FormattedTextControl, HSplit, Window
 from prompt_toolkit.widgets import Label
@@ -12,7 +11,6 @@ from binder_trace.tui.widget.frame import SelectableFrame
 
 
 class StructureFrame:
-
     def __init__(self, transactions: SelectionViewList, max_height: int) -> None:
         self.transactions = transactions
         self.transactions.on_selection_change += self.update_content
@@ -30,29 +28,31 @@ class StructureFrame:
     def key_bindings(self) -> KeyBindings:
         kb = KeyBindings()
 
-        @kb.add('up', filter=Condition(lambda: self.activated))
+        @kb.add("up", filter=Condition(lambda: self.activated))
         def _(event):
             self.field_selection.move_selection(-1)
 
-        @kb.add('down', filter=Condition(lambda: self.activated))
+        @kb.add("down", filter=Condition(lambda: self.activated))
         def _(event):
             self.field_selection.move_selection(1)
 
-        @kb.add('s-up', filter=Condition(lambda: self.activated))
+        @kb.add("s-up", filter=Condition(lambda: self.activated))
         def _(event):
             self.field_selection.move_selection(-self.field_selection.max_view_size)
 
-        @kb.add('s-down', filter=Condition(lambda: self.activated))
+        @kb.add("s-down", filter=Condition(lambda: self.activated))
         def _(event):
             self.field_selection.move_selection(self.field_selection.max_view_size)
 
-        @kb.add('home', filter=Condition(lambda: self.activated))
+        @kb.add("home", filter=Condition(lambda: self.activated))
         def _(event):
             self.field_selection.move_selection(-self.field_selection.selection)
 
-        @kb.add('end', filter=Condition(lambda: self.activated))
+        @kb.add("end", filter=Condition(lambda: self.activated))
         def _(event):
-            self.field_selection.move_selection(len(self.field_selection) - self.field_selection.selection)
+            self.field_selection.move_selection(
+                len(self.field_selection) - self.field_selection.selection
+            )
 
         return kb
 
@@ -66,11 +66,10 @@ class StructureFrame:
 
     def copy_to_clipboard(self):
         if self.transactions.selection_valid():
-
             t = self.transactions.selected()
             lines = [f"{t.interface}::{t.method} ({t.type()})"]
             for field in self.field_selection.data:
-                lines.append(listing._to_indented(field))
+                lines.append(field.field.display())
 
             pyperclip.copy("\n".join(lines))
 
@@ -84,15 +83,22 @@ class StructureFrame:
         self.field_selection.resize_view(value - 1)
 
     def update_content(self, _):
-        transaction = self.transactions.selected() if self.transactions.selection_valid() else None
-        fields = listing.flatten_fields(transaction.fields) if transaction and transaction.fields else []
+        transaction = (
+            self.transactions.selected()
+            if self.transactions.selection_valid()
+            else None
+        )
 
-        self.field_selection.assign(fields)
+        indented_field = (
+            listing.FieldFactory().traverse(transaction.fields)
+            if transaction and transaction.fields
+            else []
+        )
 
+        self.field_selection.assign(indented_field)
         self.container.body = self.get_content()
 
     def get_content(self) -> AnyContainer:
-
         children = []
         if self.transactions.selection_valid():
             t = self.transactions.selected()
@@ -102,20 +108,36 @@ class StructureFrame:
                         text=f"{t.interface}::{t.method} ({t.type()})",
                     ),
                     style=f"{t.style()} reverse",
-                    height=1
+                    height=1,
                 )
             )
         else:
             children.append(Window(FormattedTextControl(text=""), height=1))
 
         for i in range(self.field_selection.view.start, self.field_selection.view.end):
-            style = "class:field.selected" if self.activated and i == self.field_selection.selection else "class:field.default"
-            children.append(Label(
-                text=listing._to_indented(self.field_selection[i]),
-                style=style))
+            style = (
+                "class:field.selected"
+                if self.activated and i == self.field_selection.selection
+                else "class:field.default"
+            )
+            self.field_selection[i].field.display(
+                selected=self.activated and i == self.field_selection.selection
+            )
+
+            info = self.field_selection[i].field.display(
+                selected=self.activated and i == self.field_selection.selection,
+                indent=self.field_selection[i].level,
+            )
+
+            children.append(
+                Label(
+                    text=info,
+                    style=style,
+                )
+            )
 
         padding = self.max_height - len(children)
-        children.append(Window(height=padding, char=' '))
+        children.append(Window(height=padding, char=" "))
 
         return HSplit(children=children)
 

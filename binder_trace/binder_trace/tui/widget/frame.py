@@ -1,5 +1,3 @@
-
-
 from functools import partial
 from typing import Optional
 
@@ -14,9 +12,10 @@ from prompt_toolkit.layout import (
     DynamicContainer,
     HSplit,
     VSplit,
-    Window
+    Window,
 )
 from prompt_toolkit.widgets.base import Border, Label
+
 
 class SelectableFrame:
     """
