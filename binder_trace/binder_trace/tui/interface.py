@@ -134,7 +134,8 @@ class UserInterface:
         @kb1.add("c")
         def _(event):
             self.transactions.clear()
-
+            self.frequency_counter.svl.clear()
+            
         @kb1.add("space")
         def _(event):
             self.recording = self.pause_unpause()
