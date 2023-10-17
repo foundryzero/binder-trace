@@ -114,13 +114,13 @@ class UserInterface:
 
         kb1 = KeyBindings()
 
-        @kb1.add("tab")
+        @kb1.add("s-tab")
         def _(event):
             self.focus_index = (self.focus_index + 1) % len(self.focusable)
             for i, f in enumerate(self.focusable):
                 f.activated = i == self.focus_index
 
-        @kb1.add("s-tab")
+        @kb1.add("tab")
         def _(event):
             self.focus_index = (
                 len(self.focusable) - 1
@@ -134,7 +134,8 @@ class UserInterface:
         @kb1.add("c")
         def _(event):
             self.transactions.clear()
-
+            self.frequency_counter.svl.clear()
+            
         @kb1.add("space")
         def _(event):
             self.recording = self.pause_unpause()
