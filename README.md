@@ -11,6 +11,11 @@ Binder Trace is a tool for intercepting and parsing Android Binder messages. Thi
 
 
 
+# Requirements
+
+python version >= 3.9
+
+
 # ⚙️ Installation
 
 You'll need a rooted Android device or emulator.
