@@ -185,7 +185,7 @@ class ParcelParser:
         if self.android_version >= 11:
             self.parse_field("Work Source UID", "uint32", self.readUint32, parent)
             self.parse_field("Version Header", "uint32", self.readUint32, parent)
-        elif constants.ANDROID_VERSION == 10:
+        elif self.android_version == 10:
             self.parse_field("Work Source UID", "uint32", self.readUint32, parent)
         self.parse_field("Token Descriptor", "string", self.readString16, parent)
         self.align4()
