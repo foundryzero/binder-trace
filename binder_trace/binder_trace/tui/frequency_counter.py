@@ -94,17 +94,17 @@ class FrequencyCounter:
         if idx != -1:
             self.svl[idx].frequency += 1
         else:
-            insort_left(
-                self.svl,
+            self.svl.append(
                 FrequencyRecord(
                     interface=record[0],
                     method=record[1],
                     frequency=1,
                     filter=FilterType.INCLUDE,
                     interface_total=self.interface_totals[record[0]],
-                ),
-                key=self.sort_key,
+                )
             )
+            self.svl.sort(key=self.sort_key)
+
 
     # Adding records to the selection view list in sorted order
     def add_record(self, record: tuple):
