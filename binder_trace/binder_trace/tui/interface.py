@@ -102,7 +102,7 @@ class UserInterface:
     def get_recording(self):
         return self.recording
 
-    def run(self):
+    def run(self, inputhook):
         self.focusable = [
             self.transaction_table,
             self.hexdump_pane,
@@ -312,7 +312,7 @@ class UserInterface:
         )
         app.before_render += self.check_resize
 
-        app.run()
+        app.run(inputhook=inputhook)
 
     def reload_frequency_pane(self):
         self.frequency_counter.svl.clear()
@@ -426,6 +426,4 @@ def start_ui(block_queue: queue.Queue, pause_unpause, config, config_path):
             else:
                 time.sleep(0.1)
 
-    set_eventloop_with_inputhook(inputhook=inputhook)
-
-    ui.run()
+    ui.run(inputhook)
