@@ -1,11 +1,17 @@
+# noqa
+
 # Due to time constraints, I was not able to finish this / make a nicer solution than this hacky override.
 # It mirrors:
 # https://cs.android.com/android/platform/superproject/+/android-11.0.0_r48:frameworks/base/core/java/android/content
 #   /ContentProviderNative.java
 
 
-def queryTransaction1():
-    c = {}
+from typing import Any, Dict
+
+
+def queryTransaction1() -> Dict[Any, Any]:
+    """queryTransaction1 override."""
+    c: Dict[Any, Any] = {}
     c["code"] = 1
     c["in"] = []
     c["in"].append({"callingPkg": "readString16"})
@@ -29,8 +35,8 @@ def queryTransaction1():
     return c
 
 
-def getTypeTransaction2():
-    c = {}
+def getTypeTransaction2() -> Dict[Any, Any]:  # noqa
+    c: Dict[Any, Any] = {}
     c["code"] = 2
     c["in"] = []
     c["out"] = []
@@ -39,8 +45,8 @@ def getTypeTransaction2():
     return c
 
 
-def insertTransaction3():
-    c = {}
+def insertTransaction3() -> Dict[Any, Any]:  # noqa
+    c: Dict[Any, Any] = {}
     c["code"] = 3
     c["in"] = []
     c["out"] = []
@@ -49,8 +55,8 @@ def insertTransaction3():
     return c
 
 
-def deleteTransaction4():
-    c = {}
+def deleteTransaction4() -> Dict[Any, Any]:  # noqa
+    c: Dict[Any, Any] = {}
     c["code"] = 4
     c["in"] = []
     c["out"] = []
@@ -59,8 +65,8 @@ def deleteTransaction4():
     return c
 
 
-def updateTransaction10():
-    c = {}
+def updateTransaction10() -> Dict[Any, Any]:  # noqa
+    c: Dict[Any, Any] = {}
     c["code"] = 10
     c["in"] = []
     c["out"] = []
@@ -69,8 +75,8 @@ def updateTransaction10():
     return c
 
 
-def bulkInsertTransaction13():
-    c = {}
+def bulkInsertTransaction13() -> Dict[Any, Any]:  # noqa
+    c: Dict[Any, Any] = {}
     c["code"] = 13
     c["in"] = []
     c["out"] = []
@@ -79,8 +85,8 @@ def bulkInsertTransaction13():
     return c
 
 
-def openFileTransaction14():
-    c = {}
+def openFileTransaction14() -> Dict[Any, Any]:  # noqa
+    c: Dict[Any, Any] = {}
     c["code"] = 14
     c["in"] = []
     c["out"] = []
@@ -89,8 +95,8 @@ def openFileTransaction14():
     return c
 
 
-def openAssetFileTransaction15():
-    c = {}
+def openAssetFileTransaction15() -> Dict[Any, Any]:  # noqa
+    c: Dict[Any, Any] = {}
     c["code"] = 15
     c["in"] = []
     c["out"] = []
@@ -99,8 +105,8 @@ def openAssetFileTransaction15():
     return c
 
 
-def applyBatchTransaction20():
-    c = {}
+def applyBatchTransaction20() -> Dict[Any, Any]:  # noqa
+    c: Dict[Any, Any] = {}
     c["code"] = 20
     c["in"] = []
     c["in"].append({"callingPkg": "readString16"})
@@ -120,8 +126,8 @@ def applyBatchTransaction20():
     return c
 
 
-def callTransaction21():
-    c = {}
+def callTransaction21() -> Dict[Any, Any]:  # noqa
+    c: Dict[Any, Any] = {}
     c["code"] = 21
     c["in"] = []
     c["in"].append({"callingPkg": "readString16"})
@@ -139,8 +145,8 @@ def callTransaction21():
     return c
 
 
-def getStreamTypesTransaction22():
-    c = {}
+def getStreamTypesTransaction22() -> Dict[Any, Any]:  # noqa
+    c: Dict[Any, Any] = {}
     c["code"] = 22
     c["in"] = []
     c["out"] = []
@@ -149,8 +155,8 @@ def getStreamTypesTransaction22():
     return c
 
 
-def openTypedAssetFileTransaction23():
-    c = {}
+def openTypedAssetFileTransaction23() -> Dict[Any, Any]:  # noqa
+    c: Dict[Any, Any] = {}
     c["code"] = 23
     c["in"] = []
     c["out"] = []
@@ -159,8 +165,8 @@ def openTypedAssetFileTransaction23():
     return c
 
 
-def createCancelationSignalTransaction24():
-    c = {}
+def createCancelationSignalTransaction24() -> Dict[Any, Any]:  # noqa
+    c: Dict[Any, Any] = {}
     c["code"] = 24
     c["in"] = []
     c["out"] = []
@@ -169,8 +175,8 @@ def createCancelationSignalTransaction24():
     return c
 
 
-def canonicalizeTransaction25():
-    c = {}
+def canonicalizeTransaction25() -> Dict[Any, Any]:  # noqa
+    c: Dict[Any, Any] = {}
     c["code"] = 25
     c["in"] = []
     c["out"] = []
@@ -179,8 +185,8 @@ def canonicalizeTransaction25():
     return c
 
 
-def uncanonicalizeTransaction26():
-    c = {}
+def uncanonicalizeTransaction26() -> Dict[Any, Any]:  # noqa
+    c: Dict[Any, Any] = {}
     c["code"] = 26
     c["in"] = []
     c["out"] = []
@@ -189,8 +195,8 @@ def uncanonicalizeTransaction26():
     return c
 
 
-def refreshTransaction27():
-    c = {}
+def refreshTransaction27() -> Dict[Any, Any]:  # noqa
+    c: Dict[Any, Any] = {}
     c["code"] = 27
     c["in"] = []
     c["out"] = []
@@ -199,8 +205,8 @@ def refreshTransaction27():
     return c
 
 
-def checkUriPermissionTransaction28():
-    c = {}
+def checkUriPermissionTransaction28() -> Dict[Any, Any]:  # noqa
+    c: Dict[Any, Any] = {}
     c["code"] = 28
     c["in"] = []
     c["out"] = []
@@ -209,8 +215,8 @@ def checkUriPermissionTransaction28():
     return c
 
 
-def asyncGetTypeTransaction29():
-    c = {}
+def asyncGetTypeTransaction29() -> Dict[Any, Any]:  # noqa
+    c: Dict[Any, Any] = {}
     c["code"] = 29
     c["in"] = []
     c["out"] = []
@@ -219,8 +225,8 @@ def asyncGetTypeTransaction29():
     return c
 
 
-def asyncCanonicalizeTransaction30():
-    c = {}
+def asyncCanonicalizeTransaction30() -> Dict[Any, Any]:  # noqa
+    c: Dict[Any, Any] = {}
     c["code"] = 30
     c["in"] = []
     c["out"] = []
@@ -229,8 +235,8 @@ def asyncCanonicalizeTransaction30():
     return c
 
 
-def asyncUncanonicalizeTransaction31():
-    c = {}
+def asyncUncanonicalizeTransaction31() -> Dict[Any, Any]:  # noqa
+    c: Dict[Any, Any] = {}
     c["code"] = 31
     c["in"] = []
     c["out"] = []
@@ -239,8 +245,8 @@ def asyncUncanonicalizeTransaction31():
     return c
 
 
-def getIContentProviderInterface():
-    interface = {}
+def getIContentProviderInterface() -> Dict[Any, Any]:  # noqa
+    interface: Dict[Any, Any] = {}
     interface["produced_on"] = ""
     interface["full_name"] = "android.content.IContentProvider"
     interface["name"] = "IContentProvider"

@@ -1,0 +1,83 @@
+name: F0 style checking
+run-name: Running style checks on ${{ github.ref_name }} following push by ${{ github.actor }}
+
+on: push
+jobs:
+  Check-isort:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: python-isort
+        uses: isort/isort-action@v1.1.0
+        with: 
+          configuration: "--check-only --profile black --diff --verbose"
+  # Check-mypy:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v3
+  #     - name: python-mypy
+  #       uses: jpetrucciani/mypy-check@master
+  #       with:
+  #         path: '.'
+  #         mypy_flags: '--config-file .mypy.ini'
+  Check-black:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: python-black
+        uses: psf/black@stable
+        with:
+          options: "--check --line-length=120"
+          src: "."
+  Check-flake8:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: flake8 Lint
+        uses: py-actions/flake8@v2
+        with:
+          max-line-length: "120"
+          path: "."
+          ignore: "E203,W503"
+  Check-pydocstyle:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: pydocstyle
+        uses: foundryzero/pydocstyle-action@v1.2.1
+        with:
+          path: "."
+  # Check-pylint:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v3
+  #     - name: pylint
+  #       uses: foundryzero/pylint-action@v1.0.6
+  #       with:
+  #         match: "binder_trace/**/*.py"
+  #         requirements_file: "binder_trace/requirements.txt"
+
+  Check-tox:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.9', '3.10', '3.11']
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        python -m pip install tox tox-gh-actions
+    - name: Test with tox
+      run: tox

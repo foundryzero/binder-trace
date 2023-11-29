@@ -1,3 +1,4 @@
+"""Hexdump Pane."""
 from typing import Optional
 
 import hexdump
@@ -5,14 +6,7 @@ import pyperclip
 from prompt_toolkit.filters import Condition
 from prompt_toolkit.formatted_text import FormattedText
 from prompt_toolkit.key_binding import KeyBindings
-from prompt_toolkit.layout import (
-    AnyContainer,
-    Dimension,
-    FormattedTextControl,
-    HSplit,
-    Window,
-)
-from prompt_toolkit.layout.dimension import AnyDimension
+from prompt_toolkit.layout import AnyContainer, Dimension, FormattedTextControl, HSplit, Window
 
 from binder_trace.tui import listing
 from binder_trace.tui.data_types import DisplayTransaction
@@ -21,9 +15,15 @@ from binder_trace.tui.widget.frame import SelectableFrame
 
 
 class HexdumpFrame:
-    def __init__(
-        self, transactions: SelectionViewList, fields: SelectionViewList, max_lines: int
-    ) -> None:
+    """The hexdump frame."""
+
+    def __init__(self, transactions: SelectionViewList, fields: SelectionViewList, max_lines: int) -> None:
+        """Intiailise HexdumpFrame.
+
+        :param transactions: Transactions.
+        :param fields: Fields
+        :param max_lines: Maximum number of lines to display
+        """
         self.transactions = transactions
         self.fields = fields
         self.max_lines = max_lines
@@ -41,6 +41,7 @@ class HexdumpFrame:
         )
 
     def key_bindings(self) -> KeyBindings:
+        """Key bindings."""
         kb = KeyBindings()
 
         @kb.add("up", filter=Condition(lambda: self.activated))
@@ -83,27 +84,34 @@ class HexdumpFrame:
 
     @property
     def activated(self) -> bool:
+        """Get activated flag."""
         return self.container.activated
 
     @activated.setter
     def activated(self, value: bool):
+        """Set activated flag.
+
+        :param value: Flag value
+        """
         self.container.activated = value
 
     def copy_to_clipboard(self):
+        """Copy selected transaction text to the clipboard."""
         if self.transactions.selection_valid():
-            pyperclip.copy(
-                hexdump.hexdump(self.transactions.selected().raw_data, "return")
-            )
+            pyperclip.copy(hexdump.hexdump(self.transactions.selected().raw_data, "return"))
 
     def max_data_line_count(self):
+        """Get the maxmium number of lines that will fit in the frame."""
         data_len = len(self.transactions.selected().raw_data)
         return data_len // 16 + 1
 
     def update_content(self, _, offset=0):
+        """Update frame content."""
         self.offset = offset
         self.container.body = self.get_content()
 
     def update_content_and_jump_to_selection(self, _):
+        """Update the hexdump content and jumps the select to the selected location."""
         position = self.selected_field_position()
         offset = 0
         if position:
@@ -126,15 +134,14 @@ class HexdumpFrame:
         self.update_content(_, offset)
 
     def get_content(self) -> AnyContainer:
+        """Get the content of the hexdump."""
         return HSplit(
             children=[
                 Window(
                     ignore_content_height=True,
                     content=FormattedTextControl(
                         text=self.to_hexdump(
-                            self.transactions.selected()
-                            if self.transactions.selection_valid()
-                            else None
+                            self.transactions.selected() if self.transactions.selection_valid() else None
                         )
                     ),
                 ),
@@ -142,13 +149,15 @@ class HexdumpFrame:
         )
 
     def selected_field_position(self):
-        return (
-            self.fields.selected().field.field.position or None
-            if self.fields.selection_valid()
-            else None
-        )
+        """Get the position that is selected."""
+        return self.fields.selected().field.field.position or None if self.fields.selection_valid() else None
 
     def to_hexdump(self, transaction: Optional[DisplayTransaction]) -> FormattedText:
+        """Generate the hexdump from the transaction.
+
+        :param transaction: The transaction to dump
+        :return: The hexdump text.
+        """
         position = self.selected_field_position()
         selection = self.fields.selected().field.position() if position else []
 
@@ -160,4 +169,5 @@ class HexdumpFrame:
         )
 
     def __pt_container__(self) -> AnyContainer:
+        """Get internal container."""
         return self.container

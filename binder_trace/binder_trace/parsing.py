@@ -1,12 +1,15 @@
+"""Parsing functionality."""
 import functools
 import logging
 import traceback
+from typing import Any, Dict, Optional
 
 import binder_trace.overrides
 from binder_trace import loggers
 from binder_trace.parcel import ParcelParser
 from binder_trace.parsedParcel import Block, Direction, Field, FieldData
 from binder_trace.parseerror import ParseError
+from binder_trace.structure import StructureStore
 
 log = logging.getLogger(loggers.LOG)
 parsing_log = logging.getLogger(loggers.PARSING_LOG)
@@ -19,9 +22,9 @@ and cannot store state.
 frameNumber = -1
 
 
-def on_message(struct_store, message, data, android_version):
+def on_message(struct_store: StructureStore, message: Any, data: Any, android_version: int) -> Optional[Block]:
     """
-    Decodes and parses a binder parcel, and writes it to the block_queue, archiver, and logger if present.
+    Decode and parses a binder parcel, and writes it to the block_queue, archiver, and logger if present.
 
     Args:
         message: A dict containing a 'payload' key, which is a string of the form:
@@ -33,8 +36,6 @@ def on_message(struct_store, message, data, android_version):
 
         data: A bytes[] object containing the data of the intercepted parcel
     """
-    # import debugpy
-    # debugpy.debug_this_thread()
     if data is None:
         # TODO: Work out why data is sometimes None here.
         return None
@@ -63,9 +64,8 @@ def on_message(struct_store, message, data, android_version):
     return block
 
 
-def on_message_out(struct_store, parcel: ParcelParser, code, descriptor):
-    """
-    Attempts to parse a reply parcel with the specified code and interface.
+def on_message_out(struct_store: StructureStore, parcel: ParcelParser, code: Any, descriptor: Any) -> Optional[Block]:
+    """Attempt to parse a reply parcel with the specified code and interface.
 
     Args:
         p: The parcel to read the data from
@@ -108,9 +108,8 @@ def on_message_out(struct_store, parcel: ParcelParser, code, descriptor):
     return block
 
 
-def on_message_in(struct_store, parcel: ParcelParser, code):
-    """
-    Attempts to parse a call parcel with the specified code.
+def on_message_in(struct_store: StructureStore, parcel: ParcelParser, code: Any) -> Optional[Block]:
+    """Attempt to parse a call parcel with the specified code.
 
     Args:
         parcel: The parcel to read the data from
@@ -156,7 +155,14 @@ def on_message_in(struct_store, parcel: ParcelParser, code):
     return block
 
 
-def parse_parcel_type(definition, parcel, parent):
+def parse_parcel_type(definition: Dict[Any, Any], parcel: ParcelParser, parent: Field) -> Optional[Field]:
+    """Parse the type of a given parcel.
+
+    :param definition: Definition of the parcel
+    :param parcel: The parcel
+    :param parent: The parcel's parent
+    :return: The pracel type
+    """
     parcelType = definition["__parcelType"]
 
     # TODO: Update structure so this is a named field we don't have to search for.
@@ -164,14 +170,21 @@ def parse_parcel_type(definition, parcel, parent):
 
     if definition[name] == "readParcelable":
         if binder_trace.overrides.parcelableHasOverride(parcelType):
-            return binder_trace.overrides.parcelableOverride(parcel, parcelType, name, parent)
+            binder_trace.overrides.parcelableOverride(parcel, parcelType, name, parent)
+            return None
         retval = parcel.parse_field(name, "", functools.partial(parcel.readParcelable, parcelType), parent)
     else:
         retval = parcel.parse_field(name, "", functools.partial(parcel.readParcelableVector, parcelType), parent)
     return retval
 
 
-def parse_generic_type(definition, parcel, parent):
+def parse_generic_type(definition: Dict[Any, Any], parcel: ParcelParser, parent: Field):
+    """Parse the generic type from a parcel.
+
+    :param definition: _description_
+    :param parcel: The parcel
+    :param parent: The parcel's parent
+    """
     type = definition["__type"]
 
     # TODO: Update structure so this is a named field we don't have to search for.
@@ -179,7 +192,14 @@ def parse_generic_type(definition, parcel, parent):
     parcel.parse_field(name, f"List<{type}>", parcel.readList, parent)
 
 
-def parse_value_from_definition(definition, parcel, parent):
+def parse_value_from_definition(definition: Dict[Any, Any], parcel: ParcelParser, parent: Field):
+    """Parse a value from a parcel.
+
+    :param definition: The definition of the parcel
+    :param parcel: The parse to parse it from
+    :param parent: The parcel's parent
+    :return: The parsed value
+    """
     # This is expected to be a simple value definition like:
     #   {"effectType": "readInt32"},
     #   {"volume": "readFloat"}
@@ -190,7 +210,15 @@ def parse_value_from_definition(definition, parcel, parent):
     return parcel.parse_field(name, "", reader, parent)
 
 
-def parse_conditional(definition, parcel: ParcelParser, parent: Field):
+def parse_conditional(definition: Dict[Any, Any], parcel: ParcelParser, parent: Field):
+    """Parse a conditional out of a parcel.
+
+    :param definition: The parcel definition
+    :param parcel: The parcel to parse
+    :param parent: The parcel's parent
+    :raises ParseError: raised if a backreference cannot be found.
+    :return: The conditional
+    """
     conditional = definition["__conditional"]
     backreference = definition["__backreference"]
 
@@ -215,7 +243,14 @@ def parse_conditional(definition, parcel: ParcelParser, parent: Field):
     conditional_field.position = FieldData(startPos, parcel.pos)
 
 
-def parse_repeated_value(definition, parcel: ParcelParser, parent_field: Field):
+def parse_repeated_value(definition: Dict[Any, Any], parcel: ParcelParser, parent_field: Field):
+    """Parse out a list of values.
+
+    :param definition: The parcel definition
+    :param parcel: The parcel to parse
+    :param parent_field: The parcel's parent
+    :raises ParseError: raised on parsing error
+    """
     repeated = definition["__repeated"]
     backreference = definition["__backreference"]
 
@@ -237,9 +272,10 @@ def parse_repeated_value(definition, parcel: ParcelParser, parent_field: Field):
             parse(var, parcel, parent_field)
 
 
-def parse(definition, parcel: ParcelParser, parent: Field) -> None:
+def parse(definition: Dict[Any, Any], parcel: ParcelParser, parent: Field) -> None:
     """
-    Parses a single element of a parcel.
+    Parse a single element of a parcel.
+
     Args:
         definition: A dict containing the definition of the value to parse.
         parcel: The parcel to read data from.
@@ -269,7 +305,8 @@ def parse(definition, parcel: ParcelParser, parent: Field) -> None:
         parse_value_from_definition(definition, parcel, parent)
 
 
-def get_call(struct, code):
+def get_call(struct: Any, code: Any) -> Any:
+    """Get the call element of a parcelable."""
     call = next((c for c in struct["calls"] if c["code"] == code), None)
     if not call:
         raise Exception(f"Call {code} not found in interface {struct['full_name']}")
@@ -278,7 +315,7 @@ def get_call(struct, code):
 
 def read_interface_output(call, parcel: ParcelParser, parent: Field) -> None:
     """
-    Reads and parses the output of an IPC call from a REPLY parcel.
+    Read and parse the output of an IPC call from a REPLY parcel.
 
     Args:
         call: The structure object for the call.
@@ -298,7 +335,7 @@ def read_interface_output(call, parcel: ParcelParser, parent: Field) -> None:
 
 def read_interface_input(call, parcel: ParcelParser, parent: Field) -> None:
     """
-    Reads and parses the input to an IPC call from a TRANSACTION parcel.
+    Read and parse the input to an IPC call from a TRANSACTION parcel.
 
     Args:
         call: The structure object for the call.

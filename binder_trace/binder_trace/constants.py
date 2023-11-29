@@ -1,6 +1,4 @@
-"""
-Constants used by android throughout the binder subsystem.
-"""
+"""Constants used by android throughout the binder subsystem."""
 
 EX_HAS_NOTED_APPOPS_REPLY_HEADER = -127
 EX_HAS_STRICTMODE_REPLY_HEADER = -128
@@ -62,7 +60,8 @@ URI_HIERARCHICAL_TYPE_ID = 3
 
 class BlobType:
     """
-    Represents the type of Blob used in Parcel.readBlob
+    Represent the type of Blob used in Parcel.readBlob.
+
     We can't access ashmem from here, so the only one that really matters is BLOB_INPLACE
     """
 
@@ -73,7 +72,8 @@ class BlobType:
 
 class SpanType:
     """
-    Represents the type of span in a CharSequence.
+    Represent the type of span in a CharSequence.
+
     New span types must be added here and implemented in the override for TextUtils / CharSequence in overrides.py
     """
 

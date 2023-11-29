@@ -1,3 +1,4 @@
+"""Filters pane."""
 from prompt_toolkit.key_binding import KeyBindings
 from prompt_toolkit.key_binding.bindings.focus import focus_next, focus_previous
 from prompt_toolkit.layout import AnyContainer, HSplit, VerticalAlign, VSplit
@@ -7,7 +8,10 @@ from binder_trace.tui.filter import Filter
 
 
 class TypeCheckboxlist(CheckboxList):
+    """Filter type checkbox list."""
+
     def __init__(self) -> None:
+        """Initialize TypeCheckboxlist."""
         values = [
             ("call", "call"),
             ("return", "return"),
@@ -20,7 +24,10 @@ class TypeCheckboxlist(CheckboxList):
 
 
 class FiltersPanel:
+    """Panel to displaying and modifying filters."""
+
     def __init__(self) -> None:
+        """Initialise FiltersPanel."""
         self.visible = False
 
         self.interface_textarea = TextArea(multiline=False, style="class:dialog.textarea")
@@ -65,6 +72,10 @@ class FiltersPanel:
         )
 
     def filter(self) -> Filter:
+        """Retrieve the filter.
+
+        :return: The filter.
+        """
         return Filter(
             self.interface_textarea.text,
             self.method_textarea.text,
@@ -73,4 +84,8 @@ class FiltersPanel:
         )
 
     def __pt_container__(self) -> AnyContainer:
+        """Get the internal container.
+
+        :return: The internal container.
+        """
         return self.container

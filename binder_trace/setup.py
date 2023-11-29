@@ -1,3 +1,5 @@
+"""binder-trace package setup.py."""
+
 import os
 
 from setuptools import find_packages, setup
@@ -15,11 +17,11 @@ setup(
     install_requires=required,
     packages=find_packages(),
     include_package_data=True,
-    package_data={'binder_trace': ['structs/**/*.struct', 'js/interceptbinder.js']},
+    package_data={"binder_trace": ["structs/**/*.struct", "js/interceptbinder.js"]},
     version="{{VERSION_PLACEHOLDER}}",
-    author='Foundry Zero',
-    author_email='info@foundryzero.co.uk',
-    url='https://github.com/foundryzero/binder-trace',
+    author="Foundry Zero",
+    author_email="info@foundryzero.co.uk",
+    url="https://github.com/foundryzero/binder-trace",
     classifiers=[
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",

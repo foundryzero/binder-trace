@@ -1,6 +1,7 @@
+"""Structure encapsulation."""
+
 import pyperclip
 from prompt_toolkit.filters import Condition
-from prompt_toolkit.formatted_text import HTML, FormattedText
 from prompt_toolkit.key_binding import KeyBindings
 from prompt_toolkit.layout import AnyContainer, FormattedTextControl, HSplit, Window
 from prompt_toolkit.widgets import Label
@@ -11,7 +12,14 @@ from binder_trace.tui.widget.frame import SelectableFrame
 
 
 class StructureFrame:
+    """StructureFrame."""
+
     def __init__(self, transactions: SelectionViewList, max_height: int) -> None:
+        """Initialise a StructureFrame.
+
+        :param transactions: The transactions to visualise.
+        :param max_height: The maximum number of transactions in the frame.
+        """
         self.transactions = transactions
         self.transactions.on_selection_change += self.update_content
 
@@ -26,6 +34,10 @@ class StructureFrame:
         )
 
     def key_bindings(self) -> KeyBindings:
+        """Key bindings for the frame.
+
+        :return: The key bindings.
+        """
         kb = KeyBindings()
 
         @kb.add("up", filter=Condition(lambda: self.activated))
@@ -50,21 +62,25 @@ class StructureFrame:
 
         @kb.add("end", filter=Condition(lambda: self.activated))
         def _(event):
-            self.field_selection.move_selection(
-                len(self.field_selection) - self.field_selection.selection
-            )
+            self.field_selection.move_selection(len(self.field_selection) - self.field_selection.selection)
 
         return kb
 
     @property
     def activated(self) -> bool:
+        """Get activated flag."""
         return self.container.activated
 
     @activated.setter
     def activated(self, value: bool):
+        """Set activated flag.
+
+        :param value: Flag value
+        """
         self.container.activated = value
 
     def copy_to_clipboard(self):
+        """Copy selected structure text to the clipboard."""
         if self.transactions.selection_valid():
             t = self.transactions.selected()
             lines = [f"{t.interface}::{t.method} ({t.type()})"]
@@ -75,30 +91,31 @@ class StructureFrame:
 
     @property
     def max_height(self) -> int:
+        """Get the max height."""
         return self._max_height
 
     @max_height.setter
     def max_height(self, value: int):
+        """Set the max height.
+
+        :param value: Max height
+        """
         self._max_height = value
         self.field_selection.resize_view(value - 1)
 
     def update_content(self, _):
-        transaction = (
-            self.transactions.selected()
-            if self.transactions.selection_valid()
-            else None
-        )
+        """Update the content of the structure pane."""
+        transaction = self.transactions.selected() if self.transactions.selection_valid() else None
 
         indented_field = (
-            listing.FieldFactory().traverse(transaction.fields)
-            if transaction and transaction.fields
-            else []
+            listing.FieldFactory().traverse(transaction.fields) if transaction and transaction.fields else []
         )
 
         self.field_selection.assign(indented_field)
         self.container.body = self.get_content()
 
     def get_content(self) -> AnyContainer:
+        """Get the content of the structure pane."""
         children = []
         if self.transactions.selection_valid():
             t = self.transactions.selected()
@@ -120,9 +137,7 @@ class StructureFrame:
                 if self.activated and i == self.field_selection.selection
                 else "class:field.default"
             )
-            self.field_selection[i].field.display(
-                selected=self.activated and i == self.field_selection.selection
-            )
+            self.field_selection[i].field.display(selected=self.activated and i == self.field_selection.selection)
 
             info = self.field_selection[i].field.display(
                 selected=self.activated and i == self.field_selection.selection,
@@ -142,4 +157,5 @@ class StructureFrame:
         return HSplit(children=children)
 
     def __pt_container__(self) -> AnyContainer:
+        """Get internal container."""
         return self.container

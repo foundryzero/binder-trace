@@ -1,7 +1,8 @@
+"""Frequency frame UI."""
 import csv
-import hashlib
 import io
 import logging
+from typing import Any
 
 import pyperclip
 
@@ -9,19 +10,29 @@ import pyperclip
 from prompt_toolkit.filters import Condition
 from prompt_toolkit.key_binding import KeyBindings
 from prompt_toolkit.layout import AnyContainer, Dimension
+from prompt_toolkit.widgets import Label
 
 # Importing additional modules and classes from the binder_trace package
 from binder_trace import loggers
 from binder_trace.tui import table
+from binder_trace.tui.data_types import DisplayTransaction
 from binder_trace.tui.frequency_counter import FilterType, FrequencyCounter, FrequencyRecord
-from binder_trace.tui.interface import DisplayTransaction
+from binder_trace.tui.selection import SelectionViewList
 from binder_trace.tui.widget.frame import SelectableFrame
 
 log = logging.getLogger(loggers.LOG)
 
+
 # Define a class named FrequencyFrame
 class FrequencyFrame:
-    def __init__(self, frequency_counter: FrequencyCounter, transactions: DisplayTransaction):
+    """FrequencyFrame UI element."""
+
+    def __init__(self, frequency_counter: FrequencyCounter, transactions: SelectionViewList[Any]):
+        """Initialise FrequencyFrame.
+
+        :param frequency_counter: Counter helper
+        :param transactions: SelectionViewList of transactions
+        """
         self.transactions = transactions
         self.frequency_counter = frequency_counter
         self.frequency_counter.svl.on_update_event += self.update_table
@@ -29,9 +40,9 @@ class FrequencyFrame:
 
         # Headings for the frequency frame
         self.headings = [
-            table.Label("Interface/Method"),
-            table.Label("Frequency"),
-            table.Label("Filter"),
+            Label("Interface/Method"),
+            Label("Frequency"),
+            Label("Filter"),
         ]
 
         # Defining the table where the frequency data will be displayed
@@ -56,16 +67,28 @@ class FrequencyFrame:
             width=Dimension(preferred=60, max=70),
         )
 
-    def resize(self, height: int):
+    def resize(self, height: int) -> None:
+        """Resize the header row.
+
+        :param height: The height to resize.
+        """
         # Subtract one for the header row
         height -= 1
         self.frequency_counter.svl.resize_view(height)
 
     # Define a method to get the content of the FrequencyFrame
-    def get_content(self):
+    def get_content(self) -> table.Table:
+        """Get the content of the FrequencyFrame.
+
+        :return: FrequencyFrame table
+        """
         return self.table
 
-    def jump_interface_selection(self, reverse: bool):
+    def jump_interface_selection(self, reverse: bool) -> None:
+        """Move selection within the interface.
+
+        :param reverse: Whether the direction should be reversed.
+        """
         # Store the current selection in a variable for comparison later
         self.selection = self.frequency_counter.svl[self.frequency_counter.svl.selection]
 
@@ -93,16 +116,25 @@ class FrequencyFrame:
         self.transactions.selection = indices[self.direction]
         self.cache = self.selection
 
-    def matches_selection(self, transaction: DisplayTransaction):
+    def matches_selection(self, transaction: DisplayTransaction) -> bool:
+        """Check if a transaction matches the selected filter.
+
+        :param transaction: The transaction to check against the filter.
+        :return: True if the transaction matches the filter (taking INCLUDE / EXCLUDE mode into account)
+        """
+        result: bool = False
         if self.selection.filter == FilterType.INCLUDE and self.selection.interface == transaction.interface:
             if self.selection.method:
-                return transaction.method == self.selection.method
+                result = transaction.method == self.selection.method
             else:
-                return True
-        else:
-            return False
+                result = True
+        return result
 
-    def update_table(self, _):
+    def update_table(self, _) -> None:
+        """Update the frequency table.
+
+        :param _: Unused
+        """
         self.table.children.clear()
         self.table.add_row(self.headings, "class:frequency_counter.heading", id(self.headings))
         # Only showing the part of the selection view list that can be seen on the UI
@@ -121,17 +153,19 @@ class FrequencyFrame:
             )
         self.pad_table()
 
-    def pad_table(self):
+    def pad_table(self) -> None:
+        """Pad the table."""
         padding = self.frequency_counter.svl.max_view_size - self.frequency_counter.svl.view.size()
         empty_row = [
-            table.Label(""),
-            table.Label(""),
-            table.Label(""),
+            Label(""),
+            Label(""),
+            Label(""),
         ]
         for _ in range(padding):
             self.table.add_row(empty_row, "class:frequency_counter.default", id(empty_row))
 
     def key_bindings(self) -> KeyBindings:
+        """Key bindings."""
         kb = KeyBindings()
 
         @kb.add("up", filter=Condition(lambda: self.activated))
@@ -181,6 +215,7 @@ class FrequencyFrame:
         return kb
 
     def copy_to_clipboard(self):
+        """Key bindings."""
         if self.frequency_counter.svl.selection_valid():
             output = io.StringIO()
             writer = csv.writer(output, quoting=csv.QUOTE_NONE)
@@ -190,6 +225,11 @@ class FrequencyFrame:
             pyperclip.copy(output.getvalue())
 
     def _to_row(self, selection: FrequencyRecord):
+        """Create a row from a transaction.
+
+        :param transaction: The transaction
+        :return: The row
+        """
         # TODO: Cache the rows so we don't need to recreate them.
         # Checking which style to use for the interface and method
         if not selection.method:
@@ -200,24 +240,31 @@ class FrequencyFrame:
             style = "class:frequency_counter.method"
         # Returning the interface or method, frequency, filter with its value and the style of the row
         return [
-            table.Label(label),
-            table.Label(str(selection.frequency)),
-            table.Label("[-]" if selection.filter == FilterType.EXCLUDE else "[+]"),
+            Label(label),
+            Label(str(selection.frequency)),
+            Label("[-]" if selection.filter == FilterType.EXCLUDE else "[+]"),
         ], style
 
     # Define a property 'activated' to get the activation status of the container
     @property
     def activated(self) -> bool:
+        """Get activated flag."""
         return self.container.activated
 
     # Define a setter for the 'activated' property
     @activated.setter
     def activated(self, value: bool):
+        """Set activated flag.
+
+        :param value: Flag value
+        """
         self.container.activated = value
 
     def max_data_line_count(self):
+        """Get maximum number of lines for frame."""
         return len(self.frequency_counter.svl)
 
     # Define a special method to return the container
     def __pt_container__(self) -> AnyContainer:
+        """Get internal container."""
         return self.container

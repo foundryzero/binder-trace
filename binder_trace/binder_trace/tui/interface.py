@@ -1,3 +1,5 @@
+"""The TUI Interface."""
+
 import json
 import logging
 import os
@@ -7,7 +9,7 @@ from typing import Optional
 
 from prompt_toolkit import Application
 from prompt_toolkit.application import get_app
-from prompt_toolkit.eventloop.inputhook import InputHookContext, set_eventloop_with_inputhook
+from prompt_toolkit.eventloop.inputhook import InputHookContext
 from prompt_toolkit.filters import Condition
 from prompt_toolkit.formatted_text import StyleAndTextTuples
 from prompt_toolkit.key_binding import KeyBindings, merge_key_bindings
@@ -53,19 +55,34 @@ class DummyControl(UIControl):
     """
 
     def create_content(self, width: int, height: int) -> UIContent:
+        """Create the dummy control content.
+
+        :param width: Unused.
+        :param height: Unused.
+        :return: The dummy content.
+        """
+
         def get_line(i: int) -> StyleAndTextTuples:
             return []
 
-        return UIContent(
-            get_line=get_line, line_count=100**100
-        )  # Something very big.
+        return UIContent(get_line=get_line, line_count=100**100)  # Something very big.
 
     def is_focusable(self) -> bool:
+        """Get the focusable status. (Always true)."""
         return True
 
 
 class UserInterface:
+    """The User Interface encapsulation."""
+
     def __init__(self, input_queue, pause_unpause, config, config_path):
+        """Initialise the user interface.
+
+        :param input_queue: The queue of input to display
+        :param pause_unpause: The pause/unpause capture function
+        :param config: The configuration to use in the User Interface
+        :param config_path: The path to configuration file
+        """
         self.filter: Optional[Filter] = None
         self.input_queue = input_queue
         self.all_transactions = []
@@ -73,15 +90,12 @@ class UserInterface:
         self.filter_panel = FiltersPanel()
         self.help_panel = HelpPanel()
         self.config_path = config_path
-        # TODO: These SVLs should probably be owned by the widgets that control them. This would make it easier to determine heights etc.
+        # TODO: These SVLs should probably be owned by the widgets that control them.
+        # This would make it easier to determine heights etc.
         self.transactions = SelectionViewList([], max_view_size=1)
-        self.transaction_table = TransactionFrame(
-            self.transactions, self.frequency_counter
-        )
+        self.transaction_table = TransactionFrame(self.transactions, self.frequency_counter)
         self.structure_pane = StructureFrame(self.transactions, 1)
-        self.hexdump_pane = HexdumpFrame(
-            self.transactions, self.structure_pane.field_selection, 1
-        )
+        self.hexdump_pane = HexdumpFrame(self.transactions, self.structure_pane.field_selection, 1)
         self.frequency_pane = FrequencyFrame(self.frequency_counter, self.transactions)
         self.pause_unpause = pause_unpause
         self.recording = True
@@ -90,19 +104,24 @@ class UserInterface:
         self.resize_components(os.get_terminal_size())
 
     def assign_frequency_filters(self):
+        """Assign frequency filters to transactions."""
         self.transactions.assign(
             [
                 t
                 for t in self.all_transactions
-                if self.frequency_counter.check_frequency_filters(t)
-                and self.passes_config_filters(t)
+                if self.frequency_counter.check_frequency_filters(t) and self.passes_config_filters(t)
             ]
         )
 
     def get_recording(self):
+        """Get the flag to indicate whether binder transactions are currently being captured.
+
+        :return: The recording status flag.
+        """
         return self.recording
 
     def run(self, inputhook):
+        """Start the main TUI."""
         self.focusable = [
             self.transaction_table,
             self.hexdump_pane,
@@ -122,11 +141,7 @@ class UserInterface:
 
         @kb1.add("tab")
         def _(event):
-            self.focus_index = (
-                len(self.focusable) - 1
-                if self.focus_index == 0
-                else self.focus_index - 1
-            )
+            self.focus_index = len(self.focusable) - 1 if self.focus_index == 0 else self.focus_index - 1
             for i, f in enumerate(self.focusable):
                 f.activated = i == self.focus_index
 
@@ -135,7 +150,7 @@ class UserInterface:
         def _(event):
             self.transactions.clear()
             self.frequency_counter.svl.clear()
-            
+
         @kb1.add("space")
         def _(event):
             self.recording = self.pause_unpause()
@@ -179,15 +194,11 @@ class UserInterface:
                 floats=[
                     Float(
                         top=10,
-                        content=ConditionalContainer(
-                            content=self.filter_panel, filter=show_filters
-                        ),
+                        content=ConditionalContainer(content=self.filter_panel, filter=show_filters),
                     ),
                     Float(
                         top=10,
-                        content=ConditionalContainer(
-                            content=self.help_panel, filter=show_help
-                        ),
+                        content=ConditionalContainer(content=self.help_panel, filter=show_help),
                     ),
                 ],
             )
@@ -256,20 +267,14 @@ class UserInterface:
                 self.filter = self.filter_panel.filter()
 
                 self.transactions.assign(
-                    [
-                        t
-                        for t in self.all_transactions
-                        if self.filter.passes(t) and self.passes_config_filters(t)
-                    ]
+                    [t for t in self.all_transactions if self.filter.passes(t) and self.passes_config_filters(t)]
                 )
 
                 get_app().layout.focus(dummy_control)
 
         @kb.add(
             "enter",
-            filter=Condition(
-                lambda: self.frequency_pane.activated and not show_filters()
-            ),
+            filter=Condition(lambda: self.frequency_pane.activated and not show_filters()),
         )
         def _(event):
             with self.frequency_counter.svl.on_update_event.suspended():
@@ -315,11 +320,13 @@ class UserInterface:
         app.run(inputhook=inputhook)
 
     def reload_frequency_pane(self):
+        """Reload the frequency pane."""
         self.frequency_counter.svl.clear()
         for block in self.transactions:
             self.frequency_counter.add_record((block.interface, block.method))
 
     def reload_config(self) -> list[Filter]:
+        """Reload the configuration."""
         if self.config_path:
             if not os.path.exists(self.config_path):
                 print("Config path not found.")
@@ -332,11 +339,16 @@ class UserInterface:
         self.reload_frequency_pane()
 
     def check_resize(self, _):
+        """Check the size of components fit with the terminal size and resize if not."""
         new_dimensions = os.get_terminal_size()
         if self.dimensions != new_dimensions:
             self.resize_components(new_dimensions)
 
     def resize_components(self, dimensions):
+        """Resize the components to fit in the given dimensions.
+
+        :param dimensions: The dimensions to git the TUI into.
+        """
         self.dimensions = dimensions
         _, height = dimensions
 
@@ -357,6 +369,7 @@ class UserInterface:
         self.hexdump_pane.max_lines = lower_panels_height
 
     def get_available_blocks(self):
+        """Get the next 10 transactio blocks to visualise."""
         blocks: list[Block] = []
         # Retrieve every unhandled block currently available in the queue
         try:
@@ -367,6 +380,7 @@ class UserInterface:
         return blocks
 
     def passes_config_filters(self, block: DisplayTransaction) -> bool:
+        """Check a given transaction block passes all active filters."""
         allowed = True
         filters = []
 
@@ -388,6 +402,7 @@ class UserInterface:
         return allowed
 
     def process_data(self):
+        """Process the current tranche of transaction blocks."""
         blocks = self.get_available_blocks()
         # For every block...
         for block in blocks:
@@ -407,14 +422,11 @@ class UserInterface:
 
 def start_ui(block_queue: queue.Queue, pause_unpause, config, config_path):
     """
-    Starts and runs the TUI, with the main event loop.
+    Start and run the TUI, with the main event loop.
 
     args:
         message_queue:
         block_queue:
-
-    Returns:
-
     """
     # Create the UIDisplay with a given display filter
     ui = UserInterface(block_queue, pause_unpause, config, config_path)

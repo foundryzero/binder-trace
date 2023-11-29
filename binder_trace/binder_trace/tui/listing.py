@@ -1,3 +1,5 @@
+"""TUI Listing classes."""
+
 import logging
 from dataclasses import dataclass, field
 from typing import List, Optional, Tuple
@@ -13,57 +15,104 @@ log = logging.getLogger(loggers.LOG)
 
 @dataclass
 class IndentedField:
+    """Indented Field."""
+
     level: int
     field: Field
 
 
 class DisplayField:
+    """Display Field."""
+
     def __init__(self, field) -> None:
+        """Initialise DisplayField.
+
+        :param field: The field to display.
+        """
         self.field = field
 
     # Returns display string format
     def display(self, selected=False, indent=0) -> str:
-        value = (
-            self.field.content
-            if not isinstance(self.field.content, list)
-            else self.field.typename
-        )
+        """Return the field to display.
+
+        :param selected: If the field is currently selected (currently unused), defaults to False
+        :param indent: The indentation of the field, defaults to 0
+        :return: The formatted display content.
+        """
+        value = self.field.content if not isinstance(self.field.content, list) else self.field.typename
 
         return f"{indent*' '}{self.field.name}: {value}"
 
-    # Returns hexdump positions
     def position(self):
+        """Get hexdump positions.
+
+        :return: hexdump positions
+        """
         return [(self.field.position, "class:hexdump.selected")]
 
-    # Says which children to be shown on new lines
     def children(self):
+        """Retrieve children for new lines.
+
+        :return: The children field content.
+        """
         return self.field.content if isinstance(self.field.content, list) else []
 
 
 class ErrorDisplayField(DisplayField):
+    """Error Display Field."""
+
     def __init__(self, field) -> None:
+        """Initalise the ErrorDisplayField.
+
+        :param field: The field.
+        """
         super().__init__(field)
 
 
 class StringDisplayField(DisplayField):
+    """String Display Field.
+
+    :param DisplayField: DisplayField superclass
+    """
+
     def __init__(self, field) -> None:
+        """Initalise the StringDisplayField.
+
+        :param field: The field.
+        """
         super().__init__(field)
         self.is_list = isinstance(self.field.content, list) and len(self.field.content) == 2
 
-    # Returns display string format
     def display(self, selected=False, indent=0) -> str:
+        """Get the display string format.
+
+        :param selected: Whether a field is selected, defaults to False
+        :param indent: The level of indent to use in the display, defaults to 0
+        :return: The content to display
+        """
         if self.is_list:
             if selected:
                 return HTML(
-                    f"{indent*' '}{self.field.name}: String<hexdump.string_length> ({self.field.content[0].content})</hexdump.string_length><hexdump.string_value> {self.field.content[1].content}</hexdump.string_value>"
+                    (
+                        f"{indent*' '}{self.field.name}: String<hexdump.string_length> "
+                        f"({self.field.content[0].content})"
+                        f"</hexdump.string_length><hexdump.string_value> {self.field.content[1].content}"
+                        "</hexdump.string_value>"
+                    )
                 )
             else:
                 log.debug(self.field)
-                return f"{indent*' '}{self.field.name}: String ({self.field.content[0].content}) {self.field.content[1].content}"
+                return (
+                    f"{indent*' '}{self.field.name}: String ({self.field.content[0].content})"
+                    " {self.field.content[1].content}"
+                )
         return f"{indent*' '}{self.field.name}: String ({self.field.content})"
 
-    # Returns hexdump positions
     def position(self):
+        """Get hexdump positions.
+
+        :return: hexdump positions
+        """
         if self.is_list:
             return [
                 (self.field.content[0].position, "class:hexdump.string_length"),
@@ -71,26 +120,33 @@ class StringDisplayField(DisplayField):
             ]
         return [(self.field.position, "class:hexdump.default")]
 
-    # Says which children to be shown on new lines
     def children(self):
+        """Get the children to be shown on new lines.
+
+        :return: The children (always empty)
+        """
         return []
 
 
-"""
-Converts the Field class into a DisplayField type class to return values such as string format to display, 
-positions for hexdump and a choice of what children to show
-"""
-
-
 class FieldFactory:
+    """
+    Convert the Field class into a DisplayField type class to return values such as string format to display.
+
+    Then positions for hexdump and a choice of what children to show
+    """
+
     DisplayClass = [
         (lambda f: f.typename == "error", ErrorDisplayField),
         (lambda f: f.typename == "string", StringDisplayField),
         (lambda f: True, DisplayField),
     ]
 
-    # Checks which type of DisplayField class is to be used
     def get_display_class(self, field: Field):
+        """Check which type of DisplayField class is to be used.
+
+        :param field: The display field to check
+        :return: The display field
+        """
         for check, display_class in self.DisplayClass:
             if check(field):
                 return display_class(field)
@@ -98,6 +154,12 @@ class FieldFactory:
 
     # Finds all the children (content) of a field
     def traverse(self, field: Field, level=0) -> list[DisplayField]:
+        """Find all the children (content) of a field.
+
+        :param field: The field to traverse
+        :param level: the level to traverse to, defaults to 0
+        :return: The child fields
+        """
         display_field = self.get_display_class(field)
         ret = [IndentedField(level, display_field)]
 
@@ -108,24 +170,32 @@ class FieldFactory:
 
 @dataclass
 class StyleRun:
+    """Style class."""
+
     style: str
     hex_fragments: list[str] = field(default_factory=list)
     asci_fragments: list[str] = field(default_factory=list)
 
     def hex(self):
+        """Append the style to hex fragments."""
         return (self.style, "".join(self.hex_fragments))
 
     def asci(self):
+        """Append the style to ascii fragments."""
         return (self.style, "".join(self.asci_fragments))
 
 
-def to_hexdump(
-    buf: bytes, default_style: str, selections: List[Tuple[FieldData, str]], offset=0
-) -> FormattedText:
+def to_hexdump(buf: bytes, default_style: str, selections: List[Tuple[FieldData, str]], offset=0) -> FormattedText:
+    """Convert bytes to a hex representation.
+
+    :param buf: The bytes to convert.
+    :param default_style: The style to prepend.
+    :param selections: The fields that are selected.
+    :param offset: The offset into the byte data, defaults to 0
+    :return: The formatted hex dump.
+    """
     # Map each byte to its class, then collapse consecutive strings of same type
-    selection_style_map = RangeDict(
-        {Range(s.start, s.end): style for s, style in selections}
-    )
+    selection_style_map = RangeDict({Range(s.start, s.end): style for s, style in selections})
 
     current: Optional[StyleRun] = None
     line_numbers: list[tuple[str, str]] = []
