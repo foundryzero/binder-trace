@@ -1,0 +1,67 @@
+{
+    "produced_on": "2023-11-06T14:36:48.740851693Z",
+    "source_location": "",
+    "full_name": "android.location.IGnssStatusListener",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "onGnssStarted",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "onGnssStopped",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"ttff": "readInt32"}],
+            "name": "onFirstFix",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"svCount": "readInt32"},
+                {"svidWithFlags": "readInt32Vector"},
+                {
+                    "cn0s": "readParcelableVector",
+                    "__parcelType": "android.location.float"
+                },
+                {
+                    "elevations": "readParcelableVector",
+                    "__parcelType": "android.location.float"
+                },
+                {
+                    "azimuths": "readParcelableVector",
+                    "__parcelType": "android.location.float"
+                },
+                {
+                    "carrierFreqs": "readParcelableVector",
+                    "__parcelType": "android.location.float"
+                }
+            ],
+            "name": "onSvStatusChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"timestamp": "readInt64"},
+                {"nmea": "readString16"}
+            ],
+            "name": "onNmeaReceived",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IGnssStatusListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

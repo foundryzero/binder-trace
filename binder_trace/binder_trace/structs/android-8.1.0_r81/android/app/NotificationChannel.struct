@@ -1,0 +1,57 @@
+{
+    "produced_on": "2023-11-06T15:08:08.756112957Z",
+    "source_location": "",
+    "components": [
+        {"nullcheck": "readByte"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{"mId": "readString16"}]
+        },
+        {"nullcheck": "readByte"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{"mName": "readString16"}]
+        },
+        {"nullcheck": "readByte"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{"mDesc": "readString16"}]
+        },
+        {"mImportance": "readInt32"},
+        {"mBypassDnd": "readByte"},
+        {"mLockscreenVisibility": "readInt32"},
+        {"nullcheck": "readByte"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "mSound": "readParcelable",
+                "__parcelType": "android.net.Uri"
+            }]
+        },
+        {"mLights": "readByte"},
+        {"mVibration": "readInt64Vector"},
+        {"mUserLockedFields": "readInt32"},
+        {"mVibrationEnabled": "readByte"},
+        {"mShowBadge": "readByte"},
+        {"mDeleted": "readByte"},
+        {"nullcheck": "readByte"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{"mGroup": "readString16"}]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "createFromParcel": "readParcelable",
+                "__parcelType": "android.media.AudioAttributes"
+            }]
+        },
+        {"mLightColor": "readInt32"},
+        {"mBlockableSystem": "readBool"}
+    ],
+    "full_name": "android.app.NotificationChannel",
+    "name": "NotificationChannel",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

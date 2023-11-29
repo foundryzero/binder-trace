@@ -1,0 +1,130 @@
+{
+    "produced_on": "2023-11-06T14:36:47.909085090Z",
+    "source_location": "",
+    "full_name": "android.app.usage.IUsageStatsManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"bucketType": "readInt32"},
+                {"beginTime": "readInt64"},
+                {"endTime": "readInt64"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "queryUsageStats",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.ParceledListSlice"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"bucketType": "readInt32"},
+                {"beginTime": "readInt64"},
+                {"endTime": "readInt64"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "queryConfigurationStats",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.ParceledListSlice"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"beginTime": "readInt64"},
+                {"endTime": "readInt64"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "queryEvents",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.app.usage.UsageEvents"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"packageName": "readString16"},
+                {"inactive": "readBool"},
+                {"userId": "readInt32"}
+            ],
+            "name": "setAppInactive",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "isAppInactive",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"packageName": "readString16"},
+                {"duration": "readInt64"},
+                {"userId": "readInt32"}
+            ],
+            "name": "whitelistAppTemporarily",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "onCarrierPrivilegedAppsChanged",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"},
+                {"contentType": "readString16"},
+                {"annotations": "readString16Vector"},
+                {"action": "readString16"}
+            ],
+            "name": "reportChooserSelection",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IUsageStatsManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,45 @@
+{
+    "produced_on": "2023-11-06T14:36:48.196317550Z",
+    "source_location": "",
+    "full_name": "android.hardware.radio.IRadioService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "listModules",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.hardware.radio.RadioManager.ModuleProperties"
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"moduleId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "bandConfig": "readParcelable",
+                        "__parcelType": "android.hardware.radio.RadioManager.BandConfig"
+                    }]
+                },
+                {"withAudio": "readBool"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "openTuner",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        }
+    ],
+    "name": "IRadioService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

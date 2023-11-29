@@ -1,0 +1,35 @@
+{
+    "produced_on": "2023-11-06T14:36:48.233571697Z",
+    "source_location": "",
+    "full_name": "android.net.INetdEventCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"hostname": "readString16"},
+                {"ipAddresses": "readString16Vector"},
+                {"ipAddressesCount": "readInt32"},
+                {"timestamp": "readInt64"},
+                {"uid": "readInt32"}
+            ],
+            "name": "onDnsEvent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"ipAddr": "readString16"},
+                {"port": "readInt32"},
+                {"timestamp": "readInt64"},
+                {"uid": "readInt32"}
+            ],
+            "name": "onConnectEvent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "INetdEventCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

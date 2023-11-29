@@ -1,0 +1,161 @@
+{
+    "produced_on": "2023-11-06T14:36:47.906808773Z",
+    "source_location": "",
+    "full_name": "android.app.usage.IStorageStatsManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"volumeUuid": "readString16"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "isQuotaSupported",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"volumeUuid": "readString16"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "getTotalBytes",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"volumeUuid": "readString16"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "getFreeBytes",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"volumeUuid": "readString16"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "getCacheBytes",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"volumeUuid": "readString16"},
+                {"uid": "readInt32"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "getCacheQuotaBytes",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"volumeUuid": "readString16"},
+                {"packageName": "readString16"},
+                {"userId": "readInt32"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "queryStatsForPackage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.app.usage.StorageStats"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"volumeUuid": "readString16"},
+                {"uid": "readInt32"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "queryStatsForUid",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.app.usage.StorageStats"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"volumeUuid": "readString16"},
+                {"userId": "readInt32"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "queryStatsForUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.app.usage.StorageStats"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"volumeUuid": "readString16"},
+                {"userId": "readInt32"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "queryExternalStatsForUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.app.usage.ExternalStorageStats"
+                    }]
+                }
+            ]
+        }
+    ],
+    "name": "IStorageStatsManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

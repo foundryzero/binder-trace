@@ -1,0 +1,99 @@
+{
+    "produced_on": "2023-11-06T14:36:48.618079571Z",
+    "source_location": "",
+    "full_name": "com.android.internal.app.IMediaContainerService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"packagePath": "readString16"},
+                {"containerId": "readString16"},
+                {"key": "readString16"},
+                {"isExternal": "readBool"},
+                {"isForwardLocked": "readBool"},
+                {"abiOverride": "readString16"}
+            ],
+            "name": "copyPackageToContainer",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"packagePath": "readString16"},
+                {"target": "readStrongBinder"}
+            ],
+            "name": "copyPackage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"packagePath": "readString16"},
+                {"flags": "readInt32"},
+                {"abiOverride": "readString16"}
+            ],
+            "name": "getMinimalPackageInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.PackageInfoLite"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"filename": "readString16"}],
+            "name": "getObbInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.res.ObbInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"directory": "readString16"}],
+            "name": "clearDirectory",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"packagePath": "readString16"},
+                {"isForwardLocked": "readBool"},
+                {"abiOverride": "readString16"}
+            ],
+            "name": "calculateInstalledSize",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        }
+    ],
+    "name": "IMediaContainerService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

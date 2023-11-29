@@ -1,0 +1,30 @@
+{
+    "produced_on": "2023-11-06T14:36:48.505105876Z",
+    "source_location": "",
+    "full_name": "android.service.wallpaper.IWallpaperService",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"connection": "readStrongBinder"},
+            {"windowToken": "readStrongBinder"},
+            {"windowType": "readInt32"},
+            {"isPreview": "readBool"},
+            {"reqWidth": "readInt32"},
+            {"reqHeight": "readInt32"},
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "padding": "readParcelable",
+                    "__parcelType": "android.graphics.Rect"
+                }]
+            }
+        ],
+        "name": "attach",
+        "oneWay": true,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "IWallpaperService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

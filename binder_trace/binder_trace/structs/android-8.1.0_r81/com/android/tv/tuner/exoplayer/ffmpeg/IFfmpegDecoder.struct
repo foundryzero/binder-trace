@@ -1,0 +1,85 @@
+{
+    "produced_on": "2023-11-06T14:36:49.191544798Z",
+    "source_location": "",
+    "full_name": "com.android.tv.tuner.exoplayer.ffmpeg.IFfmpegDecoder",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "isAvailable",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "create",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "release",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"mimetype": "readString16"}],
+            "name": "resetDecoderState",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"timeUs": "readInt64"},
+                {"sample": "readByteVector"}
+            ],
+            "name": "decode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "getDecodedSample",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "getDecodedTimeUs",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "testSandboxIsolatedProcess",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [],
+            "name": "testSandboxMinijail",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IFfmpegDecoder",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

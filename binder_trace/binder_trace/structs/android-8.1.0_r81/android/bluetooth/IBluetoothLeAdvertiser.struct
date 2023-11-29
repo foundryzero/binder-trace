@@ -1,0 +1,80 @@
+{
+    "produced_on": "2023-11-06T14:36:49.332863876Z",
+    "source_location": "",
+    "full_name": "android.bluetooth.IBluetoothLeAdvertiser",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "RegisterAdvertiser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"advertiser_id": "readInt32"}],
+            "name": "UnregisterAdvertiser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "UnregisterAll",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"advertiser_id": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "advertise_data": "readParcelable",
+                        "__parcelType": "android.bluetooth.AdvertiseData"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "scan_response": "readParcelable",
+                        "__parcelType": "android.bluetooth.AdvertiseData"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "settings": "readParcelable",
+                        "__parcelType": "android.bluetooth.AdvertiseSettings"
+                    }]
+                }
+            ],
+            "name": "StartMultiAdvertising",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"advertiser_id": "readInt32"}],
+            "name": "StopMultiAdvertising",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "IBluetoothLeAdvertiser",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,35 @@
+{
+    "produced_on": "2023-11-06T14:36:49.298819672Z",
+    "source_location": "",
+    "full_name": "android.brillo.brilloaudioservice.IAudioServiceCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"added_devices": "readInt32Vector"}],
+            "name": "OnAudioDevicesConnected",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"removed_devices": "readInt32Vector"}],
+            "name": "OnAudioDevicesDisconnected",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"stream_type": "readInt32"},
+                {"old_volume_index": "readInt32"},
+                {"new_volume_index": "readInt32"}
+            ],
+            "name": "OnVolumeChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IAudioServiceCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

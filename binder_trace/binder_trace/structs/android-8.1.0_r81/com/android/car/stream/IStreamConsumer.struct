@@ -1,0 +1,58 @@
+{
+    "produced_on": "2023-11-06T14:36:49.174801060Z",
+    "source_location": "",
+    "full_name": "com.android.car.stream.IStreamConsumer",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "card": "readParcelable",
+                        "__parcelType": "com.android.car.stream.StreamCard"
+                    }]
+                }
+            ],
+            "name": "onStreamCardAdded",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "card": "readParcelable",
+                        "__parcelType": "com.android.car.stream.StreamCard"
+                    }]
+                }
+            ],
+            "name": "onStreamCardRemoved",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "newStreamCard": "readParcelable",
+                        "__parcelType": "com.android.car.stream.StreamCard"
+                    }]
+                }
+            ],
+            "name": "onStreamCardChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IStreamConsumer",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

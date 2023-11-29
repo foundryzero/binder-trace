@@ -1,0 +1,519 @@
+{
+    "produced_on": "2023-11-06T14:36:48.970819910Z",
+    "source_location": "",
+    "full_name": "com.android.ims.internal.IImsCallSessionListener",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"session": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "profile": "readParcelable",
+                        "__parcelType": "com.android.ims.ImsStreamMediaProfile"
+                    }]
+                }
+            ],
+            "name": "callSessionProgressing",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"session": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "profile": "readParcelable",
+                        "__parcelType": "com.android.ims.ImsCallProfile"
+                    }]
+                }
+            ],
+            "name": "callSessionStarted",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"session": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "reasonInfo": "readParcelable",
+                        "__parcelType": "com.android.ims.ImsReasonInfo"
+                    }]
+                }
+            ],
+            "name": "callSessionStartFailed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"session": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "reasonInfo": "readParcelable",
+                        "__parcelType": "com.android.ims.ImsReasonInfo"
+                    }]
+                }
+            ],
+            "name": "callSessionTerminated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"session": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "profile": "readParcelable",
+                        "__parcelType": "com.android.ims.ImsCallProfile"
+                    }]
+                }
+            ],
+            "name": "callSessionHeld",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"session": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "reasonInfo": "readParcelable",
+                        "__parcelType": "com.android.ims.ImsReasonInfo"
+                    }]
+                }
+            ],
+            "name": "callSessionHoldFailed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"session": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "profile": "readParcelable",
+                        "__parcelType": "com.android.ims.ImsCallProfile"
+                    }]
+                }
+            ],
+            "name": "callSessionHoldReceived",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"session": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "profile": "readParcelable",
+                        "__parcelType": "com.android.ims.ImsCallProfile"
+                    }]
+                }
+            ],
+            "name": "callSessionResumed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"session": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "reasonInfo": "readParcelable",
+                        "__parcelType": "com.android.ims.ImsReasonInfo"
+                    }]
+                }
+            ],
+            "name": "callSessionResumeFailed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"session": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "profile": "readParcelable",
+                        "__parcelType": "com.android.ims.ImsCallProfile"
+                    }]
+                }
+            ],
+            "name": "callSessionResumeReceived",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"session": "readStrongBinder"},
+                {"newSession": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "profile": "readParcelable",
+                        "__parcelType": "com.android.ims.ImsCallProfile"
+                    }]
+                }
+            ],
+            "name": "callSessionMergeStarted",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [{"session": "readStrongBinder"}],
+            "name": "callSessionMergeComplete",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"session": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "reasonInfo": "readParcelable",
+                        "__parcelType": "com.android.ims.ImsReasonInfo"
+                    }]
+                }
+            ],
+            "name": "callSessionMergeFailed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"session": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "profile": "readParcelable",
+                        "__parcelType": "com.android.ims.ImsCallProfile"
+                    }]
+                }
+            ],
+            "name": "callSessionUpdated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"session": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "reasonInfo": "readParcelable",
+                        "__parcelType": "com.android.ims.ImsReasonInfo"
+                    }]
+                }
+            ],
+            "name": "callSessionUpdateFailed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [
+                {"session": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "profile": "readParcelable",
+                        "__parcelType": "com.android.ims.ImsCallProfile"
+                    }]
+                }
+            ],
+            "name": "callSessionUpdateReceived",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [
+                {"session": "readStrongBinder"},
+                {"newSession": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "profile": "readParcelable",
+                        "__parcelType": "com.android.ims.ImsCallProfile"
+                    }]
+                }
+            ],
+            "name": "callSessionConferenceExtended",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"session": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "reasonInfo": "readParcelable",
+                        "__parcelType": "com.android.ims.ImsReasonInfo"
+                    }]
+                }
+            ],
+            "name": "callSessionConferenceExtendFailed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 19,
+            "in": [
+                {"session": "readStrongBinder"},
+                {"newSession": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "profile": "readParcelable",
+                        "__parcelType": "com.android.ims.ImsCallProfile"
+                    }]
+                }
+            ],
+            "name": "callSessionConferenceExtendReceived",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 20,
+            "in": [{"session": "readStrongBinder"}],
+            "name": "callSessionInviteParticipantsRequestDelivered",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 21,
+            "in": [
+                {"session": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "reasonInfo": "readParcelable",
+                        "__parcelType": "com.android.ims.ImsReasonInfo"
+                    }]
+                }
+            ],
+            "name": "callSessionInviteParticipantsRequestFailed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 22,
+            "in": [{"session": "readStrongBinder"}],
+            "name": "callSessionRemoveParticipantsRequestDelivered",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 23,
+            "in": [
+                {"session": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "reasonInfo": "readParcelable",
+                        "__parcelType": "com.android.ims.ImsReasonInfo"
+                    }]
+                }
+            ],
+            "name": "callSessionRemoveParticipantsRequestFailed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 24,
+            "in": [
+                {"session": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "state": "readParcelable",
+                        "__parcelType": "com.android.ims.ImsConferenceState"
+                    }]
+                }
+            ],
+            "name": "callSessionConferenceStateUpdated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 25,
+            "in": [
+                {"session": "readStrongBinder"},
+                {"mode": "readInt32"},
+                {"ussdMessage": "readString16"}
+            ],
+            "name": "callSessionUssdMessageReceived",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 26,
+            "in": [
+                {"session": "readStrongBinder"},
+                {"srcAccessTech": "readInt32"},
+                {"targetAccessTech": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "reasonInfo": "readParcelable",
+                        "__parcelType": "com.android.ims.ImsReasonInfo"
+                    }]
+                }
+            ],
+            "name": "callSessionHandover",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 27,
+            "in": [
+                {"session": "readStrongBinder"},
+                {"srcAccessTech": "readInt32"},
+                {"targetAccessTech": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "reasonInfo": "readParcelable",
+                        "__parcelType": "com.android.ims.ImsReasonInfo"
+                    }]
+                }
+            ],
+            "name": "callSessionHandoverFailed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 28,
+            "in": [
+                {"session": "readStrongBinder"},
+                {"srcAccessTech": "readInt32"},
+                {"targetAccessTech": "readInt32"}
+            ],
+            "name": "callSessionMayHandover",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 29,
+            "in": [
+                {"session": "readStrongBinder"},
+                {"mode": "readInt32"}
+            ],
+            "name": "callSessionTtyModeReceived",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 30,
+            "in": [
+                {"session": "readStrongBinder"},
+                {"isMultiParty": "readBool"}
+            ],
+            "name": "callSessionMultipartyStateChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 31,
+            "in": [
+                {"session": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "suppSrvNotification": "readParcelable",
+                        "__parcelType": "com.android.ims.ImsSuppServiceNotification"
+                    }]
+                }
+            ],
+            "name": "callSessionSuppServiceReceived",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 32,
+            "in": [
+                {"session": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callProfile": "readParcelable",
+                        "__parcelType": "com.android.ims.ImsCallProfile"
+                    }]
+                }
+            ],
+            "name": "callSessionRttModifyRequestReceived",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 33,
+            "in": [{"status": "readInt32"}],
+            "name": "callSessionRttModifyResponseReceived",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 34,
+            "in": [{"rttMessage": "readString16"}],
+            "name": "callSessionRttMessageReceived",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IImsCallSessionListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

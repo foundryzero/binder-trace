@@ -1,0 +1,44 @@
+{
+    "produced_on": "2023-11-06T14:36:48.237317417Z",
+    "source_location": "",
+    "full_name": "android.net.INetworkPolicyListener",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"uid": "readInt32"},
+                {"uidRules": "readInt32"}
+            ],
+            "name": "onUidRulesChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"meteredIfaces": "readString16Vector"}],
+            "name": "onMeteredIfacesChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"restrictBackground": "readBool"}],
+            "name": "onRestrictBackgroundChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"uid": "readInt32"},
+                {"uidPolicies": "readInt32"}
+            ],
+            "name": "onUidPoliciesChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "INetworkPolicyListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

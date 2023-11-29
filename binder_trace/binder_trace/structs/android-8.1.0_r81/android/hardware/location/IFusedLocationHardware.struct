@@ -1,0 +1,133 @@
+{
+    "produced_on": "2023-11-06T14:36:48.187179645Z",
+    "source_location": "",
+    "full_name": "android.hardware.location.IFusedLocationHardware",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"eventSink": "readStrongBinder"}],
+            "name": "registerSink",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"eventSink": "readStrongBinder"}],
+            "name": "unregisterSink",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getSupportedBatchSize",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"id": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "batchOptions": "readParcelable",
+                        "__parcelType": "android.location.FusedBatchOptions"
+                    }]
+                }
+            ],
+            "name": "startBatching",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"id": "readInt32"}],
+            "name": "stopBatching",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"id": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "batchOptions": "readParcelable",
+                        "__parcelType": "android.location.FusedBatchOptions"
+                    }]
+                }
+            ],
+            "name": "updateBatchingOptions",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"batchSizeRequested": "readInt32"}],
+            "name": "requestBatchOfLocations",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "supportsDiagnosticDataInjection",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [{"data": "readString16"}],
+            "name": "injectDiagnosticData",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [],
+            "name": "supportsDeviceContextInjection",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [{"deviceEnabledContext": "readInt32"}],
+            "name": "injectDeviceContext",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [],
+            "name": "flushBatchedLocations",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [],
+            "name": "getVersion",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        }
+    ],
+    "name": "IFusedLocationHardware",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

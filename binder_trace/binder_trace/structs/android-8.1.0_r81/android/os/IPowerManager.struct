@@ -1,0 +1,306 @@
+{
+    "produced_on": "2023-11-06T14:36:48.329295286Z",
+    "source_location": "",
+    "full_name": "android.os.IPowerManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"lock": "readStrongBinder"},
+                {"flags": "readInt32"},
+                {"tag": "readString16"},
+                {"packageName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "ws": "readParcelable",
+                        "__parcelType": "android.os.WorkSource"
+                    }]
+                },
+                {"historyTag": "readString16"}
+            ],
+            "name": "acquireWakeLock",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"lock": "readStrongBinder"},
+                {"flags": "readInt32"},
+                {"tag": "readString16"},
+                {"packageName": "readString16"},
+                {"uidtoblame": "readInt32"}
+            ],
+            "name": "acquireWakeLockWithUid",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"lock": "readStrongBinder"},
+                {"flags": "readInt32"}
+            ],
+            "name": "releaseWakeLock",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"lock": "readStrongBinder"},
+                {"uids": "readInt32Vector"}
+            ],
+            "name": "updateWakeLockUids",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"hintId": "readInt32"},
+                {"data": "readInt32"}
+            ],
+            "name": "powerHint",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"lock": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "ws": "readParcelable",
+                        "__parcelType": "android.os.WorkSource"
+                    }]
+                },
+                {"historyTag": "readString16"}
+            ],
+            "name": "updateWakeLockWorkSource",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"level": "readInt32"}],
+            "name": "isWakeLockLevelSupported",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"time": "readInt64"},
+                {"event": "readInt32"},
+                {"flags": "readInt32"}
+            ],
+            "name": "userActivity",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"time": "readInt64"},
+                {"reason": "readString16"},
+                {"opPackageName": "readString16"}
+            ],
+            "name": "wakeUp",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"time": "readInt64"},
+                {"reason": "readInt32"},
+                {"flags": "readInt32"}
+            ],
+            "name": "goToSleep",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [{"time": "readInt64"}],
+            "name": "nap",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [],
+            "name": "isInteractive",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [],
+            "name": "isPowerSaveMode",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 14,
+            "in": [{"serviceType": "readInt32"}],
+            "name": "getPowerSaveState",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.os.PowerSaveState"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 15,
+            "in": [{"mode": "readBool"}],
+            "name": "setPowerSaveMode",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 16,
+            "in": [],
+            "name": "isDeviceIdleMode",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 17,
+            "in": [],
+            "name": "isLightDeviceIdleMode",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"confirm": "readBool"},
+                {"reason": "readString16"},
+                {"wait": "readBool"}
+            ],
+            "name": "reboot",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 19,
+            "in": [
+                {"confirm": "readBool"},
+                {"wait": "readBool"}
+            ],
+            "name": "rebootSafeMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 20,
+            "in": [
+                {"confirm": "readBool"},
+                {"reason": "readString16"},
+                {"wait": "readBool"}
+            ],
+            "name": "shutdown",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 21,
+            "in": [{"message": "readString16"}],
+            "name": "crash",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 22,
+            "in": [],
+            "name": "getLastShutdownReason",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 23,
+            "in": [{"val": "readInt32"}],
+            "name": "setStayOnSetting",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 24,
+            "in": [{"time": "readInt64"}],
+            "name": "boostScreenBrightness",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 25,
+            "in": [],
+            "name": "isScreenBrightnessBoosted",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 26,
+            "in": [{"brightness": "readInt32"}],
+            "name": "setTemporaryScreenBrightnessSettingOverride",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 27,
+            "in": [{"adj": "readFloat"}],
+            "name": "setTemporaryScreenAutoBrightnessAdjustmentSettingOverride",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 28,
+            "in": [
+                {"on": "readBool"},
+                {"color": "readInt32"}
+            ],
+            "name": "setAttentionLight",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IPowerManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,30 @@
+{
+    "produced_on": "2023-11-06T14:36:49.319710316Z",
+    "source_location": "",
+    "full_name": "android.trunks.ITrunks",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"command": "readByteVector"},
+                {"client": "readStrongBinder"}
+            ],
+            "name": "SendCommand",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"command": "readByteVector"}],
+            "name": "SendCommandAndWait",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        }
+    ],
+    "name": "ITrunks",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

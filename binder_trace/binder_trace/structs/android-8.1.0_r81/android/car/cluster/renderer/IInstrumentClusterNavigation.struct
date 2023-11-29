@@ -1,0 +1,95 @@
+{
+    "produced_on": "2023-11-06T14:36:49.216496296Z",
+    "source_location": "",
+    "full_name": "android.car.cluster.renderer.IInstrumentClusterNavigation",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "onStartNavigation",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "onStopNavigation",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"event": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "eventName": "readParcelable",
+                        "__parcelType": "CharSequence"
+                    }]
+                },
+                {"turnAngle": "readInt32"},
+                {"turnNumber": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "image": "readParcelable",
+                        "__parcelType": "android.graphics.Bitmap"
+                    }]
+                },
+                {"turnSide": "readInt32"}
+            ],
+            "name": "onNextManeuverChanged",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"distanceMeters": "readInt32"},
+                {"timeSeconds": "readInt32"},
+                {"displayDistanceMillis": "readInt32"},
+                {"displayDistanceUnit": "readInt32"}
+            ],
+            "name": "onNextManeuverDistanceChanged",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"eventType": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"bundle": "readBundle"}]
+                }
+            ],
+            "name": "onEvent",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "getInstrumentClusterInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.car.navigation.CarNavigationInstrumentCluster"
+                    }]
+                }
+            ]
+        }
+    ],
+    "name": "IInstrumentClusterNavigation",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

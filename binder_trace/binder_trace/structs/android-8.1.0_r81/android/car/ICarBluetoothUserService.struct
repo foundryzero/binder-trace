@@ -1,0 +1,69 @@
+{
+    "produced_on": "2023-11-06T14:36:49.203393367Z",
+    "source_location": "",
+    "full_name": "android.car.ICarBluetoothUserService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "setupBluetoothConnectionProxy",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "closeBluetoothConnectionProxy",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"profile": "readInt32"}],
+            "name": "isBluetoothConnectionProxyAvailable",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"profile": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "device": "readParcelable",
+                        "__parcelType": "android.bluetooth.BluetoothDevice"
+                    }]
+                }
+            ],
+            "name": "bluetoothConnectToProfile",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"profile": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "device": "readParcelable",
+                        "__parcelType": "android.bluetooth.BluetoothDevice"
+                    }]
+                },
+                {"priority": "readInt32"}
+            ],
+            "name": "setProfilePriority",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICarBluetoothUserService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

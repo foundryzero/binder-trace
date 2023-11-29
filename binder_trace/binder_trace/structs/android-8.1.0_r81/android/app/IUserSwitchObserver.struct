@@ -1,0 +1,41 @@
+{
+    "produced_on": "2023-11-06T14:36:47.792294333Z",
+    "source_location": "",
+    "full_name": "android.app.IUserSwitchObserver",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"newUserId": "readInt32"},
+                {"reply": "readStrongBinder"}
+            ],
+            "name": "onUserSwitching",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"newUserId": "readInt32"}],
+            "name": "onUserSwitchComplete",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"newProfileId": "readInt32"}],
+            "name": "onForegroundProfileSwitch",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"newUserId": "readInt32"}],
+            "name": "onLockedBootComplete",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IUserSwitchObserver",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

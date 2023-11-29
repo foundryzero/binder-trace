@@ -1,0 +1,183 @@
+{
+    "produced_on": "2023-11-06T14:36:48.065902616Z",
+    "source_location": "",
+    "full_name": "android.content.pm.IPackageInstaller",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "params": "readParcelable",
+                        "__parcelType": "android.content.pm.PackageInstaller.SessionParams"
+                    }]
+                },
+                {"installerPackageName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "createSession",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"sessionId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "appIcon": "readParcelable",
+                        "__parcelType": "android.graphics.Bitmap"
+                    }]
+                }
+            ],
+            "name": "updateSessionAppIcon",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"sessionId": "readInt32"},
+                {"appLabel": "readString16"}
+            ],
+            "name": "updateSessionAppLabel",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"sessionId": "readInt32"}],
+            "name": "abandonSession",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"sessionId": "readInt32"}],
+            "name": "openSession",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [{"sessionId": "readInt32"}],
+            "name": "getSessionInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.PackageInstaller.SessionInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 7,
+            "in": [{"userId": "readInt32"}],
+            "name": "getAllSessions",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.ParceledListSlice"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"installerPackageName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "getMySessions",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.ParceledListSlice"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"callback": "readStrongBinder"},
+                {"userId": "readInt32"}
+            ],
+            "name": "registerCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "unregisterCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "versionedPackage": "readParcelable",
+                        "__parcelType": "android.content.pm.VersionedPackage"
+                    }]
+                },
+                {"callerPackageName": "readString16"},
+                {"flags": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "statusReceiver": "readParcelable",
+                        "__parcelType": "android.content.IntentSender"
+                    }]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "uninstall",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"sessionId": "readInt32"},
+                {"accepted": "readBool"}
+            ],
+            "name": "setPermissionsResult",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IPackageInstaller",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

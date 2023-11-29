@@ -1,0 +1,834 @@
+{
+    "produced_on": "2023-11-06T14:36:48.787220315Z",
+    "source_location": "",
+    "full_name": "android.media.IAudioService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"direction": "readInt32"},
+                {"suggestedStreamType": "readInt32"},
+                {"flags": "readInt32"},
+                {"callingPackage": "readString16"},
+                {"caller": "readString16"}
+            ],
+            "name": "adjustSuggestedStreamVolume",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"streamType": "readInt32"},
+                {"direction": "readInt32"},
+                {"flags": "readInt32"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "adjustStreamVolume",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"streamType": "readInt32"},
+                {"index": "readInt32"},
+                {"flags": "readInt32"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "setStreamVolume",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"streamType": "readInt32"}],
+            "name": "isStreamMute",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"startForcing": "readBool"},
+                {"cb": "readStrongBinder"}
+            ],
+            "name": "forceRemoteSubmixFullVolume",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "isMasterMute",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"mute": "readBool"},
+                {"flags": "readInt32"},
+                {"callingPackage": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "setMasterMute",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{"streamType": "readInt32"}],
+            "name": "getStreamVolume",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [{"streamType": "readInt32"}],
+            "name": "getStreamMinVolume",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [{"streamType": "readInt32"}],
+            "name": "getStreamMaxVolume",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [{"streamType": "readInt32"}],
+            "name": "getLastAudibleStreamVolume",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"on": "readBool"},
+                {"callingPackage": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "setMicrophoneMute",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"ringerMode": "readInt32"},
+                {"caller": "readString16"}
+            ],
+            "name": "setRingerModeExternal",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"ringerMode": "readInt32"},
+                {"caller": "readString16"}
+            ],
+            "name": "setRingerModeInternal",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [],
+            "name": "getRingerModeExternal",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 16,
+            "in": [],
+            "name": "getRingerModeInternal",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 17,
+            "in": [{"ringerMode": "readInt32"}],
+            "name": "isValidRingerMode",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"vibrateType": "readInt32"},
+                {"vibrateSetting": "readInt32"}
+            ],
+            "name": "setVibrateSetting",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 19,
+            "in": [{"vibrateType": "readInt32"}],
+            "name": "getVibrateSetting",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 20,
+            "in": [{"vibrateType": "readInt32"}],
+            "name": "shouldVibrate",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 21,
+            "in": [
+                {"mode": "readInt32"},
+                {"cb": "readStrongBinder"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "setMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 22,
+            "in": [],
+            "name": "getMode",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 23,
+            "in": [{"effectType": "readInt32"}],
+            "name": "playSoundEffect",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 24,
+            "in": [
+                {"effectType": "readInt32"},
+                {"volume": "readFloat"}
+            ],
+            "name": "playSoundEffectVolume",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 25,
+            "in": [],
+            "name": "loadSoundEffects",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 26,
+            "in": [],
+            "name": "unloadSoundEffects",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 27,
+            "in": [],
+            "name": "reloadAudioSettings",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 28,
+            "in": [
+                {"address": "readString16"},
+                {"support": "readBool"}
+            ],
+            "name": "avrcpSupportsAbsoluteVolume",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 29,
+            "in": [{"on": "readBool"}],
+            "name": "setSpeakerphoneOn",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 30,
+            "in": [],
+            "name": "isSpeakerphoneOn",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 31,
+            "in": [{"on": "readBool"}],
+            "name": "setBluetoothScoOn",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 32,
+            "in": [],
+            "name": "isBluetoothScoOn",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 33,
+            "in": [{"on": "readBool"}],
+            "name": "setBluetoothA2dpOn",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 34,
+            "in": [],
+            "name": "isBluetoothA2dpOn",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 35,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "aa": "readParcelable",
+                        "__parcelType": "android.media.AudioAttributes"
+                    }]
+                },
+                {"durationHint": "readInt32"},
+                {"cb": "readStrongBinder"},
+                {"fd": "readStrongBinder"},
+                {"clientId": "readString16"},
+                {"callingPackageName": "readString16"},
+                {"flags": "readInt32"},
+                {"pcb": "readStrongBinder"},
+                {"sdk": "readInt32"}
+            ],
+            "name": "requestAudioFocus",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 36,
+            "in": [
+                {"fd": "readStrongBinder"},
+                {"clientId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "aa": "readParcelable",
+                        "__parcelType": "android.media.AudioAttributes"
+                    }]
+                },
+                {"callingPackageName": "readString16"}
+            ],
+            "name": "abandonAudioFocus",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 37,
+            "in": [{"clientId": "readString16"}],
+            "name": "unregisterAudioFocusClient",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 38,
+            "in": [],
+            "name": "getCurrentAudioFocus",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 39,
+            "in": [
+                {"cb": "readStrongBinder"},
+                {"targetSdkVersion": "readInt32"}
+            ],
+            "name": "startBluetoothSco",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 40,
+            "in": [{"cb": "readStrongBinder"}],
+            "name": "startBluetoothScoVirtualCall",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 41,
+            "in": [{"cb": "readStrongBinder"}],
+            "name": "stopBluetoothSco",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 42,
+            "in": [
+                {"streamType": "readInt32"},
+                {"cb": "readStrongBinder"}
+            ],
+            "name": "forceVolumeControlStream",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 43,
+            "in": [{"player": "readStrongBinder"}],
+            "name": "setRingtonePlayer",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 44,
+            "in": [],
+            "name": "getRingtonePlayer",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 45,
+            "in": [],
+            "name": "getUiSoundsStreamType",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 46,
+            "in": [
+                {"type": "readInt32"},
+                {"state": "readInt32"},
+                {"address": "readString16"},
+                {"name": "readString16"},
+                {"caller": "readString16"}
+            ],
+            "name": "setWiredDeviceConnectionState",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 47,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "device": "readParcelable",
+                        "__parcelType": "android.bluetooth.BluetoothDevice"
+                    }]
+                },
+                {"state": "readInt32"},
+                {"profile": "readInt32"}
+            ],
+            "name": "setBluetoothA2dpDeviceConnectionState",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 48,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "device": "readParcelable",
+                        "__parcelType": "android.bluetooth.BluetoothDevice"
+                    }]
+                }
+            ],
+            "name": "handleBluetoothA2dpDeviceConfigChange",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 49,
+            "in": [{"observer": "readStrongBinder"}],
+            "name": "startWatchingRoutes",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.media.AudioRoutesInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 50,
+            "in": [],
+            "name": "isCameraSoundForced",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 51,
+            "in": [{"controller": "readStrongBinder"}],
+            "name": "setVolumeController",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 52,
+            "in": [
+                {"controller": "readStrongBinder"},
+                {"visible": "readBool"}
+            ],
+            "name": "notifyVolumeControllerVisible",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 53,
+            "in": [{"streamType": "readInt32"}],
+            "name": "isStreamAffectedByRingerMode",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 54,
+            "in": [{"streamType": "readInt32"}],
+            "name": "isStreamAffectedByMute",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 55,
+            "in": [{"callingPackage": "readString16"}],
+            "name": "disableSafeMediaVolume",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 56,
+            "in": [{"on": "readBool"}],
+            "name": "setHdmiSystemAudioSupported",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 57,
+            "in": [],
+            "name": "isHdmiSystemAudioSupported",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 58,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "policyConfig": "readParcelable",
+                        "__parcelType": "android.media.audiopolicy.AudioPolicyConfig"
+                    }]
+                },
+                {"pcb": "readStrongBinder"},
+                {"hasFocusListener": "readBool"},
+                {"isFocusPolicy": "readBool"}
+            ],
+            "name": "registerAudioPolicy",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 59,
+            "in": [{"pcb": "readStrongBinder"}],
+            "name": "unregisterAudioPolicyAsync",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 60,
+            "in": [
+                {"duckingBehavior": "readInt32"},
+                {"pcb": "readStrongBinder"}
+            ],
+            "name": "setFocusPropertiesForPolicy",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 61,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "policy": "readParcelable",
+                        "__parcelType": "android.media.VolumePolicy"
+                    }]
+                }
+            ],
+            "name": "setVolumePolicy",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 62,
+            "in": [{"rcdb": "readStrongBinder"}],
+            "name": "registerRecordingCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 63,
+            "in": [{"rcdb": "readStrongBinder"}],
+            "name": "unregisterRecordingCallback",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 64,
+            "in": [],
+            "name": "getActiveRecordingConfigurations",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.media.AudioRecordingConfiguration"
+                }
+            ]
+        },
+        {
+            "code": 65,
+            "in": [{"pcdb": "readStrongBinder"}],
+            "name": "registerPlaybackCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 66,
+            "in": [{"pcdb": "readStrongBinder"}],
+            "name": "unregisterPlaybackCallback",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 67,
+            "in": [],
+            "name": "getActivePlaybackConfigurations",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.media.AudioPlaybackConfiguration"
+                }
+            ]
+        },
+        {
+            "code": 68,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "pic": "readParcelable",
+                        "__parcelType": "android.media.PlayerBase.PlayerIdCard"
+                    }]
+                }
+            ],
+            "name": "trackPlayer",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 69,
+            "in": [
+                {"piid": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attr": "readParcelable",
+                        "__parcelType": "android.media.AudioAttributes"
+                    }]
+                }
+            ],
+            "name": "playerAttributes",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 70,
+            "in": [
+                {"piid": "readInt32"},
+                {"event": "readInt32"}
+            ],
+            "name": "playerEvent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 71,
+            "in": [{"piid": "readInt32"}],
+            "name": "releasePlayer",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 72,
+            "in": [{"userId": "readInt32"}],
+            "name": "disableRingtoneSync",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 73,
+            "in": [
+                {"focusGain": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attr": "readParcelable",
+                        "__parcelType": "android.media.AudioAttributes"
+                    }]
+                }
+            ],
+            "name": "getFocusRampTimeMs",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 74,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "afi": "readParcelable",
+                        "__parcelType": "android.media.AudioFocusInfo"
+                    }]
+                },
+                {"focusChange": "readInt32"},
+                {"pcb": "readStrongBinder"}
+            ],
+            "name": "dispatchFocusChange",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 75,
+            "in": [
+                {"piid": "readInt32"},
+                {"hasOpPlayAudio": "readBool"}
+            ],
+            "name": "playerHasOpPlayAudio",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IAudioService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,190 @@
+{
+    "produced_on": "2023-11-06T14:36:49.240287676Z",
+    "source_location": "",
+    "full_name": "android.car.media.ICarAudio",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"carUsage": "readInt32"}],
+            "name": "getAudioAttributesForCarUsage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.media.AudioAttributes"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"streamType": "readInt32"},
+                {"index": "readInt32"},
+                {"flags": "readInt32"}
+            ],
+            "name": "setStreamVolume",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"controller": "readStrongBinder"}],
+            "name": "setVolumeController",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"streamType": "readInt32"}],
+            "name": "getStreamMaxVolume",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"streamType": "readInt32"}],
+            "name": "getStreamMinVolume",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [{"streamType": "readInt32"}],
+            "name": "getStreamVolume",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "isMediaMuted",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [{"mute": "readBool"}],
+            "name": "setMediaMute",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [{"radioType": "readString16"}],
+            "name": "getAudioAttributesForRadio",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.media.AudioAttributes"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 10,
+            "in": [{"externalSourceType": "readString16"}],
+            "name": "getAudioAttributesForExternalSource",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.media.AudioAttributes"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 11,
+            "in": [],
+            "name": "getSupportedExternalSourceTypes",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [],
+            "name": "getSupportedRadioTypes",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [],
+            "name": "getParameterKeys",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 14,
+            "in": [{"parameters": "readString16"}],
+            "name": "setParameters",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [{"keys": "readString16"}],
+            "name": "getParameters",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 16,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "registerOnParameterChangeListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "unregisterOnParameterChangeListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICarAudio",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,44 @@
+{
+    "produced_on": "2023-11-06T14:36:47.878953538Z",
+    "source_location": "",
+    "full_name": "android.app.backup.IRestoreObserver",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{
+                "result": "readParcelableVector",
+                "__parcelType": "android.app.backup.RestoreSet"
+            }],
+            "name": "restoreSetsAvailable",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"numPackages": "readInt32"}],
+            "name": "restoreStarting",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nowBeingRestored": "readInt32"},
+                {"curentPackage": "readString16"}
+            ],
+            "name": "onUpdate",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"error": "readInt32"}],
+            "name": "restoreFinished",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IRestoreObserver",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

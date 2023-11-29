@@ -1,0 +1,117 @@
+{
+    "produced_on": "2023-11-06T14:36:48.069196049Z",
+    "source_location": "",
+    "full_name": "android.content.pm.IPackageInstallerSession",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"progress": "readFloat"}],
+            "name": "setClientProgress",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"progress": "readFloat"}],
+            "name": "addClientProgress",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getNames",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"name": "readString16"},
+                {"offsetBytes": "readInt64"},
+                {"lengthBytes": "readInt64"}
+            ],
+            "name": "openWrite",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.os.ParcelFileDescriptor"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"name": "readString16"}],
+            "name": "openRead",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.os.ParcelFileDescriptor"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [{"splitName": "readString16"}],
+            "name": "removeSplit",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "close",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "statusReceiver": "readParcelable",
+                        "__parcelType": "android.content.IntentSender"
+                    }]
+                },
+                {"forTransferred": "readBool"}
+            ],
+            "name": "commit",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [{"packageName": "readString16"}],
+            "name": "transfer",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [],
+            "name": "abandon",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IPackageInstallerSession",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

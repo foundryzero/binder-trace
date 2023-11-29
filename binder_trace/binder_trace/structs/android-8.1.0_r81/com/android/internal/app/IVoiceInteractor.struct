@@ -1,0 +1,153 @@
+{
+    "produced_on": "2023-11-06T14:36:48.629244339Z",
+    "source_location": "",
+    "full_name": "com.android.internal.app.IVoiceInteractor",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"callback": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "prompt": "readParcelable",
+                        "__parcelType": "com.android.internal.app.VoiceInteractor.Prompt"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"extras": "readBundle"}]
+                }
+            ],
+            "name": "startConfirmation",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"callback": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "prompt": "readParcelable",
+                        "__parcelType": "com.android.internal.app.VoiceInteractor.Prompt"
+                    }]
+                },
+                {
+                    "options": "readParcelableVector",
+                    "__parcelType": "com.android.internal.app.VoiceInteractor.PickOptionRequest.Option"
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"extras": "readBundle"}]
+                }
+            ],
+            "name": "startPickOption",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"callback": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "prompt": "readParcelable",
+                        "__parcelType": "com.android.internal.app.VoiceInteractor.Prompt"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"extras": "readBundle"}]
+                }
+            ],
+            "name": "startCompleteVoice",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"callback": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "prompt": "readParcelable",
+                        "__parcelType": "com.android.internal.app.VoiceInteractor.Prompt"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"extras": "readBundle"}]
+                }
+            ],
+            "name": "startAbortVoice",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"callback": "readStrongBinder"},
+                {"command": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"extras": "readBundle"}]
+                }
+            ],
+            "name": "startCommand",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"commands": "readString16Vector"}
+            ],
+            "name": "supportsCommands",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "com.android.internal.app.boolean"
+                }
+            ]
+        }
+    ],
+    "name": "IVoiceInteractor",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}
