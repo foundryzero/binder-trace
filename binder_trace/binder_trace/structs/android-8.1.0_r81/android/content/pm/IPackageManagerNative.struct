@@ -1,0 +1,40 @@
+{
+    "produced_on": "2023-11-06T14:36:49.154609597Z",
+    "source_location": "",
+    "full_name": "android.content.pm.IPackageManagerNative",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"uids": "readInt32Vector"}],
+            "name": "getNamesForUids",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"packageName": "readString16"}],
+            "name": "getInstallerForPackage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"packageName": "readString16"}],
+            "name": "getVersionCodeForPackage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        }
+    ],
+    "name": "IPackageManagerNative",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

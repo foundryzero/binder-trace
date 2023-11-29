@@ -1,0 +1,47 @@
+{
+    "produced_on": "2023-11-06T14:36:49.129063019Z",
+    "source_location": "",
+    "full_name": "android.support.v4.app.INotificationSideChannel",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"packageName": "readString16"},
+                {"id": "readInt32"},
+                {"tag": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "notification": "readParcelable",
+                        "__parcelType": "android.app.Notification"
+                    }]
+                }
+            ],
+            "name": "notify",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"packageName": "readString16"},
+                {"id": "readInt32"},
+                {"tag": "readString16"}
+            ],
+            "name": "cancel",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"packageName": "readString16"}],
+            "name": "cancelAll",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "INotificationSideChannel",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

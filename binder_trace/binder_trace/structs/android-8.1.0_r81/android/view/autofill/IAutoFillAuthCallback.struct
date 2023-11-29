@@ -1,0 +1,58 @@
+{
+    "produced_on": "2023-11-06T14:36:48.429753922Z",
+    "source_location": "",
+    "full_name": "android.view.autofill.IAutoFillAuthCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "dataset": "readParcelable",
+                        "__parcelType": "android.view.autofill.Dataset"
+                    }]
+                }
+            ],
+            "name": "onSuccessForDataset",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "response": "readParcelable",
+                        "__parcelType": "android.service.autofill.FillResponse"
+                    }]
+                }
+            ],
+            "name": "onSuccessForFillResponse",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "message": "readParcelable",
+                        "__parcelType": "CharSequence"
+                    }]
+                }
+            ],
+            "name": "onFailure",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IAutoFillAuthCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,84 @@
+{
+    "produced_on": "2023-11-06T14:36:48.534928172Z",
+    "source_location": "",
+    "full_name": "android.view.IPinnedStackListener",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"controller": "readStrongBinder"}],
+            "name": "onListenerRegistered",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "insetBounds": "readParcelable",
+                        "__parcelType": "android.graphics.Rect"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "normalBounds": "readParcelable",
+                        "__parcelType": "android.graphics.Rect"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "animatingBounds": "readParcelable",
+                        "__parcelType": "android.graphics.Rect"
+                    }]
+                },
+                {"fromImeAdjustement": "readBool"},
+                {"displayRotation": "readInt32"}
+            ],
+            "name": "onMovementBoundsChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"imeVisible": "readBool"},
+                {"imeHeight": "readInt32"}
+            ],
+            "name": "onImeVisibilityChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"isMinimized": "readBool"}],
+            "name": "onMinimizedStateChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "actions": "readParcelable",
+                        "__parcelType": "android.content.pm.ParceledListSlice"
+                    }]
+                }
+            ],
+            "name": "onActionsChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IPinnedStackListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

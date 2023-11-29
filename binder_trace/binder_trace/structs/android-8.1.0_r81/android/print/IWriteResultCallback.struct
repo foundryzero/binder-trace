@@ -1,0 +1,57 @@
+{
+    "produced_on": "2023-11-06T14:36:48.393905429Z",
+    "source_location": "",
+    "full_name": "android.print.IWriteResultCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"cancellation": "readStrongBinder"},
+                {"sequence": "readInt32"}
+            ],
+            "name": "onWriteStarted",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {
+                    "pages": "readParcelableVector",
+                    "__parcelType": "android.print.PageRange"
+                },
+                {"sequence": "readInt32"}
+            ],
+            "name": "onWriteFinished",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "error": "readParcelable",
+                        "__parcelType": "CharSequence"
+                    }]
+                },
+                {"sequence": "readInt32"}
+            ],
+            "name": "onWriteFailed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"sequence": "readInt32"}],
+            "name": "onWriteCanceled",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IWriteResultCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

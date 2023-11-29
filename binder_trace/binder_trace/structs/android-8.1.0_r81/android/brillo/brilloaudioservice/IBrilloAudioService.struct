@@ -1,0 +1,119 @@
+{
+    "produced_on": "2023-11-06T14:36:49.300128143Z",
+    "source_location": "",
+    "full_name": "android.brillo.brilloaudioservice.IBrilloAudioService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"flag": "readInt32"}],
+            "name": "GetDevices",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"usage": "readInt32"},
+                {"config": "readInt32"}
+            ],
+            "name": "SetDevice",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"stream": "readInt32"}],
+            "name": "GetMaxVolumeSteps",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"stream": "readInt32"},
+                {"max_steps": "readInt32"}
+            ],
+            "name": "SetMaxVolumeSteps",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"stream": "readInt32"},
+                {"device": "readInt32"},
+                {"index": "readInt32"}
+            ],
+            "name": "SetVolumeIndex",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"stream": "readInt32"},
+                {"device": "readInt32"}
+            ],
+            "name": "GetVolumeIndex",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "GetVolumeControlStream",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [{"stream": "readInt32"}],
+            "name": "SetVolumeControlStream",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [],
+            "name": "IncrementVolume",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [],
+            "name": "DecrementVolume",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "RegisterServiceCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "UnregisterServiceCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IBrilloAudioService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

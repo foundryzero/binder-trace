@@ -1,0 +1,79 @@
+{
+    "produced_on": "2023-11-06T14:36:49.028466961Z",
+    "source_location": "",
+    "full_name": "com.android.internal.telephony.ICallServiceAdapter",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getNextCallId",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"callId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "info": "readParcelable",
+                        "__parcelType": "com.android.internal.telephony.CallInfo"
+                    }]
+                }
+            ],
+            "name": "newIncomingCall",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"callId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "info": "readParcelable",
+                        "__parcelType": "com.android.internal.telephony.CallInfo"
+                    }]
+                }
+            ],
+            "name": "newOutgoingCall",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"callId": "readString16"}],
+            "name": "setActive",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"callId": "readString16"}],
+            "name": "setRinging",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"callId": "readString16"}],
+            "name": "setDialing",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"callId": "readString16"}],
+            "name": "setDisconnected",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICallServiceAdapter",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

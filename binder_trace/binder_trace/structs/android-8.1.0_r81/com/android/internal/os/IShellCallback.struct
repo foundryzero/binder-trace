@@ -1,0 +1,28 @@
+{
+    "produced_on": "2023-11-06T14:36:48.656260172Z",
+    "source_location": "",
+    "full_name": "com.android.internal.os.IShellCallback",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"path": "readString16"},
+            {"seLinuxContext": "readString16"}
+        ],
+        "name": "openOutputFile",
+        "oneWay": false,
+        "out": [
+            {"__exception": "readException"},
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "__return": "readParcelable",
+                    "__parcelType": "android.os.ParcelFileDescriptor"
+                }]
+            }
+        ]
+    }],
+    "name": "IShellCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

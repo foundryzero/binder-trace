@@ -1,0 +1,93 @@
+{
+    "produced_on": "2023-11-06T14:36:49.289241099Z",
+    "source_location": "",
+    "full_name": "android.net.wifi.IClientInterface",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "enableSupplicant",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "disableSupplicant",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getPacketCounters",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "signalPoll",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "getMacAddress",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "getInterfaceName",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "getWifiScannerImpl",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"bssid": "readByteVector"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "requestANQP",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "IClientInterface",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

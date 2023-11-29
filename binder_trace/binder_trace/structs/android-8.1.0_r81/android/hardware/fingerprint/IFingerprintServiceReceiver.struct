@@ -1,0 +1,93 @@
+{
+    "produced_on": "2023-11-06T14:36:48.148003879Z",
+    "source_location": "",
+    "full_name": "android.hardware.fingerprint.IFingerprintServiceReceiver",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"deviceId": "readInt64"},
+                {"fingerId": "readInt32"},
+                {"groupId": "readInt32"},
+                {"remaining": "readInt32"}
+            ],
+            "name": "onEnrollResult",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"deviceId": "readInt64"},
+                {"acquiredInfo": "readInt32"},
+                {"vendorCode": "readInt32"}
+            ],
+            "name": "onAcquired",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"deviceId": "readInt64"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "fp": "readParcelable",
+                        "__parcelType": "android.hardware.fingerprint.Fingerprint"
+                    }]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "onAuthenticationSucceeded",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"deviceId": "readInt64"}],
+            "name": "onAuthenticationFailed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"deviceId": "readInt64"},
+                {"error": "readInt32"},
+                {"vendorCode": "readInt32"}
+            ],
+            "name": "onError",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"deviceId": "readInt64"},
+                {"fingerId": "readInt32"},
+                {"groupId": "readInt32"},
+                {"remaining": "readInt32"}
+            ],
+            "name": "onRemoved",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"deviceId": "readInt64"},
+                {"fingerId": "readInt32"},
+                {"groupId": "readInt32"},
+                {"remaining": "readInt32"}
+            ],
+            "name": "onEnumerated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IFingerprintServiceReceiver",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

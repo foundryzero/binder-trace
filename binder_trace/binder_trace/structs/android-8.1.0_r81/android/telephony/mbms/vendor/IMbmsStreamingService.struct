@@ -1,0 +1,90 @@
+{
+    "produced_on": "2023-11-06T14:36:48.955954783Z",
+    "source_location": "",
+    "full_name": "android.telephony.mbms.vendor.IMbmsStreamingService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"callback": "readStrongBinder"},
+                {"subId": "readInt32"}
+            ],
+            "name": "initialize",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"subId": "readInt32"},
+                {
+                    "serviceClasses": "readList",
+                    "__parcelType": "String"
+                }
+            ],
+            "name": "requestUpdateStreamingServices",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"subId": "readInt32"},
+                {"serviceId": "readString16"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "startStreaming",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"subId": "readInt32"},
+                {"serviceId": "readString16"}
+            ],
+            "name": "getPlaybackUri",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"subId": "readInt32"},
+                {"serviceId": "readString16"}
+            ],
+            "name": "stopStreaming",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"subId": "readInt32"}],
+            "name": "dispose",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IMbmsStreamingService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,52 @@
+{
+    "produced_on": "2023-11-06T14:36:49.310571290Z",
+    "source_location": "",
+    "full_name": "android.net.metrics.INetdEventListener",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"netId": "readInt32"},
+                {"eventType": "readInt32"},
+                {"returnCode": "readInt32"},
+                {"latencyMs": "readInt32"},
+                {"hostname": "readString16"},
+                {"ipAddresses": "readString16Vector"},
+                {"ipAddressesCount": "readInt32"},
+                {"uid": "readInt32"}
+            ],
+            "name": "onDnsEvent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"netId": "readInt32"},
+                {"error": "readInt32"},
+                {"latencyMs": "readInt32"},
+                {"ipAddr": "readString16"},
+                {"port": "readInt32"},
+                {"uid": "readInt32"}
+            ],
+            "name": "onConnectEvent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"prefix": "readString16"},
+                {"uid": "readInt32"},
+                {"gid": "readInt32"},
+                {"timestampNs": "readInt64"}
+            ],
+            "name": "onWakeupEvent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "INetdEventListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

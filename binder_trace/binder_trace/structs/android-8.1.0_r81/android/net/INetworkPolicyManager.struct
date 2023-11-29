@@ -1,0 +1,253 @@
+{
+    "produced_on": "2023-11-06T14:36:48.239436921Z",
+    "source_location": "",
+    "full_name": "android.net.INetworkPolicyManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"uid": "readInt32"},
+                {"policy": "readInt32"}
+            ],
+            "name": "setUidPolicy",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"uid": "readInt32"},
+                {"policy": "readInt32"}
+            ],
+            "name": "addUidPolicy",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"uid": "readInt32"},
+                {"policy": "readInt32"}
+            ],
+            "name": "removeUidPolicy",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"uid": "readInt32"}],
+            "name": "getUidPolicy",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"policy": "readInt32"}],
+            "name": "getUidsWithPolicy",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [{"uid": "readInt32"}],
+            "name": "isUidForeground",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "registerListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "unregisterListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [{
+                "policies": "readParcelableVector",
+                "__parcelType": "android.net.NetworkPolicy"
+            }],
+            "name": "setNetworkPolicies",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [{"callingPackage": "readString16"}],
+            "name": "getNetworkPolicies",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.net.NetworkPolicy"
+                }
+            ]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "template": "readParcelable",
+                        "__parcelType": "android.net.NetworkTemplate"
+                    }]
+                }
+            ],
+            "name": "snoozeLimit",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [{"restrictBackground": "readBool"}],
+            "name": "setRestrictBackground",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [],
+            "name": "getRestrictBackground",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"iface": "readString16"},
+                {"tethering": "readBool"}
+            ],
+            "name": "onTetheringChanged",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [],
+            "name": "getRestrictBackgroundByCaller",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 16,
+            "in": [{"enabled": "readBool"}],
+            "name": "setDeviceIdleMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [
+                {"networkId": "readString16"},
+                {"meteredOverride": "readInt32"}
+            ],
+            "name": "setWifiMeteredOverride",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "state": "readParcelable",
+                        "__parcelType": "android.net.NetworkState"
+                    }]
+                }
+            ],
+            "name": "getNetworkQuotaInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.net.NetworkQuotaInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 19,
+            "in": [
+                {"subId": "readInt32"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "getSubscriptionPlans",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.telephony.SubscriptionPlan"
+                }
+            ]
+        },
+        {
+            "code": 20,
+            "in": [
+                {"subId": "readInt32"},
+                {
+                    "plans": "readParcelableVector",
+                    "__parcelType": "android.telephony.SubscriptionPlan"
+                },
+                {"callingPackage": "readString16"}
+            ],
+            "name": "setSubscriptionPlans",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 21,
+            "in": [{"subscriber": "readString16"}],
+            "name": "factoryReset",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 22,
+            "in": [
+                {"uid": "readInt32"},
+                {"meteredNetwork": "readBool"}
+            ],
+            "name": "isUidNetworkingBlocked",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "INetworkPolicyManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

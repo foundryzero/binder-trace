@@ -1,0 +1,27 @@
+{
+    "produced_on": "2023-11-06T14:36:49.209911971Z",
+    "source_location": "",
+    "full_name": "android.car.IUsbAoapSupportCheckService",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "device": "readParcelable",
+                    "__parcelType": "android.hardware.usb.UsbDevice"
+                }]
+            }
+        ],
+        "name": "isDeviceSupported",
+        "oneWay": false,
+        "out": [
+            {"__exception": "readException"},
+            {"__return": "readBool"}
+        ]
+    }],
+    "name": "IUsbAoapSupportCheckService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

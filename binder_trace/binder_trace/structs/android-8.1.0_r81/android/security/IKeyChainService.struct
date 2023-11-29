@@ -1,0 +1,192 @@
+{
+    "produced_on": "2023-11-06T14:36:48.721421023Z",
+    "source_location": "",
+    "full_name": "android.security.IKeyChainService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"alias": "readString16"}],
+            "name": "requestPrivateKey",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"alias": "readString16"}],
+            "name": "getCertificate",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"alias": "readString16"}],
+            "name": "getCaCertificates",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"caCertificate": "readByteVector"}],
+            "name": "installCaCertificate",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"privateKey": "readByteVector"},
+                {"userCert": "readByteVector"},
+                {"certChain": "readByteVector"},
+                {"alias": "readString16"}
+            ],
+            "name": "installKeyPair",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [{"alias": "readString16"}],
+            "name": "removeKeyPair",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [{"alias": "readString16"}],
+            "name": "deleteCaCertificate",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "reset",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [],
+            "name": "getUserCaAliases",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.StringParceledListSlice"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 10,
+            "in": [],
+            "name": "getSystemCaAliases",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.StringParceledListSlice"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 11,
+            "in": [{"alias": "readString16"}],
+            "name": "containsCaAlias",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"alias": "readString16"},
+                {"includeDeletedSystem": "readBool"}
+            ],
+            "name": "getEncodedCaCertificate",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"rootAlias": "readString16"},
+                {"includeDeletedSystem": "readBool"}
+            ],
+            "name": "getCaCertificateChainAliases",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "String"
+                }
+            ]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"uid": "readInt32"},
+                {"alias": "readString16"},
+                {"value": "readBool"}
+            ],
+            "name": "setGrant",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"uid": "readInt32"},
+                {"alias": "readString16"}
+            ],
+            "name": "hasGrant",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "IKeyChainService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

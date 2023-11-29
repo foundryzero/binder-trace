@@ -1,0 +1,37 @@
+{
+    "produced_on": "2023-11-06T14:36:48.947446736Z",
+    "source_location": "",
+    "full_name": "android.telephony.mbms.IMbmsDownloadSessionCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"errorCode": "readInt32"},
+                {"message": "readString16"}
+            ],
+            "name": "onError",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{
+                "services": "readList",
+                "__parcelType": "android.telephony.mbms.FileServiceInfo"
+            }],
+            "name": "onFileServicesUpdated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "onMiddlewareReady",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IMbmsDownloadSessionCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

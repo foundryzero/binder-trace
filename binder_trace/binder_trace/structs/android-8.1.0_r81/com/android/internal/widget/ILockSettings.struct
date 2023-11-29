@@ -1,0 +1,337 @@
+{
+    "produced_on": "2023-11-06T14:36:48.702610763Z",
+    "source_location": "",
+    "full_name": "com.android.internal.widget.ILockSettings",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"key": "readString16"},
+                {"value": "readBool"},
+                {"userId": "readInt32"}
+            ],
+            "name": "setBoolean",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"key": "readString16"},
+                {"value": "readInt64"},
+                {"userId": "readInt32"}
+            ],
+            "name": "setLong",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"key": "readString16"},
+                {"value": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "setString",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"key": "readString16"},
+                {"defaultValue": "readBool"},
+                {"userId": "readInt32"}
+            ],
+            "name": "getBoolean",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"key": "readString16"},
+                {"defaultValue": "readInt64"},
+                {"userId": "readInt32"}
+            ],
+            "name": "getLong",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"key": "readString16"},
+                {"defaultValue": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "getString",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"credential": "readString16"},
+                {"type": "readInt32"},
+                {"savedCredential": "readString16"},
+                {"requestedQuality": "readInt32"},
+                {"userId": "readInt32"}
+            ],
+            "name": "setLockCredential",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{"userId": "readInt32"}],
+            "name": "resetKeyStore",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"credential": "readString16"},
+                {"type": "readInt32"},
+                {"userId": "readInt32"},
+                {"progressCallback": "readStrongBinder"}
+            ],
+            "name": "checkCredential",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.internal.widget.VerifyCredentialResponse"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"credential": "readString16"},
+                {"type": "readInt32"},
+                {"challenge": "readInt64"},
+                {"userId": "readInt32"}
+            ],
+            "name": "verifyCredential",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.internal.widget.VerifyCredentialResponse"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"credential": "readString16"},
+                {"type": "readInt32"},
+                {"challenge": "readInt64"},
+                {"userId": "readInt32"}
+            ],
+            "name": "verifyTiedProfileChallenge",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.internal.widget.VerifyCredentialResponse"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 12,
+            "in": [{"userId": "readInt32"}],
+            "name": "checkVoldPassword",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [{"userId": "readInt32"}],
+            "name": "havePattern",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 14,
+            "in": [{"userId": "readInt32"}],
+            "name": "havePassword",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"userId": "readInt32"},
+                {"enabled": "readBool"},
+                {"managedUserPassword": "readString16"}
+            ],
+            "name": "setSeparateProfileChallengeEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [{"userId": "readInt32"}],
+            "name": "getSeparateProfileChallengeEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 17,
+            "in": [{"tracker": "readStrongBinder"}],
+            "name": "registerStrongAuthTracker",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [{"tracker": "readStrongBinder"}],
+            "name": "unregisterStrongAuthTracker",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 19,
+            "in": [
+                {"strongAuthReason": "readInt32"},
+                {"userId": "readInt32"}
+            ],
+            "name": "requireStrongAuth",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 20,
+            "in": [],
+            "name": "systemReady",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 21,
+            "in": [{"userId": "readInt32"}],
+            "name": "userPresent",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 22,
+            "in": [{"userId": "readInt32"}],
+            "name": "getStrongAuthForUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 23,
+            "in": [
+                {"token": "readByteVector"},
+                {"userId": "readInt32"}
+            ],
+            "name": "addEscrowToken",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 24,
+            "in": [
+                {"handle": "readInt64"},
+                {"userId": "readInt32"}
+            ],
+            "name": "removeEscrowToken",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 25,
+            "in": [
+                {"handle": "readInt64"},
+                {"userId": "readInt32"}
+            ],
+            "name": "isEscrowTokenActive",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 26,
+            "in": [
+                {"credential": "readString16"},
+                {"type": "readInt32"},
+                {"tokenHandle": "readInt64"},
+                {"token": "readByteVector"},
+                {"requestedQuality": "readInt32"},
+                {"userId": "readInt32"}
+            ],
+            "name": "setLockCredentialWithToken",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 27,
+            "in": [
+                {"tokenHandle": "readInt64"},
+                {"token": "readByteVector"},
+                {"userId": "readInt32"}
+            ],
+            "name": "unlockUserWithToken",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ILockSettings",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,76 @@
+{
+    "produced_on": "2023-11-06T14:36:48.798850331Z",
+    "source_location": "",
+    "full_name": "android.media.IPlayer",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "start",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "pause",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "stop",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"vol": "readFloat"}],
+            "name": "setVolume",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"pan": "readFloat"}],
+            "name": "setPan",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"delayMs": "readInt32"}],
+            "name": "setStartDelayMs",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "configuration": "readParcelable",
+                        "__parcelType": "android.media.VolumeShaper.Configuration"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "operation": "readParcelable",
+                        "__parcelType": "android.media.VolumeShaper.Operation"
+                    }]
+                }
+            ],
+            "name": "applyVolumeShaper",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IPlayer",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

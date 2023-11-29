@@ -1,0 +1,41 @@
+{
+    "produced_on": "2023-11-06T14:36:49.089157191Z",
+    "source_location": "",
+    "full_name": "android.net.wifi.IWifiScanner",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getMessenger",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.os.Messenger"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"band": "readInt32"}],
+            "name": "getAvailableChannels",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"__return": "readBundle"}]
+                }
+            ]
+        }
+    ],
+    "name": "IWifiScanner",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

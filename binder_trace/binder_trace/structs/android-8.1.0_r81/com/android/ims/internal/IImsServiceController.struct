@@ -1,0 +1,280 @@
+{
+    "produced_on": "2023-11-06T14:36:48.985636197Z",
+    "source_location": "",
+    "full_name": "com.android.ims.internal.IImsServiceController",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"slotId": "readInt32"},
+                {"feature": "readInt32"},
+                {"c": "readStrongBinder"}
+            ],
+            "name": "createImsFeature",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"slotId": "readInt32"},
+                {"feature": "readInt32"},
+                {"c": "readStrongBinder"}
+            ],
+            "name": "removeImsFeature",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"slotId": "readInt32"},
+                {"featureType": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "incomingCallIntent": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                },
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "startSession",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"slotId": "readInt32"},
+                {"featureType": "readInt32"},
+                {"sessionId": "readInt32"}
+            ],
+            "name": "endSession",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"slotId": "readInt32"},
+                {"featureType": "readInt32"},
+                {"callSessionType": "readInt32"},
+                {"callType": "readInt32"}
+            ],
+            "name": "isConnected",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"slotId": "readInt32"},
+                {"featureType": "readInt32"}
+            ],
+            "name": "isOpened",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"slotId": "readInt32"},
+                {"featureType": "readInt32"}
+            ],
+            "name": "getFeatureStatus",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"slotId": "readInt32"},
+                {"featureType": "readInt32"},
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "addRegistrationListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"slotId": "readInt32"},
+                {"featureType": "readInt32"},
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "removeRegistrationListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"slotId": "readInt32"},
+                {"featureType": "readInt32"},
+                {"sessionId": "readInt32"},
+                {"callSessionType": "readInt32"},
+                {"callType": "readInt32"}
+            ],
+            "name": "createCallProfile",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.ims.ImsCallProfile"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"slotId": "readInt32"},
+                {"featureType": "readInt32"},
+                {"sessionId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "profile": "readParcelable",
+                        "__parcelType": "com.android.ims.ImsCallProfile"
+                    }]
+                },
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "createCallSession",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"slotId": "readInt32"},
+                {"featureType": "readInt32"},
+                {"sessionId": "readInt32"},
+                {"callId": "readString16"}
+            ],
+            "name": "getPendingCallSession",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"slotId": "readInt32"},
+                {"featureType": "readInt32"}
+            ],
+            "name": "getUtInterface",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"slotId": "readInt32"},
+                {"featureType": "readInt32"}
+            ],
+            "name": "getConfigInterface",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"slotId": "readInt32"},
+                {"featureType": "readInt32"}
+            ],
+            "name": "turnOnIms",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [
+                {"slotId": "readInt32"},
+                {"featureType": "readInt32"}
+            ],
+            "name": "turnOffIms",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [
+                {"slotId": "readInt32"},
+                {"featureType": "readInt32"}
+            ],
+            "name": "getEcbmInterface",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"slotId": "readInt32"},
+                {"featureType": "readInt32"},
+                {"uiTtyMode": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "onComplete": "readParcelable",
+                        "__parcelType": "android.os.Message"
+                    }]
+                }
+            ],
+            "name": "setUiTTYMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 19,
+            "in": [
+                {"slotId": "readInt32"},
+                {"featureType": "readInt32"}
+            ],
+            "name": "getMultiEndpointInterface",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        }
+    ],
+    "name": "IImsServiceController",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,72 @@
+{
+    "produced_on": "2023-11-06T14:36:48.884686613Z",
+    "source_location": "",
+    "full_name": "com.android.systemui.recents.IRecentsSystemUserCallbacks",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nonSystemUserCallbacks": "readStrongBinder"},
+                {"userId": "readInt32"}
+            ],
+            "name": "registerNonSystemUserCallbacks",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"visible": "readBool"}],
+            "name": "updateRecentsVisibility",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"taskId": "readInt32"}],
+            "name": "startScreenPinning",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "sendRecentsDrawnEvent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"dragMode": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "initialRect": "readParcelable",
+                        "__parcelType": "android.graphics.Rect"
+                    }]
+                }
+            ],
+            "name": "sendDockingTopTaskEvent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "sendLaunchRecentsEvent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"waitingForTransitionStart": "readBool"}],
+            "name": "setWaitingForTransitionStartEvent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IRecentsSystemUserCallbacks",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

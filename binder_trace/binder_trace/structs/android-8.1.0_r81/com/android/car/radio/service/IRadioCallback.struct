@@ -1,0 +1,63 @@
+{
+    "produced_on": "2023-11-06T14:36:49.169303623Z",
+    "source_location": "",
+    "full_name": "com.android.car.radio.service.IRadioCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "station": "readParcelable",
+                        "__parcelType": "com.android.car.radio.service.RadioStation"
+                    }]
+                }
+            ],
+            "name": "onRadioStationChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "radioRds": "readParcelable",
+                        "__parcelType": "com.android.car.radio.service.RadioRds"
+                    }]
+                }
+            ],
+            "name": "onRadioMetadataChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"radioBand": "readInt32"}],
+            "name": "onRadioBandChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"isMuted": "readBool"}],
+            "name": "onRadioMuteChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"status": "readInt32"}],
+            "name": "onError",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IRadioCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,113 @@
+{
+    "produced_on": "2023-11-06T14:36:48.992050099Z",
+    "source_location": "",
+    "full_name": "com.android.ims.internal.IImsUtListener",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"ut": "readStrongBinder"},
+                {"id": "readInt32"}
+            ],
+            "name": "utConfigurationUpdated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"ut": "readStrongBinder"},
+                {"id": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "error": "readParcelable",
+                        "__parcelType": "com.android.ims.ImsReasonInfo"
+                    }]
+                }
+            ],
+            "name": "utConfigurationUpdateFailed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"ut": "readStrongBinder"},
+                {"id": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"ssInfo": "readBundle"}]
+                }
+            ],
+            "name": "utConfigurationQueried",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"ut": "readStrongBinder"},
+                {"id": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "error": "readParcelable",
+                        "__parcelType": "com.android.ims.ImsReasonInfo"
+                    }]
+                }
+            ],
+            "name": "utConfigurationQueryFailed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"ut": "readStrongBinder"},
+                {"id": "readInt32"},
+                {
+                    "cbInfo": "readParcelableVector",
+                    "__parcelType": "com.android.ims.ImsSsInfo"
+                }
+            ],
+            "name": "utConfigurationCallBarringQueried",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"ut": "readStrongBinder"},
+                {"id": "readInt32"},
+                {
+                    "cfInfo": "readParcelableVector",
+                    "__parcelType": "com.android.ims.ImsCallForwardInfo"
+                }
+            ],
+            "name": "utConfigurationCallForwardQueried",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"ut": "readStrongBinder"},
+                {"id": "readInt32"},
+                {
+                    "cwInfo": "readParcelableVector",
+                    "__parcelType": "com.android.ims.ImsSsInfo"
+                }
+            ],
+            "name": "utConfigurationCallWaitingQueried",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IImsUtListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

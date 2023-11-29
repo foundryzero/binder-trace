@@ -1,0 +1,460 @@
+{
+    "produced_on": "2023-11-06T14:36:48.695220365Z",
+    "source_location": "",
+    "full_name": "com.android.internal.view.IInputMethodManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getInputMethodList",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.view.inputmethod.InputMethodInfo"
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "getEnabledInputMethodList",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.view.inputmethod.InputMethodInfo"
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"imiId": "readString16"},
+                {"allowsImplicitlySelectedSubtypes": "readBool"}
+            ],
+            "name": "getEnabledInputMethodSubtypeList",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.view.inputmethod.InputMethodSubtype"
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "getLastInputMethodSubtype",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.view.inputmethod.InputMethodSubtype"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "getShortcutInputMethodsAndSubtypes",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.internal.view.List"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"client": "readStrongBinder"},
+                {"inputContext": "readStrongBinder"},
+                {"uid": "readInt32"},
+                {"pid": "readInt32"}
+            ],
+            "name": "addClient",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"client": "readStrongBinder"}],
+            "name": "removeClient",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{"client": "readStrongBinder"}],
+            "name": "finishInput",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"client": "readStrongBinder"},
+                {"flags": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "resultReceiver": "readParcelable",
+                        "__parcelType": "android.os.ResultReceiver"
+                    }]
+                }
+            ],
+            "name": "showSoftInput",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"client": "readStrongBinder"},
+                {"flags": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "resultReceiver": "readParcelable",
+                        "__parcelType": "android.os.ResultReceiver"
+                    }]
+                }
+            ],
+            "name": "hideSoftInput",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"startInputReason": "readInt32"},
+                {"client": "readStrongBinder"},
+                {"windowToken": "readStrongBinder"},
+                {"controlFlags": "readInt32"},
+                {"softInputMode": "readInt32"},
+                {"windowFlags": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attribute": "readParcelable",
+                        "__parcelType": "android.view.inputmethod.EditorInfo"
+                    }]
+                },
+                {"inputContext": "readStrongBinder"},
+                {"missingMethodFlags": "readInt32"}
+            ],
+            "name": "startInputOrWindowGainedFocus",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.internal.view.InputBindResult"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"client": "readStrongBinder"},
+                {"auxiliarySubtypeMode": "readInt32"}
+            ],
+            "name": "showInputMethodPickerFromClient",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"client": "readStrongBinder"},
+                {"topId": "readString16"}
+            ],
+            "name": "showInputMethodAndSubtypeEnablerFromClient",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"id": "readString16"}
+            ],
+            "name": "setInputMethod",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"id": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "subtype": "readParcelable",
+                        "__parcelType": "android.view.inputmethod.InputMethodSubtype"
+                    }]
+                }
+            ],
+            "name": "setInputMethodAndSubtype",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"flags": "readInt32"}
+            ],
+            "name": "hideMySoftInput",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"flags": "readInt32"}
+            ],
+            "name": "showMySoftInput",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"packageName": "readString16"},
+                {"iconId": "readInt32"}
+            ],
+            "name": "updateStatusIcon",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 19,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"startInputToken": "readStrongBinder"},
+                {"vis": "readInt32"},
+                {"backDisposition": "readInt32"}
+            ],
+            "name": "setImeWindowStatus",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 20,
+            "in": [{
+                "spans": "readParcelableVector",
+                "__parcelType": "android.text.style.SuggestionSpan"
+            }],
+            "name": "registerSuggestionSpansForNotification",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 21,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "span": "readParcelable",
+                        "__parcelType": "android.text.style.SuggestionSpan"
+                    }]
+                },
+                {"originalString": "readString16"},
+                {"index": "readInt32"}
+            ],
+            "name": "notifySuggestionPicked",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 22,
+            "in": [],
+            "name": "getCurrentInputMethodSubtype",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.view.inputmethod.InputMethodSubtype"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 23,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "subtype": "readParcelable",
+                        "__parcelType": "android.view.inputmethod.InputMethodSubtype"
+                    }]
+                }
+            ],
+            "name": "setCurrentInputMethodSubtype",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 24,
+            "in": [{"token": "readStrongBinder"}],
+            "name": "switchToLastInputMethod",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 25,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"onlyCurrentIme": "readBool"}
+            ],
+            "name": "switchToNextInputMethod",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 26,
+            "in": [{"token": "readStrongBinder"}],
+            "name": "shouldOfferSwitchingToNextInputMethod",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 27,
+            "in": [
+                {"id": "readString16"},
+                {"enabled": "readBool"}
+            ],
+            "name": "setInputMethodEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 28,
+            "in": [
+                {"id": "readString16"},
+                {
+                    "subtypes": "readParcelableVector",
+                    "__parcelType": "android.view.inputmethod.InputMethodSubtype"
+                }
+            ],
+            "name": "setAdditionalInputMethodSubtypes",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 29,
+            "in": [],
+            "name": "getInputMethodWindowVisibleHeight",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 30,
+            "in": [{"token": "readStrongBinder"}],
+            "name": "clearLastInputMethodWindowForTransition",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 31,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "contentUri": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                },
+                {"packageName": "readString16"}
+            ],
+            "name": "createInputContentUriToken",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 32,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"fullscreen": "readBool"}
+            ],
+            "name": "reportFullscreenMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 33,
+            "in": [{"sequenceNumber": "readInt32"}],
+            "name": "notifyUserAction",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IInputMethodManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

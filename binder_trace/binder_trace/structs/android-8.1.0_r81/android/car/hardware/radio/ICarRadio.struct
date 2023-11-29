@@ -1,0 +1,70 @@
+{
+    "produced_on": "2023-11-06T14:36:49.236873591Z",
+    "source_location": "",
+    "full_name": "android.car.hardware.radio.ICarRadio",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getPresetCount",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "registerListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "unregisterListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"presetNumber": "readInt32"}],
+            "name": "getPreset",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.car.hardware.radio.CarRadioPreset"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "preset": "readParcelable",
+                        "__parcelType": "android.car.hardware.radio.CarRadioPreset"
+                    }]
+                }
+            ],
+            "name": "setPreset",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "ICarRadio",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}
