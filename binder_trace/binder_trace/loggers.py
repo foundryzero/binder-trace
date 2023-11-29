@@ -1,3 +1,5 @@
+"""binder-trace loggers."""
+
 import logging
 import logging.handlers
 
@@ -6,7 +8,7 @@ PARSING_LOG = "parsing_log"
 
 
 def configure():
-    # Set up a general logger.
+    """Set up a general logger."""
     log_formatter = logging.Formatter("%(asctime)s: %(levelname)s %(message)s")
     log_handler = logging.handlers.RotatingFileHandler("binder_trace-log.txt", maxBytes=1000000, backupCount=5)
     log_handler.setFormatter(log_formatter)

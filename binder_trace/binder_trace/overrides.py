@@ -1,10 +1,12 @@
+"""Parsing override functions."""
+
 import functools
 import logging
 
 import binder_trace.constants
 from binder_trace import loggers
 from binder_trace.parcel import ParcelParser
-from binder_trace.parsedParcel import Field, parse_field
+from binder_trace.parsedParcel import Field
 from binder_trace.parseerror import ParseError
 
 parsing_log = logging.getLogger(loggers.PARSING_LOG)
@@ -16,6 +18,11 @@ ANDROID_VERSION = "android-11.0.0_r25"
 
 
 def parcelableHasOverride(parcelType: str) -> bool:
+    """Check if a given parcelable type has an override parsing function defined in this file.
+
+    :param parcelType: The parcelable type
+    :return: True if an override is defined, False otherwise.
+    """
     overrides = [
         "android.net.Uri",
         "android.net.Uri$StringUri",
@@ -43,6 +50,14 @@ def parcelableHasOverride(parcelType: str) -> bool:
 
 
 def parcelableOverride(parcel: ParcelParser, parcelType: str, name: str, parent: Field) -> None:
+    """Handle the parser override of a parcelable type.
+
+    :param parcel: The ParcelParser
+    :param parcelType: The parcelable type
+    :param name: The name of the parcelable
+    :param parent: The parent field to parse.
+    :raises ParseError: raised on parsing error.
+    """
     override_handlers = {
         "android.net.Uri": parseUri,
         "android.net.Uri$StringUri": parseStringUri,
@@ -75,7 +90,7 @@ def parcelableOverride(parcel: ParcelParser, parcelType: str, name: str, parent:
         raise ParseError("No override for " + parcelType)
 
 
-def parseUri(parcel: ParcelParser, parent: Field) -> None:
+def parseUri(parcel: ParcelParser, parent: Field) -> None:  # noqa
     code_field = parcel.parse_field("code", "uint32", parcel.readUint32, parent)
 
     if code_field.content == binder_trace.constants.URI_NULL_TYPE_ID:
@@ -91,7 +106,7 @@ def parseUri(parcel: ParcelParser, parent: Field) -> None:
         raise ParseError(f"Unknown URI type: {code_field.content}")
 
 
-def parseHierarchicalUri(parcel: ParcelParser, parent: Field) -> None:
+def parseHierarchicalUri(parcel: ParcelParser, parent: Field) -> None:  # noqa
     parcel.parse_field("scheme", "string", parcel.readString8, parent)
     parcel.parse_field("authority encoding", "string", parcel.readInt32, parent)
     parcel.parse_field("authority", "string", parcel.readString8, parent)
@@ -103,7 +118,7 @@ def parseHierarchicalUri(parcel: ParcelParser, parent: Field) -> None:
     parcel.parse_field("fragment", "string", parcel.readString8, parent)
 
 
-def parseOpaqueUri(parcel: ParcelParser, parent: Field) -> None:
+def parseOpaqueUri(parcel: ParcelParser, parent: Field) -> None:  # noqa
     parcel.parse_field("scheme", "string", parcel.readString8, parent)
     parcel.parse_field("ssp encoding", "int32", parcel.readInt32, parent)
     parcel.parse_field("ssp", "string", parcel.readString8, parent)
@@ -111,14 +126,14 @@ def parseOpaqueUri(parcel: ParcelParser, parent: Field) -> None:
     parcel.parse_field("fragment", "string", parcel.readString8, parent)
 
 
-def parseStringUri(parcel: ParcelParser, parent: Field) -> None:
+def parseStringUri(parcel: ParcelParser, parent: Field) -> None:  # noqa
     if parcel.android_version > 9:
         parcel.parse_field("uriString", "string", parcel.readString8, parent)
     else:
         parcel.parse_field("uriString", "string", parcel.readString16, parent)
 
 
-def parseIntentFilter(parcel: ParcelParser, parent: Field) -> None:
+def parseIntentFilter(parcel: ParcelParser, parent: Field) -> None:  # noqa
     parcel.parse_field("mActions", "", parcel.readString16Vector, parent)
 
     category_nullcheck = parcel.parse_field("mCategories-nullcheck", "", parcel.readInt32, parent)
@@ -165,22 +180,22 @@ def parseIntentFilter(parcel: ParcelParser, parent: Field) -> None:
     parcel.parse_field("mOrder", "int32", parcel.readInt32, parent)
 
 
-def parseComponentName(parcel: ParcelParser, parent: Field) -> None:
+def parseComponentName(parcel: ParcelParser, parent: Field) -> None:  # noqa
     package = parcel.parse_field("mPackage", "string", parcel.readString16, parent)
     if package.content[0].content != -1:
         parcel.parse_field("mClass", "string", parcel.readString16, parent)
 
 
-def parseProcessStats(parcel: ParcelParser, parent: Field) -> None:
+def parseProcessStats(parcel: ParcelParser, parent: Field) -> None:  # noqa
     # TODO: Add support for processing stats
     parsing_log.debug("Parsing unsupported type Process Stats")
 
 
-def parseAbsSavedState(parcel: ParcelParser, name: str, parent: Field) -> None:
+def parseAbsSavedState(parcel: ParcelParser, name: str, parent: Field) -> None:  # noqa
     parcel.parse_field(name, "AbsSavedState", functools.partial(parcel.readParcelable, "__dynamic"), parent)
 
 
-def parseAddressList(parcel: ParcelParser, name: str, parent: Field) -> None:
+def parseAddressList(parcel: ParcelParser, name: str, parent: Field) -> None:  # noqa
     count_field = parcel.parse_field("count", "int32", parcel.readInt32, parent)
 
     if not isinstance(count_field.content, int):
@@ -190,14 +205,14 @@ def parseAddressList(parcel: ParcelParser, name: str, parent: Field) -> None:
         parcel.parse_field("", "Address", functools.partial(readAddress, parcel), parent)
 
 
-def readAddress(parcel: ParcelParser, parent: Field) -> None:
+def readAddress(parcel: ParcelParser, parent: Field) -> None:  # noqa
     addr_field = parcel.parse_field("addr", "ByteVector", parcel.readByteVector, parent)
 
     if len(addr_field.content) == 16:
         parcel.parse_field("scopeId", "int32", parcel.readInt32, parent)
 
 
-def parseLinkProperties(parcel: ParcelParser, parent: Field) -> None:
+def parseLinkProperties(parcel: ParcelParser, parent: Field) -> None:  # noqa
     parcel.parse_field("iface", "string", parcel.readString16, parent)
 
     parcel.parse_field(
@@ -236,7 +251,7 @@ def parseLinkProperties(parcel: ParcelParser, parent: Field) -> None:
     parcel.parse_field("setCaptivePortalData", "", functools.partial(parcel.readParcelable, "__dynamic"), parent)
 
 
-def parseCharSequence(parcel: ParcelParser, parent: Field) -> None:
+def parseCharSequence(parcel: ParcelParser, parent: Field) -> None:  # noqa
     span_names = {
         binder_trace.constants.SpanType.ALIGNMENT_SPAN: "AlignmentSpan",
         binder_trace.constants.SpanType.FOREGROUND_COLOR_SPAN: "ForegroundColorSpan",
@@ -287,13 +302,13 @@ def parseCharSequence(parcel: ParcelParser, parent: Field) -> None:
             spanned_string_type_field = parcel.parse_field("kind", "int32", parcel.readInt32, parent)
 
 
-def readSpan(parcel: ParcelParser, parent: Field) -> None:
+def readSpan(parcel: ParcelParser, parent: Field) -> None:  # noqa
     parcel.parse_field("spanStart", "int32", parcel.readInt32, parent)
     parcel.parse_field("spanEnd", "int32", parcel.readInt32, parent)
     parcel.parse_field("spanFlags", "int32", parcel.readInt32, parent)
 
 
-def parse_span(parcel: ParcelParser, kind: int, parent: Field) -> None:
+def parse_span(parcel: ParcelParser, kind: int, parent: Field) -> None:  # noqa
     # TODO: Need to add the non-structural grouping fields
     if kind == binder_trace.constants.SpanType.ALIGNMENT_SPAN:
         parcel.parse_field("mAlignment", "string", parcel.readString16, parent)
@@ -447,7 +462,7 @@ def parse_span(parcel: ParcelParser, kind: int, parent: Field) -> None:
 
 
 # THIS CHANGED IN LATER ANDROID VERSIONS
-def parseBitmap(parcel: ParcelParser, parent: Field) -> None:
+def parseBitmap(parcel: ParcelParser, parent: Field) -> None:  # noqa
     def get_width_of_pixel_for_color_type(t) -> int:
         # Lines up with the color type definitions in asop:external/skqp/src/core/SkImageInfo.cpp
         if t == 0:
@@ -488,7 +503,7 @@ def parseBitmap(parcel: ParcelParser, parent: Field) -> None:
     parcel.parse_field("blob", "byte[]", functools.partial(parcel.readBlob, blob_size), parent)
 
 
-def parseInputChannel(parcel: ParcelParser, parent: Field):
+def parseInputChannel(parcel: ParcelParser, parent: Field):  # noqa
     init_field = parcel.parse_field("isInitialized", "bool", parcel.readBool, parent)
     if init_field.content:
         parcel.parse_field("name", "string", parcel.readCString8, parent)
@@ -496,7 +511,7 @@ def parseInputChannel(parcel: ParcelParser, parent: Field):
         parcel.parse_field("mFd", "fd", parcel.readFileDescriptor, parent)
 
 
-def parseResolveInfo(parcel: ParcelParser, parent: Field) -> None:
+def parseResolveInfo(parcel: ParcelParser, parent: Field) -> None:  # noqa
     component_info_field = parcel.parse_field("componentInfoType", "int32", parcel.readInt32, parent)
     component_info_type = component_info_field.content
     if component_info_type == 1:
@@ -548,7 +563,7 @@ def parseResolveInfo(parcel: ParcelParser, parent: Field) -> None:
     parcel.parse_field("isInstantAppAvailable", "bool", parcel.readBool, parent)
 
 
-def parseParceledListSlice(parcel: ParcelParser, parent: Field) -> None:
+def parseParceledListSlice(parcel: ParcelParser, parent: Field) -> None:  # noqa
     count_field = parcel.parse_field("N", "int32", parcel.readInt32, parent)
 
     if not isinstance(count_field.content, int):
@@ -568,7 +583,7 @@ def parseParceledListSlice(parcel: ParcelParser, parent: Field) -> None:
             parcel.parse_field("<more elements>", "StrongBinder", parcel.readStrongBinder, parent)
 
 
-def parseBulkCursorDescriptor(parcel: ParcelParser, parent: Field) -> None:
+def parseBulkCursorDescriptor(parcel: ParcelParser, parent: Field) -> None:  # noqa
     parcel.parse_field("cursor", "StrongBinder", parcel.readStrongBinder, parent)
     parcel.parse_field("columnNames", "string[]", parcel.readString16Vector, parent)
     parcel.parse_field("wantsAllOnMoveCalls", "bool", parcel.readBool, parent)
@@ -584,7 +599,7 @@ def parseBulkCursorDescriptor(parcel: ParcelParser, parent: Field) -> None:
         )
 
 
-def parseContentProviderOperation(parcel: ParcelParser, parent: Field):
+def parseContentProviderOperation(parcel: ParcelParser, parent: Field):  # noqa
     parcel.parse_field("mType", "int32", parcel.readInt32, parent)
     parcel.parse_field("mUri", "android.net.Uri", functools.partial(parcel.readParcelable, "android.net.Uri"), parent)
 
@@ -618,7 +633,7 @@ def parseContentProviderOperation(parcel: ParcelParser, parent: Field):
     parcel.parse_field("mExceptionAllowed", "bool", parcel.readBool, parent)
 
 
-def parseBackReference(parcel: ParcelParser, parent: Field) -> None:
+def parseBackReference(parcel: ParcelParser, parent: Field) -> None:  # noqa
     parcel.parse_field("fromIndex", "int32", parcel.readInt32, parent)
     key_present_field = parcel.parse_field("fromKeyPresent", "int32", parcel.readInt32, parent)
 

@@ -1,9 +1,14 @@
-from prompt_toolkit.layout import AnyContainer, HSplit, VSplit
+"""Help panel."""
+
+from prompt_toolkit.layout import AnyContainer, HSplit
 from prompt_toolkit.widgets import Box, Frame, Label
 
 
 class HelpPanel:
+    """HelpPanel definition."""
+
     def __init__(self) -> None:
+        """Initialise HelpPanel."""
         self.visible = False
 
         float_frame = Box(
@@ -45,4 +50,5 @@ class HelpPanel:
         )
 
     def __pt_container__(self) -> AnyContainer:
+        """Get the internal container."""
         return self.container

@@ -1,5 +1,9 @@
-def getCursorWindowTransaction1():
-    c = {}
+# noqa
+from typing import Any, Dict
+
+
+def getCursorWindowTransaction1() -> Dict[Any, Any]:  # noqa
+    c: Dict[Any, Any] = {}
     c["code"] = 1
     c["in"] = []
     c["out"] = []
@@ -8,8 +12,8 @@ def getCursorWindowTransaction1():
     return c
 
 
-def deactivateTransaction2():
-    c = {}
+def deactivateTransaction2() -> Dict[Any, Any]:  # noqa
+    c: Dict[Any, Any] = {}
     c["code"] = 2
     c["in"] = []
     c["out"] = []
@@ -18,8 +22,8 @@ def deactivateTransaction2():
     return c
 
 
-def requeryTransaction3():
-    c = {}
+def requeryTransaction3() -> Dict[Any, Any]:  # noqa
+    c: Dict[Any, Any] = {}
     c["code"] = 3
     c["in"] = []
     c["out"] = []
@@ -28,8 +32,8 @@ def requeryTransaction3():
     return c
 
 
-def onMoveTransaction4():
-    c = {}
+def onMoveTransaction4() -> Dict[Any, Any]:  # noqa
+    c: Dict[Any, Any] = {}
     c["code"] = 4
     c["in"] = []
     c["out"] = []
@@ -38,8 +42,8 @@ def onMoveTransaction4():
     return c
 
 
-def getExtrasTransaction5():
-    c = {}
+def getExtrasTransaction5() -> Dict[Any, Any]:  # noqa
+    c: Dict[Any, Any] = {}
     c["code"] = 5
     c["in"] = []
     c["out"] = []
@@ -48,8 +52,8 @@ def getExtrasTransaction5():
     return c
 
 
-def respondTransaction6():
-    c = {}
+def respondTransaction6() -> Dict[Any, Any]:  # noqa
+    c: Dict[Any, Any] = {}
     c["code"] = 6
     c["in"] = []
     c["out"] = []
@@ -58,8 +62,8 @@ def respondTransaction6():
     return c
 
 
-def closeTransaction7():
-    c = {}
+def closeTransaction7() -> Dict[Any, Any]:  # noqa
+    c: Dict[Any, Any] = {}
     c["code"] = 7
     c["in"] = []
     c["out"] = []
@@ -68,8 +72,8 @@ def closeTransaction7():
     return c
 
 
-def getIBulkCursorInterface():
-    interface = {}
+def getIBulkCursorInterface() -> Dict[Any, Any]:  # noqa
+    interface: Dict[Any, Any] = {}
     interface["produced_on"] = ""
     interface["full_name"] = "android.database.IBulkCursor"
     interface["name"] = "IBulkCursor"

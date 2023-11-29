@@ -1,11 +1,15 @@
+"""TUI transactions frame."""
+
 import csv
 import io
+from typing import List, Tuple
 
 import pyperclip
 from prompt_toolkit.filters import Condition
 from prompt_toolkit.key_binding import KeyBindings
 from prompt_toolkit.layout import AnyContainer
 from prompt_toolkit.layout.dimension import AnyDimension, Dimension
+from prompt_toolkit.widgets import Label
 
 from binder_trace.tui import table
 from binder_trace.tui.selection import SelectionViewList
@@ -13,23 +17,31 @@ from binder_trace.tui.widget.frame import SelectableFrame
 
 
 class TransactionFrame:
+    """Transaction Frame."""
+
     def __init__(
         self,
         transactions: SelectionViewList,
         frequency_counter: SelectionViewList,
         height: AnyDimension = None,
     ) -> None:
+        """Initialise the transaction frame.
+
+        :param transactions: The transaction container to visualise
+        :param frequency_counter: The frequency counter to update
+        :param height: The height of the frame, defaults to None
+        """
         self.transactions = transactions
         self.frequency_counter = frequency_counter
         self.transactions.on_update_event += self.update_table
 
         self.headings = [
-            table.Label(""),
-            table.Label("Interface"),
-            table.Label("#"),
-            table.Label("Method"),
-            table.Label("len"),
-            table.Label(""),
+            Label(""),
+            Label("Interface"),
+            Label("#"),
+            Label("Method"),
+            Label("len"),
+            Label(""),
         ]
 
         self.table = table.Table(
@@ -54,15 +66,27 @@ class TransactionFrame:
             body=self.get_content,
         )
 
-    def resize(self, height):
+    def resize(self, height: int) -> None:
+        """Resize the transaction view.
+
+        :param height: Height to resize
+        """
         # Subtract one for the header row
         height -= 1
         self.transactions.resize_view(height)
 
-    def get_content(self):
+    def get_content(self) -> None:
+        """Get the transaction view content.
+
+        :return: Transaction table
+        """
         return self.table
 
-    def update_table(self, _):
+    def update_table(self, _) -> None:
+        """Update the table.
+
+        :param _: Unused
+        """
         self.table.children.clear()
 
         self.table.add_row(self.headings, "class:transactions.heading", id(self.headings))
@@ -76,58 +100,67 @@ class TransactionFrame:
 
         self.pad_table()
 
-    def pad_table(self):
+    def pad_table(self) -> None:
+        """Pad the table out."""
         padding = self.transactions.max_view_size - self.transactions.view.size()
         empty_row = [
-            table.Label(""),
-            table.Label(""),
-            table.Label(""),
-            table.Label(""),
-            table.Label(""),
-            table.Label(""),
+            Label(""),
+            Label(""),
+            Label(""),
+            Label(""),
+            Label(""),
+            Label(""),
         ]
         for _ in range(padding):
             self.table.add_row(empty_row, "class:transaction.default", id(empty_row))
 
     def key_bindings(self) -> KeyBindings:
+        """Key bindings."""
         kb = KeyBindings()
 
         @kb.add("up", filter=Condition(lambda: self.activated))
-        def _(event):
+        def _(event) -> None:  # type: ignore
+            """Up keybinding for navigation."""
             self.transactions.move_selection(-1)
 
         @kb.add("down", filter=Condition(lambda: self.activated))
-        def _(event):
+        def _(event) -> None:  # type: ignore
             self.transactions.move_selection(1)
 
         @kb.add("s-up", filter=Condition(lambda: self.activated))
-        def _(event):
+        def _(event) -> None:  # type: ignore
             self.transactions.move_selection(-self.transactions.max_view_size)
 
         @kb.add("s-down", filter=Condition(lambda: self.activated))
-        def _(event):
+        def _(event) -> None:  # type: ignore
             self.transactions.move_selection(self.transactions.max_view_size)
 
         @kb.add("home", filter=Condition(lambda: self.activated))
-        def _(event):
+        def _(event) -> None:  # type: ignore
             self.transactions.move_selection(-self.transactions.selection)
 
         @kb.add("end", filter=Condition(lambda: self.activated))
-        def _(event):
+        def _(event) -> None:  # type: ignore
             self.transactions.move_selection(len(self.transactions) - self.transactions.selection)
 
         return kb
 
     @property
-    def activated(self):
+    def activated(self) -> bool:
+        """Get activated flag."""
         return self.container.activated
 
     # Define a "name" setter
     @activated.setter
-    def activated(self, value):
+    def activated(self, value: bool) -> None:
+        """Set activated flag.
+
+        :param value: Flag value
+        """
         self.container.activated = value
 
-    def copy_to_clipboard(self):
+    def copy_to_clipboard(self) -> None:
+        """Copy selected transaction text to the clipboard."""
         if self.transactions.selection_valid():
             output = io.StringIO()
             writer = csv.writer(output, quoting=csv.QUOTE_NONE)
@@ -135,16 +168,22 @@ class TransactionFrame:
                 writer.writerow([t.interface, str(t.method_number), t.method, hex(len(t.raw_data))])
             pyperclip.copy(output.getvalue())
 
-    def _to_row(self, transaction):
+    def _to_row(self, transaction) -> Tuple[List[Label],]:
+        """Create a row from a transaction.
+
+        :param transaction: The transaction
+        :return: The row
+        """
         # TODO: Cache the rows so we don't need to recreate them.
         return [
-            table.Label(transaction.direction_indicator),
-            table.Label(transaction.interface),
-            table.Label(str(transaction.method_number)),
-            table.Label(transaction.method),
-            table.Label(hex(len(transaction.raw_data))),
-            table.Label(""),
+            Label(transaction.direction_indicator),
+            Label(transaction.interface),
+            Label(str(transaction.method_number)),
+            Label(transaction.method),
+            Label(hex(len(transaction.raw_data))),
+            Label(""),
         ], transaction.style()
 
     def __pt_container__(self) -> AnyContainer:
+        """Get internal container."""
         return self.container

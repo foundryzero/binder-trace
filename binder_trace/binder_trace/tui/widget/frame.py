@@ -1,5 +1,6 @@
+"""Frames for UI elements."""
 from functools import partial
-from typing import Optional
+from typing import Callable, Optional
 
 from prompt_toolkit.filters import Condition
 from prompt_toolkit.formatted_text import AnyFormattedText, Template
@@ -31,7 +32,7 @@ class SelectableFrame:
 
     def __init__(
         self,
-        body: AnyContainer,
+        body: Callable[[], AnyContainer],
         title: AnyFormattedText = "",
         style: str = "",
         width: AnyDimension = None,
@@ -40,6 +41,7 @@ class SelectableFrame:
         modal: bool = False,
         activated: bool = False,
     ) -> None:
+        """Initialise frame."""
         self.title = title
         self.body = body
         self.activated = activated
@@ -117,4 +119,5 @@ class SelectableFrame:
         )
 
     def __pt_container__(self) -> Container:
+        """Get internal container."""
         return self.container

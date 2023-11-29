@@ -1,5 +1,6 @@
+"""binder-trace module main."""
+
 import argparse
-import json
 import logging
 import traceback
 from os import path
@@ -17,6 +18,7 @@ log = logging.getLogger(loggers.LOG)
 
 
 def main():
+    """Entry point of binder-trace."""
     parser = argparse.ArgumentParser(
         description="Connects to a Android device with a "
         "frida server running and extracts and "
