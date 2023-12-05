@@ -1,13 +1,17 @@
 """Parsing override functions."""
+from __future__ import annotations
 
 import functools
 import logging
+from typing import TYPE_CHECKING
 
 import binder_trace.constants
 from binder_trace import loggers
-from binder_trace.parcel import ParcelParser
-from binder_trace.parsedParcel import Field
 from binder_trace.parseerror import ParseError
+
+if TYPE_CHECKING:
+    from binder_trace.parcel import ParcelParser
+    from binder_trace.parsedParcel import Field
 
 parsing_log = logging.getLogger(loggers.PARSING_LOG)
 
@@ -79,7 +83,12 @@ def parcelableOverride(parcel: ParcelParser, parcelType: str, name: str, parent:
         "android.content.ContentProviderOperation$BackReference": parseBackReference,
     }
     if parcelType in override_handlers:
-        parcel.parse_field(name, parcelType, functools.partial(override_handlers[parcelType], parcel), parent)
+        parcel.parse_field(
+            name,
+            parcelType,
+            functools.partial(override_handlers[parcelType], parcel),
+            parent,
+        )
     elif parcelType == "android.view.AbsSavedState$1":
         parseAbsSavedState(parcel, name, parent)
     elif parcelType == "Rect":
@@ -169,7 +178,10 @@ def parseIntentFilter(parcel: ParcelParser, parent: Field) -> None:  # noqa
         parent,
     )
     parcel.parse_field(
-        "mDataPaths", "", functools.partial(parcel.readParcelableVectorWithoutNullChecks, "PatternMatcher"), parent
+        "mDataPaths",
+        "",
+        functools.partial(parcel.readParcelableVectorWithoutNullChecks, "PatternMatcher"),
+        parent,
     )
 
     parcel.parse_field("mPriority", "int32", parcel.readInt32, parent)
@@ -192,7 +204,12 @@ def parseProcessStats(parcel: ParcelParser, parent: Field) -> None:  # noqa
 
 
 def parseAbsSavedState(parcel: ParcelParser, name: str, parent: Field) -> None:  # noqa
-    parcel.parse_field(name, "AbsSavedState", functools.partial(parcel.readParcelable, "__dynamic"), parent)
+    parcel.parse_field(
+        name,
+        "AbsSavedState",
+        functools.partial(parcel.readParcelable, "__dynamic"),
+        parent,
+    )
 
 
 def parseAddressList(parcel: ParcelParser, name: str, parent: Field) -> None:  # noqa
@@ -216,7 +233,10 @@ def parseLinkProperties(parcel: ParcelParser, parent: Field) -> None:  # noqa
     parcel.parse_field("iface", "string", parcel.readString16, parent)
 
     parcel.parse_field(
-        "linkAddresses", "", functools.partial(parcel.readParcelableVectorWithoutNullChecks, "__dynamic"), parent
+        "linkAddresses",
+        "",
+        functools.partial(parcel.readParcelableVectorWithoutNullChecks, "__dynamic"),
+        parent,
     )
 
     parcel.parse_field("DnsServers", "", parseAddressList, parent)
@@ -229,26 +249,54 @@ def parseLinkProperties(parcel: ParcelParser, parent: Field) -> None:  # noqa
 
     parcel.parse_field("setDomains", "string", parcel.readString16, parent)
 
-    parcel.parse_field("setDhcpServerAddress", "Address", functools.partial(readAddress, parcel), parent)
+    parcel.parse_field(
+        "setDhcpServerAddress",
+        "Address",
+        functools.partial(readAddress, parcel),
+        parent,
+    )
     parcel.parse_field("setMtu", "int32", parcel.readInt32, parent)
     parcel.parse_field("setTcpBufferSizes", "string", parcel.readString16, parent)
 
     parcel.parse_field(
-        "Routes", "", functools.partial(parcel.readParcelableVectorWithoutNullChecks, "__dynamic"), parent
+        "Routes",
+        "",
+        functools.partial(parcel.readParcelableVectorWithoutNullChecks, "__dynamic"),
+        parent,
     )
 
     null_check_field = parcel.parse_field("HttpProxy-nullcheck", "", parcel.readBool, parent)
     if null_check_field.content:
-        parcel.parse_field("HttpProxy-nullcheck", "", functools.partial(parcel.readParcelable, "__dynamic"), parent)
+        parcel.parse_field(
+            "HttpProxy-nullcheck",
+            "",
+            functools.partial(parcel.readParcelable, "__dynamic"),
+            parent,
+        )
 
-    parcel.parse_field("setNat64Prefix", "", functools.partial(parcel.readParcelable, "__dynamic"), parent)
+    parcel.parse_field(
+        "setNat64Prefix",
+        "",
+        functools.partial(parcel.readParcelable, "__dynamic"),
+        parent,
+    )
 
     parcel.parse_field("stackedLinks", "List<LinkProperties>", parcel.readList, parent)
     parcel.parse_field("setWakeOnLanSupported", "bool", parcel.readBool, parent)
 
-    parcel.parse_field("setCaptivePortalApiUrl", "", functools.partial(parcel.readParcelable, "__dynamic"), parent)
+    parcel.parse_field(
+        "setCaptivePortalApiUrl",
+        "",
+        functools.partial(parcel.readParcelable, "__dynamic"),
+        parent,
+    )
 
-    parcel.parse_field("setCaptivePortalData", "", functools.partial(parcel.readParcelable, "__dynamic"), parent)
+    parcel.parse_field(
+        "setCaptivePortalData",
+        "",
+        functools.partial(parcel.readParcelable, "__dynamic"),
+        parent,
+    )
 
 
 def parseCharSequence(parcel: ParcelParser, parent: Field) -> None:  # noqa
@@ -296,7 +344,10 @@ def parseCharSequence(parcel: ParcelParser, parent: Field) -> None:  # noqa
             span_type_name = span_names.get(spanned_string_type_field.content)
 
             parcel.parse_field(
-                "span", span_type_name, functools.partial(parse_span, parcel, spanned_string_type_field.content), parent
+                "span",
+                span_type_name,
+                functools.partial(parse_span, parcel, spanned_string_type_field.content),
+                parent,
             )
 
             spanned_string_type_field = parcel.parse_field("kind", "int32", parcel.readInt32, parent)
@@ -382,7 +433,12 @@ def parse_span(parcel: ParcelParser, kind: int, parent: Field) -> None:  # noqa
         parcel.parse_field("typefacePid", "int32", parcel.readInt32, parent)
         parcel.parse_field("typefaceId", "int32", parcel.readInt32, parent)
         parcel.parse_field("mTextFontWeight", "int32", parcel.readInt32, parent)
-        parcel.parse_field("mTextLocales", "", functools.partial(parcel.readParcelable, "__dynamic"), parent)
+        parcel.parse_field(
+            "mTextLocales",
+            "",
+            functools.partial(parcel.readParcelable, "__dynamic"),
+            parent,
+        )
         parcel.parse_field("mShadowRadius", "float", parcel.readFloat, parent)
         parcel.parse_field("mShadowDx", "float", parcel.readFloat, parent)
         parcel.parse_field("mShadowDy", "float", parcel.readFloat, parent)
@@ -420,11 +476,21 @@ def parse_span(parcel: ParcelParser, kind: int, parent: Field) -> None:  # noqa
         parcel.parse_field("mBackgroundColor", "int32", parcel.readInt32, parent)
 
     elif kind == binder_trace.constants.SpanType.EASY_EDIT_SPAN:
-        parcel.parse_field("mPendingIntent", "", functools.partial(parcel.readParcelable, "__dynamic"), parent)
+        parcel.parse_field(
+            "mPendingIntent",
+            "",
+            functools.partial(parcel.readParcelable, "__dynamic"),
+            parent,
+        )
         parcel.parse_field("mDeleteEnabled", "int32", parcel.readByte, parent)
 
     elif kind == binder_trace.constants.SpanType.LOCALE_SPAN:
-        parcel.parse_field("mLocales", "", functools.partial(parcel.readParcelable, "android.os.LocaleList"), parent)
+        parcel.parse_field(
+            "mLocales",
+            "",
+            functools.partial(parcel.readParcelable, "android.os.LocaleList"),
+            parent,
+        )
 
     elif kind == binder_trace.constants.SpanType.TTS_SPAN:
         parcel.parse_field("mType", "string", parcel.readString16, parent)
@@ -444,7 +510,12 @@ def parse_span(parcel: ParcelParser, kind: int, parent: Field) -> None:  # noqa
         parcel.parse_field("mHeight", "int32", parcel.readInt32, parent)
 
     elif kind == binder_trace.constants.SpanType.ACCESSIBILITY_REPLACEMENT_SPAN:
-        parcel.parse_field("contentDescription", "CharSequence", functools.partial(parseCharSequence, parcel), parent)
+        parcel.parse_field(
+            "contentDescription",
+            "CharSequence",
+            functools.partial(parseCharSequence, parcel),
+            parent,
+        )
 
     elif kind == (
         binder_trace.constants.SpanType.SUPERSCRIPT_SPAN
@@ -497,7 +568,10 @@ def parseBitmap(parcel: ParcelParser, parent: Field) -> None:  # noqa
     parcel.parse_field("density", "int32", parcel.readInt32, parent)
 
     blob_size = calc_byte_size(
-        width_field.content, height_field.content, row_bytes_field.content, color_type_field.content
+        width_field.content,
+        height_field.content,
+        row_bytes_field.content,
+        color_type_field.content,
     )
 
     parcel.parse_field("blob", "byte[]", functools.partial(parcel.readBlob, blob_size), parent)
@@ -538,7 +612,12 @@ def parseResolveInfo(parcel: ParcelParser, parent: Field) -> None:  # noqa
 
     filter_nullcheck_field = parcel.parse_field("filter-nullcheck", "int32", parcel.readInt32, parent)
     if filter_nullcheck_field.content != 0:
-        parcel.parse_field("filter", "IntentFilter", functools.partial(parcel.readParcelable, "IntentFilter"), parent)
+        parcel.parse_field(
+            "filter",
+            "IntentFilter",
+            functools.partial(parcel.readParcelable, "IntentFilter"),
+            parent,
+        )
 
     parcel.parse_field("priority", "int32", parcel.readInt32, parent)
     parcel.parse_field("preferredorder", "int32", parcel.readInt32, parent)
@@ -601,7 +680,12 @@ def parseBulkCursorDescriptor(parcel: ParcelParser, parent: Field) -> None:  # n
 
 def parseContentProviderOperation(parcel: ParcelParser, parent: Field):  # noqa
     parcel.parse_field("mType", "int32", parcel.readInt32, parent)
-    parcel.parse_field("mUri", "android.net.Uri", functools.partial(parcel.readParcelable, "android.net.Uri"), parent)
+    parcel.parse_field(
+        "mUri",
+        "android.net.Uri",
+        functools.partial(parcel.readParcelable, "android.net.Uri"),
+        parent,
+    )
 
     method_present_field = parcel.parse_field("mMethodPresent", "int32", parcel.readInt32, parent)
     if method_present_field.content:

@@ -22,7 +22,13 @@ class FridaInjector:
 
     SCRIPT_FILE = os.path.join(os.path.dirname(__file__), "js/interceptbinder.js")
 
-    def __init__(self, process_identifier: str, struct_path: str, android_version: int, device_name: str):
+    def __init__(
+        self,
+        process_identifier: str,
+        struct_path: str,
+        android_version: int,
+        device_name: str,
+    ):
         """Initialise FridaInjector.
 
         :param process_identifier: Process identifier

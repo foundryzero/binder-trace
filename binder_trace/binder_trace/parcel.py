@@ -1,9 +1,10 @@
 """Parcel parser."""
+from __future__ import annotations
 
 import functools
 import logging
 import struct
-from typing import Any, Callable, Optional
+from typing import TYPE_CHECKING, Any, Callable, Optional
 
 from binder_trace import constants, loggers
 
@@ -11,7 +12,9 @@ from binder_trace import constants, loggers
 # getattr. Ideally the structures would contain tags that mapped to function names rather than actual function names.
 from binder_trace.parsedParcel import Field, FieldData
 from binder_trace.parseerror import ParseError
-from binder_trace.structure import StructureStore
+
+if TYPE_CHECKING:
+    from binder_trace.structure import StructureStore
 
 parsing_log = logging.getLogger(loggers.PARSING_LOG)
 log = logging.getLogger(loggers.LOG)
@@ -33,7 +36,11 @@ class ParcelParser:
         self.android_version = android_version
 
     def parse_field(
-        self, name: str, type_name: str, read_func: Callable[[Field], Any], parent: Optional[Field] = None
+        self,
+        name: str,
+        type_name: str,
+        read_func: Callable[[Field], Any],
+        parent: Optional[Field] = None,
     ) -> Field:
         """Parse a field.
 
