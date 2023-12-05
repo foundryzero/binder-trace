@@ -27,7 +27,12 @@ def queryTransaction1() -> Dict[Any, Any]:
     c["out"].append(
         {
             "__backreference": "nullcheck",
-            "__conditional": [{"__return": "readParcelable", "__parcelType": "android.database.BulkCursorDescriptor"}],
+            "__conditional": [
+                {
+                    "__return": "readParcelable",
+                    "__parcelType": "android.database.BulkCursorDescriptor",
+                }
+            ],
         }
     )
     c["name"] = "query"
@@ -116,7 +121,12 @@ def applyBatchTransaction20() -> Dict[Any, Any]:  # noqa
     c["in"].append(
         {
             "__backreference": "numOperations",
-            "__repeated": [{"operation": "readParcelable", "__parcelType": "android.content.ContentProviderOperation"}],
+            "__repeated": [
+                {
+                    "operation": "readParcelable",
+                    "__parcelType": "android.content.ContentProviderOperation",
+                }
+            ],
         }
     )
 

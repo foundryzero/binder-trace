@@ -96,6 +96,23 @@ class Field:
             content = str(self.content)
         return f"{indent}Field(name={self.name}, type={self.typename}, position={self.position}, content={content})"
 
+    def __eq__(self, other) -> bool:
+        """Equality builtin override.
+
+        :param other: Other object to compare against
+        :return: True if objects are equal, False otherwise
+        """
+        result = False
+        if isinstance(other, type(self)):
+            if (
+                self.name == other.name
+                and self.content == other.content
+                and self.typename == other.typename
+                and self.position == other.position
+            ):
+                result = True
+        return result
+
 
 class Direction(Enum):
     """Direction enum."""
