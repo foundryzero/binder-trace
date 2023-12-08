@@ -54,6 +54,7 @@ You'll need a rooted Android device or emulator.
 | -a&nbsp;[9, 10, 11, 13]   | The version of android to load structures for.             |
 | -s&nbsp;STRUCTPATH   | The path to the directory of structure files.             |
 | -c&nbsp;CONFIG   | The path to the config file to filter.             |
+| --spawn&nbsp;    | Spawn process before attaching. -n option **must** be present and contain a valid process identifier.|
 
 # ▶️ Starting binder trace
 

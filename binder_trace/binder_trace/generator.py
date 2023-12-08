@@ -23,11 +23,7 @@ class FridaInjector:
     SCRIPT_FILE = os.path.join(os.path.dirname(__file__), "js/interceptbinder.js")
 
     def __init__(
-        self,
-        process_identifier: str,
-        struct_path: str,
-        android_version: int,
-        device_name: str,
+        self, process_identifier: str, struct_path: str, android_version: int, device_name: str, spawn_process: bool
     ):
         """Initialise FridaInjector.
 
@@ -35,11 +31,13 @@ class FridaInjector:
         :param struct_path: Path to struct files
         :param android_version: Version of android
         :param device_name: Device or emulator name
+        :param spawn_process: Should process be spawned?
         """
         self.process_identifier = process_identifier
         self.android_version = android_version
         self._stop_event = threading.Event()
         self._handler_process = None
+        self.spawn_process = spawn_process
 
         self.message_queue: queue.Queue[str] = queue.Queue()
         self.block_queue: queue.Queue[Block] = queue.Queue()
@@ -58,7 +56,12 @@ class FridaInjector:
 
     def start(self):
         """Start the injector."""
-        self.session = self.device.attach(self.process_identifier)
+        if self.spawn_process:
+            process_pid = self.device.spawn([self.process_identifier])
+            self.session = self.device.attach(process_pid)
+            self.device.resume(process_pid)
+        else:
+            self.session = self.device.attach(self.process_identifier)
         self.script = self.session.create_script(self.script_content)
         self.script.on("message", self._message_handler)
 
