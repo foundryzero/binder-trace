@@ -17,8 +17,11 @@ loggers.configure()
 log = logging.getLogger(loggers.LOG)
 
 
-def main():
-    """Entry point of binder-trace."""
+def setupArgParser() -> argparse.ArgumentParser:
+    """Prepare CLI Argument parser with all valid args.
+
+    :return: A prepared ArgumnetParser
+    """
     parser = argparse.ArgumentParser(
         description="Connects to a Android device with a "
         "frida server running and extracts and "
@@ -27,8 +30,8 @@ def main():
     )
 
     group = parser.add_mutually_exclusive_group(required=True)
-    group.add_argument("-p", "--pid", dest="pid", type=int, help="the process id to attach to")
-    group.add_argument("-n", "--name", dest="name", type=str, help="the process name to attach to")
+    group.add_argument("-p", "--pid", dest="pid", type=int, help="The process id to attach to")
+    group.add_argument("-n", "--name", dest="name", type=str, help="The process name to attach to")
 
     parser.add_argument(
         "-d",
@@ -43,7 +46,6 @@ def main():
     struct_group.add_argument(
         "-a",
         "--android-version",
-        const="all",
         nargs="?",
         choices=["9", "10", "11", "12", "13", "14"],
         default="13",
@@ -53,10 +55,21 @@ def main():
     struct_group.add_argument(
         "-s",
         "--structpath",
-        help="provides the path to the root of the struct directory. e.g. ../structs/android11",
+        help="Provides the path to the root of the struct directory. e.g. ../structs/android11",
     )
 
     parser.add_argument("-c", "--config", help="Path to a binder-trace configuration file")
+
+    parser.add_argument(
+        "--spawn", dest="spawn", action="store_true", default=False, help="Spawn process before attaching"
+    )
+
+    return parser
+
+
+def main():
+    """Entry point of binder-trace."""
+    parser = setupArgParser()
     args = parser.parse_args()
 
     structs_dict = {
@@ -76,15 +89,14 @@ def main():
         print(f'Struct path "{struct_path}" not found.')
         exit(-1)
 
+    if args.spawn and not args.name:
+        print("Name option is required to spawn process")
+        exit(-1)
+
     config = None
     injector = None
     try:
-        injector = FridaInjector(
-            args.pid or args.name,
-            struct_path,
-            int(args.android_version),
-            args.device,
-        )
+        injector = FridaInjector(args.pid or args.name, struct_path, int(args.android_version), args.device, args.spawn)
         injector.start()
         binder_trace.tui.interface.start_ui(injector.block_queue, injector.pause_unpause, config, args.config)
         log.info("UI Stopped")
