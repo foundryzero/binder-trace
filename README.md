@@ -145,3 +145,9 @@ To filter define any or all of the interface, method, type and inclusive options
 `android.gui.IDisplayEventConnection`->`requestNextVsync`->`""` and `android.content.IContentProvider`->`""` ->`call` have been filtered out
 
 ![After Config](https://github.com/foundryzero/binder-trace/raw/main/binder-trace-after-config.png)
+
+# 📦 Structure Compatibility
+
+Internal binder interfaces can change around between minor versions, and since it's effectively all compiled together with no runtime version information it's hard to provide 100% accurate structure information for every release across Android's highly fragmented ecosystem.
+
+More details on structures can be found in the [structures page](STRUCTURES.md)
