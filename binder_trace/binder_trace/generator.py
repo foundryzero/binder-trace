@@ -16,11 +16,12 @@ parsing_log = logging.getLogger(loggers.PARSING_LOG)
 class FridaInjector:
     SCRIPT_FILE = os.path.join(os.path.dirname(__file__), "js/interceptbinder.js")
 
-    def __init__(self, process_identifier, struct_path, android_version, device_name):
+    def __init__(self, process_identifier, struct_path, android_version, device_name, is_spawn):
         self.process_identifier = process_identifier
         self.android_version = android_version
         self._stop_event = threading.Event()
         self._handler_process = None
+        self.is_spawn = is_spawn
 
         self.message_queue = queue.Queue()
         self.block_queue = queue.Queue()
@@ -38,6 +39,8 @@ class FridaInjector:
             self.device = frida.get_usb_device()
 
     def start(self):
+        if self.is_spawn:
+            self.process_identifier = self.device.spawn([self.process_identifier])
         self.session = self.device.attach(self.process_identifier)
         self.script = self.session.create_script(self.script_content)
         self.script.on("message", self._message_handler)
@@ -72,6 +75,8 @@ class FridaInjector:
 
     def _start(self):
         self.script.load()
+        if self.is_spawn:
+            self.device.resume(self.process_identifier)
 
         self.script.exports.init(None, {"connected": "true", "version": self.android_version})
         self.message_queue.put("Connected")

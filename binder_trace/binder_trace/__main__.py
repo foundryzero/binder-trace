@@ -27,6 +27,7 @@ def main():
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("-p", "--pid", dest="pid", type=int, help="the process id to attach to")
     group.add_argument("-n", "--name", dest="name", type=str, help="the process name to attach to")
+    group.add_argument("-P", "--packagename", dest="packagename", type=str, help="the application packagename to spwan")
 
     parser.add_argument(
         "-d",
@@ -77,10 +78,11 @@ def main():
     injector = None
     try:
         injector = FridaInjector(
-            args.pid or args.name,
+            args.pid or args.name or args.packagename,
             struct_path,
             int(args.android_version),
             args.device,
+            True if args.packagename else False
         )
         injector.start()
         binder_trace.tui.interface.start_ui(injector.block_queue, injector.pause_unpause, config, args.config)

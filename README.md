@@ -45,15 +45,16 @@ You'll need a rooted Android device or emulator.
 
 # Arguments
 
-| Argument             | Description                                                                                                                            |
-|----------------------|----------------------------------------------------------------------------------------------------------------------------------------|
-| -h                   | Prints the argument help.                                                                                                              |
-| -d&nbsp;DEVICE       | The device to attach to e.g. "emulator-5554". Use `adb devices` to list available devices. If not provided defaults to the USB device. |
-| -p&nbsp;PID          | The pid of the process on DEVICE to attach to.                                                                                         |
-| -n&nbsp;NAME         | The name of the process on DEVICE to attach to e.g. "Messaging".                                                                       |
-| -a&nbsp;[9, 10, 11, 13]   | The version of android to load structures for.             |
-| -s&nbsp;STRUCTPATH   | The path to the directory of structure files.             |
-| -c&nbsp;CONFIG   | The path to the config file to filter.             |
+| Argument                | Description                                                                                                                           |
+|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
+| -h                      | Prints the argument help.                                                                                                             |
+| -d&nbsp;DEVICE          | The device to attach to e.g. "emulator-5554". Use `adb devices` to list available devices. If not provided defaults to the USB device. |
+| -p&nbsp;PID             | The pid of the process on DEVICE to attach to.                                                                                        |
+| -n&nbsp;NAME            | The name of the process on DEVICE to attach to e.g. "Messaging".                                                                      |
+| -P&nbsp;PACAKAGENAME    | The packagename of the application on DEVICE to spawn to e.g. "Messaging".                                                            |
+| -a&nbsp;[9, 10, 11, 13] | The version of android to load structures for.                                                                                        |
+| -s&nbsp;STRUCTPATH      | The path to the directory of structure files.                                                                                         |
+| -c&nbsp;CONFIG          | The path to the config file to filter.                                                                                                |
 
 # ▶️ Starting binder trace
 
