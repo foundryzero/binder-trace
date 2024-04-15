@@ -1,0 +1,33 @@
+{
+    "produced_on": "2024-04-12T08:47:44.377928849Z",
+    "source_location": "",
+    "full_name": "android.media.ISoundDoseCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"currentMel": "readFloat"},
+                {"deviceId": "readInt32"}
+            ],
+            "name": "onMomentaryExposure",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"currentCsd": "readFloat"},
+                {
+                    "records": "readParcelableVector",
+                    "__parcelType": "android.media.SoundDoseRecord"
+                }
+            ],
+            "name": "onNewCsdValue",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISoundDoseCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

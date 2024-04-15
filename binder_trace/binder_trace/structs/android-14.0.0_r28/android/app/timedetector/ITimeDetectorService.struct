@@ -1,0 +1,183 @@
+{
+    "produced_on": "2024-04-12T08:47:44.919229828Z",
+    "source_location": "",
+    "full_name": "android.app.timedetector.ITimeDetectorService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getCapabilitiesAndConfig",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.app.time.TimeCapabilitiesAndConfig"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "addListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "removeListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "timeConfiguration": "readParcelable",
+                        "__parcelType": "android.app.time.TimeConfiguration"
+                    }]
+                }
+            ],
+            "name": "updateConfiguration",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "getTimeState",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.app.time.TimeState"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "time": "readParcelable",
+                        "__parcelType": "android.app.time.UnixEpochTime"
+                    }]
+                }
+            ],
+            "name": "confirmTime",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "timeZoneSuggestion": "readParcelable",
+                        "__parcelType": "android.app.timedetector.ManualTimeSuggestion"
+                    }]
+                }
+            ],
+            "name": "setManualTime",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "timeSuggestion": "readParcelable",
+                        "__parcelType": "android.app.time.ExternalTimeSuggestion"
+                    }]
+                }
+            ],
+            "name": "suggestExternalTime",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "timeSuggestion": "readParcelable",
+                        "__parcelType": "android.app.timedetector.ManualTimeSuggestion"
+                    }]
+                }
+            ],
+            "name": "suggestManualTime",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "timeSuggestion": "readParcelable",
+                        "__parcelType": "android.app.timedetector.TelephonyTimeSuggestion"
+                    }]
+                }
+            ],
+            "name": "suggestTelephonyTime",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [],
+            "name": "latestNetworkTime",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.app.time.UnixEpochTime"
+                    }]
+                }
+            ]
+        }
+    ],
+    "name": "ITimeDetectorService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

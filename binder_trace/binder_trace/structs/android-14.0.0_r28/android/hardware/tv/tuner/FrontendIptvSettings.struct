@@ -1,0 +1,44 @@
+{
+    "produced_on": "2024-04-12T08:47:55.798515260Z",
+    "source_location": "",
+    "components": [
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "protocol": "readParcelable",
+                "__parcelType": "android.hardware.tv.tuner.FrontendIptvSettingsProtocol"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "fec": "readParcelable",
+                "__parcelType": "android.hardware.tv.tuner.FrontendIptvSettingsFec"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "igmp": "readParcelable",
+                "__parcelType": "android.hardware.tv.tuner.FrontendIptvSettingsIgmp"
+            }]
+        },
+        {"bitrate": "readInt64"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "ipAddr": "readParcelable",
+                "__parcelType": "android.hardware.tv.tuner.DemuxIpAddress"
+            }]
+        },
+        {"contentUrl": "readString16"}
+    ],
+    "full_name": "android.hardware.tv.tuner.FrontendIptvSettings",
+    "name": "FrontendIptvSettings",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

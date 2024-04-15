@@ -1,0 +1,30 @@
+{
+    "produced_on": "2024-04-12T08:47:51.567407083Z",
+    "source_location": "",
+    "components": [
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "mode": "readParcelable",
+                "__parcelType": "android.hardware.gnss.GnssPositionMode"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "recurrence": "readParcelable",
+                "__parcelType": "android.hardware.gnss.GnssPositionRecurrence"
+            }]
+        },
+        {"minIntervalMs": "readInt32"},
+        {"preferredAccuracyMeters": "readInt32"},
+        {"preferredTimeMs": "readInt32"},
+        {"lowPowerMode": "readBool"}
+    ],
+    "full_name": "android.hardware.gnss.PositionModeOptions",
+    "name": "PositionModeOptions",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

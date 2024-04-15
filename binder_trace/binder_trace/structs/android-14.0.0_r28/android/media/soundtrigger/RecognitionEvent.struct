@@ -1,0 +1,40 @@
+{
+    "produced_on": "2024-04-12T08:48:00.129341802Z",
+    "source_location": "",
+    "components": [
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "status": "readParcelable",
+                "__parcelType": "android.media.soundtrigger.RecognitionStatus"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "type": "readParcelable",
+                "__parcelType": "android.media.soundtrigger.SoundModelType"
+            }]
+        },
+        {"captureAvailable": "readBool"},
+        {"captureDelayMs": "readInt32"},
+        {"capturePreambleMs": "readInt32"},
+        {"triggerInData": "readBool"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "audioConfig": "readParcelable",
+                "__parcelType": "android.media.soundtrigger.android.media.audio.common.AudioConfig"
+            }]
+        },
+        {"data": "readByteVector"},
+        {"recognitionStillActive": "readBool"}
+    ],
+    "full_name": "android.media.soundtrigger.RecognitionEvent",
+    "name": "RecognitionEvent",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

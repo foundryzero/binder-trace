@@ -1,0 +1,32 @@
+{
+    "produced_on": "2024-04-12T08:47:57.688509107Z",
+    "source_location": "",
+    "full_name": "android.uwb.IUwbAdapterStateCallbacks",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "state": "readParcelable",
+                    "__parcelType": "android.uwb.AdapterState"
+                }]
+            },
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "reason": "readParcelable",
+                    "__parcelType": "android.uwb.StateChangeReason"
+                }]
+            }
+        ],
+        "name": "onAdapterStateChanged",
+        "oneWay": true,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "IUwbAdapterStateCallbacks",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

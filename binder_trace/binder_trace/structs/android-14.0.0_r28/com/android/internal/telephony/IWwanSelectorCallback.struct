@@ -1,0 +1,38 @@
+{
+    "produced_on": "2024-04-12T08:47:47.162407176Z",
+    "source_location": "",
+    "full_name": "com.android.internal.telephony.IWwanSelectorCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"preferredNetworks": "readInt32Vector"},
+                {"scanType": "readInt32"},
+                {"cb": "readStrongBinder"}
+            ],
+            "name": "onRequestEmergencyNetworkScan",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"domain": "readInt32"},
+                {"useEmergencyPdn": "readBool"}
+            ],
+            "name": "onDomainSelected",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "onCancel",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IWwanSelectorCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

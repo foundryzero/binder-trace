@@ -1,0 +1,47 @@
+{
+    "produced_on": "2024-04-12T08:47:45.835618601Z",
+    "source_location": "",
+    "full_name": "android.service.voice.IVisualQueryDetectionVoiceInteractionCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"partialQuery": "readString16"}],
+            "name": "onQueryDetected",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "onQueryFinished",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "onQueryRejected",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "visualQueryDetectionServiceFailure": "readParcelable",
+                        "__parcelType": "android.service.voice.VisualQueryDetectionServiceFailure"
+                    }]
+                }
+            ],
+            "name": "onVisualQueryDetectionServiceFailure",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IVisualQueryDetectionVoiceInteractionCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

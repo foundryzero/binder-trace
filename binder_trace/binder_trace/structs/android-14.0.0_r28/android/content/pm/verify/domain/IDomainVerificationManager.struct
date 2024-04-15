@@ -1,0 +1,130 @@
+{
+    "produced_on": "2024-04-12T08:47:45.154832861Z",
+    "source_location": "",
+    "full_name": "android.content.pm.verify.domain.IDomainVerificationManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "queryValidVerificationPackageNames",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "String"
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"packageName": "readString16"}],
+            "name": "getDomainVerificationInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.verify.domain.DomainVerificationInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "getDomainVerificationUserState",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.verify.domain.DomainVerificationUserState"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"domain": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "getOwnersForDomain",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.content.pm.verify.domain.DomainOwner"
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"domainSetId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "domains": "readParcelable",
+                        "__parcelType": "android.content.pm.verify.domain.DomainSet"
+                    }]
+                },
+                {"state": "readInt32"}
+            ],
+            "name": "setDomainVerificationStatus",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"packageName": "readString16"},
+                {"allowed": "readBool"},
+                {"userId": "readInt32"}
+            ],
+            "name": "setDomainVerificationLinkHandlingAllowed",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"domainSetId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "domains": "readParcelable",
+                        "__parcelType": "android.content.pm.verify.domain.DomainSet"
+                    }]
+                },
+                {"enabled": "readBool"},
+                {"userId": "readInt32"}
+            ],
+            "name": "setDomainVerificationUserSelection",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        }
+    ],
+    "name": "IDomainVerificationManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

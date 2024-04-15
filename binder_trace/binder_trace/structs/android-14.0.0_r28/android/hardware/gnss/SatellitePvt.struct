@@ -1,0 +1,52 @@
+{
+    "produced_on": "2024-04-12T08:47:51.516978431Z",
+    "source_location": "",
+    "components": [
+        {"flags": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "satPosEcef": "readParcelable",
+                "__parcelType": "android.hardware.gnss.SatellitePositionEcef"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "satVelEcef": "readParcelable",
+                "__parcelType": "android.hardware.gnss.SatelliteVelocityEcef"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "satClockInfo": "readParcelable",
+                "__parcelType": "android.hardware.gnss.SatelliteClockInfo"
+            }]
+        },
+        {"ionoDelayMeters": "readDouble"},
+        {"tropoDelayMeters": "readDouble"},
+        {"timeOfClockSeconds": "readInt64"},
+        {"issueOfDataClock": "readInt32"},
+        {"timeOfEphemerisSeconds": "readInt64"},
+        {"issueOfDataEphemeris": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "ephemerisSource": "readParcelable",
+                "__parcelType": "android.hardware.gnss.SatellitePvt.SatelliteEphemerisSource"
+            }]
+        },
+        {"HAS_POSITION_VELOCITY_CLOCK_INFO": "readInt32"},
+        {"HAS_IONO": "readInt32"},
+        {"HAS_TROPO": "readInt32"}
+    ],
+    "full_name": "android.hardware.gnss.SatellitePvt",
+    "name": "SatellitePvt",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

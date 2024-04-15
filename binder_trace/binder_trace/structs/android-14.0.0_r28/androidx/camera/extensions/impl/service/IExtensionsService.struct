@@ -1,0 +1,67 @@
+{
+    "produced_on": "2024-04-12T08:47:47.223691135Z",
+    "source_location": "",
+    "full_name": "androidx.camera.extensions.impl.service.IExtensionsService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "isAdvancedExtenderImplemented",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"version": "readString16"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "initialize",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "deInitialize",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"extensionType": "readInt32"}],
+            "name": "initializeAdvancedExtension",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"extensionType": "readInt32"}],
+            "name": "initializePreviewExtension",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [{"extensionType": "readInt32"}],
+            "name": "initializeImageCaptureExtension",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        }
+    ],
+    "name": "IExtensionsService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

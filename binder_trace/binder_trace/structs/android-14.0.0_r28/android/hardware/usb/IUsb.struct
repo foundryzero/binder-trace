@@ -1,0 +1,95 @@
+{
+    "produced_on": "2024-04-12T08:47:55.936320103Z",
+    "source_location": "",
+    "full_name": "android.hardware.usb.IUsb",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"portName": "readString16"},
+                {"enable": "readBool"},
+                {"transactionId": "readInt64"}
+            ],
+            "name": "enableContaminantPresenceDetection",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"portName": "readString16"},
+                {"enable": "readBool"},
+                {"transactionId": "readInt64"}
+            ],
+            "name": "enableUsbData",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"portName": "readString16"},
+                {"transactionId": "readInt64"}
+            ],
+            "name": "enableUsbDataWhileDocked",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"transactionId": "readInt64"}],
+            "name": "queryPortStatus",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "setCallback",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"portName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "role": "readParcelable",
+                        "__parcelType": "android.hardware.usb.PortRole"
+                    }]
+                },
+                {"transactionId": "readInt64"}
+            ],
+            "name": "switchRole",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"portName": "readString16"},
+                {"limit": "readBool"},
+                {"transactionId": "readInt64"}
+            ],
+            "name": "limitPowerTransfer",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"portName": "readString16"},
+                {"transactionId": "readInt64"}
+            ],
+            "name": "resetUsbPort",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IUsb",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

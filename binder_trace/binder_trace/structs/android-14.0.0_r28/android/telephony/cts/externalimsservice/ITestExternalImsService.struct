@@ -1,0 +1,73 @@
+{
+    "produced_on": "2024-04-12T08:47:44.168960726Z",
+    "source_location": "",
+    "full_name": "android.telephony.cts.externalimsservice.ITestExternalImsService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"latchIndex": "readInt32"}],
+            "name": "waitForLatchCountdown",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "f": "readParcelable",
+                        "__parcelType": "android.telephony.ims.stub.ImsFeatureConfiguration"
+                    }]
+                }
+            ],
+            "name": "setFeatureConfig",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "isRcsFeatureCreated",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "isMmTelFeatureCreated",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "resetState",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "isTelephonyBound",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "ITestExternalImsService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

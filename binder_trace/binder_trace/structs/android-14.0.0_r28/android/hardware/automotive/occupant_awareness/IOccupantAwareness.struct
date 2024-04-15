@@ -1,0 +1,114 @@
+{
+    "produced_on": "2024-04-12T08:47:48.782035950Z",
+    "source_location": "",
+    "full_name": "android.hardware.automotive.occupant_awareness.IOccupantAwareness",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "startDetection",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.automotive.occupant_awareness.OccupantAwarenessStatus"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "stopDetection",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.automotive.occupant_awareness.OccupantAwarenessStatus"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "occupantRole": "readParcelable",
+                        "__parcelType": "android.hardware.automotive.occupant_awareness.Role"
+                    }]
+                }
+            ],
+            "name": "getCapabilityForRole",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "occupantRole": "readParcelable",
+                        "__parcelType": "android.hardware.automotive.occupant_awareness.Role"
+                    }]
+                },
+                {"detectionCapability": "readInt32"}
+            ],
+            "name": "getState",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.automotive.occupant_awareness.OccupantAwarenessStatus"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "setCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "getLatestDetection",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "detections": "readParcelable",
+                        "__parcelType": "android.hardware.automotive.occupant_awareness.OccupantDetections"
+                    }]
+                }
+            ]
+        }
+    ],
+    "name": "IOccupantAwareness",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,206 @@
+{
+    "produced_on": "2024-04-12T08:47:55.853760719Z",
+    "source_location": "",
+    "full_name": "android.hardware.tv.tuner.ITuner",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getFrontendIds",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"frontendId": "readInt32"}],
+            "name": "openFrontendById",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "openDemux",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"},
+                {"demuxId": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "getDemuxCaps",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.tv.tuner.DemuxCapabilities"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "openDescrambler",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [{"frontendId": "readInt32"}],
+            "name": "getFrontendInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.tv.tuner.FrontendInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "getLnbIds",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [{"lnbId": "readInt32"}],
+            "name": "openLnbById",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [{"lnbName": "readString16"}],
+            "name": "openLnbByName",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"},
+                {"lnbId": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [{"bEnable": "readBool"}],
+            "name": "setLna",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "frontendType": "readParcelable",
+                        "__parcelType": "android.hardware.tv.tuner.FrontendType"
+                    }]
+                },
+                {"maxNumber": "readInt32"}
+            ],
+            "name": "setMaxNumberOfFrontends",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "frontendType": "readParcelable",
+                        "__parcelType": "android.hardware.tv.tuner.FrontendType"
+                    }]
+                }
+            ],
+            "name": "getMaxNumberOfFrontends",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [],
+            "name": "isLnaSupported",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 14,
+            "in": [],
+            "name": "getDemuxIds",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 15,
+            "in": [{"demuxId": "readInt32"}],
+            "name": "openDemuxById",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 16,
+            "in": [{"demuxId": "readInt32"}],
+            "name": "getDemuxInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.tv.tuner.DemuxInfo"
+                    }]
+                }
+            ]
+        }
+    ],
+    "name": "ITuner",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

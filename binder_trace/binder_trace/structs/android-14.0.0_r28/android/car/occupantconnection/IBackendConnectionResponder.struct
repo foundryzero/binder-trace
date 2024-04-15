@@ -1,0 +1,43 @@
+{
+    "produced_on": "2024-04-12T08:47:59.023062817Z",
+    "source_location": "",
+    "full_name": "android.car.occupantconnection.IBackendConnectionResponder",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "senderZone": "readParcelable",
+                        "__parcelType": "android.car.occupantconnection.CarOccupantZoneManager.OccupantZoneInfo"
+                    }]
+                }
+            ],
+            "name": "acceptConnection",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "senderZone": "readParcelable",
+                        "__parcelType": "android.car.occupantconnection.CarOccupantZoneManager.OccupantZoneInfo"
+                    }]
+                },
+                {"rejectionReason": "readInt32"}
+            ],
+            "name": "rejectConnection",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IBackendConnectionResponder",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

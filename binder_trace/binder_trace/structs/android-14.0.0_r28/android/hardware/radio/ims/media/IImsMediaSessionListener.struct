@@ -1,0 +1,118 @@
+{
+    "produced_on": "2024-04-12T08:47:54.140684505Z",
+    "source_location": "",
+    "full_name": "android.hardware.radio.ims.media.IImsMediaSessionListener",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "config": "readParcelable",
+                        "__parcelType": "android.hardware.radio.ims.media.RtpConfig"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "error": "readParcelable",
+                        "__parcelType": "android.hardware.radio.ims.media.RtpError"
+                    }]
+                }
+            ],
+            "name": "onModifySessionResponse",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "config": "readParcelable",
+                        "__parcelType": "android.hardware.radio.ims.media.RtpConfig"
+                    }]
+                }
+            ],
+            "name": "onFirstMediaPacketReceived",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{
+                "extensions": "readList",
+                "__parcelType": "android.hardware.radio.ims.media.RtpHeaderExtension"
+            }],
+            "name": "onHeaderExtensionReceived",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "quality": "readParcelable",
+                        "__parcelType": "android.hardware.radio.ims.media.MediaQualityStatus"
+                    }]
+                }
+            ],
+            "name": "notifyMediaQualityStatus",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "config": "readParcelable",
+                        "__parcelType": "android.hardware.radio.ims.media.RtpConfig"
+                    }]
+                }
+            ],
+            "name": "triggerAnbrQuery",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"dtmfDigit": "readChar"},
+                {"durationMs": "readInt32"}
+            ],
+            "name": "onDtmfReceived",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callQuality": "readParcelable",
+                        "__parcelType": "android.hardware.radio.ims.media.CallQuality"
+                    }]
+                }
+            ],
+            "name": "onCallQualityChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IImsMediaSessionListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

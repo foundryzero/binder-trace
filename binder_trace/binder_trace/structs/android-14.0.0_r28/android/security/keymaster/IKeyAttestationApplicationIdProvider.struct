@@ -1,0 +1,25 @@
+{
+    "produced_on": "2024-04-12T08:47:45.666454650Z",
+    "source_location": "",
+    "full_name": "android.security.keymaster.IKeyAttestationApplicationIdProvider",
+    "calls": [{
+        "code": 1,
+        "in": [{"uid": "readInt32"}],
+        "name": "getKeyAttestationApplicationId",
+        "oneWay": false,
+        "out": [
+            {"__exception": "readException"},
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "__return": "readParcelable",
+                    "__parcelType": "android.security.keymaster.KeyAttestationApplicationId"
+                }]
+            }
+        ]
+    }],
+    "name": "IKeyAttestationApplicationIdProvider",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

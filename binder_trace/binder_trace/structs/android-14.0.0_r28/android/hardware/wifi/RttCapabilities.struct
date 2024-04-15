@@ -1,0 +1,32 @@
+{
+    "produced_on": "2024-04-12T08:47:56.571901467Z",
+    "source_location": "",
+    "components": [
+        {"rttOneSidedSupported": "readBool"},
+        {"rttFtmSupported": "readBool"},
+        {"lciSupported": "readBool"},
+        {"lcrSupported": "readBool"},
+        {"responderSupported": "readBool"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "preambleSupport": "readParcelable",
+                "__parcelType": "android.hardware.wifi.RttPreamble"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "bwSupport": "readParcelable",
+                "__parcelType": "android.hardware.wifi.RttBw"
+            }]
+        },
+        {"mcVersion": "readByte"}
+    ],
+    "full_name": "android.hardware.wifi.RttCapabilities",
+    "name": "RttCapabilities",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

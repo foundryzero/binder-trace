@@ -1,0 +1,29 @@
+{
+    "produced_on": "2024-04-12T08:47:52.423851464Z",
+    "source_location": "",
+    "components": [
+        {"connection": "readStrongBinder"},
+        {"connectionId": "readInt64"},
+        {"msgId": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "toFmqDesc": "readParcelable",
+                "__parcelType": "android.hardware.media.bufferpool2.MQDescriptor<BufferStatusMessage,SynchronizedReadWrite>"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "fromFmqDesc": "readParcelable",
+                "__parcelType": "android.hardware.media.bufferpool2.MQDescriptor<BufferInvalidationMessage,UnsynchronizedWrite>"
+            }]
+        }
+    ],
+    "full_name": "android.hardware.media.bufferpool2.ConnectionInfo",
+    "name": "ConnectionInfo",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

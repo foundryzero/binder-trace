@@ -1,0 +1,48 @@
+{
+    "produced_on": "2024-04-12T08:47:47.297591176Z",
+    "source_location": "",
+    "full_name": "android.frameworks.automotive.powerpolicy.internal.ICarPowerPolicySystemNotification",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "notifyCarServiceReady",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.frameworks.automotive.powerpolicy.internal.PolicyState"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"policyId": "readString16"},
+                {"force": "readBool"}
+            ],
+            "name": "notifyPowerPolicyChange",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"policyId": "readString16"},
+                {"enabledComponents": "readString16Vector"},
+                {"disabledComponents": "readString16Vector"}
+            ],
+            "name": "notifyPowerPolicyDefinition",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICarPowerPolicySystemNotification",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

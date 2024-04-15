@@ -1,0 +1,124 @@
+{
+    "produced_on": "2024-04-12T08:47:50.352736091Z",
+    "source_location": "",
+    "full_name": "android.hardware.camera.device.ICameraDevice",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getCameraCharacteristics",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.camera.device.CameraMetadata"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"physicalCameraId": "readString16"}],
+            "name": "getPhysicalCameraCharacteristics",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.camera.device.CameraMetadata"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getResourceCost",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.camera.common.CameraResourceCost"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "streams": "readParcelable",
+                        "__parcelType": "android.hardware.camera.device.StreamConfiguration"
+                    }]
+                }
+            ],
+            "name": "isStreamCombinationSupported",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "open",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "openInjectionSession",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [{"on": "readBool"}],
+            "name": "setTorchMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{"torchStrength": "readInt32"}],
+            "name": "turnOnTorchWithStrengthLevel",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [],
+            "name": "getTorchStrengthLevel",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        }
+    ],
+    "name": "ICameraDevice",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

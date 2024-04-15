@@ -1,0 +1,71 @@
+{
+    "produced_on": "2024-04-12T08:47:45.374478866Z",
+    "source_location": "",
+    "full_name": "android.hardware.lights.ILightsManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getLights",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.hardware.lights.Light"
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"lightId": "readInt32"}],
+            "name": "getLightState",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.lights.LightState"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {"priority": "readInt32"}
+            ],
+            "name": "openSession",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"sessionToken": "readStrongBinder"}],
+            "name": "closeSession",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {"lightIds": "readInt32Vector"},
+                {
+                    "states": "readParcelableVector",
+                    "__parcelType": "android.hardware.lights.LightState"
+                }
+            ],
+            "name": "setLightStates",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ILightsManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,361 @@
+{
+    "produced_on": "2024-04-12T08:47:59.664812653Z",
+    "source_location": "",
+    "full_name": "com.android.trusty.binder.test.ITestService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"token": "readBool"}],
+            "name": "RepeatBoolean",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"token": "readByte"}],
+            "name": "RepeatByte",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByte"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"token": "readChar"}],
+            "name": "RepeatChar",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readChar"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"token": "readInt32"}],
+            "name": "RepeatInt",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"token": "readInt64"}],
+            "name": "RepeatLong",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [{"token": "readFloat"}],
+            "name": "RepeatFloat",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readFloat"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [{"token": "readDouble"}],
+            "name": "RepeatDouble",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readDouble"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [{"token": "readString16"}],
+            "name": "RepeatString",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "token": "readParcelable",
+                        "__parcelType": "com.android.trusty.binder.test.ByteEnum"
+                    }]
+                }
+            ],
+            "name": "RepeatByteEnum",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.trusty.binder.test.ByteEnum"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "token": "readParcelable",
+                        "__parcelType": "com.android.trusty.binder.test.IntEnum"
+                    }]
+                }
+            ],
+            "name": "RepeatIntEnum",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.trusty.binder.test.IntEnum"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "token": "readParcelable",
+                        "__parcelType": "com.android.trusty.binder.test.LongEnum"
+                    }]
+                }
+            ],
+            "name": "RepeatLongEnum",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.trusty.binder.test.LongEnum"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 12,
+            "in": [{
+                "input": "readParcelableVector",
+                "__parcelType": "com.android.trusty.binder.test.boolean"
+            }],
+            "name": "ReverseBoolean",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "com.android.trusty.binder.test.boolean"
+                },
+                {
+                    "repeated": "readParcelableVector",
+                    "__parcelType": "com.android.trusty.binder.test.boolean"
+                }
+            ]
+        },
+        {
+            "code": 13,
+            "in": [{"input": "readByteVector"}],
+            "name": "ReverseByte",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"},
+                {"repeated": "readByteVector"}
+            ]
+        },
+        {
+            "code": 14,
+            "in": [{
+                "input": "readParcelableVector",
+                "__parcelType": "com.android.trusty.binder.test.char"
+            }],
+            "name": "ReverseChar",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "com.android.trusty.binder.test.char"
+                },
+                {
+                    "repeated": "readParcelableVector",
+                    "__parcelType": "com.android.trusty.binder.test.char"
+                }
+            ]
+        },
+        {
+            "code": 15,
+            "in": [{"input": "readInt32Vector"}],
+            "name": "ReverseInt",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"},
+                {"repeated": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 16,
+            "in": [{
+                "input": "readParcelableVector",
+                "__parcelType": "com.android.trusty.binder.test.long"
+            }],
+            "name": "ReverseLong",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "com.android.trusty.binder.test.long"
+                },
+                {
+                    "repeated": "readParcelableVector",
+                    "__parcelType": "com.android.trusty.binder.test.long"
+                }
+            ]
+        },
+        {
+            "code": 17,
+            "in": [{
+                "input": "readParcelableVector",
+                "__parcelType": "com.android.trusty.binder.test.float"
+            }],
+            "name": "ReverseFloat",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "com.android.trusty.binder.test.float"
+                },
+                {
+                    "repeated": "readParcelableVector",
+                    "__parcelType": "com.android.trusty.binder.test.float"
+                }
+            ]
+        },
+        {
+            "code": 18,
+            "in": [{
+                "input": "readParcelableVector",
+                "__parcelType": "com.android.trusty.binder.test.double"
+            }],
+            "name": "ReverseDouble",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "com.android.trusty.binder.test.double"
+                },
+                {
+                    "repeated": "readParcelableVector",
+                    "__parcelType": "com.android.trusty.binder.test.double"
+                }
+            ]
+        },
+        {
+            "code": 19,
+            "in": [{"input": "readString16Vector"}],
+            "name": "ReverseString",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"},
+                {"repeated": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 20,
+            "in": [{
+                "input": "readParcelableVector",
+                "__parcelType": "com.android.trusty.binder.test.ByteEnum"
+            }],
+            "name": "ReverseByteEnum",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "com.android.trusty.binder.test.ByteEnum"
+                },
+                {
+                    "repeated": "readParcelableVector",
+                    "__parcelType": "com.android.trusty.binder.test.ByteEnum"
+                }
+            ]
+        },
+        {
+            "code": 21,
+            "in": [{
+                "input": "readParcelableVector",
+                "__parcelType": "com.android.trusty.binder.test.IntEnum"
+            }],
+            "name": "ReverseIntEnum",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "com.android.trusty.binder.test.IntEnum"
+                },
+                {
+                    "repeated": "readParcelableVector",
+                    "__parcelType": "com.android.trusty.binder.test.IntEnum"
+                }
+            ]
+        },
+        {
+            "code": 22,
+            "in": [{
+                "input": "readParcelableVector",
+                "__parcelType": "com.android.trusty.binder.test.LongEnum"
+            }],
+            "name": "ReverseLongEnum",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "com.android.trusty.binder.test.LongEnum"
+                },
+                {
+                    "repeated": "readParcelableVector",
+                    "__parcelType": "com.android.trusty.binder.test.LongEnum"
+                }
+            ]
+        }
+    ],
+    "name": "ITestService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

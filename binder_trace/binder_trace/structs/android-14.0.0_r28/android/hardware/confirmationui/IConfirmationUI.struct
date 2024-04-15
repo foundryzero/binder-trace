@@ -1,0 +1,49 @@
+{
+    "produced_on": "2024-04-12T08:47:51.038378811Z",
+    "source_location": "",
+    "full_name": "android.hardware.confirmationui.IConfirmationUI",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "abort",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "secureInputToken": "readParcelable",
+                        "__parcelType": "android.hardware.security.keymint.HardwareAuthToken"
+                    }]
+                }
+            ],
+            "name": "deliverSecureInputEvent",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"resultCB": "readStrongBinder"},
+                {"promptText": "readByteVector"},
+                {"extraData": "readByteVector"},
+                {"locale": "readString16"},
+                {
+                    "uiOptions": "readParcelableVector",
+                    "__parcelType": "android.hardware.confirmationui.UIOption"
+                }
+            ],
+            "name": "promptUserConfirmation",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IConfirmationUI",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

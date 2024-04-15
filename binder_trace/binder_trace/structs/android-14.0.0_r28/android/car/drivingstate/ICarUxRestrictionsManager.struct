@@ -1,0 +1,103 @@
+{
+    "produced_on": "2024-04-12T08:47:58.978905097Z",
+    "source_location": "",
+    "full_name": "android.car.drivingstate.ICarUxRestrictionsManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"listener": "readStrongBinder"},
+                {"displayId": "readInt32"}
+            ],
+            "name": "registerUxRestrictionsChangeListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "unregisterUxRestrictionsChangeListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"displayId": "readInt32"}],
+            "name": "getCurrentUxRestrictions",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.car.drivingstate.CarUxRestrictions"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{
+                "configs": "readList",
+                "__parcelType": "android.car.drivingstate.CarUxRestrictionsConfiguration"
+            }],
+            "name": "saveUxRestrictionsConfigurationForNextBoot",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "getStagedConfigs",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.car.drivingstate.CarUxRestrictionsConfiguration"
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "getConfigs",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.car.drivingstate.CarUxRestrictionsConfiguration"
+                }
+            ]
+        },
+        {
+            "code": 11,
+            "in": [{"mode": "readString16"}],
+            "name": "setRestrictionMode",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [],
+            "name": "getRestrictionMode",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        }
+    ],
+    "name": "ICarUxRestrictionsManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

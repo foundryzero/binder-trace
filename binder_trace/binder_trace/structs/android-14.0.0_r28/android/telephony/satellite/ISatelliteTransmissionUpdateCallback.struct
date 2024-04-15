@@ -1,0 +1,48 @@
+{
+    "produced_on": "2024-04-12T08:47:46.988800230Z",
+    "source_location": "",
+    "full_name": "android.telephony.satellite.ISatelliteTransmissionUpdateCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"state": "readInt32"},
+                {"sendPendingCount": "readInt32"},
+                {"errorCode": "readInt32"}
+            ],
+            "name": "onSendDatagramStateChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"state": "readInt32"},
+                {"receivePendingCount": "readInt32"},
+                {"errorCode": "readInt32"}
+            ],
+            "name": "onReceiveDatagramStateChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "pointingInfo": "readParcelable",
+                        "__parcelType": "android.telephony.satellite.PointingInfo"
+                    }]
+                }
+            ],
+            "name": "onSatellitePositionChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISatelliteTransmissionUpdateCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

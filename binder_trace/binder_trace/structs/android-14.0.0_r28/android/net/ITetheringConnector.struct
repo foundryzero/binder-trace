@@ -1,0 +1,149 @@
+{
+    "produced_on": "2024-04-12T08:47:57.745217046Z",
+    "source_location": "",
+    "full_name": "android.net.ITetheringConnector",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"iface": "readString16"},
+                {"callerPkg": "readString16"},
+                {"callingAttributionTag": "readString16"},
+                {"receiver": "readStrongBinder"}
+            ],
+            "name": "tether",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"iface": "readString16"},
+                {"callerPkg": "readString16"},
+                {"callingAttributionTag": "readString16"},
+                {"receiver": "readStrongBinder"}
+            ],
+            "name": "untether",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"enable": "readBool"},
+                {"callerPkg": "readString16"},
+                {"callingAttributionTag": "readString16"},
+                {"receiver": "readStrongBinder"}
+            ],
+            "name": "setUsbTethering",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.net.TetheringRequestParcel"
+                    }]
+                },
+                {"callerPkg": "readString16"},
+                {"callingAttributionTag": "readString16"},
+                {"receiver": "readStrongBinder"}
+            ],
+            "name": "startTethering",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"type": "readInt32"},
+                {"callerPkg": "readString16"},
+                {"callingAttributionTag": "readString16"},
+                {"receiver": "readStrongBinder"}
+            ],
+            "name": "stopTethering",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"type": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiver": "readParcelable",
+                        "__parcelType": "android.os.ResultReceiver"
+                    }]
+                },
+                {"showEntitlementUi": "readBool"},
+                {"callerPkg": "readString16"},
+                {"callingAttributionTag": "readString16"}
+            ],
+            "name": "requestLatestTetheringEntitlementResult",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"callback": "readStrongBinder"},
+                {"callerPkg": "readString16"}
+            ],
+            "name": "registerTetheringEventCallback",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"callback": "readStrongBinder"},
+                {"callerPkg": "readString16"}
+            ],
+            "name": "unregisterTetheringEventCallback",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"callerPkg": "readString16"},
+                {"callingAttributionTag": "readString16"},
+                {"receiver": "readStrongBinder"}
+            ],
+            "name": "isTetheringSupported",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"callerPkg": "readString16"},
+                {"callingAttributionTag": "readString16"},
+                {"receiver": "readStrongBinder"}
+            ],
+            "name": "stopAllTethering",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"prefer": "readBool"},
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "setPreferTestNetworks",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ITetheringConnector",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

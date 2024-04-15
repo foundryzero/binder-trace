@@ -1,0 +1,81 @@
+{
+    "produced_on": "2024-04-12T08:47:57.813779572Z",
+    "source_location": "",
+    "full_name": "android.net.ITestNetworkManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"isTun": "readBool"},
+                {"hasCarrier": "readBool"},
+                {"bringUp": "readBool"},
+                {"disableIpv6ProvisioningDelay": "readBool"},
+                {
+                    "addrs": "readParcelableVector",
+                    "__parcelType": "android.net.LinkAddress"
+                },
+                {"iface": "readString16"}
+            ],
+            "name": "createInterface",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.net.TestNetworkInterface"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "iface": "readParcelable",
+                        "__parcelType": "android.net.TestNetworkInterface"
+                    }]
+                },
+                {"enabled": "readBool"}
+            ],
+            "name": "setCarrierEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"iface": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "lp": "readParcelable",
+                        "__parcelType": "android.net.LinkProperties"
+                    }]
+                },
+                {"isMetered": "readBool"},
+                {"administratorUids": "readInt32Vector"},
+                {"binder": "readStrongBinder"}
+            ],
+            "name": "setupTestNetwork",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"netId": "readInt32"}],
+            "name": "teardownTestNetwork",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ITestNetworkManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

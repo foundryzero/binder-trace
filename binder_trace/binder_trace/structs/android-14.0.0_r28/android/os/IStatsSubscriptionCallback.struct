@@ -1,0 +1,25 @@
+{
+    "produced_on": "2024-04-12T08:47:57.354102750Z",
+    "source_location": "",
+    "full_name": "android.os.IStatsSubscriptionCallback",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "reason": "readParcelable",
+                    "__parcelType": "android.os.StatsSubscriptionCallbackReason"
+                }]
+            },
+            {"subscriptionPayload": "readByteVector"}
+        ],
+        "name": "onSubscriptionData",
+        "oneWay": true,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "IStatsSubscriptionCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

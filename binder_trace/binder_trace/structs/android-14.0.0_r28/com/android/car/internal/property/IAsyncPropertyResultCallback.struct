@@ -1,0 +1,42 @@
+{
+    "produced_on": "2024-04-12T08:47:59.097123912Z",
+    "source_location": "",
+    "full_name": "com.android.car.internal.property.IAsyncPropertyResultCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "getValueResults": "readParcelable",
+                        "__parcelType": "com.android.car.internal.property.GetSetValueResultList"
+                    }]
+                }
+            ],
+            "name": "onGetValueResults",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "setValueResults": "readParcelable",
+                        "__parcelType": "com.android.car.internal.property.GetSetValueResultList"
+                    }]
+                }
+            ],
+            "name": "onSetValueResults",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IAsyncPropertyResultCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

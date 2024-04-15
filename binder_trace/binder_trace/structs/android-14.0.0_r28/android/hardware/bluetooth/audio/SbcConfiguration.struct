@@ -1,0 +1,32 @@
+{
+    "produced_on": "2024-04-12T08:47:50.066453792Z",
+    "source_location": "",
+    "components": [
+        {"sampleRateHz": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "channelMode": "readParcelable",
+                "__parcelType": "android.hardware.bluetooth.audio.SbcChannelMode"
+            }]
+        },
+        {"blockLength": "readByte"},
+        {"numSubbands": "readByte"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "allocMethod": "readParcelable",
+                "__parcelType": "android.hardware.bluetooth.audio.SbcAllocMethod"
+            }]
+        },
+        {"bitsPerSample": "readByte"},
+        {"minBitpool": "readInt32"},
+        {"maxBitpool": "readInt32"}
+    ],
+    "full_name": "android.hardware.bluetooth.audio.SbcConfiguration",
+    "name": "SbcConfiguration",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

@@ -1,0 +1,32 @@
+{
+    "produced_on": "2024-04-12T08:47:54.278690342Z",
+    "source_location": "",
+    "components": [
+        {"SIGNAL_MEASUREMENT_TYPE_RSSI": "readInt32"},
+        {"SIGNAL_MEASUREMENT_TYPE_RSCP": "readInt32"},
+        {"SIGNAL_MEASUREMENT_TYPE_RSRP": "readInt32"},
+        {"SIGNAL_MEASUREMENT_TYPE_RSRQ": "readInt32"},
+        {"SIGNAL_MEASUREMENT_TYPE_RSSNR": "readInt32"},
+        {"SIGNAL_MEASUREMENT_TYPE_SSRSRP": "readInt32"},
+        {"SIGNAL_MEASUREMENT_TYPE_SSRSRQ": "readInt32"},
+        {"SIGNAL_MEASUREMENT_TYPE_SSSINR": "readInt32"},
+        {"SIGNAL_MEASUREMENT_TYPE_ECNO": "readInt32"},
+        {"signalMeasurement": "readInt32"},
+        {"hysteresisMs": "readInt32"},
+        {"hysteresisDb": "readInt32"},
+        {"thresholds": "readInt32Vector"},
+        {"isEnabled": "readBool"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "ran": "readParcelable",
+                "__parcelType": "android.hardware.radio.AccessNetwork"
+            }]
+        }
+    ],
+    "full_name": "android.hardware.radio.network.SignalThresholdInfo",
+    "name": "SignalThresholdInfo",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

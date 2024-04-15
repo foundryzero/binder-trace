@@ -1,0 +1,194 @@
+{
+    "produced_on": "2024-04-12T08:47:57.806746992Z",
+    "source_location": "",
+    "full_name": "android.net.INetworkAgent",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"registry": "readStrongBinder"}],
+            "name": "onRegistered",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "onDisconnected",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "onBandwidthUpdateRequested",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"validationStatus": "readInt32"},
+                {"captivePortalUrl": "readString16"}
+            ],
+            "name": "onValidationStatusChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"acceptUnvalidated": "readBool"}],
+            "name": "onSaveAcceptUnvalidated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"slot": "readInt32"},
+                {"intervalDurationMs": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "packetData": "readParcelable",
+                        "__parcelType": "android.net.NattKeepalivePacketData"
+                    }]
+                }
+            ],
+            "name": "onStartNattSocketKeepalive",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"slot": "readInt32"},
+                {"intervalDurationMs": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "packetData": "readParcelable",
+                        "__parcelType": "android.net.TcpKeepalivePacketData"
+                    }]
+                }
+            ],
+            "name": "onStartTcpSocketKeepalive",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{"slot": "readInt32"}],
+            "name": "onStopSocketKeepalive",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [{"thresholds": "readInt32Vector"}],
+            "name": "onSignalStrengthThresholdsUpdated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [],
+            "name": "onPreventAutomaticReconnect",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"slot": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "packetData": "readParcelable",
+                        "__parcelType": "android.net.NattKeepalivePacketData"
+                    }]
+                }
+            ],
+            "name": "onAddNattKeepalivePacketFilter",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"slot": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "packetData": "readParcelable",
+                        "__parcelType": "android.net.TcpKeepalivePacketData"
+                    }]
+                }
+            ],
+            "name": "onAddTcpKeepalivePacketFilter",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [{"slot": "readInt32"}],
+            "name": "onRemoveKeepalivePacketFilter",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"qosCallbackId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "filterParcel": "readParcelable",
+                        "__parcelType": "android.net.QosFilterParcelable"
+                    }]
+                }
+            ],
+            "name": "onQosFilterCallbackRegistered",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [{"qosCallbackId": "readInt32"}],
+            "name": "onQosCallbackUnregistered",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [],
+            "name": "onNetworkCreated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [],
+            "name": "onNetworkDestroyed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"policyId": "readInt32"},
+                {"status": "readInt32"}
+            ],
+            "name": "onDscpPolicyStatusUpdated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "INetworkAgent",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

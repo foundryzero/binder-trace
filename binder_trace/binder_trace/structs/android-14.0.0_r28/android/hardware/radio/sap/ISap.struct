@@ -1,0 +1,100 @@
+{
+    "produced_on": "2024-04-12T08:47:54.285006198Z",
+    "source_location": "",
+    "full_name": "android.hardware.radio.sap.ISap",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.hardware.radio.sap.SapApduType"
+                    }]
+                },
+                {"command": "readByteVector"}
+            ],
+            "name": "apduReq",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"serial": "readInt32"},
+                {"maxMsgSizeBytes": "readInt32"}
+            ],
+            "name": "connectReq",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"serial": "readInt32"}],
+            "name": "disconnectReq",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"serial": "readInt32"},
+                {"powerOn": "readBool"}
+            ],
+            "name": "powerReq",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"serial": "readInt32"}],
+            "name": "resetSimReq",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"sapCallback": "readStrongBinder"}],
+            "name": "setCallback",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "transferProtocol": "readParcelable",
+                        "__parcelType": "android.hardware.radio.sap.SapTransferProtocol"
+                    }]
+                }
+            ],
+            "name": "setTransferProtocolReq",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{"serial": "readInt32"}],
+            "name": "transferAtrReq",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [{"serial": "readInt32"}],
+            "name": "transferCardReaderStatusReq",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISap",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

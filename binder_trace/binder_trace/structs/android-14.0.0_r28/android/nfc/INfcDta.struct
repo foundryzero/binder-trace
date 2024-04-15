@@ -1,0 +1,79 @@
+{
+    "produced_on": "2024-04-12T08:47:45.481729177Z",
+    "source_location": "",
+    "full_name": "android.nfc.INfcDta",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "enableDta",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "disableDta",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"serviceName": "readString16"},
+                {"serviceSap": "readInt32"},
+                {"miu": "readInt32"},
+                {"rwSize": "readInt32"},
+                {"testCaseId": "readInt32"}
+            ],
+            "name": "enableServer",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "disableServer",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"serviceName": "readString16"},
+                {"miu": "readInt32"},
+                {"rwSize": "readInt32"},
+                {"testCaseId": "readInt32"}
+            ],
+            "name": "enableClient",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "disableClient",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"msgServiceName": "readString16"}],
+            "name": "registerMessageService",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "INfcDta",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,29 @@
+{
+    "produced_on": "2024-04-12T08:47:43.901976219Z",
+    "source_location": "",
+    "full_name": "device.google.atv.audio_proxy.IStreamProvider",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"address": "readString16"},
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "config": "readParcelable",
+                    "__parcelType": "device.google.atv.audio_proxy.AudioConfig"
+                }]
+            },
+            {"flags": "readInt32"}
+        ],
+        "name": "openOutputStream",
+        "oneWay": false,
+        "out": [
+            {"__exception": "readException"},
+            {"__return": "readStrongBinder"}
+        ]
+    }],
+    "name": "IStreamProvider",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

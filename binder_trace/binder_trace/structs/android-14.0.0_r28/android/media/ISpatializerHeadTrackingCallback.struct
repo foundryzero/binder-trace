@@ -1,0 +1,36 @@
+{
+    "produced_on": "2024-04-12T08:47:44.382789166Z",
+    "source_location": "",
+    "full_name": "android.media.ISpatializerHeadTrackingCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "mode": "readParcelable",
+                        "__parcelType": "android.media.SpatializerHeadTrackingMode"
+                    }]
+                }
+            ],
+            "name": "onHeadTrackingModeChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{
+                "headToStage": "readParcelableVector",
+                "__parcelType": "android.media.float"
+            }],
+            "name": "onHeadToSoundStagePoseUpdated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISpatializerHeadTrackingCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

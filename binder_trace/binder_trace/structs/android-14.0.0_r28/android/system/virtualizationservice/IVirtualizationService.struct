@@ -1,0 +1,107 @@
+{
+    "produced_on": "2024-04-12T08:47:57.726784489Z",
+    "source_location": "",
+    "full_name": "android.system.virtualizationservice.IVirtualizationService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "config": "readParcelable",
+                        "__parcelType": "android.system.virtualizationservice.VirtualMachineConfig"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "consoleFd": "readParcelable",
+                        "__parcelType": "android.system.virtualizationservice.ParcelFileDescriptor"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "osLogFd": "readParcelable",
+                        "__parcelType": "android.system.virtualizationservice.ParcelFileDescriptor"
+                    }]
+                }
+            ],
+            "name": "createVm",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "imageFd": "readParcelable",
+                        "__parcelType": "android.system.virtualizationservice.ParcelFileDescriptor"
+                    }]
+                },
+                {"sizeBytes": "readInt64"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.system.virtualizationservice.PartitionType"
+                    }]
+                }
+            ],
+            "name": "initializeWritablePartition",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "inputFd": "readParcelable",
+                        "__parcelType": "android.system.virtualizationservice.ParcelFileDescriptor"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "idsigFd": "readParcelable",
+                        "__parcelType": "android.system.virtualizationservice.ParcelFileDescriptor"
+                    }]
+                }
+            ],
+            "name": "createOrUpdateIdsigFile",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "debugListVms",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.system.virtualizationservice.VirtualMachineDebugInfo"
+                }
+            ]
+        }
+    ],
+    "name": "IVirtualizationService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

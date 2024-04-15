@@ -1,0 +1,29 @@
+{
+    "produced_on": "2024-04-12T08:53:53.941619998Z",
+    "source_location": "",
+    "components": [
+        {"currentMode": "readInt32"},
+        {"currentPowerRole": "readInt32"},
+        {"currentDataRole": "readInt32"},
+        {"supportedRoleCombinations": "readInt32"},
+        {"contaminantProtectionStatus": "readInt32"},
+        {"contaminantDetectionStatus": "readInt32"},
+        {"usbDataStatus": "readInt32"},
+        {"powerTransferLimited": "readBool"},
+        {"powerBrickConnectionStatus": "readInt32"},
+        {"complianceWarnings": "readInt32Vector"},
+        {"plugState": "readInt32"},
+        {"supportsDisplayPortAltMode": "readBool"},
+        {
+            "__backreference": "supportsDisplayPortAltMode",
+            "__conditional": [{
+                "displayPortAltModeInfo": "readParcelable",
+                "__parcelType": "android.hardware.usb.DisplayPortAltModeInfo"
+            }]
+        }
+    ],
+    "full_name": "android.hardware.usb.UsbPortStatus",
+    "name": "UsbPortStatus",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

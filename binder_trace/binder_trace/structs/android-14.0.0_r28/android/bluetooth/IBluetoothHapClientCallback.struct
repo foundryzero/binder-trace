@@ -1,0 +1,103 @@
+{
+    "produced_on": "2024-04-12T08:47:57.518466712Z",
+    "source_location": "",
+    "full_name": "android.bluetooth.IBluetoothHapClientCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "device": "readParcelable",
+                        "__parcelType": "android.bluetooth.BluetoothDevice"
+                    }]
+                },
+                {"presetIndex": "readInt32"},
+                {"reasonCode": "readInt32"}
+            ],
+            "name": "onPresetSelected",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "device": "readParcelable",
+                        "__parcelType": "android.bluetooth.BluetoothDevice"
+                    }]
+                },
+                {"statusCode": "readInt32"}
+            ],
+            "name": "onPresetSelectionFailed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"hapGroupId": "readInt32"},
+                {"statusCode": "readInt32"}
+            ],
+            "name": "onPresetSelectionForGroupFailed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "device": "readParcelable",
+                        "__parcelType": "android.bluetooth.BluetoothDevice"
+                    }]
+                },
+                {
+                    "presetInfoList": "readList",
+                    "__parcelType": "android.bluetooth.BluetoothHapPresetInfo"
+                },
+                {"statusCode": "readInt32"}
+            ],
+            "name": "onPresetInfoChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "device": "readParcelable",
+                        "__parcelType": "android.bluetooth.BluetoothDevice"
+                    }]
+                },
+                {"status": "readInt32"}
+            ],
+            "name": "onSetPresetNameFailed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"hapGroupId": "readInt32"},
+                {"status": "readInt32"}
+            ],
+            "name": "onSetPresetNameForGroupFailed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IBluetoothHapClientCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

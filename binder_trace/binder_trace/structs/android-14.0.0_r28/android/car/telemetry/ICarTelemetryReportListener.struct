@@ -1,0 +1,27 @@
+{
+    "produced_on": "2024-04-12T08:47:59.051078355Z",
+    "source_location": "",
+    "full_name": "android.car.telemetry.ICarTelemetryReportListener",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"metricsConfigName": "readString16"},
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "reportFileDescriptor": "readParcelable",
+                    "__parcelType": "android.car.telemetry.ParcelFileDescriptor"
+                }]
+            },
+            {"telemetryError": "readByteVector"},
+            {"status": "readInt32"}
+        ],
+        "name": "onResult",
+        "oneWay": true,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "ICarTelemetryReportListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

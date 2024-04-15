@@ -1,0 +1,119 @@
+{
+    "produced_on": "2024-04-12T08:47:46.934112760Z",
+    "source_location": "",
+    "full_name": "android.telephony.ims.aidl.IImsMmTelListener",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"c": "readStrongBinder"},
+                {"callId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"extras": "readBundle"}]
+                }
+            ],
+            "name": "onIncomingCall",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callProfile": "readParcelable",
+                        "__parcelType": "android.telephony.ims.ImsCallProfile"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "reason": "readParcelable",
+                        "__parcelType": "android.telephony.ims.ImsReasonInfo"
+                    }]
+                }
+            ],
+            "name": "onRejectedCall",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"count": "readInt32"}],
+            "name": "onVoiceMessageCountUpdate",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"imsAudioHandler": "readInt32"}],
+            "name": "onAudioModeIsVoipChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"reason": "readInt32"}],
+            "name": "onTriggerEpsFallback",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"token": "readInt32"},
+                {"trafficType": "readInt32"},
+                {"accessNetworkType": "readInt32"},
+                {"trafficDirection": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "onStartImsTrafficSession",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"token": "readInt32"},
+                {"accessNetworkType": "readInt32"}
+            ],
+            "name": "onModifyImsTrafficSession",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{"token": "readInt32"}],
+            "name": "onStopImsTrafficSession",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "status": "readParcelable",
+                        "__parcelType": "android.telephony.ims.MediaQualityStatus"
+                    }]
+                }
+            ],
+            "name": "onMediaQualityStatusChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IImsMmTelListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

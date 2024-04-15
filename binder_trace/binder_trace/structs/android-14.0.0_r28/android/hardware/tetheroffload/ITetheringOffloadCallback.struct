@@ -1,0 +1,42 @@
+{
+    "produced_on": "2024-04-12T08:47:54.806075953Z",
+    "source_location": "",
+    "full_name": "android.hardware.tetheroffload.ITetheringOffloadCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "event": "readParcelable",
+                        "__parcelType": "android.hardware.tetheroffload.OffloadCallbackEvent"
+                    }]
+                }
+            ],
+            "name": "onEvent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "params": "readParcelable",
+                        "__parcelType": "android.hardware.tetheroffload.NatTimeoutUpdate"
+                    }]
+                }
+            ],
+            "name": "updateTimeout",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ITetheringOffloadCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

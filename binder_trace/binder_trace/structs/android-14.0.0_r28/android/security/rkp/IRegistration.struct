@@ -1,0 +1,38 @@
+{
+    "produced_on": "2024-04-12T08:47:45.677440337Z",
+    "source_location": "",
+    "full_name": "android.security.rkp.IRegistration",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"keyId": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "getKey",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "cancelGetKey",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"oldKeyBlob": "readByteVector"},
+                {"newKeyBlob": "readByteVector"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "storeUpgradedKeyAsync",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IRegistration",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

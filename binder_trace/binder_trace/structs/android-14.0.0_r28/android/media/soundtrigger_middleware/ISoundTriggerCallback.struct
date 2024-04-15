@@ -1,0 +1,67 @@
+{
+    "produced_on": "2024-04-12T08:47:46.444912691Z",
+    "source_location": "",
+    "full_name": "android.media.soundtrigger_middleware.ISoundTriggerCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"modelHandle": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "event": "readParcelable",
+                        "__parcelType": "android.media.soundtrigger_middleware.RecognitionEventSys"
+                    }]
+                },
+                {"captureSession": "readInt32"}
+            ],
+            "name": "onRecognition",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"modelHandle": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "event": "readParcelable",
+                        "__parcelType": "android.media.soundtrigger_middleware.PhraseRecognitionEventSys"
+                    }]
+                },
+                {"captureSession": "readInt32"}
+            ],
+            "name": "onPhraseRecognition",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "onResourcesAvailable",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"modelHandle": "readInt32"}],
+            "name": "onModelUnloaded",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "onModuleDied",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISoundTriggerCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

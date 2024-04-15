@@ -1,0 +1,85 @@
+{
+    "produced_on": "2024-04-12T08:47:44.016559266Z",
+    "source_location": "",
+    "full_name": "com.android.app.cts.broadcasts.ICommandReceiver",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "intent": "readParcelable",
+                        "__parcelType": "android.content.Intent"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"options": "readBundle"}]
+                }
+            ],
+            "name": "sendBroadcast",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "filter": "readParcelable",
+                        "__parcelType": "android.content.IntentFilter"
+                    }]
+                },
+                {"cookie": "readString16"}
+            ],
+            "name": "monitorBroadcasts",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"cookie": "readString16"}],
+            "name": "getReceivedBroadcasts",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "com.android.app.cts.broadcasts.BroadcastReceipt"
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"cookie": "readString16"}],
+            "name": "clearCookie",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "getPid",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "tearDown",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICommandReceiver",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

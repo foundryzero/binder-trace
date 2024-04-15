@@ -1,0 +1,28 @@
+{
+    "produced_on": "2024-04-12T08:47:57.210440030Z",
+    "source_location": "",
+    "components": [
+        {"policyId": "readByte"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "requestType": "readParcelable",
+                "__parcelType": "android.hardware.wifi.supplicant.QosPolicyRequestType"
+            }]
+        },
+        {"dscp": "readByte"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "classifierParams": "readParcelable",
+                "__parcelType": "android.hardware.wifi.supplicant.QosPolicyClassifierParams"
+            }]
+        }
+    ],
+    "full_name": "android.hardware.wifi.supplicant.QosPolicyData",
+    "name": "QosPolicyData",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

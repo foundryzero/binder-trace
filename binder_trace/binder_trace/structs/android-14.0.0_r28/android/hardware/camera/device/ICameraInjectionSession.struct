@@ -1,0 +1,44 @@
+{
+    "produced_on": "2024-04-12T08:47:50.362574987Z",
+    "source_location": "",
+    "full_name": "android.hardware.camera.device.ICameraInjectionSession",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "requestedConfiguration": "readParcelable",
+                        "__parcelType": "android.hardware.camera.device.StreamConfiguration"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "characteristics": "readParcelable",
+                        "__parcelType": "android.hardware.camera.device.CameraMetadata"
+                    }]
+                }
+            ],
+            "name": "configureInjectionStreams",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "getCameraDeviceSession",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        }
+    ],
+    "name": "ICameraInjectionSession",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

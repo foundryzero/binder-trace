@@ -1,0 +1,39 @@
+{
+    "produced_on": "2024-04-12T08:47:59.450695011Z",
+    "source_location": "",
+    "components": [
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "packageIdentifier": "readParcelable",
+                "__parcelType": "android.automotive.watchdog.internal.PackageIdentifier"
+            }]
+        },
+        {"uidStartUptimeMillis": "readInt64"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "cpuUsageStats": "readParcelable",
+                "__parcelType": "android.automotive.watchdog.internal.CpuUsageStats"
+            }]
+        },
+        {
+            "processCpuUsageStats": "readList",
+            "__parcelType": "android.automotive.watchdog.internal.ProcessCpuUsageStats"
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "ioUsageStats": "readParcelable",
+                "__parcelType": "android.automotive.watchdog.internal.UidIoUsageStats"
+            }]
+        }
+    ],
+    "full_name": "android.automotive.watchdog.internal.UidResourceUsageStats",
+    "name": "UidResourceUsageStats",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

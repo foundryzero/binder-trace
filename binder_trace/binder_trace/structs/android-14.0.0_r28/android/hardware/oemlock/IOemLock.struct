@@ -1,0 +1,67 @@
+{
+    "produced_on": "2024-04-12T08:47:52.895084676Z",
+    "source_location": "",
+    "full_name": "android.hardware.oemlock.IOemLock",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getName",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "isOemUnlockAllowedByCarrier",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "isOemUnlockAllowedByDevice",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"allowed": "readBool"},
+                {"signature": "readByteVector"}
+            ],
+            "name": "setOemUnlockAllowedByCarrier",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.oemlock.OemLockSecureStatus"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"allowed": "readBool"}],
+            "name": "setOemUnlockAllowedByDevice",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IOemLock",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

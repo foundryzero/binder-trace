@@ -1,0 +1,51 @@
+{
+    "produced_on": "2024-04-12T08:47:47.038259573Z",
+    "source_location": "",
+    "full_name": "com.android.ims.internal.IImsServiceFeatureCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "feature": "readParcelable",
+                        "__parcelType": "com.android.ims.ImsFeatureContainer"
+                    }]
+                },
+                {"subId": "readInt32"}
+            ],
+            "name": "imsFeatureCreated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"reason": "readInt32"}],
+            "name": "imsFeatureRemoved",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"status": "readInt32"},
+                {"subId": "readInt32"}
+            ],
+            "name": "imsStatusChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"capabilities": "readInt64"}],
+            "name": "updateCapabilities",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IImsServiceFeatureCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

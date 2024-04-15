@@ -1,0 +1,429 @@
+{
+    "produced_on": "2024-04-12T08:47:43.748443397Z",
+    "source_location": "",
+    "full_name": "com.android.server.art.IArtd",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "isAlive",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "artifactsPath": "readParcelable",
+                        "__parcelType": "com.android.server.art.ArtifactsPath"
+                    }]
+                }
+            ],
+            "name": "deleteArtifacts",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"dexFile": "readString16"},
+                {"instructionSet": "readString16"},
+                {"classLoaderContext": "readString16"}
+            ],
+            "name": "getDexoptStatus",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.server.art.GetDexoptStatusResult"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "profile": "readParcelable",
+                        "__parcelType": "com.android.server.art.ProfilePath"
+                    }]
+                },
+                {"dexFile": "readString16"}
+            ],
+            "name": "isProfileUsable",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "src": "readParcelable",
+                        "__parcelType": "com.android.server.art.ProfilePath"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "dst": "readParcelable",
+                        "__parcelType": "com.android.server.art.OutputProfile"
+                    }]
+                },
+                {"dexFile": "readString16"}
+            ],
+            "name": "copyAndRewriteProfile",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "profile": "readParcelable",
+                        "__parcelType": "com.android.server.art.ProfilePath.TmpProfilePath"
+                    }]
+                }
+            ],
+            "name": "commitTmpProfile",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "profile": "readParcelable",
+                        "__parcelType": "com.android.server.art.ProfilePath"
+                    }]
+                }
+            ],
+            "name": "deleteProfile",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "profile": "readParcelable",
+                        "__parcelType": "com.android.server.art.ProfilePath"
+                    }]
+                }
+            ],
+            "name": "getProfileVisibility",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.server.art.FileVisibility"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 9,
+            "in": [
+                {
+                    "profiles": "readList",
+                    "__parcelType": "com.android.server.art.ProfilePath"
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "referenceProfile": "readParcelable",
+                        "__parcelType": "com.android.server.art.ProfilePath"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "outputProfile": "readParcelable",
+                        "__parcelType": "com.android.server.art.OutputProfile"
+                    }]
+                },
+                {
+                    "dexFiles": "readList",
+                    "__parcelType": "String"
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "options": "readParcelable",
+                        "__parcelType": "com.android.server.art.MergeProfileOptions"
+                    }]
+                }
+            ],
+            "name": "mergeProfiles",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "artifactsPath": "readParcelable",
+                        "__parcelType": "com.android.server.art.ArtifactsPath"
+                    }]
+                }
+            ],
+            "name": "getArtifactsVisibility",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.server.art.FileVisibility"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 11,
+            "in": [{"dexFile": "readString16"}],
+            "name": "getDexFileVisibility",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.server.art.FileVisibility"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "dmFile": "readParcelable",
+                        "__parcelType": "com.android.server.art.DexMetadataPath"
+                    }]
+                }
+            ],
+            "name": "getDmFileVisibility",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.server.art.FileVisibility"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"dexFile": "readString16"},
+                {"instructionSet": "readString16"},
+                {"classLoaderContext": "readString16"},
+                {"compilerFilter": "readString16"},
+                {"dexoptTrigger": "readInt32"}
+            ],
+            "name": "getDexoptNeeded",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.server.art.GetDexoptNeededResult"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "outputArtifacts": "readParcelable",
+                        "__parcelType": "com.android.server.art.OutputArtifacts"
+                    }]
+                },
+                {"dexFile": "readString16"},
+                {"instructionSet": "readString16"},
+                {"classLoaderContext": "readString16"},
+                {"compilerFilter": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "profile": "readParcelable",
+                        "__parcelType": "com.android.server.art.ProfilePath"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "inputVdex": "readParcelable",
+                        "__parcelType": "com.android.server.art.VdexPath"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "dmFile": "readParcelable",
+                        "__parcelType": "com.android.server.art.DexMetadataPath"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "priorityClass": "readParcelable",
+                        "__parcelType": "com.android.server.art.PriorityClass"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "dexoptOptions": "readParcelable",
+                        "__parcelType": "com.android.server.art.DexoptOptions"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "cancellationSignal": "readParcelable",
+                        "__parcelType": "com.android.server.art.IArtdCancellationSignal"
+                    }]
+                }
+            ],
+            "name": "dexopt",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.server.art.ArtdDexoptResult"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 15,
+            "in": [],
+            "name": "createCancellationSignal",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.server.art.IArtdCancellationSignal"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 16,
+            "in": [
+                {
+                    "profilesToKeep": "readList",
+                    "__parcelType": "com.android.server.art.ProfilePath"
+                },
+                {
+                    "artifactsToKeep": "readList",
+                    "__parcelType": "com.android.server.art.ArtifactsPath"
+                },
+                {
+                    "vdexFilesToKeep": "readList",
+                    "__parcelType": "com.android.server.art.VdexPath"
+                }
+            ],
+            "name": "cleanup",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 17,
+            "in": [{"dexFile": "readString16"}],
+            "name": "isIncrementalFsPath",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "IArtd",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

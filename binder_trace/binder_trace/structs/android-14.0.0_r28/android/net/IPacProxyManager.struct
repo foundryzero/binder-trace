@@ -1,0 +1,40 @@
+{
+    "produced_on": "2024-04-12T08:47:45.450633569Z",
+    "source_location": "",
+    "full_name": "android.net.IPacProxyManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "addListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "removeListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "proxyInfo": "readParcelable",
+                        "__parcelType": "android.net.ProxyInfo"
+                    }]
+                }
+            ],
+            "name": "setCurrentProxyScriptUrl",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IPacProxyManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

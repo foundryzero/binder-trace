@@ -1,0 +1,101 @@
+{
+    "produced_on": "2024-04-12T08:47:45.641352260Z",
+    "source_location": "",
+    "full_name": "android.print.IPrintSpoolerCallbacks",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {
+                    "printJob": "readList",
+                    "__parcelType": "android.print.PrintJobInfo"
+                },
+                {"sequence": "readInt32"}
+            ],
+            "name": "onGetPrintJobInfosResult",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"canceled": "readBool"},
+                {"sequence": "readInt32"}
+            ],
+            "name": "onCancelPrintJobResult",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"success": "readBool"},
+                {"sequence": "readInt32"}
+            ],
+            "name": "onSetPrintJobStateResult",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"success": "readBool"},
+                {"sequence": "readInt32"}
+            ],
+            "name": "onSetPrintJobTagResult",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "printJob": "readParcelable",
+                        "__parcelType": "android.print.PrintJobInfo"
+                    }]
+                },
+                {"sequence": "readInt32"}
+            ],
+            "name": "onGetPrintJobInfoResult",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "icon": "readParcelable",
+                        "__parcelType": "android.graphics.drawable.Icon"
+                    }]
+                },
+                {"sequence": "readInt32"}
+            ],
+            "name": "onGetCustomPrinterIconResult",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"sequence": "readInt32"}],
+            "name": "onCustomPrinterIconCached",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{"sequence": "readInt32"}],
+            "name": "customPrinterIconCacheCleared",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IPrintSpoolerCallbacks",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

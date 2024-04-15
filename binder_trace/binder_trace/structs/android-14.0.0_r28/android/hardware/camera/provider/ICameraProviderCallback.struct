@@ -1,0 +1,62 @@
+{
+    "produced_on": "2024-04-12T08:47:50.944683436Z",
+    "source_location": "",
+    "full_name": "android.hardware.camera.provider.ICameraProviderCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"cameraDeviceName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "newStatus": "readParcelable",
+                        "__parcelType": "android.hardware.camera.common.CameraDeviceStatus"
+                    }]
+                }
+            ],
+            "name": "cameraDeviceStatusChange",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"cameraDeviceName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "newStatus": "readParcelable",
+                        "__parcelType": "android.hardware.camera.common.TorchModeStatus"
+                    }]
+                }
+            ],
+            "name": "torchModeStatusChange",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"cameraDeviceName": "readString16"},
+                {"physicalCameraDeviceName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "newStatus": "readParcelable",
+                        "__parcelType": "android.hardware.camera.common.CameraDeviceStatus"
+                    }]
+                }
+            ],
+            "name": "physicalCameraDeviceStatusChange",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICameraProviderCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

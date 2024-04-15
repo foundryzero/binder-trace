@@ -1,0 +1,118 @@
+{
+    "produced_on": "2024-04-12T08:47:54.747739111Z",
+    "source_location": "",
+    "full_name": "android.hardware.media.c2.IComponentStore",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "src": "readParcelable",
+                        "__parcelType": "android.hardware.media.c2.Buffer"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "dst": "readParcelable",
+                        "__parcelType": "android.hardware.media.c2.Buffer"
+                    }]
+                }
+            ],
+            "name": "copyBuffer",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"name": "readString16"},
+                {"listener": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "pool": "readParcelable",
+                        "__parcelType": "android.hardware.media.c2.android.hardware.media.bufferpool2.IClientManager"
+                    }]
+                }
+            ],
+            "name": "createComponent",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"name": "readString16"}],
+            "name": "createInterface",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "getConfigurable",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "getPoolClientManager",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.media.c2.android.hardware.media.bufferpool2.IClientManager"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [{"indices": "readInt32Vector"}],
+            "name": "getStructDescriptors",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.media.c2.StructDescriptor"
+                }
+            ]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "listComponents",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.media.c2.IComponentStore.ComponentTraits"
+                }
+            ]
+        }
+    ],
+    "name": "IComponentStore",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

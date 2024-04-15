@@ -1,0 +1,201 @@
+{
+    "produced_on": "2024-04-12T08:47:54.185353755Z",
+    "source_location": "",
+    "full_name": "android.hardware.radio.modem.IRadioModem",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"serial": "readInt32"},
+                {"on": "readBool"}
+            ],
+            "name": "enableModem",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"serial": "readInt32"}],
+            "name": "getBasebandVersion",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"serial": "readInt32"}],
+            "name": "getDeviceIdentity",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"serial": "readInt32"}],
+            "name": "getHardwareConfig",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"serial": "readInt32"}],
+            "name": "getModemActivityInfo",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"serial": "readInt32"}],
+            "name": "getModemStackStatus",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"serial": "readInt32"}],
+            "name": "getRadioCapability",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "itemId": "readParcelable",
+                        "__parcelType": "android.hardware.radio.modem.NvItem"
+                    }]
+                }
+            ],
+            "name": "nvReadItem",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "resetType": "readParcelable",
+                        "__parcelType": "android.hardware.radio.modem.ResetNvType"
+                    }]
+                }
+            ],
+            "name": "nvResetConfig",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"serial": "readInt32"},
+                {"prl": "readByteVector"}
+            ],
+            "name": "nvWriteCdmaPrl",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "item": "readParcelable",
+                        "__parcelType": "android.hardware.radio.modem.NvWriteItem"
+                    }]
+                }
+            ],
+            "name": "nvWriteItem",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [{"serial": "readInt32"}],
+            "name": "requestShutdown",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [],
+            "name": "responseAcknowledgement",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "deviceStateType": "readParcelable",
+                        "__parcelType": "android.hardware.radio.modem.DeviceStateType"
+                    }]
+                },
+                {"state": "readBool"}
+            ],
+            "name": "sendDeviceState",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "rc": "readParcelable",
+                        "__parcelType": "android.hardware.radio.modem.RadioCapability"
+                    }]
+                }
+            ],
+            "name": "setRadioCapability",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [
+                {"serial": "readInt32"},
+                {"powerOn": "readBool"},
+                {"forEmergencyCall": "readBool"},
+                {"preferredForEmergencyCall": "readBool"}
+            ],
+            "name": "setRadioPower",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [
+                {"radioModemResponse": "readStrongBinder"},
+                {"radioModemIndication": "readStrongBinder"}
+            ],
+            "name": "setResponseFunctions",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [{"serial": "readInt32"}],
+            "name": "getImei",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IRadioModem",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

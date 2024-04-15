@@ -1,0 +1,43 @@
+{
+    "produced_on": "2024-04-12T08:47:58.944875520Z",
+    "source_location": "",
+    "full_name": "android.car.IExperimentalCarKeyguardService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"userId": "readInt32"}],
+            "name": "isKeyguardLocked",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"userId": "readInt32"},
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "addKeyguardLockedStateListener",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"userId": "readInt32"},
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "removeKeyguardLockedStateListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IExperimentalCarKeyguardService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

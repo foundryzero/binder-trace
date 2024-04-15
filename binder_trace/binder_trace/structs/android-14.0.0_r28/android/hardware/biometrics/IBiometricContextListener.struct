@@ -1,0 +1,33 @@
+{
+    "produced_on": "2024-04-12T08:47:45.206944977Z",
+    "source_location": "",
+    "full_name": "android.hardware.biometrics.IBiometricContextListener",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "FoldState": "readParcelable",
+                        "__parcelType": "android.hardware.biometrics.FoldState"
+                    }]
+                }
+            ],
+            "name": "onFoldChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"displayState": "readInt32"}],
+            "name": "onDisplayStateChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IBiometricContextListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

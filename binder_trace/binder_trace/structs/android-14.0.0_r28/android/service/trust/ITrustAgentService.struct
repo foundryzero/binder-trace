@@ -1,0 +1,117 @@
+{
+    "produced_on": "2024-04-12T08:47:45.823607592Z",
+    "source_location": "",
+    "full_name": "android.service.trust.ITrustAgentService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"successful": "readBool"}],
+            "name": "onUnlockAttempt",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"dismissKeyguard": "readBool"}],
+            "name": "onUserRequestedUnlock",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "onUserMayRequestUnlock",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"timeoutMs": "readInt32"}],
+            "name": "onUnlockLockout",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "onTrustTimeout",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "onDeviceLocked",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "onDeviceUnlocked",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {
+                    "options": "readList",
+                    "__parcelType": "android.os.PersistableBundle"
+                },
+                {"token": "readStrongBinder"}
+            ],
+            "name": "onConfigure",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "setCallback",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"token": "readByteVector"},
+                {"handle": "readInt64"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "user": "readParcelable",
+                        "__parcelType": "android.os.UserHandle"
+                    }]
+                }
+            ],
+            "name": "onEscrowTokenAdded",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"handle": "readInt64"},
+                {"tokenState": "readInt32"}
+            ],
+            "name": "onTokenStateReceived",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"handle": "readInt64"},
+                {"successful": "readBool"}
+            ],
+            "name": "onEscrowTokenRemoved",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ITrustAgentService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

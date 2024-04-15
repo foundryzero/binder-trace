@@ -1,0 +1,34 @@
+{
+    "produced_on": "2024-04-12T08:47:57.316255696Z",
+    "source_location": "",
+    "full_name": "com.android.sdksandbox.ISdkSandboxManagerToSdkSandboxCallback",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"hostToken": "readStrongBinder"},
+            {"displayId": "readInt32"},
+            {"width": "readInt32"},
+            {"height": "readInt32"},
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{"extraParams": "readBundle"}]
+            },
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "sandboxLatencyInfo": "readParcelable",
+                    "__parcelType": "com.android.sdksandbox.SandboxLatencyInfo"
+                }]
+            },
+            {"callback": "readStrongBinder"}
+        ],
+        "name": "onSurfacePackageRequested",
+        "oneWay": true,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "ISdkSandboxManagerToSdkSandboxCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,29 @@
+{
+    "produced_on": "2024-04-12T08:47:46.504833644Z",
+    "source_location": "",
+    "full_name": "android.media.IDevicesForAttributesCallback",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "attributes": "readParcelable",
+                    "__parcelType": "android.media.AudioAttributes"
+                }]
+            },
+            {"forVolume": "readBool"},
+            {
+                "devices": "readList",
+                "__parcelType": "android.media.AudioDeviceAttributes"
+            }
+        ],
+        "name": "onDevicesForAttributesChanged",
+        "oneWay": true,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "IDevicesForAttributesCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

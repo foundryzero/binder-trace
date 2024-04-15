@@ -1,0 +1,144 @@
+{
+    "produced_on": "2024-04-12T08:47:57.323680404Z",
+    "source_location": "",
+    "full_name": "android.app.sdksandbox.ISdkSandboxManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"callingPackageName": "readString16"},
+                {"timeAppCalledSystemServer": "readInt64"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "addSdkSandboxProcessDeathCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"callingPackageName": "readString16"},
+                {"timeAppCalledSystemServer": "readInt64"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "removeSdkSandboxProcessDeathCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"callingPackageName": "readString16"},
+                {"appProcessToken": "readStrongBinder"},
+                {"sdkName": "readString16"},
+                {"timeAppCalledSystemServer": "readInt64"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"params": "readBundle"}]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "loadSdk",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"callingPackageName": "readString16"},
+                {"sdkName": "readString16"},
+                {"timeAppCalledSystemServer": "readInt64"}
+            ],
+            "name": "unloadSdk",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"callingPackageName": "readString16"},
+                {"sdkName": "readString16"},
+                {"hostToken": "readStrongBinder"},
+                {"displayId": "readInt32"},
+                {"width": "readInt32"},
+                {"height": "readInt32"},
+                {"timeAppCalledSystemServer": "readInt64"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"params": "readBundle"}]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "requestSurfacePackage",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"callingPackageName": "readString16"},
+                {"timeAppCalledSystemServer": "readInt64"}
+            ],
+            "name": "getSandboxedSdks",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.app.sdksandbox.SandboxedSdk"
+                }
+            ]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"callingPackageName": "readString16"},
+                {"timeAppCalledSystemServer": "readInt64"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "update": "readParcelable",
+                        "__parcelType": "android.app.sdksandbox.SharedPreferencesUpdate"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "syncDataFromClient",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{"callingPackageName": "readString16"}],
+            "name": "stopSdkSandbox",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"method": "readString16"},
+                {"latency": "readInt32"}
+            ],
+            "name": "logLatencyFromSystemServerToApp",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [],
+            "name": "getAdServicesManager",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        }
+    ],
+    "name": "ISdkSandboxManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,44 @@
+{
+    "produced_on": "2024-04-12T08:47:54.115258299Z",
+    "source_location": "",
+    "components": [
+        {"index": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "callType": "readParcelable",
+                "__parcelType": "android.hardware.radio.ims.CallType"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "accessNetwork": "readParcelable",
+                "__parcelType": "android.hardware.radio.AccessNetwork"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "callState": "readParcelable",
+                "__parcelType": "android.hardware.radio.ims.CallState"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "direction": "readParcelable",
+                "__parcelType": "android.hardware.radio.ims.Direction"
+            }]
+        },
+        {"isHeldByRemote": "readBool"}
+    ],
+    "full_name": "android.hardware.radio.ims.ImsCall",
+    "name": "ImsCall",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

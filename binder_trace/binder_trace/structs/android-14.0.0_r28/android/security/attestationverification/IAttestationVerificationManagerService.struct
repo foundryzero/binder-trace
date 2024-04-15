@@ -1,0 +1,73 @@
+{
+    "produced_on": "2024-04-12T08:47:45.662384709Z",
+    "source_location": "",
+    "full_name": "android.security.attestationverification.IAttestationVerificationManagerService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "profile": "readParcelable",
+                        "__parcelType": "android.security.attestationverification.AttestationProfile"
+                    }]
+                },
+                {"localBindingType": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"requirements": "readBundle"}]
+                },
+                {"attestation": "readByteVector"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "resultCallback": "readParcelable",
+                        "__parcelType": "com.android.internal.infra.AndroidFuture"
+                    }]
+                }
+            ],
+            "name": "verifyAttestation",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "token": "readParcelable",
+                        "__parcelType": "android.security.attestationverification.VerificationToken"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "maximumTokenAge": "readParcelable",
+                        "__parcelType": "android.os.ParcelDuration"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "resultCallback": "readParcelable",
+                        "__parcelType": "com.android.internal.infra.AndroidFuture"
+                    }]
+                }
+            ],
+            "name": "verifyToken",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IAttestationVerificationManagerService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

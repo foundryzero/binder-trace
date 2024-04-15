@@ -1,0 +1,37 @@
+{
+    "produced_on": "2024-04-12T08:47:51.538023908Z",
+    "source_location": "",
+    "components": [
+        {"HAS_LAT_LONG": "readInt32"},
+        {"HAS_ALTITUDE": "readInt32"},
+        {"HAS_SPEED": "readInt32"},
+        {"HAS_BEARING": "readInt32"},
+        {"HAS_HORIZONTAL_ACCURACY": "readInt32"},
+        {"HAS_VERTICAL_ACCURACY": "readInt32"},
+        {"HAS_SPEED_ACCURACY": "readInt32"},
+        {"HAS_BEARING_ACCURACY": "readInt32"},
+        {"gnssLocationFlags": "readInt32"},
+        {"latitudeDegrees": "readDouble"},
+        {"longitudeDegrees": "readDouble"},
+        {"altitudeMeters": "readDouble"},
+        {"speedMetersPerSec": "readDouble"},
+        {"bearingDegrees": "readDouble"},
+        {"horizontalAccuracyMeters": "readDouble"},
+        {"verticalAccuracyMeters": "readDouble"},
+        {"speedAccuracyMetersPerSecond": "readDouble"},
+        {"bearingAccuracyDegrees": "readDouble"},
+        {"timestampMillis": "readInt64"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "elapsedRealtime": "readParcelable",
+                "__parcelType": "android.hardware.gnss.ElapsedRealtime"
+            }]
+        }
+    ],
+    "full_name": "android.hardware.gnss.GnssLocation",
+    "name": "GnssLocation",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

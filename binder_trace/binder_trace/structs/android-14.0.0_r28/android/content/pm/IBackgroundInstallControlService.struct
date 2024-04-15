@@ -1,0 +1,28 @@
+{
+    "produced_on": "2024-04-12T08:47:45.044047049Z",
+    "source_location": "",
+    "full_name": "android.content.pm.IBackgroundInstallControlService",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"flags": "readInt64"},
+            {"userId": "readInt32"}
+        ],
+        "name": "getBackgroundInstalledPackages",
+        "oneWay": false,
+        "out": [
+            {"__exception": "readException"},
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "__return": "readParcelable",
+                    "__parcelType": "android.content.pm.ParceledListSlice"
+                }]
+            }
+        ]
+    }],
+    "name": "IBackgroundInstallControlService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

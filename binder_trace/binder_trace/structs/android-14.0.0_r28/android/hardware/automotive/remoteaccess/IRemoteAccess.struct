@@ -1,0 +1,70 @@
+{
+    "produced_on": "2024-04-12T08:47:48.801183222Z",
+    "source_location": "",
+    "full_name": "android.hardware.automotive.remoteaccess.IRemoteAccess",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getVehicleId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "getWakeupServiceName",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getProcessorId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "setRemoteTaskCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "clearRemoteTaskCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "state": "readParcelable",
+                        "__parcelType": "android.hardware.automotive.remoteaccess.ApState"
+                    }]
+                }
+            ],
+            "name": "notifyApStateChange",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IRemoteAccess",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

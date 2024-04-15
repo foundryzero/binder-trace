@@ -1,0 +1,672 @@
+{
+    "produced_on": "2024-04-12T08:47:57.158605068Z",
+    "source_location": "",
+    "full_name": "android.hardware.wifi.supplicant.ISupplicantStaIface",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"uri": "readString16"}],
+            "name": "addDppPeerUri",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"name": "readString16"},
+                {"freqInMhz": "readInt32"},
+                {"timeoutInSec": "readInt32"}
+            ],
+            "name": "addExtRadioWork",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "addNetwork",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.RxFilterType"
+                    }]
+                }
+            ],
+            "name": "addRxFilter",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "cancelWps",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "disconnect",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"enable": "readBool"}],
+            "name": "enableAutoReconnect",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"dst_mac": "readByteVector"},
+                {"pkt": "readByteVector"}
+            ],
+            "name": "filsHlpAddRequest",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [],
+            "name": "filsHlpFlushRequest",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"macAddress": "readByteVector"},
+                {"deviceInfo": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "curve": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.DppCurve"
+                    }]
+                }
+            ],
+            "name": "generateDppBootstrapInfoForResponder",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.DppResponderBootstrapInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"ssid": "readString16"},
+                {"privEcKey": "readByteVector"}
+            ],
+            "name": "generateSelfDppConfiguration",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [],
+            "name": "getConnectionCapabilities",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.ConnectionCapabilities"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 13,
+            "in": [],
+            "name": "getConnectionMloLinksInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.MloLinksInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 14,
+            "in": [],
+            "name": "getKeyMgmtCapabilities",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.KeyMgmtMask"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 15,
+            "in": [],
+            "name": "getMacAddress",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 16,
+            "in": [],
+            "name": "getName",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 17,
+            "in": [{"id": "readInt32"}],
+            "name": "getNetwork",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 18,
+            "in": [],
+            "name": "getType",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.IfaceType"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 19,
+            "in": [],
+            "name": "getWpaDriverCapabilities",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.WpaDriverCapabilitiesMask"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 20,
+            "in": [
+                {"macAddress": "readByteVector"},
+                {
+                    "infoElements": "readParcelableVector",
+                    "__parcelType": "android.hardware.wifi.supplicant.AnqpInfoId"
+                },
+                {
+                    "subTypes": "readParcelableVector",
+                    "__parcelType": "android.hardware.wifi.supplicant.Hs20AnqpSubtypes"
+                }
+            ],
+            "name": "initiateAnqpQuery",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 21,
+            "in": [
+                {"macAddress": "readByteVector"},
+                {"fileName": "readString16"}
+            ],
+            "name": "initiateHs20IconQuery",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 22,
+            "in": [{"macAddress": "readByteVector"}],
+            "name": "initiateTdlsDiscover",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 23,
+            "in": [{"macAddress": "readByteVector"}],
+            "name": "initiateTdlsSetup",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 24,
+            "in": [{"macAddress": "readByteVector"}],
+            "name": "initiateTdlsTeardown",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 25,
+            "in": [{"macAddress": "readByteVector"}],
+            "name": "initiateVenueUrlAnqpQuery",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 26,
+            "in": [],
+            "name": "listNetworks",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 27,
+            "in": [],
+            "name": "reassociate",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 28,
+            "in": [],
+            "name": "reconnect",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 29,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "registerCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 30,
+            "in": [{"enable": "readBool"}],
+            "name": "setQosPolicyFeatureEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 31,
+            "in": [
+                {"qosPolicyRequestId": "readInt32"},
+                {"morePolicies": "readBool"},
+                {
+                    "qosPolicyStatusList": "readParcelableVector",
+                    "__parcelType": "android.hardware.wifi.supplicant.QosPolicyStatus"
+                }
+            ],
+            "name": "sendQosPolicyResponse",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 32,
+            "in": [],
+            "name": "removeAllQosPolicies",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 33,
+            "in": [{"id": "readInt32"}],
+            "name": "removeDppUri",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 34,
+            "in": [{"id": "readInt32"}],
+            "name": "removeExtRadioWork",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 35,
+            "in": [{"id": "readInt32"}],
+            "name": "removeNetwork",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 36,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.RxFilterType"
+                    }]
+                }
+            ],
+            "name": "removeRxFilter",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 37,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "mode": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.BtCoexistenceMode"
+                    }]
+                }
+            ],
+            "name": "setBtCoexistenceMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 38,
+            "in": [{"enable": "readBool"}],
+            "name": "setBtCoexistenceScanModeEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 39,
+            "in": [{"code": "readByteVector"}],
+            "name": "setCountryCode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 40,
+            "in": [{"useExternalSim": "readBool"}],
+            "name": "setExternalSim",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 41,
+            "in": [{"available": "readBool"}],
+            "name": "setMboCellularDataStatus",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 42,
+            "in": [{"enable": "readBool"}],
+            "name": "setPowerSave",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 43,
+            "in": [{"enable": "readBool"}],
+            "name": "setSuspendModeEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 44,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "configMethods": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.WpsConfigMethods"
+                    }]
+                }
+            ],
+            "name": "setWpsConfigMethods",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 45,
+            "in": [{"name": "readString16"}],
+            "name": "setWpsDeviceName",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 46,
+            "in": [{"type": "readByteVector"}],
+            "name": "setWpsDeviceType",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 47,
+            "in": [{"manufacturer": "readString16"}],
+            "name": "setWpsManufacturer",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 48,
+            "in": [{"modelName": "readString16"}],
+            "name": "setWpsModelName",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 49,
+            "in": [{"modelNumber": "readString16"}],
+            "name": "setWpsModelNumber",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 50,
+            "in": [{"serialNumber": "readString16"}],
+            "name": "setWpsSerialNumber",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 51,
+            "in": [
+                {"peerBootstrapId": "readInt32"},
+                {"ownBootstrapId": "readInt32"},
+                {"ssid": "readString16"},
+                {"password": "readString16"},
+                {"psk": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "netRole": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.DppNetRole"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "securityAkm": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.supplicant.DppAkm"
+                    }]
+                },
+                {"privEcKey": "readByteVector"}
+            ],
+            "name": "startDppConfiguratorInitiator",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 52,
+            "in": [
+                {"peerBootstrapId": "readInt32"},
+                {"ownBootstrapId": "readInt32"}
+            ],
+            "name": "startDppEnrolleeInitiator",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 53,
+            "in": [{"listenChannel": "readInt32"}],
+            "name": "startDppEnrolleeResponder",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 54,
+            "in": [],
+            "name": "startRxFilter",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 55,
+            "in": [{"bssid": "readByteVector"}],
+            "name": "startWpsPbc",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 56,
+            "in": [{"bssid": "readByteVector"}],
+            "name": "startWpsPinDisplay",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 57,
+            "in": [{"pin": "readString16"}],
+            "name": "startWpsPinKeypad",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 58,
+            "in": [
+                {"bssid": "readByteVector"},
+                {"pin": "readString16"}
+            ],
+            "name": "startWpsRegistrar",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 59,
+            "in": [],
+            "name": "stopDppInitiator",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 60,
+            "in": [{"ownBootstrapId": "readInt32"}],
+            "name": "stopDppResponder",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 61,
+            "in": [],
+            "name": "stopRxFilter",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 62,
+            "in": [],
+            "name": "getSignalPollResults",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.wifi.supplicant.SignalPollResult"
+                }
+            ]
+        },
+        {
+            "code": 63,
+            "in": [{
+                "qosPolicyData": "readParcelableVector",
+                "__parcelType": "android.hardware.wifi.supplicant.QosPolicyScsData"
+            }],
+            "name": "addQosPolicyRequestForScs",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.wifi.supplicant.QosPolicyScsRequestStatus"
+                }
+            ]
+        },
+        {
+            "code": 64,
+            "in": [{"scsPolicyIds": "readByteVector"}],
+            "name": "removeQosPolicyForScs",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.wifi.supplicant.QosPolicyScsRequestStatus"
+                }
+            ]
+        }
+    ],
+    "name": "ISupplicantStaIface",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

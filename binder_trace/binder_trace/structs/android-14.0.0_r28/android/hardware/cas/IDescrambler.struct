@@ -1,0 +1,75 @@
+{
+    "produced_on": "2024-04-12T08:47:50.988756503Z",
+    "source_location": "",
+    "full_name": "android.hardware.cas.IDescrambler",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "scramblingControl": "readParcelable",
+                        "__parcelType": "android.hardware.cas.ScramblingControl"
+                    }]
+                },
+                {
+                    "subSamples": "readParcelableVector",
+                    "__parcelType": "android.hardware.cas.SubSample"
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "srcBuffer": "readParcelable",
+                        "__parcelType": "android.hardware.cas.SharedBuffer"
+                    }]
+                },
+                {"srcOffset": "readInt64"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "dstBuffer": "readParcelable",
+                        "__parcelType": "android.hardware.cas.DestinationBuffer"
+                    }]
+                },
+                {"dstOffset": "readInt64"}
+            ],
+            "name": "descramble",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "release",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"mime": "readString16"}],
+            "name": "requiresSecureDecoderComponent",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"sessionId": "readByteVector"}],
+            "name": "setMediaCasSession",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IDescrambler",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

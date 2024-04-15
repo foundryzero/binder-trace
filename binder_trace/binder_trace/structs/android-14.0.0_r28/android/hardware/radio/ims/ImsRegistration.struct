@@ -1,0 +1,40 @@
+{
+    "produced_on": "2024-04-12T08:47:54.117290779Z",
+    "source_location": "",
+    "components": [
+        {"IMS_MMTEL_CAPABILITY_NONE": "readInt32"},
+        {"IMS_MMTEL_CAPABILITY_VOICE": "readInt32"},
+        {"IMS_MMTEL_CAPABILITY_VIDEO": "readInt32"},
+        {"IMS_MMTEL_CAPABILITY_SMS": "readInt32"},
+        {"IMS_RCS_CAPABILITIES": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "regState": "readParcelable",
+                "__parcelType": "android.hardware.radio.ims.ImsRegistrationState"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "accessNetworkType": "readParcelable",
+                "__parcelType": "android.hardware.radio.AccessNetwork"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "suggestedAction": "readParcelable",
+                "__parcelType": "android.hardware.radio.ims.SuggestedAction"
+            }]
+        },
+        {"capabilities": "readInt32"}
+    ],
+    "full_name": "android.hardware.radio.ims.ImsRegistration",
+    "name": "ImsRegistration",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

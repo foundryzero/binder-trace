@@ -1,0 +1,54 @@
+{
+    "produced_on": "2024-04-12T08:48:00.183088151Z",
+    "source_location": "",
+    "full_name": "android.security.identity.ISession",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getEphemeralKeyPair",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "getAuthChallenge",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"publicKey": "readByteVector"}],
+            "name": "setReaderEphemeralPublicKey",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"sessionTranscript": "readByteVector"}],
+            "name": "setSessionTranscript",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"credentialName": "readString16"}],
+            "name": "getCredentialForPresentation",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        }
+    ],
+    "name": "ISession",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

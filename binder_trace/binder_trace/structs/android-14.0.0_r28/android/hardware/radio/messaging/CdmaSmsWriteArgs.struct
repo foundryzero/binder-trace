@@ -1,0 +1,23 @@
+{
+    "produced_on": "2024-04-12T08:47:54.157629402Z",
+    "source_location": "",
+    "components": [
+        {"STATUS_REC_UNREAD": "readInt32"},
+        {"STATUS_REC_READ": "readInt32"},
+        {"STATUS_STO_UNSENT": "readInt32"},
+        {"STATUS_STO_SENT": "readInt32"},
+        {"status": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "message": "readParcelable",
+                "__parcelType": "android.hardware.radio.messaging.CdmaSmsMessage"
+            }]
+        }
+    ],
+    "full_name": "android.hardware.radio.messaging.CdmaSmsWriteArgs",
+    "name": "CdmaSmsWriteArgs",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

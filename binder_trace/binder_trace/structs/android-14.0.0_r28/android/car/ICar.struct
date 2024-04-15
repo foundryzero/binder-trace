@@ -1,0 +1,119 @@
+{
+    "produced_on": "2024-04-12T08:47:58.925525834Z",
+    "source_location": "",
+    "full_name": "android.car.ICar",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"helper": "readStrongBinder"},
+                {"receiver": "readStrongBinder"}
+            ],
+            "name": "setSystemServerConnections",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [{"serviceName": "readString16"}],
+            "name": "getCarService",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [],
+            "name": "getCarConnectionType",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 14,
+            "in": [{"featureName": "readString16"}],
+            "name": "isFeatureEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 15,
+            "in": [{"featureName": "readString16"}],
+            "name": "enableFeature",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 16,
+            "in": [{"featureName": "readString16"}],
+            "name": "disableFeature",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 17,
+            "in": [],
+            "name": "getAllEnabledFeatures",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "String"
+                }
+            ]
+        },
+        {
+            "code": 18,
+            "in": [],
+            "name": "getAllPendingDisabledFeatures",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "String"
+                }
+            ]
+        },
+        {
+            "code": 19,
+            "in": [],
+            "name": "getAllPendingEnabledFeatures",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "String"
+                }
+            ]
+        },
+        {
+            "code": 20,
+            "in": [{"featureName": "readString16"}],
+            "name": "getCarManagerClassForFeature",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        }
+    ],
+    "name": "ICar",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

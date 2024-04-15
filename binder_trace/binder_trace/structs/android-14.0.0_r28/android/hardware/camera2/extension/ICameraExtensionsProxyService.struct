@@ -1,0 +1,81 @@
+{
+    "produced_on": "2024-04-12T08:47:45.234506624Z",
+    "source_location": "",
+    "full_name": "android.hardware.camera2.extension.ICameraExtensionsProxyService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "registerClient",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"clientId": "readInt64"}],
+            "name": "unregisterClient",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "advancedExtensionsSupported",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"cb": "readStrongBinder"}],
+            "name": "initializeSession",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "releaseSession",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"extensionType": "readInt32"}],
+            "name": "initializePreviewExtension",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [{"extensionType": "readInt32"}],
+            "name": "initializeImageExtension",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [{"extensionType": "readInt32"}],
+            "name": "initializeAdvancedExtension",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        }
+    ],
+    "name": "ICameraExtensionsProxyService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

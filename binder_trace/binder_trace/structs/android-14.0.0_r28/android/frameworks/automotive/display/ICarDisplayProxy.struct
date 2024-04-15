@@ -1,0 +1,88 @@
+{
+    "produced_on": "2024-04-12T08:47:47.260903806Z",
+    "source_location": "",
+    "full_name": "android.frameworks.automotive.display.ICarDisplayProxy",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getDisplayIdList",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.frameworks.automotive.display.long"
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"id": "readInt64"}],
+            "name": "getDisplayInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.frameworks.automotive.display.DisplayDesc"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"id": "readInt64"}],
+            "name": "getHGraphicBufferProducer",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.common.NativeHandle"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"id": "readInt64"}],
+            "name": "hideWindow",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"id": "readInt64"}],
+            "name": "showWindow",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"id": "readInt64"}],
+            "name": "getSurface",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.view.Surface"
+                    }]
+                }
+            ]
+        }
+    ],
+    "name": "ICarDisplayProxy",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

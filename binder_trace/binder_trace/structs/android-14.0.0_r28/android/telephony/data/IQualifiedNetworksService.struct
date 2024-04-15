@@ -1,0 +1,50 @@
+{
+    "produced_on": "2024-04-12T08:47:46.883649906Z",
+    "source_location": "",
+    "full_name": "android.telephony.data.IQualifiedNetworksService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"slotId": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "createNetworkAvailabilityProvider",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"slotId": "readInt32"}],
+            "name": "removeNetworkAvailabilityProvider",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"slotId": "readInt32"},
+                {
+                    "statuses": "readList",
+                    "__parcelType": "android.telephony.data.ThrottleStatus"
+                }
+            ],
+            "name": "reportThrottleStatusChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"slotId": "readInt32"},
+                {"transportType": "readInt32"}
+            ],
+            "name": "reportEmergencyDataNetworkPreferredTransportChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IQualifiedNetworksService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,49 @@
+{
+    "produced_on": "2024-04-12T08:47:54.136521412Z",
+    "source_location": "",
+    "full_name": "android.hardware.radio.ims.media.IImsMedia",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"mediaListener": "readStrongBinder"}],
+            "name": "setListener",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"sessionId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "localEndPoint": "readParcelable",
+                        "__parcelType": "android.hardware.radio.ims.media.LocalEndPoint"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "config": "readParcelable",
+                        "__parcelType": "android.hardware.radio.ims.media.RtpConfig"
+                    }]
+                }
+            ],
+            "name": "openSession",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"sessionId": "readInt32"}],
+            "name": "closeSession",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IImsMedia",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

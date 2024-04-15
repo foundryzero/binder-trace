@@ -1,0 +1,40 @@
+{
+    "produced_on": "2024-04-12T08:47:54.267309895Z",
+    "source_location": "",
+    "components": [
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "status": "readParcelable",
+                "__parcelType": "android.hardware.radio.network.CellConnectionStatus"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "rat": "readParcelable",
+                "__parcelType": "android.hardware.radio.RadioTechnology"
+            }]
+        },
+        {"downlinkChannelNumber": "readInt32"},
+        {"uplinkChannelNumber": "readInt32"},
+        {"cellBandwidthDownlinkKhz": "readInt32"},
+        {"cellBandwidthUplinkKhz": "readInt32"},
+        {"contextIds": "readInt32Vector"},
+        {"physicalCellId": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "band": "readParcelable",
+                "__parcelType": "android.hardware.radio.network.PhysicalChannelConfigBand"
+            }]
+        }
+    ],
+    "full_name": "android.hardware.radio.network.PhysicalChannelConfig",
+    "name": "PhysicalChannelConfig",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

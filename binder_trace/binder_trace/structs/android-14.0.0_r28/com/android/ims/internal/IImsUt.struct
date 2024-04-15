@@ -1,0 +1,240 @@
+{
+    "produced_on": "2024-04-12T08:47:47.041389846Z",
+    "source_location": "",
+    "full_name": "com.android.ims.internal.IImsUt",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "close",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"cbType": "readInt32"}],
+            "name": "queryCallBarring",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"condition": "readInt32"},
+                {"number": "readString16"}
+            ],
+            "name": "queryCallForward",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "queryCallWaiting",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "queryCLIR",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "queryCLIP",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "queryCOLR",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "queryCOLP",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"ssInfo": "readBundle"}]
+                }
+            ],
+            "name": "transact",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"cbType": "readInt32"},
+                {"action": "readInt32"},
+                {"barrList": "readString16Vector"}
+            ],
+            "name": "updateCallBarring",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"action": "readInt32"},
+                {"condition": "readInt32"},
+                {"number": "readString16"},
+                {"serviceClass": "readInt32"},
+                {"timeSeconds": "readInt32"}
+            ],
+            "name": "updateCallForward",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"enable": "readBool"},
+                {"serviceClass": "readInt32"}
+            ],
+            "name": "updateCallWaiting",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [{"clirMode": "readInt32"}],
+            "name": "updateCLIR",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 14,
+            "in": [{"enable": "readBool"}],
+            "name": "updateCLIP",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 15,
+            "in": [{"presentation": "readInt32"}],
+            "name": "updateCOLR",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 16,
+            "in": [{"enable": "readBool"}],
+            "name": "updateCOLP",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 17,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "setListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"cbType": "readInt32"},
+                {"serviceClass": "readInt32"}
+            ],
+            "name": "queryCallBarringForServiceClass",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 19,
+            "in": [
+                {"cbType": "readInt32"},
+                {"action": "readInt32"},
+                {"barrList": "readString16Vector"},
+                {"serviceClass": "readInt32"}
+            ],
+            "name": "updateCallBarringForServiceClass",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 20,
+            "in": [
+                {"cbType": "readInt32"},
+                {"action": "readInt32"},
+                {"barrList": "readString16Vector"},
+                {"serviceClass": "readInt32"},
+                {"password": "readString16"}
+            ],
+            "name": "updateCallBarringWithPassword",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        }
+    ],
+    "name": "IImsUt",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

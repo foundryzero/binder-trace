@@ -1,0 +1,198 @@
+{
+    "produced_on": "2024-04-12T08:47:44.995679807Z",
+    "source_location": "",
+    "full_name": "android.content.IClipboard",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "clip": "readParcelable",
+                        "__parcelType": "android.content.ClipData"
+                    }]
+                },
+                {"callingPackage": "readString16"},
+                {"attributionTag": "readString16"},
+                {"userId": "readInt32"},
+                {"deviceId": "readInt32"}
+            ],
+            "name": "setPrimaryClip",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "clip": "readParcelable",
+                        "__parcelType": "android.content.ClipData"
+                    }]
+                },
+                {"callingPackage": "readString16"},
+                {"attributionTag": "readString16"},
+                {"userId": "readInt32"},
+                {"deviceId": "readInt32"},
+                {"sourcePackage": "readString16"}
+            ],
+            "name": "setPrimaryClipAsPackage",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"attributionTag": "readString16"},
+                {"userId": "readInt32"},
+                {"deviceId": "readInt32"}
+            ],
+            "name": "clearPrimaryClip",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"pkg": "readString16"},
+                {"attributionTag": "readString16"},
+                {"userId": "readInt32"},
+                {"deviceId": "readInt32"}
+            ],
+            "name": "getPrimaryClip",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.ClipData"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"attributionTag": "readString16"},
+                {"userId": "readInt32"},
+                {"deviceId": "readInt32"}
+            ],
+            "name": "getPrimaryClipDescription",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.ClipDescription"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"attributionTag": "readString16"},
+                {"userId": "readInt32"},
+                {"deviceId": "readInt32"}
+            ],
+            "name": "hasPrimaryClip",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"listener": "readStrongBinder"},
+                {"callingPackage": "readString16"},
+                {"attributionTag": "readString16"},
+                {"userId": "readInt32"},
+                {"deviceId": "readInt32"}
+            ],
+            "name": "addPrimaryClipChangedListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"listener": "readStrongBinder"},
+                {"callingPackage": "readString16"},
+                {"attributionTag": "readString16"},
+                {"userId": "readInt32"},
+                {"deviceId": "readInt32"}
+            ],
+            "name": "removePrimaryClipChangedListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"attributionTag": "readString16"},
+                {"userId": "readInt32"},
+                {"deviceId": "readInt32"}
+            ],
+            "name": "hasClipboardText",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"attributionTag": "readString16"},
+                {"userId": "readInt32"},
+                {"deviceId": "readInt32"}
+            ],
+            "name": "getPrimaryClipSource",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [{"userId": "readInt32"}],
+            "name": "areClipboardAccessNotificationsEnabledForUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"enable": "readBool"},
+                {"userId": "readInt32"}
+            ],
+            "name": "setClipboardAccessNotificationsEnabledForUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IClipboard",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,113 @@
+{
+    "produced_on": "2024-04-12T08:47:57.317855008Z",
+    "source_location": "",
+    "full_name": "com.android.sdksandbox.ISdkSandboxService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"sdkToService": "readStrongBinder"},
+                {"isCustomizedSdkContextEnabled": "readBool"}
+            ],
+            "name": "initialize",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {
+                    "sharedPaths": "readList",
+                    "__parcelType": "String"
+                },
+                {
+                    "sdkPaths": "readList",
+                    "__parcelType": "String"
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "computeSdkStorage",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "isDisabled",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"callingPackageName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "info": "readParcelable",
+                        "__parcelType": "android.content.pm.ApplicationInfo"
+                    }]
+                },
+                {"sdkName": "readString16"},
+                {"sdkProviderClassName": "readString16"},
+                {"sdkCeDataDir": "readString16"},
+                {"sdkDeDataDir": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"params": "readBundle"}]
+                },
+                {"callback": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sandboxLatencyInfo": "readParcelable",
+                        "__parcelType": "com.android.sdksandbox.SandboxLatencyInfo"
+                    }]
+                }
+            ],
+            "name": "loadSdk",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"sdkName": "readString16"},
+                {"callback": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sandboxLatencyInfo": "readParcelable",
+                        "__parcelType": "com.android.sdksandbox.SandboxLatencyInfo"
+                    }]
+                }
+            ],
+            "name": "unloadSdk",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "update": "readParcelable",
+                        "__parcelType": "android.app.sdksandbox.SharedPreferencesUpdate"
+                    }]
+                }
+            ],
+            "name": "syncDataFromClient",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISdkSandboxService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

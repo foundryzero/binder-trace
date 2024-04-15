@@ -1,0 +1,30 @@
+{
+    "produced_on": "2024-04-12T08:47:57.113754174Z",
+    "source_location": "",
+    "components": [
+        {"ssid": "readByteVector"},
+        {"password": "readString16"},
+        {"psk": "readByteVector"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "securityAkm": "readParcelable",
+                "__parcelType": "android.hardware.wifi.supplicant.DppAkm"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "dppConnectionKeys": "readParcelable",
+                "__parcelType": "android.hardware.wifi.supplicant.DppConnectionKeys"
+            }]
+        },
+        {"connStatusRequested": "readBool"}
+    ],
+    "full_name": "android.hardware.wifi.supplicant.DppConfigurationData",
+    "name": "DppConfigurationData",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

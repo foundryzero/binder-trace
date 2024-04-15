@@ -1,0 +1,84 @@
+{
+    "produced_on": "2024-04-12T08:47:43.917737832Z",
+    "source_location": "",
+    "full_name": "com.google.android.enterprise.connectedapps.ICrossProfileService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"callId": "readInt64"},
+                {"blockId": "readInt32"},
+                {"numBytes": "readInt32"},
+                {"params": "readByteVector"}
+            ],
+            "name": "prepareCall",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"callId": "readInt64"},
+                {"bundleId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"bundle": "readBundle"}]
+                }
+            ],
+            "name": "prepareBundle",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"callId": "readInt64"},
+                {"blockId": "readInt32"},
+                {"crossProfileTypeIdentifier": "readInt64"},
+                {"methodIdentifier": "readInt32"},
+                {"params": "readByteVector"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "call",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"callId": "readInt64"},
+                {"blockId": "readInt32"}
+            ],
+            "name": "fetchResponse",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"callId": "readInt64"},
+                {"bundleId": "readInt32"}
+            ],
+            "name": "fetchResponseBundle",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"__return": "readBundle"}]
+                }
+            ]
+        }
+    ],
+    "name": "ICrossProfileService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

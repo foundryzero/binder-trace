@@ -1,0 +1,70 @@
+{
+    "produced_on": "2024-04-12T08:47:57.928785991Z",
+    "source_location": "",
+    "full_name": "android.net.wifi.IWifiScannerListener",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "onSuccess",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"reason": "readInt32"},
+                {"description": "readString16"}
+            ],
+            "name": "onFailure",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{
+                "results": "readParcelableVector",
+                "__parcelType": "android.net.wifi.WifiScanner.ScanData"
+            }],
+            "name": "onResults",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "fullScanResult": "readParcelable",
+                        "__parcelType": "android.net.wifi.ScanResult"
+                    }]
+                }
+            ],
+            "name": "onFullResult",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "onSingleScanCompleted",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{
+                "results": "readParcelableVector",
+                "__parcelType": "android.net.wifi.ScanResult"
+            }],
+            "name": "onPnoNetworkFound",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IWifiScannerListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,115 @@
+{
+    "produced_on": "2024-04-12T08:47:44.026485694Z",
+    "source_location": "",
+    "full_name": "com.android.cts.appsearch.ICommandReceiver",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"queryExpression": "readString16"}],
+            "name": "globalSearch",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "String"
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"packageName": "readString16"},
+                {"databaseName": "readString16"},
+                {"namespace": "readString16"},
+                {"id": "readString16"}
+            ],
+            "name": "globalGet",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "String"
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"packageName": "readString16"},
+                {"databaseName": "readString16"}
+            ],
+            "name": "globalGetSchema",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "String"
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"databaseName": "readString16"},
+                {"namespace": "readString16"},
+                {"id": "readString16"},
+                {
+                    "permissionBundles": "readList",
+                    "__parcelType": "android.os.Bundle"
+                }
+            ],
+            "name": "indexGloballySearchableDocument",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"databaseName": "readString16"},
+                {"namespace": "readString16"},
+                {"id": "readString16"}
+            ],
+            "name": "indexNotGloballySearchableDocument",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"databaseName": "readString16"},
+                {"namespace": "readString16"},
+                {"id": "readString16"},
+                {"entityId": "readString16"},
+                {"globallySearchable": "readBool"}
+            ],
+            "name": "indexAction",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [{"databaseName": "readString16"}],
+            "name": "clearData",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "ICommandReceiver",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

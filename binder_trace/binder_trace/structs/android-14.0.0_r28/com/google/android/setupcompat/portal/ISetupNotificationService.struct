@@ -1,0 +1,107 @@
+{
+    "produced_on": "2024-04-12T08:47:43.966670545Z",
+    "source_location": "",
+    "full_name": "com.google.android.setupcompat.portal.ISetupNotificationService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "component": "readParcelable",
+                        "__parcelType": "com.google.android.setupcompat.portal.NotificationComponent"
+                    }]
+                }
+            ],
+            "name": "registerNotification",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "component": "readParcelable",
+                        "__parcelType": "com.google.android.setupcompat.portal.NotificationComponent"
+                    }]
+                }
+            ],
+            "name": "unregisterNotification",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "component": "readParcelable",
+                        "__parcelType": "com.google.android.setupcompat.portal.ProgressServiceComponent"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "userHandle": "readParcelable",
+                        "__parcelType": "android.os.UserHandle"
+                    }]
+                },
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "registerProgressService",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "component": "readParcelable",
+                        "__parcelType": "com.google.android.setupcompat.portal.ProgressServiceComponent"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "userHandle": "readParcelable",
+                        "__parcelType": "android.os.UserHandle"
+                    }]
+                }
+            ],
+            "name": "isProgressServiceAlive",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "isPortalAvailable",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "ISetupNotificationService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,30 @@
+{
+    "produced_on": "2024-04-12T08:47:54.129190936Z",
+    "source_location": "",
+    "components": [
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "codecType": "readParcelable",
+                "__parcelType": "android.hardware.radio.ims.media.CodecType"
+            }]
+        },
+        {"rxPayloadTypeNumber": "readByte"},
+        {"txPayloadTypeNumber": "readByte"},
+        {"samplingRateKHz": "readByte"},
+        {"dtxEnabled": "readBool"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "codecSpecificParams": "readParcelable",
+                "__parcelType": "android.hardware.radio.ims.media.CodecSpecificParams"
+            }]
+        }
+    ],
+    "full_name": "android.hardware.radio.ims.media.CodecParams",
+    "name": "CodecParams",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

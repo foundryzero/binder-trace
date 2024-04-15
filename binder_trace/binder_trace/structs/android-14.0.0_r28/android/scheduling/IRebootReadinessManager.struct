@@ -1,0 +1,48 @@
+{
+    "produced_on": "2024-04-12T08:47:58.914628437Z",
+    "source_location": "",
+    "full_name": "android.scheduling.IRebootReadinessManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"callingPackage": "readString16"}],
+            "name": "markRebootPending",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"callingPackage": "readString16"}],
+            "name": "cancelPendingReboot",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "isReadyToReboot",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "addRequestRebootReadinessStatusListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "removeRequestRebootReadinessStatusListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IRebootReadinessManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,52 @@
+{
+    "produced_on": "2024-04-12T08:47:58.998747523Z",
+    "source_location": "",
+    "full_name": "android.car.input.ICarInput",
+    "calls": [
+        {
+            "code": 2,
+            "in": [
+                {"callback": "readStrongBinder"},
+                {"targetDisplayType": "readInt32"},
+                {"inputTypes": "readInt32Vector"},
+                {"requestFlags": "readInt32"}
+            ],
+            "name": "requestInputEventCapture",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"callback": "readStrongBinder"},
+                {"targetDisplayType": "readInt32"}
+            ],
+            "name": "releaseInputEventCapture",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "event": "readParcelable",
+                        "__parcelType": "android.view.KeyEvent"
+                    }]
+                },
+                {"targetDisplayType": "readInt32"}
+            ],
+            "name": "injectKeyEvent",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICarInput",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

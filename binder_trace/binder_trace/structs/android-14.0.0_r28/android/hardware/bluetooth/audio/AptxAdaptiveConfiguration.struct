@@ -1,0 +1,54 @@
+{
+    "produced_on": "2024-04-12T08:47:50.025935315Z",
+    "source_location": "",
+    "components": [
+        {"sampleRateHz": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "channelMode": "readParcelable",
+                "__parcelType": "android.hardware.bluetooth.audio.AptxAdaptiveChannelMode"
+            }]
+        },
+        {"bitsPerSample": "readByte"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "aptxMode": "readParcelable",
+                "__parcelType": "android.hardware.bluetooth.audio.AptxMode"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "sinkBufferingMs": "readParcelable",
+                "__parcelType": "android.hardware.bluetooth.audio.AptxSinkBuffering"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "ttp": "readParcelable",
+                "__parcelType": "android.hardware.bluetooth.audio.AptxAdaptiveTimeToPlay"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "inputMode": "readParcelable",
+                "__parcelType": "android.hardware.bluetooth.audio.AptxAdaptiveInputMode"
+            }]
+        },
+        {"inputFadeDurationMs": "readInt32"},
+        {"aptxAdaptiveConfigStream": "readByteVector"}
+    ],
+    "full_name": "android.hardware.bluetooth.audio.AptxAdaptiveConfiguration",
+    "name": "AptxAdaptiveConfiguration",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

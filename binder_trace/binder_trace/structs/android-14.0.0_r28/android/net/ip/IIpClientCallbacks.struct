@@ -1,0 +1,170 @@
+{
+    "produced_on": "2024-04-12T08:47:58.839866190Z",
+    "source_location": "",
+    "full_name": "android.net.ip.IIpClientCallbacks",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"ipClient": "readStrongBinder"}],
+            "name": "onIpClientCreated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "onPreDhcpAction",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "onPostDhcpAction",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "dhcpResults": "readParcelable",
+                        "__parcelType": "android.net.DhcpResultsParcelable"
+                    }]
+                }
+            ],
+            "name": "onNewDhcpResults",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "newLp": "readParcelable",
+                        "__parcelType": "android.net.LinkProperties"
+                    }]
+                }
+            ],
+            "name": "onProvisioningSuccess",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "newLp": "readParcelable",
+                        "__parcelType": "android.net.LinkProperties"
+                    }]
+                }
+            ],
+            "name": "onProvisioningFailure",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "newLp": "readParcelable",
+                        "__parcelType": "android.net.LinkProperties"
+                    }]
+                }
+            ],
+            "name": "onLinkPropertiesChange",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{"logMsg": "readString16"}],
+            "name": "onReachabilityLost",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [],
+            "name": "onQuit",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [{"filter": "readByteVector"}],
+            "name": "installPacketFilter",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [],
+            "name": "startReadPacketFilter",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [{"enabled": "readBool"}],
+            "name": "setFallbackMulticastFilter",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [{"enable": "readBool"}],
+            "name": "setNeighborDiscoveryOffload",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [{
+                "packets": "readList",
+                "__parcelType": "android.net.Layer2PacketParcelable"
+            }],
+            "name": "onPreconnectionStart",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "lossInfo": "readParcelable",
+                        "__parcelType": "android.net.networkstack.aidl.ip.ReachabilityLossInfoParcelable"
+                    }]
+                }
+            ],
+            "name": "onReachabilityFailure",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [{"multiplier": "readInt32"}],
+            "name": "setMaxDtimMultiplier",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IIpClientCallbacks",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

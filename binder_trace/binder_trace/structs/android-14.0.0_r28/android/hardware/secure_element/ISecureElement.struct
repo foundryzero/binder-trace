@@ -1,0 +1,94 @@
+{
+    "produced_on": "2024-04-12T08:47:54.391581300Z",
+    "source_location": "",
+    "full_name": "android.hardware.secure_element.ISecureElement",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"channelNumber": "readByte"}],
+            "name": "closeChannel",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "getAtr",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"clientCallback": "readStrongBinder"}],
+            "name": "init",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "isCardPresent",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"aid": "readByteVector"},
+                {"p2": "readByte"}
+            ],
+            "name": "openBasicChannel",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"aid": "readByteVector"},
+                {"p2": "readByte"}
+            ],
+            "name": "openLogicalChannel",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.secure_element.LogicalChannelResponse"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "reset",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{"data": "readByteVector"}],
+            "name": "transmit",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        }
+    ],
+    "name": "ISecureElement",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

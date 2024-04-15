@@ -1,0 +1,143 @@
+{
+    "produced_on": "2024-04-12T08:47:45.439563690Z",
+    "source_location": "",
+    "full_name": "android.net.INetworkManagementEventObserver",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"iface": "readString16"},
+                {"up": "readBool"}
+            ],
+            "name": "interfaceStatusChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"iface": "readString16"},
+                {"up": "readBool"}
+            ],
+            "name": "interfaceLinkStateChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"iface": "readString16"}],
+            "name": "interfaceAdded",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"iface": "readString16"}],
+            "name": "interfaceRemoved",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"iface": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "address": "readParcelable",
+                        "__parcelType": "android.net.LinkAddress"
+                    }]
+                }
+            ],
+            "name": "addressUpdated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"iface": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "address": "readParcelable",
+                        "__parcelType": "android.net.LinkAddress"
+                    }]
+                }
+            ],
+            "name": "addressRemoved",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"limitName": "readString16"},
+                {"iface": "readString16"}
+            ],
+            "name": "limitReached",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"transportType": "readInt32"},
+                {"active": "readBool"},
+                {"tsNanos": "readInt64"},
+                {"uid": "readInt32"}
+            ],
+            "name": "interfaceClassDataActivityChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"iface": "readString16"},
+                {"lifetime": "readInt64"},
+                {"servers": "readString16Vector"}
+            ],
+            "name": "interfaceDnsServerInfo",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "route": "readParcelable",
+                        "__parcelType": "android.net.RouteInfo"
+                    }]
+                }
+            ],
+            "name": "routeUpdated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "route": "readParcelable",
+                        "__parcelType": "android.net.RouteInfo"
+                    }]
+                }
+            ],
+            "name": "routeRemoved",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "INetworkManagementEventObserver",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

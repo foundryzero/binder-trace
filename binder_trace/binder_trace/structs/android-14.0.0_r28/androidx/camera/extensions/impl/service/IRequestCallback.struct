@@ -1,0 +1,100 @@
+{
+    "produced_on": "2024-04-12T08:47:47.233411408Z",
+    "source_location": "",
+    "full_name": "androidx.camera.extensions.impl.service.IRequestCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"requestId": "readInt32"},
+                {"frameNumber": "readInt64"},
+                {"timestamp": "readInt64"}
+            ],
+            "name": "onCaptureStarted",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"requestId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "partialResult": "readParcelable",
+                        "__parcelType": "androidx.camera.extensions.impl.service.CaptureResultWrapper"
+                    }]
+                }
+            ],
+            "name": "onCaptureProgressed",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"requestId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "totalCaptureResult": "readParcelable",
+                        "__parcelType": "androidx.camera.extensions.impl.service.TotalCaptureResultWrapper"
+                    }]
+                }
+            ],
+            "name": "onCaptureCompleted",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"requestId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "captureFailure": "readParcelable",
+                        "__parcelType": "androidx.camera.extensions.impl.service.CaptureFailureWrapper"
+                    }]
+                }
+            ],
+            "name": "onCaptureFailed",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"requestId": "readInt32"},
+                {"frameNumber": "readInt64"},
+                {"outputStreamId": "readInt32"}
+            ],
+            "name": "onCaptureBufferLost",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"sequenceId": "readInt32"},
+                {"frameNumber": "readInt64"}
+            ],
+            "name": "onCaptureSequenceCompleted",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"sequenceId": "readInt32"}],
+            "name": "onCaptureSequenceAborted",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IRequestCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

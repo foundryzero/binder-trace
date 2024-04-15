@@ -1,0 +1,25 @@
+{
+    "produced_on": "2024-04-12T08:47:56.584384236Z",
+    "source_location": "",
+    "components": [
+        {"bucketIdx": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "band": "readParcelable",
+                "__parcelType": "android.hardware.wifi.WifiBand"
+            }]
+        },
+        {"frequencies": "readInt32Vector"},
+        {"periodInMs": "readInt32"},
+        {"eventReportScheme": "readInt32"},
+        {"exponentialMaxPeriodInMs": "readInt32"},
+        {"exponentialBase": "readInt32"},
+        {"exponentialStepCount": "readInt32"}
+    ],
+    "full_name": "android.hardware.wifi.StaBackgroundScanBucketParameters",
+    "name": "StaBackgroundScanBucketParameters",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

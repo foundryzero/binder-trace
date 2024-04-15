@@ -1,0 +1,71 @@
+{
+    "produced_on": "2024-04-12T08:47:48.370659420Z",
+    "source_location": "",
+    "full_name": "android.hardware.audio.core.IStreamCommon",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "close",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "prepareToClose",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"hwAvSyncId": "readInt32"}],
+            "name": "updateHwAvSyncId",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"ids": "readString16Vector"}],
+            "name": "getVendorParameters",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.audio.core.VendorParameter"
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {
+                    "parameters": "readParcelableVector",
+                    "__parcelType": "android.hardware.audio.core.VendorParameter"
+                },
+                {"async": "readBool"}
+            ],
+            "name": "setVendorParameters",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"effect": "readStrongBinder"}],
+            "name": "addEffect",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"effect": "readStrongBinder"}],
+            "name": "removeEffect",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IStreamCommon",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

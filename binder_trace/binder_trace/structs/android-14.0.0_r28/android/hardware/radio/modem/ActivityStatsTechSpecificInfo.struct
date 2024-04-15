@@ -1,0 +1,26 @@
+{
+    "produced_on": "2024-04-12T08:47:54.177908856Z",
+    "source_location": "",
+    "components": [
+        {"FREQUENCY_RANGE_UNKNOWN": "readInt32"},
+        {"FREQUENCY_RANGE_LOW": "readInt32"},
+        {"FREQUENCY_RANGE_MID": "readInt32"},
+        {"FREQUENCY_RANGE_HIGH": "readInt32"},
+        {"FREQUENCY_RANGE_MMWAVE": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "rat": "readParcelable",
+                "__parcelType": "android.hardware.radio.AccessNetwork"
+            }]
+        },
+        {"frequencyRange": "readInt32"},
+        {"txmModetimeMs": "readInt32Vector"},
+        {"rxModeTimeMs": "readInt32"}
+    ],
+    "full_name": "android.hardware.radio.modem.ActivityStatsTechSpecificInfo",
+    "name": "ActivityStatsTechSpecificInfo",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

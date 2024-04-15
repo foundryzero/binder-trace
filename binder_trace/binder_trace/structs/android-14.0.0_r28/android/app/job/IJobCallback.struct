@@ -1,0 +1,149 @@
+{
+    "produced_on": "2024-04-12T08:47:44.517879760Z",
+    "source_location": "",
+    "full_name": "android.app.job.IJobCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"jobId": "readInt32"},
+                {"workId": "readInt32"},
+                {"transferredBytes": "readInt64"}
+            ],
+            "name": "acknowledgeGetTransferredDownloadBytesMessage",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"jobId": "readInt32"},
+                {"workId": "readInt32"},
+                {"transferredBytes": "readInt64"}
+            ],
+            "name": "acknowledgeGetTransferredUploadBytesMessage",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"jobId": "readInt32"},
+                {"ongoing": "readBool"}
+            ],
+            "name": "acknowledgeStartMessage",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"jobId": "readInt32"},
+                {"reschedule": "readBool"}
+            ],
+            "name": "acknowledgeStopMessage",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"jobId": "readInt32"}],
+            "name": "dequeueWork",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.app.job.JobWorkItem"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"jobId": "readInt32"},
+                {"workId": "readInt32"}
+            ],
+            "name": "completeWork",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"jobId": "readInt32"},
+                {"reschedule": "readBool"}
+            ],
+            "name": "jobFinished",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"jobId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "item": "readParcelable",
+                        "__parcelType": "android.app.job.JobWorkItem"
+                    }]
+                },
+                {"downloadBytes": "readInt64"},
+                {"uploadBytes": "readInt64"}
+            ],
+            "name": "updateEstimatedNetworkBytes",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"jobId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "item": "readParcelable",
+                        "__parcelType": "android.app.job.JobWorkItem"
+                    }]
+                },
+                {"transferredDownloadBytes": "readInt64"},
+                {"transferredUploadBytes": "readInt64"}
+            ],
+            "name": "updateTransferredNetworkBytes",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"jobId": "readInt32"},
+                {"notificationId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "notification": "readParcelable",
+                        "__parcelType": "android.app.Notification"
+                    }]
+                },
+                {"jobEndNotificationPolicy": "readInt32"}
+            ],
+            "name": "setNotification",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IJobCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

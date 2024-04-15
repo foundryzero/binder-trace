@@ -1,0 +1,28 @@
+{
+    "produced_on": "2024-04-12T08:47:47.463019720Z",
+    "source_location": "",
+    "full_name": "android.frameworks.sensorservice.IDirectReportChannel",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"sensorHandle": "readInt32"},
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "rate": "readParcelable",
+                    "__parcelType": "android.hardware.sensors.ISensors.RateLevel"
+                }]
+            }
+        ],
+        "name": "configure",
+        "oneWay": false,
+        "out": [
+            {"__exception": "readException"},
+            {"__return": "readInt32"}
+        ]
+    }],
+    "name": "IDirectReportChannel",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

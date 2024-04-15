@@ -1,0 +1,94 @@
+{
+    "produced_on": "2024-04-12T08:47:55.945125279Z",
+    "source_location": "",
+    "components": [
+        {"portName": "readString16"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "currentDataRole": "readParcelable",
+                "__parcelType": "android.hardware.usb.PortDataRole"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "currentPowerRole": "readParcelable",
+                "__parcelType": "android.hardware.usb.PortPowerRole"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "currentMode": "readParcelable",
+                "__parcelType": "android.hardware.usb.PortMode"
+            }]
+        },
+        {"canChangeMode": "readBool"},
+        {"canChangeDataRole": "readBool"},
+        {"canChangePowerRole": "readBool"},
+        {
+            "supportedModes": "readParcelableVector",
+            "__parcelType": "android.hardware.usb.PortMode"
+        },
+        {
+            "supportedContaminantProtectionModes": "readParcelableVector",
+            "__parcelType": "android.hardware.usb.ContaminantProtectionMode"
+        },
+        {"supportsEnableContaminantPresenceProtection": "readBool"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "contaminantProtectionStatus": "readParcelable",
+                "__parcelType": "android.hardware.usb.ContaminantProtectionStatus"
+            }]
+        },
+        {"supportsEnableContaminantPresenceDetection": "readBool"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "contaminantDetectionStatus": "readParcelable",
+                "__parcelType": "android.hardware.usb.ContaminantDetectionStatus"
+            }]
+        },
+        {
+            "usbDataStatus": "readParcelableVector",
+            "__parcelType": "android.hardware.usb.UsbDataStatus"
+        },
+        {"powerTransferLimited": "readBool"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "powerBrickStatus": "readParcelable",
+                "__parcelType": "android.hardware.usb.PowerBrickStatus"
+            }]
+        },
+        {"supportsComplianceWarnings": "readBool"},
+        {
+            "complianceWarnings": "readParcelableVector",
+            "__parcelType": "android.hardware.usb.ComplianceWarning"
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "plugOrientation": "readParcelable",
+                "__parcelType": "android.hardware.usb.PlugOrientation"
+            }]
+        },
+        {
+            "supportedAltModes": "readParcelableVector",
+            "__parcelType": "android.hardware.usb.AltModeData"
+        }
+    ],
+    "full_name": "android.hardware.usb.PortStatus",
+    "name": "PortStatus",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

@@ -1,0 +1,691 @@
+{
+    "produced_on": "2024-04-12T08:47:52.071973499Z",
+    "source_location": "",
+    "full_name": "android.hardware.graphics.composer3.IComposerClient",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"display": "readInt64"},
+                {"bufferSlotCount": "readInt32"}
+            ],
+            "name": "createLayer",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"width": "readInt32"},
+                {"height": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "formatHint": "readParcelable",
+                        "__parcelType": "android.hardware.graphics.composer3.android.hardware.graphics.common.PixelFormat"
+                    }]
+                },
+                {"outputBufferSlotCount": "readInt32"}
+            ],
+            "name": "createVirtualDisplay",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.graphics.composer3.VirtualDisplay"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"display": "readInt64"},
+                {"layer": "readInt64"}
+            ],
+            "name": "destroyLayer",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"display": "readInt64"}],
+            "name": "destroyVirtualDisplay",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{
+                "commands": "readParcelableVector",
+                "__parcelType": "android.hardware.graphics.composer3.DisplayCommand"
+            }],
+            "name": "executeCommands",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.graphics.composer3.CommandResultPayload"
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [{"display": "readInt64"}],
+            "name": "getActiveConfig",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [{"display": "readInt64"}],
+            "name": "getColorModes",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.graphics.composer3.ColorMode"
+                }
+            ]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "dataspace": "readParcelable",
+                        "__parcelType": "android.hardware.graphics.composer3.android.hardware.graphics.common.Dataspace"
+                    }]
+                }
+            ],
+            "name": "getDataspaceSaturationMatrix",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.graphics.composer3.float"
+                }
+            ]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"display": "readInt64"},
+                {"config": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attribute": "readParcelable",
+                        "__parcelType": "android.hardware.graphics.composer3.DisplayAttribute"
+                    }]
+                }
+            ],
+            "name": "getDisplayAttribute",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [{"display": "readInt64"}],
+            "name": "getDisplayCapabilities",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.graphics.composer3.DisplayCapability"
+                }
+            ]
+        },
+        {
+            "code": 11,
+            "in": [{"display": "readInt64"}],
+            "name": "getDisplayConfigs",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [{"display": "readInt64"}],
+            "name": "getDisplayConnectionType",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.graphics.composer3.DisplayConnectionType"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 13,
+            "in": [{"display": "readInt64"}],
+            "name": "getDisplayIdentificationData",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.graphics.composer3.DisplayIdentification"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 14,
+            "in": [{"display": "readInt64"}],
+            "name": "getDisplayName",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 15,
+            "in": [{"display": "readInt64"}],
+            "name": "getDisplayVsyncPeriod",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 16,
+            "in": [
+                {"display": "readInt64"},
+                {"maxFrames": "readInt64"},
+                {"timestamp": "readInt64"}
+            ],
+            "name": "getDisplayedContentSample",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.graphics.composer3.DisplayContentSample"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 17,
+            "in": [{"display": "readInt64"}],
+            "name": "getDisplayedContentSamplingAttributes",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.graphics.composer3.DisplayContentSamplingAttributes"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 18,
+            "in": [{"display": "readInt64"}],
+            "name": "getDisplayPhysicalOrientation",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.graphics.common.Transform"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 19,
+            "in": [{"display": "readInt64"}],
+            "name": "getHdrCapabilities",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.graphics.composer3.HdrCapabilities"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 20,
+            "in": [],
+            "name": "getMaxVirtualDisplayCount",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 21,
+            "in": [{"display": "readInt64"}],
+            "name": "getPerFrameMetadataKeys",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.graphics.composer3.PerFrameMetadataKey"
+                }
+            ]
+        },
+        {
+            "code": 22,
+            "in": [{"display": "readInt64"}],
+            "name": "getReadbackBufferAttributes",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.graphics.composer3.ReadbackBufferAttributes"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 23,
+            "in": [{"display": "readInt64"}],
+            "name": "getReadbackBufferFence",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.graphics.composer3.ParcelFileDescriptor"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 24,
+            "in": [
+                {"display": "readInt64"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "mode": "readParcelable",
+                        "__parcelType": "android.hardware.graphics.composer3.ColorMode"
+                    }]
+                }
+            ],
+            "name": "getRenderIntents",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.graphics.composer3.RenderIntent"
+                }
+            ]
+        },
+        {
+            "code": 25,
+            "in": [{"display": "readInt64"}],
+            "name": "getSupportedContentTypes",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.graphics.composer3.ContentType"
+                }
+            ]
+        },
+        {
+            "code": 26,
+            "in": [{"display": "readInt64"}],
+            "name": "getDisplayDecorationSupport",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.graphics.common.DisplayDecorationSupport"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 27,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "registerCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 28,
+            "in": [
+                {"display": "readInt64"},
+                {"config": "readInt32"}
+            ],
+            "name": "setActiveConfig",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 29,
+            "in": [
+                {"display": "readInt64"},
+                {"config": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "vsyncPeriodChangeConstraints": "readParcelable",
+                        "__parcelType": "android.hardware.graphics.composer3.VsyncPeriodChangeConstraints"
+                    }]
+                }
+            ],
+            "name": "setActiveConfigWithConstraints",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.graphics.composer3.VsyncPeriodChangeTimeline"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 30,
+            "in": [
+                {"display": "readInt64"},
+                {"config": "readInt32"}
+            ],
+            "name": "setBootDisplayConfig",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 31,
+            "in": [{"display": "readInt64"}],
+            "name": "clearBootDisplayConfig",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 32,
+            "in": [{"display": "readInt64"}],
+            "name": "getPreferredBootDisplayConfig",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 33,
+            "in": [
+                {"display": "readInt64"},
+                {"on": "readBool"}
+            ],
+            "name": "setAutoLowLatencyMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 34,
+            "in": [
+                {"display": "readInt64"},
+                {"clientTargetSlotCount": "readInt32"}
+            ],
+            "name": "setClientTargetSlotCount",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 35,
+            "in": [
+                {"display": "readInt64"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "mode": "readParcelable",
+                        "__parcelType": "android.hardware.graphics.composer3.ColorMode"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "intent": "readParcelable",
+                        "__parcelType": "android.hardware.graphics.composer3.RenderIntent"
+                    }]
+                }
+            ],
+            "name": "setColorMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 36,
+            "in": [
+                {"display": "readInt64"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.hardware.graphics.composer3.ContentType"
+                    }]
+                }
+            ],
+            "name": "setContentType",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 37,
+            "in": [
+                {"display": "readInt64"},
+                {"enable": "readBool"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "componentMask": "readParcelable",
+                        "__parcelType": "android.hardware.graphics.composer3.FormatColorComponent"
+                    }]
+                },
+                {"maxFrames": "readInt64"}
+            ],
+            "name": "setDisplayedContentSamplingEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 38,
+            "in": [
+                {"display": "readInt64"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "mode": "readParcelable",
+                        "__parcelType": "android.hardware.graphics.composer3.PowerMode"
+                    }]
+                }
+            ],
+            "name": "setPowerMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 39,
+            "in": [
+                {"display": "readInt64"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "buffer": "readParcelable",
+                        "__parcelType": "android.hardware.graphics.composer3.android.hardware.common.NativeHandle"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "releaseFence": "readParcelable",
+                        "__parcelType": "android.hardware.graphics.composer3.ParcelFileDescriptor"
+                    }]
+                }
+            ],
+            "name": "setReadbackBuffer",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 40,
+            "in": [
+                {"display": "readInt64"},
+                {"enabled": "readBool"}
+            ],
+            "name": "setVsyncEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 41,
+            "in": [
+                {"display": "readInt64"},
+                {"timeoutMs": "readInt32"}
+            ],
+            "name": "setIdleTimerEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 42,
+            "in": [],
+            "name": "getOverlaySupport",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.graphics.composer3.OverlayProperties"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 43,
+            "in": [],
+            "name": "getHdrConversionCapabilities",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.graphics.common.HdrConversionCapability"
+                }
+            ]
+        },
+        {
+            "code": 44,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "conversionStrategy": "readParcelable",
+                        "__parcelType": "android.hardware.graphics.common.HdrConversionStrategy"
+                    }]
+                }
+            ],
+            "name": "setHdrConversionStrategy",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.graphics.common.Hdr"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 45,
+            "in": [
+                {"display": "readInt64"},
+                {"enabled": "readBool"}
+            ],
+            "name": "setRefreshRateChangedCallbackDebugEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IComposerClient",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

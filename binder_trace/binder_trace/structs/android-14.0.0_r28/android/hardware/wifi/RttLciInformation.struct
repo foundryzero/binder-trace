@@ -1,0 +1,27 @@
+{
+    "produced_on": "2024-04-12T08:47:56.574178973Z",
+    "source_location": "",
+    "components": [
+        {"latitude": "readInt64"},
+        {"longitude": "readInt64"},
+        {"altitude": "readInt32"},
+        {"latitudeUnc": "readByte"},
+        {"longitudeUnc": "readByte"},
+        {"altitudeUnc": "readByte"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "motionPattern": "readParcelable",
+                "__parcelType": "android.hardware.wifi.RttMotionPattern"
+            }]
+        },
+        {"floor": "readInt32"},
+        {"heightAboveFloor": "readInt32"},
+        {"heightUnc": "readInt32"}
+    ],
+    "full_name": "android.hardware.wifi.RttLciInformation",
+    "name": "RttLciInformation",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

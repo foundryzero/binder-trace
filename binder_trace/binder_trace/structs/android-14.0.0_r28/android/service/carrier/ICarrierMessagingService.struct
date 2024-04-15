@@ -1,0 +1,125 @@
+{
+    "produced_on": "2024-04-12T08:47:45.717756698Z",
+    "source_location": "",
+    "full_name": "android.service.carrier.ICarrierMessagingService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "pdu": "readParcelable",
+                        "__parcelType": "android.service.carrier.MessagePdu"
+                    }]
+                },
+                {"format": "readString16"},
+                {"destPort": "readInt32"},
+                {"subId": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "filterSms",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"text": "readString16"},
+                {"subId": "readInt32"},
+                {"destAddress": "readString16"},
+                {"sendSmsFlag": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "sendTextSms",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"data": "readByteVector"},
+                {"subId": "readInt32"},
+                {"destAddress": "readString16"},
+                {"destPort": "readInt32"},
+                {"sendSmsFlag": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "sendDataSms",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {
+                    "parts": "readList",
+                    "__parcelType": "String"
+                },
+                {"subId": "readInt32"},
+                {"destAddress": "readString16"},
+                {"sendSmsFlag": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "sendMultipartTextSms",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "pduUri": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                },
+                {"subId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "location": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "sendMms",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "pduUri": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                },
+                {"subId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "location": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "downloadMms",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICarrierMessagingService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

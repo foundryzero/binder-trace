@@ -1,0 +1,77 @@
+{
+    "produced_on": "2024-04-12T08:47:50.374517354Z",
+    "source_location": "",
+    "components": [
+        {"id": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "streamType": "readParcelable",
+                "__parcelType": "android.hardware.camera.device.StreamType"
+            }]
+        },
+        {"width": "readInt32"},
+        {"height": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "format": "readParcelable",
+                "__parcelType": "android.hardware.camera.device.android.hardware.graphics.common.PixelFormat"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "usage": "readParcelable",
+                "__parcelType": "android.hardware.camera.device.android.hardware.graphics.common.BufferUsage"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "dataSpace": "readParcelable",
+                "__parcelType": "android.hardware.camera.device.android.hardware.graphics.common.Dataspace"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "rotation": "readParcelable",
+                "__parcelType": "android.hardware.camera.device.StreamRotation"
+            }]
+        },
+        {"physicalCameraId": "readString16"},
+        {"bufferSize": "readInt32"},
+        {"groupId": "readInt32"},
+        {
+            "sensorPixelModesUsed": "readParcelableVector",
+            "__parcelType": "android.hardware.camera.device.android.hardware.camera.metadata.SensorPixelMode"
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "dynamicRangeProfile": "readParcelable",
+                "__parcelType": "android.hardware.camera.device.android.hardware.camera.metadata.RequestAvailableDynamicRangeProfilesMap"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "useCase": "readParcelable",
+                "__parcelType": "android.hardware.camera.device.android.hardware.camera.metadata.ScalerAvailableStreamUseCases"
+            }]
+        },
+        {"colorSpace": "readInt32"}
+    ],
+    "full_name": "android.hardware.camera.device.Stream",
+    "name": "Stream",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

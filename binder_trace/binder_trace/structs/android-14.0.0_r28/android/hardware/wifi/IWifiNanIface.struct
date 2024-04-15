@@ -1,0 +1,324 @@
+{
+    "produced_on": "2024-04-12T08:47:56.492186440Z",
+    "source_location": "",
+    "full_name": "android.hardware.wifi.IWifiNanIface",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getName",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"cmdId": "readChar"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "msg1": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.NanConfigRequest"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "msg2": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.NanConfigRequestSupplemental"
+                    }]
+                }
+            ],
+            "name": "configRequest",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"cmdId": "readChar"},
+                {"ifaceName": "readString16"}
+            ],
+            "name": "createDataInterfaceRequest",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"cmdId": "readChar"},
+                {"ifaceName": "readString16"}
+            ],
+            "name": "deleteDataInterfaceRequest",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"cmdId": "readChar"}],
+            "name": "disableRequest",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"cmdId": "readChar"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "msg1": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.NanEnableRequest"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "msg2": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.NanConfigRequestSupplemental"
+                    }]
+                }
+            ],
+            "name": "enableRequest",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"cmdId": "readChar"}],
+            "name": "getCapabilitiesRequest",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"cmdId": "readChar"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "msg": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.NanInitiateDataPathRequest"
+                    }]
+                }
+            ],
+            "name": "initiateDataPathRequest",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "registerEventCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"cmdId": "readChar"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "msg": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.NanRespondToDataPathIndicationRequest"
+                    }]
+                }
+            ],
+            "name": "respondToDataPathIndicationRequest",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"cmdId": "readChar"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "msg": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.NanPublishRequest"
+                    }]
+                }
+            ],
+            "name": "startPublishRequest",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"cmdId": "readChar"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "msg": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.NanSubscribeRequest"
+                    }]
+                }
+            ],
+            "name": "startSubscribeRequest",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"cmdId": "readChar"},
+                {"sessionId": "readByte"}
+            ],
+            "name": "stopPublishRequest",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"cmdId": "readChar"},
+                {"sessionId": "readByte"}
+            ],
+            "name": "stopSubscribeRequest",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"cmdId": "readChar"},
+                {"ndpInstanceId": "readInt32"}
+            ],
+            "name": "terminateDataPathRequest",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [
+                {"cmdId": "readChar"},
+                {"sessionId": "readByte"}
+            ],
+            "name": "suspendRequest",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [
+                {"cmdId": "readChar"},
+                {"sessionId": "readByte"}
+            ],
+            "name": "resumeRequest",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"cmdId": "readChar"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "msg": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.NanTransmitFollowupRequest"
+                    }]
+                }
+            ],
+            "name": "transmitFollowupRequest",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 19,
+            "in": [
+                {"cmdId": "readChar"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "msg": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.NanPairingRequest"
+                    }]
+                }
+            ],
+            "name": "initiatePairingRequest",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 20,
+            "in": [
+                {"cmdId": "readChar"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "msg": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.NanRespondToPairingIndicationRequest"
+                    }]
+                }
+            ],
+            "name": "respondToPairingIndicationRequest",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 21,
+            "in": [
+                {"cmdId": "readChar"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "msg": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.NanBootstrappingRequest"
+                    }]
+                }
+            ],
+            "name": "initiateBootstrappingRequest",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 22,
+            "in": [
+                {"cmdId": "readChar"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "msg": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.NanBootstrappingResponse"
+                    }]
+                }
+            ],
+            "name": "respondToBootstrappingIndicationRequest",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 23,
+            "in": [
+                {"cmdId": "readChar"},
+                {"pairingInstanceId": "readInt32"}
+            ],
+            "name": "terminatePairingRequest",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IWifiNanIface",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

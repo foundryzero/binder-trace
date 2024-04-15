@@ -1,0 +1,154 @@
+{
+    "produced_on": "2024-04-12T08:47:54.742162409Z",
+    "source_location": "",
+    "full_name": "android.hardware.media.c2.IComponent",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"avSyncHwId": "readInt32"}],
+            "name": "configureVideoTunnel",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.common.NativeHandle"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"allocatorId": "readInt32"}],
+            "name": "createBlockPool",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.media.c2.IComponent.BlockPool"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"blockPoolId": "readInt64"}],
+            "name": "destroyBlockPool",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"withEos": "readBool"}],
+            "name": "drain",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "flush",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.media.c2.WorkBundle"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "getInterface",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "workBundle": "readParcelable",
+                        "__parcelType": "android.hardware.media.c2.WorkBundle"
+                    }]
+                }
+            ],
+            "name": "queue",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "release",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [],
+            "name": "reset",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"blockPoolId": "readInt64"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "surface": "readParcelable",
+                        "__parcelType": "android.view.Surface"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "syncObject": "readParcelable",
+                        "__parcelType": "android.hardware.media.c2.SurfaceSyncObj"
+                    }]
+                }
+            ],
+            "name": "setOutputSurface",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [],
+            "name": "start",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [],
+            "name": "stop",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IComponent",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

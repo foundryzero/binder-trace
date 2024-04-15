@@ -1,0 +1,108 @@
+{
+    "produced_on": "2024-04-12T08:47:46.882392041Z",
+    "source_location": "",
+    "full_name": "android.telephony.data.IDataServiceCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"result": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "dataCallResponse": "readParcelable",
+                        "__parcelType": "android.telephony.data.DataCallResponse"
+                    }]
+                }
+            ],
+            "name": "onSetupDataCallComplete",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"result": "readInt32"}],
+            "name": "onDeactivateDataCallComplete",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"result": "readInt32"}],
+            "name": "onSetInitialAttachApnComplete",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"result": "readInt32"}],
+            "name": "onSetDataProfileComplete",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"result": "readInt32"},
+                {
+                    "dataCallList": "readList",
+                    "__parcelType": "android.telephony.data.DataCallResponse"
+                }
+            ],
+            "name": "onRequestDataCallListComplete",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{
+                "dataCallList": "readList",
+                "__parcelType": "android.telephony.data.DataCallResponse"
+            }],
+            "name": "onDataCallListChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"result": "readInt32"}],
+            "name": "onHandoverStarted",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{"result": "readInt32"}],
+            "name": "onHandoverCancelled",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [{"apn": "readString16"}],
+            "name": "onApnUnthrottled",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "dp": "readParcelable",
+                        "__parcelType": "android.telephony.data.DataProfile"
+                    }]
+                }
+            ],
+            "name": "onDataProfileUnthrottled",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IDataServiceCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

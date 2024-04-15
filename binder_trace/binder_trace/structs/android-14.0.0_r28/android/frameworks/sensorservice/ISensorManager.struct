@@ -1,0 +1,99 @@
+{
+    "produced_on": "2024-04-12T08:47:47.467214733Z",
+    "source_location": "",
+    "full_name": "android.frameworks.sensorservice.ISensorManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "mem": "readParcelable",
+                        "__parcelType": "android.hardware.common.Ashmem"
+                    }]
+                },
+                {"size": "readInt64"}
+            ],
+            "name": "createAshmemDirectChannel",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "createEventQueue",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "buffer": "readParcelable",
+                        "__parcelType": "android.frameworks.sensorservice.ParcelFileDescriptor"
+                    }]
+                },
+                {"size": "readInt64"}
+            ],
+            "name": "createGrallocDirectChannel",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.hardware.sensors.SensorType"
+                    }]
+                }
+            ],
+            "name": "getDefaultSensor",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.sensors.SensorInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "getSensorList",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.sensors.SensorInfo"
+                }
+            ]
+        }
+    ],
+    "name": "ISensorManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,230 @@
+{
+    "produced_on": "2024-04-12T08:47:54.079198860Z",
+    "source_location": "",
+    "full_name": "android.hardware.radio.data.IRadioData",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"serial": "readInt32"}],
+            "name": "allocatePduSessionId",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"serial": "readInt32"},
+                {"callId": "readInt32"}
+            ],
+            "name": "cancelHandover",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"serial": "readInt32"},
+                {"cid": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "reason": "readParcelable",
+                        "__parcelType": "android.hardware.radio.data.DataRequestReason"
+                    }]
+                }
+            ],
+            "name": "deactivateDataCall",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"serial": "readInt32"}],
+            "name": "getDataCallList",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"serial": "readInt32"}],
+            "name": "getSlicingConfig",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"serial": "readInt32"},
+                {"id": "readInt32"}
+            ],
+            "name": "releasePduSessionId",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "responseAcknowledgement",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"serial": "readInt32"},
+                {"allow": "readBool"}
+            ],
+            "name": "setDataAllowed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"serial": "readInt32"},
+                {
+                    "profiles": "readParcelableVector",
+                    "__parcelType": "android.hardware.radio.data.DataProfileInfo"
+                }
+            ],
+            "name": "setDataProfile",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "dataThrottlingAction": "readParcelable",
+                        "__parcelType": "android.hardware.radio.data.DataThrottlingAction"
+                    }]
+                },
+                {"completionDurationMillis": "readInt64"}
+            ],
+            "name": "setDataThrottling",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "dataProfileInfo": "readParcelable",
+                        "__parcelType": "android.hardware.radio.data.DataProfileInfo"
+                    }]
+                }
+            ],
+            "name": "setInitialAttachApn",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"radioDataResponse": "readStrongBinder"},
+                {"radioDataIndication": "readStrongBinder"}
+            ],
+            "name": "setResponseFunctions",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "accessNetwork": "readParcelable",
+                        "__parcelType": "android.hardware.radio.AccessNetwork"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "dataProfileInfo": "readParcelable",
+                        "__parcelType": "android.hardware.radio.data.DataProfileInfo"
+                    }]
+                },
+                {"roamingAllowed": "readBool"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "reason": "readParcelable",
+                        "__parcelType": "android.hardware.radio.data.DataRequestReason"
+                    }]
+                },
+                {
+                    "addresses": "readParcelableVector",
+                    "__parcelType": "android.hardware.radio.data.LinkAddress"
+                },
+                {"dnses": "readString16Vector"},
+                {"pduSessionId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sliceInfo": "readParcelable",
+                        "__parcelType": "android.hardware.radio.data.SliceInfo"
+                    }]
+                },
+                {"matchAllRuleAllowed": "readBool"}
+            ],
+            "name": "setupDataCall",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"serial": "readInt32"},
+                {"callId": "readInt32"}
+            ],
+            "name": "startHandover",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "keepalive": "readParcelable",
+                        "__parcelType": "android.hardware.radio.data.KeepaliveRequest"
+                    }]
+                }
+            ],
+            "name": "startKeepalive",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [
+                {"serial": "readInt32"},
+                {"sessionHandle": "readInt32"}
+            ],
+            "name": "stopKeepalive",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IRadioData",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

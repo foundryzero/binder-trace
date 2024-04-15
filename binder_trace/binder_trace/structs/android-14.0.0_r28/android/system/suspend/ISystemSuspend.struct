@@ -1,0 +1,28 @@
+{
+    "produced_on": "2024-04-12T08:48:00.163127744Z",
+    "source_location": "",
+    "full_name": "android.system.suspend.ISystemSuspend",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "type": "readParcelable",
+                    "__parcelType": "android.system.suspend.WakeLockType"
+                }]
+            },
+            {"name": "readString16"}
+        ],
+        "name": "acquireWakeLock",
+        "oneWay": false,
+        "out": [
+            {"__exception": "readException"},
+            {"__return": "readStrongBinder"}
+        ]
+    }],
+    "name": "ISystemSuspend",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

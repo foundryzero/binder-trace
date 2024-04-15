@@ -1,0 +1,718 @@
+{
+    "produced_on": "2024-04-12T08:47:44.553473358Z",
+    "source_location": "",
+    "full_name": "android.accessibilityservice.IAccessibilityServiceConnection",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "info": "readParcelable",
+                        "__parcelType": "android.accessibilityservice.AccessibilityServiceInfo"
+                    }]
+                }
+            ],
+            "name": "setServiceInfo",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"attributionTag": "readString16"}],
+            "name": "setAttributionTag",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"accessibilityWindowId": "readInt32"},
+                {"accessibilityNodeId": "readInt64"},
+                {"interactionId": "readInt32"},
+                {"callback": "readStrongBinder"},
+                {"flags": "readInt32"},
+                {"threadId": "readInt64"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"arguments": "readBundle"}]
+                }
+            ],
+            "name": "findAccessibilityNodeInfoByAccessibilityId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"accessibilityWindowId": "readInt32"},
+                {"accessibilityNodeId": "readInt64"},
+                {"text": "readString16"},
+                {"interactionId": "readInt32"},
+                {"callback": "readStrongBinder"},
+                {"threadId": "readInt64"}
+            ],
+            "name": "findAccessibilityNodeInfosByText",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"accessibilityWindowId": "readInt32"},
+                {"accessibilityNodeId": "readInt64"},
+                {"viewId": "readString16"},
+                {"interactionId": "readInt32"},
+                {"callback": "readStrongBinder"},
+                {"threadId": "readInt64"}
+            ],
+            "name": "findAccessibilityNodeInfosByViewId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"accessibilityWindowId": "readInt32"},
+                {"accessibilityNodeId": "readInt64"},
+                {"focusType": "readInt32"},
+                {"interactionId": "readInt32"},
+                {"callback": "readStrongBinder"},
+                {"threadId": "readInt64"}
+            ],
+            "name": "findFocus",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"accessibilityWindowId": "readInt32"},
+                {"accessibilityNodeId": "readInt64"},
+                {"direction": "readInt32"},
+                {"interactionId": "readInt32"},
+                {"callback": "readStrongBinder"},
+                {"threadId": "readInt64"}
+            ],
+            "name": "focusSearch",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"accessibilityWindowId": "readInt32"},
+                {"accessibilityNodeId": "readInt64"},
+                {"action": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"arguments": "readBundle"}]
+                },
+                {"interactionId": "readInt32"},
+                {"callback": "readStrongBinder"},
+                {"threadId": "readInt64"}
+            ],
+            "name": "performAccessibilityAction",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [{"windowId": "readInt32"}],
+            "name": "getWindow",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.view.accessibility.AccessibilityWindowInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 10,
+            "in": [],
+            "name": "getWindows",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.accessibilityservice.AccessibilityWindowInfo.WindowListSparseArray"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 11,
+            "in": [],
+            "name": "getServiceInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.accessibilityservice.AccessibilityServiceInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 12,
+            "in": [{"action": "readInt32"}],
+            "name": "performGlobalAction",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [],
+            "name": "getSystemActions",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.view.accessibility.AccessibilityNodeInfo.AccessibilityAction"
+                }
+            ]
+        },
+        {
+            "code": 14,
+            "in": [],
+            "name": "disableSelf",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"handled": "readBool"},
+                {"sequence": "readInt32"}
+            ],
+            "name": "setOnKeyEventResult",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [{"displayId": "readInt32"}],
+            "name": "getMagnificationConfig",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.accessibilityservice.MagnificationConfig"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 17,
+            "in": [{"displayId": "readInt32"}],
+            "name": "getMagnificationScale",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readFloat"}
+            ]
+        },
+        {
+            "code": 18,
+            "in": [{"displayId": "readInt32"}],
+            "name": "getMagnificationCenterX",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readFloat"}
+            ]
+        },
+        {
+            "code": 19,
+            "in": [{"displayId": "readInt32"}],
+            "name": "getMagnificationCenterY",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readFloat"}
+            ]
+        },
+        {
+            "code": 20,
+            "in": [{"displayId": "readInt32"}],
+            "name": "getMagnificationRegion",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.graphics.Region"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 21,
+            "in": [{"displayId": "readInt32"}],
+            "name": "getCurrentMagnificationRegion",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.graphics.Region"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 22,
+            "in": [
+                {"displayId": "readInt32"},
+                {"animate": "readBool"}
+            ],
+            "name": "resetMagnification",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 23,
+            "in": [
+                {"displayId": "readInt32"},
+                {"animate": "readBool"}
+            ],
+            "name": "resetCurrentMagnification",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 24,
+            "in": [
+                {"displayId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "config": "readParcelable",
+                        "__parcelType": "android.accessibilityservice.MagnificationConfig"
+                    }]
+                },
+                {"animate": "readBool"}
+            ],
+            "name": "setMagnificationConfig",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 25,
+            "in": [
+                {"displayId": "readInt32"},
+                {"enabled": "readBool"}
+            ],
+            "name": "setMagnificationCallbackEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 26,
+            "in": [{"showMode": "readInt32"}],
+            "name": "setSoftKeyboardShowMode",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 27,
+            "in": [],
+            "name": "getSoftKeyboardShowMode",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 28,
+            "in": [{"enabled": "readBool"}],
+            "name": "setSoftKeyboardCallbackEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 29,
+            "in": [{"imeId": "readString16"}],
+            "name": "switchToInputMethod",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 30,
+            "in": [
+                {"imeId": "readString16"},
+                {"enabled": "readBool"}
+            ],
+            "name": "setInputMethodEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 31,
+            "in": [],
+            "name": "isAccessibilityButtonAvailable",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 32,
+            "in": [
+                {"sequence": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "gestureSteps": "readParcelable",
+                        "__parcelType": "android.content.pm.ParceledListSlice"
+                    }]
+                }
+            ],
+            "name": "sendGesture",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 33,
+            "in": [
+                {"sequence": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "gestureSteps": "readParcelable",
+                        "__parcelType": "android.content.pm.ParceledListSlice"
+                    }]
+                },
+                {"displayId": "readInt32"}
+            ],
+            "name": "dispatchGesture",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 34,
+            "in": [],
+            "name": "isFingerprintGestureDetectionAvailable",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 35,
+            "in": [{"displayid": "readInt32"}],
+            "name": "getOverlayWindowToken",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 36,
+            "in": [{"token": "readStrongBinder"}],
+            "name": "getWindowIdForLeashToken",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 37,
+            "in": [
+                {"displayId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callback": "readParcelable",
+                        "__parcelType": "android.os.RemoteCallback"
+                    }]
+                }
+            ],
+            "name": "takeScreenshot",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 38,
+            "in": [
+                {"accessibilityWindowId": "readInt32"},
+                {"interactionId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "listener": "readParcelable",
+                        "__parcelType": "android.accessibilityservice.ScreenCapture.ScreenCaptureListener"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "takeScreenshotOfWindow",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 39,
+            "in": [
+                {"displayId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "region": "readParcelable",
+                        "__parcelType": "android.graphics.Region"
+                    }]
+                }
+            ],
+            "name": "setGestureDetectionPassthroughRegion",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 40,
+            "in": [
+                {"displayId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "region": "readParcelable",
+                        "__parcelType": "android.graphics.Region"
+                    }]
+                }
+            ],
+            "name": "setTouchExplorationPassthroughRegion",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 41,
+            "in": [
+                {"strokeWidth": "readInt32"},
+                {"color": "readInt32"}
+            ],
+            "name": "setFocusAppearance",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 42,
+            "in": [{"enabled": "readBool"}],
+            "name": "setCacheEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 43,
+            "in": [
+                {"timestamp": "readInt64"},
+                {"where": "readString16"},
+                {"loggingTypes": "readInt64"},
+                {"callingParams": "readString16"},
+                {"processId": "readInt32"},
+                {"threadId": "readInt64"},
+                {"callingUid": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"serializedCallingStackInBundle": "readBundle"}]
+                }
+            ],
+            "name": "logTrace",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 44,
+            "in": [
+                {"displayId": "readInt32"},
+                {"mode": "readBool"}
+            ],
+            "name": "setServiceDetectsGesturesEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 45,
+            "in": [{"displayId": "readInt32"}],
+            "name": "requestTouchExploration",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 46,
+            "in": [
+                {"displayId": "readInt32"},
+                {"pointerId": "readInt32"}
+            ],
+            "name": "requestDragging",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 47,
+            "in": [{"displayId": "readInt32"}],
+            "name": "requestDelegating",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 48,
+            "in": [{"displayId": "readInt32"}],
+            "name": "onDoubleTap",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 49,
+            "in": [{"displayId": "readInt32"}],
+            "name": "onDoubleTapAndHold",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 50,
+            "in": [{"scale": "readFloat"}],
+            "name": "setAnimationScale",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 51,
+            "in": [{
+                "infos": "readList",
+                "__parcelType": "android.accessibilityservice.AccessibilityServiceInfo"
+            }],
+            "name": "setInstalledAndEnabledServices",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 52,
+            "in": [],
+            "name": "getInstalledAndEnabledServices",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.accessibilityservice.AccessibilityServiceInfo"
+                }
+            ]
+        },
+        {
+            "code": 53,
+            "in": [
+                {"displayId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sc": "readParcelable",
+                        "__parcelType": "android.view.SurfaceControl"
+                    }]
+                }
+            ],
+            "name": "attachAccessibilityOverlayToDisplay",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 54,
+            "in": [
+                {"accessibilityWindowId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sc": "readParcelable",
+                        "__parcelType": "android.view.SurfaceControl"
+                    }]
+                }
+            ],
+            "name": "attachAccessibilityOverlayToWindow",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IAccessibilityServiceConnection",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

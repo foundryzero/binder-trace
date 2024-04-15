@@ -1,0 +1,43 @@
+{
+    "produced_on": "2024-04-12T08:47:59.471622538Z",
+    "source_location": "",
+    "full_name": "com.android.car.testdpc.remotedpm.IRemoteDevicePolicyManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "admin": "readParcelable",
+                        "__parcelType": "android.content.ComponentName"
+                    }]
+                }
+            ],
+            "name": "reboot",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "admin": "readParcelable",
+                        "__parcelType": "android.content.ComponentName"
+                    }]
+                },
+                {"key": "readString16"}
+            ],
+            "name": "addUserRestriction",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IRemoteDevicePolicyManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

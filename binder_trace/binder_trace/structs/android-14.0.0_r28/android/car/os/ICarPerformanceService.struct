@@ -1,0 +1,44 @@
+{
+    "produced_on": "2024-04-12T08:47:59.039356051Z",
+    "source_location": "",
+    "full_name": "android.car.os.ICarPerformanceService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"tid": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "policyWithPriority": "readParcelable",
+                        "__parcelType": "android.car.os.ThreadPolicyWithPriority"
+                    }]
+                }
+            ],
+            "name": "setThreadPriority",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"tid": "readInt32"}],
+            "name": "getThreadPriority",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.car.os.ThreadPolicyWithPriority"
+                    }]
+                }
+            ]
+        }
+    ],
+    "name": "ICarPerformanceService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

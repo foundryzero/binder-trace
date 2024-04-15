@@ -1,0 +1,81 @@
+{
+    "produced_on": "2024-04-12T08:47:56.703070668Z",
+    "source_location": "",
+    "full_name": "android.hardware.net.nlinterceptor.IInterceptor",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nlFamily": "readInt32"},
+                {"clientNlPid": "readInt32"},
+                {"clientName": "readString16"}
+            ],
+            "name": "createSocket",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.net.nlinterceptor.InterceptedSocket"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "handle": "readParcelable",
+                        "__parcelType": "android.hardware.net.nlinterceptor.InterceptedSocket"
+                    }]
+                }
+            ],
+            "name": "closeSocket",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "handle": "readParcelable",
+                        "__parcelType": "android.hardware.net.nlinterceptor.InterceptedSocket"
+                    }]
+                },
+                {"nlGroup": "readInt32"}
+            ],
+            "name": "subscribeGroup",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "handle": "readParcelable",
+                        "__parcelType": "android.hardware.net.nlinterceptor.InterceptedSocket"
+                    }]
+                },
+                {"nlGroup": "readInt32"}
+            ],
+            "name": "unsubscribeGroup",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IInterceptor",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

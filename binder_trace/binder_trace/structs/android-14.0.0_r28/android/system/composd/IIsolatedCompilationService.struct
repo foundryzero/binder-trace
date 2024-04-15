@@ -1,0 +1,40 @@
+{
+    "produced_on": "2024-04-12T08:47:57.712910233Z",
+    "source_location": "",
+    "full_name": "android.system.composd.IIsolatedCompilationService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "startStagedApexCompile",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "apexSource": "readParcelable",
+                        "__parcelType": "android.system.composd.ApexSource"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "startTestCompile",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        }
+    ],
+    "name": "IIsolatedCompilationService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

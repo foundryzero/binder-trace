@@ -1,0 +1,91 @@
+{
+    "produced_on": "2024-04-12T08:47:59.465090567Z",
+    "source_location": "",
+    "full_name": "com.android.car.telemetry.scriptexecutorinterface.IScriptExecutor",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"scriptBody": "readString16"},
+                {"functionName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "publishedData": "readParcelable",
+                        "__parcelType": "android.os.PersistableBundle"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "savedState": "readParcelable",
+                        "__parcelType": "android.os.PersistableBundle"
+                    }]
+                },
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "invokeScript",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"scriptBody": "readString16"},
+                {"functionName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "publishedDataFileDescriptor": "readParcelable",
+                        "__parcelType": "android.os.ParcelFileDescriptor"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "savedState": "readParcelable",
+                        "__parcelType": "android.os.PersistableBundle"
+                    }]
+                },
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "invokeScriptForLargeInput",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"scriptBody": "readString16"},
+                {"functionName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "bundleList": "readParcelable",
+                        "__parcelType": "com.android.car.telemetry.scriptexecutorinterface.BundleList"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "savedState": "readParcelable",
+                        "__parcelType": "android.os.PersistableBundle"
+                    }]
+                },
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "invokeScriptForBundleList",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IScriptExecutor",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

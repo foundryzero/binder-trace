@@ -1,0 +1,95 @@
+{
+    "produced_on": "2024-04-12T08:47:51.551551457Z",
+    "source_location": "",
+    "components": [
+        {"HAS_SNR": "readInt32"},
+        {"HAS_CARRIER_FREQUENCY": "readInt32"},
+        {"HAS_CARRIER_CYCLES": "readInt32"},
+        {"HAS_CARRIER_PHASE": "readInt32"},
+        {"HAS_CARRIER_PHASE_UNCERTAINTY": "readInt32"},
+        {"HAS_AUTOMATIC_GAIN_CONTROL": "readInt32"},
+        {"HAS_FULL_ISB": "readInt32"},
+        {"HAS_FULL_ISB_UNCERTAINTY": "readInt32"},
+        {"HAS_SATELLITE_ISB": "readInt32"},
+        {"HAS_SATELLITE_ISB_UNCERTAINTY": "readInt32"},
+        {"HAS_SATELLITE_PVT": "readInt32"},
+        {"HAS_CORRELATION_VECTOR": "readInt32"},
+        {"flags": "readInt32"},
+        {"svid": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "signalType": "readParcelable",
+                "__parcelType": "android.hardware.gnss.GnssSignalType"
+            }]
+        },
+        {"timeOffsetNs": "readDouble"},
+        {"STATE_UNKNOWN": "readInt32"},
+        {"STATE_CODE_LOCK": "readInt32"},
+        {"STATE_BIT_SYNC": "readInt32"},
+        {"STATE_SUBFRAME_SYNC": "readInt32"},
+        {"STATE_TOW_DECODED": "readInt32"},
+        {"STATE_MSEC_AMBIGUOUS": "readInt32"},
+        {"STATE_SYMBOL_SYNC": "readInt32"},
+        {"STATE_GLO_STRING_SYNC": "readInt32"},
+        {"STATE_GLO_TOD_DECODED": "readInt32"},
+        {"STATE_BDS_D2_BIT_SYNC": "readInt32"},
+        {"STATE_BDS_D2_SUBFRAME_SYNC": "readInt32"},
+        {"STATE_GAL_E1BC_CODE_LOCK": "readInt32"},
+        {"STATE_GAL_E1C_2ND_CODE_LOCK": "readInt32"},
+        {"STATE_GAL_E1B_PAGE_SYNC": "readInt32"},
+        {"STATE_SBAS_SYNC": "readInt32"},
+        {"STATE_TOW_KNOWN": "readInt32"},
+        {"STATE_GLO_TOD_KNOWN": "readInt32"},
+        {"STATE_2ND_CODE_LOCK": "readInt32"},
+        {"state": "readInt32"},
+        {"receivedSvTimeInNs": "readInt64"},
+        {"receivedSvTimeUncertaintyInNs": "readInt64"},
+        {"antennaCN0DbHz": "readDouble"},
+        {"basebandCN0DbHz": "readDouble"},
+        {"pseudorangeRateMps": "readDouble"},
+        {"pseudorangeRateUncertaintyMps": "readDouble"},
+        {"ADR_STATE_UNKNOWN": "readInt32"},
+        {"ADR_STATE_VALID": "readInt32"},
+        {"ADR_STATE_RESET": "readInt32"},
+        {"ADR_STATE_CYCLE_SLIP": "readInt32"},
+        {"ADR_STATE_HALF_CYCLE_RESOLVED": "readInt32"},
+        {"accumulatedDeltaRangeState": "readInt32"},
+        {"accumulatedDeltaRangeM": "readDouble"},
+        {"accumulatedDeltaRangeUncertaintyM": "readDouble"},
+        {"carrierCycles": "readInt64"},
+        {"carrierPhase": "readDouble"},
+        {"carrierPhaseUncertainty": "readDouble"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "multipathIndicator": "readParcelable",
+                "__parcelType": "android.hardware.gnss.GnssMultipathIndicator"
+            }]
+        },
+        {"snrDb": "readDouble"},
+        {"agcLevelDb": "readDouble"},
+        {"fullInterSignalBiasNs": "readDouble"},
+        {"fullInterSignalBiasUncertaintyNs": "readDouble"},
+        {"satelliteInterSignalBiasNs": "readDouble"},
+        {"satelliteInterSignalBiasUncertaintyNs": "readDouble"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "satellitePvt": "readParcelable",
+                "__parcelType": "android.hardware.gnss.SatellitePvt"
+            }]
+        },
+        {
+            "correlationVectors": "readParcelableVector",
+            "__parcelType": "android.hardware.gnss.CorrelationVector"
+        }
+    ],
+    "full_name": "android.hardware.gnss.GnssMeasurement",
+    "name": "GnssMeasurement",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

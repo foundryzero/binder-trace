@@ -1,0 +1,42 @@
+{
+    "produced_on": "2024-04-12T08:47:55.841269830Z",
+    "source_location": "",
+    "full_name": "android.hardware.tv.tuner.IDvrCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "status": "readParcelable",
+                        "__parcelType": "android.hardware.tv.tuner.PlaybackStatus"
+                    }]
+                }
+            ],
+            "name": "onPlaybackStatus",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "status": "readParcelable",
+                        "__parcelType": "android.hardware.tv.tuner.RecordStatus"
+                    }]
+                }
+            ],
+            "name": "onRecordStatus",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IDvrCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

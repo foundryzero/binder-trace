@@ -1,0 +1,232 @@
+{
+    "produced_on": "2024-04-12T08:47:57.808529137Z",
+    "source_location": "",
+    "full_name": "android.net.INetworkAgentRegistry",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "nc": "readParcelable",
+                        "__parcelType": "android.net.NetworkCapabilities"
+                    }]
+                }
+            ],
+            "name": "sendNetworkCapabilities",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "lp": "readParcelable",
+                        "__parcelType": "android.net.LinkProperties"
+                    }]
+                }
+            ],
+            "name": "sendLinkProperties",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "info": "readParcelable",
+                        "__parcelType": "android.net.NetworkInfo"
+                    }]
+                }
+            ],
+            "name": "sendNetworkInfo",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "score": "readParcelable",
+                        "__parcelType": "android.net.NetworkScore"
+                    }]
+                }
+            ],
+            "name": "sendScore",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"explicitlySelected": "readBool"},
+                {"acceptPartial": "readBool"}
+            ],
+            "name": "sendExplicitlySelected",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"slot": "readInt32"},
+                {"reason": "readInt32"}
+            ],
+            "name": "sendSocketKeepaliveEvent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{
+                "networks": "readList",
+                "__parcelType": "android.net.Network"
+            }],
+            "name": "sendUnderlyingNetworks",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"callbackId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "session": "readParcelable",
+                        "__parcelType": "android.net.QosSession"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributes": "readParcelable",
+                        "__parcelType": "android.telephony.data.EpsBearerQosSessionAttributes"
+                    }]
+                }
+            ],
+            "name": "sendEpsQosSessionAvailable",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"callbackId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "session": "readParcelable",
+                        "__parcelType": "android.net.QosSession"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributes": "readParcelable",
+                        "__parcelType": "android.telephony.data.NrQosSessionAttributes"
+                    }]
+                }
+            ],
+            "name": "sendNrQosSessionAvailable",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"qosCallbackId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "session": "readParcelable",
+                        "__parcelType": "android.net.QosSession"
+                    }]
+                }
+            ],
+            "name": "sendQosSessionLost",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"qosCallbackId": "readInt32"},
+                {"exceptionType": "readInt32"}
+            ],
+            "name": "sendQosCallbackError",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [{"teardownDelayMs": "readInt32"}],
+            "name": "sendTeardownDelayMs",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [{"durationMs": "readInt32"}],
+            "name": "sendLingerDuration",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "policy": "readParcelable",
+                        "__parcelType": "android.net.DscpPolicy"
+                    }]
+                }
+            ],
+            "name": "sendAddDscpPolicy",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [{"policyId": "readInt32"}],
+            "name": "sendRemoveDscpPolicy",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [],
+            "name": "sendRemoveAllDscpPolicies",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [{"timeoutMillis": "readInt32"}],
+            "name": "sendUnregisterAfterReplacement",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "INetworkAgentRegistry",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

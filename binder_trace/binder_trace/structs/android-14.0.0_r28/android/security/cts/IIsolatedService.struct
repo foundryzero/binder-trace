@@ -1,0 +1,47 @@
+{
+    "produced_on": "2024-04-12T08:47:44.144246684Z",
+    "source_location": "",
+    "full_name": "android.security.cts.IIsolatedService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getCachedSystemServices",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"serviceName": "readString16"}],
+            "name": "getSystemService",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getProcessIsIsolated",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "registerBroadcastReceiver",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IIsolatedService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

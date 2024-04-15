@@ -1,0 +1,41 @@
+{
+    "produced_on": "2024-04-12T08:47:52.749150462Z",
+    "source_location": "",
+    "full_name": "android.hardware.neuralnetworks.IFencedExecutionCallback",
+    "calls": [{
+        "code": 1,
+        "in": [],
+        "name": "getExecutionInfo",
+        "oneWay": false,
+        "out": [
+            {"__exception": "readException"},
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "__return": "readParcelable",
+                    "__parcelType": "android.hardware.neuralnetworks.ErrorStatus"
+                }]
+            },
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "timingLaunched": "readParcelable",
+                    "__parcelType": "android.hardware.neuralnetworks.Timing"
+                }]
+            },
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "timingFenced": "readParcelable",
+                    "__parcelType": "android.hardware.neuralnetworks.Timing"
+                }]
+            }
+        ]
+    }],
+    "name": "IFencedExecutionCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

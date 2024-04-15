@@ -1,0 +1,46 @@
+{
+    "produced_on": "2024-04-12T08:47:44.333773281Z",
+    "source_location": "",
+    "components": [
+        {"flags": "readInt32"},
+        {"frameCount": "readInt64"},
+        {"notificationFrameCount": "readInt64"},
+        {"selectedDeviceId": "readInt32"},
+        {"sessionId": "readInt32"},
+        {"sampleRate": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "streamType": "readParcelable",
+                "__parcelType": "android.media.audio.common.AudioStreamType"
+            }]
+        },
+        {"afFrameCount": "readInt64"},
+        {"afSampleRate": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "afChannelMask": "readParcelable",
+                "__parcelType": "android.media.audio.common.AudioChannelLayout"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "afFormat": "readParcelable",
+                "__parcelType": "android.media.audio.common.AudioFormatDescription"
+            }]
+        },
+        {"afLatencyMs": "readInt32"},
+        {"outputId": "readInt32"},
+        {"portId": "readInt32"},
+        {"audioTrack": "readStrongBinder"}
+    ],
+    "full_name": "android.media.CreateTrackResponse",
+    "name": "CreateTrackResponse",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

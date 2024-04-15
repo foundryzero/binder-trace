@@ -1,0 +1,73 @@
+{
+    "produced_on": "2024-04-12T08:47:47.431551974Z",
+    "source_location": "",
+    "full_name": "android.frameworks.cameraservice.service.ICameraService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "addListener",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.frameworks.cameraservice.service.CameraStatusAndId"
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"callback": "readStrongBinder"},
+                {"cameraId": "readString16"}
+            ],
+            "name": "connectDevice",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"cameraId": "readString16"}],
+            "name": "getCameraCharacteristics",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.frameworks.cameraservice.device.CameraMetadata"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "getCameraVendorTagSections",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.frameworks.cameraservice.common.ProviderIdAndVendorTagSections"
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "removeListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICameraService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

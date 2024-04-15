@@ -1,0 +1,144 @@
+{
+    "produced_on": "2024-04-12T08:47:47.237240845Z",
+    "source_location": "",
+    "full_name": "androidx.camera.extensions.impl.service.ISessionProcessorImpl",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"cameraId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "previewSurface": "readParcelable",
+                        "__parcelType": "androidx.camera.extensions.impl.service.OutputSurface"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "imageCaptureSurface": "readParcelable",
+                        "__parcelType": "androidx.camera.extensions.impl.service.OutputSurface"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "imageAnalysisSurface": "readParcelable",
+                        "__parcelType": "androidx.camera.extensions.impl.service.OutputSurface"
+                    }]
+                }
+            ],
+            "name": "initSession",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "androidx.camera.extensions.impl.service.CameraSessionConfig"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "deInitSession",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"requestProcessor": "readStrongBinder"}],
+            "name": "onCaptureSessionStart",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "onCaptureSessionEnd",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "startRepeating",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "stopRepeating",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "startCapture",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "captureRequest": "readParcelable",
+                        "__parcelType": "android.hardware.camera2.CaptureRequest"
+                    }]
+                }
+            ],
+            "name": "setParameters",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "captureRequest": "readParcelable",
+                        "__parcelType": "android.hardware.camera2.CaptureRequest"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "startTrigger",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [{"captureSequenceId": "readInt32"}],
+            "name": "abortCapture",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISessionProcessorImpl",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,32 @@
+{
+    "produced_on": "2024-04-12T08:47:57.843367331Z",
+    "source_location": "",
+    "full_name": "android.nearby.aidl.IFastPairStatusCallback",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "fastPairDevice": "readParcelable",
+                    "__parcelType": "android.nearby.FastPairDevice"
+                }]
+            },
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "pairStatusMetadata": "readParcelable",
+                    "__parcelType": "android.nearby.PairStatusMetadata"
+                }]
+            }
+        ],
+        "name": "onPairUpdate",
+        "oneWay": false,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "IFastPairStatusCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,72 @@
+{
+    "produced_on": "2024-04-12T08:47:44.985393792Z",
+    "source_location": "",
+    "full_name": "android.companion.virtual.sensor.IVirtualSensorCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sensor": "readParcelable",
+                        "__parcelType": "android.companion.virtual.sensor.VirtualSensor"
+                    }]
+                },
+                {"enabled": "readBool"},
+                {"samplingPeriodMicros": "readInt32"},
+                {"batchReportLatencyMicros": "readInt32"}
+            ],
+            "name": "onConfigurationChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"channelHandle": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sharedMemory": "readParcelable",
+                        "__parcelType": "android.os.SharedMemory"
+                    }]
+                }
+            ],
+            "name": "onDirectChannelCreated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"channelHandle": "readInt32"}],
+            "name": "onDirectChannelDestroyed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"channelHandle": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sensor": "readParcelable",
+                        "__parcelType": "android.companion.virtual.sensor.VirtualSensor"
+                    }]
+                },
+                {"rateLevel": "readInt32"},
+                {"reportToken": "readInt32"}
+            ],
+            "name": "onDirectChannelConfigured",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IVirtualSensorCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

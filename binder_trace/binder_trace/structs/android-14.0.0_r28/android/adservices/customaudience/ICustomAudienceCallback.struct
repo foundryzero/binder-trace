@@ -1,0 +1,33 @@
+{
+    "produced_on": "2024-04-12T08:47:57.292283289Z",
+    "source_location": "",
+    "full_name": "android.adservices.customaudience.ICustomAudienceCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "onSuccess",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "responseParcel": "readParcelable",
+                        "__parcelType": "android.adservices.common.FledgeErrorResponse"
+                    }]
+                }
+            ],
+            "name": "onFailure",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICustomAudienceCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

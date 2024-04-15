@@ -1,0 +1,33 @@
+{
+    "produced_on": "2024-04-12T08:47:59.028997965Z",
+    "source_location": "",
+    "full_name": "android.car.occupantconnection.IPayloadCallback",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "senderZone": "readParcelable",
+                    "__parcelType": "android.car.occupantconnection.CarOccupantZoneManager.OccupantZoneInfo"
+                }]
+            },
+            {"receiverEndpointId": "readString16"},
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "payload": "readParcelable",
+                    "__parcelType": "android.car.occupantconnection.Payload"
+                }]
+            }
+        ],
+        "name": "onPayloadReceived",
+        "oneWay": true,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "IPayloadCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,74 @@
+{
+    "produced_on": "2024-04-12T08:47:44.153064440Z",
+    "source_location": "",
+    "full_name": "android.telecom.cts.thirdptyincallservice.ICtsThirdPartyInCallServiceControl",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"bind": "readBool"}],
+            "name": "checkBindStatus",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "resetCalls",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getLocalCallCount",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"bind": "readBool"}],
+            "name": "resetLatchForServiceBound",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"permission": "readString16"}],
+            "name": "checkPermissionGrant",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"newKey": "readString16"},
+                {"newValue": "readString16"}
+            ],
+            "name": "setExpectedExtra",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "waitUntilExpectedExtrasReceived",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "ICtsThirdPartyInCallServiceControl",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

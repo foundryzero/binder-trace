@@ -1,0 +1,47 @@
+{
+    "produced_on": "2024-04-12T08:47:45.512653412Z",
+    "source_location": "",
+    "full_name": "android.os.IHintSession",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"targetDurationNanos": "readInt64"}],
+            "name": "updateTargetWorkDuration",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {
+                    "actualDurationNanos": "readParcelableVector",
+                    "__parcelType": "android.os.long"
+                },
+                {
+                    "timeStampNanos": "readParcelableVector",
+                    "__parcelType": "android.os.long"
+                }
+            ],
+            "name": "reportActualWorkDuration",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "close",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"hint": "readInt32"}],
+            "name": "sendHint",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IHintSession",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

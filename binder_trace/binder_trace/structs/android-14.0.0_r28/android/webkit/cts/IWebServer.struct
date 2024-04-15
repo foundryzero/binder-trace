@@ -1,0 +1,238 @@
+{
+    "produced_on": "2024-04-12T08:47:44.010429585Z",
+    "source_location": "",
+    "full_name": "android.webkit.cts.IWebServer",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"sslMode": "readInt32"},
+                {"acceptedIssuerDer": "readByteVector"},
+                {"keyResId": "readInt32"},
+                {"certResId": "readInt32"}
+            ],
+            "name": "start",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "shutdown",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "resetRequestState",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"path": "readString16"},
+                {"responseString": "readString16"},
+                {
+                    "responseHeaders": "readList",
+                    "__parcelType": "android.webkit.cts.HttpHeader"
+                }
+            ],
+            "name": "setResponse",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"path": "readString16"}],
+            "name": "getAbsoluteUrl",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "getUserAgentUrl",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [{"path": "readString16"}],
+            "name": "getDelayedAssetUrl",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [{"path": "readString16"}],
+            "name": "getRedirectingAssetUrl",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [{"path": "readString16"}],
+            "name": "getAssetUrl",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [{"path": "readString16"}],
+            "name": "getAuthAssetUrl",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"mimeType": "readString16"},
+                {"contentLength": "readInt32"}
+            ],
+            "name": "getBinaryUrl",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [],
+            "name": "getAppCacheUrl",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [],
+            "name": "getRequestCount",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 14,
+            "in": [{"path": "readString16"}],
+            "name": "getRequestCountWithPath",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 15,
+            "in": [{"url": "readString16"}],
+            "name": "wasResourceRequested",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 16,
+            "in": [{"path": "readString16"}],
+            "name": "getLastRequest",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.webkit.cts.HttpRequest"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 17,
+            "in": [{"url": "readString16"}],
+            "name": "getLastAssetRequest",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.webkit.cts.HttpRequest"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 18,
+            "in": [{"path": "readString16"}],
+            "name": "getCookieUrl",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 19,
+            "in": [
+                {"path": "readString16"},
+                {"key": "readString16"},
+                {"value": "readString16"},
+                {"attributes": "readString16"}
+            ],
+            "name": "getSetCookieUrl",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 20,
+            "in": [
+                {"path": "readString16"},
+                {"url": "readString16"}
+            ],
+            "name": "getLinkedScriptUrl",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        }
+    ],
+    "name": "IWebServer",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

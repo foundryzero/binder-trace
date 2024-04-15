@@ -1,0 +1,37 @@
+{
+    "produced_on": "2024-04-12T08:47:56.552519841Z",
+    "source_location": "",
+    "components": [
+        {"pairingInstanceId": "readInt32"},
+        {"pairingSuccess": "readBool"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "status": "readParcelable",
+                "__parcelType": "android.hardware.wifi.NanStatus"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "requestType": "readParcelable",
+                "__parcelType": "android.hardware.wifi.NanPairingRequestType"
+            }]
+        },
+        {"enablePairingCache": "readBool"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "npksa": "readParcelable",
+                "__parcelType": "android.hardware.wifi.NpkSecurityAssociation"
+            }]
+        }
+    ],
+    "full_name": "android.hardware.wifi.NanPairingConfirmInd",
+    "name": "NanPairingConfirmInd",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

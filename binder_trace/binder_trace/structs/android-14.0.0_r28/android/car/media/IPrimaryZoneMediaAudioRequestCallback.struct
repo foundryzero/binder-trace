@@ -1,0 +1,45 @@
+{
+    "produced_on": "2024-04-12T08:47:59.014858744Z",
+    "source_location": "",
+    "full_name": "android.car.media.IPrimaryZoneMediaAudioRequestCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "info": "readParcelable",
+                        "__parcelType": "android.car.CarOccupantZoneManager.OccupantZoneInfo"
+                    }]
+                },
+                {"requestId": "readInt64"}
+            ],
+            "name": "onRequestMediaOnPrimaryZone",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "info": "readParcelable",
+                        "__parcelType": "android.car.CarOccupantZoneManager.OccupantZoneInfo"
+                    }]
+                },
+                {"requestId": "readInt64"},
+                {"status": "readInt32"}
+            ],
+            "name": "onMediaAudioRequestStatusChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IPrimaryZoneMediaAudioRequestCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

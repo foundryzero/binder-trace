@@ -1,0 +1,24 @@
+{
+    "produced_on": "2024-04-12T08:47:56.561153703Z",
+    "source_location": "",
+    "components": [
+        {"acceptRequest": "readBool"},
+        {"ndpInstanceId": "readInt32"},
+        {"ifaceName": "readString16"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "securityConfig": "readParcelable",
+                "__parcelType": "android.hardware.wifi.NanDataPathSecurityConfig"
+            }]
+        },
+        {"appInfo": "readByteVector"},
+        {"serviceNameOutOfBand": "readByteVector"},
+        {"discoverySessionId": "readByte"}
+    ],
+    "full_name": "android.hardware.wifi.NanRespondToDataPathIndicationRequest",
+    "name": "NanRespondToDataPathIndicationRequest",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

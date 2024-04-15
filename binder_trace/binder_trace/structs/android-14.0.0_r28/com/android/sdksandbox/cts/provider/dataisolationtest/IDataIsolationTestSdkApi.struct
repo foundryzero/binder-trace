@@ -1,0 +1,50 @@
+{
+    "produced_on": "2024-04-12T08:47:57.333002289Z",
+    "source_location": "",
+    "full_name": "com.android.sdksandbox.cts.provider.dataisolationtest.IDataIsolationTestSdkApi",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "testSdkSandboxDataIsolation_SandboxCanAccessItsDirectory",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "testSdkSandboxDataIsolation_CannotVerifyAppExistence",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"params": "readBundle"}]
+                }
+            ],
+            "name": "testSdkSandboxDataIsolation_CannotVerifyOtherUserAppExistence",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"params": "readBundle"}]
+                }
+            ],
+            "name": "testSdkSandboxDataIsolation_CannotVerifyAcrossVolumes",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IDataIsolationTestSdkApi",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

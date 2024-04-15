@@ -1,0 +1,93 @@
+{
+    "produced_on": "2024-04-12T08:47:44.952664212Z",
+    "source_location": "",
+    "full_name": "android.apphibernation.IAppHibernationService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "isHibernatingForUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"},
+                {"isHibernating": "readBool"}
+            ],
+            "name": "setHibernatingForUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"packageName": "readString16"}],
+            "name": "isHibernatingGlobally",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"packageName": "readString16"},
+                {"isHibernating": "readBool"}
+            ],
+            "name": "setHibernatingGlobally",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"userId": "readInt32"}],
+            "name": "getHibernatingPackagesForUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "String"
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {
+                    "packageNames": "readList",
+                    "__parcelType": "String"
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "getHibernationStatsForUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readMap"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "isOatArtifactDeletionEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "IAppHibernationService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,157 @@
+{
+    "produced_on": "2024-04-12T08:47:44.271356581Z",
+    "source_location": "",
+    "full_name": "aaudio.IAAudioService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"client": "readStrongBinder"}],
+            "name": "registerClient",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "aaudio.StreamRequest"
+                    }]
+                }
+            ],
+            "name": "openStream",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "paramsOut": "readParcelable",
+                        "__parcelType": "aaudio.StreamParameters"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"streamHandle": "readInt32"}],
+            "name": "closeStream",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"streamHandle": "readInt32"}],
+            "name": "getStreamDescription",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "endpoint": "readParcelable",
+                        "__parcelType": "aaudio.Endpoint"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"streamHandle": "readInt32"}],
+            "name": "startStream",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [{"streamHandle": "readInt32"}],
+            "name": "pauseStream",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [{"streamHandle": "readInt32"}],
+            "name": "stopStream",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [{"streamHandle": "readInt32"}],
+            "name": "flushStream",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"streamHandle": "readInt32"},
+                {"clientThreadId": "readInt32"},
+                {"periodNanoseconds": "readInt64"}
+            ],
+            "name": "registerAudioThread",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"streamHandle": "readInt32"},
+                {"clientThreadId": "readInt32"}
+            ],
+            "name": "unregisterAudioThread",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [{"streamHandle": "readInt32"}],
+            "name": "exitStandby",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "endpoint": "readParcelable",
+                        "__parcelType": "aaudio.Endpoint"
+                    }]
+                }
+            ]
+        }
+    ],
+    "name": "IAAudioService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

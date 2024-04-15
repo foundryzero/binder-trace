@@ -1,0 +1,23 @@
+{
+    "produced_on": "2024-04-12T08:47:52.422128860Z",
+    "source_location": "",
+    "components": [
+        {"transactionId": "readInt64"},
+        {"bufferId": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "status": "readParcelable",
+                "__parcelType": "android.hardware.media.bufferpool2.BufferStatus"
+            }]
+        },
+        {"connectionId": "readInt64"},
+        {"targetConnectionId": "readInt64"},
+        {"timestampUs": "readInt64"}
+    ],
+    "full_name": "android.hardware.media.bufferpool2.BufferStatusMessage",
+    "name": "BufferStatusMessage",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

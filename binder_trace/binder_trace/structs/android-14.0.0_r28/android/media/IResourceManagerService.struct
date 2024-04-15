@@ -1,0 +1,209 @@
+{
+    "produced_on": "2024-04-12T08:47:44.439960542Z",
+    "source_location": "",
+    "full_name": "android.media.IResourceManagerService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{
+                "policies": "readParcelableVector",
+                "__parcelType": "android.media.MediaResourcePolicyParcel"
+            }],
+            "name": "config",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "clientInfo": "readParcelable",
+                        "__parcelType": "android.media.ClientInfoParcel"
+                    }]
+                },
+                {"client": "readStrongBinder"},
+                {
+                    "resources": "readParcelableVector",
+                    "__parcelType": "android.media.MediaResourceParcel"
+                }
+            ],
+            "name": "addResource",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "clientInfo": "readParcelable",
+                        "__parcelType": "android.media.ClientInfoParcel"
+                    }]
+                },
+                {
+                    "resources": "readParcelableVector",
+                    "__parcelType": "android.media.MediaResourceParcel"
+                }
+            ],
+            "name": "removeResource",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "clientInfo": "readParcelable",
+                        "__parcelType": "android.media.ClientInfoParcel"
+                    }]
+                }
+            ],
+            "name": "removeClient",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "clientInfo": "readParcelable",
+                        "__parcelType": "android.media.ClientInfoParcel"
+                    }]
+                },
+                {
+                    "resources": "readParcelableVector",
+                    "__parcelType": "android.media.MediaResourceParcel"
+                }
+            ],
+            "name": "reclaimResource",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"originalPid": "readInt32"},
+                {"newPid": "readInt32"}
+            ],
+            "name": "overridePid",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"client": "readStrongBinder"},
+                {"pid": "readInt32"},
+                {"procState": "readInt32"},
+                {"oomScore": "readInt32"}
+            ],
+            "name": "overrideProcessInfo",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "clientInfo": "readParcelable",
+                        "__parcelType": "android.media.ClientInfoParcel"
+                    }]
+                }
+            ],
+            "name": "markClientForPendingRemoval",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [{"pid": "readInt32"}],
+            "name": "reclaimResourcesFromClientsPendingRemoval",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "clientInfo": "readParcelable",
+                        "__parcelType": "android.media.ClientInfoParcel"
+                    }]
+                }
+            ],
+            "name": "notifyClientCreated",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "clientConfig": "readParcelable",
+                        "__parcelType": "android.media.ClientConfigParcel"
+                    }]
+                }
+            ],
+            "name": "notifyClientStarted",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "clientConfig": "readParcelable",
+                        "__parcelType": "android.media.ClientConfigParcel"
+                    }]
+                }
+            ],
+            "name": "notifyClientStopped",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "clientConfig": "readParcelable",
+                        "__parcelType": "android.media.ClientConfigParcel"
+                    }]
+                }
+            ],
+            "name": "notifyClientConfigChanged",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IResourceManagerService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

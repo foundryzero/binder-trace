@@ -1,0 +1,127 @@
+{
+    "produced_on": "2024-04-12T08:47:57.667848036Z",
+    "source_location": "",
+    "full_name": "androidx.core.uwb.backend.IUwbClient",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "isAvailable",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "getRangingCapabilities",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "androidx.core.uwb.backend.RangingCapabilities"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getLocalAddress",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "androidx.core.uwb.backend.UwbAddress"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "getComplexChannel",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "androidx.core.uwb.backend.UwbComplexChannel"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "parameters": "readParcelable",
+                        "__parcelType": "androidx.core.uwb.backend.RangingParameters"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "startRanging",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "stopRanging",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "address": "readParcelable",
+                        "__parcelType": "androidx.core.uwb.backend.UwbAddress"
+                    }]
+                }
+            ],
+            "name": "addControlee",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "address": "readParcelable",
+                        "__parcelType": "androidx.core.uwb.backend.UwbAddress"
+                    }]
+                }
+            ],
+            "name": "removeControlee",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IUwbClient",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

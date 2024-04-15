@@ -1,0 +1,56 @@
+{
+    "produced_on": "2024-04-12T08:47:46.089603490Z",
+    "source_location": "",
+    "full_name": "android.window.IOnBackInvokedCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "backMotionEvent": "readParcelable",
+                        "__parcelType": "android.window.BackMotionEvent"
+                    }]
+                }
+            ],
+            "name": "onBackStarted",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "backMotionEvent": "readParcelable",
+                        "__parcelType": "android.window.BackMotionEvent"
+                    }]
+                }
+            ],
+            "name": "onBackProgressed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "onBackCancelled",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "onBackInvoked",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IOnBackInvokedCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

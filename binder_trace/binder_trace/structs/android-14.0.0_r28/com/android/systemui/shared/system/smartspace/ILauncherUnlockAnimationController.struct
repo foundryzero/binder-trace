@@ -1,0 +1,70 @@
+{
+    "produced_on": "2024-04-12T08:47:46.724911435Z",
+    "source_location": "",
+    "full_name": "com.android.systemui.shared.system.smartspace.ILauncherUnlockAnimationController",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"animateSmartspace": "readBool"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "lockscreenSmartspaceBounds": "readParcelable",
+                        "__parcelType": "android.graphics.Rect"
+                    }]
+                },
+                {"selectedPage": "readInt32"}
+            ],
+            "name": "prepareForUnlock",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"amount": "readFloat"},
+                {"forceIfAnimating": "readBool"}
+            ],
+            "name": "setUnlockAmount",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"unlocked": "readBool"},
+                {"duration": "readInt64"},
+                {"startDelay": "readInt64"}
+            ],
+            "name": "playUnlockAnimation",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"selectedPage": "readInt32"}],
+            "name": "setSmartspaceSelectedPage",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"visibility": "readInt32"}],
+            "name": "setSmartspaceVisibility",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "dispatchSmartspaceStateToSysui",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ILauncherUnlockAnimationController",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

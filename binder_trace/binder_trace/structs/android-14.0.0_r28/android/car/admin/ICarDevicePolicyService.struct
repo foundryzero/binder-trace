@@ -1,0 +1,93 @@
+{
+    "produced_on": "2024-04-12T08:47:58.949537452Z",
+    "source_location": "",
+    "full_name": "android.car.admin.ICarDevicePolicyService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"userId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callback": "readParcelable",
+                        "__parcelType": "android.car.admin.ResultCallbackImpl<UserRemovalResult>"
+                    }]
+                }
+            ],
+            "name": "removeUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"name": "readString16"},
+                {"flags": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callback": "readParcelable",
+                        "__parcelType": "android.car.admin.ResultCallbackImpl<UserCreationResult>"
+                    }]
+                }
+            ],
+            "name": "createUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"userId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiver": "readParcelable",
+                        "__parcelType": "android.car.admin.AndroidFuture<UserStartResult>"
+                    }]
+                }
+            ],
+            "name": "startUserInBackground",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"userId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiver": "readParcelable",
+                        "__parcelType": "android.car.admin.AndroidFuture<UserStopResult>"
+                    }]
+                }
+            ],
+            "name": "stopUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"userId": "readInt32"}],
+            "name": "setUserDisclaimerShown",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"userId": "readInt32"}],
+            "name": "setUserDisclaimerAcknowledged",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICarDevicePolicyService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

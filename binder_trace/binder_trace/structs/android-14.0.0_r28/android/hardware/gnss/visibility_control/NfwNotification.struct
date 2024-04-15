@@ -1,0 +1,39 @@
+{
+    "produced_on": "2024-04-12T08:47:51.615151694Z",
+    "source_location": "",
+    "components": [
+        {"proxyAppPackageName": "readString16"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "protocolStack": "readParcelable",
+                "__parcelType": "android.hardware.gnss.visibility_control.NfwProtocolStack"
+            }]
+        },
+        {"otherProtocolStackName": "readString16"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "requestor": "readParcelable",
+                "__parcelType": "android.hardware.gnss.visibility_control.NfwRequestor"
+            }]
+        },
+        {"requestorId": "readString16"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "responseType": "readParcelable",
+                "__parcelType": "android.hardware.gnss.visibility_control.NfwResponseType"
+            }]
+        },
+        {"inEmergencyMode": "readBool"},
+        {"isCachedLocation": "readBool"}
+    ],
+    "full_name": "android.hardware.gnss.visibility_control.NfwNotification",
+    "name": "NfwNotification",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

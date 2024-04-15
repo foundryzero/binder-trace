@@ -1,0 +1,146 @@
+{
+    "produced_on": "2024-04-12T08:47:54.837428145Z",
+    "source_location": "",
+    "full_name": "android.hardware.thermal.IThermal",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getCoolingDevices",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.thermal.CoolingDevice"
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.hardware.thermal.CoolingType"
+                    }]
+                }
+            ],
+            "name": "getCoolingDevicesWithType",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.thermal.CoolingDevice"
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getTemperatures",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.thermal.Temperature"
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.hardware.thermal.TemperatureType"
+                    }]
+                }
+            ],
+            "name": "getTemperaturesWithType",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.thermal.Temperature"
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "getTemperatureThresholds",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.thermal.TemperatureThreshold"
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.hardware.thermal.TemperatureType"
+                    }]
+                }
+            ],
+            "name": "getTemperatureThresholdsWithType",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.thermal.TemperatureThreshold"
+                }
+            ]
+        },
+        {
+            "code": 7,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "registerThermalChangedCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"callback": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.hardware.thermal.TemperatureType"
+                    }]
+                }
+            ],
+            "name": "registerThermalChangedCallbackWithType",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "unregisterThermalChangedCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IThermal",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

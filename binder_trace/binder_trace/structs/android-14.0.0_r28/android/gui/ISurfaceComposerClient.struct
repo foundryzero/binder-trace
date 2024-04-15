@@ -1,0 +1,97 @@
+{
+    "produced_on": "2024-04-12T08:47:47.994316308Z",
+    "source_location": "",
+    "full_name": "android.gui.ISurfaceComposerClient",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"name": "readString16"},
+                {"flags": "readInt32"},
+                {"parent": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "metadata": "readParcelable",
+                        "__parcelType": "android.gui.LayerMetadata"
+                    }]
+                }
+            ],
+            "name": "createSurface",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.gui.CreateSurfaceResult"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"handle": "readStrongBinder"}],
+            "name": "clearLayerFrameStats",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"handle": "readStrongBinder"}],
+            "name": "getLayerFrameStats",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.gui.FrameStats"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"mirrorFromHandle": "readStrongBinder"}],
+            "name": "mirrorSurface",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.gui.CreateSurfaceResult"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"displayId": "readInt64"}],
+            "name": "mirrorDisplay",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.gui.CreateSurfaceResult"
+                    }]
+                }
+            ]
+        }
+    ],
+    "name": "ISurfaceComposerClient",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

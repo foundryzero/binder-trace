@@ -1,0 +1,81 @@
+{
+    "produced_on": "2024-04-12T08:47:45.730283998Z",
+    "source_location": "",
+    "full_name": "android.service.contentsuggestions.IContentSuggestionsService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"taskId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "contextImage": "readParcelable",
+                        "__parcelType": "android.hardware.HardwareBuffer"
+                    }]
+                },
+                {"colorSpaceId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"imageContextRequestExtras": "readBundle"}]
+                }
+            ],
+            "name": "provideContextImage",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.app.contentsuggestions.SelectionsRequest"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "suggestContentSelections",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.app.contentsuggestions.ClassificationsRequest"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "classifyContentSelections",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"requestId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"interaction": "readBundle"}]
+                }
+            ],
+            "name": "notifyInteraction",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IContentSuggestionsService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

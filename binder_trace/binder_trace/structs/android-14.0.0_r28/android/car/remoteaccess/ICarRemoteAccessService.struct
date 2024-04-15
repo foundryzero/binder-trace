@@ -1,0 +1,51 @@
+{
+    "produced_on": "2024-04-12T08:47:59.043354841Z",
+    "source_location": "",
+    "full_name": "android.car.remoteaccess.ICarRemoteAccessService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "addCarRemoteTaskClient",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "removeCarRemoteTaskClient",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"clientId": "readString16"},
+                {"taskId": "readString16"}
+            ],
+            "name": "reportRemoteTaskDone",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nextPowerState": "readInt32"},
+                {"runGarageMode": "readBool"}
+            ],
+            "name": "setPowerStatePostTaskExecution",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"clientId": "readString16"}],
+            "name": "confirmReadyForShutdown",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICarRemoteAccessService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

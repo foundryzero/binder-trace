@@ -1,0 +1,40 @@
+{
+    "produced_on": "2024-04-12T08:47:57.705264140Z",
+    "source_location": "",
+    "full_name": "com.android.virt.fs.IAuthFs",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"remoteFdName": "readInt32"},
+                {"writable": "readBool"}
+            ],
+            "name": "openFile",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.virt.fs.ParcelFileDescriptor"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "getMountPoint",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        }
+    ],
+    "name": "IAuthFs",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

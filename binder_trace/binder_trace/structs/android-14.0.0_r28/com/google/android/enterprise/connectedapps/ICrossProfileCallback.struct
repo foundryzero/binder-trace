@@ -1,0 +1,60 @@
+{
+    "produced_on": "2024-04-12T08:47:43.914444647Z",
+    "source_location": "",
+    "full_name": "com.google.android.enterprise.connectedapps.ICrossProfileCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"callId": "readInt64"},
+                {"blockId": "readInt32"},
+                {"numBytes": "readInt32"},
+                {"params": "readByteVector"}
+            ],
+            "name": "prepareResult",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"callId": "readInt64"},
+                {"bundleId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"bundle": "readBundle"}]
+                }
+            ],
+            "name": "prepareBundle",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"callId": "readInt64"},
+                {"blockId": "readInt32"},
+                {"methodIdentifier": "readInt32"},
+                {"params": "readByteVector"}
+            ],
+            "name": "onResult",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"callId": "readInt64"},
+                {"blockId": "readInt32"},
+                {"params": "readByteVector"}
+            ],
+            "name": "onException",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICrossProfileCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

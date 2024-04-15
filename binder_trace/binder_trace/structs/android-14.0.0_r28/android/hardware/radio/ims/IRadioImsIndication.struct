@@ -1,0 +1,92 @@
+{
+    "produced_on": "2024-04-12T08:47:54.112093096Z",
+    "source_location": "",
+    "full_name": "android.hardware.radio.ims.IRadioImsIndication",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.hardware.radio.RadioIndicationType"
+                    }]
+                },
+                {"token": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "info": "readParcelable",
+                        "__parcelType": "android.hardware.radio.ims.ConnectionFailureInfo"
+                    }]
+                }
+            ],
+            "name": "onConnectionSetupFailure",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.hardware.radio.RadioIndicationType"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "mediaType": "readParcelable",
+                        "__parcelType": "android.hardware.radio.ims.ImsStreamType"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "direction": "readParcelable",
+                        "__parcelType": "android.hardware.radio.ims.ImsStreamDirection"
+                    }]
+                },
+                {"bitsPerSecond": "readInt32"}
+            ],
+            "name": "notifyAnbr",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.hardware.radio.RadioIndicationType"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "reason": "readParcelable",
+                        "__parcelType": "android.hardware.radio.ims.ImsDeregistrationReason"
+                    }]
+                }
+            ],
+            "name": "triggerImsDeregistration",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IRadioImsIndication",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,50 @@
+{
+    "produced_on": "2024-04-12T08:47:57.714243379Z",
+    "source_location": "",
+    "full_name": "android.system.virtualization.payload.IVmPayloadService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "notifyPayloadReady",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"identifier": "readByteVector"},
+                {"size": "readInt32"}
+            ],
+            "name": "getVmInstanceSecret",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getDiceAttestationChain",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "getDiceAttestationCdi",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        }
+    ],
+    "name": "IVmPayloadService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

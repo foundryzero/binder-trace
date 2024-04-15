@@ -1,0 +1,56 @@
+{
+    "produced_on": "2024-04-12T08:47:46.946626400Z",
+    "source_location": "",
+    "full_name": "android.telephony.ims.aidl.IImsSmsListener",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"token": "readInt32"},
+                {"messageRef": "readInt32"},
+                {"status": "readInt32"},
+                {"reason": "readInt32"},
+                {"networkErrorCode": "readInt32"}
+            ],
+            "name": "onSendSmsResult",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"token": "readInt32"},
+                {"format": "readString16"},
+                {"pdu": "readByteVector"}
+            ],
+            "name": "onSmsStatusReportReceived",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"token": "readInt32"},
+                {"format": "readString16"},
+                {"pdu": "readByteVector"}
+            ],
+            "name": "onSmsReceived",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"token": "readInt32"},
+                {"status": "readInt32"},
+                {"networkErrorCode": "readInt32"}
+            ],
+            "name": "onMemoryAvailableResult",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IImsSmsListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

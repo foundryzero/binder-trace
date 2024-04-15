@@ -1,0 +1,30 @@
+{
+    "produced_on": "2024-04-12T08:47:44.464310946Z",
+    "source_location": "",
+    "full_name": "android.media.IResourceObserver",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "event": "readParcelable",
+                    "__parcelType": "android.media.MediaObservableEvent"
+                }]
+            },
+            {"uid": "readInt32"},
+            {"pid": "readInt32"},
+            {
+                "observables": "readParcelableVector",
+                "__parcelType": "android.media.MediaObservableParcel"
+            }
+        ],
+        "name": "onStatusChanged",
+        "oneWay": true,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "IResourceObserver",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

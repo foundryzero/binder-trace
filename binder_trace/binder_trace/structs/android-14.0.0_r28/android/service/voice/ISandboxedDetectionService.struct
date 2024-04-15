@@ -1,0 +1,147 @@
+{
+    "produced_on": "2024-04-12T08:47:45.834273534Z",
+    "source_location": "",
+    "full_name": "android.service.voice.ISandboxedDetectionService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "event": "readParcelable",
+                        "__parcelType": "android.service.voice.SoundTrigger.KeyphraseRecognitionEvent"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "audioFormat": "readParcelable",
+                        "__parcelType": "android.media.AudioFormat"
+                    }]
+                },
+                {"timeoutMillis": "readInt64"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "detectFromDspSource",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "audioStream": "readParcelable",
+                        "__parcelType": "android.os.ParcelFileDescriptor"
+                    }]
+                },
+                {"audioSource": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "audioFormat": "readParcelable",
+                        "__parcelType": "android.media.AudioFormat"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "options": "readParcelable",
+                        "__parcelType": "android.os.PersistableBundle"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "detectFromMicrophoneSource",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "detectWithVisualSignals",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "options": "readParcelable",
+                        "__parcelType": "android.os.PersistableBundle"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sharedMemory": "readParcelable",
+                        "__parcelType": "android.os.SharedMemory"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "updateState",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"audioFlinger": "readStrongBinder"}],
+            "name": "updateAudioFlinger",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"contentCaptureManager": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "options": "readParcelable",
+                        "__parcelType": "android.content.ContentCaptureOptions"
+                    }]
+                }
+            ],
+            "name": "updateContentCaptureManager",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"recognitionServiceManager": "readStrongBinder"}],
+            "name": "updateRecognitionServiceManager",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "ping",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [],
+            "name": "stopDetection",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISandboxedDetectionService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,34 @@
+{
+    "produced_on": "2024-04-12T08:47:45.247857869Z",
+    "source_location": "",
+    "full_name": "android.hardware.camera2.extension.IProcessResultImpl",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"shutterTimestamp": "readInt64"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "results": "readParcelable",
+                        "__parcelType": "android.hardware.camera2.impl.CameraMetadataNative"
+                    }]
+                }
+            ],
+            "name": "onCaptureCompleted",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"progress": "readInt32"}],
+            "name": "onCaptureProcessProgressed",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IProcessResultImpl",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

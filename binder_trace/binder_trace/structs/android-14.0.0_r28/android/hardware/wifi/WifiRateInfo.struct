@@ -1,0 +1,36 @@
+{
+    "produced_on": "2024-04-12T08:47:56.623474344Z",
+    "source_location": "",
+    "components": [
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "preamble": "readParcelable",
+                "__parcelType": "android.hardware.wifi.WifiRatePreamble"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "nss": "readParcelable",
+                "__parcelType": "android.hardware.wifi.WifiRateNss"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "bw": "readParcelable",
+                "__parcelType": "android.hardware.wifi.WifiChannelWidthInMhz"
+            }]
+        },
+        {"rateMcsIdx": "readByte"},
+        {"bitRateInKbps": "readInt32"}
+    ],
+    "full_name": "android.hardware.wifi.WifiRateInfo",
+    "name": "WifiRateInfo",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

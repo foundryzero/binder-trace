@@ -1,0 +1,134 @@
+{
+    "produced_on": "2024-04-12T08:47:54.165942058Z",
+    "source_location": "",
+    "full_name": "android.hardware.radio.messaging.IRadioMessagingIndication",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.hardware.radio.RadioIndicationType"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "msg": "readParcelable",
+                        "__parcelType": "android.hardware.radio.messaging.CdmaSmsMessage"
+                    }]
+                }
+            ],
+            "name": "cdmaNewSms",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.hardware.radio.RadioIndicationType"
+                    }]
+                }
+            ],
+            "name": "cdmaRuimSmsStorageFull",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.hardware.radio.RadioIndicationType"
+                    }]
+                },
+                {"data": "readByteVector"}
+            ],
+            "name": "newBroadcastSms",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.hardware.radio.RadioIndicationType"
+                    }]
+                },
+                {"pdu": "readByteVector"}
+            ],
+            "name": "newSms",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.hardware.radio.RadioIndicationType"
+                    }]
+                },
+                {"recordNumber": "readInt32"}
+            ],
+            "name": "newSmsOnSim",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.hardware.radio.RadioIndicationType"
+                    }]
+                },
+                {"pdu": "readByteVector"}
+            ],
+            "name": "newSmsStatusReport",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.hardware.radio.RadioIndicationType"
+                    }]
+                }
+            ],
+            "name": "simSmsStorageFull",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IRadioMessagingIndication",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,59 @@
+{
+    "produced_on": "2024-04-12T08:47:57.313107523Z",
+    "source_location": "",
+    "full_name": "com.android.sdksandbox.ILoadSdkInSandboxCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sandboxedSdk": "readParcelable",
+                        "__parcelType": "android.app.sdksandbox.SandboxedSdk"
+                    }]
+                },
+                {"callback": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sandboxLatencyInfo": "readParcelable",
+                        "__parcelType": "com.android.sdksandbox.SandboxLatencyInfo"
+                    }]
+                }
+            ],
+            "name": "onLoadSdkSuccess",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "exception": "readParcelable",
+                        "__parcelType": "android.app.sdksandbox.LoadSdkException"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sandboxLatencyInfo": "readParcelable",
+                        "__parcelType": "com.android.sdksandbox.SandboxLatencyInfo"
+                    }]
+                }
+            ],
+            "name": "onLoadSdkError",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ILoadSdkInSandboxCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

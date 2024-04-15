@@ -1,0 +1,63 @@
+{
+    "produced_on": "2024-04-12T08:47:57.716316300Z",
+    "source_location": "",
+    "full_name": "com.android.microdroid.testservice.IBenchmarkService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"filename": "readString16"},
+                {"isRand": "readBool"}
+            ],
+            "name": "measureReadRate",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readDouble"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"name": "readString16"}],
+            "name": "getMemInfoEntry",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"mb": "readInt64"}],
+            "name": "allocAnonMemory",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"port": "readInt32"}],
+            "name": "initVsockServer",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"serverFd": "readInt32"},
+                {"numBytesToReceive": "readInt32"}
+            ],
+            "name": "runVsockServerAndReceiveData",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IBenchmarkService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

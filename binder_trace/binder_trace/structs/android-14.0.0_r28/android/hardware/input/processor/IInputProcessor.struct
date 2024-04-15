@@ -1,0 +1,50 @@
+{
+    "produced_on": "2024-04-12T08:47:52.322179701Z",
+    "source_location": "",
+    "full_name": "android.hardware.input.processor.IInputProcessor",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "event": "readParcelable",
+                        "__parcelType": "android.hardware.input.processor.android.hardware.input.common.MotionEvent"
+                    }]
+                }
+            ],
+            "name": "classify",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.input.processor.android.hardware.input.common.Classification"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "reset",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"deviceId": "readInt32"}],
+            "name": "resetDevice",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IInputProcessor",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

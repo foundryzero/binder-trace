@@ -1,0 +1,46 @@
+{
+    "produced_on": "2024-04-12T08:47:52.722912809Z",
+    "source_location": "",
+    "components": [
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "relaxedFloat32toFloat16PerformanceScalar": "readParcelable",
+                "__parcelType": "android.hardware.neuralnetworks.PerformanceInfo"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "relaxedFloat32toFloat16PerformanceTensor": "readParcelable",
+                "__parcelType": "android.hardware.neuralnetworks.PerformanceInfo"
+            }]
+        },
+        {
+            "operandPerformance": "readParcelableVector",
+            "__parcelType": "android.hardware.neuralnetworks.OperandPerformance"
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "ifPerformance": "readParcelable",
+                "__parcelType": "android.hardware.neuralnetworks.PerformanceInfo"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "whilePerformance": "readParcelable",
+                "__parcelType": "android.hardware.neuralnetworks.PerformanceInfo"
+            }]
+        }
+    ],
+    "full_name": "android.hardware.neuralnetworks.Capabilities",
+    "name": "Capabilities",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

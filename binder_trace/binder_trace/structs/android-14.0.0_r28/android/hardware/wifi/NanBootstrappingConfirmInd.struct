@@ -1,0 +1,29 @@
+{
+    "produced_on": "2024-04-12T08:47:56.520048495Z",
+    "source_location": "",
+    "components": [
+        {"bootstrappingInstanceId": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "responseCode": "readParcelable",
+                "__parcelType": "android.hardware.wifi.NanBootstrappingResponseCode"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "reasonCode": "readParcelable",
+                "__parcelType": "android.hardware.wifi.NanStatus"
+            }]
+        },
+        {"comeBackDelay": "readInt32"},
+        {"cookie": "readByteVector"}
+    ],
+    "full_name": "android.hardware.wifi.NanBootstrappingConfirmInd",
+    "name": "NanBootstrappingConfirmInd",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

@@ -1,0 +1,116 @@
+{
+    "produced_on": "2024-04-12T08:47:58.946004062Z",
+    "source_location": "",
+    "full_name": "android.car.IExperimentalCarUserService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"name": "readString16"},
+                {"admin": "readBool"}
+            ],
+            "name": "createDriver",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.car.AndroidFuture<UserCreationResult>"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"name": "readString16"},
+                {"driverId": "readInt32"}
+            ],
+            "name": "createPassenger",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.os.UserHandle"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"driverId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiver": "readParcelable",
+                        "__parcelType": "android.car.AndroidFuture<UserSwitchResult>"
+                    }]
+                }
+            ],
+            "name": "switchDriver",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "getAllDrivers",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.os.UserHandle"
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"driverId": "readInt32"}],
+            "name": "getPassengers",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.os.UserHandle"
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"passengerId": "readInt32"},
+                {"zoneId": "readInt32"}
+            ],
+            "name": "startPassenger",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [{"passengerId": "readInt32"}],
+            "name": "stopPassenger",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "IExperimentalCarUserService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

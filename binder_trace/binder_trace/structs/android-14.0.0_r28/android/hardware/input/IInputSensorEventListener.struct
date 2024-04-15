@@ -1,0 +1,37 @@
+{
+    "produced_on": "2024-04-12T08:47:45.358632871Z",
+    "source_location": "",
+    "full_name": "android.hardware.input.IInputSensorEventListener",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"deviceId": "readInt32"},
+                {"sensorId": "readInt32"},
+                {"accuracy": "readInt32"},
+                {"timestamp": "readInt64"},
+                {
+                    "values": "readParcelableVector",
+                    "__parcelType": "android.hardware.input.float"
+                }
+            ],
+            "name": "onInputSensorChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"deviceId": "readInt32"},
+                {"sensorId": "readInt32"},
+                {"accuracy": "readInt32"}
+            ],
+            "name": "onInputSensorAccuracyChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IInputSensorEventListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

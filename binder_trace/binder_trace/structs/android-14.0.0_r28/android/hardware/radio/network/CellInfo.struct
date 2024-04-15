@@ -1,0 +1,27 @@
+{
+    "produced_on": "2024-04-12T08:47:54.213399761Z",
+    "source_location": "",
+    "components": [
+        {"registered": "readBool"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "connectionStatus": "readParcelable",
+                "__parcelType": "android.hardware.radio.network.CellConnectionStatus"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "ratSpecificInfo": "readParcelable",
+                "__parcelType": "android.hardware.radio.network.CellInfoRatSpecificInfo"
+            }]
+        }
+    ],
+    "full_name": "android.hardware.radio.network.CellInfo",
+    "name": "CellInfo",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

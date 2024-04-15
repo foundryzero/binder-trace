@@ -1,0 +1,181 @@
+{
+    "produced_on": "2024-04-12T08:47:54.287368195Z",
+    "source_location": "",
+    "full_name": "android.hardware.radio.sap.ISapCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "resultCode": "readParcelable",
+                        "__parcelType": "android.hardware.radio.sap.SapResultCode"
+                    }]
+                },
+                {"apduRsp": "readByteVector"}
+            ],
+            "name": "apduResponse",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sapConnectRsp": "readParcelable",
+                        "__parcelType": "android.hardware.radio.sap.SapConnectRsp"
+                    }]
+                },
+                {"maxMsgSizeBytes": "readInt32"}
+            ],
+            "name": "connectResponse",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "disconnectType": "readParcelable",
+                        "__parcelType": "android.hardware.radio.sap.SapDisconnectType"
+                    }]
+                }
+            ],
+            "name": "disconnectIndication",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"serial": "readInt32"}],
+            "name": "disconnectResponse",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"serial": "readInt32"}],
+            "name": "errorResponse",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "resultCode": "readParcelable",
+                        "__parcelType": "android.hardware.radio.sap.SapResultCode"
+                    }]
+                }
+            ],
+            "name": "powerResponse",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "resultCode": "readParcelable",
+                        "__parcelType": "android.hardware.radio.sap.SapResultCode"
+                    }]
+                }
+            ],
+            "name": "resetSimResponse",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "status": "readParcelable",
+                        "__parcelType": "android.hardware.radio.sap.SapStatus"
+                    }]
+                }
+            ],
+            "name": "statusIndication",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "resultCode": "readParcelable",
+                        "__parcelType": "android.hardware.radio.sap.SapResultCode"
+                    }]
+                },
+                {"atr": "readByteVector"}
+            ],
+            "name": "transferAtrResponse",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "resultCode": "readParcelable",
+                        "__parcelType": "android.hardware.radio.sap.SapResultCode"
+                    }]
+                },
+                {"cardReaderStatus": "readInt32"}
+            ],
+            "name": "transferCardReaderStatusResponse",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "resultCode": "readParcelable",
+                        "__parcelType": "android.hardware.radio.sap.SapResultCode"
+                    }]
+                }
+            ],
+            "name": "transferProtocolResponse",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISapCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

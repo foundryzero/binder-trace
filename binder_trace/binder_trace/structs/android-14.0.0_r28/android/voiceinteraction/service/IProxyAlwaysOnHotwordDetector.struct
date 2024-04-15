@@ -1,0 +1,172 @@
+{
+    "produced_on": "2024-04-12T08:47:44.180409873Z",
+    "source_location": "",
+    "full_name": "android.voiceinteraction.service.IProxyAlwaysOnHotwordDetector",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "options": "readParcelable",
+                        "__parcelType": "android.os.PersistableBundle"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sharedMemory": "readParcelable",
+                        "__parcelType": "android.os.SharedMemory"
+                    }]
+                }
+            ],
+            "name": "updateState",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "startRecognitionOnFakeAudioStream",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "audioStream": "readParcelable",
+                        "__parcelType": "android.voiceinteraction.service.ParcelFileDescriptor"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "audioFormat": "readParcelable",
+                        "__parcelType": "android.media.AudioFormat"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "options": "readParcelable",
+                        "__parcelType": "android.os.PersistableBundle"
+                    }]
+                }
+            ],
+            "name": "startRecognitionWithAudioStream",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"recognitionFlags": "readInt32"},
+                {"data": "readByteVector"}
+            ],
+            "name": "startRecognitionWithFlagsAndData",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"recognitionFlags": "readInt32"}],
+            "name": "startRecognitionWithFlags",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "startRecognition",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "stopRecognition",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"status": "readInt32"},
+                {"soundModelHandle": "readInt32"},
+                {"halEventReceivedMillis": "readInt64"},
+                {"captureAvailable": "readBool"},
+                {"captureSession": "readInt32"},
+                {"captureDelayMs": "readInt32"},
+                {"capturePreambleMs": "readInt32"},
+                {"triggerInData": "readBool"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "captureFormat": "readParcelable",
+                        "__parcelType": "android.media.AudioFormat"
+                    }]
+                },
+                {"data": "readByteVector"},
+                {
+                    "keyphraseExtras": "readList",
+                    "__parcelType": "android.hardware.soundtrigger.SoundTrigger.KeyphraseRecognitionExtra"
+                }
+            ],
+            "name": "triggerHardwareRecognitionEventForTest",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [{"availability": "readInt32"}],
+            "name": "overrideAvailability",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [],
+            "name": "resetAvailability",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [],
+            "name": "destroy",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IProxyAlwaysOnHotwordDetector",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

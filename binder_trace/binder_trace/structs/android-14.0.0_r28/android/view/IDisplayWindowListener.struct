@@ -1,0 +1,75 @@
+{
+    "produced_on": "2024-04-12T08:47:45.899670024Z",
+    "source_location": "",
+    "full_name": "android.view.IDisplayWindowListener",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"displayId": "readInt32"}],
+            "name": "onDisplayAdded",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"displayId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "newConfig": "readParcelable",
+                        "__parcelType": "android.content.res.Configuration"
+                    }]
+                }
+            ],
+            "name": "onDisplayConfigurationChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"displayId": "readInt32"}],
+            "name": "onDisplayRemoved",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"displayId": "readInt32"},
+                {"newRotation": "readInt32"}
+            ],
+            "name": "onFixedRotationStarted",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"displayId": "readInt32"}],
+            "name": "onFixedRotationFinished",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"displayId": "readInt32"},
+                {
+                    "restricted": "readList",
+                    "__parcelType": "android.graphics.Rect"
+                },
+                {
+                    "unrestricted": "readList",
+                    "__parcelType": "android.graphics.Rect"
+                }
+            ],
+            "name": "onKeepClearAreasChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IDisplayWindowListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

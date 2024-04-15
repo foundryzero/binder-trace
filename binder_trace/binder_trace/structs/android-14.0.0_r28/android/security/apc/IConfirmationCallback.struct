@@ -1,0 +1,25 @@
+{
+    "produced_on": "2024-04-12T08:48:00.189009379Z",
+    "source_location": "",
+    "full_name": "android.security.apc.IConfirmationCallback",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "result": "readParcelable",
+                    "__parcelType": "android.security.apc.ResponseCode"
+                }]
+            },
+            {"dataConfirmed": "readByteVector"}
+        ],
+        "name": "onCompleted",
+        "oneWay": true,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "IConfirmationCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

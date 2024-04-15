@@ -1,0 +1,73 @@
+{
+    "produced_on": "2024-04-12T08:47:45.236035065Z",
+    "source_location": "",
+    "full_name": "android.hardware.camera2.extension.ICaptureCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"captureSequenceId": "readInt32"},
+                {"timestamp": "readInt64"}
+            ],
+            "name": "onCaptureStarted",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"captureSequenceId": "readInt32"}],
+            "name": "onCaptureProcessStarted",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"captureSequenceId": "readInt32"}],
+            "name": "onCaptureFailed",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"captureSequenceId": "readInt32"}],
+            "name": "onCaptureSequenceCompleted",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"captureSequenceId": "readInt32"}],
+            "name": "onCaptureSequenceAborted",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"shutterTimestamp": "readInt64"},
+                {"requestId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "results": "readParcelable",
+                        "__parcelType": "android.hardware.camera2.impl.CameraMetadataNative"
+                    }]
+                }
+            ],
+            "name": "onCaptureCompleted",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"progress": "readInt32"}],
+            "name": "onCaptureProcessProgressed",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICaptureCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

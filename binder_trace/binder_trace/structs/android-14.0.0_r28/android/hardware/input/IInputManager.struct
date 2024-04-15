@@ -1,0 +1,927 @@
+{
+    "produced_on": "2024-04-12T08:47:45.356203503Z",
+    "source_location": "",
+    "full_name": "android.hardware.input.IInputManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getVelocityTrackerStrategy",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"deviceId": "readInt32"}],
+            "name": "getInputDevice",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.view.InputDevice"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getInputDeviceIds",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"deviceId": "readInt32"}],
+            "name": "isInputDeviceEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"deviceId": "readInt32"}],
+            "name": "enableInputDevice",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"deviceId": "readInt32"}],
+            "name": "disableInputDevice",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"deviceId": "readInt32"},
+                {"sourceMask": "readInt32"},
+                {"keyCodes": "readInt32Vector"}
+            ],
+            "name": "hasKeys",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"},
+                {
+                    "keyExists": "readParcelableVector",
+                    "__parcelType": "android.hardware.input.boolean"
+                }
+            ]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"deviceId": "readInt32"},
+                {"locationKeyCode": "readInt32"}
+            ],
+            "name": "getKeyCodeForKeyLocation",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [{"speed": "readInt32"}],
+            "name": "tryPointerSpeed",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "ev": "readParcelable",
+                        "__parcelType": "android.view.InputEvent"
+                    }]
+                },
+                {"mode": "readInt32"}
+            ],
+            "name": "injectInputEvent",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "ev": "readParcelable",
+                        "__parcelType": "android.view.InputEvent"
+                    }]
+                },
+                {"mode": "readInt32"},
+                {"targetUid": "readInt32"}
+            ],
+            "name": "injectInputEventToTarget",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "ev": "readParcelable",
+                        "__parcelType": "android.view.InputEvent"
+                    }]
+                }
+            ],
+            "name": "verifyInputEvent",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.view.VerifiedInputEvent"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"inputDeviceDescriptor": "readString16"},
+                {"rotation": "readInt32"}
+            ],
+            "name": "getTouchCalibrationForInputDevice",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.input.TouchCalibration"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"inputDeviceDescriptor": "readString16"},
+                {"rotation": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "calibration": "readParcelable",
+                        "__parcelType": "android.hardware.input.TouchCalibration"
+                    }]
+                }
+            ],
+            "name": "setTouchCalibrationForInputDevice",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [],
+            "name": "getKeyboardLayouts",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.input.KeyboardLayout"
+                }
+            ]
+        },
+        {
+            "code": 16,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "identifier": "readParcelable",
+                        "__parcelType": "android.hardware.input.InputDeviceIdentifier"
+                    }]
+                }
+            ],
+            "name": "getKeyboardLayoutsForInputDevice",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.input.KeyboardLayout"
+                }
+            ]
+        },
+        {
+            "code": 17,
+            "in": [{"keyboardLayoutDescriptor": "readString16"}],
+            "name": "getKeyboardLayout",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.input.KeyboardLayout"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "identifier": "readParcelable",
+                        "__parcelType": "android.hardware.input.InputDeviceIdentifier"
+                    }]
+                }
+            ],
+            "name": "getCurrentKeyboardLayoutForInputDevice",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 19,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "identifier": "readParcelable",
+                        "__parcelType": "android.hardware.input.InputDeviceIdentifier"
+                    }]
+                },
+                {"keyboardLayoutDescriptor": "readString16"}
+            ],
+            "name": "setCurrentKeyboardLayoutForInputDevice",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 20,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "identifier": "readParcelable",
+                        "__parcelType": "android.hardware.input.InputDeviceIdentifier"
+                    }]
+                }
+            ],
+            "name": "getEnabledKeyboardLayoutsForInputDevice",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 21,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "identifier": "readParcelable",
+                        "__parcelType": "android.hardware.input.InputDeviceIdentifier"
+                    }]
+                },
+                {"keyboardLayoutDescriptor": "readString16"}
+            ],
+            "name": "addKeyboardLayoutForInputDevice",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 22,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "identifier": "readParcelable",
+                        "__parcelType": "android.hardware.input.InputDeviceIdentifier"
+                    }]
+                },
+                {"keyboardLayoutDescriptor": "readString16"}
+            ],
+            "name": "removeKeyboardLayoutForInputDevice",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 23,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "identifier": "readParcelable",
+                        "__parcelType": "android.hardware.input.InputDeviceIdentifier"
+                    }]
+                },
+                {"userId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "imeInfo": "readParcelable",
+                        "__parcelType": "android.view.inputmethod.InputMethodInfo"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "imeSubtype": "readParcelable",
+                        "__parcelType": "android.view.inputmethod.InputMethodSubtype"
+                    }]
+                }
+            ],
+            "name": "getKeyboardLayoutForInputDevice",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 24,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "identifier": "readParcelable",
+                        "__parcelType": "android.hardware.input.InputDeviceIdentifier"
+                    }]
+                },
+                {"userId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "imeInfo": "readParcelable",
+                        "__parcelType": "android.view.inputmethod.InputMethodInfo"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "imeSubtype": "readParcelable",
+                        "__parcelType": "android.view.inputmethod.InputMethodSubtype"
+                    }]
+                },
+                {"keyboardLayoutDescriptor": "readString16"}
+            ],
+            "name": "setKeyboardLayoutForInputDevice",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 25,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "identifier": "readParcelable",
+                        "__parcelType": "android.hardware.input.InputDeviceIdentifier"
+                    }]
+                },
+                {"userId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "imeInfo": "readParcelable",
+                        "__parcelType": "android.view.inputmethod.InputMethodInfo"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "imeSubtype": "readParcelable",
+                        "__parcelType": "android.view.inputmethod.InputMethodSubtype"
+                    }]
+                }
+            ],
+            "name": "getKeyboardLayoutListForInputDevice",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.input.KeyboardLayout"
+                }
+            ]
+        },
+        {
+            "code": 26,
+            "in": [
+                {"fromKey": "readInt32"},
+                {"toKey": "readInt32"}
+            ],
+            "name": "remapModifierKey",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 27,
+            "in": [],
+            "name": "clearAllModifierKeyRemappings",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 28,
+            "in": [],
+            "name": "getModifierKeyRemapping",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readMap"}
+            ]
+        },
+        {
+            "code": 29,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "registerInputDevicesChangedListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 30,
+            "in": [],
+            "name": "isInTabletMode",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 31,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "registerTabletModeChangedListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 32,
+            "in": [],
+            "name": "isMicMuted",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 33,
+            "in": [
+                {"deviceId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "effect": "readParcelable",
+                        "__parcelType": "android.os.VibrationEffect"
+                    }]
+                },
+                {"token": "readStrongBinder"}
+            ],
+            "name": "vibrate",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 34,
+            "in": [
+                {"deviceId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "vibration": "readParcelable",
+                        "__parcelType": "android.os.CombinedVibration"
+                    }]
+                },
+                {"token": "readStrongBinder"}
+            ],
+            "name": "vibrateCombined",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 35,
+            "in": [
+                {"deviceId": "readInt32"},
+                {"token": "readStrongBinder"}
+            ],
+            "name": "cancelVibrate",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 36,
+            "in": [{"deviceId": "readInt32"}],
+            "name": "getVibratorIds",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 37,
+            "in": [{"deviceId": "readInt32"}],
+            "name": "isVibrating",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 38,
+            "in": [
+                {"deviceId": "readInt32"},
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "registerVibratorStateListener",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 39,
+            "in": [
+                {"deviceId": "readInt32"},
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "unregisterVibratorStateListener",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 40,
+            "in": [{"deviceId": "readInt32"}],
+            "name": "getBatteryState",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 41,
+            "in": [{"typeId": "readInt32"}],
+            "name": "setPointerIconType",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 42,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "icon": "readParcelable",
+                        "__parcelType": "android.view.PointerIcon"
+                    }]
+                }
+            ],
+            "name": "setCustomPointerIcon",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 43,
+            "in": [
+                {"inputChannelToken": "readStrongBinder"},
+                {"enabled": "readBool"}
+            ],
+            "name": "requestPointerCapture",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 44,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"name": "readString16"},
+                {"displayId": "readInt32"}
+            ],
+            "name": "monitorGestureInput",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.view.InputMonitor"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 45,
+            "in": [
+                {"inputPort": "readString16"},
+                {"displayPort": "readInt32"}
+            ],
+            "name": "addPortAssociation",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 46,
+            "in": [{"inputPort": "readString16"}],
+            "name": "removePortAssociation",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 47,
+            "in": [
+                {"inputPort": "readString16"},
+                {"displayUniqueId": "readString16"}
+            ],
+            "name": "addUniqueIdAssociation",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 48,
+            "in": [{"inputPort": "readString16"}],
+            "name": "removeUniqueIdAssociation",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 49,
+            "in": [{"deviceId": "readInt32"}],
+            "name": "getSensorList",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.input.InputSensorInfo"
+                }
+            ]
+        },
+        {
+            "code": 50,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "registerSensorListener",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 51,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "unregisterSensorListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 52,
+            "in": [
+                {"deviceId": "readInt32"},
+                {"sensorType": "readInt32"},
+                {"samplingPeriodUs": "readInt32"},
+                {"maxBatchReportLatencyUs": "readInt32"}
+            ],
+            "name": "enableSensor",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 53,
+            "in": [
+                {"deviceId": "readInt32"},
+                {"sensorType": "readInt32"}
+            ],
+            "name": "disableSensor",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 54,
+            "in": [
+                {"deviceId": "readInt32"},
+                {"sensorType": "readInt32"}
+            ],
+            "name": "flushSensor",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 55,
+            "in": [{"deviceId": "readInt32"}],
+            "name": "getLights",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.hardware.lights.Light"
+                }
+            ]
+        },
+        {
+            "code": 56,
+            "in": [
+                {"deviceId": "readInt32"},
+                {"lightId": "readInt32"}
+            ],
+            "name": "getLightState",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.lights.LightState"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 57,
+            "in": [
+                {"deviceId": "readInt32"},
+                {"lightIds": "readInt32Vector"},
+                {
+                    "states": "readParcelableVector",
+                    "__parcelType": "android.hardware.lights.LightState"
+                },
+                {"token": "readStrongBinder"}
+            ],
+            "name": "setLightStates",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 58,
+            "in": [
+                {"deviceId": "readInt32"},
+                {"opPkg": "readString16"},
+                {"token": "readStrongBinder"}
+            ],
+            "name": "openLightSession",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 59,
+            "in": [
+                {"deviceId": "readInt32"},
+                {"token": "readStrongBinder"}
+            ],
+            "name": "closeLightSession",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 60,
+            "in": [],
+            "name": "cancelCurrentTouch",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 61,
+            "in": [
+                {"deviceId": "readInt32"},
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "registerBatteryListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 62,
+            "in": [
+                {"deviceId": "readInt32"},
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "unregisterBatteryListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 63,
+            "in": [{"deviceId": "readInt32"}],
+            "name": "getInputDeviceBluetoothAddress",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 64,
+            "in": [{"inputChannelToken": "readStrongBinder"}],
+            "name": "pilferPointers",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 65,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "registerKeyboardBacklightListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 66,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "unregisterKeyboardBacklightListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 67,
+            "in": [{"displayId": "readInt32"}],
+            "name": "getHostUsiVersionFromDisplayConfig",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.input.HostUsiVersion"
+                    }]
+                }
+            ]
+        }
+    ],
+    "name": "IInputManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

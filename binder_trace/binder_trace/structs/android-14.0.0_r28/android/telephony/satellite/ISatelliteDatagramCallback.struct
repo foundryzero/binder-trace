@@ -1,0 +1,27 @@
+{
+    "produced_on": "2024-04-12T08:47:46.985574996Z",
+    "source_location": "",
+    "full_name": "android.telephony.satellite.ISatelliteDatagramCallback",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"datagramId": "readInt64"},
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "datagram": "readParcelable",
+                    "__parcelType": "android.telephony.satellite.SatelliteDatagram"
+                }]
+            },
+            {"pendingCount": "readInt32"},
+            {"callback": "readStrongBinder"}
+        ],
+        "name": "onSatelliteDatagramReceived",
+        "oneWay": true,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "ISatelliteDatagramCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

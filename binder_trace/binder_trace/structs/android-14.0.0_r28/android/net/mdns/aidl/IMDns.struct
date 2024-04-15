@@ -1,0 +1,109 @@
+{
+    "produced_on": "2024-04-12T08:47:47.899214914Z",
+    "source_location": "",
+    "full_name": "android.net.mdns.aidl.IMDns",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "startDaemon",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "stopDaemon",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "info": "readParcelable",
+                        "__parcelType": "android.net.mdns.aidl.RegistrationInfo"
+                    }]
+                }
+            ],
+            "name": "registerService",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "info": "readParcelable",
+                        "__parcelType": "android.net.mdns.aidl.DiscoveryInfo"
+                    }]
+                }
+            ],
+            "name": "discover",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "info": "readParcelable",
+                        "__parcelType": "android.net.mdns.aidl.ResolutionInfo"
+                    }]
+                }
+            ],
+            "name": "resolve",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "info": "readParcelable",
+                        "__parcelType": "android.net.mdns.aidl.GetAddressInfo"
+                    }]
+                }
+            ],
+            "name": "getServiceAddress",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"id": "readInt32"}],
+            "name": "stopOperation",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "registerEventListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "unregisterEventListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IMDns",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}
