@@ -1,0 +1,34 @@
+{
+    "produced_on": "2024-04-12T08:47:45.763022618Z",
+    "source_location": "",
+    "full_name": "android.service.games.IGameSessionController",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"taskId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "gameScreenshotResultFuture": "readParcelable",
+                        "__parcelType": "com.android.internal.infra.AndroidFuture"
+                    }]
+                }
+            ],
+            "name": "takeScreenshot",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"taskId": "readInt32"}],
+            "name": "restartGame",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IGameSessionController",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,40 @@
+{
+    "produced_on": "2024-04-12T08:47:43.924052008Z",
+    "source_location": "",
+    "full_name": "org.chromium.base.process_launcher.IParentProcess",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"pid": "readInt32"},
+                {"zygotePid": "readInt32"},
+                {"zygoteStartupTimeMillis": "readInt64"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"relroBundle": "readBundle"}]
+                }
+            ],
+            "name": "finishSetupConnection",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"exception": "readString16"}],
+            "name": "reportExceptionInInit",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "reportCleanExit",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IParentProcess",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,220 @@
+{
+    "produced_on": "2024-04-12T08:47:58.900735261Z",
+    "source_location": "",
+    "full_name": "android.safetycenter.ISafetyCenterManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "isSafetyCenterEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"sourceId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "safetySourceData": "readParcelable",
+                        "__parcelType": "android.safetycenter.SafetySourceData"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "safetyEvent": "readParcelable",
+                        "__parcelType": "android.safetycenter.SafetyEvent"
+                    }]
+                },
+                {"packageName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "setSafetySourceData",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"safetySourceId": "readString16"},
+                {"packageName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "getSafetySourceData",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.safetycenter.SafetySourceData"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"safetySourceId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "safetySourceErrorDetails": "readParcelable",
+                        "__parcelType": "android.safetycenter.SafetySourceErrorDetails"
+                    }]
+                },
+                {"packageName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "reportSafetySourceError",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"refreshReason": "readInt32"},
+                {"userId": "readInt32"}
+            ],
+            "name": "refreshSafetySources",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"refreshReason": "readInt32"},
+                {"userId": "readInt32"},
+                {
+                    "safetySourceIds": "readList",
+                    "__parcelType": "String"
+                }
+            ],
+            "name": "refreshSpecificSafetySources",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "getSafetyCenterConfig",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.safetycenter.config.SafetyCenterConfig"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "getSafetyCenterData",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.safetycenter.SafetyCenterData"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"listener": "readStrongBinder"},
+                {"packageName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "addOnSafetyCenterDataChangedListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"listener": "readStrongBinder"},
+                {"userId": "readInt32"}
+            ],
+            "name": "removeOnSafetyCenterDataChangedListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"issueId": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "dismissSafetyCenterIssue",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"safetyCenterIssueId": "readString16"},
+                {"safetyCenterIssueActionId": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "executeSafetyCenterIssueAction",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [],
+            "name": "clearAllSafetySourceDataForTests",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "safetyCenterConfig": "readParcelable",
+                        "__parcelType": "android.safetycenter.config.SafetyCenterConfig"
+                    }]
+                }
+            ],
+            "name": "setSafetyCenterConfigForTests",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [],
+            "name": "clearSafetyCenterConfigForTests",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISafetyCenterManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

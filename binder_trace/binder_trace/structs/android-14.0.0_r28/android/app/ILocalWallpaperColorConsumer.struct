@@ -1,0 +1,32 @@
+{
+    "produced_on": "2024-04-12T08:47:44.708898238Z",
+    "source_location": "",
+    "full_name": "android.app.ILocalWallpaperColorConsumer",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "area": "readParcelable",
+                    "__parcelType": "android.graphics.RectF"
+                }]
+            },
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "colors": "readParcelable",
+                    "__parcelType": "android.app.WallpaperColors"
+                }]
+            }
+        ],
+        "name": "onColorsChanged",
+        "oneWay": true,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "ILocalWallpaperColorConsumer",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,23 @@
+{
+    "produced_on": "2024-04-12T08:47:56.692457547Z",
+    "source_location": "",
+    "components": [
+        {"ssid": "readByteVector"},
+        {"isHidden": "readBool"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "encryptionType": "readParcelable",
+                "__parcelType": "android.hardware.wifi.hostapd.EncryptionType"
+            }]
+        },
+        {"passphrase": "readString16"},
+        {"isMetered": "readBool"},
+        {"vendorElements": "readByteVector"}
+    ],
+    "full_name": "android.hardware.wifi.hostapd.NetworkParams",
+    "name": "NetworkParams",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

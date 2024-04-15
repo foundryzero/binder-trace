@@ -1,0 +1,30 @@
+{
+    "produced_on": "2024-04-12T08:47:48.158894524Z",
+    "source_location": "",
+    "full_name": "google.hardware.thermal.extension.pixel.IThermalExt",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"mode": "readString16"},
+                {"enabled": "readBool"}
+            ],
+            "name": "setThermalMode",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"mode": "readString16"}],
+            "name": "isThermalModeSupported",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "IThermalExt",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

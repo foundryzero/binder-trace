@@ -1,0 +1,523 @@
+{
+    "produced_on": "2024-04-12T08:47:46.664672756Z",
+    "source_location": "",
+    "full_name": "android.media.tv.interactive.ITvInteractiveAppSession",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "startInteractiveApp",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "stopInteractiveApp",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "resetInteractiveApp",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "biIAppUri": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"params": "readBundle"}]
+                }
+            ],
+            "name": "createBiInteractiveApp",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"biIAppId": "readString16"}],
+            "name": "destroyBiInteractiveApp",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"enable": "readBool"}],
+            "name": "setTeletextAppEnabled",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "bounds": "readParcelable",
+                        "__parcelType": "android.graphics.Rect"
+                    }]
+                }
+            ],
+            "name": "sendCurrentVideoBounds",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "channelUri": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                }
+            ],
+            "name": "sendCurrentChannelUri",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [{"lcn": "readInt32"}],
+            "name": "sendCurrentChannelLcn",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [{"volume": "readFloat"}],
+            "name": "sendStreamVolume",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [{
+                "tracks": "readList",
+                "__parcelType": "android.media.tv.TvTrackInfo"
+            }],
+            "name": "sendTrackInfoList",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [{"inputId": "readString16"}],
+            "name": "sendCurrentTvInputId",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [{"mode": "readInt32"}],
+            "name": "sendTimeShiftMode",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [{
+                "speeds": "readParcelableVector",
+                "__parcelType": "android.media.tv.interactive.float"
+            }],
+            "name": "sendAvailableSpeeds",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"signingId": "readString16"},
+                {"result": "readByteVector"}
+            ],
+            "name": "sendSigningResult",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "recordingInfo": "readParcelable",
+                        "__parcelType": "android.media.tv.TvRecordingInfo"
+                    }]
+                }
+            ],
+            "name": "sendTvRecordingInfo",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [{
+                "recordingInfoList": "readList",
+                "__parcelType": "android.media.tv.TvRecordingInfo"
+            }],
+            "name": "sendTvRecordingInfoList",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"errMsg": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"params": "readBundle"}]
+                }
+            ],
+            "name": "notifyError",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 19,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "params": "readParcelable",
+                        "__parcelType": "android.media.PlaybackParams"
+                    }]
+                }
+            ],
+            "name": "notifyTimeShiftPlaybackParams",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 20,
+            "in": [
+                {"inputId": "readString16"},
+                {"status": "readInt32"}
+            ],
+            "name": "notifyTimeShiftStatusChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 21,
+            "in": [
+                {"inputId": "readString16"},
+                {"timeMs": "readInt64"}
+            ],
+            "name": "notifyTimeShiftStartPositionChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 22,
+            "in": [
+                {"inputId": "readString16"},
+                {"timeMs": "readInt64"}
+            ],
+            "name": "notifyTimeShiftCurrentPositionChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 23,
+            "in": [
+                {"recordingId": "readString16"},
+                {"inputId": "readString16"}
+            ],
+            "name": "notifyRecordingConnectionFailed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 24,
+            "in": [
+                {"recordingId": "readString16"},
+                {"inputId": "readString16"}
+            ],
+            "name": "notifyRecordingDisconnected",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 25,
+            "in": [
+                {"recordingId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "channelUri": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                }
+            ],
+            "name": "notifyRecordingTuned",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 26,
+            "in": [
+                {"recordingId": "readString16"},
+                {"err": "readInt32"}
+            ],
+            "name": "notifyRecordingError",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 27,
+            "in": [
+                {"recordingId": "readString16"},
+                {"requestId": "readString16"}
+            ],
+            "name": "notifyRecordingScheduled",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 28,
+            "in": [],
+            "name": "release",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 29,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "channelUri": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                }
+            ],
+            "name": "notifyTuned",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 30,
+            "in": [
+                {"type": "readInt32"},
+                {"trackId": "readString16"}
+            ],
+            "name": "notifyTrackSelected",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 31,
+            "in": [{
+                "tracks": "readList",
+                "__parcelType": "android.media.tv.TvTrackInfo"
+            }],
+            "name": "notifyTracksChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 32,
+            "in": [],
+            "name": "notifyVideoAvailable",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 33,
+            "in": [{"reason": "readInt32"}],
+            "name": "notifyVideoUnavailable",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 34,
+            "in": [],
+            "name": "notifyContentAllowed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 35,
+            "in": [{"rating": "readString16"}],
+            "name": "notifyContentBlocked",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 36,
+            "in": [{"strength": "readInt32"}],
+            "name": "notifySignalStrength",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 37,
+            "in": [
+                {"recordingId": "readString16"},
+                {"requestId": "readString16"}
+            ],
+            "name": "notifyRecordingStarted",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 38,
+            "in": [{"recordingId": "readString16"}],
+            "name": "notifyRecordingStopped",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 39,
+            "in": [
+                {"type": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"data": "readBundle"}]
+                }
+            ],
+            "name": "notifyTvMessage",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 40,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "surface": "readParcelable",
+                        "__parcelType": "android.view.Surface"
+                    }]
+                }
+            ],
+            "name": "setSurface",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 41,
+            "in": [
+                {"format": "readInt32"},
+                {"width": "readInt32"},
+                {"height": "readInt32"}
+            ],
+            "name": "dispatchSurfaceChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 42,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "response": "readParcelable",
+                        "__parcelType": "android.media.tv.BroadcastInfoResponse"
+                    }]
+                }
+            ],
+            "name": "notifyBroadcastInfoResponse",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 43,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "response": "readParcelable",
+                        "__parcelType": "android.media.tv.AdResponse"
+                    }]
+                }
+            ],
+            "name": "notifyAdResponse",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 44,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "buffer": "readParcelable",
+                        "__parcelType": "android.media.tv.AdBuffer"
+                    }]
+                }
+            ],
+            "name": "notifyAdBufferConsumed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 45,
+            "in": [
+                {"windowToken": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "frame": "readParcelable",
+                        "__parcelType": "android.graphics.Rect"
+                    }]
+                }
+            ],
+            "name": "createMediaView",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 46,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "frame": "readParcelable",
+                        "__parcelType": "android.graphics.Rect"
+                    }]
+                }
+            ],
+            "name": "relayoutMediaView",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 47,
+            "in": [],
+            "name": "removeMediaView",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ITvInteractiveAppSession",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

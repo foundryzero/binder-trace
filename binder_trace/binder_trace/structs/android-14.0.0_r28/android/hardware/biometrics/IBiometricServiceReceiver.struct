@@ -1,0 +1,59 @@
+{
+    "produced_on": "2024-04-12T08:47:45.215962855Z",
+    "source_location": "",
+    "full_name": "android.hardware.biometrics.IBiometricServiceReceiver",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"authenticationType": "readInt32"}],
+            "name": "onAuthenticationSucceeded",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "onAuthenticationFailed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"modality": "readInt32"},
+                {"error": "readInt32"},
+                {"vendorCode": "readInt32"}
+            ],
+            "name": "onError",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"acquiredInfo": "readInt32"},
+                {"message": "readString16"}
+            ],
+            "name": "onAcquired",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"reason": "readInt32"}],
+            "name": "onDialogDismissed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"event": "readInt32"}],
+            "name": "onSystemEvent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IBiometricServiceReceiver",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

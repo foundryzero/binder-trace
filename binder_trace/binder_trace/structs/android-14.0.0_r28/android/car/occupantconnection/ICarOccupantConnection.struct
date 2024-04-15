@@ -1,0 +1,128 @@
+{
+    "produced_on": "2024-04-12T08:47:59.025808031Z",
+    "source_location": "",
+    "full_name": "android.car.occupantconnection.ICarOccupantConnection",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"packageName": "readString16"},
+                {"receiverEndpointId": "readString16"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "registerReceiver",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"packageName": "readString16"},
+                {"receiverEndpointId": "readString16"}
+            ],
+            "name": "unregisterReceiver",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"packageName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiverZone": "readParcelable",
+                        "__parcelType": "android.car.occupantconnection.CarOccupantZoneManager.OccupantZoneInfo"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "requestConnection",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"packageName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiverZone": "readParcelable",
+                        "__parcelType": "android.car.occupantconnection.CarOccupantZoneManager.OccupantZoneInfo"
+                    }]
+                }
+            ],
+            "name": "cancelConnection",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"packageName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiverZone": "readParcelable",
+                        "__parcelType": "android.car.occupantconnection.CarOccupantZoneManager.OccupantZoneInfo"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "payload": "readParcelable",
+                        "__parcelType": "android.car.occupantconnection.Payload"
+                    }]
+                }
+            ],
+            "name": "sendPayload",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"packageName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiverZone": "readParcelable",
+                        "__parcelType": "android.car.occupantconnection.CarOccupantZoneManager.OccupantZoneInfo"
+                    }]
+                }
+            ],
+            "name": "disconnect",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"packageName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiverZone": "readParcelable",
+                        "__parcelType": "android.car.occupantconnection.CarOccupantZoneManager.OccupantZoneInfo"
+                    }]
+                }
+            ],
+            "name": "isConnected",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "ICarOccupantConnection",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

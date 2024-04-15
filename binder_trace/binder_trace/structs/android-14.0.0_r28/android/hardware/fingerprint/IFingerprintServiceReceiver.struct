@@ -1,0 +1,125 @@
+{
+    "produced_on": "2024-04-12T08:47:45.317599256Z",
+    "source_location": "",
+    "full_name": "android.hardware.fingerprint.IFingerprintServiceReceiver",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "fp": "readParcelable",
+                        "__parcelType": "android.hardware.fingerprint.Fingerprint"
+                    }]
+                },
+                {"remaining": "readInt32"}
+            ],
+            "name": "onEnrollResult",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"acquiredInfo": "readInt32"},
+                {"vendorCode": "readInt32"}
+            ],
+            "name": "onAcquired",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "fp": "readParcelable",
+                        "__parcelType": "android.hardware.fingerprint.Fingerprint"
+                    }]
+                },
+                {"userId": "readInt32"},
+                {"isStrongBiometric": "readBool"}
+            ],
+            "name": "onAuthenticationSucceeded",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"sensorId": "readInt32"},
+                {"userId": "readInt32"},
+                {"isStrongBiometric": "readBool"}
+            ],
+            "name": "onFingerprintDetected",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "onAuthenticationFailed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"error": "readInt32"},
+                {"vendorCode": "readInt32"}
+            ],
+            "name": "onError",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "fp": "readParcelable",
+                        "__parcelType": "android.hardware.fingerprint.Fingerprint"
+                    }]
+                },
+                {"remaining": "readInt32"}
+            ],
+            "name": "onRemoved",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"sensorId": "readInt32"},
+                {"userId": "readInt32"},
+                {"challenge": "readInt64"}
+            ],
+            "name": "onChallengeGenerated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [{"sensorId": "readInt32"}],
+            "name": "onUdfpsPointerDown",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [{"sensorId": "readInt32"}],
+            "name": "onUdfpsPointerUp",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IFingerprintServiceReceiver",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

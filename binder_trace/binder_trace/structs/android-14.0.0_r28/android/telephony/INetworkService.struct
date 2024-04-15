@@ -1,0 +1,55 @@
+{
+    "produced_on": "2024-04-12T08:47:46.848996245Z",
+    "source_location": "",
+    "full_name": "android.telephony.INetworkService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"slotId": "readInt32"}],
+            "name": "createNetworkServiceProvider",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"slotId": "readInt32"}],
+            "name": "removeNetworkServiceProvider",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"slotId": "readInt32"},
+                {"domain": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "requestNetworkRegistrationInfo",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"slotId": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "registerForNetworkRegistrationInfoChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"slotId": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "unregisterForNetworkRegistrationInfoChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "INetworkService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

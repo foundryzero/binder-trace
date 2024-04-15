@@ -1,0 +1,140 @@
+{
+    "produced_on": "2024-04-12T08:47:46.241066909Z",
+    "source_location": "",
+    "full_name": "com.android.internal.inputmethod.IImeTracker",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"tag": "readString16"},
+                {"uid": "readInt32"},
+                {"origin": "readInt32"},
+                {"reason": "readInt32"}
+            ],
+            "name": "onRequestShow",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.internal.inputmethod.ImeTracker.Token"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"tag": "readString16"},
+                {"uid": "readInt32"},
+                {"origin": "readInt32"},
+                {"reason": "readInt32"}
+            ],
+            "name": "onRequestHide",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.internal.inputmethod.ImeTracker.Token"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"binder": "readStrongBinder"},
+                {"phase": "readInt32"}
+            ],
+            "name": "onProgress",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "statsToken": "readParcelable",
+                        "__parcelType": "com.android.internal.inputmethod.ImeTracker.Token"
+                    }]
+                },
+                {"phase": "readInt32"}
+            ],
+            "name": "onFailed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "statsToken": "readParcelable",
+                        "__parcelType": "com.android.internal.inputmethod.ImeTracker.Token"
+                    }]
+                },
+                {"phase": "readInt32"}
+            ],
+            "name": "onCancelled",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "statsToken": "readParcelable",
+                        "__parcelType": "com.android.internal.inputmethod.ImeTracker.Token"
+                    }]
+                }
+            ],
+            "name": "onShown",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "statsToken": "readParcelable",
+                        "__parcelType": "com.android.internal.inputmethod.ImeTracker.Token"
+                    }]
+                }
+            ],
+            "name": "onHidden",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "hasPendingImeVisibilityRequests",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "IImeTracker",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

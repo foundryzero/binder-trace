@@ -1,0 +1,27 @@
+{
+    "produced_on": "2024-04-12T08:47:45.554897681Z",
+    "source_location": "",
+    "full_name": "android.os.IUserRestrictionsListener",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"userId": "readInt32"},
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{"newRestrictions": "readBundle"}]
+            },
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{"prevRestrictions": "readBundle"}]
+            }
+        ],
+        "name": "onUserRestrictionsChanged",
+        "oneWay": true,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "IUserRestrictionsListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

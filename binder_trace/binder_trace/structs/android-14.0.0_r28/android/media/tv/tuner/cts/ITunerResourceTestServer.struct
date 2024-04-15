@@ -1,0 +1,51 @@
+{
+    "produced_on": "2024-04-12T08:47:44.175131528Z",
+    "source_location": "",
+    "full_name": "android.media.tv.tuner.cts.ITunerResourceTestServer",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"useCase": "readInt32"}],
+            "name": "createTuner",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"frontendIndex": "readInt32"}],
+            "name": "tune",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"frontendIndex": "readInt32"}],
+            "name": "tuneAsync",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "closeTuner",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "verifyTunerIsNull",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "ITunerResourceTestServer",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

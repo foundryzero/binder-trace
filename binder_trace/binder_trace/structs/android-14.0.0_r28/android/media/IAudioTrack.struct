@@ -1,0 +1,243 @@
+{
+    "produced_on": "2024-04-12T08:47:44.365478721Z",
+    "source_location": "",
+    "full_name": "android.media.IAudioTrack",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getCblk",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.media.SharedFileRegion"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "start",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "stop",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "flush",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "pause",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"effectId": "readInt32"}],
+            "name": "attachAuxEffect",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [{"keyValuePairs": "readString16"}],
+            "name": "setParameters",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"presentationId": "readInt32"},
+                {"programId": "readInt32"}
+            ],
+            "name": "selectPresentation",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [],
+            "name": "getTimestamp",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "timestamp": "readParcelable",
+                        "__parcelType": "android.media.AudioTimestampInternal"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 10,
+            "in": [],
+            "name": "signal",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "configuration": "readParcelable",
+                        "__parcelType": "android.media.VolumeShaperConfiguration"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "operation": "readParcelable",
+                        "__parcelType": "android.media.VolumeShaperOperation"
+                    }]
+                }
+            ],
+            "name": "applyVolumeShaper",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [{"id": "readInt32"}],
+            "name": "getVolumeShaperState",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.media.VolumeShaperState"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 13,
+            "in": [],
+            "name": "getDualMonoMode",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.media.audio.common.AudioDualMonoMode"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "mode": "readParcelable",
+                        "__parcelType": "android.media.audio.common.AudioDualMonoMode"
+                    }]
+                }
+            ],
+            "name": "setDualMonoMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [],
+            "name": "getAudioDescriptionMixLevel",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readFloat"}
+            ]
+        },
+        {
+            "code": 16,
+            "in": [{"leveldB": "readFloat"}],
+            "name": "setAudioDescriptionMixLevel",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [],
+            "name": "getPlaybackRateParameters",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.media.audio.common.AudioPlaybackRate"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "playbackRate": "readParcelable",
+                        "__parcelType": "android.media.audio.common.AudioPlaybackRate"
+                    }]
+                }
+            ],
+            "name": "setPlaybackRateParameters",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IAudioTrack",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

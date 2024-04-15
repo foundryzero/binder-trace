@@ -1,0 +1,137 @@
+{
+    "produced_on": "2024-04-12T08:47:58.991450257Z",
+    "source_location": "",
+    "full_name": "android.car.hardware.power.ICarPower",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "registerListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "unregisterListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "requestShutdownOnNextSuspend",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"state": "readInt32"},
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "finished",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"seconds": "readInt32"}],
+            "name": "scheduleNextWakeupTime",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "registerListenerWithCompletion",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "getPowerState",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "getCurrentPowerPolicy",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.car.hardware.power.CarPowerPolicy"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 9,
+            "in": [{"policyId": "readString16"}],
+            "name": "applyPowerPolicy",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [{"policyGroupId": "readString16"}],
+            "name": "setPowerPolicyGroup",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "filter": "readParcelable",
+                        "__parcelType": "android.car.hardware.power.CarPowerPolicyFilter"
+                    }]
+                },
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "addPowerPolicyListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "removePowerPolicyListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"displayId": "readInt32"},
+                {"enable": "readBool"}
+            ],
+            "name": "setDisplayPowerState",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [{"displayId": "readInt32"}],
+            "name": "notifyUserActivity",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICarPower",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

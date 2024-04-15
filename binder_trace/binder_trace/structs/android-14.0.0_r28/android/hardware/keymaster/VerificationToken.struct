@@ -1,0 +1,28 @@
+{
+    "produced_on": "2024-04-12T08:47:52.362722587Z",
+    "source_location": "",
+    "components": [
+        {"challenge": "readInt64"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "timestamp": "readParcelable",
+                "__parcelType": "android.hardware.keymaster.Timestamp"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "securityLevel": "readParcelable",
+                "__parcelType": "android.hardware.keymaster.SecurityLevel"
+            }]
+        },
+        {"mac": "readByteVector"}
+    ],
+    "full_name": "android.hardware.keymaster.VerificationToken",
+    "name": "VerificationToken",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

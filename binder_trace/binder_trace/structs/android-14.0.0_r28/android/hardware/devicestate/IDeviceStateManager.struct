@@ -1,0 +1,77 @@
+{
+    "produced_on": "2024-04-12T08:47:45.267228405Z",
+    "source_location": "",
+    "full_name": "android.hardware.devicestate.IDeviceStateManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getDeviceStateInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.devicestate.DeviceStateInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "registerCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"state": "readInt32"},
+                {"flags": "readInt32"}
+            ],
+            "name": "requestState",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "cancelStateRequest",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"state": "readInt32"},
+                {"flags": "readInt32"}
+            ],
+            "name": "requestBaseStateOverride",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "cancelBaseStateOverride",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"shouldCancelRequest": "readBool"}],
+            "name": "onStateRequestOverlayDismissed",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IDeviceStateManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,57 @@
+{
+    "produced_on": "2024-04-12T08:47:48.151482367Z",
+    "source_location": "",
+    "full_name": "hardware.google.ril_ext.IRilExt",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "rilExtResponse": "readParcelable",
+                        "__parcelType": "hardware.google.ril_ext.IRilExtResponse"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "rilExtIndication": "readParcelable",
+                        "__parcelType": "hardware.google.ril_ext.IRilExtIndication"
+                    }]
+                }
+            ],
+            "name": "setCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"serial": "readInt32"},
+                {"carrierId": "readInt32"}
+            ],
+            "name": "sendCarrierId",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"serial": "readInt32"},
+                {
+                    "carrierConfigs": "readParcelableVector",
+                    "__parcelType": "hardware.google.ril_ext.CarrierConfig"
+                }
+            ],
+            "name": "sendCarrierConfigs",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IRilExt",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

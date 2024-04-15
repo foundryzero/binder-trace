@@ -1,0 +1,28 @@
+{
+    "produced_on": "2024-04-12T08:47:54.039357487Z",
+    "source_location": "",
+    "components": [
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "type": "readParcelable",
+                "__parcelType": "android.hardware.radio.RadioResponseType"
+            }]
+        },
+        {"serial": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "error": "readParcelable",
+                "__parcelType": "android.hardware.radio.RadioError"
+            }]
+        },
+        {"isEnabled": "readBool"}
+    ],
+    "full_name": "android.hardware.radio.RadioResponseInfoModem",
+    "name": "RadioResponseInfoModem",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

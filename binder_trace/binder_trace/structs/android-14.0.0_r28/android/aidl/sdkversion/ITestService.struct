@@ -1,0 +1,62 @@
+{
+    "produced_on": "2024-04-12T08:48:00.378337188Z",
+    "source_location": "",
+    "full_name": "android.aidl.sdkversion.ITestService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"token": "readBool"}],
+            "name": "RepeatBoolean",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "token": "readParcelable",
+                        "__parcelType": "android.aidl.sdkversion.ITestService.TypedObject"
+                    }]
+                }
+            ],
+            "name": "RepeatTypedObject",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.aidl.sdkversion.ITestService.TypedObject"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{
+                "tokens": "readList",
+                "__parcelType": "android.aidl.sdkversion.ITestService.TypedObject"
+            }],
+            "name": "RepeatTypedList",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.aidl.sdkversion.ITestService.TypedObject"
+                }
+            ]
+        }
+    ],
+    "name": "ITestService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

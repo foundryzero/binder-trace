@@ -1,0 +1,139 @@
+{
+    "produced_on": "2024-04-12T08:47:45.188085201Z",
+    "source_location": "",
+    "full_name": "android.debug.IAdbManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"alwaysAllow": "readBool"},
+                {"publicKey": "readString16"}
+            ],
+            "name": "allowDebugging",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "denyDebugging",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "clearDebuggingKeys",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"alwaysAllow": "readBool"},
+                {"bssid": "readString16"}
+            ],
+            "name": "allowWirelessDebugging",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "denyWirelessDebugging",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "getPairedDevices",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.debug.FingerprintAndPairDevice"
+                }
+            ]
+        },
+        {
+            "code": 7,
+            "in": [{"fingerprint": "readString16"}],
+            "name": "unpairDevice",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "enablePairingByPairingCode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"serviceName": "readString16"},
+                {"password": "readString16"}
+            ],
+            "name": "enablePairingByQrCode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [],
+            "name": "getAdbWirelessPort",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [],
+            "name": "disablePairing",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [],
+            "name": "isAdbWifiSupported",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [],
+            "name": "isAdbWifiQrSupported",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 14,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "registerCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "unregisterCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IAdbManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

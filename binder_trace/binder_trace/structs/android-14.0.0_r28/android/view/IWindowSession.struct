@@ -1,0 +1,795 @@
+{
+    "produced_on": "2024-04-12T08:47:45.952778140Z",
+    "source_location": "",
+    "full_name": "android.view.IWindowSession",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"window": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attrs": "readParcelable",
+                        "__parcelType": "android.view.WindowManager.LayoutParams"
+                    }]
+                },
+                {"viewVisibility": "readInt32"},
+                {"layerStackId": "readInt32"},
+                {"requestedVisibleTypes": "readInt32"}
+            ],
+            "name": "addToDisplay",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "outInputChannel": "readParcelable",
+                        "__parcelType": "android.view.InputChannel"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "insetsState": "readParcelable",
+                        "__parcelType": "android.view.InsetsState"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "activeControls": "readParcelable",
+                        "__parcelType": "android.view.InsetsSourceControl.Array"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attachedFrame": "readParcelable",
+                        "__parcelType": "android.graphics.Rect"
+                    }]
+                },
+                {
+                    "sizeCompatScale": "readParcelableVector",
+                    "__parcelType": "android.view.float"
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"window": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attrs": "readParcelable",
+                        "__parcelType": "android.view.WindowManager.LayoutParams"
+                    }]
+                },
+                {"viewVisibility": "readInt32"},
+                {"layerStackId": "readInt32"},
+                {"userId": "readInt32"},
+                {"requestedVisibleTypes": "readInt32"}
+            ],
+            "name": "addToDisplayAsUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "outInputChannel": "readParcelable",
+                        "__parcelType": "android.view.InputChannel"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "insetsState": "readParcelable",
+                        "__parcelType": "android.view.InsetsState"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "activeControls": "readParcelable",
+                        "__parcelType": "android.view.InsetsSourceControl.Array"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attachedFrame": "readParcelable",
+                        "__parcelType": "android.graphics.Rect"
+                    }]
+                },
+                {
+                    "sizeCompatScale": "readParcelableVector",
+                    "__parcelType": "android.view.float"
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"window": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attrs": "readParcelable",
+                        "__parcelType": "android.view.WindowManager.LayoutParams"
+                    }]
+                },
+                {"viewVisibility": "readInt32"},
+                {"layerStackId": "readInt32"}
+            ],
+            "name": "addToDisplayWithoutInputChannel",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "insetsState": "readParcelable",
+                        "__parcelType": "android.view.InsetsState"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attachedFrame": "readParcelable",
+                        "__parcelType": "android.graphics.Rect"
+                    }]
+                },
+                {
+                    "sizeCompatScale": "readParcelableVector",
+                    "__parcelType": "android.view.float"
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"window": "readStrongBinder"}],
+            "name": "remove",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"window": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attrs": "readParcelable",
+                        "__parcelType": "android.view.WindowManager.LayoutParams"
+                    }]
+                },
+                {"requestedWidth": "readInt32"},
+                {"requestedHeight": "readInt32"},
+                {"viewVisibility": "readInt32"},
+                {"flags": "readInt32"},
+                {"seq": "readInt32"},
+                {"lastSyncSeqId": "readInt32"}
+            ],
+            "name": "relayout",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "outFrames": "readParcelable",
+                        "__parcelType": "android.window.ClientWindowFrames"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "outMergedConfiguration": "readParcelable",
+                        "__parcelType": "android.util.MergedConfiguration"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "outSurfaceControl": "readParcelable",
+                        "__parcelType": "android.view.SurfaceControl"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "insetsState": "readParcelable",
+                        "__parcelType": "android.view.InsetsState"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "activeControls": "readParcelable",
+                        "__parcelType": "android.view.InsetsSourceControl.Array"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"bundle": "readBundle"}]
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"window": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attrs": "readParcelable",
+                        "__parcelType": "android.view.WindowManager.LayoutParams"
+                    }]
+                },
+                {"requestedWidth": "readInt32"},
+                {"requestedHeight": "readInt32"},
+                {"viewVisibility": "readInt32"},
+                {"flags": "readInt32"},
+                {"seq": "readInt32"},
+                {"lastSyncSeqId": "readInt32"}
+            ],
+            "name": "relayoutAsync",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"window": "readStrongBinder"}],
+            "name": "outOfMemory",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"window": "readStrongBinder"},
+                {"touchableInsets": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "contentInsets": "readParcelable",
+                        "__parcelType": "android.graphics.Rect"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "visibleInsets": "readParcelable",
+                        "__parcelType": "android.graphics.Rect"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "touchableRegion": "readParcelable",
+                        "__parcelType": "android.graphics.Region"
+                    }]
+                }
+            ],
+            "name": "setInsets",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"window": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "postDrawTransaction": "readParcelable",
+                        "__parcelType": "android.view.SurfaceControl.Transaction"
+                    }]
+                },
+                {"seqId": "readInt32"}
+            ],
+            "name": "finishDrawing",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"effectId": "readInt32"},
+                {"always": "readBool"}
+            ],
+            "name": "performHapticFeedback",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"effectId": "readInt32"},
+                {"always": "readBool"}
+            ],
+            "name": "performHapticFeedbackAsync",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"window": "readStrongBinder"},
+                {"flags": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "surface": "readParcelable",
+                        "__parcelType": "android.view.SurfaceControl"
+                    }]
+                },
+                {"touchSource": "readInt32"},
+                {"touchX": "readFloat"},
+                {"touchY": "readFloat"},
+                {"thumbCenterX": "readFloat"},
+                {"thumbCenterY": "readFloat"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "data": "readParcelable",
+                        "__parcelType": "android.content.ClipData"
+                    }]
+                }
+            ],
+            "name": "performDrag",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"window": "readStrongBinder"},
+                {"x": "readInt32"},
+                {"y": "readInt32"}
+            ],
+            "name": "dropForAccessibility",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"window": "readStrongBinder"},
+                {"consumed": "readBool"}
+            ],
+            "name": "reportDropResult",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"dragToken": "readStrongBinder"},
+                {"skipAnimation": "readBool"}
+            ],
+            "name": "cancelDragAndDrop",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [{"window": "readStrongBinder"}],
+            "name": "dragRecipientEntered",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [{"window": "readStrongBinder"}],
+            "name": "dragRecipientExited",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"windowToken": "readStrongBinder"},
+                {"x": "readFloat"},
+                {"y": "readFloat"},
+                {"xstep": "readFloat"},
+                {"ystep": "readFloat"}
+            ],
+            "name": "setWallpaperPosition",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 19,
+            "in": [
+                {"windowToken": "readStrongBinder"},
+                {"scale": "readFloat"}
+            ],
+            "name": "setWallpaperZoomOut",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 20,
+            "in": [
+                {"windowToken": "readStrongBinder"},
+                {"shouldZoom": "readBool"}
+            ],
+            "name": "setShouldZoomOutWallpaper",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 21,
+            "in": [{"window": "readStrongBinder"}],
+            "name": "wallpaperOffsetsComplete",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 22,
+            "in": [
+                {"windowToken": "readStrongBinder"},
+                {"x": "readInt32"},
+                {"y": "readInt32"}
+            ],
+            "name": "setWallpaperDisplayOffset",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 23,
+            "in": [
+                {"window": "readStrongBinder"},
+                {"action": "readString16"},
+                {"x": "readInt32"},
+                {"y": "readInt32"},
+                {"z": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"extras": "readBundle"}]
+                },
+                {"sync": "readBool"}
+            ],
+            "name": "sendWallpaperCommand",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"__return": "readBundle"}]
+                }
+            ]
+        },
+        {
+            "code": 24,
+            "in": [
+                {"window": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"result": "readBundle"}]
+                }
+            ],
+            "name": "wallpaperCommandComplete",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 25,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "rectangle": "readParcelable",
+                        "__parcelType": "android.graphics.Rect"
+                    }]
+                }
+            ],
+            "name": "onRectangleOnScreenRequested",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 26,
+            "in": [{"window": "readStrongBinder"}],
+            "name": "getWindowId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 27,
+            "in": [{"window": "readStrongBinder"}],
+            "name": "pokeDrawLock",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 28,
+            "in": [
+                {"window": "readStrongBinder"},
+                {"startX": "readFloat"},
+                {"startY": "readFloat"}
+            ],
+            "name": "startMovingTask",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 29,
+            "in": [{"window": "readStrongBinder"}],
+            "name": "finishMovingTask",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 30,
+            "in": [{"window": "readStrongBinder"}],
+            "name": "updatePointerIcon",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 31,
+            "in": [
+                {"window": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "region": "readParcelable",
+                        "__parcelType": "android.graphics.Region"
+                    }]
+                }
+            ],
+            "name": "updateTapExcludeRegion",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 32,
+            "in": [
+                {"window": "readStrongBinder"},
+                {"requestedVisibleTypes": "readInt32"}
+            ],
+            "name": "updateRequestedVisibleTypes",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 33,
+            "in": [
+                {"window": "readStrongBinder"},
+                {
+                    "exclusionRects": "readList",
+                    "__parcelType": "android.graphics.Rect"
+                }
+            ],
+            "name": "reportSystemGestureExclusionChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 34,
+            "in": [
+                {"window": "readStrongBinder"},
+                {
+                    "restricted": "readList",
+                    "__parcelType": "android.graphics.Rect"
+                },
+                {
+                    "unrestricted": "readList",
+                    "__parcelType": "android.graphics.Rect"
+                }
+            ],
+            "name": "reportKeepClearAreasChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 35,
+            "in": [
+                {"displayId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "surface": "readParcelable",
+                        "__parcelType": "android.view.SurfaceControl"
+                    }]
+                },
+                {"window": "readStrongBinder"},
+                {"hostInputToken": "readStrongBinder"},
+                {"flags": "readInt32"},
+                {"privateFlags": "readInt32"},
+                {"inputFeatures": "readInt32"},
+                {"type": "readInt32"},
+                {"windowToken": "readStrongBinder"},
+                {"focusGrantToken": "readStrongBinder"},
+                {"inputHandleName": "readString16"}
+            ],
+            "name": "grantInputChannel",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "outInputChannel": "readParcelable",
+                        "__parcelType": "android.view.InputChannel"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 36,
+            "in": [
+                {"channelToken": "readStrongBinder"},
+                {"displayId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "surface": "readParcelable",
+                        "__parcelType": "android.view.SurfaceControl"
+                    }]
+                },
+                {"flags": "readInt32"},
+                {"privateFlags": "readInt32"},
+                {"inputFeatures": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "region": "readParcelable",
+                        "__parcelType": "android.graphics.Region"
+                    }]
+                }
+            ],
+            "name": "updateInputChannel",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 37,
+            "in": [
+                {"window": "readStrongBinder"},
+                {"inputToken": "readStrongBinder"},
+                {"grantFocus": "readBool"}
+            ],
+            "name": "grantEmbeddedWindowFocus",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 38,
+            "in": [
+                {"window": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "boundsInWindow": "readParcelable",
+                        "__parcelType": "android.graphics.Rect"
+                    }]
+                },
+                {"hashAlgorithm": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callback": "readParcelable",
+                        "__parcelType": "android.os.RemoteCallback"
+                    }]
+                }
+            ],
+            "name": "generateDisplayHash",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 39,
+            "in": [
+                {"window": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callbackInfo": "readParcelable",
+                        "__parcelType": "android.window.OnBackInvokedCallbackInfo"
+                    }]
+                }
+            ],
+            "name": "setOnBackInvokedCallbackInfo",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 40,
+            "in": [{"window": "readStrongBinder"}],
+            "name": "clearTouchableRegion",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 41,
+            "in": [{"window": "readStrongBinder"}],
+            "name": "cancelDraw",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 42,
+            "in": [{"embeddedWindow": "readStrongBinder"}],
+            "name": "transferEmbeddedTouchFocusToHost",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "IWindowSession",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

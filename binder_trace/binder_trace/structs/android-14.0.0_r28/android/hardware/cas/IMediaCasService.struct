@@ -1,0 +1,66 @@
+{
+    "produced_on": "2024-04-12T08:47:50.990291774Z",
+    "source_location": "",
+    "full_name": "android.hardware.cas.IMediaCasService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"CA_system_id": "readInt32"}],
+            "name": "createDescrambler",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"CA_system_id": "readInt32"},
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "createPlugin",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "enumeratePlugins",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.cas.AidlCasPluginDescriptor"
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"CA_system_id": "readInt32"}],
+            "name": "isDescramblerSupported",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"CA_system_id": "readInt32"}],
+            "name": "isSystemIdSupported",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "IMediaCasService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

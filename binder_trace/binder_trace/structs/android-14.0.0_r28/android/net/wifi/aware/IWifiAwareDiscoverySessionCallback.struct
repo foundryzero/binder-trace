@@ -1,0 +1,188 @@
+{
+    "produced_on": "2024-04-12T08:47:57.935152037Z",
+    "source_location": "",
+    "full_name": "android.net.wifi.aware.IWifiAwareDiscoverySessionCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"discoverySessionId": "readInt32"}],
+            "name": "onSessionStarted",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "onSessionConfigSuccess",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"reason": "readInt32"}],
+            "name": "onSessionConfigFail",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"reason": "readInt32"}],
+            "name": "onSessionTerminated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "onSessionSuspendSucceeded",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"reason": "readInt32"}],
+            "name": "onSessionSuspendFail",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "onSessionResumeSucceeded",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{"reason": "readInt32"}],
+            "name": "onSessionResumeFail",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"peerId": "readInt32"},
+                {"serviceSpecificInfo": "readByteVector"},
+                {"matchFilter": "readByteVector"},
+                {"peerCipherSuite": "readInt32"},
+                {"scid": "readByteVector"},
+                {"pairingAlias": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "pairingConfig": "readParcelable",
+                        "__parcelType": "android.net.wifi.aware.AwarePairingConfig"
+                    }]
+                }
+            ],
+            "name": "onMatch",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"peerId": "readInt32"},
+                {"serviceSpecificInfo": "readByteVector"},
+                {"matchFilter": "readByteVector"},
+                {"distanceMm": "readInt32"},
+                {"peerCipherSuite": "readInt32"},
+                {"scid": "readByteVector"},
+                {"pairingAlias": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "pairingConfig": "readParcelable",
+                        "__parcelType": "android.net.wifi.aware.AwarePairingConfig"
+                    }]
+                }
+            ],
+            "name": "onMatchWithDistance",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [{"messageId": "readInt32"}],
+            "name": "onMessageSendSuccess",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"messageId": "readInt32"},
+                {"reason": "readInt32"}
+            ],
+            "name": "onMessageSendFail",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"peerId": "readInt32"},
+                {"message": "readByteVector"}
+            ],
+            "name": "onMessageReceived",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [{"peerId": "readInt32"}],
+            "name": "onMatchExpired",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"peerId": "readInt32"},
+                {"requestId": "readInt32"}
+            ],
+            "name": "onPairingSetupRequestReceived",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [
+                {"peerId": "readInt32"},
+                {"accept": "readBool"},
+                {"alias": "readString16"}
+            ],
+            "name": "onPairingSetupConfirmed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [
+                {"peerId": "readInt32"},
+                {"accept": "readBool"},
+                {"alias": "readString16"}
+            ],
+            "name": "onPairingVerificationConfirmed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"peerId": "readInt32"},
+                {"accept": "readBool"},
+                {"method": "readInt32"}
+            ],
+            "name": "onBootstrappingVerificationConfirmed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IWifiAwareDiscoverySessionCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

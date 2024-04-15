@@ -1,0 +1,101 @@
+{
+    "produced_on": "2024-04-12T08:47:57.584324973Z",
+    "source_location": "",
+    "full_name": "android.bluetooth.IBluetoothLeBroadcastCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"reason": "readInt32"},
+                {"broadcastId": "readInt32"}
+            ],
+            "name": "onBroadcastStarted",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"reason": "readInt32"}],
+            "name": "onBroadcastStartFailed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"reason": "readInt32"},
+                {"broadcastId": "readInt32"}
+            ],
+            "name": "onBroadcastStopped",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"reason": "readInt32"}],
+            "name": "onBroadcastStopFailed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"reason": "readInt32"},
+                {"broadcastId": "readInt32"}
+            ],
+            "name": "onPlaybackStarted",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"reason": "readInt32"},
+                {"broadcastId": "readInt32"}
+            ],
+            "name": "onPlaybackStopped",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"reason": "readInt32"},
+                {"broadcastId": "readInt32"}
+            ],
+            "name": "onBroadcastUpdated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"reason": "readInt32"},
+                {"broadcastId": "readInt32"}
+            ],
+            "name": "onBroadcastUpdateFailed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"broadcastId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "metadata": "readParcelable",
+                        "__parcelType": "android.bluetooth.BluetoothLeBroadcastMetadata"
+                    }]
+                }
+            ],
+            "name": "onBroadcastMetadataChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IBluetoothLeBroadcastCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

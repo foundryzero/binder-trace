@@ -1,0 +1,941 @@
+{
+    "produced_on": "2024-04-12T08:47:57.570798614Z",
+    "source_location": "",
+    "full_name": "android.bluetooth.IBluetoothLeAudio",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "device": "readParcelable",
+                        "__parcelType": "android.bluetooth.BluetoothDevice"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributionSource": "readParcelable",
+                        "__parcelType": "android.content.AttributionSource"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiver": "readParcelable",
+                        "__parcelType": "com.android.modules.utils.SynchronousResultReceiver"
+                    }]
+                }
+            ],
+            "name": "connect",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "device": "readParcelable",
+                        "__parcelType": "android.bluetooth.BluetoothDevice"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributionSource": "readParcelable",
+                        "__parcelType": "android.content.AttributionSource"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiver": "readParcelable",
+                        "__parcelType": "com.android.modules.utils.SynchronousResultReceiver"
+                    }]
+                }
+            ],
+            "name": "disconnect",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributionSource": "readParcelable",
+                        "__parcelType": "android.content.AttributionSource"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiver": "readParcelable",
+                        "__parcelType": "com.android.modules.utils.SynchronousResultReceiver"
+                    }]
+                }
+            ],
+            "name": "getConnectedDevices",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"states": "readInt32Vector"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributionSource": "readParcelable",
+                        "__parcelType": "android.content.AttributionSource"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiver": "readParcelable",
+                        "__parcelType": "com.android.modules.utils.SynchronousResultReceiver"
+                    }]
+                }
+            ],
+            "name": "getDevicesMatchingConnectionStates",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "device": "readParcelable",
+                        "__parcelType": "android.bluetooth.BluetoothDevice"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributionSource": "readParcelable",
+                        "__parcelType": "android.content.AttributionSource"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiver": "readParcelable",
+                        "__parcelType": "com.android.modules.utils.SynchronousResultReceiver"
+                    }]
+                }
+            ],
+            "name": "getConnectionState",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "device": "readParcelable",
+                        "__parcelType": "android.bluetooth.BluetoothDevice"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributionSource": "readParcelable",
+                        "__parcelType": "android.content.AttributionSource"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiver": "readParcelable",
+                        "__parcelType": "com.android.modules.utils.SynchronousResultReceiver"
+                    }]
+                }
+            ],
+            "name": "setActiveDevice",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributionSource": "readParcelable",
+                        "__parcelType": "android.content.AttributionSource"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiver": "readParcelable",
+                        "__parcelType": "com.android.modules.utils.SynchronousResultReceiver"
+                    }]
+                }
+            ],
+            "name": "getActiveDevices",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "device": "readParcelable",
+                        "__parcelType": "android.bluetooth.BluetoothDevice"
+                    }]
+                },
+                {"connectionPolicy": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributionSource": "readParcelable",
+                        "__parcelType": "android.content.AttributionSource"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiver": "readParcelable",
+                        "__parcelType": "com.android.modules.utils.SynchronousResultReceiver"
+                    }]
+                }
+            ],
+            "name": "setConnectionPolicy",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "device": "readParcelable",
+                        "__parcelType": "android.bluetooth.BluetoothDevice"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributionSource": "readParcelable",
+                        "__parcelType": "android.content.AttributionSource"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiver": "readParcelable",
+                        "__parcelType": "com.android.modules.utils.SynchronousResultReceiver"
+                    }]
+                }
+            ],
+            "name": "getConnectionPolicy",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"groupId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributionSource": "readParcelable",
+                        "__parcelType": "android.content.AttributionSource"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiver": "readParcelable",
+                        "__parcelType": "com.android.modules.utils.SynchronousResultReceiver"
+                    }]
+                }
+            ],
+            "name": "getConnectedGroupLeadDevice",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"groupId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "source": "readParcelable",
+                        "__parcelType": "android.content.AttributionSource"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiver": "readParcelable",
+                        "__parcelType": "com.android.modules.utils.SynchronousResultReceiver"
+                    }]
+                }
+            ],
+            "name": "getCodecStatus",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"groupId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "inputCodecConfig": "readParcelable",
+                        "__parcelType": "android.bluetooth.BluetoothLeAudioCodecConfig"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "outputCodecConfig": "readParcelable",
+                        "__parcelType": "android.bluetooth.BluetoothLeAudioCodecConfig"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "source": "readParcelable",
+                        "__parcelType": "android.content.AttributionSource"
+                    }]
+                }
+            ],
+            "name": "setCodecConfigPreference",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"callback": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributionSource": "readParcelable",
+                        "__parcelType": "android.content.AttributionSource"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiver": "readParcelable",
+                        "__parcelType": "com.android.modules.utils.SynchronousResultReceiver"
+                    }]
+                }
+            ],
+            "name": "registerCallback",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"callback": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributionSource": "readParcelable",
+                        "__parcelType": "android.content.AttributionSource"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiver": "readParcelable",
+                        "__parcelType": "com.android.modules.utils.SynchronousResultReceiver"
+                    }]
+                }
+            ],
+            "name": "unregisterCallback",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "userUuid": "readParcelable",
+                        "__parcelType": "android.os.ParcelUuid"
+                    }]
+                },
+                {"ccid": "readInt32"},
+                {"contextType": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributionSource": "readParcelable",
+                        "__parcelType": "android.content.AttributionSource"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiver": "readParcelable",
+                        "__parcelType": "com.android.modules.utils.SynchronousResultReceiver"
+                    }]
+                }
+            ],
+            "name": "setCcidInformation",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [
+                {"inCall": "readBool"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributionSource": "readParcelable",
+                        "__parcelType": "android.content.AttributionSource"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiver": "readParcelable",
+                        "__parcelType": "com.android.modules.utils.SynchronousResultReceiver"
+                    }]
+                }
+            ],
+            "name": "setInCall",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "device": "readParcelable",
+                        "__parcelType": "android.bluetooth.BluetoothDevice"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributionSource": "readParcelable",
+                        "__parcelType": "android.content.AttributionSource"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiver": "readParcelable",
+                        "__parcelType": "com.android.modules.utils.SynchronousResultReceiver"
+                    }]
+                }
+            ],
+            "name": "setInactiveForHfpHandover",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "device": "readParcelable",
+                        "__parcelType": "android.bluetooth.BluetoothDevice"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributionSource": "readParcelable",
+                        "__parcelType": "android.content.AttributionSource"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiver": "readParcelable",
+                        "__parcelType": "com.android.modules.utils.SynchronousResultReceiver"
+                    }]
+                }
+            ],
+            "name": "getGroupId",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 19,
+            "in": [
+                {"volume": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributionSource": "readParcelable",
+                        "__parcelType": "android.content.AttributionSource"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiver": "readParcelable",
+                        "__parcelType": "com.android.modules.utils.SynchronousResultReceiver"
+                    }]
+                }
+            ],
+            "name": "setVolume",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 20,
+            "in": [
+                {"group_id": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "device": "readParcelable",
+                        "__parcelType": "android.bluetooth.BluetoothDevice"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributionSource": "readParcelable",
+                        "__parcelType": "android.content.AttributionSource"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiver": "readParcelable",
+                        "__parcelType": "com.android.modules.utils.SynchronousResultReceiver"
+                    }]
+                }
+            ],
+            "name": "groupAddNode",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 21,
+            "in": [
+                {"group_id": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "device": "readParcelable",
+                        "__parcelType": "android.bluetooth.BluetoothDevice"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributionSource": "readParcelable",
+                        "__parcelType": "android.content.AttributionSource"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiver": "readParcelable",
+                        "__parcelType": "com.android.modules.utils.SynchronousResultReceiver"
+                    }]
+                }
+            ],
+            "name": "groupRemoveNode",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 22,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "device": "readParcelable",
+                        "__parcelType": "android.bluetooth.BluetoothDevice"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributionSource": "readParcelable",
+                        "__parcelType": "android.content.AttributionSource"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiver": "readParcelable",
+                        "__parcelType": "com.android.modules.utils.SynchronousResultReceiver"
+                    }]
+                }
+            ],
+            "name": "getAudioLocation",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 23,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributionSource": "readParcelable",
+                        "__parcelType": "android.content.AttributionSource"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiver": "readParcelable",
+                        "__parcelType": "com.android.modules.utils.SynchronousResultReceiver"
+                    }]
+                },
+                {"groupId": "readInt32"}
+            ],
+            "name": "isInbandRingtoneEnabled",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 24,
+            "in": [
+                {"callback": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributionSource": "readParcelable",
+                        "__parcelType": "android.content.AttributionSource"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiver": "readParcelable",
+                        "__parcelType": "com.android.modules.utils.SynchronousResultReceiver"
+                    }]
+                }
+            ],
+            "name": "registerLeBroadcastCallback",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 25,
+            "in": [
+                {"callback": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributionSource": "readParcelable",
+                        "__parcelType": "android.content.AttributionSource"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiver": "readParcelable",
+                        "__parcelType": "com.android.modules.utils.SynchronousResultReceiver"
+                    }]
+                }
+            ],
+            "name": "unregisterLeBroadcastCallback",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 26,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "broadcastSettings": "readParcelable",
+                        "__parcelType": "android.bluetooth.BluetoothLeBroadcastSettings"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributionSource": "readParcelable",
+                        "__parcelType": "android.content.AttributionSource"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiver": "readParcelable",
+                        "__parcelType": "com.android.modules.utils.SynchronousResultReceiver"
+                    }]
+                }
+            ],
+            "name": "startBroadcast",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 27,
+            "in": [
+                {"broadcastId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributionSource": "readParcelable",
+                        "__parcelType": "android.content.AttributionSource"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiver": "readParcelable",
+                        "__parcelType": "com.android.modules.utils.SynchronousResultReceiver"
+                    }]
+                }
+            ],
+            "name": "stopBroadcast",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 28,
+            "in": [
+                {"broadcastId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "broadcastSettings": "readParcelable",
+                        "__parcelType": "android.bluetooth.BluetoothLeBroadcastSettings"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributionSource": "readParcelable",
+                        "__parcelType": "android.content.AttributionSource"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiver": "readParcelable",
+                        "__parcelType": "com.android.modules.utils.SynchronousResultReceiver"
+                    }]
+                }
+            ],
+            "name": "updateBroadcast",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 29,
+            "in": [
+                {"broadcastId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributionSource": "readParcelable",
+                        "__parcelType": "android.content.AttributionSource"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiver": "readParcelable",
+                        "__parcelType": "com.android.modules.utils.SynchronousResultReceiver"
+                    }]
+                }
+            ],
+            "name": "isPlaying",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 30,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributionSource": "readParcelable",
+                        "__parcelType": "android.content.AttributionSource"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiver": "readParcelable",
+                        "__parcelType": "com.android.modules.utils.SynchronousResultReceiver"
+                    }]
+                }
+            ],
+            "name": "getAllBroadcastMetadata",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 31,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributionSource": "readParcelable",
+                        "__parcelType": "android.content.AttributionSource"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiver": "readParcelable",
+                        "__parcelType": "com.android.modules.utils.SynchronousResultReceiver"
+                    }]
+                }
+            ],
+            "name": "getMaximumNumberOfBroadcasts",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 32,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributionSource": "readParcelable",
+                        "__parcelType": "android.content.AttributionSource"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiver": "readParcelable",
+                        "__parcelType": "com.android.modules.utils.SynchronousResultReceiver"
+                    }]
+                }
+            ],
+            "name": "getMaximumStreamsPerBroadcast",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 33,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributionSource": "readParcelable",
+                        "__parcelType": "android.content.AttributionSource"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiver": "readParcelable",
+                        "__parcelType": "com.android.modules.utils.SynchronousResultReceiver"
+                    }]
+                }
+            ],
+            "name": "getMaximumSubgroupsPerBroadcast",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IBluetoothLeAudio",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

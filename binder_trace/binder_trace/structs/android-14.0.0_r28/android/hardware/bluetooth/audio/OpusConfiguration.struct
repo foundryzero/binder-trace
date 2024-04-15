@@ -1,0 +1,23 @@
+{
+    "produced_on": "2024-04-12T08:47:50.059884241Z",
+    "source_location": "",
+    "components": [
+        {"pcmBitDepth": "readByte"},
+        {"samplingFrequencyHz": "readInt32"},
+        {"frameDurationUs": "readInt32"},
+        {"octetsPerFrame": "readInt32"},
+        {"blocksPerSdu": "readByte"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "channelMode": "readParcelable",
+                "__parcelType": "android.hardware.bluetooth.audio.ChannelMode"
+            }]
+        }
+    ],
+    "full_name": "android.hardware.bluetooth.audio.OpusConfiguration",
+    "name": "OpusConfiguration",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

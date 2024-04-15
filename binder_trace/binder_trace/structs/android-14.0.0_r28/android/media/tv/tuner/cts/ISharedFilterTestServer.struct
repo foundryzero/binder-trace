@@ -1,0 +1,44 @@
+{
+    "produced_on": "2024-04-12T08:47:44.173759761Z",
+    "source_location": "",
+    "full_name": "android.media.tv.tuner.cts.ISharedFilterTestServer",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "acquireSharedFilterToken",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "closeFilter",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"token": "readString16"}],
+            "name": "freeSharedFilterToken",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"token": "readString16"}],
+            "name": "verifySharedFilter",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "ISharedFilterTestServer",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

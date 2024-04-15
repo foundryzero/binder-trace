@@ -1,0 +1,83 @@
+{
+    "produced_on": "2024-04-12T08:47:54.139091173Z",
+    "source_location": "",
+    "full_name": "android.hardware.radio.ims.media.IImsMediaSession",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"sessionListener": "readStrongBinder"}],
+            "name": "setListener",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "config": "readParcelable",
+                        "__parcelType": "android.hardware.radio.ims.media.RtpConfig"
+                    }]
+                }
+            ],
+            "name": "modifySession",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"dtmfDigit": "readChar"},
+                {"duration": "readInt32"}
+            ],
+            "name": "sendDtmf",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"dtmfDigit": "readChar"}],
+            "name": "startDtmf",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "stopDtmf",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{
+                "extensions": "readList",
+                "__parcelType": "android.hardware.radio.ims.media.RtpHeaderExtension"
+            }],
+            "name": "sendHeaderExtension",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "threshold": "readParcelable",
+                        "__parcelType": "android.hardware.radio.ims.media.MediaQualityThreshold"
+                    }]
+                }
+            ],
+            "name": "setMediaQualityThreshold",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IImsMediaSession",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

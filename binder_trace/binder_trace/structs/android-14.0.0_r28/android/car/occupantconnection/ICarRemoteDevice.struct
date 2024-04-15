@@ -1,0 +1,83 @@
+{
+    "produced_on": "2024-04-12T08:47:59.027018966Z",
+    "source_location": "",
+    "full_name": "android.car.occupantconnection.ICarRemoteDevice",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"packageName": "readString16"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "registerStateCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"packageName": "readString16"}],
+            "name": "unregisterStateCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"occupantZoneId": "readInt32"},
+                {"packageName": "readString16"}
+            ],
+            "name": "getEndpointPackageInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.PackageInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "occupantZone": "readParcelable",
+                        "__parcelType": "android.car.occupantconnection.CarOccupantZoneManager.OccupantZoneInfo"
+                    }]
+                },
+                {"powerOn": "readBool"}
+            ],
+            "name": "setOccupantZonePower",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "occupantZone": "readParcelable",
+                        "__parcelType": "android.car.occupantconnection.CarOccupantZoneManager.OccupantZoneInfo"
+                    }]
+                }
+            ],
+            "name": "isOccupantZonePowerOn",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "ICarRemoteDevice",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

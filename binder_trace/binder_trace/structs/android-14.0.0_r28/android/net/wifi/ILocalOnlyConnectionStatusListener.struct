@@ -1,0 +1,25 @@
+{
+    "produced_on": "2024-04-12T08:47:57.891031099Z",
+    "source_location": "",
+    "full_name": "android.net.wifi.ILocalOnlyConnectionStatusListener",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "wifiNetworkSpecifier": "readParcelable",
+                    "__parcelType": "android.net.wifi.WifiNetworkSpecifier"
+                }]
+            },
+            {"failureReason": "readInt32"}
+        ],
+        "name": "onConnectionStatus",
+        "oneWay": true,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "ILocalOnlyConnectionStatusListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

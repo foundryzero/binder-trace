@@ -1,0 +1,33 @@
+{
+    "produced_on": "2024-04-12T08:47:45.866223249Z",
+    "source_location": "",
+    "full_name": "android.speech.IRecognitionSupportCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "recognitionSupport": "readParcelable",
+                        "__parcelType": "android.speech.RecognitionSupport"
+                    }]
+                }
+            ],
+            "name": "onSupportResult",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"error": "readInt32"}],
+            "name": "onError",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IRecognitionSupportCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

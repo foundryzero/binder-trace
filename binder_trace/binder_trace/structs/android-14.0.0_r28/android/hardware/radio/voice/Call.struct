@@ -1,0 +1,45 @@
+{
+    "produced_on": "2024-04-12T08:47:54.331363261Z",
+    "source_location": "",
+    "components": [
+        {"PRESENTATION_ALLOWED": "readInt32"},
+        {"PRESENTATION_RESTRICTED": "readInt32"},
+        {"PRESENTATION_UNKNOWN": "readInt32"},
+        {"PRESENTATION_PAYPHONE": "readInt32"},
+        {"STATE_ACTIVE": "readInt32"},
+        {"STATE_HOLDING": "readInt32"},
+        {"STATE_DIALING": "readInt32"},
+        {"STATE_ALERTING": "readInt32"},
+        {"STATE_INCOMING": "readInt32"},
+        {"STATE_WAITING": "readInt32"},
+        {"state": "readInt32"},
+        {"index": "readInt32"},
+        {"toa": "readInt32"},
+        {"isMpty": "readBool"},
+        {"isMT": "readBool"},
+        {"als": "readByte"},
+        {"isVoice": "readBool"},
+        {"isVoicePrivacy": "readBool"},
+        {"number": "readString16"},
+        {"numberPresentation": "readInt32"},
+        {"name": "readString16"},
+        {"namePresentation": "readInt32"},
+        {
+            "uusInfo": "readParcelableVector",
+            "__parcelType": "android.hardware.radio.voice.UusInfo"
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "audioQuality": "readParcelable",
+                "__parcelType": "android.hardware.radio.voice.AudioQuality"
+            }]
+        },
+        {"forwardedNumber": "readString16"}
+    ],
+    "full_name": "android.hardware.radio.voice.Call",
+    "name": "Call",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

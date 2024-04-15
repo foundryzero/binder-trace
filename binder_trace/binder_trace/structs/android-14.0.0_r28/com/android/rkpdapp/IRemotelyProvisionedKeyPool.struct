@@ -1,0 +1,28 @@
+{
+    "produced_on": "2024-04-12T08:47:58.911588027Z",
+    "source_location": "",
+    "full_name": "com.android.rkpdapp.IRemotelyProvisionedKeyPool",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"clientUid": "readInt32"},
+            {"irpcId": "readString16"}
+        ],
+        "name": "getAttestationKey",
+        "oneWay": false,
+        "out": [
+            {"__exception": "readException"},
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "__return": "readParcelable",
+                    "__parcelType": "com.android.rkpdapp.RemotelyProvisionedKey"
+                }]
+            }
+        ]
+    }],
+    "name": "IRemotelyProvisionedKeyPool",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

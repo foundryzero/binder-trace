@@ -1,0 +1,48 @@
+{
+    "produced_on": "2024-04-12T08:47:51.257106106Z",
+    "source_location": "",
+    "full_name": "android.hardware.dumpstate.IDumpstateDevice",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {
+                    "fd": "readParcelableVector",
+                    "__parcelType": "android.hardware.dumpstate.ParcelFileDescriptor"
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "mode": "readParcelable",
+                        "__parcelType": "android.hardware.dumpstate.IDumpstateDevice.DumpstateMode"
+                    }]
+                },
+                {"timeoutMillis": "readInt64"}
+            ],
+            "name": "dumpstateBoard",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "getVerboseLoggingEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"enable": "readBool"}],
+            "name": "setVerboseLoggingEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IDumpstateDevice",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,73 @@
+{
+    "produced_on": "2024-04-12T08:47:57.349353245Z",
+    "source_location": "",
+    "full_name": "android.os.IStatsCompanionService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "statsdReady",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"timestampMs": "readInt64"}],
+            "name": "setAnomalyAlarm",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "cancelAnomalyAlarm",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"nextPullTimeMs": "readInt64"}],
+            "name": "setPullingAlarm",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "cancelPullingAlarm",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"timestampMs": "readInt64"}],
+            "name": "setAlarmForSubscriberTriggering",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "cancelAlarmForSubscriberTriggering",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"permission": "readString16"},
+                {"pid": "readInt32"},
+                {"uid": "readInt32"}
+            ],
+            "name": "checkPermission",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "IStatsCompanionService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

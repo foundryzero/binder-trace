@@ -1,0 +1,69 @@
+{
+    "produced_on": "2024-04-12T08:47:55.770837159Z",
+    "source_location": "",
+    "components": [
+        {"frequency": "readInt64"},
+        {"endFrequency": "readInt64"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "modulation": "readParcelable",
+                "__parcelType": "android.hardware.tv.tuner.FrontendDvbcModulation"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "fec": "readParcelable",
+                "__parcelType": "android.hardware.tv.tuner.FrontendInnerFec"
+            }]
+        },
+        {"symbolRate": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "outerFec": "readParcelable",
+                "__parcelType": "android.hardware.tv.tuner.FrontendDvbcOuterFec"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "annex": "readParcelable",
+                "__parcelType": "android.hardware.tv.tuner.FrontendDvbcAnnex"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "inversion": "readParcelable",
+                "__parcelType": "android.hardware.tv.tuner.FrontendSpectralInversion"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "interleaveMode": "readParcelable",
+                "__parcelType": "android.hardware.tv.tuner.FrontendCableTimeInterleaveMode"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "bandwidth": "readParcelable",
+                "__parcelType": "android.hardware.tv.tuner.FrontendDvbcBandwidth"
+            }]
+        }
+    ],
+    "full_name": "android.hardware.tv.tuner.FrontendDvbcSettings",
+    "name": "FrontendDvbcSettings",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

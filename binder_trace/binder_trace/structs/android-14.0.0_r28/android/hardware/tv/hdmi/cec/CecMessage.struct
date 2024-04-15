@@ -1,0 +1,28 @@
+{
+    "produced_on": "2024-04-12T08:47:54.870355511Z",
+    "source_location": "",
+    "components": [
+        {"MAX_MESSAGE_BODY_LENGTH": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "initiator": "readParcelable",
+                "__parcelType": "android.hardware.tv.hdmi.cec.CecLogicalAddress"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "destination": "readParcelable",
+                "__parcelType": "android.hardware.tv.hdmi.cec.CecLogicalAddress"
+            }]
+        },
+        {"body": "readByteVector"}
+    ],
+    "full_name": "android.hardware.tv.hdmi.cec.CecMessage",
+    "name": "CecMessage",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

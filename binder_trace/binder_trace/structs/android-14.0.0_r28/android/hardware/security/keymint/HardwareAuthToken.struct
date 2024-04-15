@@ -1,0 +1,30 @@
+{
+    "produced_on": "2024-04-12T08:47:54.540426583Z",
+    "source_location": "",
+    "components": [
+        {"challenge": "readInt64"},
+        {"userId": "readInt64"},
+        {"authenticatorId": "readInt64"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "authenticatorType": "readParcelable",
+                "__parcelType": "android.hardware.security.keymint.HardwareAuthenticatorType"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "timestamp": "readParcelable",
+                "__parcelType": "android.hardware.security.secureclock.Timestamp"
+            }]
+        },
+        {"mac": "readByteVector"}
+    ],
+    "full_name": "android.hardware.security.keymint.HardwareAuthToken",
+    "name": "HardwareAuthToken",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

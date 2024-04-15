@@ -1,0 +1,59 @@
+{
+    "produced_on": "2024-04-12T08:47:59.027970385Z",
+    "source_location": "",
+    "full_name": "android.car.occupantconnection.IConnectionRequestCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiverZone": "readParcelable",
+                        "__parcelType": "android.car.occupantconnection.CarOccupantZoneManager.OccupantZoneInfo"
+                    }]
+                }
+            ],
+            "name": "onConnected",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiverZone": "readParcelable",
+                        "__parcelType": "android.car.occupantconnection.CarOccupantZoneManager.OccupantZoneInfo"
+                    }]
+                },
+                {"connectionError": "readInt32"}
+            ],
+            "name": "onFailed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "receiverZone": "readParcelable",
+                        "__parcelType": "android.car.occupantconnection.CarOccupantZoneManager.OccupantZoneInfo"
+                    }]
+                }
+            ],
+            "name": "onDisconnected",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IConnectionRequestCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

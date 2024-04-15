@@ -1,0 +1,64 @@
+{
+    "produced_on": "2024-04-12T08:47:59.188873688Z",
+    "source_location": "",
+    "full_name": "android.automotive.computepipe.runner.IPipeDebugger",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.automotive.computepipe.runner.PipeProfilingType"
+                    }]
+                }
+            ],
+            "name": "setPipeProfileOptions",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "startPipeProfiling",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "stopPipeProfiling",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "getPipeProfilingInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.automotive.computepipe.runner.ProfilingData"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "releaseDebugger",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IPipeDebugger",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

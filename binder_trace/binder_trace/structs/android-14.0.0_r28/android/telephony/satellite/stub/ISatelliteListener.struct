@@ -1,0 +1,73 @@
+{
+    "produced_on": "2024-04-12T08:47:47.000304259Z",
+    "source_location": "",
+    "full_name": "android.telephony.satellite.stub.ISatelliteListener",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"provisioned": "readBool"}],
+            "name": "onSatelliteProvisionStateChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "datagram": "readParcelable",
+                        "__parcelType": "android.telephony.satellite.stub.SatelliteDatagram"
+                    }]
+                },
+                {"pendingCount": "readInt32"}
+            ],
+            "name": "onSatelliteDatagramReceived",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "onPendingDatagrams",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "pointingInfo": "readParcelable",
+                        "__parcelType": "android.telephony.satellite.stub.PointingInfo"
+                    }]
+                }
+            ],
+            "name": "onSatellitePositionChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "state": "readParcelable",
+                        "__parcelType": "android.telephony.satellite.stub.SatelliteModemState"
+                    }]
+                }
+            ],
+            "name": "onSatelliteModemStateChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISatelliteListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,79 @@
+{
+    "produced_on": "2024-04-12T08:47:45.540080738Z",
+    "source_location": "",
+    "full_name": "android.os.ISystemConfig",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getDisabledUntilUsedPreinstalledCarrierApps",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "String"
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "getDisabledUntilUsedPreinstalledCarrierAssociatedApps",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readMap"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getDisabledUntilUsedPreinstalledCarrierAssociatedAppEntries",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readMap"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"permissionName": "readString16"}],
+            "name": "getSystemPermissionUids",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"packageName": "readString16"}],
+            "name": "getEnabledComponentOverrides",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.content.ComponentName"
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "getDefaultVrComponents",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.content.ComponentName"
+                }
+            ]
+        }
+    ],
+    "name": "ISystemConfig",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

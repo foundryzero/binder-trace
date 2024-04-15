@@ -1,0 +1,40 @@
+{
+    "produced_on": "2024-04-12T08:47:54.225007773Z",
+    "source_location": "",
+    "components": [
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "accessNetwork": "readParcelable",
+                "__parcelType": "android.hardware.radio.AccessNetwork"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "regState": "readParcelable",
+                "__parcelType": "android.hardware.radio.network.RegState"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "emcDomain": "readParcelable",
+                "__parcelType": "android.hardware.radio.network.Domain"
+            }]
+        },
+        {"isVopsSupported": "readBool"},
+        {"isEmcBearerSupported": "readBool"},
+        {"nwProvidedEmc": "readByte"},
+        {"nwProvidedEmf": "readByte"},
+        {"mcc": "readString16"},
+        {"mnc": "readString16"}
+    ],
+    "full_name": "android.hardware.radio.network.EmergencyRegResult",
+    "name": "EmergencyRegResult",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

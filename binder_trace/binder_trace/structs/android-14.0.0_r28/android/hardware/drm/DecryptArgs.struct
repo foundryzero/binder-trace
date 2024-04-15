@@ -1,0 +1,50 @@
+{
+    "produced_on": "2024-04-12T08:47:51.210625791Z",
+    "source_location": "",
+    "components": [
+        {"secure": "readBool"},
+        {"keyId": "readByteVector"},
+        {"iv": "readByteVector"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "mode": "readParcelable",
+                "__parcelType": "android.hardware.drm.Mode"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "pattern": "readParcelable",
+                "__parcelType": "android.hardware.drm.Pattern"
+            }]
+        },
+        {
+            "subSamples": "readParcelableVector",
+            "__parcelType": "android.hardware.drm.SubSample"
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "source": "readParcelable",
+                "__parcelType": "android.hardware.drm.SharedBuffer"
+            }]
+        },
+        {"offset": "readInt64"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "destination": "readParcelable",
+                "__parcelType": "android.hardware.drm.DestinationBuffer"
+            }]
+        }
+    ],
+    "full_name": "android.hardware.drm.DecryptArgs",
+    "name": "DecryptArgs",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

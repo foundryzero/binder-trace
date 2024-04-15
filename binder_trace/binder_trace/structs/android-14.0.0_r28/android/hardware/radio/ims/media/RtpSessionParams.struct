@@ -1,0 +1,29 @@
+{
+    "produced_on": "2024-04-12T08:47:54.151055341Z",
+    "source_location": "",
+    "components": [
+        {"pTimeMillis": "readByte"},
+        {"maxPtimeMillis": "readInt32"},
+        {"dscp": "readByte"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "dtmfParams": "readParcelable",
+                "__parcelType": "android.hardware.radio.ims.media.DtmfParams"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "codecParams": "readParcelable",
+                "__parcelType": "android.hardware.radio.ims.media.CodecParams"
+            }]
+        }
+    ],
+    "full_name": "android.hardware.radio.ims.media.RtpSessionParams",
+    "name": "RtpSessionParams",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

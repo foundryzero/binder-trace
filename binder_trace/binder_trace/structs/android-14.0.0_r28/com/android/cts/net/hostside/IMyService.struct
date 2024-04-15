@@ -1,0 +1,103 @@
+{
+    "produced_on": "2024-04-12T08:47:57.851243628Z",
+    "source_location": "",
+    "full_name": "com.android.cts.net.hostside.IMyService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "registerBroadcastReceiver",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"receiverName": "readString16"},
+                {"action": "readString16"}
+            ],
+            "name": "getCounters",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "checkNetworkStatus",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "getRestrictBackgroundStatus",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"notificationId": "readInt32"},
+                {"notificationType": "readString16"}
+            ],
+            "name": "sendNotification",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "com.android.cts.net.hostside.NetworkRequest"
+                    }]
+                },
+                {"cb": "readStrongBinder"}
+            ],
+            "name": "registerNetworkCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "unregisterNetworkCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "jobInfo": "readParcelable",
+                        "__parcelType": "android.app.job.JobInfo"
+                    }]
+                }
+            ],
+            "name": "scheduleJob",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        }
+    ],
+    "name": "IMyService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

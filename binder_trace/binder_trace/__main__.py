@@ -43,7 +43,7 @@ def main():
         "--android-version",
         const="all",
         nargs="?",
-        choices=["9", "10", "11", "12", "13"],
+        choices=["9", "10", "11", "12", "13", "14"],
         default="13",
         help="Android version structs to use",
     )
@@ -63,6 +63,7 @@ def main():
         "11": "android11",
         "12": "android-12.1.0_r27",
         "13": "android13.0.0-r_49",
+        "14": "android-14.0.0_r28",
     }
 
     base_dir = path.dirname(path.abspath(__file__))

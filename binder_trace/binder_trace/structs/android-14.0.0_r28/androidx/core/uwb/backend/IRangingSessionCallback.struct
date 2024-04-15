@@ -1,0 +1,67 @@
+{
+    "produced_on": "2024-04-12T08:47:57.663874118Z",
+    "source_location": "",
+    "full_name": "androidx.core.uwb.backend.IRangingSessionCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "device": "readParcelable",
+                        "__parcelType": "androidx.core.uwb.backend.UwbDevice"
+                    }]
+                }
+            ],
+            "name": "onRangingInitialized",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "device": "readParcelable",
+                        "__parcelType": "androidx.core.uwb.backend.UwbDevice"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "position": "readParcelable",
+                        "__parcelType": "androidx.core.uwb.backend.RangingPosition"
+                    }]
+                }
+            ],
+            "name": "onRangingResult",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "device": "readParcelable",
+                        "__parcelType": "androidx.core.uwb.backend.UwbDevice"
+                    }]
+                },
+                {"reason": "readInt32"}
+            ],
+            "name": "onRangingSuspended",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IRangingSessionCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

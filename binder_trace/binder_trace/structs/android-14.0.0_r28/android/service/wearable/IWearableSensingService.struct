@@ -1,0 +1,124 @@
+{
+    "produced_on": "2024-04-12T08:47:45.856340874Z",
+    "source_location": "",
+    "full_name": "android.service.wearable.IWearableSensingService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "parcelFileDescriptor": "readParcelable",
+                        "__parcelType": "android.service.wearable.ParcelFileDescriptor"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callback": "readParcelable",
+                        "__parcelType": "android.os.RemoteCallback"
+                    }]
+                }
+            ],
+            "name": "provideDataStream",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "data": "readParcelable",
+                        "__parcelType": "android.os.PersistableBundle"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sharedMemory": "readParcelable",
+                        "__parcelType": "android.os.SharedMemory"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callback": "readParcelable",
+                        "__parcelType": "android.os.RemoteCallback"
+                    }]
+                }
+            ],
+            "name": "provideData",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.app.ambientcontext.AmbientContextEventRequest"
+                    }]
+                },
+                {"packageName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "detectionResultCallback": "readParcelable",
+                        "__parcelType": "android.os.RemoteCallback"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "statusCallback": "readParcelable",
+                        "__parcelType": "android.os.RemoteCallback"
+                    }]
+                }
+            ],
+            "name": "startDetection",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"packageName": "readString16"}],
+            "name": "stopDetection",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"eventTypes": "readInt32Vector"},
+                {"packageName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callback": "readParcelable",
+                        "__parcelType": "android.os.RemoteCallback"
+                    }]
+                }
+            ],
+            "name": "queryServiceStatus",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IWearableSensingService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

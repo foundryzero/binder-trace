@@ -1,0 +1,475 @@
+{
+    "produced_on": "2024-04-12T08:47:45.989293765Z",
+    "source_location": "",
+    "full_name": "android.view.accessibility.IAccessibilityManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"userId": "readInt32"}],
+            "name": "interrupt",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "uiEvent": "readParcelable",
+                        "__parcelType": "android.view.accessibility.AccessibilityEvent"
+                    }]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "sendAccessibilityEvent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"client": "readStrongBinder"},
+                {"userId": "readInt32"}
+            ],
+            "name": "addClient",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"client": "readStrongBinder"},
+                {"userId": "readInt32"}
+            ],
+            "name": "removeClient",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"userId": "readInt32"}],
+            "name": "getInstalledAccessibilityServiceList",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.accessibilityservice.AccessibilityServiceInfo"
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"feedbackType": "readInt32"},
+                {"userId": "readInt32"}
+            ],
+            "name": "getEnabledAccessibilityServiceList",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.accessibilityservice.AccessibilityServiceInfo"
+                }
+            ]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"windowToken": "readStrongBinder"},
+                {"leashToken": "readStrongBinder"},
+                {"connection": "readStrongBinder"},
+                {"packageName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "addAccessibilityInteractionConnection",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [{"windowToken": "readStrongBinder"}],
+            "name": "removeAccessibilityInteractionConnection",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [{"connection": "readStrongBinder"}],
+            "name": "setPictureInPictureActionReplacingConnection",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"owner": "readStrongBinder"},
+                {"client": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "info": "readParcelable",
+                        "__parcelType": "android.accessibilityservice.AccessibilityServiceInfo"
+                    }]
+                },
+                {"userId": "readInt32"},
+                {"flags": "readInt32"}
+            ],
+            "name": "registerUiTestAutomationService",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [{"client": "readStrongBinder"}],
+            "name": "unregisterUiTestAutomationService",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"windowId": "readInt32"},
+                {"userId": "readInt32"}
+            ],
+            "name": "getWindowToken",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"displayId": "readInt32"},
+                {"targetName": "readString16"}
+            ],
+            "name": "notifyAccessibilityButtonClicked",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [{"available": "readBool"}],
+            "name": "notifyAccessibilityButtonVisibilityChanged",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [{"targetName": "readString16"}],
+            "name": "performAccessibilityShortcut",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [{"shortcutType": "readInt32"}],
+            "name": "getAccessibilityShortcutTargets",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "String"
+                }
+            ]
+        },
+        {
+            "code": 17,
+            "in": [{"gestureKeyCode": "readInt32"}],
+            "name": "sendFingerprintGesture",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 18,
+            "in": [{"windowToken": "readStrongBinder"}],
+            "name": "getAccessibilityWindowId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 19,
+            "in": [],
+            "name": "getRecommendedTimeoutMillis",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 20,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "action": "readParcelable",
+                        "__parcelType": "android.app.RemoteAction"
+                    }]
+                },
+                {"actionId": "readInt32"}
+            ],
+            "name": "registerSystemAction",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 21,
+            "in": [{"actionId": "readInt32"}],
+            "name": "unregisterSystemAction",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 22,
+            "in": [{"connection": "readStrongBinder"}],
+            "name": "setWindowMagnificationConnection",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 23,
+            "in": [
+                {"host": "readStrongBinder"},
+                {"embedded": "readStrongBinder"}
+            ],
+            "name": "associateEmbeddedHierarchy",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 24,
+            "in": [{"token": "readStrongBinder"}],
+            "name": "disassociateEmbeddedHierarchy",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 25,
+            "in": [],
+            "name": "getFocusStrokeWidth",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 26,
+            "in": [],
+            "name": "getFocusColor",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 27,
+            "in": [],
+            "name": "isAudioDescriptionByDefaultEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 28,
+            "in": [
+                {"isEnabled": "readBool"},
+                {"userId": "readInt32"}
+            ],
+            "name": "setSystemAudioCaptioningEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 29,
+            "in": [{"userId": "readInt32"}],
+            "name": "isSystemAudioCaptioningUiEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 30,
+            "in": [
+                {"isEnabled": "readBool"},
+                {"userId": "readInt32"}
+            ],
+            "name": "setSystemAudioCaptioningUiEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 31,
+            "in": [
+                {"displayId": "readInt32"},
+                {"windowId": "readInt32"},
+                {"userId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributes": "readParcelable",
+                        "__parcelType": "android.view.accessibility.AccessibilityWindowAttributes"
+                    }]
+                }
+            ],
+            "name": "setAccessibilityWindowAttributes",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 32,
+            "in": [
+                {"proxy": "readStrongBinder"},
+                {"displayId": "readInt32"}
+            ],
+            "name": "registerProxyForDisplay",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 33,
+            "in": [{"displayId": "readInt32"}],
+            "name": "unregisterProxyForDisplay",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 34,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "event": "readParcelable",
+                        "__parcelType": "android.view.InputEvent"
+                    }]
+                }
+            ],
+            "name": "injectInputEventToInputFilter",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 35,
+            "in": [
+                {"opPkg": "readString16"},
+                {"reason": "readInt32"},
+                {"token": "readStrongBinder"}
+            ],
+            "name": "startFlashNotificationSequence",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 36,
+            "in": [{"opPkg": "readString16"}],
+            "name": "stopFlashNotificationSequence",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 37,
+            "in": [
+                {"opPkg": "readString16"},
+                {"reason": "readInt32"},
+                {"reasonPkg": "readString16"}
+            ],
+            "name": "startFlashNotificationEvent",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 38,
+            "in": [
+                {"packageName": "readString16"},
+                {"uid": "readInt32"},
+                {"userId": "readInt32"}
+            ],
+            "name": "isAccessibilityTargetAllowed",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 39,
+            "in": [
+                {"packageName": "readString16"},
+                {"uid": "readInt32"},
+                {"userId": "readInt32"}
+            ],
+            "name": "sendRestrictedDialogIntent",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 40,
+            "in": [{"windowId": "readInt32"}],
+            "name": "getWindowTransformationSpec",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.view.accessibility.IAccessibilityManager.WindowTransformationSpec"
+                    }]
+                }
+            ]
+        }
+    ],
+    "name": "IAccessibilityManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,30 @@
+{
+    "produced_on": "2024-04-12T08:47:57.619008094Z",
+    "source_location": "",
+    "full_name": "android.bluetooth.IBluetoothPreferredAudioProfilesCallback",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "device": "readParcelable",
+                    "__parcelType": "android.bluetooth.BluetoothDevice"
+                }]
+            },
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{"preferredAudioProfiles": "readBundle"}]
+            },
+            {"status": "readInt32"}
+        ],
+        "name": "onPreferredAudioProfilesChanged",
+        "oneWay": true,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "IBluetoothPreferredAudioProfilesCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

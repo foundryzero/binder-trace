@@ -1,0 +1,47 @@
+{
+    "produced_on": "2024-04-12T08:47:48.355843295Z",
+    "source_location": "",
+    "full_name": "android.hardware.audio.core.IBluetoothA2dp",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "isEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"enabled": "readBool"}],
+            "name": "setEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "supportsOffloadReconfiguration",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{
+                "parameters": "readParcelableVector",
+                "__parcelType": "android.hardware.audio.core.VendorParameter"
+            }],
+            "name": "reconfigureOffload",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IBluetoothA2dp",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

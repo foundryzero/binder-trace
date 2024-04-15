@@ -1,0 +1,30 @@
+{
+    "produced_on": "2024-04-12T08:47:54.135130464Z",
+    "source_location": "",
+    "components": [
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "bandwidth": "readParcelable",
+                "__parcelType": "android.hardware.radio.ims.media.EvsBandwidth"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "evsMode": "readParcelable",
+                "__parcelType": "android.hardware.radio.ims.media.EvsMode"
+            }]
+        },
+        {"channelAwareMode": "readByte"},
+        {"useHeaderFullOnly": "readBool"},
+        {"useEvsModeSwitch": "readBool"},
+        {"codecModeRequest": "readByte"}
+    ],
+    "full_name": "android.hardware.radio.ims.media.EvsParams",
+    "name": "EvsParams",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

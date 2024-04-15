@@ -1,0 +1,459 @@
+{
+    "produced_on": "2024-04-12T08:47:54.306222570Z",
+    "source_location": "",
+    "full_name": "android.hardware.radio.sim.IRadioSim",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"serial": "readInt32"}],
+            "name": "areUiccApplicationsEnabled",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"serial": "readInt32"},
+                {"oldPin2": "readString16"},
+                {"newPin2": "readString16"},
+                {"aid": "readString16"}
+            ],
+            "name": "changeIccPin2ForApp",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"serial": "readInt32"},
+                {"oldPin": "readString16"},
+                {"newPin": "readString16"},
+                {"aid": "readString16"}
+            ],
+            "name": "changeIccPinForApp",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"serial": "readInt32"},
+                {"enable": "readBool"}
+            ],
+            "name": "enableUiccApplications",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"serial": "readInt32"}],
+            "name": "getAllowedCarriers",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"serial": "readInt32"}],
+            "name": "getCdmaSubscription",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"serial": "readInt32"}],
+            "name": "getCdmaSubscriptionSource",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"serial": "readInt32"},
+                {"facility": "readString16"},
+                {"password": "readString16"},
+                {"serviceClass": "readInt32"},
+                {"appId": "readString16"}
+            ],
+            "name": "getFacilityLockForApp",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [{"serial": "readInt32"}],
+            "name": "getIccCardStatus",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"serial": "readInt32"},
+                {"aid": "readString16"}
+            ],
+            "name": "getImsiForApp",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [{"serial": "readInt32"}],
+            "name": "getSimPhonebookCapacity",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [{"serial": "readInt32"}],
+            "name": "getSimPhonebookRecords",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"serial": "readInt32"},
+                {"channelId": "readInt32"}
+            ],
+            "name": "iccCloseLogicalChannel",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "iccIo": "readParcelable",
+                        "__parcelType": "android.hardware.radio.sim.IccIo"
+                    }]
+                }
+            ],
+            "name": "iccIoForApp",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"serial": "readInt32"},
+                {"aid": "readString16"},
+                {"p2": "readInt32"}
+            ],
+            "name": "iccOpenLogicalChannel",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "message": "readParcelable",
+                        "__parcelType": "android.hardware.radio.sim.SimApdu"
+                    }]
+                }
+            ],
+            "name": "iccTransmitApduBasicChannel",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "message": "readParcelable",
+                        "__parcelType": "android.hardware.radio.sim.SimApdu"
+                    }]
+                }
+            ],
+            "name": "iccTransmitApduLogicalChannel",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [{"serial": "readInt32"}],
+            "name": "reportStkServiceIsRunning",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 19,
+            "in": [
+                {"serial": "readInt32"},
+                {"authContext": "readInt32"},
+                {"authData": "readString16"},
+                {"aid": "readString16"}
+            ],
+            "name": "requestIccSimAuthentication",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 20,
+            "in": [],
+            "name": "responseAcknowledgement",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 21,
+            "in": [
+                {"serial": "readInt32"},
+                {"contents": "readString16"}
+            ],
+            "name": "sendEnvelope",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 22,
+            "in": [
+                {"serial": "readInt32"},
+                {"contents": "readString16"}
+            ],
+            "name": "sendEnvelopeWithStatus",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 23,
+            "in": [
+                {"serial": "readInt32"},
+                {"contents": "readString16"}
+            ],
+            "name": "sendTerminalResponseToSim",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 24,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "carriers": "readParcelable",
+                        "__parcelType": "android.hardware.radio.sim.CarrierRestrictions"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "multiSimPolicy": "readParcelable",
+                        "__parcelType": "android.hardware.radio.sim.SimLockMultiSimPolicy"
+                    }]
+                }
+            ],
+            "name": "setAllowedCarriers",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 25,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "imsiEncryptionInfo": "readParcelable",
+                        "__parcelType": "android.hardware.radio.sim.ImsiEncryptionInfo"
+                    }]
+                }
+            ],
+            "name": "setCarrierInfoForImsiEncryption",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 26,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "cdmaSub": "readParcelable",
+                        "__parcelType": "android.hardware.radio.sim.CdmaSubscriptionSource"
+                    }]
+                }
+            ],
+            "name": "setCdmaSubscriptionSource",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 27,
+            "in": [
+                {"serial": "readInt32"},
+                {"facility": "readString16"},
+                {"lockState": "readBool"},
+                {"password": "readString16"},
+                {"serviceClass": "readInt32"},
+                {"appId": "readString16"}
+            ],
+            "name": "setFacilityLockForApp",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 28,
+            "in": [
+                {"radioSimResponse": "readStrongBinder"},
+                {"radioSimIndication": "readStrongBinder"}
+            ],
+            "name": "setResponseFunctions",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 29,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "powerUp": "readParcelable",
+                        "__parcelType": "android.hardware.radio.sim.CardPowerState"
+                    }]
+                }
+            ],
+            "name": "setSimCardPower",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 30,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "uiccSub": "readParcelable",
+                        "__parcelType": "android.hardware.radio.sim.SelectUiccSub"
+                    }]
+                }
+            ],
+            "name": "setUiccSubscription",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 31,
+            "in": [
+                {"serial": "readInt32"},
+                {"pin2": "readString16"},
+                {"aid": "readString16"}
+            ],
+            "name": "supplyIccPin2ForApp",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 32,
+            "in": [
+                {"serial": "readInt32"},
+                {"pin": "readString16"},
+                {"aid": "readString16"}
+            ],
+            "name": "supplyIccPinForApp",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 33,
+            "in": [
+                {"serial": "readInt32"},
+                {"puk2": "readString16"},
+                {"pin2": "readString16"},
+                {"aid": "readString16"}
+            ],
+            "name": "supplyIccPuk2ForApp",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 34,
+            "in": [
+                {"serial": "readInt32"},
+                {"puk": "readString16"},
+                {"pin": "readString16"},
+                {"aid": "readString16"}
+            ],
+            "name": "supplyIccPukForApp",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 35,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "persoType": "readParcelable",
+                        "__parcelType": "android.hardware.radio.sim.PersoSubstate"
+                    }]
+                },
+                {"controlKey": "readString16"}
+            ],
+            "name": "supplySimDepersonalization",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 36,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "recordInfo": "readParcelable",
+                        "__parcelType": "android.hardware.radio.sim.PhonebookRecordInfo"
+                    }]
+                }
+            ],
+            "name": "updateSimPhonebookRecords",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 37,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sessionInfo": "readParcelable",
+                        "__parcelType": "android.hardware.radio.sim.SessionInfo"
+                    }]
+                }
+            ],
+            "name": "iccCloseLogicalChannelWithSessionInfo",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IRadioSim",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,28 @@
+{
+    "produced_on": "2024-04-12T08:47:46.227224545Z",
+    "source_location": "",
+    "full_name": "com.android.internal.compat.IOverrideValidator",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"changeId": "readInt64"},
+            {"packageName": "readString16"}
+        ],
+        "name": "getOverrideAllowedState",
+        "oneWay": false,
+        "out": [
+            {"__exception": "readException"},
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "__return": "readParcelable",
+                    "__parcelType": "com.android.internal.compat.OverrideAllowedState"
+                }]
+            }
+        ]
+    }],
+    "name": "IOverrideValidator",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

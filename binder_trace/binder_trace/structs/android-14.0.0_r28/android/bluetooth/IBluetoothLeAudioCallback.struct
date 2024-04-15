@@ -1,0 +1,71 @@
+{
+    "produced_on": "2024-04-12T08:47:57.573189762Z",
+    "source_location": "",
+    "full_name": "android.bluetooth.IBluetoothLeAudioCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"groupId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "status": "readParcelable",
+                        "__parcelType": "android.bluetooth.BluetoothLeAudioCodecStatus"
+                    }]
+                }
+            ],
+            "name": "onCodecConfigChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "device": "readParcelable",
+                        "__parcelType": "android.bluetooth.BluetoothDevice"
+                    }]
+                },
+                {"groupId": "readInt32"}
+            ],
+            "name": "onGroupNodeAdded",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "device": "readParcelable",
+                        "__parcelType": "android.bluetooth.BluetoothDevice"
+                    }]
+                },
+                {"groupId": "readInt32"}
+            ],
+            "name": "onGroupNodeRemoved",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"groupId": "readInt32"},
+                {"groupStatus": "readInt32"}
+            ],
+            "name": "onGroupStatusChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IBluetoothLeAudioCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

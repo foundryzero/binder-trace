@@ -1,0 +1,85 @@
+{
+    "produced_on": "2024-04-12T08:47:52.063102503Z",
+    "source_location": "",
+    "full_name": "android.hardware.graphics.composer3.IComposerCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"display": "readInt64"},
+                {"connected": "readBool"}
+            ],
+            "name": "onHotplug",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"display": "readInt64"}],
+            "name": "onRefresh",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"display": "readInt64"}],
+            "name": "onSeamlessPossible",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"display": "readInt64"},
+                {"timestamp": "readInt64"},
+                {"vsyncPeriodNanos": "readInt32"}
+            ],
+            "name": "onVsync",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"display": "readInt64"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "updatedTimeline": "readParcelable",
+                        "__parcelType": "android.hardware.graphics.composer3.VsyncPeriodChangeTimeline"
+                    }]
+                }
+            ],
+            "name": "onVsyncPeriodTimingChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"display": "readInt64"}],
+            "name": "onVsyncIdle",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "data": "readParcelable",
+                        "__parcelType": "android.hardware.graphics.composer3.RefreshRateChangedDebugData"
+                    }]
+                }
+            ],
+            "name": "onRefreshRateChangedDebug",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IComposerCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

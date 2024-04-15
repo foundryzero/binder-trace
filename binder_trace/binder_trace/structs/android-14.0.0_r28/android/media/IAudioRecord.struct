@@ -1,0 +1,64 @@
+{
+    "produced_on": "2024-04-12T08:47:44.362858079Z",
+    "source_location": "",
+    "full_name": "android.media.IAudioRecord",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"event": "readInt32"},
+                {"triggerSession": "readInt32"}
+            ],
+            "name": "start",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "stop",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getActiveMicrophones",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "activeMicrophones": "readParcelableVector",
+                    "__parcelType": "android.media.MicrophoneInfoFw"
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"direction": "readInt32"}],
+            "name": "setPreferredMicrophoneDirection",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"zoom": "readFloat"}],
+            "name": "setPreferredMicrophoneFieldDimension",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"sharedAudioPackageName": "readString16"},
+                {"sharedAudioStartMs": "readInt64"}
+            ],
+            "name": "shareAudioHistory",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IAudioRecord",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,51 @@
+{
+    "produced_on": "2024-04-12T08:47:52.747847636Z",
+    "source_location": "",
+    "full_name": "android.hardware.neuralnetworks.IExecution",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"deadlineNs": "readInt64"}],
+            "name": "executeSynchronously",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.neuralnetworks.ExecutionResult"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {
+                    "waitFor": "readParcelableVector",
+                    "__parcelType": "android.hardware.neuralnetworks.ParcelFileDescriptor"
+                },
+                {"deadlineNs": "readInt64"},
+                {"durationNs": "readInt64"}
+            ],
+            "name": "executeFenced",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.neuralnetworks.FencedExecutionResult"
+                    }]
+                }
+            ]
+        }
+    ],
+    "name": "IExecution",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

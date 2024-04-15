@@ -1,0 +1,41 @@
+{
+    "produced_on": "2024-04-12T08:47:56.014706635Z",
+    "source_location": "",
+    "full_name": "android.hardware.uwb.IUwbClientCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"data": "readByteVector"}],
+            "name": "onUciMessage",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "event": "readParcelable",
+                        "__parcelType": "android.hardware.uwb.UwbEvent"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "status": "readParcelable",
+                        "__parcelType": "android.hardware.uwb.UwbStatus"
+                    }]
+                }
+            ],
+            "name": "onHalEvent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IUwbClientCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

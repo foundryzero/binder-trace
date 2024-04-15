@@ -1,0 +1,58 @@
+{
+    "produced_on": "2024-04-12T08:47:57.314298427Z",
+    "source_location": "",
+    "full_name": "com.android.sdksandbox.IRequestSurfacePackageFromSdkCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "surfacePackage": "readParcelable",
+                        "__parcelType": "android.view.SurfaceControlViewHost.SurfacePackage"
+                    }]
+                },
+                {"surfacePackageId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"params": "readBundle"}]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sandboxLatencyInfo": "readParcelable",
+                        "__parcelType": "com.android.sdksandbox.SandboxLatencyInfo"
+                    }]
+                }
+            ],
+            "name": "onSurfacePackageReady",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"errorCode": "readInt32"},
+                {"errorMessage": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sandboxLatencyInfo": "readParcelable",
+                        "__parcelType": "com.android.sdksandbox.SandboxLatencyInfo"
+                    }]
+                }
+            ],
+            "name": "onSurfacePackageError",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IRequestSurfacePackageFromSdkCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

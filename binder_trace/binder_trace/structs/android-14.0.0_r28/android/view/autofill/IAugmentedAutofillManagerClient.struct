@@ -1,0 +1,145 @@
+{
+    "produced_on": "2024-04-12T08:47:46.004734193Z",
+    "source_location": "",
+    "full_name": "android.view.autofill.IAugmentedAutofillManagerClient",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "id": "readParcelable",
+                        "__parcelType": "android.view.autofill.AutofillId"
+                    }]
+                }
+            ],
+            "name": "getViewCoordinates",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.graphics.Rect"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "id": "readParcelable",
+                        "__parcelType": "android.view.autofill.AutofillId"
+                    }]
+                }
+            ],
+            "name": "getViewNodeParcelable",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.view.autofill.AssistStructure.ViewNodeParcelable"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"sessionId": "readInt32"},
+                {
+                    "ids": "readList",
+                    "__parcelType": "android.view.autofill.AutofillId"
+                },
+                {
+                    "values": "readList",
+                    "__parcelType": "android.view.autofill.AutofillValue"
+                },
+                {"hideHighlight": "readBool"}
+            ],
+            "name": "autofill",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"sessionId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "id": "readParcelable",
+                        "__parcelType": "android.view.autofill.AutofillId"
+                    }]
+                },
+                {"width": "readInt32"},
+                {"height": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "anchorBounds": "readParcelable",
+                        "__parcelType": "android.graphics.Rect"
+                    }]
+                },
+                {"presenter": "readStrongBinder"}
+            ],
+            "name": "requestShowFillUi",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"sessionId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "id": "readParcelable",
+                        "__parcelType": "android.view.autofill.AutofillId"
+                    }]
+                }
+            ],
+            "name": "requestHideFillUi",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"sessionId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "id": "readParcelable",
+                        "__parcelType": "android.view.autofill.AutofillId"
+                    }]
+                }
+            ],
+            "name": "requestAutofill",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "IAugmentedAutofillManagerClient",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

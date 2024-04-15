@@ -1,0 +1,23 @@
+{
+    "produced_on": "2024-04-12T08:47:54.098579506Z",
+    "source_location": "",
+    "components": [
+        {"qosSessionId": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "qos": "readParcelable",
+                "__parcelType": "android.hardware.radio.data.Qos"
+            }]
+        },
+        {
+            "qosFilters": "readParcelableVector",
+            "__parcelType": "android.hardware.radio.data.QosFilter"
+        }
+    ],
+    "full_name": "android.hardware.radio.data.QosSession",
+    "name": "QosSession",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

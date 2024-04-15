@@ -1,0 +1,32 @@
+{
+    "produced_on": "2024-04-12T10:51:31.076862698Z",
+    "source_location": "",
+    "components": [
+        {"mRegistrationType": "readInt32"},
+        {
+            "mRegistrationUri": "readParcelable",
+            "__parcelType": "android.net.Uri"
+        },
+        {"mAppPackageName": "readString16"},
+        {"mSdkPackageName": "readString16"},
+        {"hasInputEvent": "readBool"},
+        {
+            "__backreference": "hasInputEvent",
+            "__conditional": [{
+                "mInputEvent": "readParcelable",
+                "__parcelType": "android.view.InputEvent"
+            }]
+        },
+        {"mRequestTime": "readInt64"},
+        {"mIsAdIdPermissionGranted": "readBool"},
+        {"hasAdIdValue": "readBool"},
+        {
+            "__backreference": "hasAdIdValue",
+            "__conditional": [{"mAdIdValue": "readString16"}]
+        }
+    ],
+    "full_name": "android.adservices.measurement.RegistrationRequest",
+    "name": "RegistrationRequest",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

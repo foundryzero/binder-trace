@@ -1,0 +1,68 @@
+{
+    "produced_on": "2024-04-12T08:47:46.209664706Z",
+    "source_location": "",
+    "full_name": "com.android.internal.appwidget.IAppWidgetHost",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"appWidgetId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "views": "readParcelable",
+                        "__parcelType": "android.widget.RemoteViews"
+                    }]
+                }
+            ],
+            "name": "updateAppWidget",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"appWidgetId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "info": "readParcelable",
+                        "__parcelType": "android.appwidget.AppWidgetProviderInfo"
+                    }]
+                }
+            ],
+            "name": "providerChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "providersChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"appWidgetId": "readInt32"},
+                {"viewId": "readInt32"}
+            ],
+            "name": "viewDataChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"appWidgetId": "readInt32"}],
+            "name": "appWidgetRemoved",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IAppWidgetHost",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

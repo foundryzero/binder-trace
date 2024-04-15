@@ -1,0 +1,206 @@
+{
+    "produced_on": "2024-04-12T08:47:46.254385974Z",
+    "source_location": "",
+    "full_name": "com.android.internal.inputmethod.IRemoteAccessibilityInputConnection",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "header": "readParcelable",
+                        "__parcelType": "com.android.internal.inputmethod.InputConnectionCommandHeader"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "text": "readParcelable",
+                        "__parcelType": "CharSequence"
+                    }]
+                },
+                {"newCursorPosition": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "textAttribute": "readParcelable",
+                        "__parcelType": "android.view.inputmethod.TextAttribute"
+                    }]
+                }
+            ],
+            "name": "commitText",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "header": "readParcelable",
+                        "__parcelType": "com.android.internal.inputmethod.InputConnectionCommandHeader"
+                    }]
+                },
+                {"start": "readInt32"},
+                {"end": "readInt32"}
+            ],
+            "name": "setSelection",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "header": "readParcelable",
+                        "__parcelType": "com.android.internal.inputmethod.InputConnectionCommandHeader"
+                    }]
+                },
+                {"beforeLength": "readInt32"},
+                {"afterLength": "readInt32"},
+                {"flags": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "future": "readParcelable",
+                        "__parcelType": "com.android.internal.infra.AndroidFuture"
+                    }]
+                }
+            ],
+            "name": "getSurroundingText",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "header": "readParcelable",
+                        "__parcelType": "com.android.internal.inputmethod.InputConnectionCommandHeader"
+                    }]
+                },
+                {"beforeLength": "readInt32"},
+                {"afterLength": "readInt32"}
+            ],
+            "name": "deleteSurroundingText",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "header": "readParcelable",
+                        "__parcelType": "com.android.internal.inputmethod.InputConnectionCommandHeader"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "event": "readParcelable",
+                        "__parcelType": "android.view.KeyEvent"
+                    }]
+                }
+            ],
+            "name": "sendKeyEvent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "header": "readParcelable",
+                        "__parcelType": "com.android.internal.inputmethod.InputConnectionCommandHeader"
+                    }]
+                },
+                {"actionCode": "readInt32"}
+            ],
+            "name": "performEditorAction",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "header": "readParcelable",
+                        "__parcelType": "com.android.internal.inputmethod.InputConnectionCommandHeader"
+                    }]
+                },
+                {"id": "readInt32"}
+            ],
+            "name": "performContextMenuAction",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "header": "readParcelable",
+                        "__parcelType": "com.android.internal.inputmethod.InputConnectionCommandHeader"
+                    }]
+                },
+                {"reqModes": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "future": "readParcelable",
+                        "__parcelType": "com.android.internal.infra.AndroidFuture"
+                    }]
+                }
+            ],
+            "name": "getCursorCapsMode",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "header": "readParcelable",
+                        "__parcelType": "com.android.internal.inputmethod.InputConnectionCommandHeader"
+                    }]
+                },
+                {"states": "readInt32"}
+            ],
+            "name": "clearMetaKeyStates",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IRemoteAccessibilityInputConnection",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

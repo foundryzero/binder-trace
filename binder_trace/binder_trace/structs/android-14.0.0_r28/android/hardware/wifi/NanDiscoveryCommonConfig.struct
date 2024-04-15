@@ -1,0 +1,45 @@
+{
+    "produced_on": "2024-04-12T08:47:56.543159425Z",
+    "source_location": "",
+    "components": [
+        {"sessionId": "readByte"},
+        {"ttlSec": "readChar"},
+        {"discoveryWindowPeriod": "readChar"},
+        {"discoveryCount": "readByte"},
+        {"serviceName": "readByteVector"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "discoveryMatchIndicator": "readParcelable",
+                "__parcelType": "android.hardware.wifi.NanMatchAlg"
+            }]
+        },
+        {"serviceSpecificInfo": "readByteVector"},
+        {"extendedServiceSpecificInfo": "readByteVector"},
+        {"rxMatchFilter": "readByteVector"},
+        {"txMatchFilter": "readByteVector"},
+        {"useRssiThreshold": "readBool"},
+        {"disableDiscoveryTerminationIndication": "readBool"},
+        {"disableMatchExpirationIndication": "readBool"},
+        {"disableFollowupReceivedIndication": "readBool"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "securityConfig": "readParcelable",
+                "__parcelType": "android.hardware.wifi.NanDataPathSecurityConfig"
+            }]
+        },
+        {"rangingRequired": "readBool"},
+        {"rangingIntervalMs": "readInt32"},
+        {"configRangingIndications": "readInt32"},
+        {"distanceIngressCm": "readChar"},
+        {"distanceEgressCm": "readChar"},
+        {"enableSessionSuspendability": "readBool"}
+    ],
+    "full_name": "android.hardware.wifi.NanDiscoveryCommonConfig",
+    "name": "NanDiscoveryCommonConfig",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

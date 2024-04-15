@@ -1,0 +1,40 @@
+{
+    "produced_on": "2024-04-12T08:47:54.738659970Z",
+    "source_location": "",
+    "components": [
+        {"DROP_FRAME": "readInt32"},
+        {"END_OF_STREAM": "readInt32"},
+        {"DISCARD_FRAME": "readInt32"},
+        {"FLAG_INCOMPLETE": "readInt32"},
+        {"CODEC_CONFIG": "readInt32"},
+        {"flags": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "ordinal": "readParcelable",
+                "__parcelType": "android.hardware.media.c2.WorkOrdinal"
+            }]
+        },
+        {
+            "buffers": "readParcelableVector",
+            "__parcelType": "android.hardware.media.c2.Buffer"
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "configUpdate": "readParcelable",
+                "__parcelType": "android.hardware.media.c2.Params"
+            }]
+        },
+        {
+            "infoBuffers": "readParcelableVector",
+            "__parcelType": "android.hardware.media.c2.InfoBuffer"
+        }
+    ],
+    "full_name": "android.hardware.media.c2.FrameData",
+    "name": "FrameData",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

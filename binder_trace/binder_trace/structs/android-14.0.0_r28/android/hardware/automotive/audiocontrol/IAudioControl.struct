@@ -1,0 +1,131 @@
+{
+    "produced_on": "2024-04-12T08:47:48.503662878Z",
+    "source_location": "",
+    "full_name": "android.hardware.automotive.audiocontrol.IAudioControl",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"usage": "readString16"},
+                {"zoneId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "focusChange": "readParcelable",
+                        "__parcelType": "android.hardware.automotive.audiocontrol.AudioFocusChange"
+                    }]
+                }
+            ],
+            "name": "onAudioFocusChange",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{
+                "duckingInfos": "readParcelableVector",
+                "__parcelType": "android.hardware.automotive.audiocontrol.DuckingInfo"
+            }],
+            "name": "onDevicesToDuckChange",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{
+                "mutingInfos": "readParcelableVector",
+                "__parcelType": "android.hardware.automotive.audiocontrol.MutingInfo"
+            }],
+            "name": "onDevicesToMuteChange",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "registerFocusListener",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"value": "readFloat"}],
+            "name": "setBalanceTowardRight",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"value": "readFloat"}],
+            "name": "setFadeTowardFront",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "playbackMetaData": "readParcelable",
+                        "__parcelType": "android.hardware.audio.common.PlaybackTrackMetadata"
+                    }]
+                },
+                {"zoneId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "focusChange": "readParcelable",
+                        "__parcelType": "android.hardware.automotive.audiocontrol.AudioFocusChange"
+                    }]
+                }
+            ],
+            "name": "onAudioFocusChangeWithMetaData",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {
+                    "reasons": "readParcelableVector",
+                    "__parcelType": "android.hardware.automotive.audiocontrol.Reasons"
+                },
+                {
+                    "gains": "readParcelableVector",
+                    "__parcelType": "android.hardware.automotive.audiocontrol.AudioGainConfigInfo"
+                }
+            ],
+            "name": "setAudioDeviceGainsChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "registerGainCallback",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "setModuleChangeCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [],
+            "name": "clearModuleChangeCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IAudioControl",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

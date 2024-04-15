@@ -1,0 +1,90 @@
+{
+    "produced_on": "2024-04-12T08:47:45.784932053Z",
+    "source_location": "",
+    "full_name": "android.service.quickaccesswallet.IQuickAccessWalletService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.service.quickaccesswallet.GetWalletCardsRequest"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "onWalletCardsRequested",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.service.quickaccesswallet.SelectWalletCardRequest"
+                    }]
+                }
+            ],
+            "name": "onWalletCardSelected",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "onWalletDismissed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.service.quickaccesswallet.WalletServiceEventListenerRequest"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "registerWalletServiceEventListener",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.service.quickaccesswallet.WalletServiceEventListenerRequest"
+                    }]
+                }
+            ],
+            "name": "unregisterWalletServiceEventListener",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"callbacks": "readStrongBinder"}],
+            "name": "onTargetActivityIntentRequested",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IQuickAccessWalletService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,42 @@
+{
+    "produced_on": "2024-04-12T08:47:49.768404867Z",
+    "source_location": "",
+    "components": [
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "commonProps": "readParcelable",
+                "__parcelType": "android.hardware.biometrics.common.CommonProps"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "sensorType": "readParcelable",
+                "__parcelType": "android.hardware.biometrics.fingerprint.FingerprintSensorType"
+            }]
+        },
+        {
+            "sensorLocations": "readParcelableVector",
+            "__parcelType": "android.hardware.biometrics.fingerprint.SensorLocation"
+        },
+        {"supportsNavigationGestures": "readBool"},
+        {"supportsDetectInteraction": "readBool"},
+        {"halHandlesDisplayTouches": "readBool"},
+        {"halControlsIllumination": "readBool"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "touchDetectionParameters": "readParcelable",
+                "__parcelType": "android.hardware.biometrics.fingerprint.TouchDetectionParameters"
+            }]
+        }
+    ],
+    "full_name": "android.hardware.biometrics.fingerprint.SensorProps",
+    "name": "SensorProps",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

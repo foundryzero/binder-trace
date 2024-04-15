@@ -1,0 +1,78 @@
+{
+    "produced_on": "2024-04-12T08:47:47.210157137Z",
+    "source_location": "",
+    "full_name": "android.net.wifi.sharedconnectivity.service.ISharedConnectivityCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{
+                "networks": "readList",
+                "__parcelType": "android.net.wifi.sharedconnectivity.app.HotspotNetwork"
+            }],
+            "name": "onHotspotNetworksUpdated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "status": "readParcelable",
+                        "__parcelType": "android.net.wifi.sharedconnectivity.app.HotspotNetworkConnectionStatus"
+                    }]
+                }
+            ],
+            "name": "onHotspotNetworkConnectionStatusChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{
+                "networks": "readList",
+                "__parcelType": "android.net.wifi.sharedconnectivity.app.KnownNetwork"
+            }],
+            "name": "onKnownNetworksUpdated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "status": "readParcelable",
+                        "__parcelType": "android.net.wifi.sharedconnectivity.app.KnownNetworkConnectionStatus"
+                    }]
+                }
+            ],
+            "name": "onKnownNetworkConnectionStatusChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "state": "readParcelable",
+                        "__parcelType": "android.net.wifi.sharedconnectivity.app.SharedConnectivitySettingsState"
+                    }]
+                }
+            ],
+            "name": "onSharedConnectivitySettingsChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISharedConnectivityCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

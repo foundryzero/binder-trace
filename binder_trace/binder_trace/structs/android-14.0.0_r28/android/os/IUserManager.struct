@@ -1,0 +1,1212 @@
+{
+    "produced_on": "2024-04-12T08:47:45.552877161Z",
+    "source_location": "",
+    "full_name": "android.os.IUserManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"userId": "readInt32"}],
+            "name": "getCredentialOwnerProfile",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"userId": "readInt32"}],
+            "name": "getProfileParentId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"name": "readString16"},
+                {"userType": "readString16"},
+                {"flags": "readInt32"}
+            ],
+            "name": "createUserWithThrow",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.UserInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"userType": "readString16"}],
+            "name": "preCreateUserWithThrow",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.UserInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"name": "readString16"},
+                {"userType": "readString16"},
+                {"flags": "readInt32"},
+                {"userId": "readInt32"},
+                {"disallowedPackages": "readString16Vector"}
+            ],
+            "name": "createProfileForUserWithThrow",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.UserInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"name": "readString16"},
+                {"parentUserHandle": "readInt32"}
+            ],
+            "name": "createRestrictedProfileWithThrow",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.UserInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 7,
+            "in": [{"userType": "readString16"}],
+            "name": "getPreInstallableSystemPackages",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [{"userId": "readInt32"}],
+            "name": "setUserEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [{"userId": "readInt32"}],
+            "name": "setUserAdmin",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [{"userId": "readInt32"}],
+            "name": "revokeUserAdmin",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [{"userId": "readInt32"}],
+            "name": "evictCredentialEncryptionKey",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [{"userId": "readInt32"}],
+            "name": "removeUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [{"userId": "readInt32"}],
+            "name": "removeUserEvenWhenDisallowed",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"userId": "readInt32"},
+                {"name": "readString16"}
+            ],
+            "name": "setUserName",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"userId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "icon": "readParcelable",
+                        "__parcelType": "android.graphics.Bitmap"
+                    }]
+                }
+            ],
+            "name": "setUserIcon",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [{"userId": "readInt32"}],
+            "name": "getUserIcon",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.os.ParcelFileDescriptor"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 17,
+            "in": [],
+            "name": "getPrimaryUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.UserInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 18,
+            "in": [],
+            "name": "getMainUserId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 19,
+            "in": [],
+            "name": "getPreviousFullUserToEnterForeground",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 20,
+            "in": [
+                {"excludePartial": "readBool"},
+                {"excludeDying": "readBool"},
+                {"excludePreCreated": "readBool"}
+            ],
+            "name": "getUsers",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.content.pm.UserInfo"
+                }
+            ]
+        },
+        {
+            "code": 21,
+            "in": [
+                {"userId": "readInt32"},
+                {"enabledOnly": "readBool"}
+            ],
+            "name": "getProfiles",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.content.pm.UserInfo"
+                }
+            ]
+        },
+        {
+            "code": 22,
+            "in": [
+                {"userId": "readInt32"},
+                {"enabledOnly": "readBool"}
+            ],
+            "name": "getProfileIds",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 23,
+            "in": [{"userType": "readString16"}],
+            "name": "isUserTypeEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 24,
+            "in": [{"userType": "readString16"}],
+            "name": "canAddMoreUsersOfType",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 25,
+            "in": [{"userType": "readString16"}],
+            "name": "getRemainingCreatableUserCount",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 26,
+            "in": [
+                {"userType": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "getRemainingCreatableProfileCount",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 27,
+            "in": [
+                {"userType": "readString16"},
+                {"userId": "readInt32"},
+                {"allowedToRemoveOne": "readBool"}
+            ],
+            "name": "canAddMoreProfilesToUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 28,
+            "in": [
+                {"userId": "readInt32"},
+                {"allowedToRemoveOne": "readBool"}
+            ],
+            "name": "canAddMoreManagedProfiles",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 29,
+            "in": [{"userId": "readInt32"}],
+            "name": "getProfileParent",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.UserInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 30,
+            "in": [
+                {"userId": "readInt32"},
+                {"otherUserHandle": "readInt32"}
+            ],
+            "name": "isSameProfileGroup",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 31,
+            "in": [],
+            "name": "isHeadlessSystemUserMode",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 32,
+            "in": [
+                {"userId": "readInt32"},
+                {"userType": "readString16"}
+            ],
+            "name": "isUserOfType",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 33,
+            "in": [{"userId": "readInt32"}],
+            "name": "getUserInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.UserInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 34,
+            "in": [{"userId": "readInt32"}],
+            "name": "getUserPropertiesCopy",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.UserProperties"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 35,
+            "in": [{"userId": "readInt32"}],
+            "name": "getUserAccount",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 36,
+            "in": [
+                {"userId": "readInt32"},
+                {"accountName": "readString16"}
+            ],
+            "name": "setUserAccount",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 37,
+            "in": [{"userId": "readInt32"}],
+            "name": "getUserCreationTime",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 38,
+            "in": [{"userId": "readInt32"}],
+            "name": "getUserSwitchability",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 39,
+            "in": [
+                {"showEvenIfNotActionable": "readBool"},
+                {"mUserId": "readInt32"}
+            ],
+            "name": "isUserSwitcherEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 40,
+            "in": [{"userId": "readInt32"}],
+            "name": "isRestricted",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 41,
+            "in": [{"userId": "readInt32"}],
+            "name": "canHaveRestrictedProfile",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 42,
+            "in": [{"userId": "readInt32"}],
+            "name": "getUserSerialNumber",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 43,
+            "in": [{"userSerialNumber": "readInt32"}],
+            "name": "getUserHandle",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 44,
+            "in": [
+                {"restrictionKey": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "getUserRestrictionSource",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 45,
+            "in": [
+                {"restrictionKey": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "getUserRestrictionSources",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.os.UserManager.EnforcingUser"
+                }
+            ]
+        },
+        {
+            "code": 46,
+            "in": [{"userId": "readInt32"}],
+            "name": "getUserRestrictions",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"__return": "readBundle"}]
+                }
+            ]
+        },
+        {
+            "code": 47,
+            "in": [
+                {"restrictionKey": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "hasBaseUserRestriction",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 48,
+            "in": [
+                {"restrictionKey": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "hasUserRestriction",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 49,
+            "in": [{"restrictionKey": "readString16"}],
+            "name": "hasUserRestrictionOnAnyUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 50,
+            "in": [
+                {"setting": "readString16"},
+                {"userId": "readInt32"},
+                {"value": "readString16"},
+                {"callingUid": "readInt32"}
+            ],
+            "name": "isSettingRestrictedForUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 51,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "addUserRestrictionsListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 52,
+            "in": [
+                {"key": "readString16"},
+                {"value": "readBool"},
+                {"userId": "readInt32"}
+            ],
+            "name": "setUserRestriction",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 53,
+            "in": [
+                {"packageName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"restrictions": "readBundle"}]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "setApplicationRestrictions",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 54,
+            "in": [{"packageName": "readString16"}],
+            "name": "getApplicationRestrictions",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"__return": "readBundle"}]
+                }
+            ]
+        },
+        {
+            "code": 55,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "getApplicationRestrictionsForUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"__return": "readBundle"}]
+                }
+            ]
+        },
+        {
+            "code": 56,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"restrictions": "readBundle"}]
+                }
+            ],
+            "name": "setDefaultGuestRestrictions",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 57,
+            "in": [],
+            "name": "getDefaultGuestRestrictions",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"__return": "readBundle"}]
+                }
+            ]
+        },
+        {
+            "code": 58,
+            "in": [
+                {"userId": "readInt32"},
+                {"overrideDevicePolicy": "readBool"}
+            ],
+            "name": "removeUserWhenPossible",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 59,
+            "in": [{"userId": "readInt32"}],
+            "name": "markGuestForDeletion",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 60,
+            "in": [],
+            "name": "getGuestUsers",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.content.pm.UserInfo"
+                }
+            ]
+        },
+        {
+            "code": 61,
+            "in": [{"userId": "readInt32"}],
+            "name": "isQuietModeEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 62,
+            "in": [
+                {"userName": "readString16"},
+                {"userType": "readString16"},
+                {"flags": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "userIcon": "readParcelable",
+                        "__parcelType": "android.graphics.Bitmap"
+                    }]
+                },
+                {"accountName": "readString16"},
+                {"accountType": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "accountOptions": "readParcelable",
+                        "__parcelType": "android.os.PersistableBundle"
+                    }]
+                }
+            ],
+            "name": "createUserWithAttributes",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.os.UserHandle"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 63,
+            "in": [
+                {"userId": "readInt32"},
+                {"accountName": "readString16"},
+                {"accountType": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "accountOptions": "readParcelable",
+                        "__parcelType": "android.os.PersistableBundle"
+                    }]
+                },
+                {"persist": "readBool"}
+            ],
+            "name": "setSeedAccountData",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 64,
+            "in": [{"userId": "readInt32"}],
+            "name": "getSeedAccountName",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 65,
+            "in": [{"userId": "readInt32"}],
+            "name": "getSeedAccountType",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 66,
+            "in": [{"userId": "readInt32"}],
+            "name": "getSeedAccountOptions",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.os.PersistableBundle"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 67,
+            "in": [{"userId": "readInt32"}],
+            "name": "clearSeedAccountData",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 68,
+            "in": [
+                {"accountName": "readString16"},
+                {"accountType": "readString16"}
+            ],
+            "name": "someUserHasSeedAccount",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 69,
+            "in": [
+                {"accountName": "readString16"},
+                {"accountType": "readString16"}
+            ],
+            "name": "someUserHasAccount",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 70,
+            "in": [{"userId": "readInt32"}],
+            "name": "getProfileType",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 71,
+            "in": [{"userId": "readInt32"}],
+            "name": "isDemoUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 72,
+            "in": [{"userId": "readInt32"}],
+            "name": "isAdminUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 73,
+            "in": [{"userId": "readInt32"}],
+            "name": "isPreCreated",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 74,
+            "in": [
+                {"name": "readString16"},
+                {"userType": "readString16"},
+                {"flags": "readInt32"},
+                {"userId": "readInt32"},
+                {"disallowedPackages": "readString16Vector"}
+            ],
+            "name": "createProfileForUserEvenWhenDisallowedWithThrow",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.UserInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 75,
+            "in": [{"userId": "readInt32"}],
+            "name": "isUserUnlockingOrUnlocked",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 76,
+            "in": [{"userId": "readInt32"}],
+            "name": "getUserIconBadgeResId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 77,
+            "in": [{"userId": "readInt32"}],
+            "name": "getUserBadgeResId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 78,
+            "in": [{"userId": "readInt32"}],
+            "name": "getUserBadgeNoBackgroundResId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 79,
+            "in": [{"userId": "readInt32"}],
+            "name": "getUserBadgeLabelResId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 80,
+            "in": [{"userId": "readInt32"}],
+            "name": "getUserBadgeColorResId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 81,
+            "in": [{"userId": "readInt32"}],
+            "name": "getUserBadgeDarkColorResId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 82,
+            "in": [{"userId": "readInt32"}],
+            "name": "hasBadge",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 83,
+            "in": [{"userId": "readInt32"}],
+            "name": "isUserUnlocked",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 84,
+            "in": [{"userId": "readInt32"}],
+            "name": "isUserRunning",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 85,
+            "in": [{"userId": "readInt32"}],
+            "name": "isUserForeground",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 86,
+            "in": [{"userId": "readInt32"}],
+            "name": "isUserVisible",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 87,
+            "in": [],
+            "name": "getVisibleUsers",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 88,
+            "in": [],
+            "name": "getMainDisplayIdAssignedToUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 89,
+            "in": [{"userId": "readInt32"}],
+            "name": "isUserNameSet",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 90,
+            "in": [{"userId": "readInt32"}],
+            "name": "hasRestrictedProfiles",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 91,
+            "in": [
+                {"callingPackage": "readString16"},
+                {"enableQuietMode": "readBool"},
+                {"userId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "target": "readParcelable",
+                        "__parcelType": "android.content.IntentSender"
+                    }]
+                },
+                {"flags": "readInt32"}
+            ],
+            "name": "requestQuietModeEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 92,
+            "in": [],
+            "name": "getUserName",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 93,
+            "in": [],
+            "name": "getUserStartRealtime",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 94,
+            "in": [],
+            "name": "getUserUnlockRealtime",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 95,
+            "in": [
+                {"userId": "readInt32"},
+                {"enableEphemeral": "readBool"}
+            ],
+            "name": "setUserEphemeral",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 96,
+            "in": [{"userId": "readInt32"}],
+            "name": "setBootUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 97,
+            "in": [],
+            "name": "getBootUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        }
+    ],
+    "name": "IUserManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

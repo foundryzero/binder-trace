@@ -1,0 +1,62 @@
+{
+    "produced_on": "2024-04-12T08:47:44.051125644Z",
+    "source_location": "",
+    "full_name": "android.app.usage.cts.ITestReceiver",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"pkg": "readString16"}],
+            "name": "isAppInactive",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"channelId": "readString16"},
+                {"channelName": "readString16"},
+                {"channelDescription": "readString16"}
+            ],
+            "name": "createNotificationChannel",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"notificationId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "notification": "readParcelable",
+                        "__parcelType": "android.app.Notification"
+                    }]
+                }
+            ],
+            "name": "postNotification",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"notificationId": "readInt32"}],
+            "name": "cancelNotification",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "cancelAll",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ITestReceiver",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,243 @@
+{
+    "produced_on": "2024-04-12T08:47:44.520972622Z",
+    "source_location": "",
+    "full_name": "android.app.job.IJobScheduler",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"namespace": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "job": "readParcelable",
+                        "__parcelType": "android.app.job.JobInfo"
+                    }]
+                }
+            ],
+            "name": "schedule",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"namespace": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "job": "readParcelable",
+                        "__parcelType": "android.app.job.JobInfo"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "work": "readParcelable",
+                        "__parcelType": "android.app.job.JobWorkItem"
+                    }]
+                }
+            ],
+            "name": "enqueue",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"namespace": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "job": "readParcelable",
+                        "__parcelType": "android.app.job.JobInfo"
+                    }]
+                },
+                {"packageName": "readString16"},
+                {"userId": "readInt32"},
+                {"tag": "readString16"}
+            ],
+            "name": "scheduleAsPackage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"namespace": "readString16"},
+                {"jobId": "readInt32"}
+            ],
+            "name": "cancel",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "cancelAll",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"namespace": "readString16"}],
+            "name": "cancelAllInNamespace",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "getAllPendingJobs",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readMap"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [{"namespace": "readString16"}],
+            "name": "getAllPendingJobsInNamespace",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.app.job.ParceledListSlice<JobInfo>"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"namespace": "readString16"},
+                {"jobId": "readInt32"}
+            ],
+            "name": "getPendingJob",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.app.job.JobInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"namespace": "readString16"},
+                {"jobId": "readInt32"}
+            ],
+            "name": "getPendingJobReason",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [{"packageName": "readString16"}],
+            "name": "canRunUserInitiatedJobs",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "hasRunUserInitiatedJobsPermission",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [],
+            "name": "getStartedJobs",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.app.job.JobInfo"
+                }
+            ]
+        },
+        {
+            "code": 14,
+            "in": [],
+            "name": "getAllJobSnapshots",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.ParceledListSlice"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 15,
+            "in": [{"observer": "readStrongBinder"}],
+            "name": "registerUserVisibleJobObserver",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [{"observer": "readStrongBinder"}],
+            "name": "unregisterUserVisibleJobObserver",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"},
+                {"debugReason": "readString16"}
+            ],
+            "name": "notePendingUserRequestedAppStop",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IJobScheduler",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

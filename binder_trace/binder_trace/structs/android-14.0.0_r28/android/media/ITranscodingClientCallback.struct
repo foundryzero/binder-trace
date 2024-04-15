@@ -1,0 +1,106 @@
+{
+    "produced_on": "2024-04-12T08:47:44.418435884Z",
+    "source_location": "",
+    "full_name": "android.media.ITranscodingClientCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"fileUri": "readString16"},
+                {"mode": "readString16"}
+            ],
+            "name": "openFileDescriptor",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.os.ParcelFileDescriptor"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"sessionId": "readInt32"}],
+            "name": "onTranscodingStarted",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"sessionId": "readInt32"}],
+            "name": "onTranscodingPaused",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"sessionId": "readInt32"}],
+            "name": "onTranscodingResumed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"sessionId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "result": "readParcelable",
+                        "__parcelType": "android.media.TranscodingResultParcel"
+                    }]
+                }
+            ],
+            "name": "onTranscodingFinished",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"sessionId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "errorCode": "readParcelable",
+                        "__parcelType": "android.media.TranscodingErrorCode"
+                    }]
+                }
+            ],
+            "name": "onTranscodingFailed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"sessionId": "readInt32"},
+                {"oldAwaitNumber": "readInt32"},
+                {"newAwaitNumber": "readInt32"}
+            ],
+            "name": "onAwaitNumberOfSessionsChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"sessionId": "readInt32"},
+                {"progress": "readInt32"}
+            ],
+            "name": "onProgressUpdate",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ITranscodingClientCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

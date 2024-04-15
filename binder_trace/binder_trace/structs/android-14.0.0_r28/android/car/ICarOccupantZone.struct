@@ -1,0 +1,293 @@
+{
+    "produced_on": "2024-04-12T08:47:58.933286319Z",
+    "source_location": "",
+    "full_name": "android.car.ICarOccupantZone",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getAllOccupantZones",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.car.CarOccupantZoneManager.OccupantZoneInfo"
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"occupantZoneId": "readInt32"}],
+            "name": "getAudioZoneIdForOccupant",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"occupantZoneId": "readInt32"}],
+            "name": "getAllDisplaysForOccupantZone",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"occupantZoneId": "readInt32"},
+                {"displayType": "readInt32"}
+            ],
+            "name": "getDisplayForOccupant",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"audioZoneId": "readInt32"}],
+            "name": "getOccupantForAudioZoneId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.car.CarOccupantZoneManager.OccupantZoneInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [{"displayId": "readInt32"}],
+            "name": "getDisplayType",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [{"occupantZoneId": "readInt32"}],
+            "name": "getUserForOccupant",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [{"userId": "readInt32"}],
+            "name": "getOccupantZoneIdForUserId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "registerCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "unregisterCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"occupantZoneId": "readInt32"},
+                {"userId": "readInt32"}
+            ],
+            "name": "assignProfileUserToOccupantZone",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [{"displayType": "readInt32"}],
+            "name": "getDisplayIdForDriver",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"occupantZoneId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "user": "readParcelable",
+                        "__parcelType": "android.os.UserHandle"
+                    }]
+                }
+            ],
+            "name": "assignVisibleUserToOccupantZone",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 14,
+            "in": [{"occupantZoneId": "readInt32"}],
+            "name": "unassignOccupantZone",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "user": "readParcelable",
+                        "__parcelType": "android.os.UserHandle"
+                    }]
+                }
+            ],
+            "name": "getOccupantZoneForUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.car.CarOccupantZoneManager.OccupantZoneInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 16,
+            "in": [],
+            "name": "getMyOccupantZone",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.car.CarOccupantZoneManager.OccupantZoneInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 17,
+            "in": [
+                {"type": "readInt32"},
+                {"seat": "readInt32"}
+            ],
+            "name": "getOccupantZone",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.car.CarOccupantZoneManager.OccupantZoneInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 18,
+            "in": [],
+            "name": "hasDriverZone",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 19,
+            "in": [],
+            "name": "hasPassengerZones",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 20,
+            "in": [{"displayId": "readInt32"}],
+            "name": "getUserForDisplayId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 21,
+            "in": [
+                {"occupantZoneId": "readInt32"},
+                {"inputType": "readInt32"}
+            ],
+            "name": "getSupportedInputTypes",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 22,
+            "in": [{"displayId": "readInt32"}],
+            "name": "getOccupantZoneForDisplayId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.car.CarOccupantZoneManager.OccupantZoneInfo"
+                    }]
+                }
+            ]
+        }
+    ],
+    "name": "ICarOccupantZone",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

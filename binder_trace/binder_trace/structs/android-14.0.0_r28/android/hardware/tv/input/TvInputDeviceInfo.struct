@@ -1,0 +1,36 @@
+{
+    "produced_on": "2024-04-12T08:47:54.949088709Z",
+    "source_location": "",
+    "components": [
+        {"deviceId": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "type": "readParcelable",
+                "__parcelType": "android.hardware.tv.input.TvInputType"
+            }]
+        },
+        {"portId": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "cableConnectionStatus": "readParcelable",
+                "__parcelType": "android.hardware.tv.input.CableConnectionStatus"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "audioDevice": "readParcelable",
+                "__parcelType": "android.media.audio.common.AudioDevice"
+            }]
+        }
+    ],
+    "full_name": "android.hardware.tv.input.TvInputDeviceInfo",
+    "name": "TvInputDeviceInfo",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

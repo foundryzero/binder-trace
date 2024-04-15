@@ -1,0 +1,106 @@
+{
+    "produced_on": "2024-04-12T08:47:57.690479666Z",
+    "source_location": "",
+    "full_name": "android.uwb.IUwbOemExtensionCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "bundle": "readParcelable",
+                        "__parcelType": "android.os.PersistableBundle"
+                    }]
+                }
+            ],
+            "name": "onSessionStatusNotificationReceived",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "bundle": "readParcelable",
+                        "__parcelType": "android.os.PersistableBundle"
+                    }]
+                }
+            ],
+            "name": "onDeviceStatusNotificationReceived",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "bundle": "readParcelable",
+                        "__parcelType": "android.os.PersistableBundle"
+                    }]
+                }
+            ],
+            "name": "onSessionConfigurationReceived",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "bundle": "readParcelable",
+                        "__parcelType": "android.uwb.RangingReport"
+                    }]
+                }
+            ],
+            "name": "onRangingReportReceived",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.uwb.RangingReport"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "bundle": "readParcelable",
+                        "__parcelType": "android.os.PersistableBundle"
+                    }]
+                }
+            ],
+            "name": "onCheckPointedTarget",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "IUwbOemExtensionCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,40 @@
+{
+    "produced_on": "2024-04-12T08:47:52.389256185Z",
+    "source_location": "",
+    "full_name": "android.hardware.light.ILights",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"id": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "state": "readParcelable",
+                        "__parcelType": "android.hardware.light.HwLightState"
+                    }]
+                }
+            ],
+            "name": "setLightState",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "getLights",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.light.HwLight"
+                }
+            ]
+        }
+    ],
+    "name": "ILights",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

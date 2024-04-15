@@ -1,0 +1,150 @@
+{
+    "produced_on": "2024-04-12T08:47:54.110468243Z",
+    "source_location": "",
+    "full_name": "android.hardware.radio.ims.IRadioIms",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"serial": "readInt32"},
+                {
+                    "srvccCalls": "readParcelableVector",
+                    "__parcelType": "android.hardware.radio.ims.SrvccCall"
+                }
+            ],
+            "name": "setSrvccCallInfo",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "imsRegistration": "readParcelable",
+                        "__parcelType": "android.hardware.radio.ims.ImsRegistration"
+                    }]
+                }
+            ],
+            "name": "updateImsRegistrationInfo",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"serial": "readInt32"},
+                {"token": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "imsTrafficType": "readParcelable",
+                        "__parcelType": "android.hardware.radio.ims.ImsTrafficType"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "accessNetworkType": "readParcelable",
+                        "__parcelType": "android.hardware.radio.AccessNetwork"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "trafficDirection": "readParcelable",
+                        "__parcelType": "android.hardware.radio.ims.ImsCall.Direction"
+                    }]
+                }
+            ],
+            "name": "startImsTraffic",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"serial": "readInt32"},
+                {"token": "readInt32"}
+            ],
+            "name": "stopImsTraffic",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "reason": "readParcelable",
+                        "__parcelType": "android.hardware.radio.ims.EpsFallbackReason"
+                    }]
+                }
+            ],
+            "name": "triggerEpsFallback",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"radioImsResponse": "readStrongBinder"},
+                {"radioImsIndication": "readStrongBinder"}
+            ],
+            "name": "setResponseFunctions",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "mediaType": "readParcelable",
+                        "__parcelType": "android.hardware.radio.ims.ImsStreamType"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "direction": "readParcelable",
+                        "__parcelType": "android.hardware.radio.ims.ImsStreamDirection"
+                    }]
+                },
+                {"bitsPerSecond": "readInt32"}
+            ],
+            "name": "sendAnbrQuery",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"serial": "readInt32"},
+                {
+                    "imsCalls": "readParcelableVector",
+                    "__parcelType": "android.hardware.radio.ims.ImsCall"
+                }
+            ],
+            "name": "updateImsCallStatus",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IRadioIms",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

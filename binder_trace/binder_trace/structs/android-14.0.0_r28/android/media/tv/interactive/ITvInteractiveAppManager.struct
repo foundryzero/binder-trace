@@ -1,0 +1,762 @@
+{
+    "produced_on": "2024-04-12T08:47:46.657246728Z",
+    "source_location": "",
+    "full_name": "android.media.tv.interactive.ITvInteractiveAppManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"userId": "readInt32"}],
+            "name": "getTvInteractiveAppServiceList",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.media.tv.interactive.TvInteractiveAppServiceInfo"
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"userId": "readInt32"}],
+            "name": "getAppLinkInfoList",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.media.tv.interactive.AppLinkInfo"
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"tiasId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "info": "readParcelable",
+                        "__parcelType": "android.media.tv.interactive.AppLinkInfo"
+                    }]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "registerAppLinkInfo",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"tiasId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "info": "readParcelable",
+                        "__parcelType": "android.media.tv.interactive.AppLinkInfo"
+                    }]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "unregisterAppLinkInfo",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"tiasId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"command": "readBundle"}]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "sendAppLinkCommand",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {"userId": "readInt32"}
+            ],
+            "name": "startInteractiveApp",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {"userId": "readInt32"}
+            ],
+            "name": "stopInteractiveApp",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {"userId": "readInt32"}
+            ],
+            "name": "resetInteractiveApp",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "biIAppUri": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"params": "readBundle"}]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "createBiInteractiveApp",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {"biIAppId": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "destroyBiInteractiveApp",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {"enable": "readBool"},
+                {"userId": "readInt32"}
+            ],
+            "name": "setTeletextAppEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "bounds": "readParcelable",
+                        "__parcelType": "android.graphics.Rect"
+                    }]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "sendCurrentVideoBounds",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "channelUri": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "sendCurrentChannelUri",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {"lcn": "readInt32"},
+                {"userId": "readInt32"}
+            ],
+            "name": "sendCurrentChannelLcn",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {"volume": "readFloat"},
+                {"userId": "readInt32"}
+            ],
+            "name": "sendStreamVolume",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {
+                    "tracks": "readList",
+                    "__parcelType": "android.media.tv.TvTrackInfo"
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "sendTrackInfoList",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {"inputId": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "sendCurrentTvInputId",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {"mode": "readInt32"},
+                {"userId": "readInt32"}
+            ],
+            "name": "sendTimeShiftMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 19,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {
+                    "speeds": "readParcelableVector",
+                    "__parcelType": "android.media.tv.interactive.float"
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "sendAvailableSpeeds",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 20,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {"signingId": "readString16"},
+                {"result": "readByteVector"},
+                {"userId": "readInt32"}
+            ],
+            "name": "sendSigningResult",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 21,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "recordingInfo": "readParcelable",
+                        "__parcelType": "android.media.tv.TvRecordingInfo"
+                    }]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "sendTvRecordingInfo",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 22,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {
+                    "recordingInfoList": "readList",
+                    "__parcelType": "android.media.tv.TvRecordingInfo"
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "sendTvRecordingInfoList",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 23,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {"errMsg": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"params": "readBundle"}]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "notifyError",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 24,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "params": "readParcelable",
+                        "__parcelType": "android.media.PlaybackParams"
+                    }]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "notifyTimeShiftPlaybackParams",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 25,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {"inputId": "readString16"},
+                {"status": "readInt32"},
+                {"userId": "readInt32"}
+            ],
+            "name": "notifyTimeShiftStatusChanged",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 26,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {"inputId": "readString16"},
+                {"timeMs": "readInt64"},
+                {"userId": "readInt32"}
+            ],
+            "name": "notifyTimeShiftStartPositionChanged",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 27,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {"inputId": "readString16"},
+                {"timeMs": "readInt64"},
+                {"userId": "readInt32"}
+            ],
+            "name": "notifyTimeShiftCurrentPositionChanged",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 28,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {"recordingId": "readString16"},
+                {"inputId": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "notifyRecordingConnectionFailed",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 29,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {"recordingId": "readString16"},
+                {"inputId": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "notifyRecordingDisconnected",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 30,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {"recordingId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "channelUri": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "notifyRecordingTuned",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 31,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {"recordingId": "readString16"},
+                {"err": "readInt32"},
+                {"userId": "readInt32"}
+            ],
+            "name": "notifyRecordingError",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 32,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {"recordingId": "readString16"},
+                {"requestId": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "notifyRecordingScheduled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 33,
+            "in": [
+                {"client": "readStrongBinder"},
+                {"iAppServiceId": "readString16"},
+                {"type": "readInt32"},
+                {"seq": "readInt32"},
+                {"userId": "readInt32"}
+            ],
+            "name": "createSession",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 34,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {"userId": "readInt32"}
+            ],
+            "name": "releaseSession",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 35,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "channelUri": "readParcelable",
+                        "__parcelType": "android.net.Uri"
+                    }]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "notifyTuned",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 36,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {"type": "readInt32"},
+                {"trackId": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "notifyTrackSelected",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 37,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {
+                    "tracks": "readList",
+                    "__parcelType": "android.media.tv.TvTrackInfo"
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "notifyTracksChanged",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 38,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {"userId": "readInt32"}
+            ],
+            "name": "notifyVideoAvailable",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 39,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {"reason": "readInt32"},
+                {"userId": "readInt32"}
+            ],
+            "name": "notifyVideoUnavailable",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 40,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {"userId": "readInt32"}
+            ],
+            "name": "notifyContentAllowed",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 41,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {"rating": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "notifyContentBlocked",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 42,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {"stength": "readInt32"},
+                {"userId": "readInt32"}
+            ],
+            "name": "notifySignalStrength",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 43,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {"recordingId": "readString16"},
+                {"requestId": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "notifyRecordingStarted",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 44,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {"recordingId": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "notifyRecordingStopped",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 45,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {"type": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"data": "readBundle"}]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "notifyTvMessage",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 46,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "surface": "readParcelable",
+                        "__parcelType": "android.view.Surface"
+                    }]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "setSurface",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 47,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {"format": "readInt32"},
+                {"width": "readInt32"},
+                {"height": "readInt32"},
+                {"userId": "readInt32"}
+            ],
+            "name": "dispatchSurfaceChanged",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 48,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "response": "readParcelable",
+                        "__parcelType": "android.media.tv.BroadcastInfoResponse"
+                    }]
+                },
+                {"UserId": "readInt32"}
+            ],
+            "name": "notifyBroadcastInfoResponse",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 49,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "response": "readParcelable",
+                        "__parcelType": "android.media.tv.AdResponse"
+                    }]
+                },
+                {"UserId": "readInt32"}
+            ],
+            "name": "notifyAdResponse",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 50,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "buffer": "readParcelable",
+                        "__parcelType": "android.media.tv.AdBuffer"
+                    }]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "notifyAdBufferConsumed",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 51,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {"windowToken": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "frame": "readParcelable",
+                        "__parcelType": "android.graphics.Rect"
+                    }]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "createMediaView",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 52,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "frame": "readParcelable",
+                        "__parcelType": "android.graphics.Rect"
+                    }]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "relayoutMediaView",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 53,
+            "in": [
+                {"sessionToken": "readStrongBinder"},
+                {"userId": "readInt32"}
+            ],
+            "name": "removeMediaView",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 54,
+            "in": [
+                {"callback": "readStrongBinder"},
+                {"userId": "readInt32"}
+            ],
+            "name": "registerCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 55,
+            "in": [
+                {"callback": "readStrongBinder"},
+                {"userId": "readInt32"}
+            ],
+            "name": "unregisterCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ITvInteractiveAppManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

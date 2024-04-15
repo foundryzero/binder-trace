@@ -1,0 +1,142 @@
+{
+    "produced_on": "2024-04-12T08:47:57.947264699Z",
+    "source_location": "",
+    "full_name": "com.android.devicelockcontroller.storage.IGlobalParametersService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "clear",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "getLockTaskAllowlist",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "String"
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{
+                "allowlist": "readList",
+                "__parcelType": "String"
+            }],
+            "name": "setLockTaskAllowlist",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "needCheckIn",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"needCheckIn": "readBool"}],
+            "name": "setNeedCheckIn",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "getRegisteredDeviceId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [{"registeredDeviceId": "readString16"}],
+            "name": "setRegisteredDeviceId",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "isProvisionForced",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [{"isForced": "readBool"}],
+            "name": "setProvisionForced",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [],
+            "name": "getEnrollmentToken",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [{"token": "readString16"}],
+            "name": "setEnrollmentToken",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [],
+            "name": "getKioskSignature",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [{"signature": "readString16"}],
+            "name": "setKioskSignature",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [],
+            "name": "getLastReceivedProvisionState",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 15,
+            "in": [{"provisionState": "readInt32"}],
+            "name": "setLastReceivedProvisionState",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IGlobalParametersService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

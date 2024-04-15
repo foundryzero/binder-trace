@@ -1,0 +1,170 @@
+{
+    "produced_on": "2024-04-12T08:47:57.707872512Z",
+    "source_location": "",
+    "full_name": "com.android.virt.fs.IVirtFdService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"fd": "readInt32"},
+                {"offset": "readInt64"},
+                {"size": "readInt32"}
+            ],
+            "name": "readFile",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"fd": "readInt32"},
+                {"offset": "readInt64"},
+                {"size": "readInt32"}
+            ],
+            "name": "readFsverityMerkleTree",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"fd": "readInt32"}],
+            "name": "readFsveritySignature",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"fd": "readInt32"},
+                {"buf": "readByteVector"},
+                {"offset": "readInt64"}
+            ],
+            "name": "writeFile",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"fd": "readInt32"},
+                {"size": "readInt64"}
+            ],
+            "name": "resize",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"fd": "readInt32"}],
+            "name": "getFileSize",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"dirFd": "readInt32"},
+                {"pathname": "readString16"}
+            ],
+            "name": "openFileInDirectory",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"dirFd": "readInt32"},
+                {"basename": "readString16"},
+                {"mode": "readInt32"}
+            ],
+            "name": "createFileInDirectory",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"dirFd": "readInt32"},
+                {"basename": "readString16"},
+                {"mode": "readInt32"}
+            ],
+            "name": "createDirectoryInDirectory",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"dirFd": "readInt32"},
+                {"basename": "readString16"}
+            ],
+            "name": "deleteFile",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"dirFd": "readInt32"},
+                {"basename": "readString16"}
+            ],
+            "name": "deleteDirectory",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"fd": "readInt32"},
+                {"mode": "readInt32"}
+            ],
+            "name": "chmod",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [],
+            "name": "statfs",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.virt.fs.IVirtFdService.FsStat"
+                    }]
+                }
+            ]
+        }
+    ],
+    "name": "IVirtFdService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

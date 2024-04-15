@@ -1,0 +1,44 @@
+{
+    "produced_on": "2024-04-12T08:47:57.321714165Z",
+    "source_location": "",
+    "full_name": "android.app.sdksandbox.IRequestSurfacePackageCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "surfacePackage": "readParcelable",
+                        "__parcelType": "android.view.SurfaceControlViewHost.SurfacePackage"
+                    }]
+                },
+                {"surfacePackageId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"params": "readBundle"}]
+                },
+                {"timeSystemServerCalledApp": "readInt64"}
+            ],
+            "name": "onSurfacePackageReady",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"errorCode": "readInt32"},
+                {"errorMsg": "readString16"},
+                {"timeSystemServerCalledApp": "readInt64"}
+            ],
+            "name": "onSurfacePackageError",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IRequestSurfacePackageCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

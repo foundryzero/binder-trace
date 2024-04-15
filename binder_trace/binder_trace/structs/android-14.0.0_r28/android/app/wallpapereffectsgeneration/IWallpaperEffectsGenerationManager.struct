@@ -1,0 +1,43 @@
+{
+    "produced_on": "2024-04-12T08:47:44.948547070Z",
+    "source_location": "",
+    "full_name": "android.app.wallpapereffectsgeneration.IWallpaperEffectsGenerationManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.app.wallpapereffectsgeneration.CinematicEffectRequest"
+                    }]
+                },
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "generateCinematicEffect",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "response": "readParcelable",
+                        "__parcelType": "android.app.wallpapereffectsgeneration.CinematicEffectResponse"
+                    }]
+                }
+            ],
+            "name": "returnCinematicEffectResponse",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IWallpaperEffectsGenerationManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

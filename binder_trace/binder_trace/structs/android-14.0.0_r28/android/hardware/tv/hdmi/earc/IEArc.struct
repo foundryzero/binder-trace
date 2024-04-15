@@ -1,0 +1,54 @@
+{
+    "produced_on": "2024-04-12T08:47:54.910612213Z",
+    "source_location": "",
+    "full_name": "android.hardware.tv.hdmi.earc.IEArc",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"enabled": "readBool"}],
+            "name": "setEArcEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "isEArcEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "setCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"portId": "readInt32"}],
+            "name": "getState",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"portId": "readInt32"}],
+            "name": "getLastReportedAudioCapabilities",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        }
+    ],
+    "name": "IEArc",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

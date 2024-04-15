@@ -1,0 +1,28 @@
+{
+    "produced_on": "2024-04-12T08:47:57.673227653Z",
+    "source_location": "",
+    "components": [
+        {"uwbConfigId": "readInt32"},
+        {"sessionId": "readInt32"},
+        {"subSessionId": "readInt32"},
+        {"sessionKeyInfo": "readByteVector"},
+        {"subSessionKeyInfo": "readByteVector"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "complexChannel": "readParcelable",
+                "__parcelType": "androidx.core.uwb.backend.UwbComplexChannel"
+            }]
+        },
+        {
+            "peerDevices": "readList",
+            "__parcelType": "androidx.core.uwb.backend.UwbDevice"
+        },
+        {"rangingUpdateRate": "readInt32"}
+    ],
+    "full_name": "androidx.core.uwb.backend.RangingParameters",
+    "name": "RangingParameters",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

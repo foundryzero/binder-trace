@@ -1,0 +1,192 @@
+{
+    "produced_on": "2024-04-12T08:47:45.245236727Z",
+    "source_location": "",
+    "full_name": "android.hardware.camera2.extension.IPreviewExtenderImpl",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"cameraId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "cameraCharacteristics": "readParcelable",
+                        "__parcelType": "android.hardware.camera2.impl.CameraMetadataNative"
+                    }]
+                }
+            ],
+            "name": "onInit",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "onDeInit",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "onPresetSession",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.camera2.extension.CaptureStageImpl"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "onEnableSession",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.camera2.extension.CaptureStageImpl"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "onDisableSession",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.camera2.extension.CaptureStageImpl"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"cameraId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "chars": "readParcelable",
+                        "__parcelType": "android.hardware.camera2.impl.CameraMetadataNative"
+                    }]
+                }
+            ],
+            "name": "init",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"cameraId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "chars": "readParcelable",
+                        "__parcelType": "android.hardware.camera2.impl.CameraMetadataNative"
+                    }]
+                }
+            ],
+            "name": "isExtensionAvailable",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "getCaptureStage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.camera2.extension.CaptureStageImpl"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 9,
+            "in": [],
+            "name": "getSessionType",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [],
+            "name": "getProcessorType",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [],
+            "name": "getPreviewImageProcessor",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [],
+            "name": "getRequestUpdateProcessor",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [],
+            "name": "getSupportedResolutions",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.hardware.camera2.extension.SizeList"
+                }
+            ]
+        }
+    ],
+    "name": "IPreviewExtenderImpl",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

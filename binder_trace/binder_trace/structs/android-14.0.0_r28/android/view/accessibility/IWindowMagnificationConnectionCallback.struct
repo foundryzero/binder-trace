@@ -1,0 +1,78 @@
+{
+    "produced_on": "2024-04-12T08:47:46.001663712Z",
+    "source_location": "",
+    "full_name": "android.view.accessibility.IWindowMagnificationConnectionCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"displayId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "bounds": "readParcelable",
+                        "__parcelType": "android.graphics.Rect"
+                    }]
+                }
+            ],
+            "name": "onWindowMagnifierBoundsChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"displayId": "readInt32"},
+                {"magnificationMode": "readInt32"}
+            ],
+            "name": "onChangeMagnificationMode",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"displayId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sourceBounds": "readParcelable",
+                        "__parcelType": "android.graphics.Rect"
+                    }]
+                }
+            ],
+            "name": "onSourceBoundsChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"displayId": "readInt32"},
+                {"scale": "readFloat"}
+            ],
+            "name": "onPerformScaleAction",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"displayId": "readInt32"}],
+            "name": "onAccessibilityActionPerformed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"displayId": "readInt32"}],
+            "name": "onMove",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IWindowMagnificationConnectionCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

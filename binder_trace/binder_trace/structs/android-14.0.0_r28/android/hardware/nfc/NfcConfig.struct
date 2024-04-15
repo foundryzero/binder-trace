@@ -1,0 +1,39 @@
+{
+    "produced_on": "2024-04-12T08:47:52.885196459Z",
+    "source_location": "",
+    "components": [
+        {"nfaPollBailOutMode": "readBool"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "presenceCheckAlgorithm": "readParcelable",
+                "__parcelType": "android.hardware.nfc.PresenceCheckAlgorithm"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "nfaProprietaryCfg": "readParcelable",
+                "__parcelType": "android.hardware.nfc.ProtocolDiscoveryConfig"
+            }]
+        },
+        {"defaultOffHostRoute": "readByte"},
+        {"defaultOffHostRouteFelica": "readByte"},
+        {"defaultSystemCodeRoute": "readByte"},
+        {"defaultSystemCodePowerState": "readByte"},
+        {"defaultRoute": "readByte"},
+        {"offHostESEPipeId": "readByte"},
+        {"offHostSIMPipeId": "readByte"},
+        {"maxIsoDepTransceiveLength": "readInt32"},
+        {"hostAllowlist": "readByteVector"},
+        {"offHostRouteUicc": "readByteVector"},
+        {"offHostRouteEse": "readByteVector"},
+        {"defaultIsoDepRoute": "readByte"}
+    ],
+    "full_name": "android.hardware.nfc.NfcConfig",
+    "name": "NfcConfig",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

@@ -1,0 +1,53 @@
+{
+    "produced_on": "2024-04-12T08:47:58.884261434Z",
+    "source_location": "",
+    "full_name": "android.ondevicepersonalization.aidl.IOnDevicePersonalizationManagingService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getVersion",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"callingPackageName": "readString16"},
+                {"servicePackageName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "params": "readParcelable",
+                        "__parcelType": "android.ondevicepersonalization.aidl.PersistableBundle"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "execute",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"slotResultToken": "readString16"},
+                {"hostToken": "readStrongBinder"},
+                {"displayId": "readInt32"},
+                {"width": "readInt32"},
+                {"height": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "requestSurfacePackage",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IOnDevicePersonalizationManagingService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

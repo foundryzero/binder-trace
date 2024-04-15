@@ -1,0 +1,42 @@
+{
+    "produced_on": "2024-04-12T08:47:58.080707346Z",
+    "source_location": "",
+    "full_name": "android.health.connect.aidl.IRecordTypeInfoResponseCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "parcel": "readParcelable",
+                        "__parcelType": "android.health.connect.aidl.RecordTypeInfoResponseParcel"
+                    }]
+                }
+            ],
+            "name": "onResult",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "exception": "readParcelable",
+                        "__parcelType": "android.health.connect.aidl.HealthConnectExceptionParcel"
+                    }]
+                }
+            ],
+            "name": "onError",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IRecordTypeInfoResponseCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

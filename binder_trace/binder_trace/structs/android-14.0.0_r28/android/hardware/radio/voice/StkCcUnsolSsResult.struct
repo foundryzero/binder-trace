@@ -1,0 +1,70 @@
+{
+    "produced_on": "2024-04-12T08:47:54.372052381Z",
+    "source_location": "",
+    "components": [
+        {"REQUEST_TYPE_ACTIVATION": "readInt32"},
+        {"REQUEST_TYPE_DEACTIVATION": "readInt32"},
+        {"REQUEST_TYPE_INTERROGATION": "readInt32"},
+        {"REQUEST_TYPE_REGISTRATION": "readInt32"},
+        {"REQUEST_TYPE_ERASURE": "readInt32"},
+        {"SERVICE_TYPE_CFU": "readInt32"},
+        {"SERVICE_TYPE_CF_BUSY": "readInt32"},
+        {"SERVICE_TYPE_CF_NO_REPLY": "readInt32"},
+        {"SERVICE_TYPE_CF_NOT_REACHABLE": "readInt32"},
+        {"SERVICE_TYPE_CF_ALL": "readInt32"},
+        {"SERVICE_TYPE_CF_ALL_CONDITIONAL": "readInt32"},
+        {"SERVICE_TYPE_CLIP": "readInt32"},
+        {"SERVICE_TYPE_CLIR": "readInt32"},
+        {"SERVICE_TYPE_COLP": "readInt32"},
+        {"SERVICE_TYPE_COLR": "readInt32"},
+        {"SERVICE_TYPE_WAIT": "readInt32"},
+        {"SERVICE_TYPE_BAOC": "readInt32"},
+        {"SERVICE_TYPE_BAOIC": "readInt32"},
+        {"SERVICE_TYPE_BAOIC_EXC_HOME": "readInt32"},
+        {"SERVICE_TYPE_BAIC": "readInt32"},
+        {"SERVICE_TYPE_BAIC_ROAMING": "readInt32"},
+        {"SERVICE_TYPE_ALL_BARRING": "readInt32"},
+        {"SERVICE_TYPE_OUTGOING_BARRING": "readInt32"},
+        {"SERVICE_TYPE_INCOMING_BARRING": "readInt32"},
+        {"TELESERVICE_TYPE_ALL_TELE_AND_BEARER_SERVICES": "readInt32"},
+        {"TELESERVICE_TYPE_ALL_TELESEVICES": "readInt32"},
+        {"TELESERVICE_TYPE_TELEPHONY": "readInt32"},
+        {"TELESERVICE_TYPE_ALL_DATA_TELESERVICES": "readInt32"},
+        {"TELESERVICE_TYPE_SMS_SERVICES": "readInt32"},
+        {"TELESERVICE_TYPE_ALL_TELESERVICES_EXCEPT_SMS": "readInt32"},
+        {"SUPP_SERVICE_CLASS_NONE": "readInt32"},
+        {"SUPP_SERVICE_CLASS_VOICE": "readInt32"},
+        {"SUPP_SERVICE_CLASS_DATA": "readInt32"},
+        {"SUPP_SERVICE_CLASS_FAX": "readInt32"},
+        {"SUPP_SERVICE_CLASS_SMS": "readInt32"},
+        {"SUPP_SERVICE_CLASS_DATA_SYNC": "readInt32"},
+        {"SUPP_SERVICE_CLASS_DATA_ASYNC": "readInt32"},
+        {"SUPP_SERVICE_CLASS_PACKET": "readInt32"},
+        {"SUPP_SERVICE_CLASS_PAD": "readInt32"},
+        {"SUPP_SERVICE_CLASS_MAX": "readInt32"},
+        {"serviceType": "readInt32"},
+        {"requestType": "readInt32"},
+        {"teleserviceType": "readInt32"},
+        {"serviceClass": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "result": "readParcelable",
+                "__parcelType": "android.hardware.radio.RadioError"
+            }]
+        },
+        {
+            "ssInfo": "readParcelableVector",
+            "__parcelType": "android.hardware.radio.voice.SsInfoData"
+        },
+        {
+            "cfData": "readParcelableVector",
+            "__parcelType": "android.hardware.radio.voice.CfData"
+        }
+    ],
+    "full_name": "android.hardware.radio.voice.StkCcUnsolSsResult",
+    "name": "StkCcUnsolSsResult",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

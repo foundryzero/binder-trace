@@ -1,0 +1,26 @@
+{
+    "produced_on": "2024-04-12T08:47:51.592178556Z",
+    "source_location": "",
+    "components": [
+        {"STATUS_PARITY_PASSED": "readInt32"},
+        {"STATUS_PARITY_REBUILT": "readInt32"},
+        {"STATUS_UNKNOWN": "readInt32"},
+        {"svid": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "type": "readParcelable",
+                "__parcelType": "android.hardware.gnss.GnssNavigationMessageType"
+            }]
+        },
+        {"status": "readInt32"},
+        {"messageId": "readInt32"},
+        {"submessageId": "readInt32"},
+        {"data": "readByteVector"}
+    ],
+    "full_name": "android.hardware.gnss.GnssNavigationMessage",
+    "name": "GnssNavigationMessage",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

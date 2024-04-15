@@ -1,0 +1,86 @@
+{
+    "produced_on": "2024-04-12T08:47:51.585882241Z",
+    "source_location": "",
+    "full_name": "android.hardware.gnss.IGnssGeofenceCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"geofenceId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "location": "readParcelable",
+                        "__parcelType": "android.hardware.gnss.GnssLocation"
+                    }]
+                },
+                {"transition": "readInt32"},
+                {"timestampMillis": "readInt64"}
+            ],
+            "name": "gnssGeofenceTransitionCb",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"availability": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "lastLocation": "readParcelable",
+                        "__parcelType": "android.hardware.gnss.GnssLocation"
+                    }]
+                }
+            ],
+            "name": "gnssGeofenceStatusCb",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"geofenceId": "readInt32"},
+                {"status": "readInt32"}
+            ],
+            "name": "gnssGeofenceAddCb",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"geofenceId": "readInt32"},
+                {"status": "readInt32"}
+            ],
+            "name": "gnssGeofenceRemoveCb",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"geofenceId": "readInt32"},
+                {"status": "readInt32"}
+            ],
+            "name": "gnssGeofencePauseCb",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"geofenceId": "readInt32"},
+                {"status": "readInt32"}
+            ],
+            "name": "gnssGeofenceResumeCb",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IGnssGeofenceCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

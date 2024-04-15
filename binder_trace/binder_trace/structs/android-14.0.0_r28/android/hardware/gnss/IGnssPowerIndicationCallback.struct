@@ -1,0 +1,33 @@
+{
+    "produced_on": "2024-04-12T08:47:51.595950402Z",
+    "source_location": "",
+    "full_name": "android.hardware.gnss.IGnssPowerIndicationCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"capabilities": "readInt32"}],
+            "name": "setCapabilitiesCb",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "gnssPowerStats": "readParcelable",
+                        "__parcelType": "android.hardware.gnss.GnssPowerStats"
+                    }]
+                }
+            ],
+            "name": "gnssPowerStatsCb",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IGnssPowerIndicationCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

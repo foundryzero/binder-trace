@@ -1,0 +1,160 @@
+{
+    "produced_on": "2024-04-12T08:47:46.588468810Z",
+    "source_location": "",
+    "full_name": "android.media.projection.IMediaProjectionManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"uid": "readInt32"},
+                {"packageName": "readString16"}
+            ],
+            "name": "hasProjectionPermission",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"uid": "readInt32"},
+                {"packageName": "readString16"},
+                {"type": "readInt32"},
+                {"permanentGrant": "readBool"}
+            ],
+            "name": "createProjection",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"uid": "readInt32"},
+                {"packageName": "readString16"}
+            ],
+            "name": "getProjection",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"projection": "readStrongBinder"}],
+            "name": "isCurrentProjection",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"projection": "readStrongBinder"}],
+            "name": "requestConsentForInvalidProjection",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "getActiveProjectionInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.media.projection.MediaProjectionInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "stopActiveProjection",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"width": "readInt32"},
+                {"height": "readInt32"}
+            ],
+            "name": "notifyActiveProjectionCapturedContentResized",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [{"isVisible": "readBool"}],
+            "name": "notifyActiveProjectionCapturedContentVisibilityChanged",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "addCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "removeCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "incomingSession": "readParcelable",
+                        "__parcelType": "android.view.ContentRecordingSession"
+                    }]
+                },
+                {"projection": "readStrongBinder"}
+            ],
+            "name": "setContentRecordingSession",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "consentResult": "readParcelable",
+                        "__parcelType": "android.media.projection.ReviewGrantedConsentResult"
+                    }]
+                },
+                {"projection": "readStrongBinder"}
+            ],
+            "name": "setUserReviewGrantedConsentResult",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IMediaProjectionManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

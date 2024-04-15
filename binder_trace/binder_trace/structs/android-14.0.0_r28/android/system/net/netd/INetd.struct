@@ -1,0 +1,96 @@
+{
+    "produced_on": "2024-04-12T08:48:00.142081444Z",
+    "source_location": "",
+    "full_name": "android.system.net.netd.INetd",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"networkHandle": "readInt64"},
+                {"ifname": "readString16"}
+            ],
+            "name": "addInterfaceToOemNetwork",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"networkHandle": "readInt64"},
+                {"ifname": "readString16"},
+                {"destination": "readString16"},
+                {"nexthop": "readString16"}
+            ],
+            "name": "addRouteToOemNetwork",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "createOemNetwork",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.system.net.netd.INetd.OemNetwork"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"networkHandle": "readInt64"}],
+            "name": "destroyOemNetwork",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"networkHandle": "readInt64"},
+                {"ifname": "readString16"}
+            ],
+            "name": "removeInterfaceFromOemNetwork",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"networkHandle": "readInt64"},
+                {"ifname": "readString16"},
+                {"destination": "readString16"},
+                {"nexthop": "readString16"}
+            ],
+            "name": "removeRouteFromOemNetwork",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"inputIfName": "readString16"},
+                {"outputIfName": "readString16"},
+                {"enable": "readBool"}
+            ],
+            "name": "setForwardingBetweenInterfaces",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{"enable": "readBool"}],
+            "name": "setIpForwardEnable",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "INetd",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

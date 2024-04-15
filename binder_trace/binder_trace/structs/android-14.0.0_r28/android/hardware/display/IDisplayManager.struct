@@ -1,0 +1,687 @@
+{
+    "produced_on": "2024-04-12T08:47:45.282679611Z",
+    "source_location": "",
+    "full_name": "android.hardware.display.IDisplayManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"displayId": "readInt32"}],
+            "name": "getDisplayInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.view.DisplayInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"includeDisabled": "readBool"}],
+            "name": "getDisplayIds",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"uid": "readInt32"},
+                {"displayId": "readInt32"}
+            ],
+            "name": "isUidPresentOnDisplay",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "registerCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"callback": "readStrongBinder"},
+                {"eventsMask": "readInt64"}
+            ],
+            "name": "registerCallbackWithEventMask",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "startWifiDisplayScan",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "stopWifiDisplayScan",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{"address": "readString16"}],
+            "name": "connectWifiDisplay",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [],
+            "name": "disconnectWifiDisplay",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"address": "readString16"},
+                {"alias": "readString16"}
+            ],
+            "name": "renameWifiDisplay",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [{"address": "readString16"}],
+            "name": "forgetWifiDisplay",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [],
+            "name": "pauseWifiDisplay",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [],
+            "name": "resumeWifiDisplay",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [],
+            "name": "getWifiDisplayStatus",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.display.WifiDisplayStatus"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 15,
+            "in": [{"userDisabledTypes": "readInt32Vector"}],
+            "name": "setUserDisabledHdrTypes",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [{"areUserDisabledHdrTypesAllowed": "readBool"}],
+            "name": "setAreUserDisabledHdrTypesAllowed",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [],
+            "name": "areUserDisabledHdrTypesAllowed",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 18,
+            "in": [],
+            "name": "getUserDisabledHdrTypes",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 19,
+            "in": [
+                {"displayId": "readInt32"},
+                {"modes": "readInt32Vector"}
+            ],
+            "name": "overrideHdrTypes",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 20,
+            "in": [
+                {"displayId": "readInt32"},
+                {"colorMode": "readInt32"}
+            ],
+            "name": "requestColorMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 21,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "virtualDisplayConfig": "readParcelable",
+                        "__parcelType": "android.hardware.display.VirtualDisplayConfig"
+                    }]
+                },
+                {"callback": "readStrongBinder"},
+                {"projectionToken": "readStrongBinder"},
+                {"packageName": "readString16"}
+            ],
+            "name": "createVirtualDisplay",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 22,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"width": "readInt32"},
+                {"height": "readInt32"},
+                {"densityDpi": "readInt32"}
+            ],
+            "name": "resizeVirtualDisplay",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 23,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "surface": "readParcelable",
+                        "__parcelType": "android.view.Surface"
+                    }]
+                }
+            ],
+            "name": "setVirtualDisplaySurface",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 24,
+            "in": [{"token": "readStrongBinder"}],
+            "name": "releaseVirtualDisplay",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 25,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"isOn": "readBool"}
+            ],
+            "name": "setVirtualDisplayState",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 26,
+            "in": [],
+            "name": "getStableDisplaySize",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.graphics.Point"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 27,
+            "in": [{"callingPackage": "readString16"}],
+            "name": "getBrightnessEvents",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.ParceledListSlice"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 28,
+            "in": [],
+            "name": "getAmbientBrightnessStats",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.ParceledListSlice"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 29,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "c": "readParcelable",
+                        "__parcelType": "android.hardware.display.BrightnessConfiguration"
+                    }]
+                },
+                {"userId": "readInt32"},
+                {"packageName": "readString16"}
+            ],
+            "name": "setBrightnessConfigurationForUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 30,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "c": "readParcelable",
+                        "__parcelType": "android.hardware.display.BrightnessConfiguration"
+                    }]
+                },
+                {"uniqueDisplayId": "readString16"},
+                {"userId": "readInt32"},
+                {"packageName": "readString16"}
+            ],
+            "name": "setBrightnessConfigurationForDisplay",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 31,
+            "in": [
+                {"uniqueDisplayId": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "getBrightnessConfigurationForDisplay",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.display.BrightnessConfiguration"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 32,
+            "in": [{"userId": "readInt32"}],
+            "name": "getBrightnessConfigurationForUser",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.display.BrightnessConfiguration"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 33,
+            "in": [],
+            "name": "getDefaultBrightnessConfiguration",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.display.BrightnessConfiguration"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 34,
+            "in": [{"displayId": "readInt32"}],
+            "name": "isMinimalPostProcessingRequested",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 35,
+            "in": [
+                {"displayId": "readInt32"},
+                {"brightness": "readFloat"}
+            ],
+            "name": "setTemporaryBrightness",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 36,
+            "in": [
+                {"displayId": "readInt32"},
+                {"brightness": "readFloat"}
+            ],
+            "name": "setBrightness",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 37,
+            "in": [{"displayId": "readInt32"}],
+            "name": "getBrightness",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readFloat"}
+            ]
+        },
+        {
+            "code": 38,
+            "in": [{"adjustment": "readFloat"}],
+            "name": "setTemporaryAutoBrightnessAdjustment",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 39,
+            "in": [],
+            "name": "getMinimumBrightnessCurve",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.display.Curve"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 40,
+            "in": [{"displayId": "readInt32"}],
+            "name": "getBrightnessInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.display.BrightnessInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 41,
+            "in": [],
+            "name": "getPreferredWideGamutColorSpaceId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 42,
+            "in": [
+                {"displayId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "mode": "readParcelable",
+                        "__parcelType": "android.view.Display.Mode"
+                    }]
+                }
+            ],
+            "name": "setUserPreferredDisplayMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 43,
+            "in": [{"displayId": "readInt32"}],
+            "name": "getUserPreferredDisplayMode",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.view.Display.Mode"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 44,
+            "in": [{"displayId": "readInt32"}],
+            "name": "getSystemPreferredDisplayMode",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.view.Display.Mode"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 45,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "hdrConversionMode": "readParcelable",
+                        "__parcelType": "android.hardware.display.HdrConversionMode"
+                    }]
+                }
+            ],
+            "name": "setHdrConversionMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 46,
+            "in": [],
+            "name": "getHdrConversionModeSetting",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.display.HdrConversionMode"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 47,
+            "in": [],
+            "name": "getHdrConversionMode",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.display.HdrConversionMode"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 48,
+            "in": [],
+            "name": "getSupportedHdrOutputTypes",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 49,
+            "in": [{"enabled": "readBool"}],
+            "name": "setShouldAlwaysRespectAppRequestedMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 50,
+            "in": [],
+            "name": "shouldAlwaysRespectAppRequestedMode",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 51,
+            "in": [{"newValue": "readInt32"}],
+            "name": "setRefreshRateSwitchingType",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 52,
+            "in": [],
+            "name": "getRefreshRateSwitchingType",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 53,
+            "in": [{"displayId": "readInt32"}],
+            "name": "getDisplayDecorationSupport",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.graphics.common.DisplayDecorationSupport"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 54,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"displayId": "readInt32"}
+            ],
+            "name": "setDisplayIdToMirror",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 55,
+            "in": [],
+            "name": "getOverlaySupport",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.OverlayProperties"
+                    }]
+                }
+            ]
+        }
+    ],
+    "name": "IDisplayManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

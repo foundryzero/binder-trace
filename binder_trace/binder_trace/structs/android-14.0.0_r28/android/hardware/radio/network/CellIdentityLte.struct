@@ -1,0 +1,38 @@
+{
+    "produced_on": "2024-04-12T08:47:54.208934413Z",
+    "source_location": "",
+    "components": [
+        {"mcc": "readString16"},
+        {"mnc": "readString16"},
+        {"ci": "readInt32"},
+        {"pci": "readInt32"},
+        {"tac": "readInt32"},
+        {"earfcn": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "operatorNames": "readParcelable",
+                "__parcelType": "android.hardware.radio.network.OperatorInfo"
+            }]
+        },
+        {"bandwidth": "readInt32"},
+        {"additionalPlmns": "readString16Vector"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "csgInfo": "readParcelable",
+                "__parcelType": "android.hardware.radio.network.ClosedSubscriberGroupInfo"
+            }]
+        },
+        {
+            "bands": "readParcelableVector",
+            "__parcelType": "android.hardware.radio.network.EutranBands"
+        }
+    ],
+    "full_name": "android.hardware.radio.network.CellIdentityLte",
+    "name": "CellIdentityLte",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

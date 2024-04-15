@@ -1,0 +1,166 @@
+{
+    "produced_on": "2024-04-12T08:47:58.096060500Z",
+    "source_location": "",
+    "full_name": "android.telephony.imsmedia.IImsAudioSessionCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"session": "readStrongBinder"}],
+            "name": "onOpenSessionSuccess",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"error": "readInt32"}],
+            "name": "onOpenSessionFailure",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "onSessionClosed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "config": "readParcelable",
+                        "__parcelType": "android.telephony.imsmedia.AudioConfig"
+                    }]
+                },
+                {"result": "readInt32"}
+            ],
+            "name": "onModifySessionResponse",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "config": "readParcelable",
+                        "__parcelType": "android.telephony.imsmedia.AudioConfig"
+                    }]
+                },
+                {"result": "readInt32"}
+            ],
+            "name": "onAddConfigResponse",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "config": "readParcelable",
+                        "__parcelType": "android.telephony.imsmedia.AudioConfig"
+                    }]
+                },
+                {"result": "readInt32"}
+            ],
+            "name": "onConfirmConfigResponse",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "config": "readParcelable",
+                        "__parcelType": "android.telephony.imsmedia.AudioConfig"
+                    }]
+                }
+            ],
+            "name": "onFirstMediaPacketReceived",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{
+                "extensions": "readList",
+                "__parcelType": "android.telephony.ims.RtpHeaderExtension"
+            }],
+            "name": "onHeaderExtensionReceived",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "status": "readParcelable",
+                        "__parcelType": "android.telephony.imsmedia.MediaQualityStatus"
+                    }]
+                }
+            ],
+            "name": "notifyMediaQualityStatus",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callQuality": "readParcelable",
+                        "__parcelType": "android.telephony.CallQuality"
+                    }]
+                }
+            ],
+            "name": "onCallQualityChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "config": "readParcelable",
+                        "__parcelType": "android.telephony.imsmedia.AudioConfig"
+                    }]
+                }
+            ],
+            "name": "triggerAnbrQuery",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"dtmfDigit": "readChar"},
+                {"durationMs": "readInt32"}
+            ],
+            "name": "onDtmfReceived",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IImsAudioSessionCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

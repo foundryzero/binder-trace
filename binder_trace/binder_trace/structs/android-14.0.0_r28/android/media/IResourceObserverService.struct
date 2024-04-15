@@ -1,0 +1,46 @@
+{
+    "produced_on": "2024-04-12T08:47:44.465847117Z",
+    "source_location": "",
+    "full_name": "android.media.IResourceObserverService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "observer": "readParcelable",
+                        "__parcelType": "android.media.IResourceObserver"
+                    }]
+                },
+                {
+                    "filters": "readParcelableVector",
+                    "__parcelType": "android.media.MediaObservableFilter"
+                }
+            ],
+            "name": "registerObserver",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "observer": "readParcelable",
+                        "__parcelType": "android.media.IResourceObserver"
+                    }]
+                }
+            ],
+            "name": "unregisterObserver",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IResourceObserverService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

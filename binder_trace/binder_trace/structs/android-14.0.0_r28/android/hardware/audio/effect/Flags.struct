@@ -1,0 +1,47 @@
+{
+    "produced_on": "2024-04-12T08:47:48.319560353Z",
+    "source_location": "",
+    "components": [
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "type": "readParcelable",
+                "__parcelType": "android.hardware.audio.effect.Flags.Type"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "insert": "readParcelable",
+                "__parcelType": "android.hardware.audio.effect.Flags.Insert"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "volume": "readParcelable",
+                "__parcelType": "android.hardware.audio.effect.Flags.Volume"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "hwAcceleratorMode": "readParcelable",
+                "__parcelType": "android.hardware.audio.effect.Flags.HardwareAccelerator"
+            }]
+        },
+        {"offloadIndication": "readBool"},
+        {"deviceIndication": "readBool"},
+        {"audioModeIndication": "readBool"},
+        {"audioSourceIndication": "readBool"},
+        {"bypass": "readBool"}
+    ],
+    "full_name": "android.hardware.audio.effect.Flags",
+    "name": "Flags",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

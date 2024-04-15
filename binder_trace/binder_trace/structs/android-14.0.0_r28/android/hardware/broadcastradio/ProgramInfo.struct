@@ -1,0 +1,54 @@
+{
+    "produced_on": "2024-04-12T08:47:50.160153227Z",
+    "source_location": "",
+    "components": [
+        {"FLAG_LIVE": "readInt32"},
+        {"FLAG_MUTED": "readInt32"},
+        {"FLAG_TRAFFIC_PROGRAM": "readInt32"},
+        {"FLAG_TRAFFIC_ANNOUNCEMENT": "readInt32"},
+        {"FLAG_TUNABLE": "readInt32"},
+        {"FLAG_STEREO": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "selector": "readParcelable",
+                "__parcelType": "android.hardware.broadcastradio.ProgramSelector"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "logicallyTunedTo": "readParcelable",
+                "__parcelType": "android.hardware.broadcastradio.ProgramIdentifier"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "physicallyTunedTo": "readParcelable",
+                "__parcelType": "android.hardware.broadcastradio.ProgramIdentifier"
+            }]
+        },
+        {
+            "relatedContent": "readParcelableVector",
+            "__parcelType": "android.hardware.broadcastradio.ProgramIdentifier"
+        },
+        {"infoFlags": "readInt32"},
+        {"signalQuality": "readInt32"},
+        {
+            "metadata": "readParcelableVector",
+            "__parcelType": "android.hardware.broadcastradio.Metadata"
+        },
+        {
+            "vendorInfo": "readParcelableVector",
+            "__parcelType": "android.hardware.broadcastradio.VendorKeyValue"
+        }
+    ],
+    "full_name": "android.hardware.broadcastradio.ProgramInfo",
+    "name": "ProgramInfo",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

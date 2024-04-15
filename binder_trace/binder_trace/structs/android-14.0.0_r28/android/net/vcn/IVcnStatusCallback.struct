@@ -1,0 +1,29 @@
+{
+    "produced_on": "2024-04-12T08:47:45.466077717Z",
+    "source_location": "",
+    "full_name": "android.net.vcn.IVcnStatusCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"statusCode": "readInt32"}],
+            "name": "onVcnStatusChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"gatewayConnectionName": "readString16"},
+                {"errorCode": "readInt32"},
+                {"exceptionClass": "readString16"},
+                {"exceptionMessage": "readString16"}
+            ],
+            "name": "onGatewayConnectionError",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IVcnStatusCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

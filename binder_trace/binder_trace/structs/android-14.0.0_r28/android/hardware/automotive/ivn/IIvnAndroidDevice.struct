@@ -1,0 +1,87 @@
+{
+    "produced_on": "2024-04-12T08:47:48.744183336Z",
+    "source_location": "",
+    "full_name": "android.hardware.automotive.ivn.IIvnAndroidDevice",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getMyDeviceId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "getOtherDeviceIds",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"zoneId": "readInt32"}],
+            "name": "getDeviceIdForOccupantZone",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"androidDeviceId": "readInt32"}],
+            "name": "getOccupantZonesForDevice",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.automotive.ivn.OccupantZoneInfo"
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "getMyEndpointInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.automotive.ivn.EndpointInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [{"androidDeviceId": "readInt32"}],
+            "name": "getEndpointInfoForDevice",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.automotive.ivn.EndpointInfo"
+                    }]
+                }
+            ]
+        }
+    ],
+    "name": "IIvnAndroidDevice",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

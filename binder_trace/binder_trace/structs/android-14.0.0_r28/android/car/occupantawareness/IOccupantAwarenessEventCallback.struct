@@ -1,0 +1,42 @@
+{
+    "produced_on": "2024-04-12T08:47:59.019260321Z",
+    "source_location": "",
+    "full_name": "android.car.occupantawareness.IOccupantAwarenessEventCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "event": "readParcelable",
+                        "__parcelType": "android.car.occupantawareness.SystemStatusEvent"
+                    }]
+                }
+            ],
+            "name": "onStatusChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "detectionEvent": "readParcelable",
+                        "__parcelType": "android.car.occupantawareness.OccupantAwarenessDetection"
+                    }]
+                }
+            ],
+            "name": "onDetectionEvent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IOccupantAwarenessEventCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

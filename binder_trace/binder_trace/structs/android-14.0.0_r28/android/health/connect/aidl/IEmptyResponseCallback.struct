@@ -1,0 +1,33 @@
+{
+    "produced_on": "2024-04-12T08:47:58.067774289Z",
+    "source_location": "",
+    "full_name": "android.health.connect.aidl.IEmptyResponseCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "onResult",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "exception": "readParcelable",
+                        "__parcelType": "android.health.connect.aidl.HealthConnectExceptionParcel"
+                    }]
+                }
+            ],
+            "name": "onError",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IEmptyResponseCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

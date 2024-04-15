@@ -1,0 +1,38 @@
+{
+    "produced_on": "2024-04-12T08:47:47.203032515Z",
+    "source_location": "",
+    "full_name": "com.android.test.viewembed.IAttachEmbeddedWindow",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"hostToken": "readStrongBinder"},
+                {"width": "readInt32"},
+                {"height": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "attachEmbedded",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "lp": "readParcelable",
+                        "__parcelType": "android.view.WindowManager.LayoutParams"
+                    }]
+                }
+            ],
+            "name": "relayout",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IAttachEmbeddedWindow",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

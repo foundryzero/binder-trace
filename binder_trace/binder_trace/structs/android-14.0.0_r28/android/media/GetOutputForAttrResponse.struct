@@ -1,0 +1,40 @@
+{
+    "produced_on": "2024-04-12T08:47:44.341406453Z",
+    "source_location": "",
+    "components": [
+        {"output": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "stream": "readParcelable",
+                "__parcelType": "android.media.audio.common.AudioStreamType"
+            }]
+        },
+        {"selectedDeviceId": "readInt32"},
+        {"portId": "readInt32"},
+        {"secondaryOutputs": "readInt32Vector"},
+        {"isSpatialized": "readBool"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "configBase": "readParcelable",
+                "__parcelType": "android.media.audio.common.AudioConfigBase"
+            }]
+        },
+        {"isBitPerfect": "readBool"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "attr": "readParcelable",
+                "__parcelType": "android.media.AudioAttributesInternal"
+            }]
+        }
+    ],
+    "full_name": "android.media.GetOutputForAttrResponse",
+    "name": "GetOutputForAttrResponse",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

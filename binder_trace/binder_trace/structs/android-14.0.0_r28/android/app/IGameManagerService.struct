@@ -1,0 +1,173 @@
+{
+    "produced_on": "2024-04-12T08:47:44.703051322Z",
+    "source_location": "",
+    "full_name": "android.app.IGameManagerService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "getGameMode",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"packageName": "readString16"},
+                {"gameMode": "readInt32"},
+                {"userId": "readInt32"}
+            ],
+            "name": "setGameMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "getAvailableGameModes",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "isAngleEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "notifyGraphicsEnvironmentSetup",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"packageName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "gameState": "readParcelable",
+                        "__parcelType": "android.app.GameState"
+                    }]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "setGameState",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "getGameModeInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.app.GameModeInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 8,
+            "in": [{"packageName": "readString16"}],
+            "name": "setGameServiceProvider",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"packageName": "readString16"},
+                {"gameMode": "readInt32"},
+                {"scalingFactor": "readFloat"},
+                {"userId": "readInt32"}
+            ],
+            "name": "updateResolutionScalingFactor",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"packageName": "readString16"},
+                {"gameMode": "readInt32"},
+                {"userId": "readInt32"}
+            ],
+            "name": "getResolutionScalingFactor",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readFloat"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"packageName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "gameModeConfig": "readParcelable",
+                        "__parcelType": "android.app.GameModeConfiguration"
+                    }]
+                },
+                {"userId": "readInt32"}
+            ],
+            "name": "updateCustomGameModeConfiguration",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [{"gameModeListener": "readStrongBinder"}],
+            "name": "addGameModeListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [{"gameModeListener": "readStrongBinder"}],
+            "name": "removeGameModeListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IGameManagerService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

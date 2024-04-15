@@ -1,0 +1,154 @@
+{
+    "produced_on": "2024-04-12T08:47:56.502797671Z",
+    "source_location": "",
+    "full_name": "android.hardware.wifi.IWifiRttController",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"cmdId": "readInt32"}],
+            "name": "disableResponder",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"cmdId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "channelHint": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.WifiChannelInfo"
+                    }]
+                },
+                {"maxDurationInSeconds": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "info": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.RttResponder"
+                    }]
+                }
+            ],
+            "name": "enableResponder",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getBoundIface",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "getCapabilities",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.RttCapabilities"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "getResponderInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.RttResponder"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"cmdId": "readInt32"},
+                {
+                    "addrs": "readParcelableVector",
+                    "__parcelType": "android.hardware.wifi.MacAddress"
+                }
+            ],
+            "name": "rangeCancel",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"cmdId": "readInt32"},
+                {
+                    "rttConfigs": "readParcelableVector",
+                    "__parcelType": "android.hardware.wifi.RttConfig"
+                }
+            ],
+            "name": "rangeRequest",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "registerEventCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"cmdId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "lci": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.RttLciInformation"
+                    }]
+                }
+            ],
+            "name": "setLci",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"cmdId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "lcr": "readParcelable",
+                        "__parcelType": "android.hardware.wifi.RttLcrInformation"
+                    }]
+                }
+            ],
+            "name": "setLcr",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IWifiRttController",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

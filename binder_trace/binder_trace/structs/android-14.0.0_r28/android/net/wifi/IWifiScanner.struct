@@ -1,0 +1,229 @@
+{
+    "produced_on": "2024-04-12T08:47:57.927630238Z",
+    "source_location": "",
+    "full_name": "android.net.wifi.IWifiScanner",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"band": "readInt32"},
+                {"packageName": "readString16"},
+                {"featureId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"extras": "readBundle"}]
+                }
+            ],
+            "name": "getAvailableChannels",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"__return": "readBundle"}]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "isScanning",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"enable": "readBool"},
+                {"tid": "readInt32"},
+                {"packageName": "readString16"}
+            ],
+            "name": "setScanningEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"listener": "readStrongBinder"},
+                {"packageName": "readString16"},
+                {"featureId": "readString16"}
+            ],
+            "name": "registerScanListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"listener": "readStrongBinder"},
+                {"packageName": "readString16"},
+                {"featureId": "readString16"}
+            ],
+            "name": "unregisterScanListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"listener": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "settings": "readParcelable",
+                        "__parcelType": "android.net.wifi.WifiScanner.ScanSettings"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "workSource": "readParcelable",
+                        "__parcelType": "android.os.WorkSource"
+                    }]
+                },
+                {"packageName": "readString16"},
+                {"featureId": "readString16"}
+            ],
+            "name": "startBackgroundScan",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"listener": "readStrongBinder"},
+                {"packageName": "readString16"},
+                {"featureId": "readString16"}
+            ],
+            "name": "stopBackgroundScan",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"packageName": "readString16"},
+                {"featureId": "readString16"}
+            ],
+            "name": "getScanResults",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"listener": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "settings": "readParcelable",
+                        "__parcelType": "android.net.wifi.WifiScanner.ScanSettings"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "workSource": "readParcelable",
+                        "__parcelType": "android.os.WorkSource"
+                    }]
+                },
+                {"packageName": "readString16"},
+                {"featureId": "readString16"}
+            ],
+            "name": "startScan",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"listener": "readStrongBinder"},
+                {"packageName": "readString16"},
+                {"featureId": "readString16"}
+            ],
+            "name": "stopScan",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"packageName": "readString16"},
+                {"featureId": "readString16"}
+            ],
+            "name": "getSingleScanResults",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.net.wifi.ScanResult"
+                }
+            ]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"listener": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "scanSettings": "readParcelable",
+                        "__parcelType": "android.net.wifi.WifiScanner.ScanSettings"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "pnoSettings": "readParcelable",
+                        "__parcelType": "android.net.wifi.WifiScanner.PnoSettings"
+                    }]
+                },
+                {"packageName": "readString16"},
+                {"featureId": "readString16"}
+            ],
+            "name": "startPnoScan",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"listener": "readStrongBinder"},
+                {"packageName": "readString16"},
+                {"featureId": "readString16"}
+            ],
+            "name": "stopPnoScan",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [{"enabled": "readBool"}],
+            "name": "enableVerboseLogging",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IWifiScanner",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

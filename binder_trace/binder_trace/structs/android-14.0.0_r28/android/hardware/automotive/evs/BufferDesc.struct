@@ -1,0 +1,43 @@
+{
+    "produced_on": "2024-04-12T08:47:48.681603630Z",
+    "source_location": "",
+    "components": [
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "buffer": "readParcelable",
+                "__parcelType": "android.hardware.graphics.common.HardwareBuffer"
+            }]
+        },
+        {"pixelSizeBytes": "readInt32"},
+        {"bufferId": "readInt32"},
+        {"deviceId": "readString16"},
+        {"timestamp": "readInt64"},
+        {"metadata": "readByteVector"},
+        {
+            "exposureSettings": "readParcelableVector",
+            "__parcelType": "android.hardware.automotive.evs.ExposureParameters"
+        },
+        {
+            "histograms": "readParcelableVector",
+            "__parcelType": "android.hardware.automotive.evs.Histogram"
+        },
+        {
+            "grids": "readParcelableVector",
+            "__parcelType": "android.hardware.automotive.evs.GridStatistics"
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "embeddedData": "readParcelable",
+                "__parcelType": "android.hardware.automotive.evs.EmbeddedData"
+            }]
+        }
+    ],
+    "full_name": "android.hardware.automotive.evs.BufferDesc",
+    "name": "BufferDesc",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

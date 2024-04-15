@@ -1,0 +1,44 @@
+{
+    "produced_on": "2024-04-12T08:47:48.358390416Z",
+    "source_location": "",
+    "full_name": "android.hardware.audio.core.IConfig",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getSurroundSoundConfig",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.audio.core.SurroundSoundConfig"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "getEngineConfig",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.media.audio.common.AudioHalEngineConfig"
+                    }]
+                }
+            ]
+        }
+    ],
+    "name": "IConfig",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

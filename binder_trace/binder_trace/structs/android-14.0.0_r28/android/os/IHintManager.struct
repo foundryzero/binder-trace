@@ -1,0 +1,54 @@
+{
+    "produced_on": "2024-04-12T08:47:45.511578001Z",
+    "source_location": "",
+    "full_name": "android.os.IHintManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"tids": "readInt32Vector"},
+                {"durationNanos": "readInt64"}
+            ],
+            "name": "createHintSession",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "getHintSessionPreferredRate",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"hintSession": "readStrongBinder"},
+                {"tids": "readInt32Vector"}
+            ],
+            "name": "setHintSessionThreads",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"hintSession": "readStrongBinder"}],
+            "name": "getHintSessionThreadIds",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        }
+    ],
+    "name": "IHintManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

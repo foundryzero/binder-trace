@@ -1,0 +1,72 @@
+{
+    "produced_on": "2024-04-12T08:47:45.221695589Z",
+    "source_location": "",
+    "full_name": "android.hardware.biometrics.ITestSession",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"enableTestHal": "readBool"}],
+            "name": "setTestHalEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"userId": "readInt32"}],
+            "name": "startEnroll",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"userId": "readInt32"}],
+            "name": "finishEnroll",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"userId": "readInt32"}],
+            "name": "acceptAuthentication",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"userId": "readInt32"}],
+            "name": "rejectAuthentication",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"userId": "readInt32"},
+                {"acquireInfo": "readInt32"}
+            ],
+            "name": "notifyAcquired",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"userId": "readInt32"},
+                {"errorCode": "readInt32"}
+            ],
+            "name": "notifyError",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{"userId": "readInt32"}],
+            "name": "cleanupInternalState",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ITestSession",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

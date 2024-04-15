@@ -1,0 +1,84 @@
+{
+    "produced_on": "2024-04-12T08:47:45.109953688Z",
+    "source_location": "",
+    "full_name": "android.content.pm.IPinItemRequest",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "isValid",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"options": "readBundle"}]
+                }
+            ],
+            "name": "accept",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getShortcutInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.ShortcutInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "getAppWidgetProviderInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.appwidget.AppWidgetProviderInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "getExtras",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"__return": "readBundle"}]
+                }
+            ]
+        }
+    ],
+    "name": "IPinItemRequest",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

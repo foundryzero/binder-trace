@@ -1,0 +1,71 @@
+{
+    "produced_on": "2024-04-12T08:47:52.931938950Z",
+    "source_location": "",
+    "full_name": "android.hardware.power.IPowerHintSession",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"targetDurationNanos": "readInt64"}],
+            "name": "updateTargetWorkDuration",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{
+                "durations": "readParcelableVector",
+                "__parcelType": "android.hardware.power.WorkDuration"
+            }],
+            "name": "reportActualWorkDuration",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "pause",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "resume",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "close",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "hint": "readParcelable",
+                        "__parcelType": "android.hardware.power.SessionHint"
+                    }]
+                }
+            ],
+            "name": "sendHint",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"threadIds": "readInt32Vector"}],
+            "name": "setThreads",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IPowerHintSession",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,39 @@
+{
+    "produced_on": "2024-04-12T08:47:57.103065451Z",
+    "source_location": "",
+    "components": [
+        {"ssid": "readByteVector"},
+        {"bssid": "readByteVector"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "statusCode": "readParcelable",
+                "__parcelType": "android.hardware.wifi.supplicant.StaIfaceStatusCode"
+            }]
+        },
+        {"timedOut": "readBool"},
+        {"isMboAssocDisallowedReasonCodePresent": "readBool"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "mboAssocDisallowedReason": "readParcelable",
+                "__parcelType": "android.hardware.wifi.supplicant.MboAssocDisallowedReasonCode"
+            }]
+        },
+        {"isOceRssiBasedAssocRejectAttrPresent": "readBool"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "oceRssiBasedAssocRejectData": "readParcelable",
+                "__parcelType": "android.hardware.wifi.supplicant.OceRssiBasedAssocRejectAttr"
+            }]
+        }
+    ],
+    "full_name": "android.hardware.wifi.supplicant.AssociationRejectionData",
+    "name": "AssociationRejectionData",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

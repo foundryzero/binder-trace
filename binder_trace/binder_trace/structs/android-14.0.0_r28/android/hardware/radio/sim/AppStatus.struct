@@ -1,0 +1,51 @@
+{
+    "produced_on": "2024-04-12T08:47:54.293582118Z",
+    "source_location": "",
+    "components": [
+        {"APP_STATE_UNKNOWN": "readInt32"},
+        {"APP_STATE_DETECTED": "readInt32"},
+        {"APP_STATE_PIN": "readInt32"},
+        {"APP_STATE_PUK": "readInt32"},
+        {"APP_STATE_SUBSCRIPTION_PERSO": "readInt32"},
+        {"APP_STATE_READY": "readInt32"},
+        {"APP_TYPE_UNKNOWN": "readInt32"},
+        {"APP_TYPE_SIM": "readInt32"},
+        {"APP_TYPE_USIM": "readInt32"},
+        {"APP_TYPE_RUIM": "readInt32"},
+        {"APP_TYPE_CSIM": "readInt32"},
+        {"APP_TYPE_ISIM": "readInt32"},
+        {"appType": "readInt32"},
+        {"appState": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "persoSubstate": "readParcelable",
+                "__parcelType": "android.hardware.radio.sim.PersoSubstate"
+            }]
+        },
+        {"aidPtr": "readString16"},
+        {"appLabelPtr": "readString16"},
+        {"pin1Replaced": "readBool"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "pin1": "readParcelable",
+                "__parcelType": "android.hardware.radio.sim.PinState"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "pin2": "readParcelable",
+                "__parcelType": "android.hardware.radio.sim.PinState"
+            }]
+        }
+    ],
+    "full_name": "android.hardware.radio.sim.AppStatus",
+    "name": "AppStatus",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

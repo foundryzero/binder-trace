@@ -1,0 +1,39 @@
+{
+    "produced_on": "2024-04-12T08:47:58.890045699Z",
+    "source_location": "",
+    "full_name": "com.android.ondevicepersonalization.libraries.plugin.internal.IPluginCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"output": "readBundle"}]
+                }
+            ],
+            "name": "onSuccess",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "failureType": "readParcelable",
+                        "__parcelType": "com.android.ondevicepersonalization.libraries.plugin.FailureType"
+                    }]
+                }
+            ],
+            "name": "onFailure",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IPluginCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

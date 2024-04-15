@@ -1,0 +1,69 @@
+{
+    "produced_on": "2024-04-12T08:47:57.725268999Z",
+    "source_location": "",
+    "full_name": "android.system.virtualizationservice.IVirtualMachineCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"cid": "readInt32"}],
+            "name": "onPayloadStarted",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"cid": "readInt32"}],
+            "name": "onPayloadReady",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"cid": "readInt32"},
+                {"exitCode": "readInt32"}
+            ],
+            "name": "onPayloadFinished",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"cid": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "errorCode": "readParcelable",
+                        "__parcelType": "android.system.virtualizationcommon.ErrorCode"
+                    }]
+                },
+                {"message": "readString16"}
+            ],
+            "name": "onError",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"cid": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "reason": "readParcelable",
+                        "__parcelType": "android.system.virtualizationcommon.DeathReason"
+                    }]
+                }
+            ],
+            "name": "onDied",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IVirtualMachineCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

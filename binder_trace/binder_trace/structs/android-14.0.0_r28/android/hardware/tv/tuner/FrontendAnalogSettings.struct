@@ -1,0 +1,44 @@
+{
+    "produced_on": "2024-04-12T08:47:55.742332212Z",
+    "source_location": "",
+    "components": [
+        {"frequency": "readInt64"},
+        {"endFrequency": "readInt64"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "inversion": "readParcelable",
+                "__parcelType": "android.hardware.tv.tuner.FrontendSpectralInversion"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "type": "readParcelable",
+                "__parcelType": "android.hardware.tv.tuner.FrontendAnalogType"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "aftFlag": "readParcelable",
+                "__parcelType": "android.hardware.tv.tuner.FrontendAnalogAftFlag"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "sifStandard": "readParcelable",
+                "__parcelType": "android.hardware.tv.tuner.FrontendAnalogSifStandard"
+            }]
+        }
+    ],
+    "full_name": "android.hardware.tv.tuner.FrontendAnalogSettings",
+    "name": "FrontendAnalogSettings",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

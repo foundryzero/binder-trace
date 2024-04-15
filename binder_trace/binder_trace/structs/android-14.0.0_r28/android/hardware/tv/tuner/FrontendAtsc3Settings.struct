@@ -1,0 +1,40 @@
+{
+    "produced_on": "2024-04-12T08:47:55.751404292Z",
+    "source_location": "",
+    "components": [
+        {"frequency": "readInt64"},
+        {"endFrequency": "readInt64"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "bandwidth": "readParcelable",
+                "__parcelType": "android.hardware.tv.tuner.FrontendAtsc3Bandwidth"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "inversion": "readParcelable",
+                "__parcelType": "android.hardware.tv.tuner.FrontendSpectralInversion"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "demodOutputFormat": "readParcelable",
+                "__parcelType": "android.hardware.tv.tuner.FrontendAtsc3DemodOutputFormat"
+            }]
+        },
+        {
+            "plpSettings": "readParcelableVector",
+            "__parcelType": "android.hardware.tv.tuner.FrontendAtsc3PlpSettings"
+        }
+    ],
+    "full_name": "android.hardware.tv.tuner.FrontendAtsc3Settings",
+    "name": "FrontendAtsc3Settings",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

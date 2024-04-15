@@ -1,0 +1,33 @@
+{
+    "produced_on": "2024-04-12T08:47:55.850514605Z",
+    "source_location": "",
+    "full_name": "android.hardware.tv.tuner.ILnbCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"diseqcMessage": "readByteVector"}],
+            "name": "onDiseqcMessage",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "lnbEventType": "readParcelable",
+                        "__parcelType": "android.hardware.tv.tuner.LnbEventType"
+                    }]
+                }
+            ],
+            "name": "onEvent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ILnbCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

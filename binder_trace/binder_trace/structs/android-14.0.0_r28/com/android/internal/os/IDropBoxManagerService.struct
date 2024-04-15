@@ -1,0 +1,92 @@
+{
+    "produced_on": "2024-04-12T08:47:46.270543686Z",
+    "source_location": "",
+    "full_name": "com.android.internal.os.IDropBoxManagerService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"tag": "readString16"},
+                {"data": "readByteVector"},
+                {"flags": "readInt32"}
+            ],
+            "name": "addData",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"tag": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "fd": "readParcelable",
+                        "__parcelType": "android.os.ParcelFileDescriptor"
+                    }]
+                },
+                {"flags": "readInt32"}
+            ],
+            "name": "addFile",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"tag": "readString16"}],
+            "name": "isTagEnabled",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"tag": "readString16"},
+                {"millis": "readInt64"},
+                {"packageName": "readString16"}
+            ],
+            "name": "getNextEntry",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.internal.os.DropBoxManager.Entry"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"tag": "readString16"},
+                {"millis": "readInt64"},
+                {"packageName": "readString16"},
+                {"attributionTag": "readString16"}
+            ],
+            "name": "getNextEntryWithAttribution",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.internal.os.DropBoxManager.Entry"
+                    }]
+                }
+            ]
+        }
+    ],
+    "name": "IDropBoxManagerService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

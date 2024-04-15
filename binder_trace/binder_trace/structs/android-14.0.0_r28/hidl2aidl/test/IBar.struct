@@ -1,0 +1,46 @@
+{
+    "produced_on": "2024-04-12T08:48:00.403178433Z",
+    "source_location": "",
+    "full_name": "hidl2aidl.test.IBar",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "inner": "readParcelable",
+                        "__parcelType": "hidl2aidl.test.IBar.Inner"
+                    }]
+                }
+            ],
+            "name": "extraMethod",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"a": "readString16"},
+                {"b": "readByte"}
+            ],
+            "name": "someBar",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"a": "readByte"}],
+            "name": "someFoo",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IBar",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,33 @@
+{
+    "produced_on": "2024-04-12T08:47:57.306539502Z",
+    "source_location": "",
+    "full_name": "android.adservices.topics.ITopicsService",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "param": "readParcelable",
+                    "__parcelType": "android.adservices.topics.GetTopicsParam"
+                }]
+            },
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "callerMetadata": "readParcelable",
+                    "__parcelType": "android.adservices.common.CallerMetadata"
+                }]
+            },
+            {"callback": "readStrongBinder"}
+        ],
+        "name": "getTopics",
+        "oneWay": false,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "ITopicsService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

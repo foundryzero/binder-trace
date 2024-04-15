@@ -1,0 +1,32 @@
+{
+    "produced_on": "2024-04-12T08:47:58.992511818Z",
+    "source_location": "",
+    "full_name": "android.car.hardware.power.ICarPowerPolicyListener",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "appliedPolicy": "readParcelable",
+                    "__parcelType": "android.car.hardware.power.CarPowerPolicy"
+                }]
+            },
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "accumulatedPolicy": "readParcelable",
+                    "__parcelType": "android.car.hardware.power.CarPowerPolicy"
+                }]
+            }
+        ],
+        "name": "onPolicyChanged",
+        "oneWay": true,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "ICarPowerPolicyListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

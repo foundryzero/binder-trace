@@ -1,0 +1,57 @@
+{
+    "produced_on": "2024-04-12T08:47:45.689648140Z",
+    "source_location": "",
+    "full_name": "android.service.assist.classification.IFieldClassificationCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"cancellation": "readStrongBinder"}],
+            "name": "onCancellable",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "response": "readParcelable",
+                        "__parcelType": "android.service.assist.classification.FieldClassificationResponse"
+                    }]
+                }
+            ],
+            "name": "onSuccess",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "onFailure",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "isCompleted",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "cancel",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IFieldClassificationCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

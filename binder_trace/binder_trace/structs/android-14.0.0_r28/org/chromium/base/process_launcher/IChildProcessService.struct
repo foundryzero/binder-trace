@@ -1,0 +1,89 @@
+{
+    "produced_on": "2024-04-12T08:47:43.921835734Z",
+    "source_location": "",
+    "full_name": "org.chromium.base.process_launcher.IChildProcessService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"clazz": "readString16"}],
+            "name": "bindToCaller",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "getAppInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.content.pm.ApplicationInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"args": "readBundle"}]
+                },
+                {"parentProcess": "readStrongBinder"},
+                {
+                    "clientInterfaces": "readList",
+                    "__parcelType": "IBinder"
+                }
+            ],
+            "name": "setupConnection",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "forceKill",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"pressure": "readInt32"}],
+            "name": "onMemoryPressure",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "dumpProcessStack",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"bundle": "readBundle"}]
+                }
+            ],
+            "name": "consumeRelroBundle",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IChildProcessService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

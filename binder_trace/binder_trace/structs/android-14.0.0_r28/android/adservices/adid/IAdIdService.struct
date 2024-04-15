@@ -1,0 +1,33 @@
+{
+    "produced_on": "2024-04-12T08:47:57.253944776Z",
+    "source_location": "",
+    "full_name": "android.adservices.adid.IAdIdService",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "adIdParam": "readParcelable",
+                    "__parcelType": "android.adservices.adid.GetAdIdParam"
+                }]
+            },
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "callerMetadata": "readParcelable",
+                    "__parcelType": "android.adservices.common.CallerMetadata"
+                }]
+            },
+            {"callback": "readStrongBinder"}
+        ],
+        "name": "getAdId",
+        "oneWay": false,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "IAdIdService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

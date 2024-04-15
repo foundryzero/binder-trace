@@ -1,0 +1,88 @@
+{
+    "produced_on": "2024-04-12T08:47:44.001117770Z",
+    "source_location": "",
+    "full_name": "com.android.cts.voiceinteraction.ITestVoiceInteractionService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "registerListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"keyphrase": "readString16"},
+                {"locale": "readString16"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "createAlwaysOnHotwordDetector",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"keyphrase": "readString16"},
+                {"locale": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "options": "readParcelable",
+                        "__parcelType": "android.os.PersistableBundle"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sharedMemory": "readParcelable",
+                        "__parcelType": "android.os.SharedMemory"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "createAlwaysOnHotwordDetectorWithTrustedService",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "createKeyphraseModelManager",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "getDspModuleProperties",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.soundtrigger.SoundTrigger.ModuleProperties"
+                    }]
+                }
+            ]
+        }
+    ],
+    "name": "ITestVoiceInteractionService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

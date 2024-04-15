@@ -1,0 +1,83 @@
+{
+    "produced_on": "2024-04-12T08:47:57.943089666Z",
+    "source_location": "",
+    "full_name": "android.net.wifi.p2p.IWifiP2pManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"binder": "readStrongBinder"},
+                {"packageName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"extras": "readBundle"}]
+                }
+            ],
+            "name": "getMessenger",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.os.Messenger"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "getP2pStateMachineMessenger",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.os.Messenger"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"binder": "readStrongBinder"}],
+            "name": "close",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"mode": "readInt32"}],
+            "name": "setMiracastMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "checkConfigureWifiDisplayPermission",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "getSupportedFeatures",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        }
+    ],
+    "name": "IWifiP2pManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,56 @@
+{
+    "produced_on": "2024-04-12T08:47:43.998046939Z",
+    "source_location": "",
+    "full_name": "com.android.cts.voiceinteraction.IProxyKeyphraseModelManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"keyphraseId": "readInt32"},
+                {"locale": "readString16"}
+            ],
+            "name": "getKeyphraseSoundModel",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.soundtrigger.SoundTrigger.KeyphraseSoundModel"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "model": "readParcelable",
+                        "__parcelType": "android.hardware.soundtrigger.SoundTrigger.KeyphraseSoundModel"
+                    }]
+                }
+            ],
+            "name": "updateKeyphraseSoundModel",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"keyphraseId": "readInt32"},
+                {"locale": "readString16"}
+            ],
+            "name": "deleteKeyphraseSoundModel",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IProxyKeyphraseModelManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,580 @@
+{
+    "produced_on": "2024-04-12T08:47:51.228216051Z",
+    "source_location": "",
+    "full_name": "android.hardware.drm.IDrmPlugin",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"sessionId": "readByteVector"}],
+            "name": "closeSession",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"sessionId": "readByteVector"},
+                {"keyId": "readByteVector"},
+                {"input": "readByteVector"},
+                {"iv": "readByteVector"}
+            ],
+            "name": "decrypt",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"sessionId": "readByteVector"},
+                {"keyId": "readByteVector"},
+                {"input": "readByteVector"},
+                {"iv": "readByteVector"}
+            ],
+            "name": "encrypt",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "getHdcpLevels",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.drm.HdcpLevels"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"scope": "readByteVector"},
+                {"initData": "readByteVector"},
+                {"mimeType": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "keyType": "readParcelable",
+                        "__parcelType": "android.hardware.drm.KeyType"
+                    }]
+                },
+                {
+                    "optionalParameters": "readParcelableVector",
+                    "__parcelType": "android.hardware.drm.KeyValue"
+                }
+            ],
+            "name": "getKeyRequest",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.drm.KeyRequest"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "getLogMessages",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.hardware.drm.LogMessage"
+                }
+            ]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "getMetrics",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.hardware.drm.DrmMetricGroup"
+                }
+            ]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "getNumberOfSessions",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.drm.NumberOfSessions"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 9,
+            "in": [],
+            "name": "getOfflineLicenseKeySetIds",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.hardware.drm.KeySetId"
+                }
+            ]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "keySetId": "readParcelable",
+                        "__parcelType": "android.hardware.drm.KeySetId"
+                    }]
+                }
+            ],
+            "name": "getOfflineLicenseState",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.drm.OfflineLicenseState"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 11,
+            "in": [{"propertyName": "readString16"}],
+            "name": "getPropertyByteArray",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [{"propertyName": "readString16"}],
+            "name": "getPropertyString",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"certificateType": "readString16"},
+                {"certificateAuthority": "readString16"}
+            ],
+            "name": "getProvisionRequest",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.drm.ProvisionRequest"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "secureStopId": "readParcelable",
+                        "__parcelType": "android.hardware.drm.SecureStopId"
+                    }]
+                }
+            ],
+            "name": "getSecureStop",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.drm.SecureStop"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 15,
+            "in": [],
+            "name": "getSecureStopIds",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.hardware.drm.SecureStopId"
+                }
+            ]
+        },
+        {
+            "code": 16,
+            "in": [],
+            "name": "getSecureStops",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.hardware.drm.SecureStop"
+                }
+            ]
+        },
+        {
+            "code": 17,
+            "in": [{"sessionId": "readByteVector"}],
+            "name": "getSecurityLevel",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.drm.SecurityLevel"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "securityLevel": "readParcelable",
+                        "__parcelType": "android.hardware.drm.SecurityLevel"
+                    }]
+                }
+            ],
+            "name": "openSession",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 19,
+            "in": [
+                {"scope": "readByteVector"},
+                {"response": "readByteVector"}
+            ],
+            "name": "provideKeyResponse",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.drm.KeySetId"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 20,
+            "in": [{"response": "readByteVector"}],
+            "name": "provideProvisionResponse",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.drm.ProvideProvisionResponseResult"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 21,
+            "in": [{"sessionId": "readByteVector"}],
+            "name": "queryKeyStatus",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.hardware.drm.KeyValue"
+                }
+            ]
+        },
+        {
+            "code": 22,
+            "in": [],
+            "name": "releaseAllSecureStops",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 23,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "secureStopId": "readParcelable",
+                        "__parcelType": "android.hardware.drm.SecureStopId"
+                    }]
+                }
+            ],
+            "name": "releaseSecureStop",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 24,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "ssRelease": "readParcelable",
+                        "__parcelType": "android.hardware.drm.OpaqueData"
+                    }]
+                }
+            ],
+            "name": "releaseSecureStops",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 25,
+            "in": [],
+            "name": "removeAllSecureStops",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 26,
+            "in": [{"sessionId": "readByteVector"}],
+            "name": "removeKeys",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 27,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "keySetId": "readParcelable",
+                        "__parcelType": "android.hardware.drm.KeySetId"
+                    }]
+                }
+            ],
+            "name": "removeOfflineLicense",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 28,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "secureStopId": "readParcelable",
+                        "__parcelType": "android.hardware.drm.SecureStopId"
+                    }]
+                }
+            ],
+            "name": "removeSecureStop",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 29,
+            "in": [
+                {"mime": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "level": "readParcelable",
+                        "__parcelType": "android.hardware.drm.SecurityLevel"
+                    }]
+                }
+            ],
+            "name": "requiresSecureDecoder",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 30,
+            "in": [
+                {"sessionId": "readByteVector"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "keySetId": "readParcelable",
+                        "__parcelType": "android.hardware.drm.KeySetId"
+                    }]
+                }
+            ],
+            "name": "restoreKeys",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 31,
+            "in": [
+                {"sessionId": "readByteVector"},
+                {"algorithm": "readString16"}
+            ],
+            "name": "setCipherAlgorithm",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 32,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "setListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 33,
+            "in": [
+                {"sessionId": "readByteVector"},
+                {"algorithm": "readString16"}
+            ],
+            "name": "setMacAlgorithm",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 34,
+            "in": [
+                {"sessionId": "readByteVector"},
+                {"playbackId": "readString16"}
+            ],
+            "name": "setPlaybackId",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 35,
+            "in": [
+                {"propertyName": "readString16"},
+                {"value": "readByteVector"}
+            ],
+            "name": "setPropertyByteArray",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 36,
+            "in": [
+                {"propertyName": "readString16"},
+                {"value": "readString16"}
+            ],
+            "name": "setPropertyString",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 37,
+            "in": [
+                {"sessionId": "readByteVector"},
+                {"keyId": "readByteVector"},
+                {"message": "readByteVector"}
+            ],
+            "name": "sign",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 38,
+            "in": [
+                {"sessionId": "readByteVector"},
+                {"algorithm": "readString16"},
+                {"message": "readByteVector"},
+                {"wrappedkey": "readByteVector"}
+            ],
+            "name": "signRSA",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 39,
+            "in": [
+                {"sessionId": "readByteVector"},
+                {"keyId": "readByteVector"},
+                {"message": "readByteVector"},
+                {"signature": "readByteVector"}
+            ],
+            "name": "verify",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "IDrmPlugin",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

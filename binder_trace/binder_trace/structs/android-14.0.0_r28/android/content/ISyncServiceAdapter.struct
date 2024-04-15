@@ -1,0 +1,31 @@
+{
+    "produced_on": "2024-04-12T08:47:45.012375979Z",
+    "source_location": "",
+    "full_name": "android.content.ISyncServiceAdapter",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"syncContext": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"extras": "readBundle"}]
+                }
+            ],
+            "name": "startSync",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"syncContext": "readStrongBinder"}],
+            "name": "cancelSync",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISyncServiceAdapter",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

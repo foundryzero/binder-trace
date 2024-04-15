@@ -1,0 +1,393 @@
+{
+    "produced_on": "2024-04-12T08:47:54.354097564Z",
+    "source_location": "",
+    "full_name": "android.hardware.radio.voice.IRadioVoice",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"serial": "readInt32"}],
+            "name": "acceptCall",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"serial": "readInt32"}],
+            "name": "cancelPendingUssd",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"serial": "readInt32"}],
+            "name": "conference",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "dialInfo": "readParcelable",
+                        "__parcelType": "android.hardware.radio.voice.Dial"
+                    }]
+                }
+            ],
+            "name": "dial",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "dialInfo": "readParcelable",
+                        "__parcelType": "android.hardware.radio.voice.Dial"
+                    }]
+                },
+                {"categories": "readInt32"},
+                {"urns": "readString16Vector"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "routing": "readParcelable",
+                        "__parcelType": "android.hardware.radio.voice.EmergencyCallRouting"
+                    }]
+                },
+                {"hasKnownUserIntentEmergency": "readBool"},
+                {"isTesting": "readBool"}
+            ],
+            "name": "emergencyDial",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"serial": "readInt32"}],
+            "name": "exitEmergencyCallbackMode",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"serial": "readInt32"}],
+            "name": "explicitCallTransfer",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callInfo": "readParcelable",
+                        "__parcelType": "android.hardware.radio.voice.CallForwardInfo"
+                    }]
+                }
+            ],
+            "name": "getCallForwardStatus",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"serial": "readInt32"},
+                {"serviceClass": "readInt32"}
+            ],
+            "name": "getCallWaiting",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [{"serial": "readInt32"}],
+            "name": "getClip",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [{"serial": "readInt32"}],
+            "name": "getClir",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [{"serial": "readInt32"}],
+            "name": "getCurrentCalls",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [{"serial": "readInt32"}],
+            "name": "getLastCallFailCause",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [{"serial": "readInt32"}],
+            "name": "getMute",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [{"serial": "readInt32"}],
+            "name": "getPreferredVoicePrivacy",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [{"serial": "readInt32"}],
+            "name": "getTtyMode",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [
+                {"serial": "readInt32"},
+                {"accept": "readBool"}
+            ],
+            "name": "handleStkCallSetupRequestFromSim",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"serial": "readInt32"},
+                {"gsmIndex": "readInt32"}
+            ],
+            "name": "hangup",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 19,
+            "in": [{"serial": "readInt32"}],
+            "name": "hangupForegroundResumeBackground",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 20,
+            "in": [{"serial": "readInt32"}],
+            "name": "hangupWaitingOrBackground",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 21,
+            "in": [{"serial": "readInt32"}],
+            "name": "isVoNrEnabled",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 22,
+            "in": [{"serial": "readInt32"}],
+            "name": "rejectCall",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 23,
+            "in": [],
+            "name": "responseAcknowledgement",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 24,
+            "in": [
+                {"serial": "readInt32"},
+                {"dtmf": "readString16"},
+                {"on": "readInt32"},
+                {"off": "readInt32"}
+            ],
+            "name": "sendBurstDtmf",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 25,
+            "in": [
+                {"serial": "readInt32"},
+                {"featureCode": "readString16"}
+            ],
+            "name": "sendCdmaFeatureCode",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 26,
+            "in": [
+                {"serial": "readInt32"},
+                {"s": "readString16"}
+            ],
+            "name": "sendDtmf",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 27,
+            "in": [
+                {"serial": "readInt32"},
+                {"ussd": "readString16"}
+            ],
+            "name": "sendUssd",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 28,
+            "in": [
+                {"serial": "readInt32"},
+                {"gsmIndex": "readInt32"}
+            ],
+            "name": "separateConnection",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 29,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callInfo": "readParcelable",
+                        "__parcelType": "android.hardware.radio.voice.CallForwardInfo"
+                    }]
+                }
+            ],
+            "name": "setCallForward",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 30,
+            "in": [
+                {"serial": "readInt32"},
+                {"enable": "readBool"},
+                {"serviceClass": "readInt32"}
+            ],
+            "name": "setCallWaiting",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 31,
+            "in": [
+                {"serial": "readInt32"},
+                {"status": "readInt32"}
+            ],
+            "name": "setClir",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 32,
+            "in": [
+                {"serial": "readInt32"},
+                {"enable": "readBool"}
+            ],
+            "name": "setMute",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 33,
+            "in": [
+                {"serial": "readInt32"},
+                {"enable": "readBool"}
+            ],
+            "name": "setPreferredVoicePrivacy",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 34,
+            "in": [
+                {"radioVoiceResponse": "readStrongBinder"},
+                {"radioVoiceIndication": "readStrongBinder"}
+            ],
+            "name": "setResponseFunctions",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 35,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "mode": "readParcelable",
+                        "__parcelType": "android.hardware.radio.voice.TtyMode"
+                    }]
+                }
+            ],
+            "name": "setTtyMode",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 36,
+            "in": [
+                {"serial": "readInt32"},
+                {"enable": "readBool"}
+            ],
+            "name": "setVoNrEnabled",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 37,
+            "in": [
+                {"serial": "readInt32"},
+                {"s": "readString16"}
+            ],
+            "name": "startDtmf",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 38,
+            "in": [{"serial": "readInt32"}],
+            "name": "stopDtmf",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 39,
+            "in": [{"serial": "readInt32"}],
+            "name": "switchWaitingOrHoldingAndActive",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IRadioVoice",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,110 @@
+{
+    "produced_on": "2024-04-12T08:47:59.423043570Z",
+    "source_location": "",
+    "full_name": "android.automotive.watchdog.internal.ICarWatchdogServiceForSystem",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"sessionId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "timeout": "readParcelable",
+                        "__parcelType": "android.automotive.watchdog.internal.TimeoutLength"
+                    }]
+                }
+            ],
+            "name": "checkIfAlive",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "prepareProcessTermination",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"uids": "readInt32Vector"},
+                {
+                    "vendorPackagePrefixes": "readList",
+                    "__parcelType": "String"
+                }
+            ],
+            "name": "getPackageInfosForUids",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.automotive.watchdog.internal.PackageInfo"
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{
+                "packageIoOveruseStats": "readList",
+                "__parcelType": "android.automotive.watchdog.internal.PackageIoOveruseStats"
+            }],
+            "name": "latestIoOveruseStats",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{
+                "packageNames": "readList",
+                "__parcelType": "String"
+            }],
+            "name": "resetResourceOveruseStats",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "getTodayIoUsageStats",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.automotive.watchdog.internal.UserPackageIoUsageStats"
+                }
+            ]
+        },
+        {
+            "code": 7,
+            "in": [{
+                "resourceStats": "readList",
+                "__parcelType": "android.automotive.watchdog.internal.ResourceStats"
+            }],
+            "name": "onLatestResourceStats",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "requestAidlVhalPid",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [],
+            "name": "requestTodayIoUsageStats",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICarWatchdogServiceForSystem",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

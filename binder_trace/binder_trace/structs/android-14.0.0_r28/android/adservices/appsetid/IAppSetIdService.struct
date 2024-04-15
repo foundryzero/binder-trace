@@ -1,0 +1,33 @@
+{
+    "produced_on": "2024-04-12T08:47:57.282046485Z",
+    "source_location": "",
+    "full_name": "android.adservices.appsetid.IAppSetIdService",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "appSetIdParam": "readParcelable",
+                    "__parcelType": "android.adservices.appsetid.GetAppSetIdParam"
+                }]
+            },
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "callerMetadata": "readParcelable",
+                    "__parcelType": "android.adservices.common.CallerMetadata"
+                }]
+            },
+            {"callback": "readStrongBinder"}
+        ],
+        "name": "getAppSetId",
+        "oneWay": false,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "IAppSetIdService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

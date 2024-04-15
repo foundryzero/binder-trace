@@ -1,0 +1,66 @@
+{
+    "produced_on": "2024-04-12T08:47:44.950298925Z",
+    "source_location": "",
+    "full_name": "android.app.wearable.IWearableSensingManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "parcelFileDescriptor": "readParcelable",
+                        "__parcelType": "android.os.ParcelFileDescriptor"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callback": "readParcelable",
+                        "__parcelType": "android.os.RemoteCallback"
+                    }]
+                }
+            ],
+            "name": "provideDataStream",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "data": "readParcelable",
+                        "__parcelType": "android.os.PersistableBundle"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sharedMemory": "readParcelable",
+                        "__parcelType": "android.os.SharedMemory"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callback": "readParcelable",
+                        "__parcelType": "android.os.RemoteCallback"
+                    }]
+                }
+            ],
+            "name": "provideData",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IWearableSensingManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

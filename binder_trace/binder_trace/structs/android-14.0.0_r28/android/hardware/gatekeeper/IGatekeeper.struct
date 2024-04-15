@@ -1,0 +1,68 @@
+{
+    "produced_on": "2024-04-12T08:47:51.281452391Z",
+    "source_location": "",
+    "full_name": "android.hardware.gatekeeper.IGatekeeper",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "deleteAllUsers",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"uid": "readInt32"}],
+            "name": "deleteUser",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"uid": "readInt32"},
+                {"currentPasswordHandle": "readByteVector"},
+                {"currentPassword": "readByteVector"},
+                {"desiredPassword": "readByteVector"}
+            ],
+            "name": "enroll",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.gatekeeper.GatekeeperEnrollResponse"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"uid": "readInt32"},
+                {"challenge": "readInt64"},
+                {"enrolledPasswordHandle": "readByteVector"},
+                {"providedPassword": "readByteVector"}
+            ],
+            "name": "verify",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.gatekeeper.GatekeeperVerifyResponse"
+                    }]
+                }
+            ]
+        }
+    ],
+    "name": "IGatekeeper",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

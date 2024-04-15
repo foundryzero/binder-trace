@@ -1,0 +1,25 @@
+{
+    "produced_on": "2024-04-12T08:47:54.258466409Z",
+    "source_location": "",
+    "components": [
+        {"SCAN_STATUS_PARTIAL": "readInt32"},
+        {"SCAN_STATUS_COMPLETE": "readInt32"},
+        {"status": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "error": "readParcelable",
+                "__parcelType": "android.hardware.radio.RadioError"
+            }]
+        },
+        {
+            "networkInfos": "readParcelableVector",
+            "__parcelType": "android.hardware.radio.network.CellInfo"
+        }
+    ],
+    "full_name": "android.hardware.radio.network.NetworkScanResult",
+    "name": "NetworkScanResult",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

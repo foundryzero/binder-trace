@@ -1,0 +1,125 @@
+{
+    "produced_on": "2024-04-12T08:47:57.294155736Z",
+    "source_location": "",
+    "full_name": "android.adservices.customaudience.ICustomAudienceService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "customAudience": "readParcelable",
+                        "__parcelType": "android.adservices.customaudience.CustomAudience"
+                    }]
+                },
+                {"ownerPackageName": "readString16"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "joinCustomAudience",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"ownerPackageName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "buyer": "readParcelable",
+                        "__parcelType": "android.adservices.common.AdTechIdentifier"
+                    }]
+                },
+                {"name": "readString16"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "leaveCustomAudience",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"ownerPackageName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "buyer": "readParcelable",
+                        "__parcelType": "android.adservices.common.AdTechIdentifier"
+                    }]
+                },
+                {"name": "readString16"},
+                {"biddingLogicJS": "readString16"},
+                {"biddingLogicJsVersion": "readInt64"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "trustedBiddingData": "readParcelable",
+                        "__parcelType": "android.adservices.common.AdSelectionSignals"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callback": "readParcelable",
+                        "__parcelType": "android.adservices.customaudience.CustomAudienceOverrideCallback"
+                    }]
+                }
+            ],
+            "name": "overrideCustomAudienceRemoteInfo",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"ownerPackageName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "buyer": "readParcelable",
+                        "__parcelType": "android.adservices.common.AdTechIdentifier"
+                    }]
+                },
+                {"name": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callback": "readParcelable",
+                        "__parcelType": "android.adservices.customaudience.CustomAudienceOverrideCallback"
+                    }]
+                }
+            ],
+            "name": "removeCustomAudienceRemoteInfoOverride",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callback": "readParcelable",
+                        "__parcelType": "android.adservices.customaudience.CustomAudienceOverrideCallback"
+                    }]
+                }
+            ],
+            "name": "resetAllCustomAudienceOverrides",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICustomAudienceService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

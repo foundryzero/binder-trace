@@ -1,0 +1,47 @@
+{
+    "produced_on": "2024-04-12T08:47:46.773459462Z",
+    "source_location": "",
+    "full_name": "com.android.internal.telecom.ICallStreamingService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"streamingCallAdapter": "readStrongBinder"}],
+            "name": "setStreamingCallAdapter",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "call": "readParcelable",
+                        "__parcelType": "android.telecom.StreamingCall"
+                    }]
+                }
+            ],
+            "name": "onCallStreamingStarted",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "onCallStreamingStopped",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"state": "readInt32"}],
+            "name": "onCallStreamingStateChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICallStreamingService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

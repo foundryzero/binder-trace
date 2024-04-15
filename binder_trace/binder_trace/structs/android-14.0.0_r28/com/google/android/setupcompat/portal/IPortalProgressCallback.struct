@@ -1,0 +1,111 @@
+{
+    "produced_on": "2024-04-12T08:47:43.961029113Z",
+    "source_location": "",
+    "full_name": "com.google.android.setupcompat.portal.IPortalProgressCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"completed": "readInt32"},
+                {"failed": "readInt32"},
+                {"total": "readInt32"}
+            ],
+            "name": "setProgressCount",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"__return": "readBundle"}]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"percentage": "readInt32"}],
+            "name": "setProgressPercentage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"__return": "readBundle"}]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"summary": "readString16"}],
+            "name": "setSummary",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"__return": "readBundle"}]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"reasonResId": "readInt32"},
+                {"quantity": "readInt32"},
+                {"formatArgs": "readInt32Vector"},
+                {"reason": "readInt32"}
+            ],
+            "name": "setPendingReason",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"__return": "readBundle"}]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"resId": "readInt32"},
+                {"quantity": "readInt32"},
+                {"formatArgs": "readInt32Vector"}
+            ],
+            "name": "setComplete",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"__return": "readBundle"}]
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"resId": "readInt32"},
+                {"quantity": "readInt32"},
+                {"formatArgs": "readInt32Vector"}
+            ],
+            "name": "setFailure",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"__return": "readBundle"}]
+                }
+            ]
+        }
+    ],
+    "name": "IPortalProgressCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

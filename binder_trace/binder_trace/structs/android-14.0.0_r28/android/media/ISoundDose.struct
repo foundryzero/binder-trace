@@ -1,0 +1,91 @@
+{
+    "produced_on": "2024-04-12T08:47:44.376465530Z",
+    "source_location": "",
+    "full_name": "android.media.ISoundDose",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"rs2Value": "readFloat"}],
+            "name": "setOutputRs2UpperBound",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"currentCsd": "readFloat"},
+                {
+                    "records": "readParcelableVector",
+                    "__parcelType": "android.media.SoundDoseRecord"
+                }
+            ],
+            "name": "resetCsd",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"attenuationDB": "readFloat"},
+                {"device": "readInt32"}
+            ],
+            "name": "updateAttenuation",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"enabled": "readBool"}],
+            "name": "setCsdEnabled",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "getOutputRs2UpperBound",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readFloat"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "getCsd",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readFloat"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "isSoundDoseHalSupported",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [{"useFrameworkMel": "readBool"}],
+            "name": "forceUseFrameworkMel",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [{"computeCsdOnAllDevices": "readBool"}],
+            "name": "forceComputeCsdOnAllDevices",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISoundDose",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

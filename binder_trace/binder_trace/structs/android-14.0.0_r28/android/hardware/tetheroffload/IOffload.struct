@@ -1,0 +1,109 @@
+{
+    "produced_on": "2024-04-12T08:47:54.804083563Z",
+    "source_location": "",
+    "full_name": "android.hardware.tetheroffload.IOffload",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "fd1": "readParcelable",
+                        "__parcelType": "android.hardware.tetheroffload.ParcelFileDescriptor"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "fd2": "readParcelable",
+                        "__parcelType": "android.hardware.tetheroffload.ParcelFileDescriptor"
+                    }]
+                },
+                {"cb": "readStrongBinder"}
+            ],
+            "name": "initOffload",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "stopOffload",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"prefixes": "readString16Vector"}],
+            "name": "setLocalPrefixes",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"upstream": "readString16"}],
+            "name": "getForwardedStats",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.tetheroffload.ForwardedStats"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"upstream": "readString16"},
+                {"warningBytes": "readInt64"},
+                {"limitBytes": "readInt64"}
+            ],
+            "name": "setDataWarningAndLimit",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"iface": "readString16"},
+                {"v4Addr": "readString16"},
+                {"v4Gw": "readString16"},
+                {"v6Gws": "readString16Vector"}
+            ],
+            "name": "setUpstreamParameters",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"iface": "readString16"},
+                {"prefix": "readString16"}
+            ],
+            "name": "addDownstream",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"iface": "readString16"},
+                {"prefix": "readString16"}
+            ],
+            "name": "removeDownstream",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IOffload",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,124 @@
+{
+    "produced_on": "2024-04-12T08:47:50.076922821Z",
+    "source_location": "",
+    "full_name": "android.hardware.boot.IBootControl",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getActiveBootSlot",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "getCurrentSlot",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getNumberSlots",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "getSnapshotMergeStatus",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.boot.MergeStatus"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"slot": "readInt32"}],
+            "name": "getSuffix",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [{"slot": "readInt32"}],
+            "name": "isSlotBootable",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [{"slot": "readInt32"}],
+            "name": "isSlotMarkedSuccessful",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "markBootSuccessful",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [{"slot": "readInt32"}],
+            "name": "setActiveBootSlot",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [{"slot": "readInt32"}],
+            "name": "setSlotAsUnbootable",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "status": "readParcelable",
+                        "__parcelType": "android.hardware.boot.MergeStatus"
+                    }]
+                }
+            ],
+            "name": "setSnapshotMergeStatus",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IBootControl",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

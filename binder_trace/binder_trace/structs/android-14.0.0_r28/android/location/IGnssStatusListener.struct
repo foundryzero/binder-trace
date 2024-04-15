@@ -1,0 +1,47 @@
+{
+    "produced_on": "2024-04-12T08:47:46.419087668Z",
+    "source_location": "",
+    "full_name": "android.location.IGnssStatusListener",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "onGnssStarted",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "onGnssStopped",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"ttff": "readInt32"}],
+            "name": "onFirstFix",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "gnssStatus": "readParcelable",
+                        "__parcelType": "android.location.GnssStatus"
+                    }]
+                }
+            ],
+            "name": "onSvStatusChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IGnssStatusListener",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

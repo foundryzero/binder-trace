@@ -1,0 +1,25 @@
+{
+    "produced_on": "2024-04-12T08:47:46.503776653Z",
+    "source_location": "",
+    "full_name": "android.media.IDeviceVolumeBehaviorDispatcher",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "device": "readParcelable",
+                    "__parcelType": "android.media.AudioDeviceAttributes"
+                }]
+            },
+            {"deviceVolumeBehavior": "readInt32"}
+        ],
+        "name": "dispatchDeviceVolumeBehaviorChanged",
+        "oneWay": true,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "IDeviceVolumeBehaviorDispatcher",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

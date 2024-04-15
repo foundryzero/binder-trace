@@ -1,0 +1,100 @@
+{
+    "produced_on": "2024-04-12T08:47:50.153263389Z",
+    "source_location": "",
+    "full_name": "android.hardware.broadcastradio.ITunerCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "result": "readParcelable",
+                        "__parcelType": "android.hardware.broadcastradio.Result"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "selector": "readParcelable",
+                        "__parcelType": "android.hardware.broadcastradio.ProgramSelector"
+                    }]
+                }
+            ],
+            "name": "onTuneFailed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "info": "readParcelable",
+                        "__parcelType": "android.hardware.broadcastradio.ProgramInfo"
+                    }]
+                }
+            ],
+            "name": "onCurrentProgramInfoChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "chunk": "readParcelable",
+                        "__parcelType": "android.hardware.broadcastradio.ProgramListChunk"
+                    }]
+                }
+            ],
+            "name": "onProgramListUpdated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"connected": "readBool"}],
+            "name": "onAntennaStateChange",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "flag": "readParcelable",
+                        "__parcelType": "android.hardware.broadcastradio.ConfigFlag"
+                    }]
+                },
+                {"value": "readBool"}
+            ],
+            "name": "onConfigFlagUpdated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{
+                "parameters": "readParcelableVector",
+                "__parcelType": "android.hardware.broadcastradio.VendorKeyValue"
+            }],
+            "name": "onParametersUpdated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ITunerCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

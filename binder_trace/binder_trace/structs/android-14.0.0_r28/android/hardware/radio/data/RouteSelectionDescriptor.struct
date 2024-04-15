@@ -1,0 +1,29 @@
+{
+    "produced_on": "2024-04-12T08:47:54.099704549Z",
+    "source_location": "",
+    "components": [
+        {"SSC_MODE_UNKNOWN": "readByte"},
+        {"SSC_MODE_1": "readByte"},
+        {"SSC_MODE_2": "readByte"},
+        {"SSC_MODE_3": "readByte"},
+        {"precedence": "readByte"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "sessionType": "readParcelable",
+                "__parcelType": "android.hardware.radio.data.PdpProtocolType"
+            }]
+        },
+        {"sscMode": "readByte"},
+        {
+            "sliceInfo": "readParcelableVector",
+            "__parcelType": "android.hardware.radio.data.SliceInfo"
+        },
+        {"dnn": "readString16Vector"}
+    ],
+    "full_name": "android.hardware.radio.data.RouteSelectionDescriptor",
+    "name": "RouteSelectionDescriptor",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

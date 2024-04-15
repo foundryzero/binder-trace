@@ -1,0 +1,78 @@
+{
+    "produced_on": "2024-04-12T08:47:46.960720090Z",
+    "source_location": "",
+    "full_name": "android.telephony.ims.aidl.ISipDelegateStateCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"c": "readStrongBinder"},
+                {
+                    "deniedFeatureTags": "readList",
+                    "__parcelType": "android.telephony.ims.FeatureTagState"
+                }
+            ],
+            "name": "onCreated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "registrationState": "readParcelable",
+                        "__parcelType": "android.telephony.ims.DelegateRegistrationState"
+                    }]
+                }
+            ],
+            "name": "onFeatureTagRegistrationChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "registeredSipConfig": "readParcelable",
+                        "__parcelType": "android.telephony.ims.SipDelegateImsConfiguration"
+                    }]
+                }
+            ],
+            "name": "onImsConfigurationChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "registeredSipConfig": "readParcelable",
+                        "__parcelType": "android.telephony.ims.SipDelegateConfiguration"
+                    }]
+                }
+            ],
+            "name": "onConfigurationChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"reason": "readInt32"}],
+            "name": "onDestroyed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISipDelegateStateCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,32 @@
+{
+    "produced_on": "2024-04-12T08:47:54.762310151Z",
+    "source_location": "",
+    "components": [
+        {"chainInfo": "readByteVector"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "input": "readParcelable",
+                "__parcelType": "android.hardware.media.c2.FrameData"
+            }]
+        },
+        {
+            "worklets": "readParcelableVector",
+            "__parcelType": "android.hardware.media.c2.Worklet"
+        },
+        {"workletsProcessed": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "result": "readParcelable",
+                "__parcelType": "android.hardware.media.c2.Status"
+            }]
+        }
+    ],
+    "full_name": "android.hardware.media.c2.Work",
+    "name": "Work",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

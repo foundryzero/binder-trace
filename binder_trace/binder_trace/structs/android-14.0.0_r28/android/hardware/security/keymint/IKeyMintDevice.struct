@@ -1,0 +1,257 @@
+{
+    "produced_on": "2024-04-12T08:47:54.410509646Z",
+    "source_location": "",
+    "full_name": "android.hardware.security.keymint.IKeyMintDevice",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getHardwareInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.security.keymint.KeyMintHardwareInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"data": "readByteVector"}],
+            "name": "addRngEntropy",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {
+                    "keyParams": "readParcelableVector",
+                    "__parcelType": "android.hardware.security.keymint.KeyParameter"
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attestationKey": "readParcelable",
+                        "__parcelType": "android.hardware.security.keymint.AttestationKey"
+                    }]
+                }
+            ],
+            "name": "generateKey",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.security.keymint.KeyCreationResult"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {
+                    "keyParams": "readParcelableVector",
+                    "__parcelType": "android.hardware.security.keymint.KeyParameter"
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "keyFormat": "readParcelable",
+                        "__parcelType": "android.hardware.security.keymint.KeyFormat"
+                    }]
+                },
+                {"keyData": "readByteVector"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attestationKey": "readParcelable",
+                        "__parcelType": "android.hardware.security.keymint.AttestationKey"
+                    }]
+                }
+            ],
+            "name": "importKey",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.security.keymint.KeyCreationResult"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"wrappedKeyData": "readByteVector"},
+                {"wrappingKeyBlob": "readByteVector"},
+                {"maskingKey": "readByteVector"},
+                {
+                    "unwrappingParams": "readParcelableVector",
+                    "__parcelType": "android.hardware.security.keymint.KeyParameter"
+                },
+                {"passwordSid": "readInt64"},
+                {"biometricSid": "readInt64"}
+            ],
+            "name": "importWrappedKey",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.security.keymint.KeyCreationResult"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"keyBlobToUpgrade": "readByteVector"},
+                {
+                    "upgradeParams": "readParcelableVector",
+                    "__parcelType": "android.hardware.security.keymint.KeyParameter"
+                }
+            ],
+            "name": "upgradeKey",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [{"keyBlob": "readByteVector"}],
+            "name": "deleteKey",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "deleteAllKeys",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [],
+            "name": "destroyAttestationIds",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "purpose": "readParcelable",
+                        "__parcelType": "android.hardware.security.keymint.KeyPurpose"
+                    }]
+                },
+                {"keyBlob": "readByteVector"},
+                {
+                    "params": "readParcelableVector",
+                    "__parcelType": "android.hardware.security.keymint.KeyParameter"
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "authToken": "readParcelable",
+                        "__parcelType": "android.hardware.security.keymint.HardwareAuthToken"
+                    }]
+                }
+            ],
+            "name": "begin",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.security.keymint.BeginResult"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"passwordOnly": "readBool"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "timestampToken": "readParcelable",
+                        "__parcelType": "android.hardware.security.keymint.android.hardware.security.secureclock.TimeStampToken"
+                    }]
+                }
+            ],
+            "name": "deviceLocked",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [],
+            "name": "earlyBootEnded",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [{"storageKeyBlob": "readByteVector"}],
+            "name": "convertStorageKeyToEphemeral",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"keyBlob": "readByteVector"},
+                {"appId": "readByteVector"},
+                {"appData": "readByteVector"}
+            ],
+            "name": "getKeyCharacteristics",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.security.keymint.KeyCharacteristics"
+                }
+            ]
+        }
+    ],
+    "name": "IKeyMintDevice",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

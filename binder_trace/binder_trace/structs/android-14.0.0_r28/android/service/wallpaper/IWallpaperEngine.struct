@@ -1,0 +1,188 @@
+{
+    "produced_on": "2024-04-12T08:47:45.850292113Z",
+    "source_location": "",
+    "full_name": "android.service.wallpaper.IWallpaperEngine",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"width": "readInt32"},
+                {"height": "readInt32"}
+            ],
+            "name": "setDesiredSize",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "padding": "readParcelable",
+                        "__parcelType": "android.graphics.Rect"
+                    }]
+                }
+            ],
+            "name": "setDisplayPadding",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"visible": "readBool"}],
+            "name": "setVisibility",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "onScreenTurningOn",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "onScreenTurnedOn",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"inAmbientDisplay": "readBool"},
+                {"animationDuration": "readInt64"}
+            ],
+            "name": "setInAmbientMode",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "event": "readParcelable",
+                        "__parcelType": "android.view.MotionEvent"
+                    }]
+                }
+            ],
+            "name": "dispatchPointer",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"action": "readString16"},
+                {"x": "readInt32"},
+                {"y": "readInt32"},
+                {"z": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"extras": "readBundle"}]
+                }
+            ],
+            "name": "dispatchWallpaperCommand",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [],
+            "name": "requestWallpaperColors",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [],
+            "name": "destroy",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [{"scale": "readFloat"}],
+            "name": "setZoomOut",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "positionInWindow": "readParcelable",
+                        "__parcelType": "android.graphics.Rect"
+                    }]
+                }
+            ],
+            "name": "resizePreview",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [{
+                "regions": "readList",
+                "__parcelType": "android.graphics.RectF"
+            }],
+            "name": "removeLocalColorsAreas",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [{
+                "regions": "readList",
+                "__parcelType": "android.graphics.RectF"
+            }],
+            "name": "addLocalColorsAreas",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [],
+            "name": "mirrorSurfaceControl",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.view.SurfaceControl"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 16,
+            "in": [{"dimAmount": "readFloat"}],
+            "name": "applyDimming",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [{"which": "readInt32"}],
+            "name": "setWallpaperFlags",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IWallpaperEngine",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,83 @@
+{
+    "produced_on": "2024-04-12T08:47:50.943132234Z",
+    "source_location": "",
+    "full_name": "android.hardware.camera.provider.ICameraProvider",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "setCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "getVendorTags",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.camera.common.VendorTagSection"
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getCameraIdList",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16Vector"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"cameraDeviceName": "readString16"}],
+            "name": "getCameraDeviceInterface",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"deviceState": "readInt64"}],
+            "name": "notifyDeviceStateChange",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "getConcurrentCameraIds",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.camera.provider.ConcurrentCameraIdCombination"
+                }
+            ]
+        },
+        {
+            "code": 7,
+            "in": [{
+                "configs": "readParcelableVector",
+                "__parcelType": "android.hardware.camera.provider.CameraIdAndStreamCombination"
+            }],
+            "name": "isConcurrentStreamCombinationSupported",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "ICameraProvider",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

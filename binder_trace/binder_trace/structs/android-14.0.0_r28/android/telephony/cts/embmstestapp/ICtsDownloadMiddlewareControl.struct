@@ -1,0 +1,107 @@
+{
+    "produced_on": "2024-04-12T08:47:44.161609020Z",
+    "source_location": "",
+    "full_name": "android.telephony.cts.embmstestapp.ICtsDownloadMiddlewareControl",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "reset",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "getDownloadSessionCalls",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.os.Bundle"
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"error": "readInt32"}],
+            "name": "forceErrorCode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"errorCode": "readInt32"},
+                {"message": "readString16"}
+            ],
+            "name": "fireErrorOnSession",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.telephony.mbms.DownloadRequest"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "fileInfo": "readParcelable",
+                        "__parcelType": "android.telephony.mbms.FileInfo"
+                    }]
+                },
+                {"currentDownloadSize": "readInt32"},
+                {"fullDownloadSize": "readInt32"},
+                {"currentDecodedSize": "readInt32"},
+                {"fullDecodedSize": "readInt32"}
+            ],
+            "name": "fireOnProgressUpdated",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.telephony.mbms.DownloadRequest"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "fileInfo": "readParcelable",
+                        "__parcelType": "android.telephony.mbms.FileInfo"
+                    }]
+                },
+                {"state": "readInt32"}
+            ],
+            "name": "fireOnStateUpdated",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "actuallyStartDownloadFlow",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICtsDownloadMiddlewareControl",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

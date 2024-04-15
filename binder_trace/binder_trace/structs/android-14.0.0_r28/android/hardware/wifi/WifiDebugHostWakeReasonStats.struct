@@ -1,0 +1,39 @@
+{
+    "produced_on": "2024-04-12T08:47:56.610327642Z",
+    "source_location": "",
+    "components": [
+        {"totalCmdEventWakeCnt": "readInt32"},
+        {"cmdEventWakeCntPerType": "readInt32Vector"},
+        {"totalDriverFwLocalWakeCnt": "readInt32"},
+        {"driverFwLocalWakeCntPerType": "readInt32Vector"},
+        {"totalRxPacketWakeCnt": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "rxPktWakeDetails": "readParcelable",
+                "__parcelType": "android.hardware.wifi.WifiDebugHostWakeReasonRxPacketDetails"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "rxMulticastPkWakeDetails": "readParcelable",
+                "__parcelType": "android.hardware.wifi.WifiDebugHostWakeReasonRxMulticastPacketDetails"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "rxIcmpPkWakeDetails": "readParcelable",
+                "__parcelType": "android.hardware.wifi.WifiDebugHostWakeReasonRxIcmpPacketDetails"
+            }]
+        }
+    ],
+    "full_name": "android.hardware.wifi.WifiDebugHostWakeReasonStats",
+    "name": "WifiDebugHostWakeReasonStats",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

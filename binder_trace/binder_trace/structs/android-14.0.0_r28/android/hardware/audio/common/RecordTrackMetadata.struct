@@ -1,0 +1,36 @@
+{
+    "produced_on": "2024-04-12T08:47:48.348111061Z",
+    "source_location": "",
+    "components": [
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "source": "readParcelable",
+                "__parcelType": "android.media.audio.common.AudioSource"
+            }]
+        },
+        {"gain": "readFloat"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "destinationDevice": "readParcelable",
+                "__parcelType": "android.media.audio.common.AudioDevice"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "channelMask": "readParcelable",
+                "__parcelType": "android.media.audio.common.AudioChannelLayout"
+            }]
+        },
+        {"tags": "readString16Vector"}
+    ],
+    "full_name": "android.hardware.audio.common.RecordTrackMetadata",
+    "name": "RecordTrackMetadata",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

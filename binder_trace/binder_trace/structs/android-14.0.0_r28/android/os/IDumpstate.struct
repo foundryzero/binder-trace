@@ -1,0 +1,77 @@
+{
+    "produced_on": "2024-04-12T08:47:47.912708063Z",
+    "source_location": "",
+    "full_name": "android.os.IDumpstate",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"callingPackage": "readString16"}],
+            "name": "preDumpUiData",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"callingUid": "readInt32"},
+                {"callingPackage": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "bugreportFd": "readParcelable",
+                        "__parcelType": "FileDescriptor"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "screenshotFd": "readParcelable",
+                        "__parcelType": "FileDescriptor"
+                    }]
+                },
+                {"bugreportMode": "readInt32"},
+                {"bugreportFlags": "readInt32"},
+                {"listener": "readStrongBinder"},
+                {"isScreenshotRequested": "readBool"}
+            ],
+            "name": "startBugreport",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"callingUid": "readInt32"},
+                {"callingPackage": "readString16"}
+            ],
+            "name": "cancelBugreport",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"callingUid": "readInt32"},
+                {"callingPackage": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "bugreportFd": "readParcelable",
+                        "__parcelType": "FileDescriptor"
+                    }]
+                },
+                {"bugreportFile": "readString16"},
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "retrieveBugreport",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IDumpstate",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,32 @@
+{
+    "produced_on": "2024-04-12T08:47:46.243903406Z",
+    "source_location": "",
+    "full_name": "com.android.internal.inputmethod.IInlineSuggestionsResponseCallback",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "fieldId": "readParcelable",
+                    "__parcelType": "android.view.autofill.AutofillId"
+                }]
+            },
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "response": "readParcelable",
+                    "__parcelType": "android.view.inputmethod.InlineSuggestionsResponse"
+                }]
+            }
+        ],
+        "name": "onInlineSuggestionsResponse",
+        "oneWay": true,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "IInlineSuggestionsResponseCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

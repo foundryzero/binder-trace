@@ -1,0 +1,73 @@
+{
+    "produced_on": "2024-04-12T08:47:59.475246500Z",
+    "source_location": "",
+    "full_name": "android.car.apitest.IStableAIDLTestBinder",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "p": "readParcelable",
+                        "__parcelType": "android.car.apitest.StableAIDLTestLargeParcelable"
+                    }]
+                }
+            ],
+            "name": "echo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.car.apitest.StableAIDLTestLargeParcelable"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"callback": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "p": "readParcelable",
+                        "__parcelType": "android.car.apitest.StableAIDLTestLargeParcelable"
+                    }]
+                }
+            ],
+            "name": "echoWithCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "p": "readParcelable",
+                        "__parcelType": "android.car.apitest.StableAIDLTestLargeParcelable"
+                    }]
+                },
+                {"v": "readInt64"}
+            ],
+            "name": "echoWithLong",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        }
+    ],
+    "name": "IStableAIDLTestBinder",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,42 @@
+{
+    "produced_on": "2024-04-12T08:47:54.948143250Z",
+    "source_location": "",
+    "full_name": "android.hardware.tv.input.ITvInputCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "event": "readParcelable",
+                        "__parcelType": "android.hardware.tv.input.TvInputEvent"
+                    }]
+                }
+            ],
+            "name": "notify",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "event": "readParcelable",
+                        "__parcelType": "android.hardware.tv.input.TvMessageEvent"
+                    }]
+                }
+            ],
+            "name": "notifyTvMessageEvent",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ITvInputCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

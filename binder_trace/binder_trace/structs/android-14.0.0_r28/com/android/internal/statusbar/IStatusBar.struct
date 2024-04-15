@@ -1,0 +1,775 @@
+{
+    "produced_on": "2024-04-12T08:47:46.290551363Z",
+    "source_location": "",
+    "full_name": "com.android.internal.statusbar.IStatusBar",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"slot": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "icon": "readParcelable",
+                        "__parcelType": "com.android.internal.statusbar.StatusBarIcon"
+                    }]
+                }
+            ],
+            "name": "setIcon",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"slot": "readString16"}],
+            "name": "removeIcon",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"displayId": "readInt32"},
+                {"state1": "readInt32"},
+                {"state2": "readInt32"}
+            ],
+            "name": "disable",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "animateExpandNotificationsPanel",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"subPanel": "readString16"}],
+            "name": "animateExpandSettingsPanel",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "animateCollapsePanels",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "togglePanel",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{"batteryLevel": "readInt32"}],
+            "name": "showWirelessChargingAnimation",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"displayId": "readInt32"},
+                {"token": "readStrongBinder"},
+                {"vis": "readInt32"},
+                {"backDisposition": "readInt32"},
+                {"showImeSwitcher": "readBool"}
+            ],
+            "name": "setImeWindowStatus",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"display": "readInt32"},
+                {"window": "readInt32"},
+                {"state": "readInt32"}
+            ],
+            "name": "setWindowState",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [{"triggeredFromAltTab": "readBool"}],
+            "name": "showRecentApps",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"triggeredFromAltTab": "readBool"},
+                {"triggeredFromHomeKey": "readBool"}
+            ],
+            "name": "hideRecentApps",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [],
+            "name": "toggleRecentApps",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [],
+            "name": "toggleTaskbar",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [],
+            "name": "toggleSplitScreen",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [],
+            "name": "preloadRecentApps",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [],
+            "name": "cancelPreloadRecentApps",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [{"taskId": "readInt32"}],
+            "name": "showScreenPinningRequest",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 19,
+            "in": [],
+            "name": "dismissKeyboardShortcutsMenu",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 20,
+            "in": [{"deviceId": "readInt32"}],
+            "name": "toggleKeyboardShortcutsMenu",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 21,
+            "in": [{"displayId": "readInt32"}],
+            "name": "appTransitionPending",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 22,
+            "in": [{"displayId": "readInt32"}],
+            "name": "appTransitionCancelled",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 23,
+            "in": [
+                {"displayId": "readInt32"},
+                {"statusBarAnimationsStartTime": "readInt64"},
+                {"statusBarAnimationsDuration": "readInt64"}
+            ],
+            "name": "appTransitionStarting",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 24,
+            "in": [{"displayId": "readInt32"}],
+            "name": "appTransitionFinished",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 25,
+            "in": [],
+            "name": "showAssistDisclosure",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 26,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"args": "readBundle"}]
+                }
+            ],
+            "name": "startAssist",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 27,
+            "in": [{"source": "readInt32"}],
+            "name": "onCameraLaunchGestureDetected",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 28,
+            "in": [],
+            "name": "onEmergencyActionLaunchGestureDetected",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 29,
+            "in": [],
+            "name": "showPictureInPictureMenu",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 30,
+            "in": [],
+            "name": "showGlobalActionsMenu",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 31,
+            "in": [
+                {"rotation": "readInt32"},
+                {"isValid": "readBool"}
+            ],
+            "name": "onProposedRotationChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 32,
+            "in": [{"hidesStatusBar": "readBool"}],
+            "name": "setTopAppHidesStatusBar",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 33,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "tile": "readParcelable",
+                        "__parcelType": "android.content.ComponentName"
+                    }]
+                }
+            ],
+            "name": "addQsTile",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 34,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "tile": "readParcelable",
+                        "__parcelType": "android.content.ComponentName"
+                    }]
+                }
+            ],
+            "name": "remQsTile",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 35,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "tile": "readParcelable",
+                        "__parcelType": "android.content.ComponentName"
+                    }]
+                }
+            ],
+            "name": "clickQsTile",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 36,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "key": "readParcelable",
+                        "__parcelType": "android.view.KeyEvent"
+                    }]
+                }
+            ],
+            "name": "handleSystemKey",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 37,
+            "in": [{"entering": "readBool"}],
+            "name": "showPinningEnterExitToast",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 38,
+            "in": [],
+            "name": "showPinningEscapeToast",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 39,
+            "in": [
+                {"isReboot": "readBool"},
+                {"reason": "readString16"}
+            ],
+            "name": "showShutdownUi",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 40,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "promptInfo": "readParcelable",
+                        "__parcelType": "android.hardware.biometrics.PromptInfo"
+                    }]
+                },
+                {"sysuiReceiver": "readStrongBinder"},
+                {"sensorIds": "readInt32Vector"},
+                {"credentialAllowed": "readBool"},
+                {"requireConfirmation": "readBool"},
+                {"userId": "readInt32"},
+                {"operationId": "readInt64"},
+                {"opPackageName": "readString16"},
+                {"requestId": "readInt64"}
+            ],
+            "name": "showAuthenticationDialog",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 41,
+            "in": [{"modality": "readInt32"}],
+            "name": "onBiometricAuthenticated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 42,
+            "in": [
+                {"modality": "readInt32"},
+                {"message": "readString16"}
+            ],
+            "name": "onBiometricHelp",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 43,
+            "in": [
+                {"modality": "readInt32"},
+                {"error": "readInt32"},
+                {"vendorCode": "readInt32"}
+            ],
+            "name": "onBiometricError",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 44,
+            "in": [{"requestId": "readInt64"}],
+            "name": "hideAuthenticationDialog",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 45,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "setBiometicContextListener",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 46,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "setUdfpsRefreshRateCallback",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 47,
+            "in": [{"displayId": "readInt32"}],
+            "name": "onDisplayReady",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 48,
+            "in": [{"running": "readBool"}],
+            "name": "onRecentsAnimationStateChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 49,
+            "in": [
+                {"displayId": "readInt32"},
+                {"appearance": "readInt32"},
+                {
+                    "appearanceRegions": "readParcelableVector",
+                    "__parcelType": "com.android.internal.view.AppearanceRegion"
+                },
+                {"navbarColorManagedByIme": "readBool"},
+                {"behavior": "readInt32"},
+                {"requestedVisibleTypes": "readInt32"},
+                {"packageName": "readString16"},
+                {
+                    "letterboxDetails": "readParcelableVector",
+                    "__parcelType": "com.android.internal.statusbar.LetterboxDetails"
+                }
+            ],
+            "name": "onSystemBarAttributesChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 50,
+            "in": [
+                {"displayId": "readInt32"},
+                {"types": "readInt32"},
+                {"isGestureOnSystemBar": "readBool"}
+            ],
+            "name": "showTransient",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 51,
+            "in": [
+                {"displayId": "readInt32"},
+                {"types": "readInt32"}
+            ],
+            "name": "abortTransient",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 52,
+            "in": [],
+            "name": "showInattentiveSleepWarning",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 53,
+            "in": [{"animated": "readBool"}],
+            "name": "dismissInattentiveSleepWarning",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 54,
+            "in": [
+                {"uid": "readInt32"},
+                {"packageName": "readString16"},
+                {"token": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "text": "readParcelable",
+                        "__parcelType": "CharSequence"
+                    }]
+                },
+                {"windowToken": "readStrongBinder"},
+                {"duration": "readInt32"},
+                {"callback": "readStrongBinder"},
+                {"displayId": "readInt32"}
+            ],
+            "name": "showToast",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 55,
+            "in": [
+                {"packageName": "readString16"},
+                {"token": "readStrongBinder"}
+            ],
+            "name": "hideToast",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 56,
+            "in": [],
+            "name": "startTracing",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 57,
+            "in": [],
+            "name": "stopTracing",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 58,
+            "in": [{"suppress": "readBool"}],
+            "name": "suppressAmbientDisplay",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 59,
+            "in": [{"connect": "readBool"}],
+            "name": "requestWindowMagnificationConnection",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 60,
+            "in": [
+                {"args": "readString16Vector"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "pfd": "readParcelable",
+                        "__parcelType": "android.os.ParcelFileDescriptor"
+                    }]
+                }
+            ],
+            "name": "passThroughShellCommand",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 61,
+            "in": [
+                {"displayId": "readInt32"},
+                {"enable": "readBool"}
+            ],
+            "name": "setNavigationBarLumaSamplingEnabled",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 62,
+            "in": [],
+            "name": "runGcForTest",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 63,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "componentName": "readParcelable",
+                        "__parcelType": "android.content.ComponentName"
+                    }]
+                }
+            ],
+            "name": "requestTileServiceListeningState",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 64,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "componentName": "readParcelable",
+                        "__parcelType": "android.content.ComponentName"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "appName": "readParcelable",
+                        "__parcelType": "CharSequence"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "label": "readParcelable",
+                        "__parcelType": "CharSequence"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "icon": "readParcelable",
+                        "__parcelType": "android.graphics.drawable.Icon"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "requestAddTile",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 65,
+            "in": [{"packageName": "readString16"}],
+            "name": "cancelRequestAddTile",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 66,
+            "in": [
+                {"displayState": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "routeInfo": "readParcelable",
+                        "__parcelType": "android.media.MediaRoute2Info"
+                    }]
+                },
+                {"undoCallback": "readStrongBinder"}
+            ],
+            "name": "updateMediaTapToTransferSenderDisplay",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 67,
+            "in": [
+                {"displayState": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "routeInfo": "readParcelable",
+                        "__parcelType": "android.media.MediaRoute2Info"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "appIcon": "readParcelable",
+                        "__parcelType": "android.graphics.drawable.Icon"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "appName": "readParcelable",
+                        "__parcelType": "CharSequence"
+                    }]
+                }
+            ],
+            "name": "updateMediaTapToTransferReceiverDisplay",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 68,
+            "in": [{"provider": "readStrongBinder"}],
+            "name": "registerNearbyMediaDevicesProvider",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 69,
+            "in": [{"provider": "readStrongBinder"}],
+            "name": "unregisterNearbyMediaDevicesProvider",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 70,
+            "in": [
+                {"args": "readString16Vector"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "pfd": "readParcelable",
+                        "__parcelType": "android.os.ParcelFileDescriptor"
+                    }]
+                }
+            ],
+            "name": "dumpProto",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 71,
+            "in": [{"currentBaseState": "readInt32"}],
+            "name": "showRearDisplayDialog",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 72,
+            "in": [],
+            "name": "goToFullscreenFromSplit",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 73,
+            "in": [{"leftOrTop": "readBool"}],
+            "name": "enterStageSplitFromRunningApp",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 74,
+            "in": [{"packageName": "readString16"}],
+            "name": "showMediaOutputSwitcher",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IStatusBar",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

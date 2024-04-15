@@ -1,0 +1,92 @@
+{
+    "produced_on": "2024-04-12T08:47:56.591595900Z",
+    "source_location": "",
+    "components": [
+        {"linkId": "readInt32"},
+        {"radioId": "readInt32"},
+        {"frequencyMhz": "readInt32"},
+        {"beaconRx": "readInt32"},
+        {"avgRssiMgmt": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "wmeBePktStats": "readParcelable",
+                "__parcelType": "android.hardware.wifi.StaLinkLayerIfacePacketStats"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "wmeBkPktStats": "readParcelable",
+                "__parcelType": "android.hardware.wifi.StaLinkLayerIfacePacketStats"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "wmeViPktStats": "readParcelable",
+                "__parcelType": "android.hardware.wifi.StaLinkLayerIfacePacketStats"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "wmeVoPktStats": "readParcelable",
+                "__parcelType": "android.hardware.wifi.StaLinkLayerIfacePacketStats"
+            }]
+        },
+        {"timeSliceDutyCycleInPercent": "readByte"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "wmeBeContentionTimeStats": "readParcelable",
+                "__parcelType": "android.hardware.wifi.StaLinkLayerIfaceContentionTimeStats"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "wmeBkContentionTimeStats": "readParcelable",
+                "__parcelType": "android.hardware.wifi.StaLinkLayerIfaceContentionTimeStats"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "wmeViContentionTimeStats": "readParcelable",
+                "__parcelType": "android.hardware.wifi.StaLinkLayerIfaceContentionTimeStats"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "wmeVoContentionTimeStats": "readParcelable",
+                "__parcelType": "android.hardware.wifi.StaLinkLayerIfaceContentionTimeStats"
+            }]
+        },
+        {
+            "peers": "readParcelableVector",
+            "__parcelType": "android.hardware.wifi.StaPeerInfo"
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "state": "readParcelable",
+                "__parcelType": "android.hardware.wifi.StaLinkState"
+            }]
+        }
+    ],
+    "full_name": "android.hardware.wifi.StaLinkLayerLinkStats",
+    "name": "StaLinkLayerLinkStats",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

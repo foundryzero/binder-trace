@@ -1,0 +1,114 @@
+{
+    "produced_on": "2024-04-12T08:47:57.950005673Z",
+    "source_location": "",
+    "full_name": "android.devicelock.IDeviceLockService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "lockDevice",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "unlockDevice",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "isDeviceLocked",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "getDeviceId",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "getKioskApps",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"packageName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "remoteCallback": "readParcelable",
+                        "__parcelType": "android.os.RemoteCallback"
+                    }]
+                }
+            ],
+            "name": "addFinancedDeviceKioskRole",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"packageName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "remoteCallback": "readParcelable",
+                        "__parcelType": "android.os.RemoteCallback"
+                    }]
+                }
+            ],
+            "name": "removeFinancedDeviceKioskRole",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"exempt": "readBool"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "remoteCallback": "readParcelable",
+                        "__parcelType": "android.os.RemoteCallback"
+                    }]
+                }
+            ],
+            "name": "setExemptFromActivityBackgroundStartRestriction",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"packageName": "readString16"},
+                {"exempt": "readBool"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "remoteCallback": "readParcelable",
+                        "__parcelType": "android.os.RemoteCallback"
+                    }]
+                }
+            ],
+            "name": "setExemptFromHibernation",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IDeviceLockService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

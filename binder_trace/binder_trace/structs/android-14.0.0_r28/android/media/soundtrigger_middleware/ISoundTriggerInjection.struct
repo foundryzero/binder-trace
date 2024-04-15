@@ -1,0 +1,121 @@
+{
+    "produced_on": "2024-04-12T08:47:46.448250157Z",
+    "source_location": "",
+    "full_name": "android.media.soundtrigger_middleware.ISoundTriggerInjection",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"globalInjection": "readStrongBinder"}],
+            "name": "registerGlobalEventInjection",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"globalSession": "readStrongBinder"}],
+            "name": "onRestarted",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"globalSession": "readStrongBinder"}],
+            "name": "onFrameworkDetached",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"token": "readStrongBinder"},
+                {"globalSession": "readStrongBinder"}
+            ],
+            "name": "onClientAttached",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"token": "readStrongBinder"}],
+            "name": "onClientDetached",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "model": "readParcelable",
+                        "__parcelType": "android.media.soundtrigger.SoundModel"
+                    }]
+                },
+                {
+                    "phrases": "readParcelableVector",
+                    "__parcelType": "android.media.soundtrigger.Phrase"
+                },
+                {"modelInjection": "readStrongBinder"},
+                {"globalSession": "readStrongBinder"}
+            ],
+            "name": "onSoundModelLoaded",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"modelParam": "readInt32"},
+                {"value": "readInt32"},
+                {"modelSession": "readStrongBinder"}
+            ],
+            "name": "onParamSet",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"audioSessionToken": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "config": "readParcelable",
+                        "__parcelType": "android.media.soundtrigger.RecognitionConfig"
+                    }]
+                },
+                {"recognitionInjection": "readStrongBinder"},
+                {"modelSession": "readStrongBinder"}
+            ],
+            "name": "onRecognitionStarted",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [{"recognitionSession": "readStrongBinder"}],
+            "name": "onRecognitionStopped",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [{"modelSession": "readStrongBinder"}],
+            "name": "onSoundModelUnloaded",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [],
+            "name": "onPreempted",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISoundTriggerInjection",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,73 @@
+{
+    "produced_on": "2024-04-12T08:47:59.053878371Z",
+    "source_location": "",
+    "full_name": "android.car.telemetry.ICarTelemetryService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"metricsConfigName": "readString16"},
+                {"metricsConfig": "readByteVector"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callback": "readParcelable",
+                        "__parcelType": "android.os.ResultReceiver"
+                    }]
+                }
+            ],
+            "name": "addMetricsConfig",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"metricsConfigName": "readString16"}],
+            "name": "removeMetricsConfig",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "removeAllMetricsConfigs",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"metricsConfigName": "readString16"},
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "getFinishedReport",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "getAllFinishedReports",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "setReportReadyListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "clearReportReadyListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICarTelemetryService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

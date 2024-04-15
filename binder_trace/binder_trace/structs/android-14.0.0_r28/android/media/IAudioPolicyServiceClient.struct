@@ -1,0 +1,108 @@
+{
+    "produced_on": "2024-04-12T08:47:44.361102015Z",
+    "source_location": "",
+    "full_name": "android.media.IAudioPolicyServiceClient",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"group": "readInt32"},
+                {"flags": "readInt32"}
+            ],
+            "name": "onAudioVolumeGroupChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "onAudioPortListUpdate",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "onAudioPatchListUpdate",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"regId": "readString16"},
+                {"state": "readInt32"}
+            ],
+            "name": "onDynamicPolicyMixStateUpdate",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"event": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "clientInfo": "readParcelable",
+                        "__parcelType": "android.media.RecordClientInfo"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "clientConfig": "readParcelable",
+                        "__parcelType": "android.media.audio.common.AudioConfigBase"
+                    }]
+                },
+                {
+                    "clientEffects": "readParcelableVector",
+                    "__parcelType": "android.media.EffectDescriptor"
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "deviceConfig": "readParcelable",
+                        "__parcelType": "android.media.audio.common.AudioConfigBase"
+                    }]
+                },
+                {
+                    "effects": "readParcelableVector",
+                    "__parcelType": "android.media.EffectDescriptor"
+                },
+                {"patchHandle": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "source": "readParcelable",
+                        "__parcelType": "android.media.audio.common.AudioSource"
+                    }]
+                }
+            ],
+            "name": "onRecordingConfigurationUpdate",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "onRoutingUpdated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "onVolumeRangeInitRequest",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IAudioPolicyServiceClient",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

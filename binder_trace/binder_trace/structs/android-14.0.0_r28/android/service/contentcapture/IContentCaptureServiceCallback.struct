@@ -1,0 +1,80 @@
+{
+    "produced_on": "2024-04-12T08:47:45.725949662Z",
+    "source_location": "",
+    "full_name": "android.service.contentcapture.IContentCaptureServiceCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {
+                    "packages": "readList",
+                    "__parcelType": "String"
+                },
+                {
+                    "activities": "readList",
+                    "__parcelType": "android.content.ComponentName"
+                }
+            ],
+            "name": "setContentCaptureWhitelist",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"packageName": "readString16"},
+                {
+                    "conditions": "readList",
+                    "__parcelType": "android.view.contentcapture.ContentCaptureCondition"
+                }
+            ],
+            "name": "setContentCaptureConditions",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "disableSelf",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"sessionId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "app": "readParcelable",
+                        "__parcelType": "android.content.ComponentName"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "flushMetrics": "readParcelable",
+                        "__parcelType": "android.service.contentcapture.FlushMetrics"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "options": "readParcelable",
+                        "__parcelType": "android.content.ContentCaptureOptions"
+                    }]
+                },
+                {"flushReason": "readInt32"}
+            ],
+            "name": "writeSessionFlush",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IContentCaptureServiceCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

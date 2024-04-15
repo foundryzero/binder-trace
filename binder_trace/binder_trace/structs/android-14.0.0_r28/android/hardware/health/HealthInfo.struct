@@ -1,0 +1,85 @@
+{
+    "produced_on": "2024-04-12T08:47:52.145411020Z",
+    "source_location": "",
+    "components": [
+        {"chargerAcOnline": "readBool"},
+        {"chargerUsbOnline": "readBool"},
+        {"chargerWirelessOnline": "readBool"},
+        {"chargerDockOnline": "readBool"},
+        {"maxChargingCurrentMicroamps": "readInt32"},
+        {"maxChargingVoltageMicrovolts": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "batteryStatus": "readParcelable",
+                "__parcelType": "android.hardware.health.BatteryStatus"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "batteryHealth": "readParcelable",
+                "__parcelType": "android.hardware.health.BatteryHealth"
+            }]
+        },
+        {"batteryPresent": "readBool"},
+        {"batteryLevel": "readInt32"},
+        {"batteryVoltageMillivolts": "readInt32"},
+        {"batteryTemperatureTenthsCelsius": "readInt32"},
+        {"batteryCurrentMicroamps": "readInt32"},
+        {"batteryCycleCount": "readInt32"},
+        {"batteryFullChargeUah": "readInt32"},
+        {"batteryChargeCounterUah": "readInt32"},
+        {"batteryTechnology": "readString16"},
+        {"batteryCurrentAverageMicroamps": "readInt32"},
+        {
+            "diskStats": "readParcelableVector",
+            "__parcelType": "android.hardware.health.DiskStats"
+        },
+        {
+            "storageInfos": "readParcelableVector",
+            "__parcelType": "android.hardware.health.StorageInfo"
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "batteryCapacityLevel": "readParcelable",
+                "__parcelType": "android.hardware.health.BatteryCapacityLevel"
+            }]
+        },
+        {"BATTERY_CHARGE_TIME_TO_FULL_NOW_SECONDS_UNSUPPORTED": "readInt32"},
+        {"batteryChargeTimeToFullNowSeconds": "readInt64"},
+        {"batteryFullChargeDesignCapacityUah": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "chargingState": "readParcelable",
+                "__parcelType": "android.hardware.health.BatteryChargingState"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "chargingPolicy": "readParcelable",
+                "__parcelType": "android.hardware.health.BatteryChargingPolicy"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "batteryHealthData": "readParcelable",
+                "__parcelType": "android.hardware.health.BatteryHealthData"
+            }]
+        }
+    ],
+    "full_name": "android.hardware.health.HealthInfo",
+    "name": "HealthInfo",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

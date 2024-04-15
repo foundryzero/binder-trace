@@ -1,0 +1,75 @@
+{
+    "produced_on": "2024-04-12T08:47:48.395734720Z",
+    "source_location": "",
+    "full_name": "android.hardware.audio.core.sounddose.ISoundDose",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"rs2ValueDbA": "readFloat"}],
+            "name": "setOutputRs2UpperBound",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "getOutputRs2UpperBound",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readFloat"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "registerSoundDoseCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"currentDbA": "readFloat"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "audioDevice": "readParcelable",
+                        "__parcelType": "android.media.audio.common.AudioDevice"
+                    }]
+                }
+            ],
+            "name": "onMomentaryExposureWarning",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "melRecord": "readParcelable",
+                        "__parcelType": "android.hardware.audio.core.sounddose.ISoundDose.IHalSoundDoseCallback_fzflagONEWAY.MelRecord"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "audioDevice": "readParcelable",
+                        "__parcelType": "android.media.audio.common.AudioDevice"
+                    }]
+                }
+            ],
+            "name": "onNewMelValues",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISoundDose",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

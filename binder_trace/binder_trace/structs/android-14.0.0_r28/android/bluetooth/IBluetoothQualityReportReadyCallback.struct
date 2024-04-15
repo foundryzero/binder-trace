@@ -1,0 +1,33 @@
+{
+    "produced_on": "2024-04-12T08:47:57.621102176Z",
+    "source_location": "",
+    "full_name": "android.bluetooth.IBluetoothQualityReportReadyCallback",
+    "calls": [{
+        "code": 1,
+        "in": [
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "device": "readParcelable",
+                    "__parcelType": "android.bluetooth.BluetoothDevice"
+                }]
+            },
+            {"nullcheck": "readInt32"},
+            {
+                "__backreference": "nullcheck",
+                "__conditional": [{
+                    "bluetoothQualityReport": "readParcelable",
+                    "__parcelType": "android.bluetooth.BluetoothQualityReport"
+                }]
+            },
+            {"status": "readInt32"}
+        ],
+        "name": "onBluetoothQualityReportReady",
+        "oneWay": true,
+        "out": [{"__exception": "readException"}]
+    }],
+    "name": "IBluetoothQualityReportReadyCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

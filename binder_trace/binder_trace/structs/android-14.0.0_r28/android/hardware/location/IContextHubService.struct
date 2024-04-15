@@ -1,0 +1,278 @@
+{
+    "produced_on": "2024-04-12T08:47:45.392240919Z",
+    "source_location": "",
+    "full_name": "android.hardware.location.IContextHubService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "registerCallback",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "getContextHubHandles",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"contextHubHandle": "readInt32"}],
+            "name": "getContextHubInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.location.ContextHubInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"contextHubHandle": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "nanoApp": "readParcelable",
+                        "__parcelType": "android.hardware.location.NanoApp"
+                    }]
+                }
+            ],
+            "name": "loadNanoApp",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"nanoAppHandle": "readInt32"}],
+            "name": "unloadNanoApp",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [{"nanoAppHandle": "readInt32"}],
+            "name": "getNanoAppInstanceInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.location.NanoAppInstanceInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"contextHubHandle": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "filter": "readParcelable",
+                        "__parcelType": "android.hardware.location.NanoAppFilter"
+                    }]
+                }
+            ],
+            "name": "findNanoAppOnHub",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"contextHubHandle": "readInt32"},
+                {"nanoAppHandle": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "msg": "readParcelable",
+                        "__parcelType": "android.hardware.location.ContextHubMessage"
+                    }]
+                }
+            ],
+            "name": "sendMessage",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"contextHubId": "readInt32"},
+                {"client": "readStrongBinder"},
+                {"attributionTag": "readString16"},
+                {"packageName": "readString16"}
+            ],
+            "name": "createClient",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"contextHubId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "pendingIntent": "readParcelable",
+                        "__parcelType": "android.app.PendingIntent"
+                    }]
+                },
+                {"nanoAppId": "readInt64"},
+                {"attributionTag": "readString16"}
+            ],
+            "name": "createPendingIntentClient",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [],
+            "name": "getContextHubs",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.hardware.location.ContextHubInfo"
+                }
+            ]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"contextHubId": "readInt32"},
+                {"transactionCallback": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "nanoAppBinary": "readParcelable",
+                        "__parcelType": "android.hardware.location.NanoAppBinary"
+                    }]
+                }
+            ],
+            "name": "loadNanoAppOnHub",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"contextHubId": "readInt32"},
+                {"transactionCallback": "readStrongBinder"},
+                {"nanoAppId": "readInt64"}
+            ],
+            "name": "unloadNanoAppFromHub",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"contextHubId": "readInt32"},
+                {"transactionCallback": "readStrongBinder"},
+                {"nanoAppId": "readInt64"}
+            ],
+            "name": "enableNanoApp",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"contextHubId": "readInt32"},
+                {"transactionCallback": "readStrongBinder"},
+                {"nanoAppId": "readInt64"}
+            ],
+            "name": "disableNanoApp",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [
+                {"contextHubId": "readInt32"},
+                {"transactionCallback": "readStrongBinder"}
+            ],
+            "name": "queryNanoApps",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "hubInfo": "readParcelable",
+                        "__parcelType": "android.hardware.location.ContextHubInfo"
+                    }]
+                }
+            ],
+            "name": "getPreloadedNanoAppIds",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.location.long"
+                }
+            ]
+        },
+        {
+            "code": 18,
+            "in": [{"enable": "readBool"}],
+            "name": "setTestMode",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "IContextHubService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

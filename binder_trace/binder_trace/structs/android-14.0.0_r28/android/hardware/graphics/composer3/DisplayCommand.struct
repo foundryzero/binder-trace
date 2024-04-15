@@ -1,0 +1,55 @@
+{
+    "produced_on": "2024-04-12T08:47:52.053368909Z",
+    "source_location": "",
+    "components": [
+        {"display": "readInt64"},
+        {
+            "layers": "readParcelableVector",
+            "__parcelType": "android.hardware.graphics.composer3.LayerCommand"
+        },
+        {
+            "colorTransformMatrix": "readParcelableVector",
+            "__parcelType": "android.hardware.graphics.composer3.float"
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "brightness": "readParcelable",
+                "__parcelType": "android.hardware.graphics.composer3.DisplayBrightness"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "clientTarget": "readParcelable",
+                "__parcelType": "android.hardware.graphics.composer3.ClientTarget"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "virtualDisplayOutputBuffer": "readParcelable",
+                "__parcelType": "android.hardware.graphics.composer3.Buffer"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "expectedPresentTime": "readParcelable",
+                "__parcelType": "android.hardware.graphics.composer3.ClockMonotonicTimestamp"
+            }]
+        },
+        {"validateDisplay": "readBool"},
+        {"acceptDisplayChanges": "readBool"},
+        {"presentDisplay": "readBool"},
+        {"presentOrValidateDisplay": "readBool"}
+    ],
+    "full_name": "android.hardware.graphics.composer3.DisplayCommand",
+    "name": "DisplayCommand",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

@@ -1,0 +1,787 @@
+{
+    "produced_on": "2024-04-12T08:47:47.991655315Z",
+    "source_location": "",
+    "full_name": "android.gui.ISurfaceComposer",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "bootFinished",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "vsyncSource": "readParcelable",
+                        "__parcelType": "android.gui.VsyncSource"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "eventRegistration": "readParcelable",
+                        "__parcelType": "android.gui.EventRegistration"
+                    }]
+                },
+                {"layerHandle": "readStrongBinder"}
+            ],
+            "name": "createDisplayEventConnection",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "createConnection",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"displayName": "readString16"},
+                {"secure": "readBool"},
+                {"requestedRefreshRate": "readFloat"}
+            ],
+            "name": "createDisplay",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"display": "readStrongBinder"}],
+            "name": "destroyDisplay",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "getPhysicalDisplayIds",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.gui.long"
+                }
+            ]
+        },
+        {
+            "code": 7,
+            "in": [{"displayId": "readInt64"}],
+            "name": "getPhysicalDisplayToken",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "getSupportedFrameTimestamps",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.gui.FrameEvent"
+                }
+            ]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"display": "readStrongBinder"},
+                {"mode": "readInt32"}
+            ],
+            "name": "setPowerMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [{"display": "readStrongBinder"}],
+            "name": "getDisplayStats",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.gui.DisplayStatInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 11,
+            "in": [{"display": "readStrongBinder"}],
+            "name": "getDisplayState",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.gui.DisplayState"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 12,
+            "in": [{"displayId": "readInt64"}],
+            "name": "getStaticDisplayInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.gui.StaticDisplayInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 13,
+            "in": [{"displayId": "readInt64"}],
+            "name": "getDynamicDisplayInfoFromId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.gui.DynamicDisplayInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 14,
+            "in": [{"display": "readStrongBinder"}],
+            "name": "getDynamicDisplayInfoFromToken",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.gui.DynamicDisplayInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 15,
+            "in": [{"display": "readStrongBinder"}],
+            "name": "getDisplayNativePrimaries",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.gui.DisplayPrimaries"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 16,
+            "in": [
+                {"display": "readStrongBinder"},
+                {"colorMode": "readInt32"}
+            ],
+            "name": "setActiveColorMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [
+                {"display": "readStrongBinder"},
+                {"displayModeId": "readInt32"}
+            ],
+            "name": "setBootDisplayMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [{"display": "readStrongBinder"}],
+            "name": "clearBootDisplayMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 19,
+            "in": [],
+            "name": "getBootDisplayModeSupport",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 20,
+            "in": [],
+            "name": "getHdrConversionCapabilities",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.gui.HdrConversionCapability"
+                }
+            ]
+        },
+        {
+            "code": 21,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "hdrConversionStrategy": "readParcelable",
+                        "__parcelType": "android.gui.HdrConversionStrategy"
+                    }]
+                }
+            ],
+            "name": "setHdrConversionStrategy",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 22,
+            "in": [],
+            "name": "getHdrOutputConversionSupport",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 23,
+            "in": [
+                {"display": "readStrongBinder"},
+                {"on": "readBool"}
+            ],
+            "name": "setAutoLowLatencyMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 24,
+            "in": [
+                {"display": "readStrongBinder"},
+                {"on": "readBool"}
+            ],
+            "name": "setGameContentType",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 25,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "args": "readParcelable",
+                        "__parcelType": "android.gui.DisplayCaptureArgs"
+                    }]
+                },
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "captureDisplay",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 26,
+            "in": [
+                {"displayId": "readInt64"},
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "captureDisplayById",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 27,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "args": "readParcelable",
+                        "__parcelType": "android.gui.LayerCaptureArgs"
+                    }]
+                },
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "captureLayers",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 28,
+            "in": [],
+            "name": "clearAnimationFrameStats",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 29,
+            "in": [],
+            "name": "getAnimationFrameStats",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.gui.FrameStats"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 30,
+            "in": [
+                {"display": "readStrongBinder"},
+                {"hdrTypes": "readInt32Vector"}
+            ],
+            "name": "overrideHdrTypes",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 31,
+            "in": [{"atomId": "readInt32"}],
+            "name": "onPullAtom",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.gui.PullAtomData"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 32,
+            "in": [],
+            "name": "getLayerDebugInfo",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.gui.LayerDebugInfo"
+                }
+            ]
+        },
+        {
+            "code": 33,
+            "in": [],
+            "name": "getColorManagement",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 34,
+            "in": [],
+            "name": "getCompositionPreference",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.gui.CompositionPreference"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 35,
+            "in": [{"display": "readStrongBinder"}],
+            "name": "getDisplayedContentSamplingAttributes",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.gui.ContentSamplingAttributes"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 36,
+            "in": [
+                {"display": "readStrongBinder"},
+                {"enable": "readBool"},
+                {"componentMask": "readByte"},
+                {"maxFrames": "readInt64"}
+            ],
+            "name": "setDisplayContentSamplingEnabled",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 37,
+            "in": [
+                {"display": "readStrongBinder"},
+                {"maxFrames": "readInt64"},
+                {"timestamp": "readInt64"}
+            ],
+            "name": "getDisplayedContentSample",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.gui.DisplayedFrameStats"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 38,
+            "in": [],
+            "name": "getProtectedContentSupport",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 39,
+            "in": [{"token": "readStrongBinder"}],
+            "name": "isWideColorDisplay",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 40,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "samplingArea": "readParcelable",
+                        "__parcelType": "android.gui.ARect"
+                    }]
+                },
+                {"stopLayerHandle": "readStrongBinder"},
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "addRegionSamplingListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 41,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "removeRegionSamplingListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 42,
+            "in": [
+                {"taskId": "readInt32"},
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "addFpsListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 43,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "removeFpsListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 44,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "addTunnelModeEnabledListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 45,
+            "in": [{"listener": "readStrongBinder"}],
+            "name": "removeTunnelModeEnabledListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 46,
+            "in": [
+                {"displayToken": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "specs": "readParcelable",
+                        "__parcelType": "android.gui.DisplayModeSpecs"
+                    }]
+                }
+            ],
+            "name": "setDesiredDisplayModeSpecs",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 47,
+            "in": [{"displayToken": "readStrongBinder"}],
+            "name": "getDesiredDisplayModeSpecs",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.gui.DisplayModeSpecs"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 48,
+            "in": [{"displayToken": "readStrongBinder"}],
+            "name": "getDisplayBrightnessSupport",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 49,
+            "in": [
+                {"displayToken": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "brightness": "readParcelable",
+                        "__parcelType": "android.gui.DisplayBrightness"
+                    }]
+                }
+            ],
+            "name": "setDisplayBrightness",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 50,
+            "in": [
+                {"displayToken": "readStrongBinder"},
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "addHdrLayerInfoListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 51,
+            "in": [
+                {"displayToken": "readStrongBinder"},
+                {"listener": "readStrongBinder"}
+            ],
+            "name": "removeHdrLayerInfoListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 52,
+            "in": [{"boostId": "readInt32"}],
+            "name": "notifyPowerBoost",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 53,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "ambientColor": "readParcelable",
+                        "__parcelType": "android.gui.Color"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "spotColor": "readParcelable",
+                        "__parcelType": "android.gui.Color"
+                    }]
+                },
+                {"lightPosY": "readFloat"},
+                {"lightPosZ": "readFloat"},
+                {"lightRadius": "readFloat"}
+            ],
+            "name": "setGlobalShadowSettings",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 54,
+            "in": [{"displayToken": "readStrongBinder"}],
+            "name": "getDisplayDecorationSupport",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.gui.DisplayDecorationSupport"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 55,
+            "in": [
+                {"uid": "readInt32"},
+                {"frameRate": "readFloat"}
+            ],
+            "name": "setOverrideFrameRate",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 56,
+            "in": [],
+            "name": "getGpuContextPriority",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 57,
+            "in": [],
+            "name": "getMaxAcquiredBufferCount",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 58,
+            "in": [{"windowInfosListener": "readStrongBinder"}],
+            "name": "addWindowInfosListener",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.gui.WindowInfosListenerInfo"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 59,
+            "in": [{"windowInfosListener": "readStrongBinder"}],
+            "name": "removeWindowInfosListener",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 60,
+            "in": [],
+            "name": "getOverlaySupport",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.gui.OverlayProperties"
+                    }]
+                }
+            ]
+        }
+    ],
+    "name": "ISurfaceComposer",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

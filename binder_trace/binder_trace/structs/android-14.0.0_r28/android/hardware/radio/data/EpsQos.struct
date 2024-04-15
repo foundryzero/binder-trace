@@ -1,0 +1,27 @@
+{
+    "produced_on": "2024-04-12T08:47:54.075112979Z",
+    "source_location": "",
+    "components": [
+        {"qci": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "downlink": "readParcelable",
+                "__parcelType": "android.hardware.radio.data.QosBandwidth"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "uplink": "readParcelable",
+                "__parcelType": "android.hardware.radio.data.QosBandwidth"
+            }]
+        }
+    ],
+    "full_name": "android.hardware.radio.data.EpsQos",
+    "name": "EpsQos",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

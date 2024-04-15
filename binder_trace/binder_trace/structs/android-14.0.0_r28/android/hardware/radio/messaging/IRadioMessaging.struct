@@ -1,0 +1,299 @@
+{
+    "produced_on": "2024-04-12T08:47:54.164213783Z",
+    "source_location": "",
+    "full_name": "android.hardware.radio.messaging.IRadioMessaging",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"serial": "readInt32"},
+                {"success": "readBool"},
+                {"ackPdu": "readString16"}
+            ],
+            "name": "acknowledgeIncomingGsmSmsWithPdu",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "smsAck": "readParcelable",
+                        "__parcelType": "android.hardware.radio.messaging.CdmaSmsAck"
+                    }]
+                }
+            ],
+            "name": "acknowledgeLastIncomingCdmaSms",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"serial": "readInt32"},
+                {"success": "readBool"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "cause": "readParcelable",
+                        "__parcelType": "android.hardware.radio.messaging.SmsAcknowledgeFailCause"
+                    }]
+                }
+            ],
+            "name": "acknowledgeLastIncomingGsmSms",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"serial": "readInt32"},
+                {"index": "readInt32"}
+            ],
+            "name": "deleteSmsOnRuim",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"serial": "readInt32"},
+                {"index": "readInt32"}
+            ],
+            "name": "deleteSmsOnSim",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [{"serial": "readInt32"}],
+            "name": "getCdmaBroadcastConfig",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [{"serial": "readInt32"}],
+            "name": "getGsmBroadcastConfig",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [{"serial": "readInt32"}],
+            "name": "getSmscAddress",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"serial": "readInt32"},
+                {"available": "readBool"}
+            ],
+            "name": "reportSmsMemoryStatus",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [],
+            "name": "responseAcknowledgement",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sms": "readParcelable",
+                        "__parcelType": "android.hardware.radio.messaging.CdmaSmsMessage"
+                    }]
+                }
+            ],
+            "name": "sendCdmaSms",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sms": "readParcelable",
+                        "__parcelType": "android.hardware.radio.messaging.CdmaSmsMessage"
+                    }]
+                }
+            ],
+            "name": "sendCdmaSmsExpectMore",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "message": "readParcelable",
+                        "__parcelType": "android.hardware.radio.messaging.ImsSmsMessage"
+                    }]
+                }
+            ],
+            "name": "sendImsSms",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "message": "readParcelable",
+                        "__parcelType": "android.hardware.radio.messaging.GsmSmsMessage"
+                    }]
+                }
+            ],
+            "name": "sendSms",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "message": "readParcelable",
+                        "__parcelType": "android.hardware.radio.messaging.GsmSmsMessage"
+                    }]
+                }
+            ],
+            "name": "sendSmsExpectMore",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [
+                {"serial": "readInt32"},
+                {"activate": "readBool"}
+            ],
+            "name": "setCdmaBroadcastActivation",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [
+                {"serial": "readInt32"},
+                {
+                    "configInfo": "readParcelableVector",
+                    "__parcelType": "android.hardware.radio.messaging.CdmaBroadcastSmsConfigInfo"
+                }
+            ],
+            "name": "setCdmaBroadcastConfig",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 18,
+            "in": [
+                {"serial": "readInt32"},
+                {"activate": "readBool"}
+            ],
+            "name": "setGsmBroadcastActivation",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 19,
+            "in": [
+                {"serial": "readInt32"},
+                {
+                    "configInfo": "readParcelableVector",
+                    "__parcelType": "android.hardware.radio.messaging.GsmBroadcastSmsConfigInfo"
+                }
+            ],
+            "name": "setGsmBroadcastConfig",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 20,
+            "in": [
+                {"radioMessagingResponse": "readStrongBinder"},
+                {"radioMessagingIndication": "readStrongBinder"}
+            ],
+            "name": "setResponseFunctions",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 21,
+            "in": [
+                {"serial": "readInt32"},
+                {"smsc": "readString16"}
+            ],
+            "name": "setSmscAddress",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 22,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "cdmaSms": "readParcelable",
+                        "__parcelType": "android.hardware.radio.messaging.CdmaSmsWriteArgs"
+                    }]
+                }
+            ],
+            "name": "writeSmsToRuim",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 23,
+            "in": [
+                {"serial": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "smsWriteArgs": "readParcelable",
+                        "__parcelType": "android.hardware.radio.messaging.SmsWriteArgs"
+                    }]
+                }
+            ],
+            "name": "writeSmsToSim",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IRadioMessaging",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

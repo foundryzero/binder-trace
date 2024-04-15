@@ -1,0 +1,95 @@
+{
+    "produced_on": "2024-04-12T08:47:57.839644717Z",
+    "source_location": "",
+    "full_name": "android.nearby.aidl.IFastPairDataProvider",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.nearby.aidl.FastPairAntispoofKeyDeviceMetadataRequestParcel"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "loadFastPairAntispoofKeyDeviceMetadata",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.nearby.aidl.FastPairAccountDevicesMetadataRequestParcel"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "loadFastPairAccountDevicesMetadata",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.nearby.aidl.FastPairEligibleAccountsRequestParcel"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "loadFastPairEligibleAccounts",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.nearby.aidl.FastPairManageAccountRequestParcel"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "manageFastPairAccount",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.nearby.aidl.FastPairManageAccountDeviceRequestParcel"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "manageFastPairAccountDevice",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IFastPairDataProvider",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

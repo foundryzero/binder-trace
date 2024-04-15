@@ -1,0 +1,75 @@
+{
+    "produced_on": "2024-04-12T08:47:48.910522038Z",
+    "source_location": "",
+    "full_name": "android.hardware.automotive.vehicle.IVehicleCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "responses": "readParcelable",
+                        "__parcelType": "android.hardware.automotive.vehicle.GetValueResults"
+                    }]
+                }
+            ],
+            "name": "onGetValues",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "responses": "readParcelable",
+                        "__parcelType": "android.hardware.automotive.vehicle.SetValueResults"
+                    }]
+                }
+            ],
+            "name": "onSetValues",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "propValues": "readParcelable",
+                        "__parcelType": "android.hardware.automotive.vehicle.VehiclePropValues"
+                    }]
+                },
+                {"sharedMemoryFileCount": "readInt32"}
+            ],
+            "name": "onPropertyEvent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "errors": "readParcelable",
+                        "__parcelType": "android.hardware.automotive.vehicle.VehiclePropErrors"
+                    }]
+                }
+            ],
+            "name": "onPropertySetError",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IVehicleCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

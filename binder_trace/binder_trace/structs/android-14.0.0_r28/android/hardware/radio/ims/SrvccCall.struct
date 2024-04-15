@@ -1,0 +1,42 @@
+{
+    "produced_on": "2024-04-12T08:47:54.121963792Z",
+    "source_location": "",
+    "components": [
+        {"index": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "callType": "readParcelable",
+                "__parcelType": "android.hardware.radio.ims.CallType"
+            }]
+        },
+        {"callState": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "callSubstate": "readParcelable",
+                "__parcelType": "android.hardware.radio.ims.CallSubState"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "ringbackToneType": "readParcelable",
+                "__parcelType": "android.hardware.radio.ims.ToneType"
+            }]
+        },
+        {"isMpty": "readBool"},
+        {"isMT": "readBool"},
+        {"number": "readString16"},
+        {"numPresentation": "readInt32"},
+        {"name": "readString16"},
+        {"namePresentation": "readInt32"}
+    ],
+    "full_name": "android.hardware.radio.ims.SrvccCall",
+    "name": "SrvccCall",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

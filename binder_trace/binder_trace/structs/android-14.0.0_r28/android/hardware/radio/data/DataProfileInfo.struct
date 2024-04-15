@@ -1,0 +1,68 @@
+{
+    "produced_on": "2024-04-12T08:47:54.072339794Z",
+    "source_location": "",
+    "components": [
+        {"ID_DEFAULT": "readInt32"},
+        {"ID_TETHERED": "readInt32"},
+        {"ID_IMS": "readInt32"},
+        {"ID_FOTA": "readInt32"},
+        {"ID_CBS": "readInt32"},
+        {"ID_OEM_BASE": "readInt32"},
+        {"ID_INVALID": "readInt32"},
+        {"TYPE_COMMON": "readInt32"},
+        {"TYPE_3GPP": "readInt32"},
+        {"TYPE_3GPP2": "readInt32"},
+        {"profileId": "readInt32"},
+        {"apn": "readString16"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "protocol": "readParcelable",
+                "__parcelType": "android.hardware.radio.data.PdpProtocolType"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "roamingProtocol": "readParcelable",
+                "__parcelType": "android.hardware.radio.data.PdpProtocolType"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "authType": "readParcelable",
+                "__parcelType": "android.hardware.radio.data.ApnAuthType"
+            }]
+        },
+        {"user": "readString16"},
+        {"password": "readString16"},
+        {"type": "readInt32"},
+        {"maxConnsTime": "readInt32"},
+        {"maxConns": "readInt32"},
+        {"waitTime": "readInt32"},
+        {"enabled": "readBool"},
+        {"supportedApnTypesBitmap": "readInt32"},
+        {"bearerBitmap": "readInt32"},
+        {"mtuV4": "readInt32"},
+        {"mtuV6": "readInt32"},
+        {"preferred": "readBool"},
+        {"persistent": "readBool"},
+        {"alwaysOn": "readBool"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "trafficDescriptor": "readParcelable",
+                "__parcelType": "android.hardware.radio.data.TrafficDescriptor"
+            }]
+        }
+    ],
+    "full_name": "android.hardware.radio.data.DataProfileInfo",
+    "name": "DataProfileInfo",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

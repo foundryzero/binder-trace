@@ -1,0 +1,117 @@
+{
+    "produced_on": "2024-04-12T08:47:44.473784554Z",
+    "source_location": "",
+    "full_name": "android.media.tv.tuner.ITunerDemux",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"frontend": "readStrongBinder"}],
+            "name": "setFrontendDataSource",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"frontendId": "readInt32"}],
+            "name": "setFrontendDataSourceById",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "type": "readParcelable",
+                        "__parcelType": "android.hardware.tv.tuner.DemuxFilterType"
+                    }]
+                },
+                {"bufferSize": "readInt32"},
+                {"cb": "readStrongBinder"}
+            ],
+            "name": "openFilter",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "openTimeFilter",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"tunerFilter": "readStrongBinder"}],
+            "name": "getAvSyncHwId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [{"avSyncHwId": "readInt32"}],
+            "name": "getAvSyncTime",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "dvbType": "readParcelable",
+                        "__parcelType": "android.hardware.tv.tuner.DvrType"
+                    }]
+                },
+                {"bufferSize": "readInt32"},
+                {"cb": "readStrongBinder"}
+            ],
+            "name": "openDvr",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [{"ciCamId": "readInt32"}],
+            "name": "connectCiCam",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [],
+            "name": "disconnectCiCam",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [],
+            "name": "close",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ITunerDemux",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

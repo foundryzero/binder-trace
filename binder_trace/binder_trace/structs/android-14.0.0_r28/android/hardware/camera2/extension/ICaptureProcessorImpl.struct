@@ -1,0 +1,88 @@
+{
+    "produced_on": "2024-04-12T08:47:45.237540284Z",
+    "source_location": "",
+    "full_name": "android.hardware.camera2.extension.ICaptureProcessorImpl",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "surface": "readParcelable",
+                        "__parcelType": "android.view.Surface"
+                    }]
+                },
+                {"imageFormat": "readInt32"}
+            ],
+            "name": "onOutputSurface",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "surface": "readParcelable",
+                        "__parcelType": "android.view.Surface"
+                    }]
+                }
+            ],
+            "name": "onPostviewOutputSurface",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "size": "readParcelable",
+                        "__parcelType": "android.hardware.camera2.extension.Size"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "postviewSize": "readParcelable",
+                        "__parcelType": "android.hardware.camera2.extension.Size"
+                    }]
+                }
+            ],
+            "name": "onResolutionUpdate",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{"imageFormat": "readInt32"}],
+            "name": "onImageFormatUpdate",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {
+                    "capturelist": "readList",
+                    "__parcelType": "android.hardware.camera2.extension.CaptureBundle"
+                },
+                {"resultCallback": "readStrongBinder"},
+                {"isPostviewRequested": "readBool"}
+            ],
+            "name": "process",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICaptureProcessorImpl",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

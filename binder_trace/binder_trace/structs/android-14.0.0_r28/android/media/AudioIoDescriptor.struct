@@ -1,0 +1,41 @@
+{
+    "produced_on": "2024-04-12T08:47:44.290710745Z",
+    "source_location": "",
+    "components": [
+        {"ioHandle": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "patch": "readParcelable",
+                "__parcelType": "android.media.AudioPatchFw"
+            }]
+        },
+        {"isInput": "readBool"},
+        {"samplingRate": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "format": "readParcelable",
+                "__parcelType": "android.media.audio.common.AudioFormatDescription"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "channelMask": "readParcelable",
+                "__parcelType": "android.media.audio.common.AudioChannelLayout"
+            }]
+        },
+        {"frameCount": "readInt64"},
+        {"frameCountHAL": "readInt64"},
+        {"latency": "readInt32"},
+        {"portId": "readInt32"}
+    ],
+    "full_name": "android.media.AudioIoDescriptor",
+    "name": "AudioIoDescriptor",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

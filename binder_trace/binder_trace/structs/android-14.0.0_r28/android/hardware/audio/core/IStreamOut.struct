@@ -1,0 +1,197 @@
+{
+    "produced_on": "2024-04-12T08:47:48.376366924Z",
+    "source_location": "",
+    "full_name": "android.hardware.audio.core.IStreamOut",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getStreamCommon",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "sourceMetadata": "readParcelable",
+                        "__parcelType": "android.hardware.audio.common.SourceMetadata"
+                    }]
+                }
+            ],
+            "name": "updateMetadata",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "offloadMetadata": "readParcelable",
+                        "__parcelType": "android.hardware.audio.common.AudioOffloadMetadata"
+                    }]
+                }
+            ],
+            "name": "updateOffloadMetadata",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "getHwVolume",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.audio.core.float"
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{
+                "channelVolumes": "readParcelableVector",
+                "__parcelType": "android.hardware.audio.core.float"
+            }],
+            "name": "setHwVolume",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "getAudioDescriptionMixLevel",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readFloat"}
+            ]
+        },
+        {
+            "code": 7,
+            "in": [{"leveldB": "readFloat"}],
+            "name": "setAudioDescriptionMixLevel",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "getDualMonoMode",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.media.audio.common.AudioDualMonoMode"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "mode": "readParcelable",
+                        "__parcelType": "android.media.audio.common.AudioDualMonoMode"
+                    }]
+                }
+            ],
+            "name": "setDualMonoMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [],
+            "name": "getRecommendedLatencyModes",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.media.audio.common.AudioLatencyMode"
+                }
+            ]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "mode": "readParcelable",
+                        "__parcelType": "android.media.audio.common.AudioLatencyMode"
+                    }]
+                }
+            ],
+            "name": "setLatencyMode",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [],
+            "name": "getPlaybackRateParameters",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.media.audio.common.AudioPlaybackRate"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "playbackRate": "readParcelable",
+                        "__parcelType": "android.media.audio.common.AudioPlaybackRate"
+                    }]
+                }
+            ],
+            "name": "setPlaybackRateParameters",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"presentationId": "readInt32"},
+                {"programId": "readInt32"}
+            ],
+            "name": "selectPresentation",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IStreamOut",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

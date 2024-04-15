@@ -1,0 +1,185 @@
+{
+    "produced_on": "2024-04-12T08:47:59.652336435Z",
+    "source_location": "",
+    "full_name": "android.net.wifi.nl80211.IWificond",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"iface_name": "readString16"}],
+            "name": "createApInterface",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"iface_name": "readString16"}],
+            "name": "createClientInterface",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"iface_name": "readString16"}],
+            "name": "tearDownApInterface",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"iface_name": "readString16"}],
+            "name": "tearDownClientInterface",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "tearDownInterfaces",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "GetClientInterfaces",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "IBinder"
+                }
+            ]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "GetApInterfaces",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "IBinder"
+                }
+            ]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "getAvailable2gChannels",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 9,
+            "in": [],
+            "name": "getAvailable5gNonDFSChannels",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 10,
+            "in": [],
+            "name": "getAvailableDFSChannels",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 11,
+            "in": [],
+            "name": "getAvailable6gChannels",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 12,
+            "in": [],
+            "name": "getAvailable60gChannels",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 13,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "RegisterCallback",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "UnregisterCallback",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "registerWificondEventCallback",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "unregisterWificondEventCallback",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [{"iface_name": "readString16"}],
+            "name": "getDeviceWiphyCapabilities",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.net.wifi.nl80211.DeviceWiphyCapabilities"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 18,
+            "in": [],
+            "name": "notifyCountryCodeChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IWificond",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

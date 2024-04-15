@@ -1,0 +1,201 @@
+{
+    "produced_on": "2024-04-12T08:47:46.143134453Z",
+    "source_location": "",
+    "full_name": "com.android.ims.internal.uce.presence.IPresenceService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"presenceServiceHdl": "readInt32"}],
+            "name": "getVersion",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.ims.internal.uce.common.StatusCode"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"presenceServiceHdl": "readInt32"},
+                {"presenceServiceListener": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "presenceServiceListenerHdl": "readParcelable",
+                        "__parcelType": "com.android.ims.internal.uce.common.UceLong"
+                    }]
+                }
+            ],
+            "name": "addListener",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.ims.internal.uce.common.StatusCode"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"presenceServiceHdl": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "presenceServiceListenerHdl": "readParcelable",
+                        "__parcelType": "com.android.ims.internal.uce.common.UceLong"
+                    }]
+                }
+            ],
+            "name": "removeListener",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.ims.internal.uce.common.StatusCode"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"presenceServiceHdl": "readInt32"},
+                {"userData": "readInt32"}
+            ],
+            "name": "reenableService",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.ims.internal.uce.common.StatusCode"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"presenceServiceHdl": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "myCapInfo": "readParcelable",
+                        "__parcelType": "com.android.ims.internal.uce.presence.PresCapInfo"
+                    }]
+                },
+                {"userData": "readInt32"}
+            ],
+            "name": "publishMyCap",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.ims.internal.uce.common.StatusCode"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"presenceServiceHdl": "readInt32"},
+                {"remoteUri": "readString16"},
+                {"userData": "readInt32"}
+            ],
+            "name": "getContactCap",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.ims.internal.uce.common.StatusCode"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"presenceServiceHdl": "readInt32"},
+                {"remoteUriList": "readString16Vector"},
+                {"userData": "readInt32"}
+            ],
+            "name": "getContactListCap",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.ims.internal.uce.common.StatusCode"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"presenceServiceHdl": "readInt32"},
+                {"featureTag": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "serviceInfo": "readParcelable",
+                        "__parcelType": "com.android.ims.internal.uce.presence.PresServiceInfo"
+                    }]
+                },
+                {"userData": "readInt32"}
+            ],
+            "name": "setNewFeatureTag",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "com.android.ims.internal.uce.common.StatusCode"
+                    }]
+                }
+            ]
+        }
+    ],
+    "name": "IPresenceService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

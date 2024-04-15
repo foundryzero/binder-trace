@@ -1,0 +1,104 @@
+{
+    "produced_on": "2024-04-12T08:47:44.710617442Z",
+    "source_location": "",
+    "full_name": "android.app.ILocaleManager",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "locales": "readParcelable",
+                        "__parcelType": "android.os.LocaleList"
+                    }]
+                },
+                {"fromDelegate": "readBool"}
+            ],
+            "name": "setApplicationLocales",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "getApplicationLocales",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.os.LocaleList"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getSystemLocales",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.os.LocaleList"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "localeConfig": "readParcelable",
+                        "__parcelType": "android.app.LocaleConfig"
+                    }]
+                }
+            ],
+            "name": "setOverrideLocaleConfig",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"packageName": "readString16"},
+                {"userId": "readInt32"}
+            ],
+            "name": "getOverrideLocaleConfig",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.app.LocaleConfig"
+                    }]
+                }
+            ]
+        }
+    ],
+    "name": "ILocaleManager",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

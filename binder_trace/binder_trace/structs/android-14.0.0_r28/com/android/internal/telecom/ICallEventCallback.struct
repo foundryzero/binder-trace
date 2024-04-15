@@ -1,0 +1,195 @@
+{
+    "produced_on": "2024-04-12T08:47:46.767851591Z",
+    "source_location": "",
+    "full_name": "com.android.internal.telecom.ICallEventCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"callId": "readString16"},
+                {"resultCode": "readInt32"},
+                {"callControl": "readStrongBinder"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "exception": "readParcelable",
+                        "__parcelType": "android.telecom.CallException"
+                    }]
+                }
+            ],
+            "name": "onAddCallControl",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"callId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callback": "readParcelable",
+                        "__parcelType": "android.os.ResultReceiver"
+                    }]
+                }
+            ],
+            "name": "onSetActive",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"callId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callback": "readParcelable",
+                        "__parcelType": "android.os.ResultReceiver"
+                    }]
+                }
+            ],
+            "name": "onSetInactive",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"callId": "readString16"},
+                {"videoState": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callback": "readParcelable",
+                        "__parcelType": "android.os.ResultReceiver"
+                    }]
+                }
+            ],
+            "name": "onAnswer",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"callId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "cause": "readParcelable",
+                        "__parcelType": "android.telecom.DisconnectCause"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callback": "readParcelable",
+                        "__parcelType": "android.os.ResultReceiver"
+                    }]
+                }
+            ],
+            "name": "onDisconnect",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"callId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callback": "readParcelable",
+                        "__parcelType": "android.os.ResultReceiver"
+                    }]
+                }
+            ],
+            "name": "onCallStreamingStarted",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"callId": "readString16"},
+                {"reason": "readInt32"}
+            ],
+            "name": "onCallStreamingFailed",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"callId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "endpoint": "readParcelable",
+                        "__parcelType": "android.telecom.CallEndpoint"
+                    }]
+                }
+            ],
+            "name": "onCallEndpointChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"callId": "readString16"},
+                {
+                    "endpoint": "readList",
+                    "__parcelType": "android.telecom.CallEndpoint"
+                }
+            ],
+            "name": "onAvailableCallEndpointsChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"callId": "readString16"},
+                {"isMuted": "readBool"}
+            ],
+            "name": "onMuteStateChanged",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"callId": "readString16"},
+                {"event": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{"extras": "readBundle"}]
+                }
+            ],
+            "name": "onEvent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [{"callId": "readString16"}],
+            "name": "removeCallFromTransactionalServiceWrapper",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICallEventCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

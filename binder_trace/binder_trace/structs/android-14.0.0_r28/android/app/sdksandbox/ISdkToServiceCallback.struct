@@ -1,0 +1,35 @@
+{
+    "produced_on": "2024-04-12T08:47:57.325587762Z",
+    "source_location": "",
+    "full_name": "android.app.sdksandbox.ISdkToServiceCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"clientPackageName": "readString16"}],
+            "name": "getSandboxedSdks",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "android.app.sdksandbox.SandboxedSdk"
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"latencyFromSystemServerToSandboxMillis": "readInt32"},
+                {"latencySandboxMillis": "readInt32"},
+                {"method": "readInt32"},
+                {"success": "readBool"}
+            ],
+            "name": "logLatenciesFromSandbox",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISdkToServiceCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

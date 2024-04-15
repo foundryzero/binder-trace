@@ -1,0 +1,63 @@
+{
+    "produced_on": "2024-04-12T08:47:46.964120468Z",
+    "source_location": "",
+    "full_name": "android.telephony.ims.aidl.ISubscribeResponseCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"code": "readInt32"}],
+            "name": "onCommandError",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "detail": "readParcelable",
+                        "__parcelType": "android.telephony.ims.SipDetails"
+                    }]
+                }
+            ],
+            "name": "onNetworkResponse",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{
+                "pidfXmls": "readList",
+                "__parcelType": "String"
+            }],
+            "name": "onNotifyCapabilitiesUpdate",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [{
+                "uriTerminatedReason": "readList",
+                "__parcelType": "android.telephony.ims.RcsContactTerminatedReason"
+            }],
+            "name": "onResourceTerminated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"reason": "readString16"},
+                {"retryAfterMilliseconds": "readInt64"}
+            ],
+            "name": "onTerminated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISubscribeResponseCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

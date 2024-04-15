@@ -1,0 +1,24 @@
+{
+    "produced_on": "2024-04-12T08:47:59.442327524Z",
+    "source_location": "",
+    "components": [
+        {"startTimeEpochMillis": "readInt64"},
+        {"durationInMillis": "readInt64"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "systemSummaryUsageStats": "readParcelable",
+                "__parcelType": "android.automotive.watchdog.internal.SystemSummaryUsageStats"
+            }]
+        },
+        {
+            "uidResourceUsageStats": "readList",
+            "__parcelType": "android.automotive.watchdog.internal.UidResourceUsageStats"
+        }
+    ],
+    "full_name": "android.automotive.watchdog.internal.ResourceUsageStats",
+    "name": "ResourceUsageStats",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

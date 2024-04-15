@@ -1,0 +1,33 @@
+{
+    "produced_on": "2024-04-12T08:47:59.445063198Z",
+    "source_location": "",
+    "components": [
+        {"cpuNonIdleCycles": "readInt64"},
+        {"cpuNonIdleTimeMillis": "readInt64"},
+        {"cpuIdleTimeMillis": "readInt64"},
+        {"contextSwitchesCount": "readInt64"},
+        {"ioBlockedProcessCount": "readInt32"},
+        {"totalProcessCount": "readInt32"},
+        {"totalMajorPageFaults": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "totalIoReads": "readParcelable",
+                "__parcelType": "android.automotive.watchdog.PerStateBytes"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "totalIoWrites": "readParcelable",
+                "__parcelType": "android.automotive.watchdog.PerStateBytes"
+            }]
+        }
+    ],
+    "full_name": "android.automotive.watchdog.internal.SystemSummaryUsageStats",
+    "name": "SystemSummaryUsageStats",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

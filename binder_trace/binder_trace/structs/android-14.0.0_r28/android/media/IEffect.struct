@@ -1,0 +1,87 @@
+{
+    "produced_on": "2024-04-12T08:47:44.369866618Z",
+    "source_location": "",
+    "full_name": "android.media.IEffect",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "enable",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "disable",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"cmdCode": "readInt32"},
+                {"cmdData": "readByteVector"},
+                {"maxResponseSize": "readInt32"}
+            ],
+            "name": "command",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"},
+                {"response": "readByteVector"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "disconnect",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "getCblk",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.media.SharedFileRegion"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "getConfig",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "config": "readParcelable",
+                        "__parcelType": "android.media.EffectConfig"
+                    }]
+                }
+            ]
+        }
+    ],
+    "name": "IEffect",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

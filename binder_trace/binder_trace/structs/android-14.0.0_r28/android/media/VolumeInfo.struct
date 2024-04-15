@@ -1,0 +1,24 @@
+{
+    "produced_on": "2024-04-12T15:08:23.027577593Z",
+    "source_location": "",
+    "components": [
+        {"mUsesStreamType": "readBool"},
+        {"mStreamType": "readInt32"},
+        {"mHasMuteCommand": "readBool"},
+        {"mIsMuted": "readBool"},
+        {"mVolIndex": "readInt32"},
+        {"mMinVolIndex": "readInt32"},
+        {"mMaxVolIndex": "readInt32"},
+        {
+            "__backreference": "mUsesStreamType",
+            "__conditional": [{
+                "mVolGroup": "readParcelable",
+                "__parcelType": "android.media.audiopolicy.AudioVolumeGroup"
+            }]
+        }
+    ],
+    "full_name": "android.media.VolumeInfo",
+    "name": "VolumeInfo",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

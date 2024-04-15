@@ -1,0 +1,60 @@
+{
+    "produced_on": "2024-04-12T08:47:46.394987930Z",
+    "source_location": "",
+    "full_name": "com.android.wm.shell.transition.IShellTransitions",
+    "calls": [
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "filter": "readParcelable",
+                        "__parcelType": "android.window.TransitionFilter"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "remoteTransition": "readParcelable",
+                        "__parcelType": "android.window.RemoteTransition"
+                    }]
+                }
+            ],
+            "name": "registerRemote",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "remoteTransition": "readParcelable",
+                        "__parcelType": "android.window.RemoteTransition"
+                    }]
+                }
+            ],
+            "name": "unregisterRemote",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [],
+            "name": "getShellApplyToken",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        }
+    ],
+    "name": "IShellTransitions",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

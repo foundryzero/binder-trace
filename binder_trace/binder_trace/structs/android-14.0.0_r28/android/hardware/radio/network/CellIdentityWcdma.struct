@@ -1,0 +1,33 @@
+{
+    "produced_on": "2024-04-12T08:47:54.212450373Z",
+    "source_location": "",
+    "components": [
+        {"mcc": "readString16"},
+        {"mnc": "readString16"},
+        {"lac": "readInt32"},
+        {"cid": "readInt32"},
+        {"psc": "readInt32"},
+        {"uarfcn": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "operatorNames": "readParcelable",
+                "__parcelType": "android.hardware.radio.network.OperatorInfo"
+            }]
+        },
+        {"additionalPlmns": "readString16Vector"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "csgInfo": "readParcelable",
+                "__parcelType": "android.hardware.radio.network.ClosedSubscriberGroupInfo"
+            }]
+        }
+    ],
+    "full_name": "android.hardware.radio.network.CellIdentityWcdma",
+    "name": "CellIdentityWcdma",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

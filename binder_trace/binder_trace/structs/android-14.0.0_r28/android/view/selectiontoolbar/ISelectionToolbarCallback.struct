@@ -1,0 +1,72 @@
+{
+    "produced_on": "2024-04-12T08:47:46.045442022Z",
+    "source_location": "",
+    "full_name": "android.view.selectiontoolbar.ISelectionToolbarCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "info": "readParcelable",
+                        "__parcelType": "android.view.selectiontoolbar.WidgetInfo"
+                    }]
+                }
+            ],
+            "name": "onShown",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "info": "readParcelable",
+                        "__parcelType": "android.view.selectiontoolbar.WidgetInfo"
+                    }]
+                }
+            ],
+            "name": "onWidgetUpdated",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "onToolbarShowTimeout",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "item": "readParcelable",
+                        "__parcelType": "android.view.selectiontoolbar.ToolbarMenuItem"
+                    }]
+                }
+            ],
+            "name": "onMenuItemClicked",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"errorCode": "readInt32"}],
+            "name": "onError",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ISelectionToolbarCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

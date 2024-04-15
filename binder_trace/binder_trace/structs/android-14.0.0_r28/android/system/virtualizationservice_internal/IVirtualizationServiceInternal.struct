@@ -1,0 +1,88 @@
+{
+    "produced_on": "2024-04-12T08:47:57.741595534Z",
+    "source_location": "",
+    "full_name": "android.system.virtualizationservice_internal.IVirtualizationServiceInternal",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "removeMemlockRlimit",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"requesterDebugPid": "readInt32"}],
+            "name": "allocateGlobalVmContext",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "atom": "readParcelable",
+                        "__parcelType": "android.system.virtualizationservice_internal.AtomVmBooted"
+                    }]
+                }
+            ],
+            "name": "atomVmBooted",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "atom": "readParcelable",
+                        "__parcelType": "android.system.virtualizationservice_internal.AtomVmCreationRequested"
+                    }]
+                }
+            ],
+            "name": "atomVmCreationRequested",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "atom": "readParcelable",
+                        "__parcelType": "android.system.virtualizationservice_internal.AtomVmExited"
+                    }]
+                }
+            ],
+            "name": "atomVmExited",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "debugListVms",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.system.virtualizationservice.VirtualMachineDebugInfo"
+                }
+            ]
+        }
+    ],
+    "name": "IVirtualizationServiceInternal",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

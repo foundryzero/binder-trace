@@ -1,0 +1,57 @@
+{
+    "produced_on": "2024-04-12T08:47:51.583439973Z",
+    "source_location": "",
+    "full_name": "android.hardware.gnss.IGnssGeofence",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "setCallback",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"geofenceId": "readInt32"},
+                {"latitudeDegrees": "readDouble"},
+                {"longitudeDegrees": "readDouble"},
+                {"radiusMeters": "readDouble"},
+                {"lastTransition": "readInt32"},
+                {"monitorTransitions": "readInt32"},
+                {"notificationResponsivenessMs": "readInt32"},
+                {"unknownTimerMs": "readInt32"}
+            ],
+            "name": "addGeofence",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [{"geofenceId": "readInt32"}],
+            "name": "pauseGeofence",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"geofenceId": "readInt32"},
+                {"monitorTransitions": "readInt32"}
+            ],
+            "name": "resumeGeofence",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 5,
+            "in": [{"geofenceId": "readInt32"}],
+            "name": "removeGeofence",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IGnssGeofence",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

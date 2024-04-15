@@ -1,0 +1,95 @@
+{
+    "produced_on": "2024-04-12T08:47:44.415592687Z",
+    "source_location": "",
+    "full_name": "android.media.ITranscodingClient",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.media.TranscodingRequestParcel"
+                    }]
+                }
+            ],
+            "name": "submitRequest",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "session": "readParcelable",
+                        "__parcelType": "android.media.TranscodingSessionParcel"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"sessionId": "readInt32"}],
+            "name": "cancelSession",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"sessionId": "readInt32"}],
+            "name": "getSessionWithId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "session": "readParcelable",
+                        "__parcelType": "android.media.TranscodingSessionParcel"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"sessionId": "readInt32"},
+                {"clientUid": "readInt32"}
+            ],
+            "name": "addClientUid",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"sessionId": "readInt32"}],
+            "name": "getClientUids",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32Vector"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [],
+            "name": "unregister",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ITranscodingClient",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

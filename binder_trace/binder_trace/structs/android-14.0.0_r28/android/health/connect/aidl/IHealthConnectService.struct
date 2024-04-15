@@ -1,0 +1,567 @@
+{
+    "produced_on": "2024-04-12T08:47:58.076662646Z",
+    "source_location": "",
+    "full_name": "android.health.connect.aidl.IHealthConnectService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"packageName": "readString16"},
+                {"permissionName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "user": "readParcelable",
+                        "__parcelType": "android.os.UserHandle"
+                    }]
+                }
+            ],
+            "name": "grantHealthPermission",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"packageName": "readString16"},
+                {"permissionName": "readString16"},
+                {"reason": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "user": "readParcelable",
+                        "__parcelType": "android.os.UserHandle"
+                    }]
+                }
+            ],
+            "name": "revokeHealthPermission",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"packageName": "readString16"},
+                {"reason": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "user": "readParcelable",
+                        "__parcelType": "android.os.UserHandle"
+                    }]
+                }
+            ],
+            "name": "revokeAllHealthPermissions",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"packageName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "user": "readParcelable",
+                        "__parcelType": "android.os.UserHandle"
+                    }]
+                }
+            ],
+            "name": "getGrantedHealthPermissions",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "String"
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"packageName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "user": "readParcelable",
+                        "__parcelType": "android.os.UserHandle"
+                    }]
+                }
+            ],
+            "name": "getHistoricalAccessStartDateInMilliseconds",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt64"}
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributionSource": "readParcelable",
+                        "__parcelType": "android.content.AttributionSource"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "recordsParcel": "readParcelable",
+                        "__parcelType": "android.health.connect.aidl.RecordsParcel"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "insertRecords",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 7,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributionSource": "readParcelable",
+                        "__parcelType": "android.content.AttributionSource"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.health.connect.aidl.AggregateDataRequestParcel"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "aggregateRecords",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 8,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributionSource": "readParcelable",
+                        "__parcelType": "android.content.AttributionSource"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.health.connect.aidl.ReadRecordsRequestParcel"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "readRecords",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 9,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributionSource": "readParcelable",
+                        "__parcelType": "android.content.AttributionSource"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "recordsParcel": "readParcelable",
+                        "__parcelType": "android.health.connect.aidl.RecordsParcel"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "updateRecords",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 10,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributionSource": "readParcelable",
+                        "__parcelType": "android.content.AttributionSource"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.health.connect.changelog.ChangeLogTokenRequest"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "getChangeLogToken",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 11,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributionSource": "readParcelable",
+                        "__parcelType": "android.content.AttributionSource"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "token": "readParcelable",
+                        "__parcelType": "android.health.connect.changelog.ChangeLogsRequest"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "getChangeLogs",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 12,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributionSource": "readParcelable",
+                        "__parcelType": "android.content.AttributionSource"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.health.connect.aidl.DeleteUsingFiltersRequestParcel"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "deleteUsingFilters",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 13,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "attributionSource": "readParcelable",
+                        "__parcelType": "android.content.AttributionSource"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.health.connect.aidl.DeleteUsingFiltersRequestParcel"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "deleteUsingFiltersForSelf",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 14,
+            "in": [
+                {"packageName": "readString16"},
+                {"permissionCategory": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "getCurrentPriority",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 15,
+            "in": [
+                {"packageName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.health.connect.aidl.UpdatePriorityRequestParcel"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "updatePriority",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 16,
+            "in": [
+                {"days": "readInt32"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "userHandle": "readParcelable",
+                        "__parcelType": "android.os.UserHandle"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "setRecordRetentionPeriodInDays",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 17,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "userHandle": "readParcelable",
+                        "__parcelType": "android.os.UserHandle"
+                    }]
+                }
+            ],
+            "name": "getRecordRetentionPeriodInDays",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 18,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "getContributorApplicationsInfo",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 19,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "queryAllRecordTypesInfo",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 20,
+            "in": [
+                {"packageName": "readString16"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "queryAccessLogs",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 21,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "recordTypes": "readParcelable",
+                        "__parcelType": "android.health.connect.aidl.ActivityDatesRequestParcel"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "getActivityDates",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 22,
+            "in": [
+                {"packageName": "readString16"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "startMigration",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 23,
+            "in": [
+                {"packageName": "readString16"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "finishMigration",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 24,
+            "in": [
+                {"packageName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "parcel": "readParcelable",
+                        "__parcelType": "android.health.connect.migration.MigrationEntityParcel"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "writeMigrationData",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 25,
+            "in": [
+                {"packageName": "readString16"},
+                {"requiredSdkExtension": "readInt32"},
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "insertMinDataMigrationSdkExtensionVersion",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 26,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "stageRemoteDataRequest": "readParcelable",
+                        "__parcelType": "android.health.connect.restore.StageRemoteDataRequest"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "userHandle": "readParcelable",
+                        "__parcelType": "android.os.UserHandle"
+                    }]
+                },
+                {"callback": "readStrongBinder"}
+            ],
+            "name": "stageAllHealthConnectRemoteData",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 27,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "stageRemoteDataRequest": "readParcelable",
+                        "__parcelType": "android.health.connect.restore.StageRemoteDataRequest"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "userHandle": "readParcelable",
+                        "__parcelType": "android.os.UserHandle"
+                    }]
+                }
+            ],
+            "name": "getAllDataForBackup",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 28,
+            "in": [{"forDeviceToDevice": "readBool"}],
+            "name": "getAllBackupFileNames",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.health.connect.restore.BackupFileNamesSet"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 29,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "userHandle": "readParcelable",
+                        "__parcelType": "android.os.UserHandle"
+                    }]
+                }
+            ],
+            "name": "deleteAllStagedRemoteData",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 30,
+            "in": [{"downloadState": "readInt32"}],
+            "name": "updateDataDownloadState",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 31,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "getHealthConnectDataState",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 32,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "getHealthConnectMigrationUiState",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IHealthConnectService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

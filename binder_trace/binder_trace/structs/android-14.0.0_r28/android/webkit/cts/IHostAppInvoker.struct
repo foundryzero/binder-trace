@@ -1,0 +1,63 @@
+{
+    "produced_on": "2024-04-12T08:47:44.006697581Z",
+    "source_location": "",
+    "full_name": "android.webkit.cts.IHostAppInvoker",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "waitForIdleSync",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"keyCode": "readInt32"}],
+            "name": "sendKeyDownUpSync",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "event": "readParcelable",
+                        "__parcelType": "android.view.MotionEvent"
+                    }]
+                }
+            ],
+            "name": "sendPointerSync",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"data": "readString16"},
+                {"charset": "readString16"}
+            ],
+            "name": "getEncodingBytes",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readByteVector"}
+            ]
+        },
+        {
+            "code": 5,
+            "in": [],
+            "name": "getWebServer",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        }
+    ],
+    "name": "IHostAppInvoker",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

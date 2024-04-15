@@ -1,0 +1,33 @@
+{
+    "produced_on": "2024-04-12T08:47:52.329816243Z",
+    "source_location": "",
+    "full_name": "android.hardware.ir.IConsumerIr",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getCarrierFreqs",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.ir.ConsumerIrFreqRange"
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"carrierFreqHz": "readInt32"},
+                {"pattern": "readInt32Vector"}
+            ],
+            "name": "transmit",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IConsumerIr",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

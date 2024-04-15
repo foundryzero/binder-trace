@@ -1,0 +1,37 @@
+{
+    "produced_on": "2024-04-12T08:47:49.748360058Z",
+    "source_location": "",
+    "full_name": "android.hardware.biometrics.fingerprint.IFingerprint",
+    "calls": [
+        {
+            "code": 1,
+            "in": [],
+            "name": "getSensorProps",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.biometrics.fingerprint.SensorProps"
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"sensorId": "readInt32"},
+                {"userId": "readInt32"},
+                {"cb": "readStrongBinder"}
+            ],
+            "name": "createSession",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        }
+    ],
+    "name": "IFingerprint",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

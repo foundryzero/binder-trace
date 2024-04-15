@@ -1,0 +1,112 @@
+{
+    "produced_on": "2024-04-12T08:47:54.750298691Z",
+    "source_location": "",
+    "full_name": "android.hardware.media.c2.IConfigurable",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "inParams": "readParcelable",
+                        "__parcelType": "android.hardware.media.c2.Params"
+                    }]
+                },
+                {"mayBlock": "readBool"}
+            ],
+            "name": "config",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.media.c2.IConfigurable.ConfigResult"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 2,
+            "in": [],
+            "name": "getId",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readInt32"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [],
+            "name": "getName",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readString16"}
+            ]
+        },
+        {
+            "code": 4,
+            "in": [
+                {"indices": "readInt32Vector"},
+                {"mayBlock": "readBool"}
+            ],
+            "name": "query",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "android.hardware.media.c2.Params"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [
+                {"start": "readInt32"},
+                {"count": "readInt32"}
+            ],
+            "name": "querySupportedParams",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.media.c2.ParamDescriptor"
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [
+                {
+                    "inFields": "readParcelableVector",
+                    "__parcelType": "android.hardware.media.c2.FieldSupportedValuesQuery"
+                },
+                {"mayBlock": "readBool"}
+            ],
+            "name": "querySupportedValues",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readParcelableVector",
+                    "__parcelType": "android.hardware.media.c2.FieldSupportedValuesQueryResult"
+                }
+            ]
+        }
+    ],
+    "name": "IConfigurable",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

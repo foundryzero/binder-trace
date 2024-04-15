@@ -1,0 +1,33 @@
+{
+    "produced_on": "2024-04-12T08:47:58.983600291Z",
+    "source_location": "",
+    "full_name": "android.car.evs.ICarEvsStreamCallback",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"event": "readInt32"}],
+            "name": "onStreamEvent",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "buffer": "readParcelable",
+                        "__parcelType": "android.car.evs.CarEvsBufferDescriptor"
+                    }]
+                }
+            ],
+            "name": "onNewFrame",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "ICarEvsStreamCallback",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

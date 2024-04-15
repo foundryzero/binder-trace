@@ -1,0 +1,46 @@
+{
+    "produced_on": "2024-04-12T08:47:55.805823816Z",
+    "source_location": "",
+    "components": [
+        {"frequency": "readInt64"},
+        {"endFrequency": "readInt64"},
+        {"streamId": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "streamIdType": "readParcelable",
+                "__parcelType": "android.hardware.tv.tuner.FrontendIsdbsStreamIdType"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "modulation": "readParcelable",
+                "__parcelType": "android.hardware.tv.tuner.FrontendIsdbs3Modulation"
+            }]
+        },
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "coderate": "readParcelable",
+                "__parcelType": "android.hardware.tv.tuner.FrontendIsdbs3Coderate"
+            }]
+        },
+        {"symbolRate": "readInt32"},
+        {"nullcheck": "readInt32"},
+        {
+            "__backreference": "nullcheck",
+            "__conditional": [{
+                "rolloff": "readParcelable",
+                "__parcelType": "android.hardware.tv.tuner.FrontendIsdbs3Rolloff"
+            }]
+        }
+    ],
+    "full_name": "android.hardware.tv.tuner.FrontendIsdbs3Settings",
+    "name": "FrontendIsdbs3Settings",
+    "producer": "java-aidl-generator",
+    "type": "Parcelable"
+}

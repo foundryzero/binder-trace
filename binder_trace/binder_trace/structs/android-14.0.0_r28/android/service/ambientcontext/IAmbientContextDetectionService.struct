@@ -1,0 +1,68 @@
+{
+    "produced_on": "2024-04-12T08:47:45.684067719Z",
+    "source_location": "",
+    "full_name": "android.service.ambientcontext.IAmbientContextDetectionService",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "request": "readParcelable",
+                        "__parcelType": "android.app.ambientcontext.AmbientContextEventRequest"
+                    }]
+                },
+                {"packageName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "detectionResultCallback": "readParcelable",
+                        "__parcelType": "android.os.RemoteCallback"
+                    }]
+                },
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "statusCallback": "readParcelable",
+                        "__parcelType": "android.os.RemoteCallback"
+                    }]
+                }
+            ],
+            "name": "startDetection",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"packageName": "readString16"}],
+            "name": "stopDetection",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"eventTypes": "readInt32Vector"},
+                {"packageName": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "callback": "readParcelable",
+                        "__parcelType": "android.os.RemoteCallback"
+                    }]
+                }
+            ],
+            "name": "queryServiceStatus",
+            "oneWay": true,
+            "out": [{"__exception": "readException"}]
+        }
+    ],
+    "name": "IAmbientContextDetectionService",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,49 @@
+{
+    "produced_on": "2024-04-12T08:48:00.429610599Z",
+    "source_location": "",
+    "full_name": "android.os.IUpdateEngineStable",
+    "calls": [
+        {
+            "code": 1,
+            "in": [
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "pfd": "readParcelable",
+                        "__parcelType": "android.os.ParcelFileDescriptor"
+                    }]
+                },
+                {"payload_offset": "readInt64"},
+                {"payload_size": "readInt64"},
+                {"headerKeyValuePairs": "readString16Vector"}
+            ],
+            "name": "applyPayloadFd",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 2,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "bind",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 3,
+            "in": [{"callback": "readStrongBinder"}],
+            "name": "unbind",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        }
+    ],
+    "name": "IUpdateEngineStable",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}

@@ -1,0 +1,138 @@
+{
+    "produced_on": "2024-04-12T08:47:47.219737287Z",
+    "source_location": "",
+    "full_name": "androidx.camera.extensions.impl.service.IAdvancedExtenderImpl",
+    "calls": [
+        {
+            "code": 1,
+            "in": [{"cameraId": "readString16"}],
+            "name": "isExtensionAvailable",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readBool"}
+            ]
+        },
+        {
+            "code": 2,
+            "in": [{"cameraId": "readString16"}],
+            "name": "init",
+            "oneWay": false,
+            "out": [{"__exception": "readException"}]
+        },
+        {
+            "code": 3,
+            "in": [
+                {"cameraId": "readString16"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "outputSize": "readParcelable",
+                        "__parcelType": "androidx.camera.extensions.impl.service.Size"
+                    }]
+                },
+                {"format": "readInt32"}
+            ],
+            "name": "getEstimatedCaptureLatencyRange",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "androidx.camera.extensions.impl.service.LatencyRange"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 4,
+            "in": [{"cameraId": "readString16"}],
+            "name": "getSupportedPreviewOutputResolutions",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "androidx.camera.extensions.impl.service.SizeList"
+                }
+            ]
+        },
+        {
+            "code": 5,
+            "in": [{"cameraId": "readString16"}],
+            "name": "getSupportedCaptureOutputResolutions",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "androidx.camera.extensions.impl.service.SizeList"
+                }
+            ]
+        },
+        {
+            "code": 6,
+            "in": [{"cameraId": "readString16"}],
+            "name": "getSupportedYuvAnalysisResolutions",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {
+                    "__return": "readList",
+                    "__parcelType": "androidx.camera.extensions.impl.service.SizeList"
+                }
+            ]
+        },
+        {
+            "code": 7,
+            "in": [],
+            "name": "getSessionProcessor",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"__return": "readStrongBinder"}
+            ]
+        },
+        {
+            "code": 8,
+            "in": [],
+            "name": "getAvailableCaptureRequestKeys",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "androidx.camera.extensions.impl.service.CameraMetadataWrapper"
+                    }]
+                }
+            ]
+        },
+        {
+            "code": 9,
+            "in": [],
+            "name": "getAvailableCaptureResultKeys",
+            "oneWay": false,
+            "out": [
+                {"__exception": "readException"},
+                {"nullcheck": "readInt32"},
+                {
+                    "__backreference": "nullcheck",
+                    "__conditional": [{
+                        "__return": "readParcelable",
+                        "__parcelType": "androidx.camera.extensions.impl.service.CameraMetadataWrapper"
+                    }]
+                }
+            ]
+        }
+    ],
+    "name": "IAdvancedExtenderImpl",
+    "producer": "java-aidl-generator",
+    "type": "Interface"
+}
