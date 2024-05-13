@@ -1,4 +1,5 @@
 """Frequency frame UI."""
+
 import csv
 import io
 import logging

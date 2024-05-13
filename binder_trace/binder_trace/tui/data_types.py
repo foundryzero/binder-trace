@@ -1,4 +1,5 @@
 """Data types for TUI."""
+
 import datetime
 from typing import Optional
 

@@ -1,4 +1,5 @@
 """Filters pane."""
+
 from prompt_toolkit.key_binding import KeyBindings
 from prompt_toolkit.key_binding.bindings.focus import focus_next, focus_previous
 from prompt_toolkit.layout import AnyContainer, HSplit, VerticalAlign, VSplit

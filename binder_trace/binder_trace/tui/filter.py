@@ -1,4 +1,5 @@
 """Filter logic."""
+
 import json
 from collections import UserList
 from typing import Dict, List, Optional, TypeVar, Union
