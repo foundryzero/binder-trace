@@ -1,4 +1,5 @@
 """Parsing functionality."""
+
 import functools
 import logging
 import traceback

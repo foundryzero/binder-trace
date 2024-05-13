@@ -1,4 +1,5 @@
 """Parcel parser."""
+
 from __future__ import annotations
 
 import functools

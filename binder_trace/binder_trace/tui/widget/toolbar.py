@@ -1,4 +1,5 @@
 """Toolbar pane."""
+
 from typing import Any, Callable, Sequence
 
 from prompt_toolkit.formatted_text import AnyFormattedText, FormattedText

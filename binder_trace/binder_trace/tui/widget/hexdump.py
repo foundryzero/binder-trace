@@ -1,4 +1,5 @@
 """Hexdump Pane."""
+
 from typing import Optional
 
 import hexdump
