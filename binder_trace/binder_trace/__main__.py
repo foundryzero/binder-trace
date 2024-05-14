@@ -48,7 +48,6 @@ def setupArgParser() -> argparse.ArgumentParser:
         "--android-version",
         nargs="?",
         choices=["9", "10", "11", "12", "13", "14"],
-        default="13",
         help="Android version structs to use",
     )
 
