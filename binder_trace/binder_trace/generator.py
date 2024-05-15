@@ -57,11 +57,9 @@ class FridaInjector:
     def start(self):
         """Start the injector."""
         if self.spawn_process:
-            process_pid = self.device.spawn([self.process_identifier])
-            self.session = self.device.attach(process_pid)
-            self.device.resume(process_pid)
-        else:
-            self.session = self.device.attach(self.process_identifier)
+            self.device.spawn([self.process_identifier])
+
+        self.session = self.device.attach(self.process_identifier)
         self.script = self.session.create_script(self.script_content)
         self.script.on("message", self._message_handler)
 
@@ -97,6 +95,9 @@ class FridaInjector:
 
     def _start(self) -> None:
         self.script.load()
+
+        if self.spawn_process:
+            self.device.resume(self.process_identifier)
 
         self.script.exports.init(None, {"connected": "true", "version": self.android_version})
         self.message_queue.put("Connected")
