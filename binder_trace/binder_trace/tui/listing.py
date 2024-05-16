@@ -41,7 +41,7 @@ class DisplayField:
         """
         value = self.field.content if not isinstance(self.field.content, list) else self.field.typename
 
-        return f"{indent*' '}{self.field.name}: {value}"
+        return f"{indent * ' '}{self.field.name}: {value}"
 
     def position(self):
         """Get hexdump positions.
@@ -94,7 +94,7 @@ class StringDisplayField(DisplayField):
             if selected:
                 return HTML(
                     (
-                        f"{indent*' '}{self.field.name}: String<hexdump.string_length> "
+                        f"{indent * ' '}{self.field.name}: String<hexdump.string_length> "
                         f"({self.field.content[0].content})"
                         f"</hexdump.string_length><hexdump.string_value> {self.field.content[1].content}"
                         "</hexdump.string_value>"
@@ -103,10 +103,10 @@ class StringDisplayField(DisplayField):
             else:
                 log.debug(self.field)
                 return (
-                    f"{indent*' '}{self.field.name}: String ({self.field.content[0].content})"
+                    f"{indent * ' '}{self.field.name}: String ({self.field.content[0].content})"
                     " {self.field.content[1].content}"
                 )
-        return f"{indent*' '}{self.field.name}: String ({self.field.content})"
+        return f"{indent * ' '}{self.field.name}: String ({self.field.content})"
 
     def position(self):
         """Get hexdump positions.
