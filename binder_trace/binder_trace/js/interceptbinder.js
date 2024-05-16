@@ -18,7 +18,7 @@ var include_list = Array();
 
 var verbosity = 1;
 
-var silent = false;
+var silent = true;
 
 var android_version = 11; // Default to android 11, but a different version can be provided through the options object.
 
