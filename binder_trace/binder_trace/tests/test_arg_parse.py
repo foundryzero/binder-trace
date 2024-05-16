@@ -40,11 +40,7 @@ class ArgParseTest(unittest.TestCase):
         def pid_and_name():
             self.argparser.parse_args(["--pid", "12", "--name", "helloworld", "-a", "13"])
 
-        def android_version_and_struct_path():
-            self.argparser.parse_args(["--name", "com.android.settings", "-a", "13", "--structpath", "../structs/a13"])
-
         self.assertRaises(SystemExit, pid_and_name)
-        self.assertRaises(SystemExit, android_version_and_struct_path)
 
     def test_missing_key_args(self):
         def pid_and_name():

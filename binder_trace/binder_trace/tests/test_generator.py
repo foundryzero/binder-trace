@@ -2,6 +2,7 @@ import unittest
 from unittest.mock import create_autospec, patch
 
 import frida
+from frida import ProcessNotFoundError
 
 from binder_trace.generator import FridaInjector
 
@@ -14,6 +15,7 @@ class FridaInjectorTest(unittest.TestCase):
     def test_spawn_flag(self, mock_frida):
         mock_frida.get_device.side_effect = self.mock_get_device
         injector = FridaInjector("com.android.settings", "../structs/android10", 10, "emulator-5554", True)
+        injector.device.attach.side_effect = [ProcessNotFoundError(""), create_autospec(frida.core.Session)]
         injector.start()
         injector.stop()
         try:

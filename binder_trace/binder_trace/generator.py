@@ -8,6 +8,7 @@ import traceback
 from typing import Any
 
 import frida
+from frida import ProcessNotFoundError
 
 from binder_trace import loggers, parsing
 from binder_trace.parsedParcel import Block
@@ -60,7 +61,7 @@ class FridaInjector:
         # so first try to attach, and if it fails and spawn option supplied, spawn it.
         try:
             self.session = self.device.attach(self.process_identifier)
-        except frida.ProcessNotFoundError:
+        except ProcessNotFoundError:
             if self.spawn_process:
                 self.device.spawn([self.process_identifier])
                 self.start()
