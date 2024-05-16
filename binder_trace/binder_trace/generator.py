@@ -56,10 +56,18 @@ class FridaInjector:
 
     def start(self):
         """Start the injector."""
-        if self.spawn_process:
-            self.device.spawn([self.process_identifier])
+        # Frida can behave weirdly if you attempt to spawn a package which is already running
+        # so first try to attach, and if it fails and spawn option supplied, spawn it.
+        try:
+            self.session = self.device.attach(self.process_identifier)
+        except frida.ProcessNotFoundError:
+            if self.spawn_process:
+                self.device.spawn([self.process_identifier])
+                self.start()
+                return
+            else:
+                raise
 
-        self.session = self.device.attach(self.process_identifier)
         self.script = self.session.create_script(self.script_content)
         self.script.on("message", self._message_handler)
 
