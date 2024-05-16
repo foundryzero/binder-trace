@@ -41,17 +41,16 @@ def setupArgParser() -> argparse.ArgumentParser:
         help="the android device to attach to",
     )
 
-    struct_group = parser.add_mutually_exclusive_group(required=True)
-
-    struct_group.add_argument(
+    parser.add_argument(
         "-a",
         "--android-version",
         nargs="?",
         choices=["9", "10", "11", "12", "13", "14"],
         help="Android version structs to use",
+        required=True,
     )
 
-    struct_group.add_argument(
+    parser.add_argument(
         "-s",
         "--structpath",
         help="Provides the path to the root of the struct directory. e.g. ../structs/android11",
