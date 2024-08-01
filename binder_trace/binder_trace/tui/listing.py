@@ -104,7 +104,7 @@ class StringDisplayField(DisplayField):
                 log.debug(self.field)
                 return (
                     f"{indent * ' '}{self.field.name}: String ({self.field.content[0].content})"
-                    " {self.field.content[1].content}"
+                    f" {self.field.content[1].content}"
                 )
         return f"{indent * ' '}{self.field.name}: String ({self.field.content})"
 
