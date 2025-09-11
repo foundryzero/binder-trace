@@ -202,7 +202,7 @@ function print_transaction(p, code) {
 var temp = ptr(0)
 
 // IPCThreadState::transact()
-Interceptor.attach(Module.getExportByName("libbinder.so", "_ZN7android14IPCThreadState8transactEijRKNS_6ParcelEPS1_j"), {
+Interceptor.attach(Process.findModuleByName("libbinder.so").findExportByName("_ZN7android14IPCThreadState8transactEijRKNS_6ParcelEPS1_j"), {
     reply: ptr("0x0"),
     descriptor: "",
     code: 0,
